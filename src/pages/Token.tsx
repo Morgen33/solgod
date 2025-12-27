@@ -63,15 +63,24 @@ const Token = () => {
           </div>
 
           {/* CTA */}
-          <div className="text-center">
+          <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://raydium.io"
+              href="https://dexscreener.com/solana/bomtmymoe7efgu2rytqjjg1mjsub6wjpqw13jpivjgkp"
               target="_blank"
               rel="noopener noreferrer"
               className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
             >
-              Buy $GODS on Raydium
+              View on DEX Screener
               <TrendingUp size={20} />
+            </a>
+            <a
+              href="https://sgstake.fluxinc.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 rounded-lg text-lg font-medium border border-border bg-secondary/50 hover:bg-secondary transition-colors inline-flex items-center justify-center gap-2"
+            >
+              Stake Your Gods
+              <Lock size={20} />
             </a>
           </div>
         </div>
