@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Handshake, Target, Rocket } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 const partners = [
   { name: "Magic Eden", category: "Marketplace" },
@@ -63,12 +64,9 @@ const Partnerships = () => {
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
               Interested in collaborating with SolGods? We are always looking for aligned projects and brands.
             </p>
-            <a
-              href="mailto:partnerships@solgods.io"
-              className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
-            >
+            <ShinyButton as="a" href="mailto:partnerships@solgods.io">
               Get in Touch
-            </a>
+            </ShinyButton>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { TrendingUp, Lock, Sparkles, BarChart3 } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 const Token = () => {
   return (
@@ -64,15 +65,10 @@ const Token = () => {
 
           {/* CTA */}
           <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://dexscreener.com/solana/bomtmymoe7efgu2rytqjjg1mjsub6wjpqw13jpivjgkp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
-            >
+            <ShinyButton as="a" href="https://dexscreener.com/solana/bomtmymoe7efgu2rytqjjg1mjsub6wjpqw13jpivjgkp" target="_blank" rel="noopener noreferrer">
               View on DEX Screener
               <TrendingUp size={20} />
-            </a>
+            </ShinyButton>
             <a
               href="https://sgstake.fluxinc.io/"
               target="_blank"

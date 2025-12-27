@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Vote, Shield, Coins, Users, ExternalLink } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 const subDaos = [
   {
@@ -94,15 +95,10 @@ const Dao = () => {
           
           {/* CTA */}
           <div className="mt-12 text-center">
-            <a
-              href="https://discord.gg/gtrFTsmEAE"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
-            >
+            <ShinyButton as="a" href="https://discord.gg/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
               Join Main Discord
               <ExternalLink size={20} />
-            </a>
+            </ShinyButton>
           </div>
         </div>
       </section>
