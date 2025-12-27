@@ -1,0 +1,76 @@
+import { Layout } from "@/components/Layout";
+import { Vote, Shield, Coins, Users } from "lucide-react";
+
+const Dao = () => {
+  return (
+    <Layout>
+      <section className="py-24 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-5xl sm:text-7xl font-bold text-gold-gradient mb-4 text-center">
+            SOLGODS DAO
+          </h1>
+          <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
+            Decentralized governance by the community, for the community.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <DaoFeature
+              icon={<Vote size={28} />}
+              title="Proposal Voting"
+              description="Submit and vote on proposals that shape the direction of SolGods. Every token holder has voting power."
+            />
+            <DaoFeature
+              icon={<Coins size={28} />}
+              title="Treasury Management"
+              description="Community-controlled treasury funds initiatives, partnerships, and ecosystem development."
+            />
+            <DaoFeature
+              icon={<Shield size={28} />}
+              title="On-Chain Governance"
+              description="All votes are recorded on Solana, ensuring transparency and immutability."
+            />
+            <DaoFeature
+              icon={<Users size={28} />}
+              title="Working Groups"
+              description="Join specialized teams focused on art, partnerships, development, and community."
+            />
+          </div>
+
+          <div className="card-glow rounded-2xl p-8 sm:p-12">
+            <h2 className="text-3xl font-bold mb-6 text-center">How It Works</h2>
+            <div className="grid sm:grid-cols-4 gap-6 text-center">
+              <Step number="1" title="Hold" description="Own a SolGod NFT or $GODS tokens" />
+              <Step number="2" title="Discuss" description="Join Discord to debate proposals" />
+              <Step number="3" title="Vote" description="Cast your vote on-chain" />
+              <Step number="4" title="Execute" description="Approved proposals are implemented" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+function DaoFeature({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+  return (
+    <div className="card-glow rounded-xl p-8">
+      <div className="text-primary mb-4">{icon}</div>
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-muted-foreground">{description}</p>
+    </div>
+  );
+}
+
+function Step({ number, title, description }: { number: string; title: string; description: string }) {
+  return (
+    <div>
+      <div className="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-xl font-bold text-primary-foreground mx-auto mb-3">
+        {number}
+      </div>
+      <h3 className="font-bold mb-1">{title}</h3>
+      <p className="text-sm text-muted-foreground">{description}</p>
+    </div>
+  );
+}
+
+export default Dao;
