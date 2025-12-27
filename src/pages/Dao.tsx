@@ -1,5 +1,20 @@
 import { Layout } from "@/components/Layout";
-import { Vote, Shield, Coins, Users } from "lucide-react";
+import { Vote, Shield, Coins, Users, ExternalLink } from "lucide-react";
+
+const subDaos = [
+  {
+    name: "Wings DAO",
+    description: "A sanctuary for those who choose kindness, courage, and positivity to make the world brighter.",
+    twitter: "https://x.com/WingsDaoSG",
+    discord: "https://discord.gg/havennfts",
+  },
+  {
+    name: "Mafia DAO",
+    description: "Strategic raiders and traders working together in the SolGods ecosystem.",
+    twitter: "https://x.com/MAFIAxDAO",
+    discord: "https://discord.gg/n6ravNz8dj",
+  },
+];
 
 const Dao = () => {
   return (
@@ -36,14 +51,58 @@ const Dao = () => {
             />
           </div>
 
+          {/* Sub DAOs */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-center">Sub DAOs</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {subDaos.map((dao) => (
+                <div key={dao.name} className="card-glow rounded-xl p-8">
+                  <h3 className="text-2xl font-bold mb-2 text-primary">{dao.name}</h3>
+                  <p className="text-muted-foreground mb-4">{dao.description}</p>
+                  <div className="flex gap-3">
+                    <a
+                      href={dao.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 text-sm font-medium border border-border rounded-lg hover:bg-secondary transition-colors inline-flex items-center gap-1.5"
+                    >
+                      Twitter/X <ExternalLink size={12} />
+                    </a>
+                    <a
+                      href={dao.discord}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 text-sm font-medium border border-border rounded-lg hover:bg-secondary transition-colors inline-flex items-center gap-1.5"
+                    >
+                      Discord <ExternalLink size={12} />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="card-glow rounded-2xl p-8 sm:p-12">
             <h2 className="text-3xl font-bold mb-6 text-center">How It Works</h2>
             <div className="grid sm:grid-cols-4 gap-6 text-center">
-              <Step number="1" title="Hold" description="Own a SolGod NFT or $GODS tokens" />
+              <Step number="1" title="Hold" description="Own a SolGod NFT or $SOLGODS tokens" />
               <Step number="2" title="Discuss" description="Join Discord to debate proposals" />
               <Step number="3" title="Vote" description="Cast your vote on-chain" />
               <Step number="4" title="Execute" description="Approved proposals are implemented" />
             </div>
+          </div>
+          
+          {/* CTA */}
+          <div className="mt-12 text-center">
+            <a
+              href="https://discord.gg/gtrFTsmEAE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+            >
+              Join Main Discord
+              <ExternalLink size={20} />
+            </a>
           </div>
         </div>
       </section>

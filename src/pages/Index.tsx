@@ -1,6 +1,14 @@
 import { Layout } from "@/components/Layout";
 import { Link } from "react-router-dom";
-import { ArrowRight, Coins, Users, Zap } from "lucide-react";
+import { ArrowRight, Coins, Users, Zap, ExternalLink } from "lucide-react";
+
+const quickLinks = [
+  { label: "Discord", href: "https://discord.gg/gtrFTsmEAE" },
+  { label: "Twitter/X", href: "https://x.com/SOLGodNFTs" },
+  { label: "Telegram", href: "https://t.me/+TonrvVIf1t4zOGE0" },
+  { label: "Stake", href: "https://sgstake.fluxinc.io/" },
+  { label: "Mystery Pack", href: "https://sgtailor.fluxinc.io/packs" },
+];
 
 const Index = () => {
   return (
@@ -18,14 +26,14 @@ const Index = () => {
             className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10 font-light"
             style={{ animation: "fade-in 0.8s ease-out 0.2s forwards", opacity: 0 }}
           >
-            The divine collection on Solana. Join the pantheon and shape the future of decentralized culture.
+            A Web3-born movement powered by The Gang. Art, alpha, and culture collide. 3,343 uniquely crafted Sol Gods on Solana.
           </p>
           <div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
             style={{ animation: "fade-in 0.8s ease-out 0.4s forwards", opacity: 0 }}
           >
             <a
-              href="https://magiceden.us/marketplace/solgods_"
+              href="https://magiceden.io/marketplace/solgods_"
               target="_blank"
               rel="noopener noreferrer"
               className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
@@ -33,12 +41,33 @@ const Index = () => {
               Buy SolGods
               <ArrowRight size={20} />
             </a>
-            <Link
-              to="/whitepaper"
+            <a
+              href="https://discord.gg/gtrFTsmEAE"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-lg text-lg font-medium border border-border bg-secondary/50 hover:bg-secondary transition-colors inline-flex items-center justify-center"
             >
-              Read Whitepaper
-            </Link>
+              Join Discord
+            </a>
+          </div>
+          
+          {/* Quick Links */}
+          <div 
+            className="flex flex-wrap gap-3 justify-center"
+            style={{ animation: "fade-in 0.8s ease-out 0.6s forwards", opacity: 0 }}
+          >
+            {quickLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary border border-border/50 rounded-full hover:border-primary/50 transition-colors inline-flex items-center gap-1.5"
+              >
+                {link.label}
+                <ExternalLink size={12} />
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -78,15 +107,17 @@ const Index = () => {
           <div className="card-glow rounded-2xl p-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Ascend?</h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              Join thousands of holders building the future of Web3 culture together.
+              Join the family of X reply guys, traders, creators, and raiders rewriting what it means to be part of Web3.
             </p>
-            <Link
-              to="/dao"
+            <a
+              href="https://discord.gg/gtrFTsmEAE"
+              target="_blank"
+              rel="noopener noreferrer"
               className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
             >
-              Join the DAO
+              Join Discord
               <ArrowRight size={20} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

@@ -73,14 +73,25 @@ const Spaces = () => {
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
               Follow us on Twitter and turn on notifications to get alerts for all our Spaces.
             </p>
-            <a
-              href="https://twitter.com/SolGods"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
-            >
-              Follow @SolGods
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://x.com/SOLGodNFTs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+              >
+                Follow @SOLGodNFTs
+              </a>
+              <a
+                href="https://solgodcal.lovable.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 rounded-lg text-lg font-medium border border-border bg-secondary/50 hover:bg-secondary transition-colors inline-flex items-center justify-center gap-2"
+              >
+                View Schedule
+                <Calendar size={20} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
