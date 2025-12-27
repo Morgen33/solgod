@@ -22,7 +22,7 @@ const Dao = () => {
     <Layout>
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl sm:text-7xl font-bold text-gold-gradient mb-4 text-center">
+          <h1 className="text-5xl sm:text-7xl font-bold text-primary mb-4 text-center">
             SOLGODS DAO
           </h1>
           <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
@@ -57,7 +57,7 @@ const Dao = () => {
             <h2 className="text-3xl font-bold mb-8 text-center">Sub DAOs</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {subDaos.map((dao) => (
-                <div key={dao.name} className="card-glow rounded-xl p-8">
+                <div key={dao.name} className="card-clean p-8">
                   <h3 className="text-2xl font-bold mb-2 text-primary">{dao.name}</h3>
                   <p className="text-muted-foreground mb-4">{dao.description}</p>
                   <div className="flex gap-3">
@@ -83,7 +83,7 @@ const Dao = () => {
             </div>
           </div>
 
-          <div className="card-glow rounded-2xl p-8 sm:p-12">
+          <div className="card-clean p-8 sm:p-12">
             <h2 className="text-3xl font-bold mb-6 text-center">How It Works</h2>
             <div className="grid sm:grid-cols-4 gap-6 text-center">
               <Step number="1" title="Hold" description="Own a SolGod NFT or $SOLGODS tokens" />
@@ -108,7 +108,7 @@ const Dao = () => {
 
 function DaoFeature({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="card-glow rounded-xl p-8">
+    <div className="card-clean p-8">
       <div className="text-primary mb-4">{icon}</div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
@@ -119,7 +119,7 @@ function DaoFeature({ icon, title, description }: { icon: React.ReactNode; title
 function Step({ number, title, description }: { number: string; title: string; description: string }) {
   return (
     <div>
-      <div className="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-xl font-bold text-primary-foreground mx-auto mb-3">
+      <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-xl font-bold text-primary-foreground mx-auto mb-3">
         {number}
       </div>
       <h3 className="font-bold mb-1">{title}</h3>
