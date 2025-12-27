@@ -3,12 +3,14 @@ import { useState, useEffect } from "react";
 
 interface MorphingTextProps {
   words: string[];
+  colors?: string[];
   className?: string;
   interval?: number;
 }
 
 export const MorphingText = ({ 
   words, 
+  colors,
   className,
   interval = 3000 
 }: MorphingTextProps) => {
@@ -18,6 +20,7 @@ export const MorphingText = ({
 
   const currentWord = words[currentIndex];
   const nextWord = words[(currentIndex + 1) % words.length];
+  const currentColor = colors ? colors[currentIndex % colors.length] : undefined;
 
   useEffect(() => {
     const morphDuration = 800;
@@ -54,7 +57,7 @@ export const MorphingText = ({
   }, [currentIndex, currentWord, nextWord, interval, words.length]);
 
   return (
-    <div className={cn("relative inline-block", className)}>
+    <div className={cn("relative inline-block transition-colors duration-500", className)} style={{ color: currentColor }}>
       <span className="inline-block">
         {displayText}
         <span className="animate-pulse">|</span>
