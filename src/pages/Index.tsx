@@ -5,9 +5,6 @@ import { MorphingText } from "@/components/ui/morphing-text";
 import solcityLogo from "@/assets/solcity-logo.png";
 
 const quickLinks = [{
-  label: "Discord",
-  href: "https://discord.com/invite/gtrFTsmEAE"
-}, {
   label: "Twitter/X",
   href: "https://x.com/SOLGodNFTs"
 }, {
