@@ -60,7 +60,6 @@ export const MorphingText = ({
     <div className={cn("relative inline-block transition-colors duration-500", className)} style={{ color: currentColor }}>
       <span className="inline-block">
         {displayText}
-        <span className="animate-pulse">|</span>
       </span>
     </div>
   );
