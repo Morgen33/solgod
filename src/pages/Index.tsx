@@ -88,10 +88,10 @@ const Index = () => {
           >
             WHY SOLGODS?
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <FeatureCard icon={<Coins className="text-primary" size={32} />} title="$GODS Token" description="Stake, vote, and earn with the native governance token powering the SolGods ecosystem." delay="0.1s" />
-            <FeatureCard icon={<Users className="text-primary" size={32} />} title="DAO Governance" description="Community-first decision making. Every holder has a voice in shaping our destiny." delay="0.2s" />
-            <FeatureCard icon={<Zap className="text-primary" size={32} />} title="Solana Speed" description="Built on Solana for lightning-fast transactions and minimal fees." delay="0.3s" />
+          <div className="grid md:grid-cols-3 gap-12">
+            <FeatureItem icon={<Coins className="text-primary" size={32} />} title="$GODS Token" description="Stake, vote, and earn with the native governance token powering the SolGods ecosystem." delay="0.1s" />
+            <FeatureItem icon={<Users className="text-primary" size={32} />} title="DAO Governance" description="Community-first decision making. Every holder has a voice in shaping our destiny." delay="0.2s" />
+            <FeatureItem icon={<Zap className="text-primary" size={32} />} title="Solana Speed" description="Built on Solana for lightning-fast transactions and minimal fees." delay="0.3s" />
           </div>
         </div>
       </section>
@@ -99,22 +99,20 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="card-glow rounded-2xl p-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Ascend?</h2>
-            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              Join the family of X reply guys, traders, creators, and raiders rewriting what it means to be part of Web3.
-            </p>
-            <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
-              Join Discord
-              <ArrowRight size={20} />
-            </ShinyButton>
-          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Ascend?</h2>
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+            Join the family of X reply guys, traders, creators, and raiders rewriting what it means to be part of Web3.
+          </p>
+          <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+            Join Discord
+            <ArrowRight size={20} />
+          </ShinyButton>
         </div>
       </section>
     </Layout>;
 };
 
-function FeatureCard({
+function FeatureItem({
   icon,
   title,
   description,
@@ -125,11 +123,11 @@ function FeatureCard({
   description: string;
   delay: string;
 }) {
-  return <div className="card-glow rounded-xl p-8 hover:scale-105 transition-transform duration-300" style={{
+  return <div className="text-center" style={{
     animation: `fade-in-up 0.6s ease-out ${delay} forwards`,
     opacity: 0
   }}>
-      <div className="mb-4">{icon}</div>
+      <div className="mb-4 flex justify-center">{icon}</div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
     </div>;
