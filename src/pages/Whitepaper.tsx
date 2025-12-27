@@ -63,7 +63,7 @@ const Whitepaper = () => {
             <p className="text-muted-foreground mb-4">Have questions about the whitepaper?</p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://discord.com/invite/gtrFTsmEAE"
+                href="https://discord.gg/nfts"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline inline-flex items-center gap-1"

@@ -46,7 +46,7 @@ const Index = () => {
               Buy SolGods
               <ArrowRight size={20} />
             </ShinyButton>
-            <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+            <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
               Join Discord
             </ShinyButton>
           </div>
@@ -104,7 +104,7 @@ const Index = () => {
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Join the family of X reply guys, traders, creators, and raiders rewriting what it means to be part of Web3.
             </p>
-            <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+            <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
               Join Discord
               <ArrowRight size={20} />
             </ShinyButton>
