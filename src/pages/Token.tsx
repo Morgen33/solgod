@@ -7,7 +7,7 @@ const Token = () => {
     <Layout>
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl sm:text-7xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-5xl sm:text-7xl font-bold text-gold-gradient mb-4 text-center">
             $GODS TOKEN
           </h1>
           <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
@@ -15,7 +15,7 @@ const Token = () => {
           </p>
 
           {/* Tokenomics */}
-          <div className="card-clean p-8 sm:p-12 mb-12">
+          <div className="card-glow rounded-2xl p-8 sm:p-12 mb-12">
             <h2 className="text-3xl font-bold mb-8 text-center">Tokenomics</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <TokenStat value="1B" label="Total Supply" icon={<BarChart3 size={24} />} />
@@ -27,7 +27,7 @@ const Token = () => {
 
           {/* Utility */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="card-clean p-8">
+            <div className="card-glow rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-4">Governance</h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
@@ -44,7 +44,7 @@ const Token = () => {
                 </li>
               </ul>
             </div>
-            <div className="card-clean p-8">
+            <div className="card-glow rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-4">Utility</h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">

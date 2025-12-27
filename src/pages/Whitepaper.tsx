@@ -17,7 +17,7 @@ const Whitepaper = () => {
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-5xl sm:text-7xl font-bold text-primary mb-4">
+            <h1 className="text-5xl sm:text-7xl font-bold text-gold-gradient mb-4">
               WHITEPAPER
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
@@ -30,7 +30,7 @@ const Whitepaper = () => {
           </div>
 
           {/* Table of Contents */}
-          <div className="card-clean p-6 mb-12">
+          <div className="card-glow rounded-xl p-6 mb-12">
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
               <FileText className="text-primary" size={20} />
               Contents
@@ -51,7 +51,7 @@ const Whitepaper = () => {
           {/* Sections */}
           <div className="space-y-12">
             {sections.map((section) => (
-              <article key={section.id} id={section.id} className="card-clean p-8">
+              <article key={section.id} id={section.id} className="card-glow rounded-xl p-8">
                 <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
                 <p className="text-muted-foreground leading-relaxed">{section.content}</p>
               </article>
@@ -63,7 +63,7 @@ const Whitepaper = () => {
             <p className="text-muted-foreground mb-4">Have questions about the whitepaper?</p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://discord.gg/nfts"
+                href="https://discord.com/invite/gtrFTsmEAE"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline inline-flex items-center gap-1"

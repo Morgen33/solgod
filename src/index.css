@@ -6,39 +6,42 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 260 30% 4%;
+    --foreground: 45 100% 96%;
 
-    --card: 0 0% 6%;
-    --card-foreground: 0 0% 100%;
+    --card: 260 25% 8%;
+    --card-foreground: 45 100% 96%;
 
-    --popover: 0 0% 6%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 260 25% 8%;
+    --popover-foreground: 45 100% 96%;
 
-    --primary: 48 78% 79%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 45 100% 60%;
+    --primary-foreground: 260 30% 4%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 260 20% 15%;
+    --secondary-foreground: 45 100% 90%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 260 15% 18%;
+    --muted-foreground: 260 10% 55%;
 
-    --accent: 48 78% 79%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 280 80% 60%;
+    --accent-foreground: 45 100% 96%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 48 78% 79%;
+    --border: 260 20% 18%;
+    --input: 260 20% 18%;
+    --ring: 45 100% 60%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom tokens */
-    --cream: 48 78% 79%;
-    --cream-dark: 48 60% 65%;
+    /* SolGods custom tokens */
+    --gold: 45 100% 60%;
+    --gold-glow: 45 100% 70%;
+    --purple: 280 80% 60%;
+    --purple-dark: 260 40% 20%;
+    --solana: 170 80% 50%;
   }
 }
 
@@ -59,37 +62,44 @@
 }
 
 @layer components {
-  .text-cream-gradient {
-    color: hsl(var(--cream));
+  .gold-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gold)) 0%,
+      hsl(var(--gold-glow)) 100%
+    );
   }
 
-  .card-clean {
+  .text-gold-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gold)) 0%,
+      hsl(var(--gold-glow)) 50%,
+      hsl(var(--gold)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-glow {
+    position: relative;
     background: hsl(var(--card));
     border: 1px solid hsl(var(--border));
-    border-radius: var(--radius);
   }
 
-  .btn-solid {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    background: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-    transition: all 0.2s ease;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  .btn-solid:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
+  .card-glow::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, hsl(var(--gold) / 0.3), transparent, hsl(var(--purple) / 0.3));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
   }
 
   .shiny-card {
