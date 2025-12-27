@@ -26,7 +26,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="min-h-[90vh] flex items-center justify-center px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="mb-6" style={{
+          <div className="mb-16" style={{
           animation: "fade-in 0.8s ease-out forwards"
         }}>
             <img src={solcityLogo} alt="SolCity" className="w-64 sm:w-80 md:w-96 mx-auto" />
