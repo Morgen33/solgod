@@ -3,24 +3,20 @@ import { useState, useEffect } from "react";
 
 interface MorphingTextProps {
   words: string[];
-  colors?: string[];
   className?: string;
   interval?: number;
 }
 
 export const MorphingText = ({ 
   words, 
-  colors,
   className,
   interval = 3000 
 }: MorphingTextProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayText, setDisplayText] = useState(words[0]);
-  const [morphProgress, setMorphProgress] = useState(0);
 
   const currentWord = words[currentIndex];
   const nextWord = words[(currentIndex + 1) % words.length];
-  const currentColor = colors ? colors[currentIndex % colors.length] : undefined;
 
   useEffect(() => {
     const morphDuration = 800;
@@ -30,7 +26,6 @@ export const MorphingText = ({
     const morphInterval = setInterval(() => {
       step++;
       const progress = step / steps;
-      setMorphProgress(progress);
 
       if (progress < 0.5) {
         const charCount = Math.floor(currentWord.length * (1 - progress * 2));
@@ -57,8 +52,14 @@ export const MorphingText = ({
   }, [currentIndex, currentWord, nextWord, interval, words.length]);
 
   return (
-    <div className={cn("relative inline-block transition-colors duration-500", className)} style={{ color: currentColor }}>
-      <span className="inline-block">
+    <div className={cn("relative inline-block", className)}>
+      <span 
+        className="inline-block bg-clip-text text-transparent animate-gradient-flow"
+        style={{
+          backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
+          backgroundSize: "200% 100%",
+        }}
+      >
         {displayText}
       </span>
     </div>
