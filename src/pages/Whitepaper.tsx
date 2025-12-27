@@ -17,7 +17,13 @@ const Whitepaper = () => {
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-5xl sm:text-7xl font-bold text-gold-gradient mb-4">
+            <h1 
+              className="text-5xl sm:text-7xl font-bold mb-4 bg-clip-text text-transparent animate-gradient-flow"
+              style={{
+                backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
+                backgroundSize: "200% 100%",
+              }}
+            >
               WHITEPAPER
             </h1>
             <p className="text-xl text-muted-foreground mb-8">

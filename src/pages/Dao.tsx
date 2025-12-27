@@ -22,7 +22,13 @@ const Dao = () => {
     <Layout>
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl sm:text-7xl font-bold text-gold-gradient mb-4 text-center">
+          <h1 
+            className="text-5xl sm:text-7xl font-bold mb-4 text-center bg-clip-text text-transparent animate-gradient-flow"
+            style={{
+              backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
+              backgroundSize: "200% 100%",
+            }}
+          >
             SOLGODS DAO
           </h1>
           <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
@@ -106,7 +112,15 @@ const Dao = () => {
   );
 };
 
-function DaoFeature({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+function DaoFeature({
+  icon,
+  title,
+  description,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="card-glow rounded-xl p-8">
       <div className="text-primary mb-4">{icon}</div>
@@ -116,13 +130,19 @@ function DaoFeature({ icon, title, description }: { icon: React.ReactNode; title
   );
 }
 
-function Step({ number, title, description }: { number: string; title: string; description: string }) {
+function Step({
+  number,
+  title,
+  description,
+}: {
+  number: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div>
-      <div className="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-xl font-bold text-primary-foreground mx-auto mb-3">
-        {number}
-      </div>
-      <h3 className="font-bold mb-1">{title}</h3>
+      <div className="text-3xl font-bold text-primary mb-2">{number}</div>
+      <h4 className="font-bold mb-1">{title}</h4>
       <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   );

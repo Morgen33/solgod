@@ -5,7 +5,13 @@ const About = () => {
     <Layout>
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl sm:text-7xl font-bold text-gold-gradient mb-8 text-center">
+          <h1 
+            className="text-5xl sm:text-7xl font-bold mb-8 text-center bg-clip-text text-transparent animate-gradient-flow"
+            style={{
+              backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
+              backgroundSize: "200% 100%",
+            }}
+          >
             ABOUT SOLGODS
           </h1>
           <div className="card-glow rounded-2xl p-8 sm:p-12 space-y-6 text-lg text-muted-foreground">
