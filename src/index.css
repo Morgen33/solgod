@@ -107,7 +107,7 @@
     --shiny-card-highlight: blue;
     --shiny-card-highlight-subtle: #8484ff;
     --animation: gradient-angle linear infinite;
-    --duration: 12s;
+    --duration: 3s;
     
     isolation: isolate;
     position: relative;
