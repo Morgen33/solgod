@@ -7,13 +7,13 @@ const subDaos = [
     name: "Wings DAO",
     description: "A sanctuary for those who choose kindness, courage, and positivity to make the world brighter.",
     twitter: "https://x.com/WingsDaoSG",
-    discord: "https://discord.com/invite/gtrFTsmEAE",
+    discord: "https://discord.gg/nfts",
   },
   {
     name: "Mafia DAO",
     description: "Strategic raiders and traders working together in the SolGods ecosystem.",
     twitter: "https://x.com/MAFIAxDAO",
-    discord: "https://discord.com/invite/gtrFTsmEAE",
+    discord: "https://discord.gg/nfts",
   },
 ];
 
@@ -95,7 +95,7 @@ const Dao = () => {
           
           {/* CTA */}
           <div className="mt-12 text-center">
-            <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+            <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
               Join Main Discord
               <ExternalLink size={20} />
             </ShinyButton>
