@@ -29,7 +29,8 @@ const Index = () => {
             />
             <MorphingText 
               words={["Probably Nothing", "Probably Something", "Probably Everything"]}
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mt-4"
+              colors={["#a1e25b", "#32db9a", "#098fcc"]}
+              className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4"
               interval={2500}
             />
           </div>
