@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Mic, Calendar, Users, Play } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 const upcomingSpaces = [
   { title: "Weekly Community Call", date: "Every Friday @ 8PM UTC", host: "Core Team" },
@@ -38,10 +39,10 @@ const Spaces = () => {
                     <h3 className="text-lg font-bold">{space.title}</h3>
                     <p className="text-muted-foreground text-sm">{space.date} • Hosted by {space.host}</p>
                   </div>
-                  <button className="glow-button px-6 py-2 rounded-lg font-semibold flex items-center gap-2 text-sm">
+                  <ShinyButton className="px-6 py-2 text-sm">
                     <Mic size={16} />
                     Set Reminder
-                  </button>
+                  </ShinyButton>
                 </div>
               ))}
             </div>
@@ -74,14 +75,9 @@ const Spaces = () => {
               Follow us on Twitter and turn on notifications to get alerts for all our Spaces.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://x.com/SOLGodNFTs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
-              >
+              <ShinyButton as="a" href="https://x.com/SOLGodNFTs" target="_blank" rel="noopener noreferrer">
                 Follow @SOLGodNFTs
-              </a>
+              </ShinyButton>
               <a
                 href="https://solgodcal.lovable.app/"
                 target="_blank"

@@ -1,8 +1,9 @@
 import { Layout } from "@/components/Layout";
 import { ArrowRight, Coins, Users, Zap, ExternalLink } from "lucide-react";
-import { StarButton } from "@/components/ui/star-button";
+import { ShinyButton } from "@/components/ui/shiny-button";
 import { MorphingText } from "@/components/ui/morphing-text";
 import solcityLogo from "@/assets/solcity-logo.png";
+
 const quickLinks = [{
   label: "Discord",
   href: "https://discord.gg/gtrFTsmEAE"
@@ -19,6 +20,7 @@ const quickLinks = [{
   label: "Mystery Pack",
   href: "https://sgtailor.fluxinc.io/packs"
 }];
+
 const Index = () => {
   return <Layout>
       {/* Hero Section */}
@@ -35,13 +37,13 @@ const Index = () => {
           animation: "fade-in 0.8s ease-out 0.4s forwards",
           opacity: 0
         }}>
-            <StarButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer" lightColor="#FFD700" duration={2}>
+            <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
               Buy SolGods
               <ArrowRight size={20} />
-            </StarButton>
-            <StarButton as="a" href="https://discord.gg/gtrFTsmEAE" target="_blank" rel="noopener noreferrer" lightColor="#7C3AED" duration={2.5}>
+            </ShinyButton>
+            <ShinyButton as="a" href="https://discord.gg/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
               Join Discord
-            </StarButton>
+            </ShinyButton>
           </div>
           
           {/* Quick Links */}
@@ -79,15 +81,16 @@ const Index = () => {
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Join the family of X reply guys, traders, creators, and raiders rewriting what it means to be part of Web3.
             </p>
-            <StarButton as="a" href="https://discord.gg/gtrFTsmEAE" target="_blank" rel="noopener noreferrer" lightColor="#FFD700" duration={2}>
+            <ShinyButton as="a" href="https://discord.gg/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
               Join Discord
               <ArrowRight size={20} />
-            </StarButton>
+            </ShinyButton>
           </div>
         </div>
       </section>
     </Layout>;
 };
+
 function FeatureCard({
   icon,
   title,
@@ -108,4 +111,5 @@ function FeatureCard({
       <p className="text-muted-foreground">{description}</p>
     </div>;
 }
+
 export default Index;

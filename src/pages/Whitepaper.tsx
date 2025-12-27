@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { FileText, Download, ExternalLink } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 const sections = [
   { id: "intro", title: "1. Introduction", content: "SolGods represents a new paradigm in NFT communities—one where art, governance, and utility converge to create lasting value for holders. Built on Solana, we leverage the chain's speed and efficiency to deliver a seamless experience." },
@@ -22,13 +23,10 @@ const Whitepaper = () => {
             <p className="text-xl text-muted-foreground mb-8">
               The complete guide to the SolGods ecosystem
             </p>
-            <a
-              href="#"
-              className="glow-button px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2"
-            >
+            <ShinyButton as="a" href="#">
               <Download size={18} />
               Download PDF
-            </a>
+            </ShinyButton>
           </div>
 
           {/* Table of Contents */}
