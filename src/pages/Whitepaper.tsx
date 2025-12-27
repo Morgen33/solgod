@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import { FileText, Download, ExternalLink, TrendingUp, Wallet, PieChart, RefreshCw, AlertTriangle } from "lucide-react";
+import { FileText, ExternalLink, TrendingUp, Wallet, PieChart, RefreshCw, AlertTriangle } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 
 const tableOfContents = [
@@ -27,13 +27,9 @@ const Whitepaper = () => {
             >
               SOL CITY WHITEPAPER
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-muted-foreground">
               Capital Allocation Engine
             </p>
-            <ShinyButton as="a" href="#">
-              <Download size={18} />
-              Download PDF
-            </ShinyButton>
           </div>
 
           {/* Table of Contents */}
