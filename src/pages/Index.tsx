@@ -64,7 +64,7 @@ const Index = () => {
                   href={link.href} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="shiny-card rounded-xl p-5 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 group"
+                  className="bg-card border border-border rounded-xl p-5 flex flex-col items-center text-center hover:scale-105 hover:border-primary/50 transition-all duration-300 group"
                 >
                   <Icon className="text-primary mb-3 group-hover:scale-110 transition-transform" size={28} />
                   <h4 className="font-semibold text-foreground mb-1">{link.label}</h4>
