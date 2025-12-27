@@ -1,6 +1,6 @@
 import { Layout } from "@/components/Layout";
-import { Link } from "react-router-dom";
 import { ArrowRight, Coins, Users, Zap, ExternalLink } from "lucide-react";
+import solcityLogo from "@/assets/solcity-logo.png";
 
 const quickLinks = [
   { label: "Discord", href: "https://discord.gg/gtrFTsmEAE" },
@@ -16,12 +16,16 @@ const Index = () => {
       {/* Hero Section */}
       <section className="min-h-[90vh] flex items-center justify-center px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 
-            className="text-6xl sm:text-8xl md:text-9xl font-bold text-gold-gradient mb-6"
+          <div 
+            className="mb-6"
             style={{ animation: "fade-in 0.8s ease-out forwards" }}
           >
-            SOLGODS
-          </h1>
+            <img 
+              src={solcityLogo} 
+              alt="SolCity" 
+              className="w-64 sm:w-80 md:w-96 mx-auto"
+            />
+          </div>
           <p 
             className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10 font-light"
             style={{ animation: "fade-in 0.8s ease-out 0.2s forwards", opacity: 0 }}
