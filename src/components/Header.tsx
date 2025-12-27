@@ -37,9 +37,11 @@ export function Header() {
                 <a
                   key={link.href}
                   href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.open(link.href, '_blank', 'noopener,noreferrer,width=1200,height=800');
+                  }}
+                  className="px-4 py-2 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary cursor-pointer"
                 >
                   {link.label}
                 </a>
@@ -76,10 +78,12 @@ export function Header() {
                   <a
                     key={link.href}
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setMobileOpen(false)}
-                    className="px-4 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setMobileOpen(false);
+                      window.open(link.href, '_blank', 'noopener,noreferrer,width=1200,height=800');
+                    }}
+                    className="px-4 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary cursor-pointer"
                   >
                     {link.label}
                   </a>
