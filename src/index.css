@@ -155,11 +155,11 @@
   }
 
   .shiny-cta {
-    --shiny-cta-bg: hsl(var(--background));
-    --shiny-cta-bg-subtle: hsl(var(--card));
-    --shiny-cta-fg: hsl(var(--foreground));
-    --shiny-cta-highlight: hsl(var(--primary));
-    --shiny-cta-highlight-subtle: hsl(var(--gold-glow));
+    --shiny-cta-bg: #000000;
+    --shiny-cta-bg-subtle: #1a1818;
+    --shiny-cta-fg: #ffffff;
+    --shiny-cta-highlight: blue;
+    --shiny-cta-highlight-subtle: #8484ff;
     --animation: gradient-angle linear infinite;
     --duration: 3s;
     --shadow-size: 2px;
