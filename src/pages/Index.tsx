@@ -41,6 +41,9 @@ const Index = () => {
               Buy SolGods
               <ArrowRight size={20} />
             </ShinyButton>
+            <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+              Join Discord
+            </ShinyButton>
           </div>
           
           {/* Quick Links */}
