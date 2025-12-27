@@ -3,13 +3,13 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/dao", label: "DAO" },
-  { href: "/token", label: "Token" },
-  { href: "/partnerships", label: "Partnerships" },
-  { href: "/spaces", label: "Spaces" },
-  { href: "/whitepaper", label: "Whitepaper" },
+  { href: "/", label: "Home", external: false },
+  { href: "/about", label: "About", external: false },
+  { href: "/dao", label: "DAO", external: false },
+  { href: "/token", label: "Token", external: false },
+  { href: "/partnerships", label: "Partnerships", external: false },
+  { href: "https://solgodcal.lovable.app/", label: "Spaces", external: true },
+  { href: "/whitepaper", label: "Whitepaper", external: false },
 ];
 
 export function Header() {
@@ -31,20 +31,31 @@ export function Header() {
             >SOLGODS</span>
           </Link>
 
-          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                  location.pathname === link.href
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                }`}
-              >
-                {link.label}
-              </Link>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                    location.pathname === link.href
+                      ? "text-primary bg-primary/10"
+                      : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -57,23 +68,35 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Nav */}
         {mobileOpen && (
           <nav className="lg:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
-                    location.pathname === link.href
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                  }`}
-                >
-                  {link.label}
-                </Link>
+                link.external ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileOpen(false)}
+                    className="px-4 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                      location.pathname === link.href
+                        ? "text-primary bg-primary/10"
+                        : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </div>
           </nav>
