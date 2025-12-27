@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { ArrowRight, Coins, Users, Zap, ExternalLink } from "lucide-react";
 import { StarButton } from "@/components/ui/star-button";
+import { MorphingText } from "@/components/ui/morphing-text";
 import solcityLogo from "@/assets/solcity-logo.png";
 
 const quickLinks = [
@@ -25,6 +26,11 @@ const Index = () => {
               src={solcityLogo} 
               alt="SolCity" 
               className="w-64 sm:w-80 md:w-96 mx-auto"
+            />
+            <MorphingText 
+              words={["Probably Nothing", "Probably Something", "Probably Everything"]}
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mt-4"
+              interval={2500}
             />
           </div>
           <p 
