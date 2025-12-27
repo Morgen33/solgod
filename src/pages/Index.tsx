@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { ArrowRight, Coins, Users, Zap, ExternalLink } from "lucide-react";
+import { StarButton } from "@/components/ui/star-button";
 import solcityLogo from "@/assets/solcity-logo.png";
 
 const quickLinks = [
@@ -36,23 +37,27 @@ const Index = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
             style={{ animation: "fade-in 0.8s ease-out 0.4s forwards", opacity: 0 }}
           >
-            <a
+            <StarButton
+              as="a"
               href="https://magiceden.io/marketplace/solgods_"
               target="_blank"
               rel="noopener noreferrer"
-              className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+              lightColor="#FFD700"
+              duration={2}
             >
               Buy SolGods
               <ArrowRight size={20} />
-            </a>
-            <a
+            </StarButton>
+            <StarButton
+              as="a"
               href="https://discord.gg/gtrFTsmEAE"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-lg text-lg font-medium border border-border bg-secondary/50 hover:bg-secondary transition-colors inline-flex items-center justify-center"
+              lightColor="#7C3AED"
+              duration={2.5}
             >
               Join Discord
-            </a>
+            </StarButton>
           </div>
           
           {/* Quick Links */}
@@ -113,15 +118,17 @@ const Index = () => {
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Join the family of X reply guys, traders, creators, and raiders rewriting what it means to be part of Web3.
             </p>
-            <a
+            <StarButton
+              as="a"
               href="https://discord.gg/gtrFTsmEAE"
               target="_blank"
               rel="noopener noreferrer"
-              className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+              lightColor="#FFD700"
+              duration={2}
             >
               Join Discord
               <ArrowRight size={20} />
-            </a>
+            </StarButton>
           </div>
         </div>
       </section>
