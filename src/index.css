@@ -1,96 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 240 20% 6%;
+    --foreground: 220 30% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 18% 10%;
+    --card-foreground: 220 30% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 18% 10%;
+    --popover-foreground: 220 30% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 100% 70%;
+    --primary-foreground: 240 20% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 220 30% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 12% 18%;
+    --muted-foreground: 220 15% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 200 100% 75%;
+    --accent-foreground: 240 20% 6%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 210 100% 70%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom cosmic colors */
+    --star-core: 210 100% 80%;
+    --star-glow: 200 100% 70%;
+    --star-tail: 220 80% 65%;
+    --night-gradient-start: 240 25% 8%;
+    --night-gradient-mid: 235 30% 5%;
+    --night-gradient-end: 240 20% 3%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Animation timing */
+    --shooting-time: 3000ms;
+    --star-tail-length: 6em;
+    --star-head-size: 10px;
+    --star-glow-size: 6px;
   }
 }
 
@@ -100,6 +58,154 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  .night-sky {
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--night-gradient-start)) 0%,
+      hsl(var(--night-gradient-mid)) 50%,
+      hsl(var(--night-gradient-end)) 100%
+    );
+  }
+
+  .shooting-star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 2px;
+    background: linear-gradient(
+      -45deg,
+      hsl(var(--star-core)),
+      hsla(var(--star-tail), 0)
+    );
+    border-radius: 999px;
+    filter: drop-shadow(0 0 var(--star-glow-size) hsl(var(--star-glow)));
+    animation: 
+      tail var(--shooting-time) ease-in-out infinite,
+      shooting var(--shooting-time) ease-in-out infinite;
+  }
+
+  .shooting-star::before,
+  .shooting-star::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+      -45deg,
+      hsla(var(--star-tail), 0),
+      hsl(var(--star-core)),
+      hsla(var(--star-tail), 0)
+    );
+    border-radius: 100%;
+    animation: shining var(--shooting-time) ease-in-out infinite;
+  }
+
+  .shooting-star::before {
+    transform: translateX(50%) rotateZ(45deg);
+  }
+
+  .shooting-star::after {
+    transform: translateX(50%) rotateZ(-45deg);
+  }
+
+  /* Individual star positioning and delays */
+  .shooting-star:nth-child(1) { top: calc(50% - 180px); left: calc(50% - 150px); animation-delay: 0ms; }
+  .shooting-star:nth-child(1)::before, .shooting-star:nth-child(1)::after { animation-delay: 0ms; }
+  
+  .shooting-star:nth-child(2) { top: calc(50% + 50px); left: calc(50% - 250px); animation-delay: 800ms; }
+  .shooting-star:nth-child(2)::before, .shooting-star:nth-child(2)::after { animation-delay: 800ms; }
+  
+  .shooting-star:nth-child(3) { top: calc(50% - 100px); left: calc(50% + 100px); animation-delay: 1600ms; }
+  .shooting-star:nth-child(3)::before, .shooting-star:nth-child(3)::after { animation-delay: 1600ms; }
+  
+  .shooting-star:nth-child(4) { top: calc(50% + 120px); left: calc(50% - 80px); animation-delay: 2400ms; }
+  .shooting-star:nth-child(4)::before, .shooting-star:nth-child(4)::after { animation-delay: 2400ms; }
+  
+  .shooting-star:nth-child(5) { top: calc(50% - 220px); left: calc(50% + 50px); animation-delay: 3200ms; }
+  .shooting-star:nth-child(5)::before, .shooting-star:nth-child(5)::after { animation-delay: 3200ms; }
+  
+  .shooting-star:nth-child(6) { top: calc(50% + 80px); left: calc(50% + 200px); animation-delay: 4000ms; }
+  .shooting-star:nth-child(6)::before, .shooting-star:nth-child(6)::after { animation-delay: 4000ms; }
+  
+  .shooting-star:nth-child(7) { top: calc(50% - 60px); left: calc(50% - 300px); animation-delay: 4800ms; }
+  .shooting-star:nth-child(7)::before, .shooting-star:nth-child(7)::after { animation-delay: 4800ms; }
+  
+  .shooting-star:nth-child(8) { top: calc(50% + 150px); left: calc(50% + 150px); animation-delay: 5600ms; }
+  .shooting-star:nth-child(8)::before, .shooting-star:nth-child(8)::after { animation-delay: 5600ms; }
+  
+  .shooting-star:nth-child(9) { top: calc(50% - 250px); left: calc(50% - 200px); animation-delay: 6400ms; }
+  .shooting-star:nth-child(9)::before, .shooting-star:nth-child(9)::after { animation-delay: 6400ms; }
+  
+  .shooting-star:nth-child(10) { top: calc(50% + 30px); left: calc(50% + 50px); animation-delay: 7200ms; }
+  .shooting-star:nth-child(10)::before, .shooting-star:nth-child(10)::after { animation-delay: 7200ms; }
+
+  /* Static twinkling stars */
+  .static-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: hsl(var(--foreground));
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  .static-star::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle, hsla(var(--star-core), 0.3), transparent);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--foreground)) 0%,
+      hsl(var(--star-core)) 50%,
+      hsl(var(--foreground)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes tail {
+  0% { width: 0; }
+  30% { width: var(--star-tail-length); }
+  100% { width: 0; }
+}
+
+@keyframes shining {
+  0% { width: 0; }
+  50% { width: 30px; }
+  100% { width: 0; }
+}
+
+@keyframes shooting {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(300px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
 }
