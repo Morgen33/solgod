@@ -1,21 +1,29 @@
 import { Layout } from "@/components/Layout";
-import { ArrowRight, Coins, Users, Zap, ExternalLink } from "lucide-react";
+import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { MorphingText } from "@/components/ui/morphing-text";
 import solcityLogo from "@/assets/solcity-logo.png";
 
 const quickLinks = [{
   label: "Twitter/X",
-  href: "https://x.com/SOLGodNFTs"
+  href: "https://x.com/SOLGodNFTs",
+  icon: Twitter,
+  description: "Follow for updates & alpha"
 }, {
   label: "Telegram",
-  href: "https://t.me/+TonrvVIf1t4zOGE0"
+  href: "https://t.me/+TonrvVIf1t4zOGE0",
+  icon: Send,
+  description: "Join the community chat"
 }, {
   label: "Stake",
-  href: "https://sgstake.fluxinc.io/"
+  href: "https://sgstake.fluxinc.io/",
+  icon: Layers,
+  description: "Earn rewards by staking"
 }, {
   label: "Mystery Pack",
-  href: "https://sgtailor.fluxinc.io/packs"
+  href: "https://sgtailor.fluxinc.io/packs",
+  icon: Gift,
+  description: "Open exclusive packs"
 }];
 
 const Index = () => {
@@ -44,14 +52,26 @@ const Index = () => {
           </div>
           
           {/* Quick Links */}
-          <div className="flex flex-wrap gap-3 justify-center" style={{
-          animation: "fade-in 0.8s ease-out 0.6s forwards",
-          opacity: 0
-        }}>
-            {quickLinks.map(link => <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary border border-border/50 rounded-full hover:border-primary/50 transition-colors inline-flex items-center gap-1.5">
-                {link.label}
-                <ExternalLink size={12} />
-              </a>)}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto" style={{
+            animation: "fade-in 0.8s ease-out 0.6s forwards",
+            opacity: 0
+          }}>
+            {quickLinks.map(link => {
+              const Icon = link.icon;
+              return (
+                <a 
+                  key={link.label} 
+                  href={link.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="card-glow rounded-xl p-5 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 group"
+                >
+                  <Icon className="text-primary mb-3 group-hover:scale-110 transition-transform" size={28} />
+                  <h4 className="font-semibold text-foreground mb-1">{link.label}</h4>
+                  <p className="text-xs text-muted-foreground">{link.description}</p>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
