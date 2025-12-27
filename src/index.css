@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,49 +6,42 @@
 
 @layer base {
   :root {
-    --background: 240 20% 6%;
-    --foreground: 220 30% 95%;
+    --background: 260 30% 4%;
+    --foreground: 45 100% 96%;
 
-    --card: 240 18% 10%;
-    --card-foreground: 220 30% 95%;
+    --card: 260 25% 8%;
+    --card-foreground: 45 100% 96%;
 
-    --popover: 240 18% 10%;
-    --popover-foreground: 220 30% 95%;
+    --popover: 260 25% 8%;
+    --popover-foreground: 45 100% 96%;
 
-    --primary: 210 100% 70%;
-    --primary-foreground: 240 20% 6%;
+    --primary: 45 100% 60%;
+    --primary-foreground: 260 30% 4%;
 
-    --secondary: 240 15% 15%;
-    --secondary-foreground: 220 30% 90%;
+    --secondary: 260 20% 15%;
+    --secondary-foreground: 45 100% 90%;
 
-    --muted: 240 12% 18%;
-    --muted-foreground: 220 15% 60%;
+    --muted: 260 15% 18%;
+    --muted-foreground: 260 10% 55%;
 
-    --accent: 200 100% 75%;
-    --accent-foreground: 240 20% 6%;
+    --accent: 280 80% 60%;
+    --accent-foreground: 45 100% 96%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 15% 20%;
-    --input: 240 15% 20%;
-    --ring: 210 100% 70%;
+    --border: 260 20% 18%;
+    --input: 260 20% 18%;
+    --ring: 45 100% 60%;
 
     --radius: 0.5rem;
 
-    /* Custom cosmic colors */
-    --star-core: 210 100% 80%;
-    --star-glow: 200 100% 70%;
-    --star-tail: 220 80% 65%;
-    --night-gradient-start: 240 25% 8%;
-    --night-gradient-mid: 235 30% 5%;
-    --night-gradient-end: 240 20% 3%;
-
-    /* Animation timing */
-    --shooting-time: 3000ms;
-    --star-tail-length: 6em;
-    --star-head-size: 10px;
-    --star-glow-size: 6px;
+    /* SolGods custom tokens */
+    --gold: 45 100% 60%;
+    --gold-glow: 45 100% 70%;
+    --purple: 280 80% 60%;
+    --purple-dark: 260 40% 20%;
+    --solana: 170 80% 50%;
   }
 }
 
@@ -63,248 +56,95 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.05em;
   }
 }
 
 @layer components {
-  .night-sky {
-    background: linear-gradient(
-      to bottom,
-      hsl(var(--night-gradient-start)) 0%,
-      hsl(var(--night-gradient-mid)) 50%,
-      hsl(var(--night-gradient-end)) 100%
-    );
-  }
-
-  .shooting-star {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 2px;
-    background: linear-gradient(
-      -45deg,
-      hsl(var(--star-core)),
-      hsla(var(--star-tail), 0)
-    );
-    border-radius: 999px;
-    filter: drop-shadow(0 0 var(--star-glow-size) hsl(var(--star-glow)));
-    animation: 
-      tail var(--shooting-time) ease-in-out infinite,
-      shooting var(--shooting-time) ease-in-out infinite;
-  }
-
-  .shooting-star::before,
-  .shooting-star::after {
-    content: '';
-    position: absolute;
-    top: calc(50% - 1px);
-    right: 0;
-    height: 2px;
-    background: linear-gradient(
-      -45deg,
-      hsla(var(--star-tail), 0),
-      hsl(var(--star-core)),
-      hsla(var(--star-tail), 0)
-    );
-    border-radius: 100%;
-    animation: shining var(--shooting-time) ease-in-out infinite;
-  }
-
-  .shooting-star::before {
-    transform: translateX(50%) rotateZ(45deg);
-  }
-
-  .shooting-star::after {
-    transform: translateX(50%) rotateZ(-45deg);
-  }
-
-  /* Individual star positioning and delays */
-  .shooting-star:nth-child(1) { top: calc(50% - 180px); left: calc(50% - 150px); animation-delay: 0ms; }
-  .shooting-star:nth-child(1)::before, .shooting-star:nth-child(1)::after { animation-delay: 0ms; }
-  
-  .shooting-star:nth-child(2) { top: calc(50% + 50px); left: calc(50% - 250px); animation-delay: 800ms; }
-  .shooting-star:nth-child(2)::before, .shooting-star:nth-child(2)::after { animation-delay: 800ms; }
-  
-  .shooting-star:nth-child(3) { top: calc(50% - 100px); left: calc(50% + 100px); animation-delay: 1600ms; }
-  .shooting-star:nth-child(3)::before, .shooting-star:nth-child(3)::after { animation-delay: 1600ms; }
-  
-  .shooting-star:nth-child(4) { top: calc(50% + 120px); left: calc(50% - 80px); animation-delay: 2400ms; }
-  .shooting-star:nth-child(4)::before, .shooting-star:nth-child(4)::after { animation-delay: 2400ms; }
-  
-  .shooting-star:nth-child(5) { top: calc(50% - 220px); left: calc(50% + 50px); animation-delay: 3200ms; }
-  .shooting-star:nth-child(5)::before, .shooting-star:nth-child(5)::after { animation-delay: 3200ms; }
-  
-  .shooting-star:nth-child(6) { top: calc(50% + 80px); left: calc(50% + 200px); animation-delay: 4000ms; }
-  .shooting-star:nth-child(6)::before, .shooting-star:nth-child(6)::after { animation-delay: 4000ms; }
-  
-  .shooting-star:nth-child(7) { top: calc(50% - 60px); left: calc(50% - 300px); animation-delay: 4800ms; }
-  .shooting-star:nth-child(7)::before, .shooting-star:nth-child(7)::after { animation-delay: 4800ms; }
-  
-  .shooting-star:nth-child(8) { top: calc(50% + 150px); left: calc(50% + 150px); animation-delay: 5600ms; }
-  .shooting-star:nth-child(8)::before, .shooting-star:nth-child(8)::after { animation-delay: 5600ms; }
-  
-  .shooting-star:nth-child(9) { top: calc(50% - 250px); left: calc(50% - 200px); animation-delay: 6400ms; }
-  .shooting-star:nth-child(9)::before, .shooting-star:nth-child(9)::after { animation-delay: 6400ms; }
-  
-  .shooting-star:nth-child(10) { top: calc(50% + 30px); left: calc(50% + 50px); animation-delay: 7200ms; }
-  .shooting-star:nth-child(10)::before, .shooting-star:nth-child(10)::after { animation-delay: 7200ms; }
-
-  /* Static twinkling stars */
-  .static-star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: hsl(var(--foreground));
-    border-radius: 50%;
-    animation: twinkle 3s ease-in-out infinite;
-  }
-
-  .static-star::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    background: radial-gradient(circle, hsla(var(--star-core), 0.3), transparent);
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-  }
-
-  /* User-created shooting star */
-  .shooting-star-new {
-    position: absolute;
-    height: 2px;
-    background: linear-gradient(
-      -45deg,
-      hsl(var(--star-core)),
-      hsla(var(--star-tail), 0)
-    );
-    border-radius: 999px;
-    filter: drop-shadow(0 0 8px hsl(var(--star-glow))) drop-shadow(0 0 20px hsl(var(--accent)));
-    animation: 
-      tail-new 3s ease-in-out forwards,
-      shooting-new 3s ease-in-out forwards;
-    transform-origin: left center;
-  }
-
-  .shooting-star-new::before,
-  .shooting-star-new::after {
-    content: '';
-    position: absolute;
-    top: calc(50% - 1px);
-    right: 0;
-    height: 2px;
-    background: linear-gradient(
-      -45deg,
-      hsla(var(--star-tail), 0),
-      hsl(var(--star-core)),
-      hsla(var(--star-tail), 0)
-    );
-    border-radius: 100%;
-    animation: shining-new 3s ease-in-out forwards;
-  }
-
-  .shooting-star-new::before {
-    transform: translateX(50%) rotateZ(45deg);
-  }
-
-  .shooting-star-new::after {
-    transform: translateX(50%) rotateZ(-45deg);
-  }
-
-  /* Burst particle */
-  .burst-particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: hsl(var(--star-core));
-    border-radius: 50%;
-    filter: drop-shadow(0 0 6px hsl(var(--star-glow)));
-    animation: burst 0.8s ease-out forwards;
-    transform: translate(-50%, -50%);
-  }
-
-  .burst-particle::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 12px;
-    height: 12px;
-    background: radial-gradient(circle, hsla(var(--accent), 0.6), transparent);
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-  }
-}
-
-@layer utilities {
-  .text-gradient {
+  .gold-gradient {
     background: linear-gradient(
       135deg,
-      hsl(var(--foreground)) 0%,
-      hsl(var(--star-core)) 50%,
-      hsl(var(--foreground)) 100%
+      hsl(var(--gold)) 0%,
+      hsl(var(--gold-glow)) 100%
+    );
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gold)) 0%,
+      hsl(var(--gold-glow)) 50%,
+      hsl(var(--gold)) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-}
 
-@keyframes tail {
-  0% { width: 0; }
-  30% { width: var(--star-tail-length); }
-  100% { width: 0; }
-}
-
-@keyframes shining {
-  0% { width: 0; }
-  50% { width: 30px; }
-  100% { width: 0; }
-}
-
-@keyframes shooting {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(300px); }
-}
-
-@keyframes twinkle {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.2); }
-}
-
-/* New user-triggered animations */
-@keyframes tail-new {
-  0% { width: 0; opacity: 1; }
-  20% { width: 8em; }
-  80% { width: 4em; opacity: 1; }
-  100% { width: 0; opacity: 0; }
-}
-
-@keyframes shining-new {
-  0% { width: 0; }
-  30% { width: 40px; }
-  100% { width: 0; }
-}
-
-@keyframes shooting-new {
-  0% { transform: translateX(0) translateY(0); }
-  100% { transform: translateX(400px) translateY(200px); }
-}
-
-@keyframes burst {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) translateX(0) translateY(0) scale(1);
+  .card-glow {
+    position: relative;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
   }
-  100% {
+
+  .card-glow::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, hsl(var(--gold) / 0.3), transparent, hsl(var(--purple) / 0.3));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .glow-button {
+    position: relative;
+    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-glow)));
+    color: hsl(var(--primary-foreground));
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .glow-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 20px hsl(var(--gold) / 0.4), 0 0 40px hsl(var(--gold) / 0.2);
     opacity: 0;
-    transform: translate(-50%, -50%) 
-               translateX(calc(cos(var(--angle)) * 60px)) 
-               translateY(calc(sin(var(--angle)) * 60px)) 
-               scale(0);
+    transition: opacity 0.3s ease;
   }
+
+  .glow-button:hover::before {
+    opacity: 1;
+  }
+
+  .glow-button:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--gold) / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(var(--gold) / 0.6); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
