@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Header } from "./Header";
+import { Footer } from "./Footer";
 import { StarsCanvas } from "./ui/stars-canvas";
 
 interface LayoutProps {
@@ -8,12 +9,13 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative flex flex-col">
       <StarsCanvas hue={270} brightness={8} maxStars={800} speedMultiplier={0.5} />
       <Header />
-      <main className="relative z-10 pt-16 sm:pt-20">
+      <main className="relative z-10 pt-16 sm:pt-20 flex-1">
         {children}
       </main>
+      <Footer />
     </div>
   );
 }
