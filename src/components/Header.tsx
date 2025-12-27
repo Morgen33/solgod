@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import solgodsLogo from "@/assets/solgods-logo.png";
 
 const navLinks = [
   { href: "/", label: "Home", external: false },
@@ -20,15 +21,8 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <span 
-              className="text-2xl sm:text-3xl font-bold bg-clip-text text-transparent animate-gradient-flow"
-              style={{
-                backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
-                backgroundSize: "200% 100%",
-              }}
-            >SOLGODS</span>
+            <img src={solgodsLogo} alt="SOLGODS" className="h-10 sm:h-12 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
