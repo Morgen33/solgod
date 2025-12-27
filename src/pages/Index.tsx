@@ -59,7 +59,13 @@ const Index = () => {
       {/* Features Grid */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 text-gold-gradient">
+          <h2 
+            className="text-4xl sm:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent animate-gradient-flow"
+            style={{
+              backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
+              backgroundSize: "200% 100%",
+            }}
+          >
             WHY SOLGODS?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">

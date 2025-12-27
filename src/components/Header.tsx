@@ -22,7 +22,13 @@ export function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl sm:text-3xl font-bold text-gold-gradient">SOLGODS</span>
+            <span 
+              className="text-2xl sm:text-3xl font-bold bg-clip-text text-transparent animate-gradient-flow"
+              style={{
+                backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
+                backgroundSize: "200% 100%",
+              }}
+            >SOLGODS</span>
           </Link>
 
           {/* Desktop Nav */}
