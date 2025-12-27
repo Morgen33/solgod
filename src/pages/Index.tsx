@@ -24,13 +24,15 @@ const Index = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             style={{ animation: "fade-in 0.8s ease-out 0.4s forwards", opacity: 0 }}
           >
-            <Link
-              to="/about"
+            <a
+              href="https://magiceden.us/marketplace/solgods_"
+              target="_blank"
+              rel="noopener noreferrer"
               className="glow-button px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
             >
-              Enter the Pantheon
+              Buy SolGods
               <ArrowRight size={20} />
-            </Link>
+            </a>
             <Link
               to="/whitepaper"
               className="px-8 py-4 rounded-lg text-lg font-medium border border-border bg-secondary/50 hover:bg-secondary transition-colors inline-flex items-center justify-center"
