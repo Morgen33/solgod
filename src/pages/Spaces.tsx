@@ -19,7 +19,13 @@ const Spaces = () => {
     <Layout>
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl sm:text-7xl font-bold text-gold-gradient mb-4 text-center">
+          <h1 
+            className="text-5xl sm:text-7xl font-bold mb-4 text-center bg-clip-text text-transparent animate-gradient-flow"
+            style={{
+              backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
+              backgroundSize: "200% 100%",
+            }}
+          >
             SOLGODS SPACES
           </h1>
           <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
