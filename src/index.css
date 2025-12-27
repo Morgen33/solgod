@@ -102,6 +102,57 @@
     pointer-events: none;
   }
 
+  .shiny-card {
+    --shiny-card-bg: hsl(var(--card));
+    --shiny-card-highlight: blue;
+    --shiny-card-highlight-subtle: #8484ff;
+    --animation: gradient-angle linear infinite;
+    --duration: 3s;
+    
+    isolation: isolate;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+    background: linear-gradient(var(--shiny-card-bg), var(--shiny-card-bg)) padding-box,
+      conic-gradient(
+        from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+        transparent,
+        var(--shiny-card-highlight) var(--gradient-percent),
+        var(--gradient-shine) calc(var(--gradient-percent) * 2),
+        var(--shiny-card-highlight) calc(var(--gradient-percent) * 3),
+        transparent calc(var(--gradient-percent) * 4)
+      ) border-box;
+    transition: 800ms cubic-bezier(0.25, 1, 0.5, 1);
+    transition-property: --gradient-angle-offset, --gradient-percent, --gradient-shine;
+  }
+
+  .shiny-card,
+  .shiny-card::before {
+    animation: var(--animation) var(--duration);
+  }
+
+  .shiny-card::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    mask-image: conic-gradient(
+      from calc(var(--gradient-angle) + 45deg),
+      black,
+      transparent 10% 90%,
+      black
+    );
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  .shiny-card:is(:hover, :focus-visible) {
+    --gradient-percent: 20%;
+    --gradient-angle-offset: 95deg;
+    --gradient-shine: var(--shiny-card-highlight-subtle);
+  }
+
   .glow-button {
     position: relative;
     background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-glow)));
