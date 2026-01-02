@@ -10,6 +10,7 @@ import Token from "./pages/Token";
 import Partnerships from "./pages/Partnerships";
 import Spaces from "./pages/Spaces";
 import Whitepaper from "./pages/Whitepaper";
+import Mountains from "./pages/Mountains";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/spaces" element={<Spaces />} />
           <Route path="/whitepaper" element={<Whitepaper />} />
+          <Route path="/mountains" element={<Mountains />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
