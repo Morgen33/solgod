@@ -69,23 +69,23 @@ const fsSource = `
     // Landscape height
     float h = fbm(uv * 1.5);
 
-    // Sky gradient
+    // Sky gradient - purple to navy
     vec3 sky = mix(
-      vec3(0.1, 0.0, 0.2),
-      vec3(0.5, 0.1, 0.0),
+      vec3(0.02, 0.02, 0.08),
+      vec3(0.3, 0.1, 0.5),
       uv.y + 0.5
     );
 
-    // Mountain silhouette
+    // Mountain silhouette - deep purple/navy
     float m = smoothstep(h - 0.01, h, uv.y + 0.2);
-    vec3 mountain = vec3(0.05, 0.05, 0.15) * (1.0 - h);
+    vec3 mountain = vec3(0.08, 0.04, 0.18) * (1.0 - h);
 
     vec3 color = mix(sky, mountain, m);
 
-    // Sun glow
+    // Sun/moon glow - soft purple
     vec2 sunPos = vec2(0.0, 0.25);
     float dist = length(uv - sunPos);
-    vec3 sun = vec3(1.0, 0.7, 0.3) * (0.1 / dist);
+    vec3 sun = vec3(0.6, 0.3, 0.9) * (0.08 / dist);
     color += sun;
 
     // Atmospheric fog
