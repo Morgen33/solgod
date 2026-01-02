@@ -69,10 +69,10 @@ const fsSource = `
     // Landscape height
     float h = fbm(uv * 1.5);
 
-    // Sky gradient - purple to navy
+    // Sky gradient - deep navy at bottom, vibrant purple at top
     vec3 sky = mix(
-      vec3(0.02, 0.02, 0.08),
-      vec3(0.3, 0.1, 0.5),
+      vec3(0.05, 0.02, 0.12),
+      vec3(0.45, 0.15, 0.6),
       uv.y + 0.5
     );
 
