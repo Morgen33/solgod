@@ -72,7 +72,7 @@ const fsSource = `
     // Sky gradient - deep navy at bottom, vibrant purple at top
     vec3 sky = mix(
       vec3(0.05, 0.02, 0.12),
-      vec3(0.45, 0.15, 0.6),
+      vec3(0.73, 0.22, 0.63),
       uv.y + 0.5
     );
 
