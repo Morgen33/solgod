@@ -10,7 +10,6 @@ const navLinks = [
   { href: "/token", label: "Token", external: false },
   { href: "/partnerships", label: "Partnerships", external: false },
   { href: "https://solgodcal.lovable.app/", label: "Spaces", external: true },
-  { href: "/whitepaper", label: "Whitepaper", external: false },
   { href: "/solcity", label: "SolCity", external: false },
 ];
 

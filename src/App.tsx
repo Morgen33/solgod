@@ -9,7 +9,6 @@ import Dao from "./pages/Dao";
 import Token from "./pages/Token";
 import Partnerships from "./pages/Partnerships";
 import Spaces from "./pages/Spaces";
-import Whitepaper from "./pages/Whitepaper";
 import SolCity from "./pages/SolCity";
 import NotFound from "./pages/NotFound";
 
@@ -28,7 +27,6 @@ const App = () => (
           <Route path="/token" element={<Token />} />
           <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/spaces" element={<Spaces />} />
-          <Route path="/whitepaper" element={<Whitepaper />} />
           <Route path="/solcity" element={<SolCity />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
