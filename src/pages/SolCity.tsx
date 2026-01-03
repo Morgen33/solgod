@@ -3,7 +3,6 @@ import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift, FileText, T
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { MorphingText } from "@/components/ui/morphing-text";
 import solcityLogo from "@/assets/solcity-logo.png";
-
 const quickLinks = [{
   label: "Twitter/X",
   href: "https://x.com/SOLGodNFTs",
@@ -25,16 +24,25 @@ const quickLinks = [{
   icon: Gift,
   description: "Open exclusive packs"
 }];
-
-const tableOfContents = [
-  { id: "strategy", title: "1. Whitepaper - The Strategy" },
-  { id: "mechanics", title: "2. Technical Whitepaper - The Mechanics" },
-  { id: "allocations", title: "3. Allocations - The Funding" },
-  { id: "graphs", title: "4. Graphs - The Data" },
-  { id: "simplified", title: "5. Simplified Whitepaper - The Summaries" },
-  { id: "disclaimer", title: "6. Disclaimer - The Risks" },
-];
-
+const tableOfContents = [{
+  id: "strategy",
+  title: "1. Whitepaper - The Strategy"
+}, {
+  id: "mechanics",
+  title: "2. Technical Whitepaper - The Mechanics"
+}, {
+  id: "allocations",
+  title: "3. Allocations - The Funding"
+}, {
+  id: "graphs",
+  title: "4. Graphs - The Data"
+}, {
+  id: "simplified",
+  title: "5. Simplified Whitepaper - The Summaries"
+}, {
+  id: "disclaimer",
+  title: "6. Disclaimer - The Risks"
+}];
 const SolCity = () => {
   return <Layout>
       {/* Hero Section */}
@@ -62,25 +70,13 @@ const SolCity = () => {
           
           {/* Quick Links */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto" style={{
-            animation: "fade-in 0.8s ease-out 0.6s forwards",
-            opacity: 0
-          }}>
+          animation: "fade-in 0.8s ease-out 0.6s forwards",
+          opacity: 0
+        }}>
             {quickLinks.map(link => {
-              const Icon = link.icon;
-              return (
-                <a 
-                  key={link.label} 
-                  href={link.href} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="bg-card border border-border rounded-xl p-5 flex flex-col items-center text-center hover:scale-105 hover:border-primary/50 transition-all duration-300 group"
-                >
-                  <Icon className="text-primary mb-3 group-hover:scale-110 transition-transform" size={28} />
-                  <h4 className="font-semibold text-foreground mb-1">{link.label}</h4>
-                  <p className="text-xs text-muted-foreground">{link.description}</p>
-                </a>
-              );
-            })}
+            const Icon = link.icon;
+            return;
+          })}
           </div>
         </div>
       </section>
@@ -88,13 +84,10 @@ const SolCity = () => {
       {/* Features Grid */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 
-            className="text-4xl sm:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent animate-gradient-flow"
-            style={{
-              backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
-              backgroundSize: "200% 100%",
-            }}
-          >
+          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent animate-gradient-flow" style={{
+          backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
+          backgroundSize: "200% 100%"
+        }}>
             WHY SOLCITY?
           </h2>
           <div className="grid md:grid-cols-3 gap-12">
@@ -110,13 +103,10 @@ const SolCity = () => {
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 
-              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent animate-gradient-flow"
-              style={{
-                backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
-                backgroundSize: "200% 100%",
-              }}
-            >
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent animate-gradient-flow" style={{
+            backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
+            backgroundSize: "200% 100%"
+          }}>
               CAPITAL ALLOCATION ENGINE
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -131,15 +121,9 @@ const SolCity = () => {
               Table of Contents
             </h3>
             <nav className="grid sm:grid-cols-2 gap-2">
-              {tableOfContents.map((section) => (
-                <a
-                  key={section.id}
-                  href={`#${section.id}`}
-                  className="block text-muted-foreground hover:text-primary transition-colors"
-                >
+              {tableOfContents.map(section => <a key={section.id} href={`#${section.id}`} className="block text-muted-foreground hover:text-primary transition-colors">
                   {section.title}
-                </a>
-              ))}
+                </a>)}
             </nav>
           </div>
 
@@ -352,21 +336,27 @@ const SolCity = () => {
                     <span className="font-semibold">70%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary h-3 rounded-full" style={{ width: '70%' }}></div>
+                    <div className="bg-primary h-3 rounded-full" style={{
+                    width: '70%'
+                  }}></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Liquidity Pools</span>
                     <span className="font-semibold">20%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary/70 h-3 rounded-full" style={{ width: '20%' }}></div>
+                    <div className="bg-primary/70 h-3 rounded-full" style={{
+                    width: '20%'
+                  }}></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Internal Treasury</span>
                     <span className="font-semibold">10%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary/50 h-3 rounded-full" style={{ width: '10%' }}></div>
+                    <div className="bg-primary/50 h-3 rounded-full" style={{
+                    width: '10%'
+                  }}></div>
                   </div>
                 </div>
               </div>
@@ -379,28 +369,36 @@ const SolCity = () => {
                     <span className="font-semibold">80%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary h-3 rounded-full" style={{ width: '80%' }}></div>
+                    <div className="bg-primary h-3 rounded-full" style={{
+                    width: '80%'
+                  }}></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Team Expansion</span>
                     <span className="font-semibold">10%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary/70 h-3 rounded-full" style={{ width: '10%' }}></div>
+                    <div className="bg-primary/70 h-3 rounded-full" style={{
+                    width: '10%'
+                  }}></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Treasury</span>
                     <span className="font-semibold">5%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary/50 h-3 rounded-full" style={{ width: '5%' }}></div>
+                    <div className="bg-primary/50 h-3 rounded-full" style={{
+                    width: '5%'
+                  }}></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Sol God Support</span>
                     <span className="font-semibold">5%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary/40 h-3 rounded-full" style={{ width: '5%' }}></div>
+                    <div className="bg-primary/40 h-3 rounded-full" style={{
+                    width: '5%'
+                  }}></div>
                   </div>
                 </div>
               </div>
@@ -413,28 +411,36 @@ const SolCity = () => {
                     <span className="font-semibold">65%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary h-3 rounded-full" style={{ width: '65%' }}></div>
+                    <div className="bg-primary h-3 rounded-full" style={{
+                    width: '65%'
+                  }}></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Reinvest</span>
                     <span className="font-semibold">20%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary/70 h-3 rounded-full" style={{ width: '20%' }}></div>
+                    <div className="bg-primary/70 h-3 rounded-full" style={{
+                    width: '20%'
+                  }}></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Experiments/R&D</span>
                     <span className="font-semibold">10%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary/50 h-3 rounded-full" style={{ width: '10%' }}></div>
+                    <div className="bg-primary/50 h-3 rounded-full" style={{
+                    width: '10%'
+                  }}></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Treasury</span>
                     <span className="font-semibold">5%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary/40 h-3 rounded-full" style={{ width: '5%' }}></div>
+                    <div className="bg-primary/40 h-3 rounded-full" style={{
+                    width: '5%'
+                  }}></div>
                   </div>
                 </div>
               </div>
@@ -447,21 +453,27 @@ const SolCity = () => {
                     <span className="font-semibold">70%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary h-3 rounded-full" style={{ width: '70%' }}></div>
+                    <div className="bg-primary h-3 rounded-full" style={{
+                    width: '70%'
+                  }}></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Liquidity Pools</span>
                     <span className="font-semibold">20%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary/70 h-3 rounded-full" style={{ width: '20%' }}></div>
+                    <div className="bg-primary/70 h-3 rounded-full" style={{
+                    width: '20%'
+                  }}></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Internal Treasury</span>
                     <span className="font-semibold">10%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
-                    <div className="bg-primary/50 h-3 rounded-full" style={{ width: '10%' }}></div>
+                    <div className="bg-primary/50 h-3 rounded-full" style={{
+                    width: '10%'
+                  }}></div>
                   </div>
                 </div>
               </div>
@@ -598,21 +610,11 @@ const SolCity = () => {
           <div className="mt-16 text-center">
             <p className="text-muted-foreground mb-4">Have questions about the whitepaper?</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="https://discord.com/invite/gtrFTsmEAE"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline inline-flex items-center gap-1"
-              >
+              <a href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
                 Join Discord
                 <ExternalLink size={14} />
               </a>
-              <a
-                href="https://twitter.com/SolGods"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline inline-flex items-center gap-1"
-              >
+              <a href="https://twitter.com/SolGods" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
                 Follow Twitter
                 <ExternalLink size={14} />
               </a>
@@ -636,7 +638,6 @@ const SolCity = () => {
       </section>
     </Layout>;
 };
-
 function FeatureItem({
   icon,
   title,
@@ -657,5 +658,4 @@ function FeatureItem({
       <p className="text-muted-foreground">{description}</p>
     </div>;
 }
-
 export default SolCity;
