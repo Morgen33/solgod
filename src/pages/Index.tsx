@@ -3,7 +3,6 @@ import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift } from "luci
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { MorphingText } from "@/components/ui/morphing-text";
 import solcityLogo from "@/assets/solcity-logo.png";
-
 const quickLinks = [{
   label: "Twitter/X",
   href: "https://x.com/SOLGodNFTs",
@@ -25,7 +24,6 @@ const quickLinks = [{
   icon: Gift,
   description: "Open exclusive packs"
 }];
-
 const Index = () => {
   return <Layout>
       {/* Hero Section */}
@@ -34,7 +32,7 @@ const Index = () => {
           <div className="mb-16" style={{
           animation: "fade-in 0.8s ease-out forwards"
         }}>
-            <img src={solcityLogo} alt="SolCity" className="w-64 sm:w-80 md:w-96 mx-auto" />
+            
             <MorphingText words={["Probably Nothing", "Probably Something", "Probably Everything"]} className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4" interval={2500} />
           </div>
           
@@ -53,25 +51,17 @@ const Index = () => {
           
           {/* Quick Links */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto" style={{
-            animation: "fade-in 0.8s ease-out 0.6s forwards",
-            opacity: 0
-          }}>
+          animation: "fade-in 0.8s ease-out 0.6s forwards",
+          opacity: 0
+        }}>
             {quickLinks.map(link => {
-              const Icon = link.icon;
-              return (
-                <a 
-                  key={link.label} 
-                  href={link.href} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="bg-card border border-border rounded-xl p-5 flex flex-col items-center text-center hover:scale-105 hover:border-primary/50 transition-all duration-300 group"
-                >
+            const Icon = link.icon;
+            return <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="bg-card border border-border rounded-xl p-5 flex flex-col items-center text-center hover:scale-105 hover:border-primary/50 transition-all duration-300 group">
                   <Icon className="text-primary mb-3 group-hover:scale-110 transition-transform" size={28} />
                   <h4 className="font-semibold text-foreground mb-1">{link.label}</h4>
                   <p className="text-xs text-muted-foreground">{link.description}</p>
-                </a>
-              );
-            })}
+                </a>;
+          })}
           </div>
         </div>
       </section>
@@ -79,13 +69,10 @@ const Index = () => {
       {/* Features Grid */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 
-            className="text-4xl sm:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent animate-gradient-flow"
-            style={{
-              backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
-              backgroundSize: "200% 100%",
-            }}
-          >
+          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent animate-gradient-flow" style={{
+          backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
+          backgroundSize: "200% 100%"
+        }}>
             WHY SOLGODS?
           </h2>
           <div className="grid md:grid-cols-3 gap-12">
@@ -111,7 +98,6 @@ const Index = () => {
       </section>
     </Layout>;
 };
-
 function FeatureItem({
   icon,
   title,
@@ -132,5 +118,4 @@ function FeatureItem({
       <p className="text-muted-foreground">{description}</p>
     </div>;
 }
-
 export default Index;
