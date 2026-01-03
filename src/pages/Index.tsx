@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AttractionCursor from "@/components/AttractionCursor";
 
 const quickLinks = [
   {
@@ -31,7 +32,9 @@ const quickLinks = [
 
 const Index = () => {
   return (
-    <Layout>
+    <>
+      <AttractionCursor />
+      <Layout>
       {/* Hero Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -122,6 +125,7 @@ const Index = () => {
         </div>
       </section>
     </Layout>
+    </>
   );
 };
 
