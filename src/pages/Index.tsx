@@ -2,8 +2,8 @@ import { Layout } from "@/components/Layout";
 import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { MorphingText } from "@/components/ui/morphing-text";
+import { SparklingBackground } from "@/components/SparklingBackground";
 import solcityLogo from "@/assets/solcity-logo.png";
-
 const quickLinks = [{
   label: "Twitter/X",
   href: "https://x.com/SOLGodNFTs",
@@ -28,6 +28,8 @@ const quickLinks = [{
 
 const Index = () => {
   return <Layout>
+      <SparklingBackground transparent className="-z-10" />
+      
       {/* Hero Section */}
       <section className="min-h-[90vh] flex items-center justify-center px-4">
         <div className="max-w-5xl mx-auto text-center">
