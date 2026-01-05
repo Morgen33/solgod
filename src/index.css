@@ -7,43 +7,61 @@
 @layer base {
   :root {
     --background: 280 100% 10%;
-    --foreground: 45 100% 96%;
+    --foreground: 45 10% 90%;
     
     /* Original dark background for SolCity */
     --background-dark: 260 30% 4%;
 
-    --card: 260 25% 8%;
-    --card-foreground: 45 100% 96%;
+    --card: 275 80% 12%;
+    --card-foreground: 45 10% 90%;
 
-    --popover: 260 25% 8%;
-    --popover-foreground: 45 100% 96%;
+    --popover: 275 80% 12%;
+    --popover-foreground: 45 10% 90%;
 
-    --primary: 45 100% 60%;
-    --primary-foreground: 260 30% 4%;
+    --primary: 42 53% 55%;
+    --primary-foreground: 35 49% 15%;
 
-    --secondary: 260 20% 15%;
-    --secondary-foreground: 45 100% 90%;
+    --secondary: 275 70% 25%;
+    --secondary-foreground: 271 70% 80%;
 
-    --muted: 260 15% 18%;
-    --muted-foreground: 260 10% 55%;
+    --muted: 275 50% 20%;
+    --muted-foreground: 55 6% 68%;
 
-    --accent: 280 80% 60%;
-    --accent-foreground: 45 100% 96%;
+    --accent: 270 80% 46%;
+    --accent-foreground: 45 10% 95%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 260 20% 18%;
-    --input: 260 20% 18%;
-    --ring: 45 100% 60%;
+    --border: 275 60% 25%;
+    --input: 275 60% 25%;
+    --ring: 42 53% 55%;
 
     --radius: 0.5rem;
 
-    /* SolGods custom tokens */
-    --gold: 45 100% 60%;
-    --gold-glow: 45 100% 70%;
-    --purple: 280 80% 60%;
-    --purple-dark: 260 40% 20%;
+    /* Brand Purple Gradient */
+    --purple-light: 271 62% 63%;
+    --purple: 270 80% 46%;
+    --purple-mid: 268 86% 33%;
+    --purple-dark: 274 83% 32%;
+    
+    /* Brand Purple Extended */
+    --purple-soft: 271 70% 80%;
+    --purple-vibrant: 270 68% 49%;
+    --purple-muted: 270 56% 65%;
+
+    /* Brand Gold */
+    --gold: 42 53% 55%;
+    --gold-highlight: 44 68% 69%;
+    --gold-light: 49 100% 88%;
+    --gold-shadow: 35 49% 15%;
+    --gold-glow: 44 68% 69%;
+
+    /* Neutral Gradient */
+    --neutral-light: 55 6% 68%;
+    --neutral-dark: 120 5% 33%;
+
+    /* Solana accent */
     --solana: 170 80% 50%;
   }
 }
@@ -70,11 +88,35 @@
 }
 
 @layer components {
+  /* Brand Purple Gradient */
+  .brand-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--purple-muted)) 0%,
+      hsl(var(--purple-vibrant)) 50%,
+      hsl(var(--purple-dark)) 100%
+    );
+  }
+
+  .text-brand-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--purple-muted)) 0%,
+      hsl(var(--purple-vibrant)) 50%,
+      hsl(var(--purple-dark)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Gold Gradient */
   .gold-gradient {
     background: linear-gradient(
       135deg,
-      hsl(var(--gold)) 0%,
-      hsl(var(--gold-glow)) 100%
+      hsl(var(--gold-shadow)) 0%,
+      hsl(var(--gold)) 50%,
+      hsl(var(--gold-highlight)) 100%
     );
   }
 
@@ -82,12 +124,21 @@
     background: linear-gradient(
       135deg,
       hsl(var(--gold)) 0%,
-      hsl(var(--gold-glow)) 50%,
-      hsl(var(--gold)) 100%
+      hsl(var(--gold-highlight)) 50%,
+      hsl(var(--gold-light)) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* Neutral Gradient */
+  .neutral-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--neutral-light)) 0%,
+      hsl(var(--neutral-dark)) 100%
+    );
   }
 
   .card-glow {
@@ -112,8 +163,8 @@
 
   .shiny-card {
     --shiny-card-bg: hsl(var(--card));
-    --shiny-card-highlight: blue;
-    --shiny-card-highlight-subtle: #8484ff;
+    --shiny-card-highlight: hsl(var(--purple));
+    --shiny-card-highlight-subtle: hsl(var(--purple-light));
     --animation: gradient-angle linear infinite;
     --duration: 3s;
     
@@ -163,8 +214,8 @@
 
   .glow-button {
     position: relative;
-    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-glow)));
-    color: hsl(var(--primary-foreground));
+    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-highlight)));
+    color: hsl(var(--gold-shadow));
     font-weight: 600;
     transition: all 0.3s ease;
   }
@@ -184,6 +235,33 @@
   }
 
   .glow-button:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Purple Glow Button Variant */
+  .glow-button-purple {
+    position: relative;
+    background: linear-gradient(135deg, hsl(var(--purple)), hsl(var(--purple-light)));
+    color: hsl(var(--foreground));
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .glow-button-purple::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 20px hsl(var(--purple) / 0.4), 0 0 40px hsl(var(--purple) / 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .glow-button-purple:hover::before {
+    opacity: 1;
+  }
+
+  .glow-button-purple:hover {
     transform: translateY(-2px);
   }
 }
@@ -214,11 +292,11 @@
   }
 
   .shiny-cta {
-    --shiny-cta-bg: #000000;
-    --shiny-cta-bg-subtle: #1a1818;
-    --shiny-cta-fg: #ffffff;
-    --shiny-cta-highlight: blue;
-    --shiny-cta-highlight-subtle: #8484ff;
+    --shiny-cta-bg: hsl(var(--purple-dark));
+    --shiny-cta-bg-subtle: hsl(var(--purple-mid));
+    --shiny-cta-fg: hsl(var(--foreground));
+    --shiny-cta-highlight: hsl(var(--purple));
+    --shiny-cta-highlight-subtle: hsl(var(--purple-light));
     --animation: gradient-angle linear infinite;
     --duration: 3s;
     --shadow-size: 2px;
@@ -366,6 +444,11 @@
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 20px hsl(var(--gold) / 0.3); }
   50% { box-shadow: 0 0 40px hsl(var(--gold) / 0.6); }
+}
+
+@keyframes pulse-glow-purple {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--purple) / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(var(--purple) / 0.6); }
 }
 
 @keyframes float {
