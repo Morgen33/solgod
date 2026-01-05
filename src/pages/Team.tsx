@@ -1,7 +1,8 @@
 import { Layout } from "@/components/Layout";
 import solgodsIcon from "@/assets/solgods-icon.png";
+import creatorxAvatar from "@/assets/team/creatorx.avif";
 import { Seo } from "@/components/Seo";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import {
   Crown,
@@ -99,6 +100,10 @@ const ROLE_ICON: Record<string, JSX.Element> = {
   Developers: <Code2 className="h-4 w-4" />,
 };
 
+const MEMBER_AVATARS: Record<string, string> = {
+  CreatorX: creatorxAvatar,
+};
+
 const AVATAR_COLORS = [
   "from-purple-500 to-indigo-600",
   "from-pink-500 to-rose-600",
@@ -132,6 +137,9 @@ function MemberCard({ member, size = "md" }: { member: TeamMember; size?: "lg" |
   return (
     <div className="flex flex-col items-center gap-2 text-center group">
       <Avatar className={`${sizeClasses[size]} ring-2 ring-border/40 group-hover:ring-primary/50 transition-all`}>
+        {MEMBER_AVATARS[member.name] ? (
+          <AvatarImage src={MEMBER_AVATARS[member.name]} alt={member.name} className="object-cover" />
+        ) : null}
         <AvatarFallback
           className={`bg-gradient-to-br ${getAvatarColor(member.name)} text-white font-bold`}
         >
@@ -198,7 +206,7 @@ const Team = () => {
           <img
             src={solgodsIcon}
             alt="SolGods icon"
-            className="h-20 w-auto mx-auto mb-6 opacity-80"
+            className="h-28 sm:h-36 w-auto mx-auto mb-6 opacity-90"
             loading="lazy"
           />
           <h1
