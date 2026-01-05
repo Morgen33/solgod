@@ -3,82 +3,68 @@ import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift, Sparkles } 
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { RotatingText } from "@/components/ui/rotating-text";
 import solgodLogo from "@/assets/solgods-logo.png";
-
-const quickLinks = [
-  {
-    label: "Twitter/X",
-    href: "https://x.com/SOLGodNFTs",
-    icon: Twitter,
-    description: "Follow for updates & alpha"
-  },
-  {
-    label: "Telegram",
-    href: "https://t.me/+TonrvVIf1t4zOGE0",
-    icon: Send,
-    description: "Join the community chat"
-  },
-  {
-    label: "Stake",
-    href: "https://sgstake.fluxinc.io/",
-    icon: Layers,
-    description: "Earn rewards by staking"
-  },
-  {
-    label: "Mystery Pack",
-    href: "https://sgtailor.fluxinc.io/packs",
-    icon: Gift,
-    description: "Open exclusive packs"
-  }
-];
-
+const quickLinks = [{
+  label: "Twitter/X",
+  href: "https://x.com/SOLGodNFTs",
+  icon: Twitter,
+  description: "Follow for updates & alpha"
+}, {
+  label: "Telegram",
+  href: "https://t.me/+TonrvVIf1t4zOGE0",
+  icon: Send,
+  description: "Join the community chat"
+}, {
+  label: "Stake",
+  href: "https://sgstake.fluxinc.io/",
+  icon: Layers,
+  description: "Earn rewards by staking"
+}, {
+  label: "Mystery Pack",
+  href: "https://sgtailor.fluxinc.io/packs",
+  icon: Gift,
+  description: "Open exclusive packs"
+}];
 const Index = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Subtle dot grid overlay */}
-      <div 
-        className="fixed inset-0 z-[1] pointer-events-none opacity-20"
-        style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--purple-soft) / 0.4) 1px, transparent 0)`,
-          backgroundSize: '60px 60px',
-        }}
-      />
+      <div className="fixed inset-0 z-[1] pointer-events-none opacity-20" style={{
+      backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--purple-soft) / 0.4) 1px, transparent 0)`,
+      backgroundSize: '60px 60px'
+    }} />
       
       {/* Hero Section */}
       <section className="min-h-[85vh] flex flex-col items-center justify-center px-4 relative">
         {/* Announcement Banner */}
-        <div 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8"
-          style={{ animation: "fade-in 0.6s ease-out forwards" }}
-        >
-          <Sparkles size={16} className="text-primary" />
-          <span className="text-sm text-primary font-medium tracking-wide uppercase">
-            Community-owned NFT collective on Solana
-          </span>
-        </div>
+        
 
         {/* Main Headline */}
-        <div className="text-center mb-8" style={{ animation: "fade-in 0.8s ease-out 0.2s forwards", opacity: 0 }}>
+        <div className="text-center mb-8" style={{
+        animation: "fade-in 0.8s ease-out 0.2s forwards",
+        opacity: 0
+      }}>
           <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold italic text-foreground mb-2">
             Probably
           </h1>
-          <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold italic" style={{ perspective: "1000px" }}>
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold italic" style={{
+          perspective: "1000px"
+        }}>
             <RotatingText />
           </h1>
         </div>
 
         {/* Subtitle */}
-        <p 
-          className="text-lg sm:text-xl text-muted-foreground text-center max-w-xl mb-12"
-          style={{ animation: "fade-in 0.8s ease-out 0.4s forwards", opacity: 0 }}
-        >
+        <p className="text-lg sm:text-xl text-muted-foreground text-center max-w-xl mb-12" style={{
+        animation: "fade-in 0.8s ease-out 0.4s forwards",
+        opacity: 0
+      }}>
           Join the family of traders, creators, and raiders rewriting what it means to be part of Web3.
         </p>
 
         {/* Action Buttons */}
-        <div 
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-          style={{ animation: "fade-in 0.8s ease-out 0.6s forwards", opacity: 0 }}
-        >
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16" style={{
+        animation: "fade-in 0.8s ease-out 0.6s forwards",
+        opacity: 0
+      }}>
           <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
             Buy SolGods
             <ArrowRight size={20} />
@@ -89,22 +75,15 @@ const Index = () => {
         </div>
 
         {/* Quick Links Card */}
-        <div 
-          className="w-full max-w-4xl"
-          style={{ animation: "fade-in 0.8s ease-out 0.8s forwards", opacity: 0 }}
-        >
+        <div className="w-full max-w-4xl" style={{
+        animation: "fade-in 0.8s ease-out 0.8s forwards",
+        opacity: 0
+      }}>
           <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {quickLinks.map((link) => {
-                const Icon = link.icon;
-                return (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-xl bg-secondary/30 border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group"
-                  >
+              {quickLinks.map(link => {
+              const Icon = link.icon;
+              return <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl bg-secondary/30 border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group">
                     <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
                       <Icon size={20} />
                     </div>
@@ -112,9 +91,8 @@ const Index = () => {
                       <h4 className="font-semibold text-foreground text-sm">{link.label}</h4>
                       <p className="text-xs text-muted-foreground">{link.description}</p>
                     </div>
-                  </a>
-                );
-              })}
+                  </a>;
+            })}
             </div>
           </div>
         </div>
@@ -123,34 +101,19 @@ const Index = () => {
       {/* Features Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 
-            className="text-4xl sm:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent"
-            style={{
-              backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #a463dd, #d0a7f0)",
-              backgroundSize: "200% 100%",
-            }}
-          >
+          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent" style={{
+          backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #a463dd, #d0a7f0)",
+          backgroundSize: "200% 100%"
+        }}>
             WHY SOLGODS?
           </h2>
           <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
             Built on Solana for speed, governed by the community, powered by $GODS.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <FeatureCard 
-              icon={<Coins className="text-primary" size={28} />}
-              title="$GODS Token"
-              description="Stake, vote, and earn with the native governance token powering the SolGods ecosystem."
-            />
-            <FeatureCard 
-              icon={<Users className="text-primary" size={28} />}
-              title="DAO Governance"
-              description="Community-first decision making. Every holder has a voice in shaping our destiny."
-            />
-            <FeatureCard 
-              icon={<Zap className="text-primary" size={28} />}
-              title="Solana Speed"
-              description="Built on Solana for lightning-fast transactions and minimal fees."
-            />
+            <FeatureCard icon={<Coins className="text-primary" size={28} />} title="$GODS Token" description="Stake, vote, and earn with the native governance token powering the SolGods ecosystem." />
+            <FeatureCard icon={<Users className="text-primary" size={28} />} title="DAO Governance" description="Community-first decision making. Every holder has a voice in shaping our destiny." />
+            <FeatureCard icon={<Zap className="text-primary" size={28} />} title="Solana Speed" description="Built on Solana for lightning-fast transactions and minimal fees." />
           </div>
         </div>
       </section>
@@ -170,20 +133,23 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
-function FeatureCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
-  return (
-    <div className="p-6 rounded-xl bg-card/30 border border-border/50 text-center hover:border-primary/30 transition-colors">
+function FeatureCard({
+  icon,
+  title,
+  description
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}) {
+  return <div className="p-6 rounded-xl bg-card/30 border border-border/50 text-center hover:border-primary/30 transition-colors">
       <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
         {icon}
       </div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-muted-foreground text-sm">{description}</p>
-    </div>
-  );
+    </div>;
 }
-
 export default Index;
