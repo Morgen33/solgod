@@ -12,6 +12,7 @@ interface TeamSection {
   title: string;
   icon: React.ReactNode;
   members: TeamMember[];
+  span?: boolean;
 }
 
 const teamData: TeamSection[] = [
@@ -88,6 +89,7 @@ const teamData: TeamSection[] = [
   {
     title: "Moderators",
     icon: <MessageCircle className="w-6 h-6" />,
+    span: true,
     members: [
       { name: "Auskyn" },
       { name: "The SUL" },
@@ -102,7 +104,7 @@ const teamData: TeamSection[] = [
     title: "Developers",
     icon: <Code className="w-6 h-6" />,
     members: [
-      { name: "Morgan" },
+      { name: "Morgen" },
       { name: "DevKid", role: "Jr Dev" },
     ],
   },
@@ -139,14 +141,14 @@ const Team = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {teamData.map((section, index) => (
-              <GlowCard key={index} glowColor="purple" className="p-6">
+              <GlowCard key={index} glowColor="purple" className={`p-6 ${section.span ? 'md:col-span-2 lg:col-span-3' : ''}`}>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 rounded-lg bg-primary/20 text-primary">
                     {section.icon}
                   </div>
                   <h2 className="text-xl font-bold text-foreground">{section.title}</h2>
                 </div>
-                <div className="space-y-3">
+                <div className={`${section.span ? 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3' : 'space-y-3'}`}>
                   {section.members.map((member, memberIndex) => (
                     <div 
                       key={memberIndex} 
