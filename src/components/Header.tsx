@@ -11,6 +11,8 @@ const navLinks = [
   { href: "/partnerships", label: "Partnerships", external: false },
   { href: "https://solgodcal.lovable.app/", label: "Spaces", external: true },
   { href: "/solcity", label: "SolCity", external: false },
+  { href: "/team", label: "Team", external: false },
+  { href: "/join", label: "Join", external: false },
 ];
 
 export function Header() {
