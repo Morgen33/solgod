@@ -1,28 +1,22 @@
 import { Layout } from "@/components/Layout";
-import { Vote, Shield, Coins, Users, ExternalLink } from "lucide-react";
+import { Shield, Users, ExternalLink, Crown, Sparkles, Heart, Wand2, Bird } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlowCard } from "@/components/ui/spotlight-card";
+import solgodsIcon from "@/assets/solgods-icon.png";
 
-const subDaos = [
-  {
-    name: "Wings DAO",
-    description: "A sanctuary for those who choose kindness, courage, and positivity to make the world brighter.",
-    twitter: "https://x.com/WingsDaoSG",
-    discord: "https://discord.com/invite/gtrFTsmEAE",
-  },
-  {
-    name: "Mafia DAO",
-    description: "Strategic raiders and traders working together in the SolGods ecosystem.",
-    twitter: "https://x.com/MAFIAxDAO",
-    discord: "https://discord.com/invite/gtrFTsmEAE",
-  },
-];
+const SectionIcon = () => (
+  <div className="flex justify-center mb-6">
+    <img src={solgodsIcon} alt="SolGods" className="h-24 sm:h-28 w-auto opacity-80" />
+  </div>
+);
 
 const Dao = () => {
   return (
     <Layout>
+      {/* Hero Section */}
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
+          <SectionIcon />
           <h1 
             className="text-5xl sm:text-7xl font-bold mb-4 text-center bg-clip-text text-transparent animate-gradient-flow"
             style={{
@@ -35,118 +29,357 @@ const Dao = () => {
           <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
             Strategic coordination and ecosystem development for SolGods.
           </p>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <DaoFeature
-              icon={<Shield size={28} />}
-              title="Strategic Direction"
-              description="Leadership-driven decisions that guide the future of SolGods and ensure sustainable growth."
-            />
-            <DaoFeature
-              icon={<Coins size={28} />}
-              title="Treasury Management"
-              description="Professionally managed treasury funds initiatives, partnerships, and ecosystem development."
-            />
-            <DaoFeature
-              icon={<Vote size={28} />}
-              title="Transparent Operations"
-              description="All major decisions and treasury movements are communicated openly to holders."
-            />
-            <DaoFeature
-              icon={<Users size={28} />}
-              title="Working Groups"
-              description="Join specialized teams focused on art, partnerships, development, and community."
-            />
-          </div>
+      {/* What is an NFT DAO */}
+      <section className="py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SectionIcon />
+          <h2 
+            className="text-4xl sm:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent"
+            style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+          >
+            What is an NFT DAO?
+          </h2>
+          
+          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12 mb-8">
+            <p className="text-lg text-muted-foreground text-center mb-8">
+              Think of an NFT DAO as a digital city-state where the "citizens" (you, the holders) are the bosses. 
+              Instead of a traditional company with a CEO making all the calls, a DAO uses blockchain technology 
+              to give power back to the community.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center p-6 rounded-xl bg-purple/10">
+                <Users className="text-purple-light mx-auto mb-3" size={32} />
+                <h4 className="font-bold mb-2">Decentralized</h4>
+                <p className="text-sm text-muted-foreground">We grow together.</p>
+              </div>
+              <div className="text-center p-6 rounded-xl bg-purple/10">
+                <Shield className="text-purple-light mx-auto mb-3" size={32} />
+                <h4 className="font-bold mb-2">Autonomous</h4>
+                <p className="text-sm text-muted-foreground">Rules are set in code, ensuring fairness for every God.</p>
+              </div>
+              <div className="text-center p-6 rounded-xl bg-purple/10">
+                <Crown className="text-purple-light mx-auto mb-3" size={32} />
+                <h4 className="font-bold mb-2">Organization</h4>
+                <p className="text-sm text-muted-foreground">Your Sol Gods NFT acts as your "Governance Token"—it's your voting chip, your membership card.</p>
+              </div>
+            </div>
+          </GlowCard>
+        </div>
+      </section>
 
-          {/* Sub DAOs */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">Sub DAOs</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {subDaos.map((dao) => (
-                <div key={dao.name} className="card-glow rounded-xl p-8">
-                  <h3 className="text-2xl font-bold mb-2 text-primary">{dao.name}</h3>
-                  <p className="text-muted-foreground mb-4">{dao.description}</p>
-                  <div className="flex gap-3">
-                    <a
-                      href={dao.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 text-sm font-medium border border-border rounded-lg hover:bg-secondary transition-colors inline-flex items-center gap-1.5"
-                    >
-                      Twitter/X <ExternalLink size={12} />
-                    </a>
-                    <a
-                      href={dao.discord}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 text-sm font-medium border border-border rounded-lg hover:bg-secondary transition-colors inline-flex items-center gap-1.5"
-                    >
-                      Discord <ExternalLink size={12} />
-                    </a>
-                  </div>
-                </div>
+      {/* The Divine Circles */}
+      <section className="py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <SectionIcon />
+          <h2 
+            className="text-4xl sm:text-5xl font-bold mb-4 text-center bg-clip-text text-transparent"
+            style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+          >
+            The Divine Circles
+          </h2>
+          <p className="text-xl text-muted-foreground text-center mb-8 max-w-3xl mx-auto">
+            Every God belongs to a lineage. Within our ecosystem, various DAOs represent different factions 
+            of the Sol Gods pantheon. This is where you find your kin, propose new initiatives, and vote on the future of the project.
+          </p>
+          
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold mb-4 text-purple-light">Current DAOs Open:</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {["Wizard Cabal", "Wings SG DAO", "Mafia DAO", "Do Good DAO", "Pantheon Circle"].map((dao) => (
+                <span key={dao} className="px-4 py-2 rounded-full bg-purple/20 border border-purple/30 text-sm font-medium">
+                  {dao}
+                </span>
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="card-glow rounded-2xl p-8 sm:p-12">
-            <h2 className="text-3xl font-bold mb-6 text-center">How It Works</h2>
-            <div className="grid sm:grid-cols-4 gap-6 text-center">
-              <Step number="1" title="Hold" description="Own a SolGod NFT or $SOLGODS tokens" />
-              <Step number="2" title="Connect" description="Join Discord to stay informed" />
-              <Step number="3" title="Engage" description="Participate in community discussions" />
-              <Step number="4" title="Benefit" description="Enjoy the rewards of the ecosystem" />
+      {/* Wizard Cabal */}
+      <section className="py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 rounded-xl bg-purple/20">
+                <Wand2 className="text-purple-light" size={32} />
+              </div>
+              <h3 className="text-3xl font-bold">The Wizard Cabal</h3>
             </div>
-          </div>
-          
-          {/* CTA */}
-          <div className="mt-12 text-center">
-            <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
-              Join Main Discord
-              <ExternalLink size={20} />
-            </ShinyButton>
-          </div>
+            
+            <p className="text-muted-foreground mb-6">
+              The Wizard Cabal isn't just a chat — it's a game of power, strategy, and rewards. Each wizard has the chance 
+              to unlock unique DAO powers that shape the fate of the Cabal: from early whitelist alpha to banishing members, 
+              doubling odds in fate's spin wheel, sweeping floor Sol Gods, amplifying your voice, or even vetoing winners. 
+              These powers add suspense, alliances, and drama — just like a magical reality show built on-chain.
+            </p>
+            
+            <div className="bg-secondary/30 rounded-xl p-6 mb-6">
+              <h4 className="font-bold mb-3">How to Enter</h4>
+              <ul className="text-sm text-muted-foreground space-y-2">
+                <li>• Own a Sol God with the <span className="text-purple-light font-medium">Wizard Hat trait</span></li>
+                <li>• Have it either delisted (not for sale) or listed at 5 SOL or higher</li>
+              </ul>
+              <p className="text-sm text-muted-foreground mt-3">
+                Once you meet this condition, you're recognized as a true Cabal wizard and gain access to the circle — 
+                along with the chance to wield these legendary powers.
+              </p>
+            </div>
+            
+            <h4 className="font-bold mb-4 text-purple-light">Wizard Cabal Powers</h4>
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              <PowerCard title="Oracle of the Whitelist" description="Be the first to receive hidden whitelist alpha, with the choice to share it with the Cabal or guard it for yourself." />
+              <PowerCard title="Exile of Five" description="Banish up to 5 members from the chamber for one cycle, stripping them of their vote and challenge rights." />
+              <PowerCard title="Wheel of Fate" description="Double your chances in destiny's lottery — your name appears twice on the spin wheel for rewards or missions." />
+              <PowerCard title="Floor Sweeper's Boon" description="Summon a floor Sol God into your possession, a blessing from the treasury whispered about in the Cabal." />
+              <PowerCard title="Herald of the Cabal" description="For one week, every post you make echoes as prophecy — Cabal members are compelled to amplify your words." />
+              <PowerCard title="The Grand Veto" description="Strike lightning on the altar of victory: cancel the chosen winner and decree a new one (other than yourself)." />
+            </div>
+            
+            <p className="text-sm text-muted-foreground">
+              <span className="font-medium">Wizard Cabal Founder:</span>{" "}
+              <a href="https://x.com/Axe" target="_blank" rel="noopener noreferrer" className="text-purple-light hover:underline">@Axe</a>
+            </p>
+          </GlowCard>
+        </div>
+      </section>
+
+      {/* Wings DAO */}
+      <section className="py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 rounded-xl bg-purple/20">
+                <Bird className="text-purple-light" size={32} />
+              </div>
+              <h3 className="text-3xl font-bold">Wings DAO</h3>
+            </div>
+            
+            <p className="text-lg text-purple-light font-medium mb-4">Elevate Your Sol God!</p>
+            <p className="text-muted-foreground mb-6">
+              The Wings DAO is the exclusive strategic hub for holders of Sol Gods NFTs with the rare Wings trait, 
+              along with specific accessories. We focus on collective market elevation and building an elite, tight-knit community.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-4 mb-6">
+              <div className="p-4 rounded-xl bg-secondary/30">
+                <h4 className="font-bold mb-2 text-sm">Market Elevation</h4>
+                <p className="text-xs text-muted-foreground">Coordinated actions and deep analysis to increase the scarcity and value of the Wings trait.</p>
+              </div>
+              <div className="p-4 rounded-xl bg-secondary/30">
+                <h4 className="font-bold mb-2 text-sm">Exclusive Connection</h4>
+                <p className="text-xs text-muted-foreground">Hosting private events and focused discussions for elite holders.</p>
+              </div>
+              <div className="p-4 rounded-xl bg-secondary/30">
+                <h4 className="font-bold mb-2 text-sm">Merchandise & Passive Income</h4>
+                <p className="text-xs text-muted-foreground">Generating passive income for members, with a portion supporting charitable causes.</p>
+              </div>
+            </div>
+            
+            <div className="bg-secondary/30 rounded-xl p-6 mb-6">
+              <h4 className="font-bold mb-3">Eligible Membership Assets</h4>
+              <p className="text-sm text-muted-foreground">
+                All Wings Traits (Rainbow Parage, Dark, Phoenix, Dragon, Angel, Mecha), Sol Gods Visor, Sol Gods Sweatshirt
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap gap-3 mb-4">
+              <a href="https://x.com/WingsDaoSG" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium border border-border rounded-lg hover:bg-secondary transition-colors inline-flex items-center gap-1.5">
+                X: @WingsDaoSG <ExternalLink size={12} />
+              </a>
+              <a href="https://discord.gg/havennfts" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium border border-border rounded-lg hover:bg-secondary transition-colors inline-flex items-center gap-1.5">
+                Discord <ExternalLink size={12} />
+              </a>
+            </div>
+            
+            <p className="text-sm text-muted-foreground">
+              <span className="font-medium">Wings SG DAO Founders:</span> @Glow (Fluttering), @CoryB
+            </p>
+          </GlowCard>
+        </div>
+      </section>
+
+      {/* Mafia DAO */}
+      <section className="py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 rounded-xl bg-purple/20">
+                <Shield className="text-purple-light" size={32} />
+              </div>
+              <h3 className="text-3xl font-bold">MAFIA DAO</h3>
+            </div>
+            
+            <p className="text-lg text-purple-light font-medium mb-4">Mission Mafia is a family-first DAO</p>
+            <p className="text-muted-foreground mb-6">
+              Led by four core team members, built on loyalty, trust, and long-term alignment. Our focus is on creating 
+              legendary outcomes through monetization, NFTs, content, and mining, while building a lasting legacy for the family.
+            </p>
+            
+            <p className="text-sm text-muted-foreground mb-6 italic">
+              This is not a hype-driven collective. It is a working DAO where reputation, contribution, and consistency define your place.
+            </p>
+            
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              <div className="p-4 rounded-xl bg-secondary/30">
+                <h4 className="font-bold mb-2 text-sm">Core Focus Areas</h4>
+                <ul className="text-xs text-muted-foreground space-y-1">
+                  <li>• Monetization & sustainable revenue</li>
+                  <li>• NFTs & on-chain ownership</li>
+                  <li>• Content creation with long-term value</li>
+                  <li>• Mining & infrastructure-backed operations</li>
+                </ul>
+              </div>
+              <div className="p-4 rounded-xl bg-secondary/30">
+                <h4 className="font-bold mb-2 text-sm">Required Traits</h4>
+                <ul className="text-xs text-muted-foreground space-y-1">
+                  <li>• Peaky Hat</li>
+                  <li>• Mafia Hat</li>
+                  <li>• Tuxedo</li>
+                  <li>• Pinstripe Suit</li>
+                </ul>
+                <p className="text-xs text-muted-foreground mt-2 font-medium">Fee: 0.05 SOL/month</p>
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap gap-3 mb-4">
+              <a href="https://x.com/MAFIAxDAO" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium border border-border rounded-lg hover:bg-secondary transition-colors inline-flex items-center gap-1.5">
+                X: @MAFIAxDAO <ExternalLink size={12} />
+              </a>
+              <a href="https://discord.gg/SN5gcncU7P" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium border border-border rounded-lg hover:bg-secondary transition-colors inline-flex items-center gap-1.5">
+                Discord <ExternalLink size={12} />
+              </a>
+            </div>
+            
+            <p className="text-sm text-muted-foreground">
+              <span className="font-medium">Core Team:</span>{" "}
+              <a href="https://x.com/medraresteaker" target="_blank" rel="noopener noreferrer" className="text-purple-light hover:underline">@Gnomie</a>,{" "}
+              <a href="https://x.com/DaveRmetax" target="_blank" rel="noopener noreferrer" className="text-purple-light hover:underline">@Daver</a>,{" "}
+              <a href="https://x.com/borkermetax" target="_blank" rel="noopener noreferrer" className="text-purple-light hover:underline">@Borker</a>,{" "}
+              <a href="https://x.com/AiArsenals" target="_blank" rel="noopener noreferrer" className="text-purple-light hover:underline">@Morgen</a>
+            </p>
+          </GlowCard>
+        </div>
+      </section>
+
+      {/* Do Good DAO */}
+      <section className="py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 rounded-xl bg-purple/20">
+                <Heart className="text-purple-light" size={32} />
+              </div>
+              <h3 className="text-3xl font-bold">DO GOOD DAO (DGD)</h3>
+            </div>
+            
+            <p className="text-muted-foreground mb-4">
+              If you're holding a <span className="text-purple-light font-medium">Pixel Puppy trait</span> or a{" "}
+              <span className="text-purple-light font-medium">Strawhat trait</span> on your Sol God, you are officially eligible to join Do Good DAO (DGD).
+            </p>
+            
+            <p className="text-lg font-medium mb-6">We accept every trait because doing good is for everyone.</p>
+            
+            <div className="bg-secondary/30 rounded-xl p-6 mb-6">
+              <p className="text-muted-foreground mb-4">
+                DGD is not your typical "charity" project. It's a community-powered movement using Web3 culture to create real-world impact.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                We're not asking for donations. We're asking for opportunities to help.
+              </p>
+              <p className="text-muted-foreground">
+                DGD exists to be a bridge: connecting those who need help with those who want to help through actions 
+                that spread positivity and represent Sol Gods the right way.
+              </p>
+            </div>
+            
+            <p className="text-sm text-muted-foreground italic mb-6">
+              This has a real impact, backed by digital identity, proving that Web3 communities can drive change offline, not just trade JPEGs.
+            </p>
+            
+            <p className="text-sm text-muted-foreground mb-4">
+              <span className="font-medium">The DAO is led by:</span> @eddie, @KMAC, @Auskyn
+            </p>
+            
+            <p className="text-purple-light font-medium">Ready to be part of something meaningful? Open a ticket and let's get you onboarded.</p>
+          </GlowCard>
+        </div>
+      </section>
+
+      {/* Pantheon Circle */}
+      <section className="py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 rounded-xl bg-purple/20">
+                <Crown className="text-purple-light" size={32} />
+              </div>
+              <h3 className="text-3xl font-bold">The Pantheon Circle</h3>
+            </div>
+            
+            <p className="text-muted-foreground mb-6">
+              The SOL GODs ecosystem is evolving, and the time has come to forge an elite circle dedicated to the highest 
+              echelons of our community. We are thrilled to announce the founding of the Pantheon Circle DAO, an exclusive 
+              organization where only the most powerful and storied SOL GODs will gather!
+            </p>
+            
+            <div className="bg-purple/10 border border-purple/20 rounded-xl p-6 mb-6">
+              <h4 className="font-bold mb-3 text-purple-light">A New Era of Elite Governance</h4>
+              <p className="text-sm text-muted-foreground">
+                The Pantheon Circle is founded by the esteemed <span className="font-medium">@Rasi</span>, who will guide this DAO's vision. 
+                Joining him to drive its operations and strategy is <span className="font-medium">@Swish</span>. Together, they will cultivate 
+                a DAO focused on influence, growth, and the maximal potential of the SOL GODs project.
+              </p>
+            </div>
+            
+            <div className="bg-secondary/30 rounded-xl p-6 mb-6">
+              <h4 className="font-bold mb-3">Exclusive Membership: The Elite Traits</h4>
+              <p className="text-sm text-muted-foreground mb-3">
+                Membership in the Pantheon Circle is an honor reserved for the true royalty among SOL GODs. 
+                To be accepted, your GOD must possess at least ONE of the following legendary traits:
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Blood Crown", "Medusa Hair", "God Suit", "Cat Suit"].map((trait) => (
+                  <span key={trait} className="px-3 py-1 rounded-full bg-purple/20 border border-purple/30 text-sm font-medium">
+                    {trait}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <p className="text-sm text-muted-foreground italic mb-4">
+              If your SOL God possesses these elite traits, prepare to take your rightful place among the Pantheon!
+            </p>
+            
+            <p className="text-purple-light font-medium">
+              Join us as we ascend to the next level of community governance and prestige!
+            </p>
+            <p className="text-xs text-muted-foreground mt-2 italic">Elitist DAO, no starter gods</p>
+          </GlowCard>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 px-4">
+        <div className="max-w-5xl mx-auto text-center">
+          <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+            Join Main Discord
+            <ExternalLink size={20} />
+          </ShinyButton>
         </div>
       </section>
     </Layout>
   );
 };
 
-function DaoFeature({
-  icon,
-  title,
-  description,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}) {
+function PowerCard({ title, description }: { title: string; description: string }) {
   return (
-    <GlowCard glowColor="purple" customSize className="w-full h-auto">
-      <div className="flex flex-col">
-        <div className="text-primary mb-4">{icon}</div>
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-muted-foreground">{description}</p>
-      </div>
-    </GlowCard>
-  );
-}
-
-function Step({
-  number,
-  title,
-  description,
-}: {
-  number: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div>
-      <div className="text-3xl font-bold text-primary mb-2">{number}</div>
-      <h4 className="font-bold mb-1">{title}</h4>
-      <p className="text-sm text-muted-foreground">{description}</p>
+    <div className="p-4 rounded-xl bg-secondary/30 border border-purple/10">
+      <h5 className="font-bold text-sm mb-1 text-purple-light">{title}</h5>
+      <p className="text-xs text-muted-foreground">{description}</p>
     </div>
   );
 }
