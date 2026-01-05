@@ -8,7 +8,7 @@ const About = () => {
           <h1 
             className="text-5xl sm:text-7xl font-bold mb-8 text-center bg-clip-text text-transparent animate-gradient-flow"
             style={{
-              backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
+              backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #a463dd, #d0a7f0)",
               backgroundSize: "200% 100%",
             }}
           >
