@@ -1,6 +1,6 @@
 import { Layout } from "@/components/Layout";
-import { Users, Sparkles, Heart, Twitter, MessageCircle } from "lucide-react";
-import { ShinyButton } from "@/components/ui/shiny-button";
+import { Users, Sparkles, Heart } from "lucide-react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const Partnerships = () => {
   return (
@@ -28,7 +28,15 @@ const Partnerships = () => {
             </p>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="p-6 rounded-xl bg-card/30 border border-border/50 text-center hover:border-primary/30 transition-colors">
+              <div className="relative p-6 rounded-xl bg-card/30 border border-border/50 text-center">
+                <GlowingEffect
+                  spread={40}
+                  glow={true}
+                  disabled={false}
+                  proximity={64}
+                  inactiveZone={0.01}
+                  borderWidth={2}
+                />
                 <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
                   <Users className="text-primary" size={28} />
                 </div>
@@ -37,7 +45,15 @@ const Partnerships = () => {
                   Engaging our audiences through high-energy, shared activations.
                 </p>
               </div>
-              <div className="p-6 rounded-xl bg-card/30 border border-border/50 text-center hover:border-primary/30 transition-colors">
+              <div className="relative p-6 rounded-xl bg-card/30 border border-border/50 text-center">
+                <GlowingEffect
+                  spread={40}
+                  glow={true}
+                  disabled={false}
+                  proximity={64}
+                  inactiveZone={0.01}
+                  borderWidth={2}
+                />
                 <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
                   <Sparkles className="text-primary" size={28} />
                 </div>
@@ -46,7 +62,15 @@ const Partnerships = () => {
                   Developing unique digital or physical touchpoints that resonate with our holders.
                 </p>
               </div>
-              <div className="p-6 rounded-xl bg-card/30 border border-border/50 text-center hover:border-primary/30 transition-colors">
+              <div className="relative p-6 rounded-xl bg-card/30 border border-border/50 text-center">
+                <GlowingEffect
+                  spread={40}
+                  glow={true}
+                  disabled={false}
+                  proximity={64}
+                  inactiveZone={0.01}
+                  borderWidth={2}
+                />
                 <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
                   <Heart className="text-primary" size={28} />
                 </div>
