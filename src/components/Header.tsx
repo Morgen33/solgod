@@ -13,13 +13,13 @@ const dropdowns = [
   {
     label: "NFTs",
     items: [
-      { href: "/dao", label: "DAO", external: false },
       { href: "/team", label: "Team", external: false },
     ],
   },
   {
     label: "Community",
     items: [
+      { href: "/dao", label: "DAO", external: false },
       { href: "/partnerships", label: "Partnerships", external: false },
       { href: "https://solgodcal.lovable.app/", label: "Spaces", external: true },
       { href: "/join", label: "Join", external: false },
