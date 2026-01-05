@@ -1,7 +1,7 @@
 import { Twitter, MessageCircle } from "lucide-react";
 
 const socialLinks = [
-  { icon: Twitter, href: "https://x.com/SOLGodNFTs", label: "Twitter" },
+  { icon: Twitter, href: "https://x.com/solgodsnfts", label: "Twitter" },
   { icon: MessageCircle, href: "https://discord.gg/nfts", label: "Discord" },
 ];
 
