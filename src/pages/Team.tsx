@@ -1,113 +1,24 @@
 import { Layout } from "@/components/Layout";
 import { GlowCard } from "@/components/ui/spotlight-card";
-import { Crown, Shield, Users, Palette, MessageCircle, Code, Megaphone, Heart } from "lucide-react";
 import solgodIcon from "@/assets/solgods-icon.png";
 
-interface TeamMember {
-  name: string;
-  role?: string;
+interface TeamRow {
+  role: string;
+  members: string;
 }
 
-interface TeamSection {
-  title: string;
-  icon: React.ReactNode;
-  members: TeamMember[];
-  span?: boolean;
-}
-
-const teamData: TeamSection[] = [
-  {
-    title: "Founders",
-    icon: <Crown className="w-6 h-6" />,
-    members: [
-      { name: "CreatorX", role: "Trading Engine/Master Trader (Non Crypto)" },
-      { name: "Happy", role: "King of Liquidity Pools" },
-    ],
-  },
-  {
-    title: "Co-Founders",
-    icon: <Crown className="w-6 h-6" />,
-    members: [
-      { name: "Asta", role: "Token & Coin Master" },
-      { name: "Truth" },
-    ],
-  },
-  {
-    title: "Core Team",
-    icon: <Users className="w-6 h-6" />,
-    members: [
-      { name: "Rasi", role: "Lead Admin, Front End, Culture Builder" },
-      { name: "Glow", role: "Lead Admin, Spaces Lead, HR, Front/Back End, DAO Overseer" },
-    ],
-  },
-  {
-    title: "Lead Security",
-    icon: <Shield className="w-6 h-6" />,
-    members: [
-      { name: "LionX", role: "Admin" },
-    ],
-  },
-  {
-    title: "Security Team",
-    icon: <Shield className="w-6 h-6" />,
-    members: [
-      { name: "Henry", role: "Admin" },
-      { name: "Red", role: "Admin" },
-      { name: "IRB" },
-    ],
-  },
-  {
-    title: "Collaboration Manager",
-    icon: <Heart className="w-6 h-6" />,
-    members: [
-      { name: "Eddie", role: "Admin" },
-    ],
-  },
-  {
-    title: "Community Connector",
-    icon: <Users className="w-6 h-6" />,
-    members: [
-      { name: "TrashPanda" },
-      { name: "Gnomie" },
-    ],
-  },
-  {
-    title: "Community Artist",
-    icon: <Palette className="w-6 h-6" />,
-    members: [
-      { name: "Viper" },
-    ],
-  },
-  {
-    title: "X Management",
-    icon: <Megaphone className="w-6 h-6" />,
-    members: [
-      { name: "Mister", role: "Mod" },
-      { name: "Savage", role: "Mod" },
-    ],
-  },
-  {
-    title: "Moderators",
-    icon: <MessageCircle className="w-6 h-6" />,
-    span: true,
-    members: [
-      { name: "Auskyn" },
-      { name: "The SUL" },
-      { name: "Donald" },
-      { name: "Sonia" },
-      { name: "Woolfie" },
-      { name: "KMAC" },
-      { name: "Daver" },
-    ],
-  },
-  {
-    title: "Developers",
-    icon: <Code className="w-6 h-6" />,
-    members: [
-      { name: "Morgen" },
-      { name: "DevKid", role: "Jr Dev" },
-    ],
-  },
+const teamData: TeamRow[] = [
+  { role: "Founders", members: "CreatorX (Trading Engine/Master Trader), Happy (King of Liquidity Pools)" },
+  { role: "Co-Founders", members: "Asta (Token & Coin Master), Truth" },
+  { role: "Core Team", members: "Rasi (Lead Admin, Front End, Culture Builder), Glow (Lead Admin, Spaces Lead, HR, Front/Back End, DAO Overseer)" },
+  { role: "Lead Security", members: "LionX (Admin)" },
+  { role: "Security Team", members: "Henry (Admin), Red (Admin), IRB" },
+  { role: "Collaboration Manager", members: "Eddie (Admin)" },
+  { role: "Community Connector", members: "TrashPanda, Gnomie" },
+  { role: "Community Artist", members: "Viper" },
+  { role: "X Management", members: "Mister (Mod), Savage (Mod)" },
+  { role: "Moderators", members: "Auskyn, The SUL, Donald, Sonia, Woolfie, KMAC, Daver" },
+  { role: "Developers", members: "Morgen, DevKid (Jr Dev)" },
 ];
 
 const Team = () => {
@@ -115,7 +26,7 @@ const Team = () => {
     <Layout>
       {/* Hero Section */}
       <section className="py-24 px-4">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <img 
             src={solgodIcon} 
             alt="SolGods" 
@@ -136,60 +47,24 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Team Grid */}
+      {/* Team Table */}
       <section className="pb-24 px-4">
-        <div className="max-w-6xl mx-auto space-y-6">
-          {/* Regular grid for non-spanning sections */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {teamData.filter(section => !section.span).map((section, index) => (
-              <GlowCard key={index} glowColor="purple" className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-primary/20 text-primary">
-                    {section.icon}
-                  </div>
-                  <h2 className="text-xl font-bold text-foreground">{section.title}</h2>
+        <div className="max-w-5xl mx-auto">
+          <GlowCard glowColor="purple" className="p-6 sm:p-8" customSize={true} width="100%">
+            <div className="space-y-0">
+              {teamData.map((row, index) => (
+                <div 
+                  key={index} 
+                  className={`grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-2 sm:gap-6 py-5 ${
+                    index !== teamData.length - 1 ? 'border-b border-border/30' : ''
+                  }`}
+                >
+                  <div className="font-bold text-primary text-lg">{row.role}</div>
+                  <div className="text-foreground text-base sm:text-lg leading-relaxed">{row.members}</div>
                 </div>
-                <div className="space-y-3">
-                  {section.members.map((member, memberIndex) => (
-                    <div 
-                      key={memberIndex} 
-                      className="p-3 rounded-lg bg-background/50 border border-border/30"
-                    >
-                      <p className="font-semibold text-foreground">{member.name}</p>
-                      {member.role && (
-                        <p className="text-sm text-muted-foreground">{member.role}</p>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </GlowCard>
-            ))}
-          </div>
-
-          {/* Full-width sections (Moderators) */}
-          {teamData.filter(section => section.span).map((section, index) => (
-            <GlowCard key={index} glowColor="purple" className="p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 rounded-lg bg-primary/20 text-primary">
-                  {section.icon}
-                </div>
-                <h2 className="text-xl font-bold text-foreground">{section.title}</h2>
-              </div>
-              <div className="grid gap-5 [grid-template-columns:repeat(auto-fit,minmax(170px,1fr))]">
-                {section.members.map((member, memberIndex) => (
-                  <div 
-                    key={memberIndex} 
-                    className="p-6 rounded-lg bg-background/60 border border-border/40 text-center flex flex-col items-center justify-center min-h-[120px]"
-                  >
-                    <p className="font-semibold text-foreground text-lg sm:text-xl leading-snug whitespace-normal break-words">{member.name}</p>
-                    {member.role && (
-                      <p className="text-sm text-muted-foreground">{member.role}</p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </GlowCard>
-          ))}
+              ))}
+            </div>
+          </GlowCard>
         </div>
       </section>
     </Layout>
