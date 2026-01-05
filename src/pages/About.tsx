@@ -239,16 +239,16 @@ const About = () => {
           </GlowCard>
 
           {/* Celestial Orders Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {celestialOrders.map((order) => {
               const Icon = order.icon;
               return (
                 <div 
                   key={order.name}
-                  className="group p-4 rounded-xl bg-card/50 border border-border hover:border-purple/50 transition-all hover:scale-105 overflow-hidden"
+                  className="group p-6 rounded-2xl bg-card/50 border border-border hover:border-purple/50 transition-all hover:scale-[1.02] overflow-hidden"
                 >
                   {order.image ? (
-                    <div className="w-full aspect-square rounded-lg mb-3 overflow-hidden">
+                    <div className="w-full aspect-square rounded-xl mb-4 overflow-hidden">
                       <img 
                         src={order.image} 
                         alt={order.name} 
@@ -257,14 +257,14 @@ const About = () => {
                     </div>
                   ) : (
                     <div 
-                      className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 transition-transform group-hover:scale-110"
+                      className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110"
                       style={{ backgroundColor: `${order.color}20` }}
                     >
-                      <Icon size={20} style={{ color: order.color }} />
+                      <Icon size={28} style={{ color: order.color }} />
                     </div>
                   )}
-                  <h4 className="font-bold text-sm mb-1">{order.name}</h4>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{order.description}</p>
+                  <h4 className="font-bold text-lg mb-2">{order.name}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{order.description}</p>
                 </div>
               );
             })}
