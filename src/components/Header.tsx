@@ -11,12 +11,6 @@ const standaloneLinks = [
 
 const dropdowns = [
   {
-    label: "NFTs",
-    items: [
-      { href: "/team", label: "Team", external: false },
-    ],
-  },
-  {
     label: "Community",
     items: [
       { href: "/dao", label: "DAO", external: false },
@@ -152,13 +146,6 @@ export function Header() {
               SolGods
             </Link>
 
-            {/* NFTs Dropdown */}
-            <DropdownMenu 
-              label="NFTs" 
-              items={dropdowns[0].items} 
-              currentPath={location.pathname} 
-            />
-
             {/* Token */}
             <Link
               to="/token"
@@ -174,7 +161,7 @@ export function Header() {
             {/* Community Dropdown */}
             <DropdownMenu 
               label="Community" 
-              items={dropdowns[1].items} 
+              items={dropdowns[0].items} 
               currentPath={location.pathname} 
             />
 
@@ -188,6 +175,18 @@ export function Header() {
               }`}
             >
               SolCity
+            </Link>
+
+            {/* Team */}
+            <Link
+              to="/team"
+              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                location.pathname === "/team"
+                  ? "text-primary bg-primary/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+              }`}
+            >
+              Team
             </Link>
           </nav>
 
@@ -242,40 +241,6 @@ export function Header() {
                 SolGods
               </Link>
 
-              {/* NFTs Section */}
-              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                NFTs
-              </div>
-              {dropdowns[0].items.map((item) => (
-                item.external ? (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setMobileOpen(false);
-                      window.open(item.href, '_blank', 'noopener,noreferrer,width=1200,height=800');
-                    }}
-                    className="px-6 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary cursor-pointer"
-                  >
-                    {item.label}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.href}
-                    to={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    className={`px-6 py-3 text-sm font-medium transition-colors rounded-lg ${
-                      location.pathname === item.href
-                        ? "text-primary bg-primary/10"
-                        : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                )
-              ))}
-
               {/* Token */}
               <Link
                 to="/token"
@@ -293,7 +258,7 @@ export function Header() {
               <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-2">
                 Community
               </div>
-              {dropdowns[1].items.map((item) => (
+              {dropdowns[0].items.map((item) => (
                 item.external ? (
                   <a
                     key={item.href}
@@ -334,6 +299,19 @@ export function Header() {
                 }`}
               >
                 SolCity
+              </Link>
+
+              {/* Team */}
+              <Link
+                to="/team"
+                onClick={() => setMobileOpen(false)}
+                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                  location.pathname === "/team"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                Team
               </Link>
             </div>
           </nav>
