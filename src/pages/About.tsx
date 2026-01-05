@@ -239,8 +239,8 @@ const About = () => {
           </GlowCard>
 
           {/* Celestial Orders Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {celestialOrders.map((order) => {
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {celestialOrders.slice(0, -1).map((order) => {
               const Icon = order.icon;
               return (
                 <div 
@@ -268,6 +268,38 @@ const About = () => {
                 </div>
               );
             })}
+          </div>
+          
+          {/* Myceliads - Centered */}
+          <div className="flex justify-center mb-12">
+            {(() => {
+              const order = celestialOrders[celestialOrders.length - 1];
+              const Icon = order.icon;
+              return (
+                <div 
+                  className="group p-6 rounded-2xl bg-card/50 border border-border hover:border-purple/50 transition-all hover:scale-[1.02] overflow-hidden w-full max-w-sm"
+                >
+                  {order.image ? (
+                    <div className="w-full aspect-square rounded-xl mb-4 overflow-hidden">
+                      <img 
+                        src={order.image} 
+                        alt={order.name} 
+                        className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                      />
+                    </div>
+                  ) : (
+                    <div 
+                      className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 mx-auto"
+                      style={{ backgroundColor: `${order.color}20` }}
+                    >
+                      <Icon size={28} style={{ color: order.color }} />
+                    </div>
+                  )}
+                  <h4 className="font-bold text-lg mb-2 text-center">{order.name}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed text-center">{order.description}</p>
+                </div>
+              );
+            })()}
           </div>
         </div>
       </section>
