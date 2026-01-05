@@ -25,9 +25,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <img src={solgodsLogo} alt="SolGods" className="h-8 w-auto" />
-              <span className="text-lg font-bold text-foreground">SolGods</span>
+            <Link to="/" className="block mb-4">
+              <img src={solgodsLogo} alt="SolGods" className="h-16 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground">
               An NFT collective on Solana.
