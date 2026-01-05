@@ -64,18 +64,25 @@ const Partnerships = () => {
               At SolGods, we don't just build projects; we build movements. If your vision aligns with ours, we'd love to explore how we can elevate the space together.
             </p>
             <p className="text-sm text-muted-foreground mb-6">
-              Open a ticket in our Discord or DM on X
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
-                <MessageCircle size={20} />
+              Open a ticket in our{" "}
+              <a 
+                href="https://discord.gg/nfts" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
                 Discord
-              </ShinyButton>
-              <ShinyButton as="a" href="https://x.com/solgodsnfts" target="_blank" rel="noopener noreferrer">
-                <Twitter size={20} />
-                @solgodsnfts
-              </ShinyButton>
-            </div>
+              </a>
+              {" "}or DM on{" "}
+              <a 
+                href="https://x.com/solgodsnfts" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                X
+              </a>
+            </p>
           </div>
         </div>
       </section>
