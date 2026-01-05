@@ -138,17 +138,18 @@ const Team = () => {
 
       {/* Team Grid */}
       <section className="pb-24 px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto space-y-6">
+          {/* Regular grid for non-spanning sections */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {teamData.map((section, index) => (
-              <GlowCard key={index} glowColor="purple" className={`p-6 ${section.span ? 'md:col-span-2 lg:col-span-3' : ''}`}>
+            {teamData.filter(section => !section.span).map((section, index) => (
+              <GlowCard key={index} glowColor="purple" className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 rounded-lg bg-primary/20 text-primary">
                     {section.icon}
                   </div>
                   <h2 className="text-xl font-bold text-foreground">{section.title}</h2>
                 </div>
-                <div className={`${section.span ? 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3' : 'space-y-3'}`}>
+                <div className="space-y-3">
                   {section.members.map((member, memberIndex) => (
                     <div 
                       key={memberIndex} 
@@ -164,6 +165,31 @@ const Team = () => {
               </GlowCard>
             ))}
           </div>
+
+          {/* Full-width sections (Moderators) */}
+          {teamData.filter(section => section.span).map((section, index) => (
+            <GlowCard key={index} glowColor="purple" className="p-6">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 rounded-lg bg-primary/20 text-primary">
+                  {section.icon}
+                </div>
+                <h2 className="text-xl font-bold text-foreground">{section.title}</h2>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                {section.members.map((member, memberIndex) => (
+                  <div 
+                    key={memberIndex} 
+                    className="p-4 rounded-lg bg-background/50 border border-border/30 text-center"
+                  >
+                    <p className="font-semibold text-foreground">{member.name}</p>
+                    {member.role && (
+                      <p className="text-sm text-muted-foreground">{member.role}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </GlowCard>
+          ))}
         </div>
       </section>
     </Layout>
