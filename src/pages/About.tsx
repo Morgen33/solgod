@@ -12,6 +12,7 @@ import stormbindersImg from "@/assets/factions/stormbinders.avif";
 import earthshapersImg from "@/assets/factions/earthshapers.avif";
 import nethersoulImg from "@/assets/factions/nethersoul.avif";
 import starweaversImg from "@/assets/factions/starweavers.avif";
+import flarebornImg from "@/assets/factions/flareborn.avif";
 
 const SectionIcon = () => (
   <div className="flex justify-center mb-6">
@@ -20,7 +21,7 @@ const SectionIcon = () => (
 );
 
 const celestialOrders = [
-  { name: "Flareborn", description: "Wielders of solar fire and plasma storms, born of the sun's rage.", icon: Flame, color: "#ff6b35", image: null },
+  { name: "Flareborn", description: "Wielders of solar fire and plasma storms, born of the sun's rage.", icon: Flame, color: "#ff6b35", image: flarebornImg },
   { name: "Tidecallers", description: "Fluid manipulators of ocean currents and temporal water.", icon: Droplets, color: "#4facfe", image: tidecallersImg },
   { name: "Stormbinders", description: "Commanders of thunder, wind, and charged chaos.", icon: Cloud, color: "#a463dd", image: stormbindersImg },
   { name: "Earthshapers", description: "Unshakable titans with dominion over stone, growth, and life-force.", icon: Mountain, color: "#8b5a2b", image: earthshapersImg },
