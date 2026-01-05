@@ -3,6 +3,7 @@ import solgodsIcon from "@/assets/solgods-icon.png";
 import creatorxAvatar from "@/assets/team/creatorx.avif";
 import rasiAvatar from "@/assets/team/rasi.jpg";
 import morgenAvatar from "@/assets/team/morgen.avif";
+import glowAvatar from "@/assets/team/glow.avif";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -106,6 +107,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   CreatorX: creatorxAvatar,
   Rasi: rasiAvatar,
   Morgen: morgenAvatar,
+  Glow: glowAvatar,
 };
 
 const AVATAR_COLORS = [
