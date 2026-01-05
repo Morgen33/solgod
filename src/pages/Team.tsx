@@ -120,15 +120,25 @@ const MEMBER_BACK_AVATARS: Record<string, string> = {
 };
 
 const AVATAR_COLORS = [
-  "from-purple-500 to-indigo-600",
-  "from-pink-500 to-rose-600",
   "from-amber-500 to-orange-600",
   "from-emerald-500 to-teal-600",
   "from-cyan-500 to-blue-600",
-  "from-violet-500 to-purple-600",
+  "from-rose-500 to-pink-600",
+  "from-sky-500 to-indigo-600",
+  "from-lime-500 to-green-600",
 ];
 
+// Specific overrides for visual balance
+const MEMBER_COLOR_OVERRIDES: Record<string, string> = {
+  Happy: "from-amber-500 to-yellow-600",
+  Asta: "from-emerald-500 to-teal-600",
+  Truth: "from-cyan-500 to-blue-600",
+};
+
 function getAvatarColor(name: string) {
+  if (MEMBER_COLOR_OVERRIDES[name]) {
+    return MEMBER_COLOR_OVERRIDES[name];
+  }
   const index = name.charCodeAt(0) % AVATAR_COLORS.length;
   return AVATAR_COLORS[index];
 }
