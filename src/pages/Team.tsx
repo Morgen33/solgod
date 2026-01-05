@@ -12,6 +12,7 @@ import kmacBackAvatar from "@/assets/team/kmac-back.webp";
 import lionxAvatar from "@/assets/team/lionx.webp";
 import woolfieAvatar from "@/assets/team/woolfie.png";
 import woolfieBackAvatar from "@/assets/team/woolfie-back.jpg";
+import henryAvatar from "@/assets/team/henry.jpg";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -120,6 +121,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   KMAC: kmacAvatar,
   LionX: lionxAvatar,
   Woolfie: woolfieAvatar,
+  Henry: henryAvatar,
 };
 
 // Back images for flippable cards (add more as needed)
