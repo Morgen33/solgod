@@ -2,7 +2,7 @@ import { Layout } from "@/components/Layout";
 import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift, Sparkles } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { RotatingText } from "@/components/ui/rotating-text";
-import solgodLogo from "@/assets/solgods-logo.png";
+import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 
 const quickLinks = [
   {
@@ -56,8 +56,17 @@ const Index = () => {
           </span>
         </div>
 
+        {/* Hero Logo */}
+        <div className="mb-8" style={{ animation: "fade-in 0.8s ease-out 0.2s forwards", opacity: 0 }}>
+          <img 
+            src={solgodsMainLogo} 
+            alt="SolGods Logo" 
+            className="w-48 sm:w-56 md:w-64 h-auto mx-auto"
+          />
+        </div>
+
         {/* Main Headline */}
-        <div className="text-center mb-8" style={{ animation: "fade-in 0.8s ease-out 0.2s forwards", opacity: 0 }}>
+        <div className="text-center mb-8" style={{ animation: "fade-in 0.8s ease-out 0.4s forwards", opacity: 0 }}>
           <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold italic text-foreground mb-2">
             Probably
           </h1>
