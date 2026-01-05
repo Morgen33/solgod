@@ -7,6 +7,7 @@ import {
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsIcon from "@/assets/solgods-icon.png";
+import tidecallersImg from "@/assets/factions/tidecallers.avif";
 
 const SectionIcon = () => (
   <div className="flex justify-center mb-6">
@@ -15,16 +16,16 @@ const SectionIcon = () => (
 );
 
 const celestialOrders = [
-  { name: "Flareborn", description: "Wielders of solar fire and plasma storms, born of the sun's rage.", icon: Flame, color: "#ff6b35" },
-  { name: "Tidecallers", description: "Fluid manipulators of ocean currents and temporal water.", icon: Droplets, color: "#4facfe" },
-  { name: "Stormbinders", description: "Commanders of thunder, wind, and charged chaos.", icon: Cloud, color: "#a463dd" },
-  { name: "Earthshapers", description: "Unshakable titans with dominion over stone, growth, and life-force.", icon: Mountain, color: "#8b5a2b" },
-  { name: "Voidstriders", description: "Rare beings fused with antimatter and void energy.", icon: Star, color: "#1a0033" },
-  { name: "Starweavers", description: "Cosmic architects bending constellations and starlight.", icon: Sparkles, color: "#ffd700" },
-  { name: "Frostwoken", description: "Spirits of glacial time, forged in absolute stillness.", icon: Snowflake, color: "#87ceeb" },
-  { name: "Ashborn", description: "Reborn through fire and ruin, thriving in the aftermath of destruction.", icon: Flame, color: "#dc143c" },
-  { name: "Dreamforged", description: "Touched by lucid realms, reality-benders born of thought.", icon: Star, color: "#d0a7f0" },
-  { name: "Myceliads", description: "Symbiotic hybrids bound to nature, fungi, and the pulse of planetary life.", icon: Leaf, color: "#32cd32" },
+  { name: "Flareborn", description: "Wielders of solar fire and plasma storms, born of the sun's rage.", icon: Flame, color: "#ff6b35", image: null },
+  { name: "Tidecallers", description: "Fluid manipulators of ocean currents and temporal water.", icon: Droplets, color: "#4facfe", image: tidecallersImg },
+  { name: "Stormbinders", description: "Commanders of thunder, wind, and charged chaos.", icon: Cloud, color: "#a463dd", image: null },
+  { name: "Earthshapers", description: "Unshakable titans with dominion over stone, growth, and life-force.", icon: Mountain, color: "#8b5a2b", image: null },
+  { name: "Voidstriders", description: "Rare beings fused with antimatter and void energy.", icon: Star, color: "#1a0033", image: null },
+  { name: "Starweavers", description: "Cosmic architects bending constellations and starlight.", icon: Sparkles, color: "#ffd700", image: null },
+  { name: "Frostwoken", description: "Spirits of glacial time, forged in absolute stillness.", icon: Snowflake, color: "#87ceeb", image: null },
+  { name: "Ashborn", description: "Reborn through fire and ruin, thriving in the aftermath of destruction.", icon: Flame, color: "#dc143c", image: null },
+  { name: "Dreamforged", description: "Touched by lucid realms, reality-benders born of thought.", icon: Star, color: "#d0a7f0", image: null },
+  { name: "Myceliads", description: "Symbiotic hybrids bound to nature, fungi, and the pulse of planetary life.", icon: Leaf, color: "#32cd32", image: null },
 ];
 
 const About = () => {
@@ -234,14 +235,24 @@ const About = () => {
               return (
                 <div 
                   key={order.name}
-                  className="group p-4 rounded-xl bg-card/50 border border-border hover:border-purple/50 transition-all hover:scale-105"
+                  className="group p-4 rounded-xl bg-card/50 border border-border hover:border-purple/50 transition-all hover:scale-105 overflow-hidden"
                 >
-                  <div 
-                    className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 transition-transform group-hover:scale-110"
-                    style={{ backgroundColor: `${order.color}20` }}
-                  >
-                    <Icon size={20} style={{ color: order.color }} />
-                  </div>
+                  {order.image ? (
+                    <div className="w-full aspect-square rounded-lg mb-3 overflow-hidden">
+                      <img 
+                        src={order.image} 
+                        alt={order.name} 
+                        className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                      />
+                    </div>
+                  ) : (
+                    <div 
+                      className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 transition-transform group-hover:scale-110"
+                      style={{ backgroundColor: `${order.color}20` }}
+                    >
+                      <Icon size={20} style={{ color: order.color }} />
+                    </div>
+                  )}
                   <h4 className="font-bold text-sm mb-1">{order.name}</h4>
                   <p className="text-xs text-muted-foreground leading-relaxed">{order.description}</p>
                 </div>
