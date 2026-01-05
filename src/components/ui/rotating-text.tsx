@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const words = ['NOTHING.', 'SOMETHING.', 'EVERYTHING.'];
+const words = ['NOTHING', 'SOMETHING', 'EVERYTHING'];
 
 export const RotatingText = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
