@@ -10,7 +10,7 @@ import solgodsIcon from "@/assets/solgods-icon.png";
 
 const SectionIcon = () => (
   <div className="flex justify-center mb-6">
-    <img src={solgodsIcon} alt="SolGods" className="h-16 w-auto opacity-80" />
+    <img src={solgodsIcon} alt="SolGods" className="h-24 sm:h-28 w-auto opacity-80" />
   </div>
 );
 
@@ -84,6 +84,7 @@ const About = () => {
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
+            <SectionIcon />
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
