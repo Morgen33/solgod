@@ -74,9 +74,20 @@ const SolCity = () => {
           opacity: 0
         }}>
             {quickLinks.map(link => {
-            const Icon = link.icon;
-            return;
-          })}
+              const Icon = link.icon;
+              return (
+                <a 
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-accent/10 border border-accent/20 hover:bg-accent/20 hover:border-accent/40 transition-all duration-300 group"
+                >
+                  <Icon className="h-4 w-4 text-accent group-hover:scale-110 transition-transform" />
+                  <span className="text-sm font-medium text-foreground">{link.label}</span>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
