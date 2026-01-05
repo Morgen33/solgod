@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { TrendingUp, Lock, Sparkles, BarChart3 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
 const Token = () => {
   return (
@@ -33,40 +34,44 @@ const Token = () => {
 
           {/* Utility */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="card-glow rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Governance</h3>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
-                  Vote on DAO proposals
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
-                  Submit governance proposals
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
-                  Influence treasury allocation
-                </li>
-              </ul>
-            </div>
-            <div className="card-glow rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Utility</h3>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
-                  Access exclusive features
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
-                  Stake for rewards
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
-                  Discounts on merchandise
-                </li>
-              </ul>
-            </div>
+            <GlowCard glowColor="purple" customSize className="w-full h-auto">
+              <div className="flex flex-col">
+                <h3 className="text-2xl font-bold mb-4">Governance</h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary">•</span>
+                    Vote on DAO proposals
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary">•</span>
+                    Submit governance proposals
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary">•</span>
+                    Influence treasury allocation
+                  </li>
+                </ul>
+              </div>
+            </GlowCard>
+            <GlowCard glowColor="purple" customSize className="w-full h-auto">
+              <div className="flex flex-col">
+                <h3 className="text-2xl font-bold mb-4">Utility</h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary">•</span>
+                    Access exclusive features
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary">•</span>
+                    Stake for rewards
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary">•</span>
+                    Discounts on merchandise
+                  </li>
+                </ul>
+              </div>
+            </GlowCard>
           </div>
 
           {/* CTA */}

@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Vote, Shield, Coins, Users, ExternalLink } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
 const subDaos = [
   {
@@ -122,11 +123,13 @@ function DaoFeature({
   description: string;
 }) {
   return (
-    <div className="card-glow rounded-xl p-8">
-      <div className="text-primary mb-4">{icon}</div>
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
-    </div>
+    <GlowCard glowColor="purple" customSize className="w-full h-auto">
+      <div className="flex flex-col">
+        <div className="text-primary mb-4">{icon}</div>
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <p className="text-muted-foreground">{description}</p>
+      </div>
+    </GlowCard>
   );
 }
 

@@ -5,6 +5,7 @@ import {
   Droplets, Cloud, Mountain, Star, Snowflake, Leaf
 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
 const celestialOrders = [
   { name: "Flareborn", description: "Wielders of solar fire and plasma storms, born of the sun's rage.", icon: Flame, color: "#ff6b35" },
@@ -364,38 +365,44 @@ const About = () => {
 
 function ValueCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="card-glow rounded-xl p-8 hover:scale-[1.02] transition-transform">
-      <div className="text-purple-light mb-4">{icon}</div>
-      <h3 className="text-xl font-bold mb-3">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
-    </div>
+    <GlowCard glowColor="purple" customSize className="w-full h-auto">
+      <div className="flex flex-col">
+        <div className="text-purple-light mb-4">{icon}</div>
+        <h3 className="text-xl font-bold mb-3">{title}</h3>
+        <p className="text-muted-foreground">{description}</p>
+      </div>
+    </GlowCard>
   );
 }
 
 function MissionCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="p-6 rounded-xl bg-gradient-to-br from-purple-dark/20 to-purple/10 border border-purple/20 text-center hover:border-purple/40 transition-colors">
-      <div className="text-purple-light mb-3 flex justify-center">{icon}</div>
-      <h4 className="font-bold mb-2">{title}</h4>
-      <p className="text-sm text-muted-foreground">{description}</p>
-    </div>
+    <GlowCard glowColor="purple" customSize className="w-full h-auto text-center">
+      <div className="flex flex-col items-center">
+        <div className="text-purple-light mb-3">{icon}</div>
+        <h4 className="font-bold mb-2">{title}</h4>
+        <p className="text-sm text-muted-foreground">{description}</p>
+      </div>
+    </GlowCard>
   );
 }
 
 function EngineStep({ number, title, description }: { number: string; title: string; description: string }) {
   return (
-    <div className="relative p-6 rounded-xl bg-card/50 border border-border text-center group hover:border-purple/50 transition-colors">
-      <div 
-        className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
-        style={{
-          background: "linear-gradient(135deg, #7a18d1, #a463dd)",
-        }}
-      >
-        {number}
+    <GlowCard glowColor="purple" customSize className="w-full h-auto text-center">
+      <div className="flex flex-col items-center">
+        <div 
+          className="w-12 h-12 rounded-full flex items-center justify-center mb-4 text-2xl font-bold"
+          style={{
+            background: "linear-gradient(135deg, #7a18d1, #a463dd)",
+          }}
+        >
+          {number}
+        </div>
+        <h4 className="font-bold mb-2">{title}</h4>
+        <p className="text-sm text-muted-foreground">{description}</p>
       </div>
-      <h4 className="font-bold mb-2">{title}</h4>
-      <p className="text-sm text-muted-foreground">{description}</p>
-    </div>
+    </GlowCard>
   );
 }
 
