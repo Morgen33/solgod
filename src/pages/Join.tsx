@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { ArrowRight, Users, Eye, MessageCircle, Sparkles, Shield, Zap, Crown } from "lucide-react";
+import solgodsIcon from "@/assets/solgods-icon.png";
 
 const Join = () => {
   return (
@@ -10,6 +11,11 @@ const Join = () => {
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
+            <img 
+              src={solgodsIcon} 
+              alt="SolGods" 
+              className="h-20 sm:h-24 w-auto mx-auto mb-6"
+            />
             <h1 
               className="text-5xl sm:text-7xl font-bold mb-6 bg-clip-text text-transparent animate-gradient-flow"
               style={{
@@ -104,6 +110,11 @@ const Join = () => {
       <section className="py-24 px-4 bg-background/50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
+            <img 
+              src={solgodsIcon} 
+              alt="SolGods" 
+              className="h-20 sm:h-24 w-auto mx-auto mb-6"
+            />
             <h2 
               className="text-4xl sm:text-6xl font-bold mb-6 bg-clip-text text-transparent animate-gradient-flow"
               style={{
