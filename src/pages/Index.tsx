@@ -246,10 +246,15 @@ const Index = () => {
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
                 Join our Discord to connect with the community, stay updated on the latest drops, and be part of the journey.
               </p>
-              <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
-                Join Discord
-                <ArrowRight size={20} />
-              </ShinyButton>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
+                  Buy SolGods
+                  <ArrowRight size={20} />
+                </ShinyButton>
+                <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
+                  Join Discord
+                </ShinyButton>
+              </div>
             </div>
           </GlowCard>
         </div>
