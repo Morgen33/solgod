@@ -1,19 +1,108 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import solgodsIcon from "@/assets/solgods-icon.png";
 
-const navLinks = [
+const standaloneLinks = [
   { href: "/", label: "Home", external: false },
-  { href: "/about", label: "About", external: false },
-  { href: "/dao", label: "DAO", external: false },
   { href: "/token", label: "Token", external: false },
-  { href: "/partnerships", label: "Partnerships", external: false },
-  { href: "https://solgodcal.lovable.app/", label: "Spaces", external: true },
   { href: "/solcity", label: "SolCity", external: false },
-  { href: "/team", label: "Team", external: false },
-  { href: "/join", label: "Join", external: false },
 ];
+
+const dropdowns = [
+  {
+    label: "NFTs",
+    items: [
+      { href: "/about", label: "About", external: false },
+      { href: "/dao", label: "DAO", external: false },
+      { href: "/team", label: "Team", external: false },
+    ],
+  },
+  {
+    label: "Community",
+    items: [
+      { href: "/partnerships", label: "Partnerships", external: false },
+      { href: "https://solgodcal.lovable.app/", label: "Spaces", external: true },
+      { href: "/join", label: "Join", external: false },
+    ],
+  },
+];
+
+function DropdownMenu({ label, items, currentPath, onItemClick }: { 
+  label: string; 
+  items: { href: string; label: string; external: boolean }[];
+  currentPath: string;
+  onItemClick?: () => void;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const isActiveDropdown = items.some(item => currentPath === item.href);
+
+  return (
+    <div className="relative" ref={dropdownRef}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={`flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+          isActiveDropdown
+            ? "text-primary bg-primary/10"
+            : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+        }`}
+      >
+        {label}
+        <ChevronDown size={16} className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+      
+      {isOpen && (
+        <div className="absolute top-full left-0 mt-2 w-44 py-2 bg-card border border-border rounded-lg shadow-xl z-50">
+          {items.map((item) => (
+            item.external ? (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsOpen(false);
+                  onItemClick?.();
+                  window.open(item.href, '_blank', 'noopener,noreferrer,width=1200,height=800');
+                }}
+                className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors cursor-pointer"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.href}
+                to={item.href}
+                onClick={() => {
+                  setIsOpen(false);
+                  onItemClick?.();
+                }}
+                className={`block px-4 py-2 text-sm transition-colors ${
+                  currentPath === item.href
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                {item.label}
+              </Link>
+            )
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function Header() {
   const location = useLocation();
@@ -28,33 +117,55 @@ export function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              link.external ? (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.open(link.href, '_blank', 'noopener,noreferrer,width=1200,height=800');
-                  }}
-                  className="px-4 py-2 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary cursor-pointer"
-                >
-                  {link.label}
-                </a>
-              ) : (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                    location.pathname === link.href
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              )
-            ))}
+            {/* Home */}
+            <Link
+              to="/"
+              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                location.pathname === "/"
+                  ? "text-primary bg-primary/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+              }`}
+            >
+              Home
+            </Link>
+
+            {/* NFTs Dropdown */}
+            <DropdownMenu 
+              label="NFTs" 
+              items={dropdowns[0].items} 
+              currentPath={location.pathname} 
+            />
+
+            {/* Token */}
+            <Link
+              to="/token"
+              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                location.pathname === "/token"
+                  ? "text-primary bg-primary/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+              }`}
+            >
+              Token
+            </Link>
+
+            {/* Community Dropdown */}
+            <DropdownMenu 
+              label="Community" 
+              items={dropdowns[1].items} 
+              currentPath={location.pathname} 
+            />
+
+            {/* SolCity */}
+            <Link
+              to="/solcity"
+              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                location.pathname === "/solcity"
+                  ? "text-primary bg-primary/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+              }`}
+            >
+              SolCity
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -69,35 +180,112 @@ export function Header() {
         {mobileOpen && (
           <nav className="lg:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-1">
-              {navLinks.map((link) => (
-                link.external ? (
+              {/* Home */}
+              <Link
+                to="/"
+                onClick={() => setMobileOpen(false)}
+                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                  location.pathname === "/"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                Home
+              </Link>
+
+              {/* NFTs Section */}
+              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                NFTs
+              </div>
+              {dropdowns[0].items.map((item) => (
+                item.external ? (
                   <a
-                    key={link.href}
-                    href={link.href}
+                    key={item.href}
+                    href={item.href}
                     onClick={(e) => {
                       e.preventDefault();
                       setMobileOpen(false);
-                      window.open(link.href, '_blank', 'noopener,noreferrer,width=1200,height=800');
+                      window.open(item.href, '_blank', 'noopener,noreferrer,width=1200,height=800');
                     }}
-                    className="px-4 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary cursor-pointer"
+                    className="px-6 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary cursor-pointer"
                   >
-                    {link.label}
+                    {item.label}
                   </a>
                 ) : (
                   <Link
-                    key={link.href}
-                    to={link.href}
+                    key={item.href}
+                    to={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
-                      location.pathname === link.href
+                    className={`px-6 py-3 text-sm font-medium transition-colors rounded-lg ${
+                      location.pathname === item.href
                         ? "text-primary bg-primary/10"
                         : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                     }`}
                   >
-                    {link.label}
+                    {item.label}
                   </Link>
                 )
               ))}
+
+              {/* Token */}
+              <Link
+                to="/token"
+                onClick={() => setMobileOpen(false)}
+                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                  location.pathname === "/token"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                Token
+              </Link>
+
+              {/* Community Section */}
+              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-2">
+                Community
+              </div>
+              {dropdowns[1].items.map((item) => (
+                item.external ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setMobileOpen(false);
+                      window.open(item.href, '_blank', 'noopener,noreferrer,width=1200,height=800');
+                    }}
+                    className="px-6 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary cursor-pointer"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`px-6 py-3 text-sm font-medium transition-colors rounded-lg ${
+                      location.pathname === item.href
+                        ? "text-primary bg-primary/10"
+                        : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              ))}
+
+              {/* SolCity */}
+              <Link
+                to="/solcity"
+                onClick={() => setMobileOpen(false)}
+                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg mt-2 ${
+                  location.pathname === "/solcity"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                SolCity
+              </Link>
             </div>
           </nav>
         )}
