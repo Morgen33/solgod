@@ -4,6 +4,7 @@ import solgodsIcon from "@/assets/solgods-icon.png";
 import creatorxAvatar from "@/assets/team/creatorx.avif";
 import rasiAvatar from "@/assets/team/rasi.jpg";
 import morgenAvatar from "@/assets/team/morgen.avif";
+import morgenBackAvatar from "@/assets/team/morgen-back.png";
 import glowAvatar from "@/assets/team/glow.avif";
 import redAvatar from "@/assets/team/red.webp";
 import { Seo } from "@/components/Seo";
@@ -115,7 +116,7 @@ const MEMBER_AVATARS: Record<string, string> = {
 
 // Back images for flippable cards (add more as needed)
 const MEMBER_BACK_AVATARS: Record<string, string> = {
-  // Morgen: morgenBackAvatar, // Will be added when image is uploaded
+  Morgen: morgenBackAvatar,
 };
 
 const AVATAR_COLORS = [
