@@ -4,6 +4,7 @@ import creatorxAvatar from "@/assets/team/creatorx.avif";
 import rasiAvatar from "@/assets/team/rasi.jpg";
 import morgenAvatar from "@/assets/team/morgen.avif";
 import glowAvatar from "@/assets/team/glow.avif";
+import redAvatar from "@/assets/team/red.webp";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -108,6 +109,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   Rasi: rasiAvatar,
   Morgen: morgenAvatar,
   Glow: glowAvatar,
+  Red: redAvatar,
 };
 
 const AVATAR_COLORS = [
