@@ -137,10 +137,10 @@ export function Header() {
             {/* SolGods */}
             <Link
               to="/solgods"
-              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+              className={`px-4 py-2 text-sm font-bold transition-all rounded-lg border ${
                 location.pathname === "/solgods"
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  ? "text-white bg-gradient-to-r from-[#7a18d1] to-[#a463dd] border-transparent shadow-lg shadow-primary/30"
+                  : "text-primary border-primary/50 hover:bg-primary/10 hover:border-primary"
               }`}
             >
               SolGods
@@ -149,10 +149,10 @@ export function Header() {
             {/* SolCity */}
             <Link
               to="/solcity"
-              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+              className={`px-4 py-2 text-sm font-bold transition-all rounded-lg border ${
                 location.pathname === "/solcity"
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  ? "text-white bg-gradient-to-r from-[#7a18d1] to-[#a463dd] border-transparent shadow-lg shadow-primary/30"
+                  : "text-primary border-primary/50 hover:bg-primary/10 hover:border-primary"
               }`}
             >
               SolCity
@@ -232,10 +232,10 @@ export function Header() {
               <Link
                 to="/solgods"
                 onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                className={`px-4 py-3 text-sm font-bold transition-all rounded-lg border ${
                   location.pathname === "/solgods"
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    ? "text-white bg-gradient-to-r from-[#7a18d1] to-[#a463dd] border-transparent shadow-lg shadow-primary/30"
+                    : "text-primary border-primary/50 hover:bg-primary/10 hover:border-primary"
                 }`}
               >
                 SolGods
@@ -245,10 +245,10 @@ export function Header() {
               <Link
                 to="/solcity"
                 onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                className={`px-4 py-3 text-sm font-bold transition-all rounded-lg border ${
                   location.pathname === "/solcity"
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    ? "text-white bg-gradient-to-r from-[#7a18d1] to-[#a463dd] border-transparent shadow-lg shadow-primary/30"
+                    : "text-primary border-primary/50 hover:bg-primary/10 hover:border-primary"
                 }`}
               >
                 SolCity
