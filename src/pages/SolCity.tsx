@@ -73,22 +73,10 @@ const SolCity = () => {
           animation: "fade-in 0.8s ease-out 0.6s forwards",
           opacity: 0
         }}>
-            {quickLinks.map((link) => {
-              const Icon = link.icon;
-              return (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-card border border-border rounded-xl p-5 flex flex-col items-center text-center hover:scale-105 hover:border-primary/50 transition-all duration-300 group"
-                >
-                  <Icon className="text-primary mb-3 group-hover:scale-110 transition-transform" size={28} />
-                  <h4 className="font-semibold text-foreground mb-1">{link.label}</h4>
-                  <p className="text-xs text-muted-foreground">{link.description}</p>
-                </a>
-              );
-            })}
+            {quickLinks.map(link => {
+            const Icon = link.icon;
+            return;
+          })}
           </div>
         </div>
       </section>
