@@ -2,15 +2,6 @@ import { Layout } from "@/components/Layout";
 import { Handshake, Target, Rocket } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 
-const partners = [
-  { name: "Magic Eden", category: "Marketplace" },
-  { name: "Phantom", category: "Wallet" },
-  { name: "Metaplex", category: "Protocol" },
-  { name: "Tensor", category: "Trading" },
-  { name: "Jupiter", category: "DEX" },
-  { name: "Marinade", category: "Staking" },
-];
-
 const Partnerships = () => {
   return (
     <Layout>
@@ -28,16 +19,6 @@ const Partnerships = () => {
           <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
             Building with the best in Web3 to expand the SolGods universe.
           </p>
-
-          {/* Partner Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {partners.map((partner) => (
-              <div key={partner.name} className="card-glow rounded-xl p-6 text-center hover:scale-105 transition-transform">
-                <h3 className="text-xl font-bold mb-1">{partner.name}</h3>
-                <p className="text-sm text-primary">{partner.category}</p>
-              </div>
-            ))}
-          </div>
 
           {/* Partnership Types */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
