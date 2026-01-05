@@ -27,9 +27,7 @@ export const RotatingText = () => {
         backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
-        minWidth: '380px',
-        display: 'inline-block',
-        textAlign: 'center',
+        paddingRight: '0.1em',
       }}
     >
       {words[currentIndex]}
