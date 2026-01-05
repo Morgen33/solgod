@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { ArrowRight, Twitter, MessageCircle, Layers, Gift, TrendingUp, Shield, Globe, Sparkles, Cog } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { RotatingText } from "@/components/ui/rotating-text";
+import { SpotlightCard } from "@/components/ui/spotlight-card";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 
 const quickLinks = [
@@ -148,18 +149,18 @@ const Index = () => {
                 Your NFT acts as an entry point to a sophisticated treasury management system. We put the project's capital to work to ensure the ecosystem remains self-sustaining and rewarding.
               </p>
               <div className="grid md:grid-cols-3 gap-6 ml-14">
-                <div className="p-5 rounded-xl bg-card/30 border border-border/50">
+                <SpotlightCard glowColor="purple" className="p-5">
                   <h4 className="font-semibold mb-2 text-foreground">Active Treasury Management</h4>
                   <p className="text-sm text-muted-foreground">We utilize strategies to grow our holdings and generate consistent value.</p>
-                </div>
-                <div className="p-5 rounded-xl bg-card/30 border border-border/50">
+                </SpotlightCard>
+                <SpotlightCard glowColor="gold" className="p-5">
                   <h4 className="font-semibold mb-2 text-foreground">Holder Rewards</h4>
                   <p className="text-sm text-muted-foreground">Realized growth is distributed back to our community through regular quarterly airdrops.</p>
-                </div>
-                <div className="p-5 rounded-xl bg-card/30 border border-border/50">
+                </SpotlightCard>
+                <SpotlightCard glowColor="silver" className="p-5">
                   <h4 className="font-semibold mb-2 text-foreground">Automatic Scaling</h4>
                   <p className="text-sm text-muted-foreground">By reinvesting a portion of our gains, we constantly increase the treasury's power, aiming for larger rewards over time.</p>
-                </div>
+                </SpotlightCard>
               </div>
             </div>
 
@@ -175,14 +176,14 @@ const Index = () => {
                 We built our reputation on delivering value before asking for a single cent.
               </p>
               <div className="grid md:grid-cols-2 gap-6 ml-14">
-                <div className="p-5 rounded-xl bg-card/30 border border-border/50">
+                <SpotlightCard glowColor="purple" className="p-5">
                   <h4 className="font-semibold mb-2 text-foreground">Results First</h4>
                   <p className="text-sm text-muted-foreground">Our community thrived early on through shared strategies and growth frameworks that helped members level up their own digital presence.</p>
-                </div>
-                <div className="p-5 rounded-xl bg-card/30 border border-border/50">
+                </SpotlightCard>
+                <SpotlightCard glowColor="gold" className="p-5">
                   <h4 className="font-semibold mb-2 text-foreground">Proven Performance</h4>
                   <p className="text-sm text-muted-foreground">This "value-first" approach led to a 20x increase from our initial launch price, establishing a rock-solid foundation for our treasury.</p>
-                </div>
+                </SpotlightCard>
               </div>
             </div>
 
