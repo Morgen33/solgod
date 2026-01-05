@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import { ArrowRight, Coins, Users, Zap, Twitter, MessageCircle, Layers, Gift, Sparkles } from "lucide-react";
+import { ArrowRight, Twitter, MessageCircle, Layers, Gift, TrendingUp, Shield, Globe, Sparkles, Cog } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { RotatingText } from "@/components/ui/rotating-text";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
@@ -118,7 +118,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Why SolGods Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 
@@ -130,26 +130,95 @@ const Index = () => {
           >
             WHY SOLGODS?
           </h2>
-          <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
-            Built on Solana for speed, governed by the community, powered by $GODS.
+          <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
+            A Value-First Ecosystem where digital identity meets a high-performance growth engine. We've moved beyond static art to create a system that prioritizes community outcomes and long-term sustainability.
           </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            <FeatureCard 
-              icon={<Coins className="text-primary" size={28} />}
-              title="$GODS Token"
-              description="Stake, vote, and earn with the native governance token powering the SolGods ecosystem."
-            />
-            <FeatureCard 
-              icon={<Users className="text-primary" size={28} />}
-              title="DAO Governance"
-              description="Community-first decision making. Every holder has a voice in shaping our destiny."
-            />
-            <FeatureCard 
-              icon={<Zap className="text-primary" size={28} />}
-              title="Solana Speed"
-              description="Built on Solana for lightning-fast transactions and minimal fees."
-            />
+
+          {/* Pillars */}
+          <div className="space-y-16">
+            {/* Pillar 1: Capital Allocation Engine */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-3">
+                <div className="p-3 rounded-xl bg-primary/10">
+                  <Cog className="text-primary" size={28} />
+                </div>
+                <h3 className="text-2xl font-bold">1. The Capital Allocation Engine</h3>
+              </div>
+              <p className="text-muted-foreground ml-14">
+                Your NFT acts as an entry point to a sophisticated treasury management system. We put the project's capital to work to ensure the ecosystem remains self-sustaining and rewarding.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 ml-14">
+                <div className="p-5 rounded-xl bg-card/30 border border-border/50">
+                  <h4 className="font-semibold mb-2 text-foreground">Active Treasury Management</h4>
+                  <p className="text-sm text-muted-foreground">We utilize strategies to grow our holdings and generate consistent value.</p>
+                </div>
+                <div className="p-5 rounded-xl bg-card/30 border border-border/50">
+                  <h4 className="font-semibold mb-2 text-foreground">Holder Rewards</h4>
+                  <p className="text-sm text-muted-foreground">Realized growth is distributed back to our community through regular quarterly airdrops.</p>
+                </div>
+                <div className="p-5 rounded-xl bg-card/30 border border-border/50">
+                  <h4 className="font-semibold mb-2 text-foreground">Automatic Scaling</h4>
+                  <p className="text-sm text-muted-foreground">By reinvesting a portion of our gains, we constantly increase the treasury's power, aiming for larger rewards over time.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Pillar 2: Foundation of Integrity */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-3">
+                <div className="p-3 rounded-xl bg-primary/10">
+                  <Shield className="text-primary" size={28} />
+                </div>
+                <h3 className="text-2xl font-bold">2. A Foundation of Integrity</h3>
+              </div>
+              <p className="text-muted-foreground ml-14">
+                We built our reputation on delivering value before asking for a single cent.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 ml-14">
+                <div className="p-5 rounded-xl bg-card/30 border border-border/50">
+                  <h4 className="font-semibold mb-2 text-foreground">Results First</h4>
+                  <p className="text-sm text-muted-foreground">Our community thrived early on through shared strategies and growth frameworks that helped members level up their own digital presence.</p>
+                </div>
+                <div className="p-5 rounded-xl bg-card/30 border border-border/50">
+                  <h4 className="font-semibold mb-2 text-foreground">Proven Performance</h4>
+                  <p className="text-sm text-muted-foreground">This "value-first" approach led to a 20x increase from our initial launch price, establishing a rock-solid foundation for our treasury.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Pillar 3: Living Economy */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-3">
+                <div className="p-3 rounded-xl bg-primary/10">
+                  <Globe className="text-primary" size={28} />
+                </div>
+                <h3 className="text-2xl font-bold">3. A Living Economy</h3>
+              </div>
+              <p className="text-muted-foreground ml-14">
+                From the origins of Solara to the expansion into Sol City, our ecosystem is a thriving, bustling economy. We don't exist in isolation; we collaborate across the network, integrating new assets and creating a cross-ecosystem engine that is designed to evolve, not stagnate.
+              </p>
+            </div>
           </div>
+
+          {/* The Difference */}
+          <div className="mt-16 p-8 rounded-2xl bg-card/50 border border-border">
+            <h3 className="text-xl font-bold mb-6 text-center">The Difference</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-5 rounded-xl bg-secondary/30 border border-border/50 text-center">
+                <p className="text-muted-foreground text-sm mb-2">Static Collections</p>
+                <p className="font-semibold">Depend entirely on the next buyer.</p>
+              </div>
+              <div className="p-5 rounded-xl bg-primary/10 border border-primary/30 text-center">
+                <p className="text-primary text-sm mb-2">SolGods</p>
+                <p className="font-semibold">Powered by a managed system designed to generate and distribute value internally.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Closing Statement */}
+          <p className="text-center text-lg font-semibold mt-12 text-muted-foreground">
+            Stand in the light. Build the system. <span className="text-primary">Ascend as a SolGod.</span>
+          </p>
         </div>
       </section>
 
@@ -171,17 +240,5 @@ const Index = () => {
     </Layout>
   );
 };
-
-function FeatureCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
-  return (
-    <div className="p-6 rounded-xl bg-card/30 border border-border/50 text-center hover:border-primary/30 transition-colors">
-      <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
-        {icon}
-      </div>
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-muted-foreground text-sm">{description}</p>
-    </div>
-  );
-}
 
 export default Index;
