@@ -34,7 +34,6 @@ const celestialOrders = [
   { name: "Voidstriders", description: "Travelers of the cosmic void, masters of dark matter and shadow.", icon: Star, color: "#4a0080", image: voidstridersImg },
   { name: "Starweavers", description: "Cosmic architects bending constellations and starlight.", icon: Sparkles, color: "#ffd700", image: starweaversImg },
   { name: "Frostwoken", description: "Spirits of glacial time, forged in absolute stillness.", icon: Snowflake, color: "#87ceeb", image: frostwokenImg },
-  { name: "Ashborn", description: "Reborn through fire and ruin, thriving in the aftermath of destruction.", icon: Flame, color: "#dc143c", image: null },
   { name: "Dreamforged", description: "Touched by lucid realms, reality-benders born of thought.", icon: Star, color: "#d0a7f0", image: dreamforgedImg },
   { name: "Myceliads", description: "Symbiotic hybrids bound to nature, fungi, and the pulse of planetary life.", icon: Leaf, color: "#32cd32", image: myceliadsImg },
 ];
@@ -394,14 +393,6 @@ const About = () => {
                 Creating educational content and "Trad-Fi" bridges that allow non-crypto natives to understand and benefit from the Sol City Engine.
               </p>
             </GlowCard>
-          </div>
-
-          {/* CTA */}
-          <div className="text-center">
-            <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
-              Join the Pantheon
-              <ArrowRight size={20} />
-            </ShinyButton>
           </div>
         </div>
       </section>
