@@ -240,16 +240,18 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 sm:p-12 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Ascend?</h2>
-            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              Join thousands of holders in the SolGods community and be part of something bigger.
-            </p>
-            <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
-              Join the Community
-              <ArrowRight size={20} />
-            </ShinyButton>
-          </div>
+          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12 text-center">
+            <div className="flex flex-col items-center">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Ascend?</h2>
+              <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+                Join thousands of holders in the SolGods community and be part of something bigger.
+              </p>
+              <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+                Join the Community
+                <ArrowRight size={20} />
+              </ShinyButton>
+            </div>
+          </GlowCard>
         </div>
       </section>
     </Layout>

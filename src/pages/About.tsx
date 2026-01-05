@@ -154,39 +154,41 @@ const About = () => {
             <p className="text-xl text-muted-foreground">The Foundation of Ascendancy</p>
           </div>
 
-          <div className="card-glow rounded-2xl p-8 sm:p-12">
-            <p className="text-lg text-muted-foreground mb-8">
-              The seeds of SolGods were planted in April 2025 by our founder, Happy. Unlike traditional launches, 
-              the months leading up to the September 6th, 2025 launch were spent in the trenches with the community.
-            </p>
-            
-            <h3 className="text-xl font-bold mb-6 text-foreground">While others were selling "hype," Happy and CreatorX were providing:</h3>
-            
-            <div className="grid sm:grid-cols-3 gap-6 mb-8">
-              <div className="p-4 rounded-xl bg-purple/10 border border-purple/20 text-center">
-                <TrendingUp className="text-purple-light mx-auto mb-2" size={28} />
-                <h4 className="font-bold mb-1">Free Trading Calls</h4>
-                <p className="text-sm text-muted-foreground">Giving members the tools to grow their own bags.</p>
-              </div>
-              <div className="p-4 rounded-xl bg-purple/10 border border-purple/20 text-center">
-                <Zap className="text-purple-light mx-auto mb-2" size={28} />
-                <h4 className="font-bold mb-1">Meme Coin Plays</h4>
-                <p className="text-sm text-muted-foreground">Navigating the volatility of Solana with precision.</p>
-              </div>
-              <div className="p-4 rounded-xl bg-purple/10 border border-purple/20 text-center">
-                <Globe className="text-purple-light mx-auto mb-2" size={28} />
-                <h4 className="font-bold mb-1">X Growth Management</h4>
-                <p className="text-sm text-muted-foreground">Teaching members to build and monetize their presence.</p>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-xl bg-gradient-to-r from-purple-dark/30 to-purple/20 border border-purple/30">
-              <p className="text-lg text-center">
-                <span className="text-purple-light font-bold">20x return</span> off the initial whitelist price of 0.025 SOL — 
-                <span className="text-purple-light font-bold"> minted out in just 15 hours</span>
+          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+            <div className="flex flex-col">
+              <p className="text-lg text-muted-foreground mb-8">
+                The seeds of SolGods were planted in April 2025 by our founder, Happy. Unlike traditional launches, 
+                the months leading up to the September 6th, 2025 launch were spent in the trenches with the community.
               </p>
+              
+              <h3 className="text-xl font-bold mb-6 text-foreground">While others were selling "hype," Happy and CreatorX were providing:</h3>
+              
+              <div className="grid sm:grid-cols-3 gap-6 mb-8">
+                <div className="p-4 rounded-xl bg-purple/10 border border-purple/20 text-center">
+                  <TrendingUp className="text-purple-light mx-auto mb-2" size={28} />
+                  <h4 className="font-bold mb-1">Free Trading Calls</h4>
+                  <p className="text-sm text-muted-foreground">Giving members the tools to grow their own bags.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-purple/10 border border-purple/20 text-center">
+                  <Zap className="text-purple-light mx-auto mb-2" size={28} />
+                  <h4 className="font-bold mb-1">Meme Coin Plays</h4>
+                  <p className="text-sm text-muted-foreground">Navigating the volatility of Solana with precision.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-purple/10 border border-purple/20 text-center">
+                  <Globe className="text-purple-light mx-auto mb-2" size={28} />
+                  <h4 className="font-bold mb-1">X Growth Management</h4>
+                  <p className="text-sm text-muted-foreground">Teaching members to build and monetize their presence.</p>
+                </div>
+              </div>
+
+              <div className="p-6 rounded-xl bg-gradient-to-r from-purple-dark/30 to-purple/20 border border-purple/30">
+                <p className="text-lg text-center">
+                  <span className="text-purple-light font-bold">20x return</span> off the initial whitelist price of 0.025 SOL — 
+                  <span className="text-purple-light font-bold"> minted out in just 15 hours</span>
+                </p>
+              </div>
             </div>
-          </div>
+          </GlowCard>
         </div>
       </section>
 
@@ -203,15 +205,17 @@ const About = () => {
             <p className="text-xl text-muted-foreground">The Solara Chronicles</p>
           </div>
 
-          <div className="card-glow rounded-2xl p-8 sm:p-12 mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-center">The First Convergence</h3>
-            <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-              On the planet Solara, the sun was not a source of life, but a ticking clock. As the final solar convergence approached—a cosmic event that threatened to erase all life—the Sol Core awakened. It did not choose kings or scholars; it chose 3,333 individuals based on their inner spark. These mortals were infused with celestial essence, transforming them into the SolGods.
-            </p>
-            <p className="text-lg font-bold text-center text-purple-light mb-8">
-              They were divided into Ten Celestial Orders, each a pillar of the new world:
-            </p>
-          </div>
+          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12 mb-12">
+            <div className="flex flex-col items-center">
+              <h3 className="text-2xl font-bold mb-6 text-center">The First Convergence</h3>
+              <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+                On the planet Solara, the sun was not a source of life, but a ticking clock. As the final solar convergence approached—a cosmic event that threatened to erase all life—the Sol Core awakened. It did not choose kings or scholars; it chose 3,333 individuals based on their inner spark. These mortals were infused with celestial essence, transforming them into the SolGods.
+              </p>
+              <p className="text-lg font-bold text-center text-purple-light mb-8">
+                They were divided into Ten Celestial Orders, each a pillar of the new world:
+              </p>
+            </div>
+          </GlowCard>
 
           {/* Celestial Orders Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
