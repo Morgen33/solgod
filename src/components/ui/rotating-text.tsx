@@ -41,6 +41,7 @@ export const RotatingText = () => {
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         paddingRight: '0.1em',
+        filter: currentWord === 'SOMETHING' ? 'drop-shadow(0 0 20px rgba(230, 201, 122, 0.6)) drop-shadow(0 0 40px rgba(201, 162, 77, 0.4))' : undefined,
       }}
     >
       {currentWord}
