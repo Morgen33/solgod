@@ -242,12 +242,12 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12 text-center">
             <div className="flex flex-col items-center">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Ascend?</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Become a SolGod</h2>
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-                Join thousands of holders in the SolGods community and be part of something bigger.
+                Join our Discord to connect with the community, stay updated on the latest drops, and be part of the journey.
               </p>
-              <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
-                Join the Community
+              <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
+                Join Discord
                 <ArrowRight size={20} />
               </ShinyButton>
             </div>
