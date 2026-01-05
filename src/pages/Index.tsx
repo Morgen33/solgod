@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
-import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import AttractionCursor from "@/components/AttractionCursor";
+import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift, Sparkles } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
+import solgodLogo from "@/assets/solgods-logo.png";
 
 const quickLinks = [
   {
@@ -32,101 +32,161 @@ const quickLinks = [
 
 const Index = () => {
   return (
-    <>
-      <AttractionCursor />
-      <Layout>
+    <Layout>
+      {/* Dot Grid Background */}
+      <div 
+        className="fixed inset-0 z-0 pointer-events-none opacity-30"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--muted-foreground) / 0.3) 1px, transparent 0)`,
+          backgroundSize: '40px 40px',
+        }}
+      />
+      
       {/* Hero Section */}
-      <section className="py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">SolGods</h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Probably Nothing. Probably Something. Probably Everything.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button asChild>
-              <a href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
-                Buy SolGods
-                <ArrowRight size={20} className="ml-2" />
-              </a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
-                Join Discord
-              </a>
-            </Button>
-          </div>
-          
-          {/* Quick Links */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {quickLinks.map((link) => {
-              const Icon = link.icon;
-              return (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border border-border rounded-lg p-4 hover:bg-accent transition-colors"
-                >
-                  <Icon className="text-primary mb-2" size={24} />
-                  <h4 className="font-semibold mb-1">{link.label}</h4>
-                  <p className="text-sm text-muted-foreground">{link.description}</p>
-                </a>
-              );
-            })}
+      <section className="min-h-[85vh] flex flex-col items-center justify-center px-4 relative">
+        {/* Announcement Banner */}
+        <div 
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8"
+          style={{ animation: "fade-in 0.6s ease-out forwards" }}
+        >
+          <Sparkles size={16} className="text-primary" />
+          <span className="text-sm text-primary font-medium tracking-wide uppercase">
+            Community-owned NFT collective on Solana
+          </span>
+        </div>
+
+        {/* Main Headline */}
+        <div className="text-center mb-8" style={{ animation: "fade-in 0.8s ease-out 0.2s forwards", opacity: 0 }}>
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold italic text-foreground mb-2">
+            Probably
+          </h1>
+          <h1 
+            className="text-6xl sm:text-7xl md:text-8xl font-bold italic bg-clip-text text-transparent"
+            style={{
+              backgroundImage: "linear-gradient(90deg, #00d9ff, #a855f7, #ec4899)",
+            }}
+          >
+            Everything.
+          </h1>
+        </div>
+
+        {/* Subtitle */}
+        <p 
+          className="text-lg sm:text-xl text-muted-foreground text-center max-w-xl mb-12"
+          style={{ animation: "fade-in 0.8s ease-out 0.4s forwards", opacity: 0 }}
+        >
+          Join the family of traders, creators, and raiders rewriting what it means to be part of Web3.
+        </p>
+
+        {/* Action Buttons */}
+        <div 
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          style={{ animation: "fade-in 0.8s ease-out 0.6s forwards", opacity: 0 }}
+        >
+          <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
+            Buy SolGods
+            <ArrowRight size={20} />
+          </ShinyButton>
+          <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+            Join Discord
+          </ShinyButton>
+        </div>
+
+        {/* Quick Links Card */}
+        <div 
+          className="w-full max-w-4xl"
+          style={{ animation: "fade-in 0.8s ease-out 0.8s forwards", opacity: 0 }}
+        >
+          <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {quickLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-secondary/30 border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group"
+                  >
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                      <Icon size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground text-sm">{link.label}</h4>
+                      <p className="text-xs text-muted-foreground">{link.description}</p>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-24 px-4 border-t border-border">
+      <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Why SolGods?</h2>
+          <h2 
+            className="text-4xl sm:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent"
+            style={{
+              backgroundImage: "linear-gradient(90deg, #00d9ff, #a855f7, #ec4899)",
+            }}
+          >
+            WHY SOLGODS?
+          </h2>
+          <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
+            Built on Solana for speed, governed by the community, powered by $GODS.
+          </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <Coins className="text-primary mx-auto mb-4" size={32} />
-              <h3 className="text-xl font-bold mb-2">$GODS Token</h3>
-              <p className="text-muted-foreground">
-                Stake, vote, and earn with the native governance token powering the SolGods ecosystem.
-              </p>
-            </div>
-            <div className="text-center">
-              <Users className="text-primary mx-auto mb-4" size={32} />
-              <h3 className="text-xl font-bold mb-2">DAO Governance</h3>
-              <p className="text-muted-foreground">
-                Community-first decision making. Every holder has a voice in shaping our destiny.
-              </p>
-            </div>
-            <div className="text-center">
-              <Zap className="text-primary mx-auto mb-4" size={32} />
-              <h3 className="text-xl font-bold mb-2">Solana Speed</h3>
-              <p className="text-muted-foreground">
-                Built on Solana for lightning-fast transactions and minimal fees.
-              </p>
-            </div>
+            <FeatureCard 
+              icon={<Coins className="text-primary" size={28} />}
+              title="$GODS Token"
+              description="Stake, vote, and earn with the native governance token powering the SolGods ecosystem."
+            />
+            <FeatureCard 
+              icon={<Users className="text-primary" size={28} />}
+              title="DAO Governance"
+              description="Community-first decision making. Every holder has a voice in shaping our destiny."
+            />
+            <FeatureCard 
+              icon={<Zap className="text-primary" size={28} />}
+              title="Solana Speed"
+              description="Built on Solana for lightning-fast transactions and minimal fees."
+            />
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-4 border-t border-border">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Ascend?</h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Join the family of X reply guys, traders, creators, and raiders rewriting what it means to be part of Web3.
-          </p>
-          <Button asChild>
-            <a href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
-              Join Discord
-              <ArrowRight size={20} className="ml-2" />
-            </a>
-          </Button>
+      <section className="py-24 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 sm:p-12 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Ascend?</h2>
+            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+              Join thousands of holders in the SolGods community and be part of something bigger.
+            </p>
+            <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+              Join the Community
+              <ArrowRight size={20} />
+            </ShinyButton>
+          </div>
         </div>
       </section>
     </Layout>
-    </>
   );
 };
+
+function FeatureCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+  return (
+    <div className="p-6 rounded-xl bg-card/30 border border-border/50 text-center hover:border-primary/30 transition-colors">
+      <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-muted-foreground text-sm">{description}</p>
+    </div>
+  );
+}
 
 export default Index;
