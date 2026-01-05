@@ -327,13 +327,10 @@ const Team = () => {
                   <div className="inline-flex items-center gap-2">
                     <Crown className="h-5 w-5 text-[#e6c97a]" />
                     <span 
-                      className="text-2xl font-bold uppercase tracking-widest bg-clip-text text-transparent animate-gradient-flow"
-                      style={{ 
-                        backgroundImage: "linear-gradient(90deg, #fff1c1, #e6c97a, #c9a24d, #e6c97a, #fff1c1)",
-                        backgroundSize: "200% 100%"
-                      }}
+                      className="text-2xl font-bold uppercase tracking-widest bg-clip-text text-transparent"
+                      style={{ backgroundImage: "linear-gradient(90deg, #fff1c1, #e6c97a, #c9a24d)" }}
                     >
-                      F<span className="relative inline-block">ound</span>ers
+                      Founders
                     </span>
                   </div>
                   <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#c9a24d]" />
