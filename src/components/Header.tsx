@@ -146,6 +146,18 @@ export function Header() {
               SolGods
             </Link>
 
+            {/* SolCity */}
+            <Link
+              to="/solcity"
+              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                location.pathname === "/solcity"
+                  ? "text-primary bg-primary/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+              }`}
+            >
+              SolCity
+            </Link>
+
             {/* Token */}
             <Link
               to="/token"
@@ -164,18 +176,6 @@ export function Header() {
               items={dropdowns[0].items} 
               currentPath={location.pathname} 
             />
-
-            {/* SolCity */}
-            <Link
-              to="/solcity"
-              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                location.pathname === "/solcity"
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-              }`}
-            >
-              SolCity
-            </Link>
 
             {/* Team */}
             <Link
@@ -241,6 +241,19 @@ export function Header() {
                 SolGods
               </Link>
 
+              {/* SolCity */}
+              <Link
+                to="/solcity"
+                onClick={() => setMobileOpen(false)}
+                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                  location.pathname === "/solcity"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                SolCity
+              </Link>
+
               {/* Token */}
               <Link
                 to="/token"
@@ -287,19 +300,6 @@ export function Header() {
                   </Link>
                 )
               ))}
-
-              {/* SolCity */}
-              <Link
-                to="/solcity"
-                onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg mt-2 ${
-                  location.pathname === "/solcity"
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                }`}
-              >
-                SolCity
-              </Link>
 
               {/* Team */}
               <Link
