@@ -140,6 +140,18 @@ export function Header() {
               About
             </Link>
 
+            {/* SolGods */}
+            <Link
+              to="/solgods"
+              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                location.pathname === "/solgods"
+                  ? "text-primary bg-primary/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+              }`}
+            >
+              SolGods
+            </Link>
+
             {/* NFTs Dropdown */}
             <DropdownMenu 
               label="NFTs" 
@@ -215,6 +227,19 @@ export function Header() {
                 }`}
               >
                 About
+              </Link>
+
+              {/* SolGods */}
+              <Link
+                to="/solgods"
+                onClick={() => setMobileOpen(false)}
+                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                  location.pathname === "/solgods"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                SolGods
               </Link>
 
               {/* NFTs Section */}
