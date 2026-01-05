@@ -232,7 +232,23 @@ const Team = () => {
           </div>
 
           {/* Core Team */}
-          {coreTeam && <TeamSection group={coreTeam} featured />}
+          {coreTeam && (
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-8">
+                <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary/50" />
+                <div className="inline-flex items-center gap-2 text-primary">
+                  {ROLE_ICON["Core Team"]}
+                  <span className="text-xl font-bold uppercase tracking-widest">Core Team</span>
+                </div>
+                <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary/50" />
+              </div>
+              <div className="flex flex-wrap justify-center gap-16">
+                {coreTeam.members.map((m) => (
+                  <MemberCard key={m.name} member={m} size="lg" />
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Divider */}
           <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent mb-12" />
