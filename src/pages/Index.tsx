@@ -18,16 +18,16 @@ const quickLinks = [
     description: "Join the community chat"
   },
   {
+    label: "Buy SolGods",
+    href: "https://magiceden.io/marketplace/solgods_",
+    icon: Gift,
+    description: "Get yours on Magic Eden"
+  },
+  {
     label: "Stake",
     href: "https://sgstake.fluxinc.io/",
     icon: Layers,
     description: "Earn rewards by staking"
-  },
-  {
-    label: "Mystery Pack",
-    href: "https://sgtailor.fluxinc.io/packs",
-    icon: Gift,
-    description: "Open exclusive packs"
   }
 ];
 
