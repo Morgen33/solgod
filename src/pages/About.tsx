@@ -207,11 +207,20 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl bg-gradient-to-r from-purple-dark/30 to-purple/20 border border-purple/30">
+              <div className="p-6 rounded-xl bg-gradient-to-r from-purple-dark/30 to-purple/20 border border-purple/30 mb-8">
                 <p className="text-lg text-center">
                   <span className="text-purple-light font-bold">20x return</span> off the initial whitelist price of 0.025 SOL — 
                   <span className="text-purple-light font-bold"> minted out in just 15 hours</span>
                 </p>
+              </div>
+
+              <div className="flex justify-center">
+                <Link to="/team">
+                  <ShinyButton>
+                    Meet the Team
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </ShinyButton>
+                </Link>
               </div>
             </div>
           </GlowCard>
