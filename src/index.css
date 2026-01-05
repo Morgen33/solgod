@@ -4,46 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Spotlight Card Glow Effect */
-[data-spotlight]::before,
-[data-spotlight]::after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  inset: calc(var(--border-size) * -1);
-  border: var(--border-size) solid transparent;
-  border-radius: calc(var(--radius) * 1px);
-  background-attachment: fixed;
-  background-size: calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)));
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  mask: linear-gradient(transparent, transparent), linear-gradient(white, white);
-  -webkit-mask: linear-gradient(transparent, transparent), linear-gradient(white, white);
-  mask-clip: padding-box, border-box;
-  -webkit-mask-clip: padding-box, border-box;
-  mask-composite: intersect;
-  -webkit-mask-composite: source-out;
-}
-
-[data-spotlight]::before {
-  background-image: radial-gradient(
-    calc(var(--spotlight-size) * 0.75) calc(var(--spotlight-size) * 0.75) at
-    calc(var(--x, 0) * 1px)
-    calc(var(--y, 0) * 1px),
-    hsl(var(--hue, 280) calc(var(--saturation, 70) * 1%) calc(var(--lightness, 60) * 1%) / 0.8), transparent 100%
-  );
-  filter: brightness(1.5);
-}
-
-[data-spotlight]::after {
-  background-image: radial-gradient(
-    calc(var(--spotlight-size) * 0.5) calc(var(--spotlight-size) * 0.5) at
-    calc(var(--x, 0) * 1px)
-    calc(var(--y, 0) * 1px),
-    hsl(0 0% 100% / 0.4), transparent 100%
-  );
-}
-
 @layer base {
   :root {
     --background: 280 100% 10%;

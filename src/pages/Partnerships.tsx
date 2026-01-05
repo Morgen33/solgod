@@ -1,6 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Users, Sparkles, Heart, Twitter, MessageCircle } from "lucide-react";
-import { SpotlightCard } from "@/components/ui/spotlight-card";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 const Partnerships = () => {
   return (
@@ -28,7 +28,7 @@ const Partnerships = () => {
             </p>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <SpotlightCard glowColor="purple" className="p-6 text-center">
+              <div className="p-6 rounded-xl bg-card/30 border border-border/50 text-center hover:border-primary/30 transition-colors">
                 <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
                   <Users className="text-primary" size={28} />
                 </div>
@@ -36,8 +36,8 @@ const Partnerships = () => {
                 <p className="text-muted-foreground text-sm">
                   Engaging our audiences through high-energy, shared activations.
                 </p>
-              </SpotlightCard>
-              <SpotlightCard glowColor="gold" className="p-6 text-center">
+              </div>
+              <div className="p-6 rounded-xl bg-card/30 border border-border/50 text-center hover:border-primary/30 transition-colors">
                 <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
                   <Sparkles className="text-primary" size={28} />
                 </div>
@@ -45,8 +45,8 @@ const Partnerships = () => {
                 <p className="text-muted-foreground text-sm">
                   Developing unique digital or physical touchpoints that resonate with our holders.
                 </p>
-              </SpotlightCard>
-              <SpotlightCard glowColor="silver" className="p-6 text-center">
+              </div>
+              <div className="p-6 rounded-xl bg-card/30 border border-border/50 text-center hover:border-primary/30 transition-colors">
                 <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
                   <Heart className="text-primary" size={28} />
                 </div>
@@ -54,7 +54,7 @@ const Partnerships = () => {
                 <p className="text-muted-foreground text-sm">
                   Building a long-term framework for resource sharing and cross-promotion.
                 </p>
-              </SpotlightCard>
+              </div>
             </div>
           </div>
 
