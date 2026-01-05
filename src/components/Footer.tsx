@@ -1,6 +1,6 @@
 import { Twitter, MessageCircle, Layers, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
-import solgodsLogo from "@/assets/solgods-logo.png";
+import solgodsIcon from "@/assets/solgods-icon.png";
 
 const quickLinks = [
   { label: "X/Twitter", href: "https://x.com/SOLGodNFTs", icon: Twitter },
@@ -26,7 +26,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="block mb-4">
-              <img src={solgodsLogo} alt="SolGods" className="h-16 w-auto" />
+              <img src={solgodsIcon} alt="SolGods" className="h-16 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground">
               An NFT collective on Solana.
