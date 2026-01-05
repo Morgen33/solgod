@@ -30,7 +30,7 @@ export function Footer() {
               <span className="text-lg font-bold text-foreground">SolGods</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              A community-owned NFT collective on Solana.
+              An NFT collective on Solana.
             </p>
           </div>
 
