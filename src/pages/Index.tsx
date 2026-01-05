@@ -63,7 +63,7 @@ const Index = () => {
           <h1 
             className="text-6xl sm:text-7xl md:text-8xl font-bold italic bg-clip-text text-transparent"
             style={{
-              backgroundImage: "linear-gradient(90deg, #00d9ff, #a855f7, #ec4899)",
+              backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #4f0c9b)",
             }}
           >
             Everything.
@@ -130,7 +130,7 @@ const Index = () => {
           <h2 
             className="text-4xl sm:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent"
             style={{
-              backgroundImage: "linear-gradient(90deg, #00d9ff, #a855f7, #ec4899)",
+              backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #4f0c9b)",
             }}
           >
             WHY SOLGODS?
