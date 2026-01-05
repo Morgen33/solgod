@@ -109,7 +109,7 @@ const Dao = () => {
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <img src={wizardCabalLogo} alt="Wizard Cabal" className="h-16 w-auto" />
+              <img src={wizardCabalLogo} alt="Wizard Cabal" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">The Wizard Cabal</h3>
             </div>
             
@@ -155,7 +155,7 @@ const Dao = () => {
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <img src={wingsDaoLogo} alt="Wings DAO" className="h-16 w-auto" />
+              <img src={wingsDaoLogo} alt="Wings DAO" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">Wings DAO</h3>
             </div>
             
@@ -208,7 +208,7 @@ const Dao = () => {
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <img src={mafiaDaoLogo} alt="Mafia DAO" className="h-16 w-auto" />
+              <img src={mafiaDaoLogo} alt="Mafia DAO" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">MAFIA DAO</h3>
             </div>
             
@@ -269,7 +269,7 @@ const Dao = () => {
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <img src={doGoodDaoLogo} alt="Do Good DAO" className="h-16 w-auto" />
+              <img src={doGoodDaoLogo} alt="Do Good DAO" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">DO GOOD DAO (DGD)</h3>
             </div>
             
@@ -311,7 +311,7 @@ const Dao = () => {
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <img src={pantheonCircleLogo} alt="Pantheon Circle" className="h-16 w-auto" />
+              <img src={pantheonCircleLogo} alt="Pantheon Circle" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">The Pantheon Circle</h3>
             </div>
             
