@@ -32,24 +32,24 @@ const Dao = () => {
             SOLGODS DAO
           </h1>
           <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-            Decentralized governance by the community, for the community.
+            Strategic coordination and ecosystem development for SolGods.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <DaoFeature
-              icon={<Vote size={28} />}
-              title="Proposal Voting"
-              description="Submit and vote on proposals that shape the direction of SolGods. Every token holder has voting power."
+              icon={<Shield size={28} />}
+              title="Strategic Direction"
+              description="Leadership-driven decisions that guide the future of SolGods and ensure sustainable growth."
             />
             <DaoFeature
               icon={<Coins size={28} />}
               title="Treasury Management"
-              description="Community-controlled treasury funds initiatives, partnerships, and ecosystem development."
+              description="Professionally managed treasury funds initiatives, partnerships, and ecosystem development."
             />
             <DaoFeature
-              icon={<Shield size={28} />}
-              title="On-Chain Governance"
-              description="All votes are recorded on Solana, ensuring transparency and immutability."
+              icon={<Vote size={28} />}
+              title="Transparent Operations"
+              description="All major decisions and treasury movements are communicated openly to holders."
             />
             <DaoFeature
               icon={<Users size={28} />}
@@ -93,9 +93,9 @@ const Dao = () => {
             <h2 className="text-3xl font-bold mb-6 text-center">How It Works</h2>
             <div className="grid sm:grid-cols-4 gap-6 text-center">
               <Step number="1" title="Hold" description="Own a SolGod NFT or $SOLGODS tokens" />
-              <Step number="2" title="Discuss" description="Join Discord to debate proposals" />
-              <Step number="3" title="Vote" description="Cast your vote on-chain" />
-              <Step number="4" title="Execute" description="Approved proposals are implemented" />
+              <Step number="2" title="Connect" description="Join Discord to stay informed" />
+              <Step number="3" title="Engage" description="Participate in community discussions" />
+              <Step number="4" title="Benefit" description="Enjoy the rewards of the ecosystem" />
             </div>
           </div>
           
