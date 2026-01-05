@@ -44,7 +44,7 @@ const tableOfContents = [{
   title: "6. Disclaimer - The Risks"
 }];
 const SolCity = () => {
-  return <Layout>
+  return <Layout className="bg-solcity">
       {/* Hero Section */}
       <section className="min-h-[90vh] flex items-center justify-center px-4">
         <div className="max-w-5xl mx-auto text-center">
