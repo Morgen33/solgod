@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import creatorxAvatar from "@/assets/team/creatorx.avif";
 import rasiAvatar from "@/assets/team/rasi.jpg";
+import morgenAvatar from "@/assets/team/morgen.avif";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -104,6 +105,7 @@ const ROLE_ICON: Record<string, JSX.Element> = {
 const MEMBER_AVATARS: Record<string, string> = {
   CreatorX: creatorxAvatar,
   Rasi: rasiAvatar,
+  Morgen: morgenAvatar,
 };
 
 const AVATAR_COLORS = [
