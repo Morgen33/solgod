@@ -13,6 +13,7 @@ import earthshapersImg from "@/assets/factions/earthshapers.avif";
 import nethersoulImg from "@/assets/factions/nethersoul.avif";
 import starweaversImg from "@/assets/factions/starweavers.avif";
 import flarebornImg from "@/assets/factions/flareborn.avif";
+import dreamforgedImg from "@/assets/factions/dreamforged.avif";
 
 const SectionIcon = () => (
   <div className="flex justify-center mb-6">
@@ -29,7 +30,7 @@ const celestialOrders = [
   { name: "Starweavers", description: "Cosmic architects bending constellations and starlight.", icon: Sparkles, color: "#ffd700", image: starweaversImg },
   { name: "Frostwoken", description: "Spirits of glacial time, forged in absolute stillness.", icon: Snowflake, color: "#87ceeb", image: null },
   { name: "Ashborn", description: "Reborn through fire and ruin, thriving in the aftermath of destruction.", icon: Flame, color: "#dc143c", image: null },
-  { name: "Dreamforged", description: "Touched by lucid realms, reality-benders born of thought.", icon: Star, color: "#d0a7f0", image: null },
+  { name: "Dreamforged", description: "Touched by lucid realms, reality-benders born of thought.", icon: Star, color: "#d0a7f0", image: dreamforgedImg },
   { name: "Myceliads", description: "Symbiotic hybrids bound to nature, fungi, and the pulse of planetary life.", icon: Leaf, color: "#32cd32", image: null },
 ];
 
