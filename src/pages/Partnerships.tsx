@@ -67,13 +67,13 @@ const Partnerships = () => {
               Open a ticket in our Discord or DM on X
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+              <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
                 <MessageCircle size={20} />
                 Discord
               </ShinyButton>
-              <ShinyButton as="a" href="https://x.com/SOLGodNFTs" target="_blank" rel="noopener noreferrer">
+              <ShinyButton as="a" href="https://x.com/solgodsnfts" target="_blank" rel="noopener noreferrer">
                 <Twitter size={20} />
-                X / Twitter
+                @solgodsnfts
               </ShinyButton>
             </div>
           </div>
