@@ -343,27 +343,27 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="card-glow rounded-xl p-8">
+            <GlowCard glowColor="purple" customSize className="w-full h-auto">
               <Coins className="text-purple-light mb-4" size={32} />
               <h3 className="text-xl font-bold mb-3">The Token & Staking</h3>
               <p className="text-muted-foreground text-sm">
                 A dual-incentive system where staking your SolGod earns you the ecosystem's native currency, usable within Sol City.
               </p>
-            </div>
-            <div className="card-glow rounded-xl p-8">
+            </GlowCard>
+            <GlowCard glowColor="purple" customSize className="w-full h-auto">
               <Users className="text-purple-light mb-4" size={32} />
               <h3 className="text-xl font-bold mb-3">Cross-Ecosystem Alliances</h3>
               <p className="text-muted-foreground text-sm">
                 We actively purchase and integrate assets from other communities into our treasury, creating a "Network Effect" that strengthens the entire Solana ecosystem.
               </p>
-            </div>
-            <div className="card-glow rounded-xl p-8">
+            </GlowCard>
+            <GlowCard glowColor="purple" customSize className="w-full h-auto">
               <Globe className="text-purple-light mb-4" size={32} />
               <h3 className="text-xl font-bold mb-3">Web2 Outreach</h3>
               <p className="text-muted-foreground text-sm">
                 Creating educational content and "Trad-Fi" bridges that allow non-crypto natives to understand and benefit from the Sol City Engine.
               </p>
-            </div>
+            </GlowCard>
           </div>
 
           {/* CTA */}
