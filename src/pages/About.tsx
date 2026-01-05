@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { Link } from "react-router-dom";
 import { 
   Flame, Users, TrendingUp, Shield, Sparkles, Crown, 
   Zap, Globe, ArrowRight, CircleDollarSign, Coins,
@@ -271,12 +272,20 @@ const About = () => {
           </div>
 
           {/* Portal to Sol City */}
-          <div className="card-glow rounded-2xl p-8 sm:p-12">
+          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
             <h3 className="text-2xl font-bold mb-6 text-center">The Portal to Sol City</h3>
-            <p className="text-muted-foreground text-center max-w-3xl mx-auto">
+            <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
               Seeking to expand the reach of the Sol Core, CreatorX used his divine energy to rip a hole through space-time, discovering a planet long forgotten—a world of desolation and ruin. There, he found ten mysterious creature types living in constant, violent chaos. Rather than conquering them, the SolGods united them. They channeled their elemental powers to revive the planet, building a shimmering metropolis: <span className="text-purple-light font-bold">Sol City</span>. This city now serves as the "Workforce of the Gods," a bustling economy that generates the resources and liquidity needed to fund the SolGods' further adventures across the multiverse.
             </p>
-          </div>
+            <div className="flex justify-center">
+              <Link to="/solcity">
+                <ShinyButton>
+                  Enter Sol City
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </ShinyButton>
+              </Link>
+            </div>
+          </GlowCard>
         </div>
       </section>
 
