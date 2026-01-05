@@ -8,6 +8,7 @@ import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import tidecallersImg from "@/assets/factions/tidecallers.avif";
+import stormbindersImg from "@/assets/factions/stormbinders.avif";
 
 const SectionIcon = () => (
   <div className="flex justify-center mb-6">
@@ -18,7 +19,7 @@ const SectionIcon = () => (
 const celestialOrders = [
   { name: "Flareborn", description: "Wielders of solar fire and plasma storms, born of the sun's rage.", icon: Flame, color: "#ff6b35", image: null },
   { name: "Tidecallers", description: "Fluid manipulators of ocean currents and temporal water.", icon: Droplets, color: "#4facfe", image: tidecallersImg },
-  { name: "Stormbinders", description: "Commanders of thunder, wind, and charged chaos.", icon: Cloud, color: "#a463dd", image: null },
+  { name: "Stormbinders", description: "Commanders of thunder, wind, and charged chaos.", icon: Cloud, color: "#a463dd", image: stormbindersImg },
   { name: "Earthshapers", description: "Unshakable titans with dominion over stone, growth, and life-force.", icon: Mountain, color: "#8b5a2b", image: null },
   { name: "Voidstriders", description: "Rare beings fused with antimatter and void energy.", icon: Star, color: "#1a0033", image: null },
   { name: "Starweavers", description: "Cosmic architects bending constellations and starlight.", icon: Sparkles, color: "#ffd700", image: null },
