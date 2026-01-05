@@ -7,6 +7,8 @@ import morgenAvatar from "@/assets/team/morgen.avif";
 import morgenBackAvatar from "@/assets/team/morgen-back.png";
 import glowAvatar from "@/assets/team/glow.avif";
 import redAvatar from "@/assets/team/red.webp";
+import kmacAvatar from "@/assets/team/kmac.webp";
+import kmacBackAvatar from "@/assets/team/kmac-back.webp";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -112,11 +114,13 @@ const MEMBER_AVATARS: Record<string, string> = {
   Morgen: morgenAvatar,
   Glow: glowAvatar,
   Red: redAvatar,
+  KMAC: kmacAvatar,
 };
 
 // Back images for flippable cards (add more as needed)
 const MEMBER_BACK_AVATARS: Record<string, string> = {
   Morgen: morgenBackAvatar,
+  KMAC: kmacBackAvatar,
 };
 
 const AVATAR_COLORS = [
