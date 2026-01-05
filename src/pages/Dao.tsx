@@ -1,8 +1,10 @@
 import { Layout } from "@/components/Layout";
-import { Shield, Users, ExternalLink, Crown, Sparkles, Heart, Wand2, Bird } from "lucide-react";
+import { Users, ExternalLink, Crown, Sparkles, Heart, Wand2, Shield } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsIcon from "@/assets/solgods-icon.png";
+import wingsDaoLogo from "@/assets/wings-dao-logo.png";
+import mafiaDaoLogo from "@/assets/mafia-dao-logo.png";
 
 const SectionIcon = () => (
   <div className="flex justify-center mb-6">
@@ -152,9 +154,7 @@ const Dao = () => {
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 rounded-xl bg-purple/20">
-                <Bird className="text-purple-light" size={32} />
-              </div>
+              <img src={wingsDaoLogo} alt="Wings DAO" className="h-16 w-auto" />
               <h3 className="text-3xl font-bold">Wings DAO</h3>
             </div>
             
@@ -207,9 +207,7 @@ const Dao = () => {
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 rounded-xl bg-purple/20">
-                <Shield className="text-purple-light" size={32} />
-              </div>
+              <img src={mafiaDaoLogo} alt="Mafia DAO" className="h-16 w-auto" />
               <h3 className="text-3xl font-bold">MAFIA DAO</h3>
             </div>
             
