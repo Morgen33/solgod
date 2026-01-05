@@ -1,8 +1,8 @@
 import { Layout } from "@/components/Layout";
 import solgodsIcon from "@/assets/solgods-icon.png";
-import { GlowCard } from "@/components/ui/spotlight-card";
-import { Badge } from "@/components/ui/badge";
 import { Seo } from "@/components/Seo";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import {
   Crown,
   Shield,
@@ -22,59 +22,52 @@ type TeamMember = {
 
 type TeamGroup = {
   role: string;
-  emphasis?: "primary" | "secondary";
   members: TeamMember[];
 };
 
 const TEAM: TeamGroup[] = [
   {
     role: "Founders",
-    emphasis: "primary",
     members: [
-      { name: "CreatorX", note: "Trading Engine / Master Trader (Non Crypto)" },
+      { name: "CreatorX", note: "Trading Engine / Master Trader" },
       { name: "Happy", note: "King of Liquidity Pools" },
     ],
   },
   {
     role: "Co-Founders",
-    emphasis: "primary",
     members: [{ name: "Asta", note: "Token & Coin Master" }, { name: "Truth" }],
   },
   {
     role: "Core Team",
-    emphasis: "primary",
     members: [
       { name: "Rasi", note: "Lead Admin, Front End, Culture Builder" },
-      { name: "Glow", note: "Lead Admin, Spaces Lead, HR, Front/Back End, DAO Overseer" },
+      { name: "Glow", note: "Lead Admin, Spaces Lead, HR, DAO Overseer" },
     ],
   },
   {
-    role: "Lead Security",
-    members: [{ name: "LionX", tags: ["Admin"] }],
-  },
-  {
-    role: "Security Team",
+    role: "Security",
     members: [
+      { name: "LionX", tags: ["Lead"] },
       { name: "Henry", tags: ["Admin"] },
       { name: "Red", tags: ["Admin"] },
       { name: "IRB" },
     ],
   },
   {
-    role: "Collaboration Manager",
-    members: [{ name: "Eddie", tags: ["Admin"] }],
+    role: "Collaboration",
+    members: [{ name: "Eddie", tags: ["Manager"] }],
   },
   {
-    role: "Community Connector",
-    members: [{ name: "TrashPanda" }, { name: "Gnomie" }],
-  },
-  {
-    role: "Community Artist",
-    members: [{ name: "Viper" }],
+    role: "Community",
+    members: [
+      { name: "TrashPanda" },
+      { name: "Gnomie" },
+      { name: "Viper", tags: ["Artist"] },
+    ],
   },
   {
     role: "X Management",
-    members: [{ name: "Mister", tags: ["Mod"] }, { name: "Savage", tags: ["Mod"] }],
+    members: [{ name: "Mister" }, { name: "Savage" }],
   },
   {
     role: "Moderators",
@@ -90,102 +83,95 @@ const TEAM: TeamGroup[] = [
   },
   {
     role: "Developers",
-    members: [{ name: "Morgen" }, { name: "DevKid", tags: ["Jr Dev"] }],
+    members: [{ name: "Morgen" }, { name: "DevKid", tags: ["Jr"] }],
   },
 ];
 
 const ROLE_ICON: Record<string, JSX.Element> = {
-  Founders: <Crown className="h-5 w-5" />,
-  "Co-Founders": <Crown className="h-5 w-5" />,
-  "Core Team": <Users className="h-5 w-5" />,
-  "Lead Security": <Shield className="h-5 w-5" />,
-  "Security Team": <Shield className="h-5 w-5" />,
-  "Collaboration Manager": <HeartHandshake className="h-5 w-5" />,
-  "Community Connector": <Users className="h-5 w-5" />,
-  "Community Artist": <Paintbrush className="h-5 w-5" />,
-  "X Management": <Megaphone className="h-5 w-5" />,
-  Moderators: <MessageCircle className="h-5 w-5" />,
-  Developers: <Code2 className="h-5 w-5" />,
+  Founders: <Crown className="h-4 w-4" />,
+  "Co-Founders": <Crown className="h-4 w-4" />,
+  "Core Team": <Users className="h-4 w-4" />,
+  Security: <Shield className="h-4 w-4" />,
+  Collaboration: <HeartHandshake className="h-4 w-4" />,
+  Community: <Users className="h-4 w-4" />,
+  "X Management": <Megaphone className="h-4 w-4" />,
+  Moderators: <MessageCircle className="h-4 w-4" />,
+  Developers: <Code2 className="h-4 w-4" />,
 };
 
-const TOP_LEADERSHIP = new Set(["Founders", "Co-Founders", "Core Team"]);
-const OTHER_ROLES = new Set([
-  "Lead Security",
-  "Security Team",
-  "Collaboration Manager",
-  "Community Connector",
-  "Community Artist",
-  "X Management",
-  "Moderators",
-  "Developers",
-]);
+const AVATAR_COLORS = [
+  "from-purple-500 to-indigo-600",
+  "from-pink-500 to-rose-600",
+  "from-amber-500 to-orange-600",
+  "from-emerald-500 to-teal-600",
+  "from-cyan-500 to-blue-600",
+  "from-violet-500 to-purple-600",
+];
 
-function LeaderCard({ member, role }: { member: TeamMember; role: string }) {
-  const isFounder = role === "Founders" || role === "Co-Founders";
-  return (
-    <article
-      className={`group relative rounded-2xl border p-6 transition-all ${
-        isFounder
-          ? "border-primary/50 bg-gradient-to-br from-primary/20 via-card/40 to-card/20 hover:border-primary/70"
-          : "border-border/40 bg-card/30 hover:border-primary/40"
-      }`}
-    >
-      <div className="flex items-center gap-3 mb-2">
-        <div
-          className={`inline-flex items-center justify-center rounded-full p-2 ${
-            isFounder ? "bg-primary/30 text-primary" : "bg-secondary/40 text-primary"
-          }`}
-        >
-          {ROLE_ICON[role] ?? <Users className="h-5 w-5" />}
-        </div>
-        <p
-          className={`text-xl font-bold tracking-wide ${
-            isFounder ? "text-primary" : "text-foreground"
-          }`}
-        >
-          {member.name}
-        </p>
-      </div>
-      {member.note && (
-        <p className="text-sm text-muted-foreground leading-snug pl-12">
-          {member.note}
-        </p>
-      )}
-    </article>
-  );
+function getAvatarColor(name: string) {
+  const index = name.charCodeAt(0) % AVATAR_COLORS.length;
+  return AVATAR_COLORS[index];
 }
 
-function MemberPill({ member }: { member: TeamMember }) {
+function getInitials(name: string) {
+  return name
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
+    .toUpperCase()
+    .slice(0, 2);
+}
+
+function MemberCard({ member, size = "md" }: { member: TeamMember; size?: "lg" | "md" | "sm" }) {
+  const sizeClasses = {
+    lg: "h-20 w-20 text-2xl",
+    md: "h-14 w-14 text-lg",
+    sm: "h-10 w-10 text-sm",
+  };
+
   return (
-    <div className="flex items-center gap-2 py-2 px-3 rounded-lg bg-card/20 border border-border/30 hover:border-primary/30 transition-all">
-      <p className="font-medium text-foreground text-sm">{member.name}</p>
-      {member.tags?.map((t) => (
-        <Badge
-          key={t}
-          variant="secondary"
-          className="text-xs border border-border/40 bg-secondary/40"
+    <div className="flex flex-col items-center gap-2 text-center group">
+      <Avatar className={`${sizeClasses[size]} ring-2 ring-border/40 group-hover:ring-primary/50 transition-all`}>
+        <AvatarFallback
+          className={`bg-gradient-to-br ${getAvatarColor(member.name)} text-white font-bold`}
         >
-          {t}
-        </Badge>
-      ))}
+          {getInitials(member.name)}
+        </AvatarFallback>
+      </Avatar>
+      <div>
+        <p className="font-semibold text-foreground leading-tight">{member.name}</p>
+        {member.tags && (
+          <div className="flex gap-1 justify-center mt-1">
+            {member.tags.map((t) => (
+              <Badge key={t} variant="secondary" className="text-[10px] px-1.5 py-0">
+                {t}
+              </Badge>
+            ))}
+          </div>
+        )}
+        {member.note && (
+          <p className="text-xs text-muted-foreground mt-1 max-w-[140px]">{member.note}</p>
+        )}
+      </div>
     </div>
   );
 }
 
-function RoleRow({ group }: { group: TeamGroup }) {
+function TeamSection({ group, featured = false }: { group: TeamGroup; featured?: boolean }) {
   return (
-    <div className="flex flex-wrap items-start gap-4 py-4 border-b border-border/20 last:border-b-0">
-      <div className="flex items-center gap-2 min-w-[180px]">
-        <div className="inline-flex items-center justify-center rounded-lg bg-secondary/30 p-1.5 text-primary">
+    <div className={featured ? "mb-12" : "mb-10"}>
+      <div className="flex items-center gap-3 mb-6">
+        <div className="inline-flex items-center justify-center rounded-lg bg-primary/20 p-2 text-primary">
           {ROLE_ICON[group.role] ?? <Users className="h-4 w-4" />}
         </div>
-        <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+        <h3 className={`font-bold uppercase tracking-wide ${featured ? "text-xl text-primary" : "text-lg text-foreground"}`}>
           {group.role}
-        </span>
+        </h3>
+        <div className="h-px flex-1 bg-border/30" />
       </div>
-      <div className="flex flex-wrap gap-2 flex-1">
+      <div className={`flex flex-wrap gap-8 ${featured ? "justify-center" : "justify-start pl-2"}`}>
         {group.members.map((m) => (
-          <MemberPill key={`${group.role}-${m.name}`} member={m} />
+          <MemberCard key={m.name} member={m} size={featured ? "lg" : "md"} />
         ))}
       </div>
     </div>
@@ -193,8 +179,11 @@ function RoleRow({ group }: { group: TeamGroup }) {
 }
 
 const Team = () => {
-  const topLeadership = TEAM.filter((g) => TOP_LEADERSHIP.has(g.role));
-  const otherRoles = TEAM.filter((g) => OTHER_ROLES.has(g.role));
+  const founders = TEAM.filter((g) => g.role === "Founders" || g.role === "Co-Founders");
+  const coreTeam = TEAM.find((g) => g.role === "Core Team");
+  const otherRoles = TEAM.filter(
+    (g) => !["Founders", "Co-Founders", "Core Team"].includes(g.role)
+  );
 
   return (
     <Layout>
@@ -204,71 +193,57 @@ const Team = () => {
         canonicalPath="/team"
       />
 
-      <header>
-        <section className="py-24 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <img
-              src={solgodsIcon}
-              alt="SolGods icon"
-              className="h-24 sm:h-28 w-auto mx-auto mb-6 opacity-80"
-              loading="lazy"
-            />
-            <h1
-              className="text-5xl sm:text-7xl font-bold mb-5 bg-clip-text text-transparent animate-gradient-flow"
-              style={{
-                backgroundImage:
-                  "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #a463dd, #d0a7f0)",
-                backgroundSize: "200% 100%",
-              }}
-            >
-              THE TEAM
-            </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-              The people who make it happen.
-            </p>
-          </div>
-        </section>
-      </header>
+      <section className="py-20 px-4">
+        <div className="max-w-5xl mx-auto text-center">
+          <img
+            src={solgodsIcon}
+            alt="SolGods icon"
+            className="h-20 w-auto mx-auto mb-6 opacity-80"
+            loading="lazy"
+          />
+          <h1
+            className="text-5xl sm:text-6xl font-bold mb-4 bg-clip-text text-transparent animate-gradient-flow"
+            style={{
+              backgroundImage:
+                "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #a463dd, #d0a7f0)",
+              backgroundSize: "200% 100%",
+            }}
+          >
+            THE TEAM
+          </h1>
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            The people behind SolGods.
+          </p>
+        </div>
+      </section>
 
-      <main>
-        <div
-          className="fixed inset-0 z-[1] pointer-events-none opacity-15"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--purple-soft) / 0.5) 1px, transparent 0)`,
-            backgroundSize: "64px 64px",
-          }}
-        />
-
-        <section className="pb-16 px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            {/* Top Leadership - Featured */}
-            <div className="mb-12">
-              <div className="flex items-center gap-4 mb-8">
-                <h2 className="text-2xl sm:text-3xl font-bold text-primary">Leadership</h2>
-                <div className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent" />
-              </div>
-
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {topLeadership.flatMap((g) =>
-                  g.members.map((m) => (
-                    <LeaderCard key={`${g.role}-${m.name}`} member={m} role={g.role} />
-                  ))
-                )}
-              </div>
+      <main className="pb-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          {/* Featured: Founders */}
+          <div className="text-center mb-16">
+            <div className="flex flex-wrap justify-center gap-16 mb-8">
+              {founders.flatMap((g) =>
+                g.members.map((m) => (
+                  <MemberCard key={m.name} member={m} size="lg" />
+                ))
+              )}
             </div>
-
-            {/* Rest of Team - Compact */}
-            <GlowCard glowColor="purple" customSize className="w-full h-auto p-6 sm:p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <h2 className="text-xl sm:text-2xl font-bold text-foreground">Team Roles</h2>
-                <div className="h-px flex-1 bg-border/40" />
-              </div>
-              {otherRoles.map((g) => (
-                <RoleRow key={g.role} group={g} />
-              ))}
-            </GlowCard>
+            <p className="text-sm text-muted-foreground uppercase tracking-widest">Founders & Co-Founders</p>
           </div>
-        </section>
+
+          {/* Core Team */}
+          {coreTeam && <TeamSection group={coreTeam} featured />}
+
+          {/* Divider */}
+          <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent mb-12" />
+
+          {/* Other Roles Grid */}
+          <div className="grid md:grid-cols-2 gap-x-12">
+            {otherRoles.map((g) => (
+              <TeamSection key={g.role} group={g} />
+            ))}
+          </div>
+        </div>
       </main>
     </Layout>
   );
