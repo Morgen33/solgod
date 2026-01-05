@@ -154,15 +154,15 @@ function FlippableAvatar({
   const hasFrontImage = MEMBER_AVATARS[name];
   
   const sizeClasses = {
-    lg: "h-28 w-28 text-3xl",
-    md: "h-20 w-20 text-xl",
-    sm: "h-14 w-14 text-base",
+    lg: "h-36 w-36 text-4xl",
+    md: "h-28 w-28 text-2xl",
+    sm: "h-20 w-20 text-xl",
   };
 
   const containerSizes = {
-    lg: "h-28 w-28",
-    md: "h-20 w-20",
-    sm: "h-14 w-14",
+    lg: "h-36 w-36",
+    md: "h-28 w-28",
+    sm: "h-20 w-20",
   };
 
   // Only make it flippable if there's a back image
