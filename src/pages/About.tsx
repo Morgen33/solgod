@@ -8,6 +8,7 @@ import {
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsIcon from "@/assets/solgods-icon.png";
+import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 import tidecallersImg from "@/assets/factions/tidecallers.avif";
 import stormbindersImg from "@/assets/factions/stormbinders.avif";
 import earthshapersImg from "@/assets/factions/earthshapers.avif";
@@ -44,6 +45,11 @@ const About = () => {
       {/* Hero Section */}
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto text-center">
+          <img 
+            src={solgodsMainLogo} 
+            alt="SolGods" 
+            className="h-32 sm:h-40 w-auto mx-auto mb-8"
+          />
           <h1 
             className="text-5xl sm:text-7xl font-bold mb-6 bg-clip-text text-transparent animate-gradient-flow"
             style={{
