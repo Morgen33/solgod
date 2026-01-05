@@ -108,33 +108,46 @@ const ROLE_ICON: Record<string, JSX.Element> = {
   Developers: <Code2 className="h-5 w-5" />,
 };
 
-const LEADERSHIP = new Set([
-  "Founders",
-  "Co-Founders",
-  "Core Team",
+const TOP_LEADERSHIP = new Set(["Founders", "Co-Founders", "Core Team"]);
+const OTHER_ROLES = new Set([
   "Lead Security",
   "Security Team",
+  "Collaboration Manager",
+  "Community Connector",
+  "Community Artist",
+  "X Management",
+  "Moderators",
+  "Developers",
 ]);
 
-function MemberPill({ member }: { member: TeamMember }) {
+function LeaderCard({ member, role }: { member: TeamMember; role: string }) {
+  const isFounder = role === "Founders" || role === "Co-Founders";
   return (
-    <article className="group rounded-2xl border border-border/40 bg-card/30 backdrop-blur-sm px-4 py-4 transition-all hover:bg-card/45 hover:border-primary/40">
-      <div className="flex items-center gap-2 flex-wrap">
-        <p className="font-bold text-foreground leading-none tracking-wide">
+    <article
+      className={`group relative rounded-2xl border p-6 transition-all ${
+        isFounder
+          ? "border-primary/50 bg-gradient-to-br from-primary/20 via-card/40 to-card/20 hover:border-primary/70"
+          : "border-border/40 bg-card/30 hover:border-primary/40"
+      }`}
+    >
+      <div className="flex items-center gap-3 mb-2">
+        <div
+          className={`inline-flex items-center justify-center rounded-full p-2 ${
+            isFounder ? "bg-primary/30 text-primary" : "bg-secondary/40 text-primary"
+          }`}
+        >
+          {ROLE_ICON[role] ?? <Users className="h-5 w-5" />}
+        </div>
+        <p
+          className={`text-xl font-bold tracking-wide ${
+            isFounder ? "text-primary" : "text-foreground"
+          }`}
+        >
           {member.name}
         </p>
-        {member.tags?.map((t) => (
-          <Badge
-            key={t}
-            variant="secondary"
-            className="border border-border/40 bg-secondary/40"
-          >
-            {t}
-          </Badge>
-        ))}
       </div>
       {member.note && (
-        <p className="mt-2 text-sm text-muted-foreground leading-snug">
+        <p className="text-sm text-muted-foreground leading-snug pl-12">
           {member.note}
         </p>
       )}
@@ -142,39 +155,46 @@ function MemberPill({ member }: { member: TeamMember }) {
   );
 }
 
-function GroupCard({ group }: { group: TeamGroup }) {
-  const membersGridClass =
-    group.members.length === 1
-      ? "grid grid-cols-1 gap-4"
-      : "grid grid-cols-1 sm:grid-cols-2 gap-4";
-
+function MemberPill({ member }: { member: TeamMember }) {
   return (
-    <GlowCard glowColor="purple" customSize className="w-full h-auto p-6 sm:p-8">
-      <div className="flex items-center gap-3 mb-5">
-        <div className="inline-flex items-center justify-center rounded-xl border border-border/40 bg-secondary/30 p-2 text-primary">
-          {ROLE_ICON[group.role] ?? <Users className="h-5 w-5" />}
-        </div>
-        <h2
-          className={`text-2xl sm:text-3xl font-bold tracking-wide ${
-            group.emphasis === "primary" ? "text-primary" : "text-foreground"
-          }`}
+    <div className="flex items-center gap-2 py-2 px-3 rounded-lg bg-card/20 border border-border/30 hover:border-primary/30 transition-all">
+      <p className="font-medium text-foreground text-sm">{member.name}</p>
+      {member.tags?.map((t) => (
+        <Badge
+          key={t}
+          variant="secondary"
+          className="text-xs border border-border/40 bg-secondary/40"
         >
-          {group.role.toUpperCase()}
-        </h2>
-      </div>
+          {t}
+        </Badge>
+      ))}
+    </div>
+  );
+}
 
-      <div className={membersGridClass}>
+function RoleRow({ group }: { group: TeamGroup }) {
+  return (
+    <div className="flex flex-wrap items-start gap-4 py-4 border-b border-border/20 last:border-b-0">
+      <div className="flex items-center gap-2 min-w-[180px]">
+        <div className="inline-flex items-center justify-center rounded-lg bg-secondary/30 p-1.5 text-primary">
+          {ROLE_ICON[group.role] ?? <Users className="h-4 w-4" />}
+        </div>
+        <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+          {group.role}
+        </span>
+      </div>
+      <div className="flex flex-wrap gap-2 flex-1">
         {group.members.map((m) => (
           <MemberPill key={`${group.role}-${m.name}`} member={m} />
         ))}
       </div>
-    </GlowCard>
+    </div>
   );
 }
 
 const Team = () => {
-  const leadership = TEAM.filter((g) => LEADERSHIP.has(g.role));
-  const community = TEAM.filter((g) => !LEADERSHIP.has(g.role));
+  const topLeadership = TEAM.filter((g) => TOP_LEADERSHIP.has(g.role));
+  const otherRoles = TEAM.filter((g) => OTHER_ROLES.has(g.role));
 
   return (
     <Layout>
@@ -204,14 +224,13 @@ const Team = () => {
               THE TEAM
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Leaders up top. Operators below. Everyone has a lane.
+              The people who make it happen.
             </p>
           </div>
         </section>
       </header>
 
       <main>
-        {/* Subtle dot grid overlay */}
         <div
           className="fixed inset-0 z-[1] pointer-events-none opacity-15"
           style={{
@@ -219,33 +238,35 @@ const Team = () => {
             backgroundSize: "64px 64px",
           }}
         />
-        <section className="pb-24 px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8">
-              <section className="space-y-8">
-                <div className="flex items-center justify-between gap-4">
-                  <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-                    Leadership
-                  </h2>
-                  <div className="h-px flex-1 bg-border/40" />
-                </div>
-                {leadership.map((g) => (
-                  <GroupCard key={g.role} group={g} />
-                ))}
-              </section>
 
-              <section className="space-y-8">
-                <div className="flex items-center justify-between gap-4">
-                  <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-                    Community Ops
-                  </h2>
-                  <div className="h-px flex-1 bg-border/40" />
-                </div>
-                {community.map((g) => (
-                  <GroupCard key={g.role} group={g} />
-                ))}
-              </section>
+        <section className="pb-16 px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            {/* Top Leadership - Featured */}
+            <div className="mb-12">
+              <div className="flex items-center gap-4 mb-8">
+                <h2 className="text-2xl sm:text-3xl font-bold text-primary">Leadership</h2>
+                <div className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent" />
+              </div>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {topLeadership.flatMap((g) =>
+                  g.members.map((m) => (
+                    <LeaderCard key={`${g.role}-${m.name}`} member={m} role={g.role} />
+                  ))
+                )}
+              </div>
             </div>
+
+            {/* Rest of Team - Compact */}
+            <GlowCard glowColor="purple" customSize className="w-full h-auto p-6 sm:p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground">Team Roles</h2>
+                <div className="h-px flex-1 bg-border/40" />
+              </div>
+              {otherRoles.map((g) => (
+                <RoleRow key={g.role} group={g} />
+              ))}
+            </GlowCard>
           </div>
         </section>
       </main>
