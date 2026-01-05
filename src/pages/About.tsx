@@ -16,6 +16,7 @@ import flarebornImg from "@/assets/factions/flareborn.avif";
 import dreamforgedImg from "@/assets/factions/dreamforged.avif";
 import myceliadsImg from "@/assets/factions/myceliads.avif";
 import voidstridersImg from "@/assets/factions/voidstriders.avif";
+import frostwokenImg from "@/assets/factions/frostwoken.avif";
 
 const SectionIcon = () => (
   <div className="flex justify-center mb-6">
@@ -31,7 +32,7 @@ const celestialOrders = [
   { name: "Nethersoul", description: "Rare beings fused with antimatter and void energy.", icon: Star, color: "#1a0033", image: nethersoulImg },
   { name: "Voidstriders", description: "Travelers of the cosmic void, masters of dark matter and shadow.", icon: Star, color: "#4a0080", image: voidstridersImg },
   { name: "Starweavers", description: "Cosmic architects bending constellations and starlight.", icon: Sparkles, color: "#ffd700", image: starweaversImg },
-  { name: "Frostwoken", description: "Spirits of glacial time, forged in absolute stillness.", icon: Snowflake, color: "#87ceeb", image: null },
+  { name: "Frostwoken", description: "Spirits of glacial time, forged in absolute stillness.", icon: Snowflake, color: "#87ceeb", image: frostwokenImg },
   { name: "Ashborn", description: "Reborn through fire and ruin, thriving in the aftermath of destruction.", icon: Flame, color: "#dc143c", image: null },
   { name: "Dreamforged", description: "Touched by lucid realms, reality-benders born of thought.", icon: Star, color: "#d0a7f0", image: dreamforgedImg },
   { name: "Myceliads", description: "Symbiotic hybrids bound to nature, fungi, and the pulse of planetary life.", icon: Leaf, color: "#32cd32", image: myceliadsImg },
