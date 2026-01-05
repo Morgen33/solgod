@@ -6,6 +6,13 @@ import {
 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlowCard } from "@/components/ui/spotlight-card";
+import solgodsIcon from "@/assets/solgods-icon.png";
+
+const SectionIcon = () => (
+  <div className="flex justify-center mb-6">
+    <img src={solgodsIcon} alt="SolGods" className="h-16 w-auto opacity-80" />
+  </div>
+);
 
 const celestialOrders = [
   { name: "Flareborn", description: "Wielders of solar fire and plasma storms, born of the sun's rage.", icon: Flame, color: "#ff6b35" },
@@ -145,6 +152,7 @@ const About = () => {
         />
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-16">
+            <SectionIcon />
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
@@ -196,6 +204,7 @@ const About = () => {
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
+            <SectionIcon />
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
@@ -259,6 +268,7 @@ const About = () => {
         />
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-16">
+            <SectionIcon />
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
@@ -321,6 +331,7 @@ const About = () => {
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
+            <SectionIcon />
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
