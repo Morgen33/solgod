@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Layout } from "@/components/Layout";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import creatorxAvatar from "@/assets/team/creatorx.avif";
@@ -112,6 +113,11 @@ const MEMBER_AVATARS: Record<string, string> = {
   Red: redAvatar,
 };
 
+// Back images for flippable cards (add more as needed)
+const MEMBER_BACK_AVATARS: Record<string, string> = {
+  // Morgen: morgenBackAvatar, // Will be added when image is uploaded
+};
+
 const AVATAR_COLORS = [
   "from-purple-500 to-indigo-600",
   "from-pink-500 to-rose-600",
@@ -135,25 +141,90 @@ function getInitials(name: string) {
     .slice(0, 2);
 }
 
-function MemberCard({ member, size = "md" }: { member: TeamMember; size?: "lg" | "md" | "sm" }) {
+function FlippableAvatar({ 
+  name, 
+  size = "md" 
+}: { 
+  name: string; 
+  size?: "lg" | "md" | "sm";
+}) {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const hasBackImage = MEMBER_BACK_AVATARS[name];
+  const hasFrontImage = MEMBER_AVATARS[name];
+  
   const sizeClasses = {
     lg: "h-20 w-20 text-2xl",
     md: "h-14 w-14 text-lg",
     sm: "h-10 w-10 text-sm",
   };
 
+  const containerSizes = {
+    lg: "h-20 w-20",
+    md: "h-14 w-14",
+    sm: "h-10 w-10",
+  };
+
+  // Only make it flippable if there's a back image
+  const isFlippable = hasBackImage;
+
+  return (
+    <div 
+      className={`${containerSizes[size]} perspective-1000 ${isFlippable ? 'cursor-pointer' : ''}`}
+      onClick={() => isFlippable && setIsFlipped(!isFlipped)}
+      style={{ perspective: "1000px" }}
+    >
+      <div 
+        className="relative w-full h-full transition-transform duration-500"
+        style={{ 
+          transformStyle: "preserve-3d",
+          transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)"
+        }}
+      >
+        {/* Front */}
+        <div 
+          className="absolute inset-0"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <Avatar className={`${sizeClasses[size]} ring-2 ring-border/40 hover:ring-primary/50 transition-all`}>
+            {hasFrontImage ? (
+              <AvatarImage src={MEMBER_AVATARS[name]} alt={name} className="object-cover" />
+            ) : null}
+            <AvatarFallback
+              className={`bg-gradient-to-br ${getAvatarColor(name)} text-white font-bold`}
+            >
+              {getInitials(name)}
+            </AvatarFallback>
+          </Avatar>
+        </div>
+        
+        {/* Back */}
+        {hasBackImage && (
+          <div 
+            className="absolute inset-0"
+            style={{ 
+              backfaceVisibility: "hidden",
+              transform: "rotateY(180deg)"
+            }}
+          >
+            <Avatar className={`${sizeClasses[size]} ring-2 ring-primary/50 transition-all`}>
+              <AvatarImage src={MEMBER_BACK_AVATARS[name]} alt={`${name} alternate`} className="object-cover" />
+              <AvatarFallback
+                className={`bg-gradient-to-br ${getAvatarColor(name)} text-white font-bold`}
+              >
+                {getInitials(name)}
+              </AvatarFallback>
+            </Avatar>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function MemberCard({ member, size = "md" }: { member: TeamMember; size?: "lg" | "md" | "sm" }) {
   return (
     <div className="flex flex-col items-center gap-2 text-center group">
-      <Avatar className={`${sizeClasses[size]} ring-2 ring-border/40 group-hover:ring-primary/50 transition-all`}>
-        {MEMBER_AVATARS[member.name] ? (
-          <AvatarImage src={MEMBER_AVATARS[member.name]} alt={member.name} className="object-cover" />
-        ) : null}
-        <AvatarFallback
-          className={`bg-gradient-to-br ${getAvatarColor(member.name)} text-white font-bold`}
-        >
-          {getInitials(member.name)}
-        </AvatarFallback>
-      </Avatar>
+      <FlippableAvatar name={member.name} size={size} />
       <div>
         <p className="font-semibold text-foreground leading-tight">{member.name}</p>
         {member.tags && (
