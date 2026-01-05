@@ -45,17 +45,6 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="min-h-[85vh] flex flex-col items-center justify-center px-4 relative">
-        {/* Announcement Banner */}
-        <div 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8"
-          style={{ animation: "fade-in 0.6s ease-out forwards" }}
-        >
-          <Sparkles size={16} className="text-primary" />
-          <span className="text-sm text-primary font-medium tracking-wide uppercase">
-            Community-owned NFT collective on Solana
-          </span>
-        </div>
-
         {/* Hero Logo */}
         <div className="mb-8" style={{ animation: "fade-in 0.8s ease-out 0.2s forwards", opacity: 0 }}>
           <img 
