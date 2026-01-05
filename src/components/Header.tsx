@@ -13,7 +13,6 @@ const dropdowns = [
   {
     label: "NFTs",
     items: [
-      { href: "/about", label: "About", external: false },
       { href: "/dao", label: "DAO", external: false },
       { href: "/team", label: "Team", external: false },
     ],
@@ -129,6 +128,18 @@ export function Header() {
               Home
             </Link>
 
+            {/* About */}
+            <Link
+              to="/about"
+              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                location.pathname === "/about"
+                  ? "text-primary bg-primary/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+              }`}
+            >
+              About
+            </Link>
+
             {/* NFTs Dropdown */}
             <DropdownMenu 
               label="NFTs" 
@@ -190,7 +201,20 @@ export function Header() {
                     : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                 }`}
               >
-                Home
+              Home
+              </Link>
+
+              {/* About */}
+              <Link
+                to="/about"
+                onClick={() => setMobileOpen(false)}
+                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                  location.pathname === "/about"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                About
               </Link>
 
               {/* NFTs Section */}
