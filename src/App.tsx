@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
+import SolGods from "./pages/SolGods";
 import Dao from "./pages/Dao";
 import Token from "./pages/Token";
 import Partnerships from "./pages/Partnerships";
@@ -25,6 +26,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/solgods" element={<SolGods />} />
           <Route path="/dao" element={<Dao />} />
           <Route path="/token" element={<Token />} />
           <Route path="/partnerships" element={<Partnerships />} />
