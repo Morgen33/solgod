@@ -5,6 +5,9 @@ import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import wingsDaoLogo from "@/assets/wings-dao-logo.png";
 import mafiaDaoLogo from "@/assets/mafia-dao-logo.png";
+import pantheonCircleLogo from "@/assets/pantheon-circle-logo.png";
+import doGoodDaoLogo from "@/assets/do-good-dao-logo.png";
+import wizardCabalLogo from "@/assets/wizard-cabal-logo.png";
 
 const SectionIcon = () => (
   <div className="flex justify-center mb-6">
@@ -106,9 +109,7 @@ const Dao = () => {
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 rounded-xl bg-purple/20">
-                <Wand2 className="text-purple-light" size={32} />
-              </div>
+              <img src={wizardCabalLogo} alt="Wizard Cabal" className="h-16 w-auto" />
               <h3 className="text-3xl font-bold">The Wizard Cabal</h3>
             </div>
             
@@ -268,9 +269,7 @@ const Dao = () => {
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 rounded-xl bg-purple/20">
-                <Heart className="text-purple-light" size={32} />
-              </div>
+              <img src={doGoodDaoLogo} alt="Do Good DAO" className="h-16 w-auto" />
               <h3 className="text-3xl font-bold">DO GOOD DAO (DGD)</h3>
             </div>
             
@@ -312,9 +311,7 @@ const Dao = () => {
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 rounded-xl bg-purple/20">
-                <Crown className="text-purple-light" size={32} />
-              </div>
+              <img src={pantheonCircleLogo} alt="Pantheon Circle" className="h-16 w-auto" />
               <h3 className="text-3xl font-bold">The Pantheon Circle</h3>
             </div>
             
