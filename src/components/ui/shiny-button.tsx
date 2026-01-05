@@ -22,7 +22,11 @@ export function ShinyButton({
 }: ShinyButtonProps) {
   const buttonClasses = cn("shiny-cta", className);
   if (as === "a" && href) {
-    return;
+    return (
+      <a className={buttonClasses} href={href} target={target} rel={rel}>
+        <span>{children}</span>
+      </a>
+    );
   }
   return <button className={buttonClasses} onClick={onClick}>
       <span>{children}</span>
