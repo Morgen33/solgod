@@ -236,17 +236,17 @@ const Team = () => {
           {/* Founders */}
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-8">
-              <div className="h-px w-20 bg-gradient-to-r from-transparent to-[#fef104]" />
+              <div className="h-px w-20 bg-gradient-to-r from-transparent to-[#c9a24d]" />
               <div className="inline-flex items-center gap-2">
-                <Crown className="h-5 w-5 text-[#fef104]" />
+                <Crown className="h-5 w-5 text-[#e6c97a]" />
                 <span 
                   className="text-2xl font-bold uppercase tracking-widest bg-clip-text text-transparent"
-                  style={{ backgroundImage: "linear-gradient(90deg, #fef96a, #fef104, #d4c904)" }}
+                  style={{ backgroundImage: "linear-gradient(90deg, #fff1c1, #e6c97a, #c9a24d)" }}
                 >
                   Founders
                 </span>
               </div>
-              <div className="h-px w-20 bg-gradient-to-l from-transparent to-[#fef104]" />
+              <div className="h-px w-20 bg-gradient-to-l from-transparent to-[#c9a24d]" />
             </div>
             <div className="flex flex-wrap justify-center gap-16">
               {TEAM.find((g) => g.role === "Founders")?.members.map((m) => (

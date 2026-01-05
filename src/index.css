@@ -50,12 +50,12 @@
     --purple-vibrant: 270 68% 49%;
     --purple-muted: 270 56% 65%;
 
-    /* Brand Gold - Updated to bright yellow */
-    --gold: 58 99% 50%;
-    --gold-highlight: 58 100% 60%;
-    --gold-light: 58 100% 75%;
-    --gold-shadow: 55 80% 30%;
-    --gold-glow: 58 100% 60%;
+    /* Brand Gold */
+    --gold: 42 53% 55%;
+    --gold-highlight: 44 68% 69%;
+    --gold-light: 49 100% 88%;
+    --gold-shadow: 35 49% 15%;
+    --gold-glow: 44 68% 69%;
 
     /* Neutral Gradient */
     --neutral-light: 55 6% 68%;
