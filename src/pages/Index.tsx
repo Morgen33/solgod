@@ -33,12 +33,12 @@ const quickLinks = [
 const Index = () => {
   return (
     <Layout>
-      {/* Dot Grid Background */}
+      {/* Subtle dot grid overlay */}
       <div 
-        className="fixed inset-0 z-0 pointer-events-none opacity-30"
+        className="fixed inset-0 z-[1] pointer-events-none opacity-20"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--muted-foreground) / 0.3) 1px, transparent 0)`,
-          backgroundSize: '40px 40px',
+          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--purple-soft) / 0.4) 1px, transparent 0)`,
+          backgroundSize: '60px 60px',
         }}
       />
       
