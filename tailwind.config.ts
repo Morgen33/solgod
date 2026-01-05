@@ -104,12 +104,22 @@ export default {
           "50%": { backgroundPosition: "100% 50%" },
           "100%": { backgroundPosition: "0% 50%" },
         },
+        "flip-up": {
+          "0%": { opacity: "1", transform: "rotateX(0deg) translateY(0)" },
+          "100%": { opacity: "0", transform: "rotateX(-90deg) translateY(-20px)" },
+        },
+        "flip-in": {
+          "0%": { opacity: "0", transform: "rotateX(90deg) translateY(20px)" },
+          "100%": { opacity: "1", transform: "rotateX(0deg) translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.8s ease-out forwards",
         "gradient-flow": "gradient-flow 3s ease infinite",
+        "flip-up": "flip-up 0.5s ease-out forwards",
+        "flip-in": "flip-in 0.5s ease-out forwards",
       },
     },
   },

@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift, Sparkles } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
+import { RotatingText } from "@/components/ui/rotating-text";
 import solgodLogo from "@/assets/solgods-logo.png";
 
 const quickLinks = [
@@ -60,13 +61,8 @@ const Index = () => {
           <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold italic text-foreground mb-2">
             Probably
           </h1>
-          <h1 
-            className="text-6xl sm:text-7xl md:text-8xl font-bold italic bg-clip-text text-transparent"
-            style={{
-              backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #4f0c9b)",
-            }}
-          >
-            Everything.
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold italic" style={{ perspective: "1000px" }}>
+            <RotatingText />
           </h1>
         </div>
 
