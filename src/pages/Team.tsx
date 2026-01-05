@@ -221,14 +221,14 @@ const Team = () => {
         <div className="max-w-5xl mx-auto">
           {/* Featured: Founders */}
           <div className="text-center mb-16">
-            <div className="flex flex-wrap justify-center gap-16 mb-8">
+            <p className="text-sm text-muted-foreground uppercase tracking-widest mb-8">Founders & Co-Founders</p>
+            <div className="flex flex-wrap justify-center gap-16">
               {founders.flatMap((g) =>
                 g.members.map((m) => (
                   <MemberCard key={m.name} member={m} size="lg" />
                 ))
               )}
             </div>
-            <p className="text-sm text-muted-foreground uppercase tracking-widest">Founders & Co-Founders</p>
           </div>
 
           {/* Core Team */}
