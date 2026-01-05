@@ -219,15 +219,47 @@ const Team = () => {
 
       <main className="pb-20 px-4">
         <div className="max-w-5xl mx-auto">
-          {/* Featured: Founders */}
-          <div className="text-center mb-16">
-            <p className="text-sm text-muted-foreground uppercase tracking-widest mb-8">Founders & Co-Founders</p>
+          {/* Founders */}
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-8">
+              <div className="h-px w-20 bg-gradient-to-r from-transparent to-[#c9a24d]" />
+              <div className="inline-flex items-center gap-2">
+                <Crown className="h-5 w-5 text-[#e6c97a]" />
+                <span 
+                  className="text-2xl font-bold uppercase tracking-widest bg-clip-text text-transparent"
+                  style={{ backgroundImage: "linear-gradient(90deg, #fff1c1, #e6c97a, #c9a24d)" }}
+                >
+                  Founders
+                </span>
+              </div>
+              <div className="h-px w-20 bg-gradient-to-l from-transparent to-[#c9a24d]" />
+            </div>
             <div className="flex flex-wrap justify-center gap-16">
-              {founders.flatMap((g) =>
-                g.members.map((m) => (
-                  <MemberCard key={m.name} member={m} size="lg" />
-                ))
-              )}
+              {TEAM.find((g) => g.role === "Founders")?.members.map((m) => (
+                <MemberCard key={m.name} member={m} size="lg" />
+              ))}
+            </div>
+          </div>
+
+          {/* Co-Founders */}
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-8">
+              <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#a463dd]" />
+              <div className="inline-flex items-center gap-2">
+                <Crown className="h-4 w-4 text-[#d0a7f0]" />
+                <span 
+                  className="text-xl font-bold uppercase tracking-widest bg-clip-text text-transparent"
+                  style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+                >
+                  Co-Founders
+                </span>
+              </div>
+              <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#a463dd]" />
+            </div>
+            <div className="flex flex-wrap justify-center gap-16">
+              {TEAM.find((g) => g.role === "Co-Founders")?.members.map((m) => (
+                <MemberCard key={m.name} member={m} size="lg" />
+              ))}
             </div>
           </div>
 
