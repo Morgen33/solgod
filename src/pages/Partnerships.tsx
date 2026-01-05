@@ -29,55 +29,67 @@ const Partnerships = () => {
 
             <div className="grid md:grid-cols-3 gap-6">
               <div className="relative p-6 rounded-xl bg-card/30 border border-border/50 text-center">
-                <GlowingEffect
-                  spread={40}
-                  glow={true}
-                  disabled={false}
-                  proximity={64}
-                  inactiveZone={0.01}
-                  borderWidth={2}
-                />
-                <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
-                  <Users className="text-primary" size={28} />
+                <div className="absolute inset-0 -z-10">
+                  <GlowingEffect
+                    spread={40}
+                    glow={true}
+                    disabled={false}
+                    proximity={64}
+                    inactiveZone={0.01}
+                    borderWidth={2}
+                  />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Cross-Community Events</h3>
-                <p className="text-muted-foreground text-sm">
-                  Engaging our audiences through high-energy, shared activations.
-                </p>
+                <div className="relative z-10">
+                  <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
+                    <Users className="text-primary" size={28} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Cross-Community Events</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Engaging our audiences through high-energy, shared activations.
+                  </p>
+                </div>
               </div>
               <div className="relative p-6 rounded-xl bg-card/30 border border-border/50 text-center">
-                <GlowingEffect
-                  spread={40}
-                  glow={true}
-                  disabled={false}
-                  proximity={64}
-                  inactiveZone={0.01}
-                  borderWidth={2}
-                />
-                <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
-                  <Sparkles className="text-primary" size={28} />
+                <div className="absolute inset-0 -z-10">
+                  <GlowingEffect
+                    spread={40}
+                    glow={true}
+                    disabled={false}
+                    proximity={64}
+                    inactiveZone={0.01}
+                    borderWidth={2}
+                  />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Shared Experiences</h3>
-                <p className="text-muted-foreground text-sm">
-                  Developing unique digital or physical touchpoints that resonate with our holders.
-                </p>
+                <div className="relative z-10">
+                  <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
+                    <Sparkles className="text-primary" size={28} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Shared Experiences</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Developing unique digital or physical touchpoints that resonate with our holders.
+                  </p>
+                </div>
               </div>
               <div className="relative p-6 rounded-xl bg-card/30 border border-border/50 text-center">
-                <GlowingEffect
-                  spread={40}
-                  glow={true}
-                  disabled={false}
-                  proximity={64}
-                  inactiveZone={0.01}
-                  borderWidth={2}
-                />
-                <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
-                  <Heart className="text-primary" size={28} />
+                <div className="absolute inset-0 -z-10">
+                  <GlowingEffect
+                    spread={40}
+                    glow={true}
+                    disabled={false}
+                    proximity={64}
+                    inactiveZone={0.01}
+                    borderWidth={2}
+                  />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Mutual Support</h3>
-                <p className="text-muted-foreground text-sm">
-                  Building a long-term framework for resource sharing and cross-promotion.
-                </p>
+                <div className="relative z-10">
+                  <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
+                    <Heart className="text-primary" size={28} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Mutual Support</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Building a long-term framework for resource sharing and cross-promotion.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
