@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift, Sparkles } from "lucide-react";
+import { ArrowRight, Coins, Users, Zap, Twitter, MessageCircle, Layers, Gift, Sparkles } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { RotatingText } from "@/components/ui/rotating-text";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
@@ -12,9 +12,9 @@ const quickLinks = [
     description: "Follow for updates & alpha"
   },
   {
-    label: "Telegram",
-    href: "https://t.me/+TonrvVIf1t4zOGE0",
-    icon: Send,
+    label: "Discord",
+    href: "https://discord.com/invite/gtrFTsmEAE",
+    icon: MessageCircle,
     description: "Join the community chat"
   },
   {
