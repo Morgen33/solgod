@@ -12,13 +12,13 @@ import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 import tidecallersTone from "@/assets/factions/tidecallers-tone.png";
 import stormbindersTone from "@/assets/factions/stormbinders-tone.png";
 import earthshapersTone from "@/assets/factions/earthshapers-tone.png";
-import nethersoulImg from "@/assets/factions/nethersoul.avif";
-import starweaversImg from "@/assets/factions/starweavers.avif";
+import nethersoulTone from "@/assets/factions/nethersoul-tone.png";
+import starweaversTone from "@/assets/factions/starweavers-tone.png";
 import flarebornTone from "@/assets/factions/flareborn-tone.png";
-import dreamforgedImg from "@/assets/factions/dreamforged.avif";
-import myceliadsImg from "@/assets/factions/myceliads.avif";
-import voidstridersImg from "@/assets/factions/voidstriders.avif";
-import frostwokenImg from "@/assets/factions/frostwoken.avif";
+import dreamforgedTone from "@/assets/factions/dreamforged-tone.png";
+import mycealiadsTone from "@/assets/factions/myceliads-tone.png";
+import voidstridersTone from "@/assets/factions/voidstriders-tone.png";
+import frostwokenTone from "@/assets/factions/frostwoken-tone.png";
 
 const SectionIcon = () => (
   <div className="flex justify-center mb-6">
@@ -31,12 +31,12 @@ const celestialOrders = [
   { name: "Tidecallers", description: "Fluid manipulators of ocean currents and temporal water.", icon: Droplets, color: "#4facfe", image: tidecallersTone },
   { name: "Stormbinders", description: "Commanders of thunder, wind, and charged chaos.", icon: Cloud, color: "#a463dd", image: stormbindersTone },
   { name: "Earthshapers", description: "Unshakable titans with dominion over stone, growth, and life-force.", icon: Mountain, color: "#8b5a2b", image: earthshapersTone },
-  { name: "Nethersoul", description: "Rare beings fused with antimatter and void energy.", icon: Star, color: "#1a0033", image: nethersoulImg },
-  { name: "Voidstriders", description: "Travelers of the cosmic void, masters of dark matter and shadow.", icon: Star, color: "#4a0080", image: voidstridersImg },
-  { name: "Starweavers", description: "Cosmic architects bending constellations and starlight.", icon: Sparkles, color: "#ffd700", image: starweaversImg },
-  { name: "Frostwoken", description: "Spirits of glacial time, forged in absolute stillness.", icon: Snowflake, color: "#87ceeb", image: frostwokenImg },
-  { name: "Dreamforged", description: "Touched by lucid realms, reality-benders born of thought.", icon: Star, color: "#d0a7f0", image: dreamforgedImg },
-  { name: "Myceliads", description: "Symbiotic hybrids bound to nature, fungi, and the pulse of planetary life.", icon: Leaf, color: "#32cd32", image: myceliadsImg },
+  { name: "Nethersoul", description: "Rare beings fused with antimatter and void energy.", icon: Star, color: "#1a0033", image: nethersoulTone },
+  { name: "Voidstriders", description: "Travelers of the cosmic void, masters of dark matter and shadow.", icon: Star, color: "#4a0080", image: voidstridersTone },
+  { name: "Starweavers", description: "Cosmic architects bending constellations and starlight.", icon: Sparkles, color: "#ffd700", image: starweaversTone },
+  { name: "Frostwoken", description: "Spirits of glacial time, forged in absolute stillness.", icon: Snowflake, color: "#87ceeb", image: frostwokenTone },
+  { name: "Dreamforged", description: "Touched by lucid realms, reality-benders born of thought.", icon: Star, color: "#d0a7f0", image: dreamforgedTone },
+  { name: "Myceliads", description: "Symbiotic hybrids bound to nature, fungi, and the pulse of planetary life.", icon: Leaf, color: "#32cd32", image: mycealiadsTone },
 ];
 
 const About = () => {
