@@ -11,6 +11,7 @@ import tidecallersImg from "@/assets/factions/tidecallers.avif";
 import stormbindersImg from "@/assets/factions/stormbinders.avif";
 import earthshapersImg from "@/assets/factions/earthshapers.avif";
 import nethersoulImg from "@/assets/factions/nethersoul.avif";
+import starweaversImg from "@/assets/factions/starweavers.avif";
 
 const SectionIcon = () => (
   <div className="flex justify-center mb-6">
@@ -24,7 +25,7 @@ const celestialOrders = [
   { name: "Stormbinders", description: "Commanders of thunder, wind, and charged chaos.", icon: Cloud, color: "#a463dd", image: stormbindersImg },
   { name: "Earthshapers", description: "Unshakable titans with dominion over stone, growth, and life-force.", icon: Mountain, color: "#8b5a2b", image: earthshapersImg },
   { name: "Nethersoul", description: "Rare beings fused with antimatter and void energy.", icon: Star, color: "#1a0033", image: nethersoulImg },
-  { name: "Starweavers", description: "Cosmic architects bending constellations and starlight.", icon: Sparkles, color: "#ffd700", image: null },
+  { name: "Starweavers", description: "Cosmic architects bending constellations and starlight.", icon: Sparkles, color: "#ffd700", image: starweaversImg },
   { name: "Frostwoken", description: "Spirits of glacial time, forged in absolute stillness.", icon: Snowflake, color: "#87ceeb", image: null },
   { name: "Ashborn", description: "Reborn through fire and ruin, thriving in the aftermath of destruction.", icon: Flame, color: "#dc143c", image: null },
   { name: "Dreamforged", description: "Touched by lucid realms, reality-benders born of thought.", icon: Star, color: "#d0a7f0", image: null },
