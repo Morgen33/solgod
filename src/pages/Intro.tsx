@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import LightningIntro from "@/components/ui/lightning-intro";
+import PlasmaHero from "@/components/ui/plasma-hero";
 import solgodIntro from "@/assets/solgod-intro.avif";
 import { Seo } from "@/components/Seo";
 
@@ -13,12 +13,11 @@ export default function Intro() {
         description="Welcome to SolGods. 3,333 divine beings on Solana. Enter to discover the collection."
         canonicalPath="/"
       />
-      <LightningIntro
-        text="SOLGODS NFTS"
-        cyclesBeforeReveal={2}
-        solgodImageSrc={solgodIntro}
+      <PlasmaHero
+        title="SOLGODS"
+        subtitle="NFTS"
+        imageSrc={solgodIntro}
         onEnter={() => navigate("/home")}
-        buttonText="Enter"
       />
     </>
   );
