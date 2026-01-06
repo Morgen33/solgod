@@ -16,6 +16,7 @@ import gnomieAvatar from "@/assets/team/gnomie.png";
 import gnomieBackAvatar from "@/assets/team/gnomie-back.jpg";
 import misterAvatar from "@/assets/team/mister.webp";
 import auskynAvatar from "@/assets/team/auskyn.webp";
+import irbAvatar from "@/assets/team/irb.png";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -127,6 +128,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   Gnomie: gnomieAvatar,
   Mister: misterAvatar,
   Auskyn: auskynAvatar,
+  IRB: irbAvatar,
 };
 
 // Back images for flippable cards (add more as needed)
