@@ -418,10 +418,10 @@ export default function PlasmaHero({
           className="w-[60vmin] h-[60vmin] max-w-[400px] max-h-[400px]"
         >
           <defs>
-            {/* Curve for SOLGODS - arching upward inside the ball */}
+            {/* Curve for SOLGODS - near top of the ball */}
             <path
               id="curveTop"
-              d="M 80,220 Q 200,120 320,220"
+              d="M 60,160 Q 200,80 340,160"
               fill="none"
             />
             {/* Curve for NFTS - arching downward inside the ball */}
