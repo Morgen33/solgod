@@ -19,6 +19,7 @@ import auskynAvatar from "@/assets/team/auskyn.webp";
 import irbAvatar from "@/assets/team/irb.png";
 import viperAvatar from "@/assets/team/viper.png";
 import viperBackAvatar from "@/assets/team/viper-back.png";
+import glowBackAvatar from "@/assets/team/glow-back.webp";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -141,6 +142,7 @@ const MEMBER_BACK_AVATARS: Record<string, string> = {
   Woolfie: woolfieBackAvatar,
   Gnomie: gnomieBackAvatar,
   Viper: viperBackAvatar,
+  Glow: glowBackAvatar,
 };
 
 const AVATAR_COLORS = [
