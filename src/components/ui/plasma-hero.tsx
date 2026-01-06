@@ -424,10 +424,10 @@ export default function PlasmaHero({
               d="M 60,160 Q 200,80 340,160"
               fill="none"
             />
-            {/* Curve for NFTS - arching downward inside the ball */}
+            {/* Curve for NFTS - right under SOLGODS */}
             <path
               id="curveBottom"
-              d="M 120,240 Q 200,320 280,240"
+              d="M 80,210 Q 200,150 320,210"
               fill="none"
             />
             <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
