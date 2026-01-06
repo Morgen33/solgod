@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Layout } from "@/components/Layout";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import creatorxAvatar from "@/assets/team/creatorx.avif";
-import rasiAvatar from "@/assets/team/rasi.webp";
 import morgenAvatar from "@/assets/team/morgen.avif";
 import morgenBackAvatar from "@/assets/team/morgen-back.png";
 import glowAvatar from "@/assets/team/glow.avif";
@@ -116,7 +115,6 @@ const ROLE_ICON: Record<string, JSX.Element> = {
 
 const MEMBER_AVATARS: Record<string, string> = {
   CreatorX: creatorxAvatar,
-  Rasi: rasiAvatar,
   Morgen: morgenAvatar,
   Glow: glowAvatar,
   Red: redAvatar,
