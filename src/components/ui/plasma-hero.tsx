@@ -368,30 +368,89 @@ export default function PlasmaHero({
       {/* Plasma WebGL mount */}
       <div ref={mountRef} className="absolute inset-0 z-10 pointer-events-none" />
 
-      {/* Overlay */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center gap-6 px-6 text-center pointer-events-none">
-        <div className="select-none">
-          <div
-            className="text-6xl md:text-8xl font-black tracking-tight text-white"
-            style={{ textShadow: "0 0 30px rgba(0,170,255,0.65)" }}
-          >
-            {title}
-          </div>
-          <div className="mt-2 text-xl md:text-2xl font-semibold text-white/80 tracking-[0.35em]">
-            {subtitle}
-          </div>
-        </div>
-
-        <button
-          onClick={onEnter}
-          className="pointer-events-auto px-8 py-3 rounded-xl bg-white text-black font-semibold hover:opacity-90 active:opacity-80 transition-opacity"
+      {/* Curved Text Around Orb */}
+      <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
+        <svg
+          viewBox="0 0 400 400"
+          className="w-[80vmin] h-[80vmin] max-w-[500px] max-h-[500px]"
         >
-          Enter
-        </button>
+          <defs>
+            <path
+              id="curveTop"
+              d="M 50,200 A 150,150 0 0,1 350,200"
+              fill="none"
+            />
+            <path
+              id="curveBottom"
+              d="M 350,200 A 150,150 0 0,1 50,200"
+              fill="none"
+            />
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          
+          {/* Top curved text - SOLGODS */}
+          <text
+            fill="white"
+            style={{
+              fontFamily: "'Orbitron', sans-serif",
+              fontSize: "42px",
+              fontWeight: 900,
+              letterSpacing: "0.15em",
+              filter: "url(#glow)",
+            }}
+          >
+            <textPath
+              href="#curveTop"
+              startOffset="50%"
+              textAnchor="middle"
+            >
+              {title}
+            </textPath>
+          </text>
+          
+          {/* Bottom curved text - NFTS */}
+          <text
+            fill="rgba(255,255,255,0.7)"
+            style={{
+              fontFamily: "'Orbitron', sans-serif",
+              fontSize: "28px",
+              fontWeight: 700,
+              letterSpacing: "0.35em",
+              filter: "url(#glow)",
+            }}
+          >
+            <textPath
+              href="#curveBottom"
+              startOffset="50%"
+              textAnchor="middle"
+            >
+              {subtitle}
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+      {/* Enter Button */}
+      <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
+        <div className="mt-[45vh]">
+          <button
+            onClick={onEnter}
+            className="pointer-events-auto px-8 py-3 rounded-xl bg-white text-black font-semibold hover:opacity-90 active:opacity-80 transition-opacity"
+            style={{ fontFamily: "'Orbitron', sans-serif" }}
+          >
+            Enter
+          </button>
+        </div>
       </div>
 
       {/* Readability overlay */}
-      <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+      <div className="absolute inset-0 bg-black/25 pointer-events-none z-5" />
     </div>
   );
 }
