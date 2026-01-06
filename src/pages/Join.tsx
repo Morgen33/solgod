@@ -4,6 +4,31 @@ import { ShinyButton } from "@/components/ui/shiny-button";
 import { ArrowRight, Users, Eye, MessageCircle, Sparkles, Shield, Zap, Crown } from "lucide-react";
 import solgodsIcon from "@/assets/solgods-icon.png";
 
+// Starter SolGods images
+import starterWingsMale from "@/assets/starters/wings-male.jpg";
+import starterWingsFemale from "@/assets/starters/wings-female.jpg";
+import starterMafiaMale from "@/assets/starters/mafia-male.png";
+import starterMafiaFemale from "@/assets/starters/mafia-female.png";
+import starterWizardMale from "@/assets/starters/wizard-male.png";
+import starterWizardFemale from "@/assets/starters/wizard-female.png";
+import starterPuppyMale from "@/assets/starters/puppy-male.jpg";
+import starterPuppyFemale from "@/assets/starters/puppy-female.jpg";
+import starterBasicMale from "@/assets/starters/basic-male.jpg";
+import starterBasicFemale from "@/assets/starters/basic-female.jpg";
+
+const starterGods = [
+  starterWingsMale,
+  starterWizardMale,
+  starterMafiaMale,
+  starterPuppyMale,
+  starterBasicMale,
+  starterWingsFemale,
+  starterWizardFemale,
+  starterMafiaFemale,
+  starterPuppyFemale,
+  starterBasicFemale,
+];
+
 const Join = () => {
   return (
     <Layout>
@@ -29,6 +54,21 @@ const Join = () => {
           </div>
 
           <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-10 mb-8">
+            {/* Starter Gods Showcase */}
+            <div className="grid grid-cols-5 gap-3 mb-8">
+              {starterGods.map((img, index) => (
+                <div 
+                  key={index} 
+                  className="aspect-square rounded-xl overflow-hidden border border-primary/20 hover:border-primary/50 transition-colors"
+                >
+                  <img 
+                    src={img} 
+                    alt={`Starter SolGod ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               Not everyone walks in holding a Genesis SolGod — and that's the point.
               Starter SolGods are your entry into the culture. A way to step into the community, get familiar with how we move, and see if this world fits you.
