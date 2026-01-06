@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import NeuralNetworkCanvas from "./neural-network-canvas";
 
 // --- CONFIGURATION ---
 const params = {
@@ -361,8 +362,11 @@ export default function PlasmaHero({
 
   return (
     <div className="relative w-full h-screen bg-black overflow-hidden">
-      {/* WebGL mount */}
-      <div ref={mountRef} className="absolute inset-0" />
+      {/* Neural Network Background */}
+      <NeuralNetworkCanvas className="absolute inset-0 z-0" />
+
+      {/* Plasma WebGL mount */}
+      <div ref={mountRef} className="absolute inset-0 z-10 pointer-events-none" />
 
       {/* Overlay */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center gap-6 px-6 text-center pointer-events-none">
