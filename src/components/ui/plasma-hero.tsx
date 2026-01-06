@@ -421,7 +421,7 @@ export default function PlasmaHero({
             {/* Curve for SOLGODS - near top of the ball */}
             <path
               id="curveTop"
-              d="M 60,160 Q 200,80 340,160"
+              d="M 50,130 Q 200,50 350,130"
               fill="none"
             />
             {/* Curve for NFTS - right under SOLGODS */}
