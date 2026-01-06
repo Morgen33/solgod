@@ -17,6 +17,8 @@ import gnomieBackAvatar from "@/assets/team/gnomie-back.jpg";
 import misterAvatar from "@/assets/team/mister.webp";
 import auskynAvatar from "@/assets/team/auskyn.webp";
 import irbAvatar from "@/assets/team/irb.png";
+import viperAvatar from "@/assets/team/viper.png";
+import viperBackAvatar from "@/assets/team/viper-back.png";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -129,6 +131,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   Mister: misterAvatar,
   Auskyn: auskynAvatar,
   IRB: irbAvatar,
+  Viper: viperAvatar,
 };
 
 // Back images for flippable cards (add more as needed)
@@ -137,6 +140,7 @@ const MEMBER_BACK_AVATARS: Record<string, string> = {
   KMAC: kmacBackAvatar,
   Woolfie: woolfieBackAvatar,
   Gnomie: gnomieBackAvatar,
+  Viper: viperBackAvatar,
 };
 
 const AVATAR_COLORS = [
