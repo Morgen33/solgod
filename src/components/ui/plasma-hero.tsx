@@ -407,76 +407,32 @@ export default function PlasmaHero({
       {/* Plasma WebGL mount */}
       <div ref={mountRef} className="absolute inset-0 z-10" />
 
-      {/* Curved Text Around Orb */}
+      {/* Text Above Orb */}
       <div 
-        className={`absolute inset-0 z-20 flex items-center justify-center pointer-events-none transition-opacity duration-1000 ${
+        className={`absolute inset-0 z-20 flex flex-col items-center justify-center pointer-events-none transition-opacity duration-1000 ${
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <svg
-          viewBox="0 0 400 400"
-          className="w-[80vmin] h-[80vmin] max-w-[500px] max-h-[500px]"
-        >
-          <defs>
-            <path
-              id="curveTop"
-              d="M 50,200 A 150,150 0 0,1 350,200"
-              fill="none"
-            />
-            <path
-              id="curveBottom"
-              d="M 350,200 A 150,150 0 0,1 50,200"
-              fill="none"
-            />
-            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-              <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
-          
-          {/* Top curved text - SOLGODS */}
-          <text
-            fill="white"
+        <div className="flex flex-col items-center -mt-[25vh]">
+          <h1
+            className="text-white text-5xl md:text-7xl font-black tracking-[0.15em]"
             style={{
               fontFamily: "'Orbitron', sans-serif",
-              fontSize: "42px",
-              fontWeight: 900,
-              letterSpacing: "0.15em",
-              filter: "url(#glow)",
+              textShadow: "0 0 20px rgba(255,255,255,0.5), 0 0 40px rgba(255,255,255,0.3)",
             }}
           >
-            <textPath
-              href="#curveTop"
-              startOffset="50%"
-              textAnchor="middle"
-            >
-              {title}
-            </textPath>
-          </text>
-          
-          {/* Bottom curved text - NFTS */}
-          <text
-            fill="rgba(255,255,255,0.7)"
+            {title}
+          </h1>
+          <p
+            className="text-white/70 text-xl md:text-2xl font-bold tracking-[0.35em] mt-2"
             style={{
               fontFamily: "'Orbitron', sans-serif",
-              fontSize: "28px",
-              fontWeight: 700,
-              letterSpacing: "0.35em",
-              filter: "url(#glow)",
+              textShadow: "0 0 15px rgba(255,255,255,0.4)",
             }}
           >
-            <textPath
-              href="#curveBottom"
-              startOffset="50%"
-              textAnchor="middle"
-            >
-              {subtitle}
-            </textPath>
-          </text>
-        </svg>
+            {subtitle}
+          </p>
+        </div>
       </div>
 
       {/* Enter Button */}
