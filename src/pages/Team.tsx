@@ -20,6 +20,7 @@ import irbAvatar from "@/assets/team/irb.png";
 import viperAvatar from "@/assets/team/viper.png";
 import viperBackAvatar from "@/assets/team/viper-back.png";
 import glowBackAvatar from "@/assets/team/glow-back.webp";
+import donaldAvatar from "@/assets/team/donald.jpeg";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -133,6 +134,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   Auskyn: auskynAvatar,
   IRB: irbAvatar,
   Viper: viperAvatar,
+  Donald: donaldAvatar,
 };
 
 // Back images for flippable cards (add more as needed)
