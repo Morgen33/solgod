@@ -366,7 +366,7 @@ export default function PlasmaHero({
       <NeuralNetworkCanvas className="absolute inset-0 z-0" />
 
       {/* Plasma WebGL mount */}
-      <div ref={mountRef} className="absolute inset-0 z-10 pointer-events-none" />
+      <div ref={mountRef} className="absolute inset-0 z-10" />
 
       {/* Curved Text Around Orb */}
       <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
