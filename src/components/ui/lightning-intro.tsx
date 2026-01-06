@@ -9,7 +9,7 @@ class Text {
   color: string;
   delay: number;
   basedelay: number;
-  bound: TextMetrics & { height: number };
+  bound: { width: number; height: number };
   x: number;
   y: number;
   data: ImageData;
@@ -32,19 +32,21 @@ class Text {
     this.basedelay = this.delay;
     this.cycles = 0;
 
-    buffer.font = `bold ${this.size}px "Comic Sans MS", cursive, sans-serif`;
+    buffer.font = `bold ${Math.floor(this.size)}px "Comic Sans MS", cursive, sans-serif`;
     const metrics = buffer.measureText(this.copy);
-    this.bound = { ...metrics, height: this.size * 1.5 } as TextMetrics & { height: number };
+    const boundWidth = Math.max(1, Math.floor(metrics.width));
+    const boundHeight = Math.max(1, Math.floor(this.size * 1.5));
+    this.bound = { width: boundWidth, height: boundHeight };
 
     // Center the text
-    this.x = canvasWidth * 0.5 - this.bound.width * 0.5;
-    this.y = canvasHeight * 0.5 - this.bound.height * 0.5;
+    this.x = Math.floor(canvasWidth * 0.5 - this.bound.width * 0.5);
+    this.y = Math.floor(canvasHeight * 0.5 - this.bound.height * 0.5);
 
     buffer.strokeStyle = this.color;
     buffer.lineWidth = 2;
     buffer.strokeText(this.copy, 0, this.bound.height * 0.8);
 
-    this.data = buffer.getImageData(0, 0, Math.ceil(this.bound.width), Math.ceil(this.bound.height));
+    this.data = buffer.getImageData(0, 0, this.bound.width, this.bound.height);
     this.index = 0;
   }
 
