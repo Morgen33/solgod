@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import solgodsIcon from "@/assets/solgods-icon.png";
 
 const standaloneLinks = [
-  { href: "/", label: "Home", external: false },
+  { href: "/home", label: "Home", external: false },
   { href: "/token", label: "Token", external: false },
   { href: "/solcity", label: "SolCity", external: false },
 ];
@@ -105,16 +105,16 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/home" className="flex items-center gap-2">
             <img src={solgodsIcon} alt="SOLGODS" className="h-10 sm:h-12 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
             {/* Home */}
             <Link
-              to="/"
+              to="/home"
               className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                location.pathname === "/"
+                location.pathname === "/home"
                   ? "text-primary bg-primary/10"
                   : "text-muted-foreground hover:text-foreground hover:bg-secondary"
               }`}
@@ -204,10 +204,10 @@ export function Header() {
             <div className="flex flex-col gap-1">
               {/* Home */}
               <Link
-                to="/"
+                to="/home"
                 onClick={() => setMobileOpen(false)}
                 className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
-                  location.pathname === "/"
+                  location.pathname === "/home"
                     ? "text-primary bg-primary/10"
                     : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                 }`}
