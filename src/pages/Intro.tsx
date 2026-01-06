@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import PlasmaHero from "@/components/ui/plasma-hero";
-import solgodIntro from "@/assets/solgod-intro.avif";
 import { Seo } from "@/components/Seo";
 
 export default function Intro() {
@@ -16,7 +15,6 @@ export default function Intro() {
       <PlasmaHero
         title="SOLGODS"
         subtitle="NFTS"
-        imageSrc={solgodIntro}
         onEnter={() => navigate("/home")}
       />
     </>
