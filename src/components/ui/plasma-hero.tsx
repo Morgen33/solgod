@@ -84,11 +84,9 @@ export default function PlasmaHero({
   title = "SOLGODS",
   subtitle = "NFTS",
   onEnter,
-  imageSrc = "/solgod.png",
 }: {
   title?: string;
   subtitle?: string;
-  imageSrc?: string;
   onEnter?: () => void;
 }) {
   const mountRef = useRef<HTMLDivElement | null>(null);
@@ -379,8 +377,6 @@ export default function PlasmaHero({
             {subtitle}
           </div>
         </div>
-
-        <img src={imageSrc} alt="SolGod" className="max-h-[45vh] w-auto" />
 
         <button
           onClick={onEnter}
