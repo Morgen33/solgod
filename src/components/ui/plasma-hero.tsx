@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import NeuralNetworkCanvas from "./neural-network-canvas";
@@ -81,6 +81,16 @@ const noiseFunctions = `
   }
 `;
 
+// Intro animation config
+const introConfig = {
+  duration: 2.5,
+  startZ: 12,
+  endZ: 2.4,
+  startScale: 0.2,
+  endScale: 1.0,
+  easeOutCubic: (t: number) => 1 - Math.pow(1 - t, 3),
+};
+
 export default function PlasmaHero({
   title = "SOLGODS",
   subtitle = "NFTS",
@@ -91,6 +101,7 @@ export default function PlasmaHero({
   onEnter?: () => void;
 }) {
   const mountRef = useRef<HTMLDivElement | null>(null);
+  const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
     const mount = mountRef.current;
@@ -106,7 +117,8 @@ export default function PlasmaHero({
       0.1,
       100
     );
-    camera.position.z = 2.4;
+    // Start camera far back for intro animation
+    camera.position.z = introConfig.startZ;
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(mount.clientWidth, mount.clientHeight);
@@ -123,6 +135,7 @@ export default function PlasmaHero({
 
     // Main group for rotation
     const mainGroup = new THREE.Group();
+    mainGroup.scale.setScalar(introConfig.startScale); // Start small
     scene.add(mainGroup);
 
     // Light
@@ -313,16 +326,42 @@ export default function PlasmaHero({
     // Animation loop
     const clock = new THREE.Clock();
     let raf = 0;
+    let introComplete = false;
 
     const animate = () => {
       const t = clock.getElapsedTime();
 
+      // Intro animation: fly forward and scale up
+      if (t < introConfig.duration) {
+        const progress = t / introConfig.duration;
+        const eased = introConfig.easeOutCubic(progress);
+        
+        // Interpolate camera Z position (far to near)
+        camera.position.z = introConfig.startZ + (introConfig.endZ - introConfig.startZ) * eased;
+        
+        // Interpolate scale (small to full)
+        const currentScale = introConfig.startScale + (introConfig.endScale - introConfig.startScale) * eased;
+        mainGroup.scale.setScalar(currentScale);
+        
+        // Faster rotation during approach, slowing down as it settles
+        const rotationMultiplier = 1 + (1 - eased) * 2;
+        mainGroup.rotation.x += params.rotationSpeedX * rotationMultiplier;
+        mainGroup.rotation.y += params.rotationSpeedY * rotationMultiplier;
+      } else {
+        // After intro, normal rotation
+        if (!introComplete) {
+          introComplete = true;
+          camera.position.z = introConfig.endZ;
+          mainGroup.scale.setScalar(introConfig.endScale);
+          setShowContent(true);
+        }
+        mainGroup.rotation.x += params.rotationSpeedX;
+        mainGroup.rotation.y += params.rotationSpeedY;
+      }
+
       plasmaMat.uniforms.uTime.value = t * params.timeScale;
       pMat.uniforms.uTime.value = t;
-
       plasmaMesh.rotation.y = t * 0.08;
-      mainGroup.rotation.x += params.rotationSpeedX;
-      mainGroup.rotation.y += params.rotationSpeedY;
 
       controls.update();
       renderer.render(scene, camera);
@@ -369,7 +408,11 @@ export default function PlasmaHero({
       <div ref={mountRef} className="absolute inset-0 z-10" />
 
       {/* Curved Text Around Orb */}
-      <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
+      <div 
+        className={`absolute inset-0 z-20 flex items-center justify-center pointer-events-none transition-opacity duration-1000 ${
+          showContent ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         <svg
           viewBox="0 0 400 400"
           className="w-[80vmin] h-[80vmin] max-w-[500px] max-h-[500px]"
@@ -437,7 +480,11 @@ export default function PlasmaHero({
       </div>
 
       {/* Enter Button */}
-      <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
+      <div 
+        className={`absolute inset-0 z-20 flex items-center justify-center pointer-events-none transition-opacity duration-1000 delay-300 ${
+          showContent ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         <div className="mt-[45vh]">
           <button
             onClick={onEnter}
