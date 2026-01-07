@@ -101,26 +101,32 @@ export function ShootingStars({ className = '' }: ShootingStarsProps) {
     };
 
     const timeoutsRef: number[] = [];
+    let lastStarEndTime = 0;
 
     const spawnOne = () => {
-      // Hard guarantee: never more than one active star
       starsRef.current = [createStar()];
     };
 
-    const scheduleNext = () => {
-      const t = window.setTimeout(() => {
-        // Only spawn if none currently visible
-        if (starsRef.current.length === 0) {
-          spawnOne();
-        }
-        scheduleNext();
-      }, 3000);
+    const checkAndSpawn = () => {
+      const now = Date.now();
+      // Only spawn if no star visible AND 3 seconds have passed since last star ended
+      if (starsRef.current.length === 0 && now - lastStarEndTime >= 3000) {
+        spawnOne();
+      }
+      const t = window.setTimeout(checkAndSpawn, 500); // Check every 500ms
       timeoutsRef.push(t);
     };
 
-    // Start quickly, then settle into the 3s rhythm
-    spawnOne();
-    scheduleNext();
+    // Track when stars disappear
+    const originalFilter = starsRef.current.filter;
+    
+    // Start with one star after a brief delay
+    const initialTimeout = window.setTimeout(() => {
+      spawnOne();
+    }, 1000);
+    timeoutsRef.push(initialTimeout);
+    
+    checkAndSpawn();
 
     let startTime = performance.now();
 
@@ -239,8 +245,14 @@ export function ShootingStars({ className = '' }: ShootingStarsProps) {
           : `rgba(180, 220, 255, ${star.opacity * 0.4})`;
         ctx.fill();
 
-        return star.x > -150 && star.x < canvas.width + 150 && 
+        const isVisible = star.x > -150 && star.x < canvas.width + 150 && 
                star.y > -150 && star.y < canvas.height + 150;
+        
+        if (!isVisible) {
+          lastStarEndTime = Date.now();
+        }
+        
+        return isVisible;
       });
 
       animationRef.current = requestAnimationFrame(animate);
