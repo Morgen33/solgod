@@ -140,8 +140,8 @@ const Index = () => {
             {/* Pillar 1: The Sol Core Treasury */}
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl" style={{ backgroundColor: "rgba(16, 185, 129, 0.15)" }}>
-                  <Cog style={{ color: "#10b981" }} size={28} />
+                <div className="p-3 rounded-xl" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", boxShadow: "0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)" }}>
+                  <Cog style={{ color: "#ffffff", filter: "drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))" }} size={28} />
                 </div>
                 <h3 className="text-2xl font-bold" style={{ color: "#01b2ff" }}>1. The Sol Core Treasury</h3>
               </div>
@@ -179,8 +179,8 @@ const Index = () => {
             {/* Pillar 2: Foundation of Integrity */}
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl" style={{ backgroundColor: "rgba(16, 185, 129, 0.15)" }}>
-                  <Shield style={{ color: "#10b981" }} size={28} />
+                <div className="p-3 rounded-xl" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", boxShadow: "0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)" }}>
+                  <Shield style={{ color: "#ffffff", filter: "drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))" }} size={28} />
                 </div>
                 <h3 className="text-2xl font-bold" style={{ color: "#01b2ff" }}>2. A Foundation of Integrity</h3>
               </div>
@@ -206,8 +206,8 @@ const Index = () => {
             {/* Pillar 3: Living Economy */}
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl" style={{ backgroundColor: "rgba(16, 185, 129, 0.15)" }}>
-                  <Globe style={{ color: "#10b981" }} size={28} />
+                <div className="p-3 rounded-xl" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", boxShadow: "0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)" }}>
+                  <Globe style={{ color: "#ffffff", filter: "drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))" }} size={28} />
                 </div>
                 <h3 className="text-2xl font-bold" style={{ color: "#01b2ff" }}>3. A Living, Breathing Economy</h3>
               </div>
