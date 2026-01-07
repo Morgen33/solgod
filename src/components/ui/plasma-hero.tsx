@@ -406,16 +406,15 @@ export default function PlasmaHero({
       pMat.uniforms.uTime.value = t;
       plasmaMesh.rotation.y = t * 0.08;
 
-      // Calculate apparent ball size on screen based on camera distance
-      // Ball radius = 1.0, FOV = 75 degrees
-      // At distance Z, ball appears as: 2 * atan(radius / Z) / FOV
+      // Calculate the ball's visual diameter as a fraction of viewport height
       const currentZ = camera.position.z;
       const ballRadius = 1.0;
       const fovRad = (75 * Math.PI) / 180;
-      // Calculate what fraction of viewport height the ball covers
-      const apparentSize = (2 * ballRadius) / (currentZ * Math.tan(fovRad / 2));
-      // Convert to a reasonable percentage (multiply by base size factor)
-      setCharacterScale(Math.max(0.2, Math.min(3, apparentSize * 0.5)));
+      // visibleHeight = how much world-space height is visible at camera distance
+      const visibleHeight = 2 * currentZ * Math.tan(fovRad / 2);
+      // ballDiameterFraction = what % of viewport the ball occupies (0-1)
+      const ballDiameterFraction = (ballRadius * 2) / visibleHeight;
+      setCharacterScale(Math.max(0.1, Math.min(1.5, ballDiameterFraction)));
 
       controls.update();
       renderer.render(scene, camera);
@@ -476,10 +475,11 @@ export default function PlasmaHero({
             alt={`SolGod ${index + 1}`} 
             className="absolute h-auto object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
             style={{
-              width: `${50 * characterScale}vh`,
-              maxWidth: `${50 * characterScale}vw`,
+              // Ball diameter in vh * 85% to fit inside the sphere
+              width: `${characterScale * 85}vh`,
+              maxWidth: `${characterScale * 85}vw`,
               filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
-              opacity: currentHeroIndex === index && !isTransitioning ? 0.2 : 0,
+              opacity: currentHeroIndex === index && !isTransitioning ? 0.3 : 0,
             }}
           />
         ))}
