@@ -369,7 +369,7 @@ const Dao = () => {
             
             <div className="mb-4">
               <span className="text-sm text-muted-foreground font-medium">The DAO is led by:</span>
-              <div className="flex flex-wrap gap-3 mt-3">
+              <div className="flex flex-wrap items-center gap-3 mt-3">
                 <a 
                   href="https://x.com/eddieisfine" 
                   target="_blank" 
@@ -396,6 +396,10 @@ const Dao = () => {
                 >
                   @Auskyn
                   <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <span className="text-muted-foreground mx-2">|</span>
+                <a href="https://x.com/DGDdao" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
+                  X: @DGDdao <ExternalLink size={12} />
                 </a>
               </div>
             </div>
