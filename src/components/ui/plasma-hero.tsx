@@ -412,16 +412,16 @@ export default function PlasmaHero({
       {/* Character image inside the ball */}
       <div 
         className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-all duration-[2000ms] ease-out ${
-          showContent ? 'opacity-90 scale-100' : 'opacity-0 scale-90'
+          showContent ? 'opacity-20 scale-100' : 'opacity-0 scale-90'
         }`}
         style={{ zIndex: 15 }}
       >
         <img 
           src={gnomieHero} 
           alt="SolGod" 
-          className="w-[45vmin] h-auto max-w-[360px] object-contain mix-blend-screen"
+          className="w-[55vmin] h-auto max-w-[450px] object-contain mix-blend-screen"
           style={{
-            filter: "drop-shadow(0 0 50px rgba(0, 132, 255, 0.8)) brightness(1.1)",
+            filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
           }}
         />
       </div>
