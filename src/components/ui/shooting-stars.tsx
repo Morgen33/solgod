@@ -92,7 +92,7 @@ export function ShootingStars({ className = '' }: ShootingStarsProps) {
         x,
         y,
         length: isMeteor ? 120 + Math.random() * 80 : 80 + Math.random() * 60,
-        speed: isMeteor ? 2.5 + Math.random() * 1.5 : 1.2 + Math.random() * 1.3,
+        speed: isMeteor ? 1.2 + Math.random() * 0.8 : 0.5 + Math.random() * 0.6,
         angle,
         opacity: isMeteor ? 0.9 + Math.random() * 0.1 : 0.6 + Math.random() * 0.4,
         isMeteor,
@@ -103,27 +103,20 @@ export function ShootingStars({ className = '' }: ShootingStarsProps) {
     const spawnBurst = () => {
       const burstType = Math.random();
       
-      if (burstType < 0.45) {
+      if (burstType < 0.7) {
+        // 70% chance: single star
         starsRef.current.push(createStar());
-      } else if (burstType < 0.7) {
-        starsRef.current.push(createStar());
-        setTimeout(() => starsRef.current.push(createStar()), 100 + Math.random() * 300);
-      } else if (burstType < 0.9) {
-        starsRef.current.push(createStar());
-        setTimeout(() => starsRef.current.push(createStar()), 150 + Math.random() * 200);
-        setTimeout(() => starsRef.current.push(createStar()), 350 + Math.random() * 300);
       } else {
-        const count = 2 + Math.floor(Math.random() * 2);
-        for (let i = 0; i < count; i++) {
-          setTimeout(() => starsRef.current.push(createStar()), i * (80 + Math.random() * 120));
-        }
+        // 30% chance: two stars with slight delay
+        starsRef.current.push(createStar());
+        setTimeout(() => starsRef.current.push(createStar()), 200 + Math.random() * 400);
       }
     };
 
     const scheduleNext = () => {
-      const baseInterval = 1500 + Math.random() * 1500; // 1.5-3 seconds
+      const baseInterval = 3000 + Math.random() * 3000; // 3-6 seconds
       setTimeout(() => {
-        if (starsRef.current.length < 6) {
+        if (starsRef.current.length < 3) {
           spawnBurst();
         }
         scheduleNext();
