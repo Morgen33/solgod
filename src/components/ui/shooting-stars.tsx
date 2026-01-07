@@ -100,33 +100,33 @@ export function ShootingStars({ className = '' }: ShootingStarsProps) {
       };
     };
 
-    let timeoutId: number | null = null;
+    const timeoutsRef: number[] = [];
     let lastStarEndTime = 0;
-    let isSpawning = false;
 
     const spawnOne = () => {
-      if (isSpawning || starsRef.current.length > 0) return;
-      isSpawning = true;
       starsRef.current = [createStar()];
-      isSpawning = false;
     };
 
-    const scheduleNextStar = () => {
-      if (timeoutId) clearTimeout(timeoutId);
-      timeoutId = window.setTimeout(() => {
-        const now = Date.now();
-        if (starsRef.current.length === 0 && now - lastStarEndTime >= 3000) {
-          spawnOne();
-        }
-        scheduleNextStar();
-      }, 500);
+    const checkAndSpawn = () => {
+      const now = Date.now();
+      // Only spawn if no star visible AND 3 seconds have passed since last star ended
+      if (starsRef.current.length === 0 && now - lastStarEndTime >= 3000) {
+        spawnOne();
+      }
+      const t = window.setTimeout(checkAndSpawn, 500); // Check every 500ms
+      timeoutsRef.push(t);
     };
 
-    // Start after 2 seconds
-    timeoutId = window.setTimeout(() => {
+    // Track when stars disappear
+    const originalFilter = starsRef.current.filter;
+    
+    // Start with one star after a brief delay
+    const initialTimeout = window.setTimeout(() => {
       spawnOne();
-      scheduleNextStar();
-    }, 2000);
+    }, 1000);
+    timeoutsRef.push(initialTimeout);
+    
+    checkAndSpawn();
 
     let startTime = performance.now();
 
@@ -262,7 +262,7 @@ export function ShootingStars({ className = '' }: ShootingStarsProps) {
 
     return () => {
       window.removeEventListener('resize', resize);
-      if (timeoutId) clearTimeout(timeoutId);
+      timeoutsRef.forEach((t) => clearTimeout(t));
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
