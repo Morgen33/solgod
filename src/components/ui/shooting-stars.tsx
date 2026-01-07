@@ -100,30 +100,21 @@ export function ShootingStars({ className = '' }: ShootingStarsProps) {
       };
     };
 
-    const spawnBurst = () => {
-      const burstType = Math.random();
-      
-      if (burstType < 0.7) {
-        // 70% chance: single star
-        starsRef.current.push(createStar());
-      } else {
-        // 30% chance: two stars with slight delay
-        starsRef.current.push(createStar());
-        setTimeout(() => starsRef.current.push(createStar()), 200 + Math.random() * 400);
-      }
+    const spawnStar = () => {
+      starsRef.current.push(createStar());
     };
 
     const scheduleNext = () => {
       const baseInterval = 3000; // Fixed 3 seconds
       setTimeout(() => {
-        if (starsRef.current.length < 3) {
-          spawnBurst();
+        if (starsRef.current.length < 1) {
+          spawnStar();
         }
         scheduleNext();
       }, baseInterval);
     };
 
-    setTimeout(() => spawnBurst(), 500);
+    setTimeout(() => spawnStar(), 500);
     scheduleNext();
 
     let startTime = performance.now();
