@@ -8,7 +8,7 @@ import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 const quickLinks = [
   {
     label: "X/Twitter",
-    href: "https://x.com/SOLGodNFTs",
+    href: "https://x.com/SOLGodsNFTs",
     icon: Twitter,
     description: "Follow for updates & alpha"
   },

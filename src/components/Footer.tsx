@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import solgodsIcon from "@/assets/solgods-icon.png";
 
 const quickLinks = [
-  { label: "X/Twitter", href: "https://x.com/SOLGodNFTs", icon: Twitter },
+  { label: "X/Twitter", href: "https://x.com/SOLGodsNFTs", icon: Twitter },
   { label: "Discord", href: "https://discord.com/invite/gtrFTsmEAE", icon: MessageCircle },
   { label: "Buy SolGods", href: "https://magiceden.io/marketplace/solgods_", icon: ShoppingBag },
   { label: "Stake", href: "https://sgstake.fluxinc.io/", icon: Layers },
@@ -91,28 +91,10 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-border/50 flex items-center justify-center">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} SolGods. All rights reserved.
           </p>
-          
-          <div className="flex items-center gap-4">
-            {quickLinks.slice(0, 2).map((link) => {
-              const Icon = link.icon;
-              return (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                  aria-label={link.label}
-                >
-                  <Icon size={20} />
-                </a>
-              );
-            })}
-          </div>
         </div>
       </div>
     </footer>
