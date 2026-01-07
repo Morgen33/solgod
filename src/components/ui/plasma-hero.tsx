@@ -426,22 +426,6 @@ export default function PlasmaHero({
         />
       </div>
 
-      {/* Enter Button */}
-      <div 
-        className={`absolute inset-0 z-20 flex items-center justify-center pointer-events-none transition-opacity duration-1000 delay-300 ${
-          showContent ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
-        <div className="mt-[45vh]">
-          <button
-            onClick={onEnter}
-            className="pointer-events-auto px-8 py-3 rounded-xl bg-white text-black font-semibold hover:opacity-90 active:opacity-80 transition-opacity"
-            style={{ fontFamily: "'Orbitron', sans-serif" }}
-          >
-            Enter
-          </button>
-        </div>
-      </div>
 
       {/* Readability overlay */}
       <div className="absolute inset-0 bg-black/25 pointer-events-none z-5" />
