@@ -122,10 +122,11 @@ const Dao = () => {
             
             <div className="bg-secondary/30 rounded-xl p-6 mb-6">
               <h4 className="font-bold mb-3">How to Enter</h4>
-              <ul className="text-sm text-muted-foreground space-y-2">
-                <li>• Own a Sol God with the <span className="text-blue-light font-medium">Wizard Hat trait</span></li>
-                <li>• Have it either delisted (not for sale) or listed at 5 SOL or higher</li>
-              </ul>
+              <p className="text-sm text-muted-foreground mb-3">Own a Sol God with one of these traits:</p>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <span className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">Wizard Hat</span>
+              </div>
+              <p className="text-xs text-muted-foreground">Have it either delisted (not for sale) or listed at 5 SOL or higher.</p>
               <p className="text-sm text-muted-foreground mt-3">
                 Once you meet this condition, you're recognized as a true Cabal wizard and gain access to the circle — 
                 along with the chance to wield these legendary powers.
@@ -182,9 +183,13 @@ const Dao = () => {
             
             <div className="bg-secondary/30 rounded-xl p-6 mb-6">
               <h4 className="font-bold mb-3">Eligible Membership Assets</h4>
-              <p className="text-sm text-muted-foreground">
-                All Wings Traits (Rainbow Parage, Dark, Phoenix, Dragon, Angel, Mecha), Sol Gods Visor, Sol Gods Sweatshirt
-              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Rainbow Parage", "Dark Wings", "Phoenix Wings", "Dragon Wings", "Angel Wings", "Mecha Wings", "Sol Gods Visor", "Sol Gods Sweatshirt"].map((trait) => (
+                  <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
+                    {trait}
+                  </span>
+                ))}
+              </div>
             </div>
             
             <div className="flex flex-wrap gap-3 mb-4">
@@ -234,12 +239,13 @@ const Dao = () => {
               </div>
               <div className="p-4 rounded-xl bg-secondary/30">
                 <h4 className="font-bold mb-2 text-sm">Required Traits</h4>
-                <ul className="text-xs text-muted-foreground space-y-1">
-                  <li>• Peaky Hat</li>
-                  <li>• Mafia Hat</li>
-                  <li>• Tuxedo</li>
-                  <li>• Pinstripe Suit</li>
-                </ul>
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {["Peaky Hat", "Mafia Hat", "Tuxedo", "Pinstripe Suit"].map((trait) => (
+                    <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-xs font-medium">
+                      {trait}
+                    </span>
+                  ))}
+                </div>
                 <p className="text-xs text-muted-foreground mt-2 font-medium">Fee: 0.05 SOL/month</p>
               </div>
             </div>
@@ -274,9 +280,15 @@ const Dao = () => {
             </div>
             
             <p className="text-muted-foreground mb-4">
-              If you're holding a <span className="text-blue-light font-medium">Pixel Puppy trait</span> or a{" "}
-              <span className="text-blue-light font-medium">Strawhat trait</span> on your Sol God, you are officially eligible to join Do Good DAO (DGD).
+              If you're holding one of these traits on your Sol God, you are officially eligible to join Do Good DAO (DGD):
             </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {["Pixel Puppy", "Strawhat"].map((trait) => (
+                <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
+                  {trait}
+                </span>
+              ))}
+            </div>
             
             <p className="text-lg font-medium mb-6">We accept every trait because doing good is for everyone.</p>
             
