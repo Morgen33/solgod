@@ -5,7 +5,6 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import NeuralNetworkCanvas from "./neural-network-canvas";
 import gnomieHero from "@/assets/gnomie-hero.png";
-import marcusHero from "@/assets/heroes/marcus.png";
 import antlerHero from "@/assets/heroes/antler.png";
 import demonHero from "@/assets/heroes/demon.png";
 import bastetHero from "@/assets/heroes/bastet.png";
@@ -16,7 +15,6 @@ import cosmicHero from "@/assets/heroes/cosmic.png";
 
 const heroImages = [
   gnomieHero,
-  marcusHero,
   antlerHero,
   demonHero,
   bastetHero,
