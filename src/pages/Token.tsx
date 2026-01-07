@@ -41,7 +41,7 @@ const Token = () => {
           </div>
 
           {/* Core Utility Section */}
-          <div className="card-glow rounded-2xl p-8 sm:p-12 mb-12">
+          <div className="rounded-2xl p-8 sm:p-12 mb-12 border border-blue-500/30 shadow-[0_0_30px_rgba(59,130,246,0.15),inset_0_1px_0_rgba(147,197,253,0.1)] bg-gradient-to-b from-blue-950/50 to-transparent">
             <h2 className="text-3xl font-bold mb-4 text-center" style={{ color: "#2053db" }}>Core Utility & Benefits</h2>
             <p className="text-muted-foreground text-center mb-8">$SOLGODS is designed to provide tangible value to active participants:</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -345,9 +345,9 @@ const Token = () => {
 
 function UtilityCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="text-center p-6 bg-secondary/30 rounded-xl hover:bg-secondary/50 transition-colors">
-      <div className="text-primary mb-3 flex justify-center">{icon}</div>
-      <h4 className="font-semibold mb-2">{title}</h4>
+    <div className="text-center p-6 rounded-xl transition-all border border-blue-500/20 bg-blue-950/40 shadow-[0_0_15px_rgba(59,130,246,0.1)] hover:shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:border-blue-500/30">
+      <div className="text-[#c9a24d] mb-3 flex justify-center">{icon}</div>
+      <h4 className="font-semibold mb-2 text-[#c9a24d]">{title}</h4>
       <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   );
