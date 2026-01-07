@@ -281,7 +281,7 @@ export default function SolGods() {
         <div className="max-w-4xl mx-auto">
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 text-center">
             <div className="flex flex-col items-center">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Ascend?</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: "#01b2ff" }}>Ready to Ascend?</h2>
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
                 Join the pantheon of SolGods and unlock the full power of the ecosystem.
               </p>
