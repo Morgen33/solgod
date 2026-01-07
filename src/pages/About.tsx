@@ -104,7 +104,7 @@ const About = () => {
             <SectionIcon />
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
             >
               SOLGODS ECOSYSTEM
             </h2>
@@ -115,8 +115,8 @@ const About = () => {
 
           <div className="card-glow rounded-2xl p-8 sm:p-12 mb-12">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 rounded-xl bg-purple/20">
-                <Crown className="text-purple-light" size={32} />
+              <div className="p-3 rounded-xl bg-blue/20">
+                <Crown className="text-blue-light" size={32} />
               </div>
               <div>
                 <h3 className="text-2xl font-bold">The Collection: 3,333 Divine Beings</h3>
@@ -165,7 +165,7 @@ const About = () => {
         <div 
           className="absolute inset-0 opacity-10"
           style={{
-            background: "radial-gradient(ellipse at center, #7a18d1 0%, transparent 70%)",
+            background: "radial-gradient(ellipse at center, #1d4ed8 0%, transparent 70%)",
           }}
         />
         <div className="max-w-5xl mx-auto relative z-10">
@@ -173,14 +173,14 @@ const About = () => {
             <SectionIcon />
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
             >
               HISTORY
             </h2>
             <p className="text-xl text-muted-foreground">The Foundation of Ascendancy</p>
           </div>
 
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex flex-col">
               <p className="text-lg text-muted-foreground mb-8">
                 The seeds of SolGods were planted in April 2025 by our founder, Happy. Unlike traditional launches, 
@@ -190,27 +190,27 @@ const About = () => {
               <h3 className="text-xl font-bold mb-6 text-foreground">While others were selling "hype," Happy and CreatorX were providing:</h3>
               
               <div className="grid sm:grid-cols-3 gap-6 mb-8">
-                <div className="p-4 rounded-xl bg-purple/10 border border-purple/20 text-center">
-                  <TrendingUp className="text-purple-light mx-auto mb-2" size={28} />
+                <div className="p-4 rounded-xl bg-blue/10 border border-blue/20 text-center">
+                  <TrendingUp className="text-blue-light mx-auto mb-2" size={28} />
                   <h4 className="font-bold mb-1">Free Trading Calls</h4>
                   <p className="text-sm text-muted-foreground">Giving members the tools to grow their own bags.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-purple/10 border border-purple/20 text-center">
-                  <Zap className="text-purple-light mx-auto mb-2" size={28} />
+                <div className="p-4 rounded-xl bg-blue/10 border border-blue/20 text-center">
+                  <Zap className="text-blue-light mx-auto mb-2" size={28} />
                   <h4 className="font-bold mb-1">Meme Coin Plays</h4>
                   <p className="text-sm text-muted-foreground">Navigating the volatility of Solana with precision.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-purple/10 border border-purple/20 text-center">
-                  <Globe className="text-purple-light mx-auto mb-2" size={28} />
+                <div className="p-4 rounded-xl bg-blue/10 border border-blue/20 text-center">
+                  <Globe className="text-blue-light mx-auto mb-2" size={28} />
                   <h4 className="font-bold mb-1">X Growth Management</h4>
                   <p className="text-sm text-muted-foreground">Teaching members to build and monetize their presence.</p>
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl bg-gradient-to-r from-purple-dark/30 to-purple/20 border border-purple/30 mb-8">
+              <div className="p-6 rounded-xl bg-gradient-to-r from-blue-dark/30 to-blue/20 border border-blue/30 mb-8">
                 <p className="text-lg text-center">
-                  <span className="text-purple-light font-bold">20x return</span> off the initial whitelist price of 0.025 SOL — 
-                  <span className="text-purple-light font-bold"> minted out in just 15 hours</span>
+                  <span className="text-blue-light font-bold">20x return</span> off the initial whitelist price of 0.025 SOL — 
+                  <span className="text-blue-light font-bold"> minted out in just 15 hours</span>
                 </p>
               </div>
 
@@ -234,20 +234,20 @@ const About = () => {
             <SectionIcon />
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
             >
               THE LORE
             </h2>
             <p className="text-xl text-muted-foreground">The Solara Chronicles</p>
           </div>
 
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12 mb-12">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-12">
             <div className="flex flex-col items-center">
               <h3 className="text-2xl font-bold mb-6 text-center">The First Convergence</h3>
               <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
                 On the planet Solara, the sun was not a source of life, but a ticking clock. As the final solar convergence approached—a cosmic event that threatened to erase all life—the Sol Core awakened. It did not choose kings or scholars; it chose 3,333 individuals based on their inner spark. These mortals were infused with celestial essence, transforming them into the SolGods.
               </p>
-              <p className="text-lg font-bold text-center text-purple-light mb-8">
+              <p className="text-lg font-bold text-center text-blue-light mb-8">
                 They were divided into Ten Celestial Orders, each a pillar of the new world:
               </p>
             </div>
@@ -332,19 +332,19 @@ const About = () => {
             <SectionIcon />
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
             >
               SOL CITY
             </h2>
             <p className="text-xl text-muted-foreground">The Capital Allocation Engine</p>
-            <p className="text-lg text-purple-light mt-2">Passive Income, Professionally Managed.</p>
+            <p className="text-lg text-blue-light mt-2">Passive Income, Professionally Managed.</p>
           </div>
 
           {/* Portal to Sol City */}
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12 mb-12">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-12">
             <h3 className="text-2xl font-bold mb-6 text-center">The Portal to Sol City</h3>
             <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-              Seeking to expand the reach of the Sol Core, CreatorX used his divine energy to rip a hole through space-time, discovering a planet long forgotten—a world of desolation and ruin. There, he found ten mysterious creature types living in constant, violent chaos. Rather than conquering them, the SolGods united them. They channeled their elemental powers to revive the planet, building a shimmering metropolis: <span className="text-purple-light font-bold">Sol City</span>. This city now serves as the "Workforce of the Gods," a bustling economy that generates the resources and liquidity needed to fund the SolGods' further adventures across the multiverse.
+              Seeking to expand the reach of the Sol Core, CreatorX used his divine energy to rip a hole through space-time, discovering a planet long forgotten—a world of desolation and ruin. There, he found ten mysterious creature types living in constant, violent chaos. Rather than conquering them, the SolGods united them. They channeled their elemental powers to revive the planet, building a shimmering metropolis: <span className="text-blue-light font-bold">Sol City</span>. This city now serves as the "Workforce of the Gods," a bustling economy that generates the resources and liquidity needed to fund the SolGods' further adventures across the multiverse.
             </p>
             <div className="flex justify-center">
               <Link to="/solcity">
@@ -384,18 +384,18 @@ const About = () => {
           <div className="card-glow rounded-2xl p-8 sm:p-12">
             <h3 className="text-2xl font-bold mb-8 text-center">The Benefits</h3>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center p-6 rounded-xl bg-purple/10">
-                <Shield className="text-purple-light mx-auto mb-3" size={32} />
+              <div className="text-center p-6 rounded-xl bg-blue/10">
+                <Shield className="text-blue-light mx-auto mb-3" size={32} />
                 <h4 className="font-bold mb-2">No Active Management</h4>
                 <p className="text-sm text-muted-foreground">You hold the NFT; the team handles the rest.</p>
               </div>
-              <div className="text-center p-6 rounded-xl bg-purple/10">
-                <Globe className="text-purple-light mx-auto mb-3" size={32} />
+              <div className="text-center p-6 rounded-xl bg-blue/10">
+                <Globe className="text-blue-light mx-auto mb-3" size={32} />
                 <h4 className="font-bold mb-2">Diversification</h4>
                 <p className="text-sm text-muted-foreground">Gain exposure to assets outside of just the crypto market.</p>
               </div>
-              <div className="text-center p-6 rounded-xl bg-purple/10">
-                <TrendingUp className="text-purple-light mx-auto mb-3" size={32} />
+              <div className="text-center p-6 rounded-xl bg-blue/10">
+                <TrendingUp className="text-blue-light mx-auto mb-3" size={32} />
                 <h4 className="font-bold mb-2">Compound Interest</h4>
                 <p className="text-sm text-muted-foreground">Your stake becomes more powerful the longer you hold.</p>
               </div>
@@ -411,7 +411,7 @@ const About = () => {
             <SectionIcon />
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
             >
               FUTURE HORIZONS
             </h2>
@@ -419,22 +419,22 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <GlowCard glowColor="purple" customSize className="w-full h-auto">
-              <Coins className="text-purple-light mb-4" size={32} />
+            <GlowCard glowColor="blue" customSize className="w-full h-auto">
+              <Coins className="text-blue-light mb-4" size={32} />
               <h3 className="text-xl font-bold mb-3">The Token & Staking</h3>
               <p className="text-muted-foreground text-sm">
                 A dual-incentive system where staking your SolGod earns you the ecosystem's native currency, usable within Sol City.
               </p>
             </GlowCard>
-            <GlowCard glowColor="purple" customSize className="w-full h-auto">
-              <Users className="text-purple-light mb-4" size={32} />
+            <GlowCard glowColor="blue" customSize className="w-full h-auto">
+              <Users className="text-blue-light mb-4" size={32} />
               <h3 className="text-xl font-bold mb-3">Cross-Ecosystem Alliances</h3>
               <p className="text-muted-foreground text-sm">
                 We actively purchase and integrate assets from other communities into our treasury, creating a "Network Effect" that strengthens the entire Solana ecosystem.
               </p>
             </GlowCard>
-            <GlowCard glowColor="purple" customSize className="w-full h-auto">
-              <Globe className="text-purple-light mb-4" size={32} />
+            <GlowCard glowColor="blue" customSize className="w-full h-auto">
+              <Globe className="text-blue-light mb-4" size={32} />
               <h3 className="text-xl font-bold mb-3">Web2 Outreach</h3>
               <p className="text-muted-foreground text-sm">
                 Creating educational content and "Trad-Fi" bridges that allow non-crypto natives to understand and benefit from the Sol City Engine.
@@ -449,9 +449,9 @@ const About = () => {
 
 function ValueCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <GlowCard glowColor="purple" customSize className="w-full h-auto">
+    <GlowCard glowColor="blue" customSize className="w-full h-auto">
       <div className="flex flex-col">
-        <div className="text-purple-light mb-4">{icon}</div>
+        <div className="text-blue-light mb-4">{icon}</div>
         <h3 className="text-xl font-bold mb-3">{title}</h3>
         <p className="text-muted-foreground">{description}</p>
       </div>
@@ -461,9 +461,9 @@ function ValueCard({ icon, title, description }: { icon: React.ReactNode; title:
 
 function MissionCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <GlowCard glowColor="purple" customSize className="w-full h-auto text-center">
+    <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
       <div className="flex flex-col items-center">
-        <div className="text-purple-light mb-3">{icon}</div>
+        <div className="text-blue-light mb-3">{icon}</div>
         <h4 className="font-bold mb-2">{title}</h4>
         <p className="text-sm text-muted-foreground">{description}</p>
       </div>
@@ -473,12 +473,12 @@ function MissionCard({ icon, title, description }: { icon: React.ReactNode; titl
 
 function EngineStep({ number, title, description }: { number: string; title: string; description: string }) {
   return (
-    <GlowCard glowColor="purple" customSize className="w-full h-auto text-center">
+    <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
       <div className="flex flex-col items-center">
         <div 
           className="w-12 h-12 rounded-full flex items-center justify-center mb-4 text-2xl font-bold"
           style={{
-            background: "linear-gradient(135deg, #7a18d1, #a463dd)",
+            background: "linear-gradient(135deg, #1d4ed8, #3b82f6)",
           }}
         >
           {number}

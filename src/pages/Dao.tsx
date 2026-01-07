@@ -123,7 +123,7 @@ const Dao = () => {
             <div className="bg-secondary/30 rounded-xl p-6 mb-6">
               <h4 className="font-bold mb-3">How to Enter</h4>
               <ul className="text-sm text-muted-foreground space-y-2">
-                <li>• Own a Sol God with the <span className="text-purple-light font-medium">Wizard Hat trait</span></li>
+                <li>• Own a Sol God with the <span className="text-blue-light font-medium">Wizard Hat trait</span></li>
                 <li>• Have it either delisted (not for sale) or listed at 5 SOL or higher</li>
               </ul>
               <p className="text-sm text-muted-foreground mt-3">
@@ -206,13 +206,13 @@ const Dao = () => {
       {/* Mafia DAO */}
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto">
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
               <img src={mafiaDaoLogo} alt="Mafia DAO" className="h-32 sm:h-40 w-auto" />
               <h3 className="text-3xl font-bold">MAFIA DAO</h3>
             </div>
             
-            <p className="text-lg text-purple-light font-medium mb-4">Mission Mafia is a family-first DAO</p>
+            <p className="text-lg text-blue-light font-medium mb-4">Mission Mafia is a family-first DAO</p>
             <p className="text-muted-foreground mb-6">
               Led by four core team members, built on loyalty, trust, and long-term alignment. Our focus is on creating 
               legendary outcomes through monetization, NFTs, content, and mining, while building a lasting legacy for the family.
@@ -255,10 +255,10 @@ const Dao = () => {
             
             <p className="text-sm text-muted-foreground">
               <span className="font-medium">Core Team:</span>{" "}
-              <a href="https://x.com/medraresteaker" target="_blank" rel="noopener noreferrer" className="text-purple-light hover:underline">@Gnomie</a>,{" "}
-              <a href="https://x.com/DaveRmetax" target="_blank" rel="noopener noreferrer" className="text-purple-light hover:underline">@Daver</a>,{" "}
-              <a href="https://x.com/borkermetax" target="_blank" rel="noopener noreferrer" className="text-purple-light hover:underline">@Borker</a>,{" "}
-              <a href="https://x.com/AiArsenals" target="_blank" rel="noopener noreferrer" className="text-purple-light hover:underline">@Morgen</a>
+              <a href="https://x.com/medraresteaker" target="_blank" rel="noopener noreferrer" className="text-blue-light hover:underline">@Gnomie</a>,{" "}
+              <a href="https://x.com/DaveRmetax" target="_blank" rel="noopener noreferrer" className="text-blue-light hover:underline">@Daver</a>,{" "}
+              <a href="https://x.com/borkermetax" target="_blank" rel="noopener noreferrer" className="text-blue-light hover:underline">@Borker</a>,{" "}
+              <a href="https://x.com/AiArsenals" target="_blank" rel="noopener noreferrer" className="text-blue-light hover:underline">@Morgen</a>
             </p>
           </GlowCard>
         </div>
@@ -267,15 +267,15 @@ const Dao = () => {
       {/* Do Good DAO */}
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto">
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
               <img src={doGoodDaoLogo} alt="Do Good DAO" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">DO GOOD DAO (DGD)</h3>
             </div>
             
             <p className="text-muted-foreground mb-4">
-              If you're holding a <span className="text-purple-light font-medium">Pixel Puppy trait</span> or a{" "}
-              <span className="text-purple-light font-medium">Strawhat trait</span> on your Sol God, you are officially eligible to join Do Good DAO (DGD).
+              If you're holding a <span className="text-blue-light font-medium">Pixel Puppy trait</span> or a{" "}
+              <span className="text-blue-light font-medium">Strawhat trait</span> on your Sol God, you are officially eligible to join Do Good DAO (DGD).
             </p>
             
             <p className="text-lg font-medium mb-6">We accept every trait because doing good is for everyone.</p>
@@ -309,7 +309,7 @@ const Dao = () => {
       {/* Pantheon Circle */}
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto">
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
               <img src={pantheonCircleLogo} alt="Pantheon Circle" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">The Pantheon Circle</h3>
@@ -321,8 +321,8 @@ const Dao = () => {
               organization where only the most powerful and storied SOL GODs will gather!
             </p>
             
-            <div className="bg-purple/10 border border-purple/20 rounded-xl p-6 mb-6">
-              <h4 className="font-bold mb-3 text-purple-light">A New Era of Elite Governance</h4>
+            <div className="bg-blue/10 border border-blue/20 rounded-xl p-6 mb-6">
+              <h4 className="font-bold mb-3 text-blue-light">A New Era of Elite Governance</h4>
               <p className="text-sm text-muted-foreground">
                 The Pantheon Circle is founded by the esteemed <span className="font-medium">@Rasi</span>, who will guide this DAO's vision. 
                 Joining him to drive its operations and strategy is <span className="font-medium">@Swish</span>. Together, they will cultivate 
@@ -338,7 +338,7 @@ const Dao = () => {
               </p>
               <div className="flex flex-wrap gap-2">
                 {["Blood Crown", "Medusa Hair", "God Suit", "Cat Suit"].map((trait) => (
-                  <span key={trait} className="px-3 py-1 rounded-full bg-purple/20 border border-purple/30 text-sm font-medium">
+                  <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
                     {trait}
                   </span>
                 ))}
@@ -349,7 +349,7 @@ const Dao = () => {
               If your SOL God possesses these elite traits, prepare to take your rightful place among the Pantheon!
             </p>
             
-            <p className="text-purple-light font-medium">
+            <p className="text-blue-light font-medium">
               Join us as we ascend to the next level of community governance and prestige!
             </p>
             <p className="text-xs text-muted-foreground mt-2 italic">Elitist DAO, no starter gods</p>
@@ -372,8 +372,8 @@ const Dao = () => {
 
 function PowerCard({ title, description }: { title: string; description: string }) {
   return (
-    <div className="p-4 rounded-xl bg-secondary/30 border border-purple/10">
-      <h5 className="font-bold text-sm mb-1 text-purple-light">{title}</h5>
+    <div className="p-4 rounded-xl bg-secondary/30 border border-blue/10">
+      <h5 className="font-bold text-sm mb-1 text-blue-light">{title}</h5>
       <p className="text-xs text-muted-foreground">{description}</p>
     </div>
   );

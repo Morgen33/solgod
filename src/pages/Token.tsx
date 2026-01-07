@@ -11,7 +11,7 @@ const Token = () => {
           <h1 
             className="text-5xl sm:text-7xl font-bold mb-4 text-center bg-clip-text text-transparent animate-gradient-flow"
             style={{
-              backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #a463dd, #d0a7f0)",
+              backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
               backgroundSize: "200% 100%",
             }}
           >
@@ -34,7 +34,7 @@ const Token = () => {
 
           {/* Utility */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <GlowCard glowColor="purple" customSize className="w-full h-auto">
+            <GlowCard glowColor="blue" customSize className="w-full h-auto">
               <div className="flex flex-col">
                 <h3 className="text-2xl font-bold mb-4">Governance</h3>
                 <ul className="space-y-3 text-muted-foreground">
@@ -53,7 +53,7 @@ const Token = () => {
                 </ul>
               </div>
             </GlowCard>
-            <GlowCard glowColor="purple" customSize className="w-full h-auto">
+            <GlowCard glowColor="blue" customSize className="w-full h-auto">
               <div className="flex flex-col">
                 <h3 className="text-2xl font-bold mb-4">Utility</h3>
                 <ul className="space-y-3 text-muted-foreground">

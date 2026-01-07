@@ -189,7 +189,7 @@ export default function SolGods() {
           <div className="text-center mb-16">
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
             >
               MORE THAN ART
             </h2>
@@ -200,10 +200,10 @@ export default function SolGods() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {features.map((feature) => (
-              <GlowCard key={feature.title} glowColor="purple" customSize className="w-full h-auto">
+              <GlowCard key={feature.title} glowColor="blue" customSize className="w-full h-auto">
                 <div className="flex gap-4">
-                  <div className="p-3 rounded-xl bg-purple/20 h-fit">
-                    <div className="text-purple-light">{feature.icon}</div>
+                  <div className="p-3 rounded-xl bg-blue/20 h-fit">
+                    <div className="text-blue-light">{feature.icon}</div>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-foreground">{feature.title}</h3>
@@ -221,13 +221,13 @@ export default function SolGods() {
         <div 
           className="absolute inset-0 opacity-10"
           style={{
-            background: "radial-gradient(ellipse at center, #7a18d1 0%, transparent 70%)",
+            background: "radial-gradient(ellipse at center, #1d4ed8 0%, transparent 70%)",
           }}
         />
         <div className="max-w-4xl mx-auto relative z-10">
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex flex-col items-center text-center">
-              <Sparkles className="text-purple-light mb-6" size={48} />
+              <Sparkles className="text-blue-light mb-6" size={48} />
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">The Solara Chronicles</h2>
               <p className="text-lg text-muted-foreground mb-6 max-w-2xl">
                 On the planet Solara, as the final solar convergence approached, the Sol Core awakened. 

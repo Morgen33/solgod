@@ -10,7 +10,7 @@ const Partnerships = () => {
           <h1 
             className="text-5xl sm:text-7xl font-bold mb-4 text-center bg-clip-text text-transparent animate-gradient-flow"
             style={{
-              backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #a463dd, #d0a7f0)",
+              backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
               backgroundSize: "200% 100%",
             }}
           >
@@ -28,7 +28,7 @@ const Partnerships = () => {
             </p>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <GlowCard glowColor="purple" customSize className="w-full h-auto text-center">
+              <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
                 <div className="flex flex-col items-center">
                   <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
                     <Users className="text-primary" size={28} />
@@ -39,7 +39,7 @@ const Partnerships = () => {
                   </p>
                 </div>
               </GlowCard>
-              <GlowCard glowColor="purple" customSize className="w-full h-auto text-center">
+              <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
                 <div className="flex flex-col items-center">
                   <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
                     <Sparkles className="text-primary" size={28} />
@@ -50,7 +50,7 @@ const Partnerships = () => {
                   </p>
                 </div>
               </GlowCard>
-              <GlowCard glowColor="purple" customSize className="w-full h-auto text-center">
+              <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
                 <div className="flex flex-col items-center">
                   <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
                     <Heart className="text-primary" size={28} />

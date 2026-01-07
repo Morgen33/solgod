@@ -99,7 +99,7 @@ class Thunder {
     this.lifespan = options.lifespan || Math.round(Math.random() * 10 + 10);
     this.maxlife = this.lifespan;
     this.color = options.color || "#fefefe";
-    this.glow = options.glow || "#a463dd";
+    this.glow = options.glow || "#3b82f6";
     this.x = options.x || Math.random() * window.innerWidth;
     this.y = options.y || Math.random() * window.innerHeight;
     this.width = options.width || 2;
@@ -195,7 +195,7 @@ class Spark {
     this.width = Math.random() * 3;
     this.lifespan = Math.round(Math.random() * 20 + 40);
     this.maxlife = this.lifespan;
-    this.color = "#d0a7f0";
+    this.color = "#93c5fd";
     this.prev = { x: this.x, y: this.y };
   }
 
@@ -393,8 +393,8 @@ export default function LightningIntro({
             onClick={onEnter}
             className="px-12 py-4 text-xl font-bold text-white rounded-full transition-all duration-300 hover:scale-105 animate-fade-in"
             style={{
-              background: "linear-gradient(135deg, #7a18d1 0%, #a463dd 50%, #d0a7f0 100%)",
-              boxShadow: "0 0 30px rgba(164, 99, 221, 0.5)",
+              background: "linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #93c5fd 100%)",
+              boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)",
               animationDelay: "300ms",
             }}
           >
