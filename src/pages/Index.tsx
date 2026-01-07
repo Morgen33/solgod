@@ -58,7 +58,7 @@ const Index = () => {
 
         {/* Main Headline */}
         <div className="text-center mb-6 md:mb-8" style={{ animation: "fade-in 0.8s ease-out 0.4s forwards", opacity: 0 }}>
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold italic text-foreground mb-2">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold italic text-foreground mb-2">
             Probably
           </h1>
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold italic" style={{ perspective: "1000px" }}>
