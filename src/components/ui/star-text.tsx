@@ -21,8 +21,8 @@ export const StarText: React.FC<StarTextProps> = ({
   text,
   className = '',
   fontSize = 48,
-  starColor = '#66d9ff',
-  glowColor = 'rgba(102, 180, 255, 0.8)'
+  starColor = '#fffef0',
+  glowColor = 'rgba(100, 180, 255, 0.6)'
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [stars, setStars] = useState<Star[]>([]);
@@ -102,22 +102,28 @@ export const StarText: React.FC<StarTextProps> = ({
         const opacity = star.baseOpacity * (0.5 + 0.5 * twinkle);
         const size = star.size * (0.8 + 0.2 * twinkle);
 
-        // Glow effect
+        // Outer blue glow (soft backdrop)
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, size * 3, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(80, 160, 255, ${opacity * 0.15})`;
+        ctx.fill();
+
+        // Mid blue glow
         ctx.beginPath();
         ctx.arc(star.x, star.y, size * 2, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(102, 180, 255, ${opacity * 0.3})`;
+        ctx.fillStyle = `rgba(100, 180, 255, ${opacity * 0.25})`;
         ctx.fill();
 
-        // Core star
+        // Warm white/yellow core
         ctx.beginPath();
         ctx.arc(star.x, star.y, size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(102, 217, 255, ${opacity})`;
+        ctx.fillStyle = `rgba(255, 252, 230, ${opacity})`;
         ctx.fill();
 
-        // Bright center
+        // Bright white center
         ctx.beginPath();
-        ctx.arc(star.x, star.y, size * 0.5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 0.8})`;
+        ctx.arc(star.x, star.y, size * 0.4, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 0.95})`;
         ctx.fill();
       });
 
