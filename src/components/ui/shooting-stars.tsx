@@ -11,11 +11,10 @@ interface ShootingStar {
 }
 
 interface ShootingStarsProps {
-  interval?: number; // milliseconds between stars
   className?: string;
 }
 
-export function ShootingStars({ interval = 5000, className = '' }: ShootingStarsProps) {
+export function ShootingStars({ className = '' }: ShootingStarsProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const starsRef = useRef<ShootingStar[]>([]);
   const animationRef = useRef<number>();
@@ -35,37 +34,81 @@ export function ShootingStars({ interval = 5000, className = '' }: ShootingStars
     window.addEventListener('resize', resize);
 
     const createStar = (): ShootingStar => {
-      // Start from top or right edge, moving diagonally down-left
-      const startFromTop = Math.random() > 0.3;
-      const x = startFromTop 
-        ? Math.random() * canvas.width * 0.8 + canvas.width * 0.2 
-        : canvas.width + 50;
-      const y = startFromTop 
-        ? -50 
-        : Math.random() * canvas.height * 0.4;
+      // Random spawn zone: top edge, right edge, or top-right corner
+      const zone = Math.random();
+      let x: number, y: number, angle: number;
+      
+      if (zone < 0.4) {
+        // Top edge - anywhere along the top
+        x = Math.random() * canvas.width;
+        y = -50;
+        angle = Math.PI / 3 + (Math.random() - 0.5) * 0.5; // Steeper, ~60 degrees
+      } else if (zone < 0.7) {
+        // Right edge - upper half
+        x = canvas.width + 50;
+        y = Math.random() * canvas.height * 0.5;
+        angle = Math.PI * 0.6 + (Math.random() - 0.5) * 0.4; // More horizontal
+      } else if (zone < 0.85) {
+        // Top-right corner
+        x = canvas.width * 0.7 + Math.random() * canvas.width * 0.3;
+        y = -50;
+        angle = Math.PI / 4 + (Math.random() - 0.5) * 0.3; // Classic 45 degrees
+      } else {
+        // Left side going right (rare, for variety)
+        x = -50;
+        y = Math.random() * canvas.height * 0.3;
+        angle = -Math.PI / 5 + (Math.random() - 0.5) * 0.3; // Going right-downward
+      }
       
       return {
         x,
         y,
         length: 80 + Math.random() * 60,
-        speed: 1.5 + Math.random() * 1, // Slow speed
-        angle: Math.PI / 4 + (Math.random() - 0.5) * 0.3, // ~45 degrees with variance
-        opacity: 0.7 + Math.random() * 0.3,
+        speed: 1.2 + Math.random() * 1.3,
+        angle,
+        opacity: 0.6 + Math.random() * 0.4,
         trail: [],
       };
     };
 
-    // Spawn stars at interval
-    const spawnInterval = setInterval(() => {
-      if (starsRef.current.length < 3) { // Max 3 stars at once
+    const spawnBurst = () => {
+      const burstType = Math.random();
+      
+      if (burstType < 0.5) {
+        // Single star
         starsRef.current.push(createStar());
+      } else if (burstType < 0.75) {
+        // Two stars together
+        starsRef.current.push(createStar());
+        setTimeout(() => starsRef.current.push(createStar()), 100 + Math.random() * 300);
+      } else if (burstType < 0.9) {
+        // Three stars in quick succession
+        starsRef.current.push(createStar());
+        setTimeout(() => starsRef.current.push(createStar()), 150 + Math.random() * 200);
+        setTimeout(() => starsRef.current.push(createStar()), 350 + Math.random() * 300);
+      } else {
+        // Rapid succession of 2-3
+        const count = 2 + Math.floor(Math.random() * 2);
+        for (let i = 0; i < count; i++) {
+          setTimeout(() => starsRef.current.push(createStar()), i * (80 + Math.random() * 120));
+        }
       }
-    }, interval + Math.random() * 2000); // Add some randomness
+    };
 
-    // Spawn first star after a short delay
-    setTimeout(() => {
-      starsRef.current.push(createStar());
-    }, 1000);
+    // Variable interval spawning
+    const scheduleNext = () => {
+      const baseInterval = 3000 + Math.random() * 4000; // 3-7 seconds
+      setTimeout(() => {
+        if (starsRef.current.length < 5) {
+          spawnBurst();
+        }
+        scheduleNext();
+      }, baseInterval);
+    };
+
+    // Initial spawn
+    setTimeout(() => spawnBurst(), 800);
+    scheduleNext();
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -79,7 +122,7 @@ export function ShootingStars({ interval = 5000, className = '' }: ShootingStars
         star.trail.unshift({ x: star.x, y: star.y, opacity: star.opacity });
         
         // Limit trail length
-        const maxTrailLength = 40;
+        const maxTrailLength = 45;
         if (star.trail.length > maxTrailLength) {
           star.trail.pop();
         }
@@ -92,7 +135,6 @@ export function ShootingStars({ interval = 5000, className = '' }: ShootingStars
           if (index < star.trail.length - 1) {
             const nextPoint = star.trail[index + 1];
             
-            // Create gradient for each segment
             const gradient = ctx.createLinearGradient(point.x, point.y, nextPoint.x, nextPoint.y);
             gradient.addColorStop(0, `rgba(255, 255, 255, ${trailOpacity})`);
             gradient.addColorStop(1, `rgba(180, 220, 255, ${trailOpacity * 0.5})`);
@@ -107,21 +149,21 @@ export function ShootingStars({ interval = 5000, className = '' }: ShootingStars
           }
         });
 
-        // Draw the head (brighter)
+        // Draw the head
         ctx.beginPath();
         ctx.arc(star.x, star.y, 2, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
         ctx.fill();
 
-        // Glow effect on head
+        // Glow effect
         ctx.beginPath();
         ctx.arc(star.x, star.y, 4, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(180, 220, 255, ${star.opacity * 0.4})`;
         ctx.fill();
 
         // Remove if off screen
-        return star.x > -100 && star.x < canvas.width + 100 && 
-               star.y > -100 && star.y < canvas.height + 100;
+        return star.x > -150 && star.x < canvas.width + 150 && 
+               star.y > -150 && star.y < canvas.height + 150;
       });
 
       animationRef.current = requestAnimationFrame(animate);
@@ -131,12 +173,11 @@ export function ShootingStars({ interval = 5000, className = '' }: ShootingStars
 
     return () => {
       window.removeEventListener('resize', resize);
-      clearInterval(spawnInterval);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [interval]);
+  }, []);
 
   return (
     <canvas
