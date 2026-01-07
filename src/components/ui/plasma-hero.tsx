@@ -481,6 +481,32 @@ export default function PlasmaHero({
 
       {/* Readability overlay */}
       <div className="absolute inset-0 bg-black/25 pointer-events-none z-5" />
+
+      {/* Title at top */}
+      <div 
+        className={`absolute top-12 left-0 right-0 flex flex-col items-center justify-center z-20 transition-opacity duration-1000 ${
+          showContent ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-[0.15em] drop-shadow-[0_0_30px_rgba(0,55,212,0.8)]">
+          SOLGODS NFTS
+        </h1>
+      </div>
+
+      {/* Enter button below the ball */}
+      <div 
+        className={`absolute bottom-16 left-0 right-0 flex items-center justify-center z-20 transition-opacity duration-1000 ${
+          showContent ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <button
+          onClick={onEnter}
+          className="px-10 py-3 font-cinzel text-xl md:text-2xl font-semibold text-white tracking-[0.1em] rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(0,55,212,0.8)]"
+          style={{ backgroundColor: '#0037d4' }}
+        >
+          Enter
+        </button>
+      </div>
     </div>
   );
 }
