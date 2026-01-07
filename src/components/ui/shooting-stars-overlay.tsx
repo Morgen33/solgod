@@ -44,13 +44,13 @@ const getRandomStartPoint = () => {
 };
 
 export const ShootingStarsOverlay: React.FC<ShootingStarsOverlayProps> = ({
-  minSpeed = 4,
-  maxSpeed = 8,
-  minDelay = 3000,
-  maxDelay = 5000,
+  minSpeed = 2,
+  maxSpeed = 4,
+  minDelay = 4000,
+  maxDelay = 7000,
   starColor = "#9E00FF",
   trailColor = "#2EB9DF",
-  starWidth = 20,
+  starWidth = 30,
   starHeight = 2,
   className,
 }) => {
