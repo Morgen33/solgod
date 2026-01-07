@@ -34,15 +34,10 @@ const Token = () => {
               View on DEX Screener
               <TrendingUp size={20} />
             </ShinyButton>
-            <a
-              href="https://sgstake.fluxinc.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 rounded-lg text-lg font-medium border border-border bg-secondary/50 hover:bg-secondary transition-colors inline-flex items-center justify-center gap-2"
-            >
+            <ShinyButton as="a" href="https://sgstake.fluxinc.io/" target="_blank" rel="noopener noreferrer">
               Stake Your Gods
               <Lock size={20} />
-            </a>
+            </ShinyButton>
           </div>
 
           {/* Core Utility Section */}
@@ -261,12 +256,12 @@ const Token = () => {
             <h2 className="text-3xl font-bold mb-4" style={{ color: "#2053db" }}>Ready to Start?</h2>
             <p className="text-muted-foreground mb-6">The best way to learn is by doing.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://phantom.app/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-lg font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors inline-flex items-center justify-center gap-2">
+              <ShinyButton as="a" href="https://phantom.app/" target="_blank" rel="noopener noreferrer">
                 Install Phantom Wallet <ExternalLink size={16} />
-              </a>
-              <a href="https://x.com/solgods_" target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-lg font-medium border border-border bg-secondary/50 hover:bg-secondary transition-colors inline-flex items-center justify-center gap-2">
+              </ShinyButton>
+              <ShinyButton as="a" href="https://x.com/solgods_" target="_blank" rel="noopener noreferrer">
                 Follow on X <ExternalLink size={16} />
-              </a>
+              </ShinyButton>
             </div>
           </div>
 
