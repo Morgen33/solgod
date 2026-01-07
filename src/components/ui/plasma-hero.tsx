@@ -471,9 +471,10 @@ export default function PlasmaHero({
             key={index}
             src={heroSrc} 
             alt={`SolGod ${index + 1}`} 
-            className="absolute w-[75vmin] h-auto max-w-[600px] object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
+            className="absolute h-auto object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
             style={{
-              transform: `scale(${characterScale})`,
+              width: `${35 * characterScale}vmin`,
+              maxWidth: `${350 * characterScale}px`,
               filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
               opacity: currentHeroIndex === index && !isTransitioning ? 0.2 : 0,
             }}
