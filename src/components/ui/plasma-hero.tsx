@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import NeuralNetworkCanvas from "./neural-network-canvas";
+import { HoverButton } from "./hover-glow-button";
 import antlerHero from "@/assets/heroes/antler.png";
 import demonHero from "@/assets/heroes/demon.png";
 import bastetHero from "@/assets/heroes/bastet.png";
@@ -499,13 +500,16 @@ export default function PlasmaHero({
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <button
+        <HoverButton
           onClick={onEnter}
-          className="px-10 py-3 font-cinzel text-xl md:text-2xl font-semibold text-white tracking-[0.1em] rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(0,55,212,0.8)]"
-          style={{ backgroundColor: '#0037d4' }}
+          glowColor="#0037d4"
+          backgroundColor="#0037d4"
+          textColor="#ffffff"
+          hoverTextColor="#ffffff"
+          className="font-cinzel text-xl md:text-2xl font-semibold tracking-[0.1em]"
         >
           Enter
-        </button>
+        </HoverButton>
       </div>
     </div>
   );
