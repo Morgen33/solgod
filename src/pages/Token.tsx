@@ -356,7 +356,7 @@ function UtilityCard({ icon, title, description }: { icon: React.ReactNode; titl
 function StepRow({ step, action, details }: { step: number; action: string; details: string }) {
   return (
     <div className="flex items-start gap-4 p-4 bg-secondary/30 rounded-xl hover:bg-secondary/50 transition-colors">
-      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
+      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white text-background flex items-center justify-center font-bold">
         {step}
       </div>
       <div>
