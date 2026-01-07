@@ -140,8 +140,8 @@ const Index = () => {
             {/* Pillar 1: The Sol Core Treasury */}
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl bg-primary/10">
-                  <Cog className="text-primary" size={28} />
+                <div className="p-3 rounded-xl" style={{ backgroundColor: "rgba(16, 185, 129, 0.15)" }}>
+                  <Cog style={{ color: "#10b981" }} size={28} />
                 </div>
                 <h3 className="text-2xl font-bold" style={{ color: "#01b2ff" }}>1. The Sol Core Treasury</h3>
               </div>
@@ -179,8 +179,8 @@ const Index = () => {
             {/* Pillar 2: Foundation of Integrity */}
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl bg-primary/10">
-                  <Shield className="text-primary" size={28} />
+                <div className="p-3 rounded-xl" style={{ backgroundColor: "rgba(16, 185, 129, 0.15)" }}>
+                  <Shield style={{ color: "#10b981" }} size={28} />
                 </div>
                 <h3 className="text-2xl font-bold" style={{ color: "#01b2ff" }}>2. A Foundation of Integrity</h3>
               </div>
@@ -206,8 +206,8 @@ const Index = () => {
             {/* Pillar 3: Living Economy */}
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl bg-primary/10">
-                  <Globe className="text-primary" size={28} />
+                <div className="p-3 rounded-xl" style={{ backgroundColor: "rgba(16, 185, 129, 0.15)" }}>
+                  <Globe style={{ color: "#10b981" }} size={28} />
                 </div>
                 <h3 className="text-2xl font-bold" style={{ color: "#01b2ff" }}>3. A Living, Breathing Economy</h3>
               </div>
