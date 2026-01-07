@@ -18,7 +18,8 @@ import misterAvatar from "@/assets/team/mister.webp";
 import auskynAvatar from "@/assets/team/auskyn.webp";
 import irbAvatar from "@/assets/team/irb.png";
 import viperAvatar from "@/assets/team/viper.png";
-import viperBackAvatar from "@/assets/team/viper-back.png";
+import trashPandaAvatar from "@/assets/team/trash-panda.jpg";
+import trashPandaBackAvatar from "@/assets/team/trash-panda-back.jpg";
 import glowBackAvatar from "@/assets/team/glow-back.webp";
 import donaldAvatar from "@/assets/team/donald.jpeg";
 import rasiAvatar from "@/assets/team/rasi.webp";
@@ -135,6 +136,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   Auskyn: auskynAvatar,
   IRB: irbAvatar,
   Viper: viperAvatar,
+  TrashPanda: trashPandaAvatar,
   Donald: donaldAvatar,
   Rasi: rasiAvatar,
 };
@@ -145,7 +147,7 @@ const MEMBER_BACK_AVATARS: Record<string, string> = {
   KMAC: kmacBackAvatar,
   Woolfie: woolfieBackAvatar,
   Gnomie: gnomieBackAvatar,
-  Viper: viperBackAvatar,
+  TrashPanda: trashPandaBackAvatar,
   Glow: glowBackAvatar,
 };
 
