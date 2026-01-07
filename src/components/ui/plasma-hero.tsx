@@ -12,16 +12,18 @@ import cyborgHero from "@/assets/heroes/cyborg.png";
 import gothicHero from "@/assets/heroes/gothic.png";
 import frostHero from "@/assets/heroes/frost.png";
 import cosmicHero from "@/assets/heroes/cosmic.png";
+import cosmic2Hero from "@/assets/heroes/cosmic2.png";
 
 const heroImages = [
   gnomieHero,
   antlerHero,
-  demonHero,
   bastetHero,
+  demonHero,
   cyborgHero,
   gothicHero,
   frostHero,
   cosmicHero,
+  cosmic2Hero,
 ];
 
 // --- CONFIGURATION ---
