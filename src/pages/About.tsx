@@ -64,7 +64,8 @@ const About = () => {
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             In a landscape often built on empty promises, SolGods was forged in the fires of utility. 
-            We believe that a community is only as strong as the value it provides to its members.
+            We believe that a community is only as strong as the value it provides to its members. 
+            That is why we didn't start with a roadmap of "possibilities"—we started with a track record of results.
           </p>
         </div>
       </section>
@@ -80,12 +81,12 @@ const About = () => {
             />
             <ValueCard 
               icon={<Shield size={32} />}
-              title='A "Fund" for the People'
+              title='A "Hedge Fund" for the People'
               description="We bridge the gap between high-level finance and Web3 culture. By holding a SolGod, you aren't just holding art; you are holding a key to an actively managed treasury spanning Forex, Indices, and Crypto."
             />
             <ValueCard 
               icon={<Users size={32} />}
-              title="The Power of the Community"
+              title='The Power of "The Gang"'
               description="Our community isn't just a Discord server; it's a high-signal intelligence hub. From a 10-person group chat to a 1,900+ member alpha engine, we leverage collective knowledge to turn small stakes into real wins."
             />
             <ValueCard 
@@ -113,6 +114,11 @@ const About = () => {
             </p>
           </div>
 
+          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+            SolGods is more than an NFT project—it is a closed-loop liquidity and culture engine. 
+            We have designed an ecosystem where finance meets fun, and discipline meets chaos.
+          </p>
+
           <div className="card-glow rounded-2xl p-8 sm:p-12 mb-12">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 rounded-xl bg-blue/20">
@@ -123,14 +129,18 @@ const About = () => {
                 <p className="text-muted-foreground">The Genesis collection of uniquely crafted SolGods</p>
               </div>
             </div>
+            <p className="text-muted-foreground mb-6">
+              The Genesis collection consists of 3,333 uniquely crafted SolGods, representing the elite 3,333 mortals 
+              chosen by the Sol Core which includes ten primordial/mythical entities.
+            </p>
             <div className="grid md:grid-cols-2 gap-6 text-muted-foreground">
               <div className="p-4 rounded-xl bg-secondary/30">
                 <h4 className="font-bold text-foreground mb-2">Artistic Vision</h4>
-                <p className="text-sm">Created by Happy & CreatorX, featuring a diverse array of male and female characters, ensuring every holder finds a reflection of themselves within the pantheon.</p>
+                <p className="text-sm">Created by Happy & CreatorX, the collection features a diverse array of male and female characters, ensuring every holder finds a reflection of themselves within the pantheon.</p>
               </div>
               <div className="p-4 rounded-xl bg-secondary/30">
                 <h4 className="font-bold text-foreground mb-2">Nostalgia & Innovation</h4>
-                <p className="text-sm">140+ traits include "nostalgia items" designed to create emotional resonance, alongside futuristic armor and celestial weapons.</p>
+                <p className="text-sm">The 140+ traits include "nostalgia items" designed to create emotional resonance, alongside futuristic armor and celestial weapons.</p>
               </div>
               <div className="p-4 rounded-xl bg-secondary/30 md:col-span-2">
                 <h4 className="font-bold text-foreground mb-2">The "Yield-Bearing JPEG"</h4>
@@ -140,6 +150,12 @@ const About = () => {
           </div>
 
           {/* Mission */}
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold mb-4">Our Mission: Leveling Up</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Our mission is to build a community that outlasts market cycles. We aim to level our members up in three distinct ways:
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             <MissionCard 
               title="Financially"
@@ -148,12 +164,12 @@ const About = () => {
             />
             <MissionCard 
               title="Socially"
-              description='By fostering a "ride-or-die" culture within our community.'
+              description='By fostering a "ride-or-die" culture within The Gang.'
               icon={<Users size={28} />}
             />
             <MissionCard 
               title="Culturally"
-              description='Setting the standard for what a "Utility NFT" should actually look like on Solana.'
+              description="By setting the standard for what a Utility NFT should look like on Solana—becoming the new meta for NFTs."
               icon={<Sparkles size={28} />}
             />
           </div>
@@ -198,21 +214,28 @@ const About = () => {
                 <div className="p-4 rounded-xl bg-blue/10 border border-blue/20 text-center">
                   <Zap className="text-blue-light mx-auto mb-2" size={28} />
                   <h4 className="font-bold mb-1">Meme Coin Plays</h4>
-                  <p className="text-sm text-muted-foreground">Navigating the volatility of Solana with precision.</p>
+                  <p className="text-sm text-muted-foreground">Navigating the volatility of the Solana ecosystem with precision.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-blue/10 border border-blue/20 text-center">
                   <Globe className="text-blue-light mx-auto mb-2" size={28} />
                   <h4 className="font-bold mb-1">X Growth Management</h4>
-                  <p className="text-sm text-muted-foreground">Teaching members to build and monetize their presence.</p>
+                  <p className="text-sm text-muted-foreground">Teaching members how to build their personal brands and monetize their presence.</p>
                 </div>
               </div>
 
               <div className="p-6 rounded-xl bg-gradient-to-r from-blue-dark/30 to-blue/20 border border-blue/30 mb-8">
                 <p className="text-lg text-center">
+                  This "Value-First" approach led to a legendary launch: a{" "}
                   <span className="text-blue-light font-bold">20x return</span> off the initial whitelist price of 0.025 SOL — 
                   <span className="text-blue-light font-bold"> minted out in just 15 hours</span>
                 </p>
               </div>
+
+              <p className="text-muted-foreground text-center mb-8">
+                Today, the project continues to operate on a 50/50 split—half of the mint funds were returned directly 
+                to community initiatives, while the other half is actively traded to ensure the project remains capitalized 
+                and aggressive in the market.
+              </p>
 
               <div className="flex justify-center">
                 <Link to="/team">
@@ -324,7 +347,7 @@ const About = () => {
         <div 
           className="absolute inset-0 opacity-5"
           style={{
-            background: "linear-gradient(180deg, transparent, #7a18d1 50%, transparent)",
+            background: "linear-gradient(180deg, transparent, #1d4ed8 50%, transparent)",
           }}
         />
         <div className="max-w-5xl mx-auto relative z-10">
@@ -340,11 +363,21 @@ const About = () => {
             <p className="text-lg text-blue-light mt-2">Passive Income, Professionally Managed.</p>
           </div>
 
+          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+            Sol City is the evolution of the SolGods vision. It is a hybrid investment vehicle that turns 
+            NFT holders into participants in a global liquidity engine.
+          </p>
+
           {/* Portal to Sol City */}
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-12">
             <h3 className="text-2xl font-bold mb-6 text-center">The Portal to Sol City</h3>
             <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-              Seeking to expand the reach of the Sol Core, CreatorX used his divine energy to rip a hole through space-time, discovering a planet long forgotten—a world of desolation and ruin. There, he found ten mysterious creature types living in constant, violent chaos. Rather than conquering them, the SolGods united them. They channeled their elemental powers to revive the planet, building a shimmering metropolis: <span className="text-blue-light font-bold">Sol City</span>. This city now serves as the "Workforce of the Gods," a bustling economy that generates the resources and liquidity needed to fund the SolGods' further adventures across the multiverse.
+              Seeking to expand the reach of the Sol Core, CreatorX used his divine energy to rip a hole through space-time, 
+              discovering a planet long forgotten—a world of desolation and ruin. There, he found ten mysterious creature types 
+              living in constant, violent chaos. Rather than conquering them, the SolGods united them. They channeled their 
+              elemental powers to revive the planet, building a shimmering metropolis: <span className="text-blue-light font-bold">Sol City</span>. 
+              This city now serves as the "Workforce of the Gods," a bustling economy that generates the resources and liquidity 
+              needed to fund the SolGods' further adventures across the multiverse.
             </p>
             <div className="flex justify-center">
               <Link to="/solcity">
@@ -357,6 +390,7 @@ const About = () => {
           </GlowCard>
 
           {/* How Engine Works */}
+          <h3 className="text-2xl font-bold mb-8 text-center">How the Engine Works</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <EngineStep 
               number="1"
@@ -366,17 +400,17 @@ const About = () => {
             <EngineStep 
               number="2"
               title="Engine Generates Profit"
-              description="Pooled funds are actively invested and traded to generate profits."
+              description="Pooled funds are actively invested and traded to generate profits from trading and liquidity pools."
             />
             <EngineStep 
               number="3"
               title="Quarterly Airdrops"
-              description="Profits are regularly distributed back to all NFT holders."
+              description="Profits are regularly distributed back to all NFT holders as a quarterly airdrop—your reward."
             />
             <EngineStep 
               number="4"
               title="Self-Growing"
-              description="A portion is reinvested, increasing capital for larger future rewards."
+              description="A portion of profits is automatically reinvested, increasing capital for larger future rewards."
             />
           </div>
 
@@ -386,7 +420,7 @@ const About = () => {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center p-6 rounded-xl bg-blue/10">
                 <Shield className="text-blue-light mx-auto mb-3" size={32} />
-                <h4 className="font-bold mb-2">No Active Management</h4>
+                <h4 className="font-bold mb-2">No Active Management Required</h4>
                 <p className="text-sm text-muted-foreground">You hold the NFT; the team handles the rest.</p>
               </div>
               <div className="text-center p-6 rounded-xl bg-blue/10">
@@ -397,7 +431,7 @@ const About = () => {
               <div className="text-center p-6 rounded-xl bg-blue/10">
                 <TrendingUp className="text-blue-light mx-auto mb-3" size={32} />
                 <h4 className="font-bold mb-2">Compound Interest</h4>
-                <p className="text-sm text-muted-foreground">Your stake becomes more powerful the longer you hold.</p>
+                <p className="text-sm text-muted-foreground">Your stake becomes more powerful the longer you hold and the fund grows.</p>
               </div>
             </div>
           </div>
@@ -418,6 +452,10 @@ const About = () => {
             <p className="text-xl text-muted-foreground">Web2 & Web3 Integration — Bridging the Gap</p>
           </div>
 
+          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+            SolGods is designed to be a "Sticky" ecosystem. We are building for the long term through:
+          </p>
+
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <GlowCard glowColor="blue" customSize className="w-full h-auto">
               <Coins className="text-blue-light mb-4" size={32} />
@@ -437,7 +475,7 @@ const About = () => {
               <Globe className="text-blue-light mb-4" size={32} />
               <h3 className="text-xl font-bold mb-3">Web2 Outreach</h3>
               <p className="text-muted-foreground text-sm">
-                Creating educational content and "Trad-Fi" bridges that allow non-crypto natives to understand and benefit from the Sol City Engine.
+                Creating educational content and "Trad-Fi" (Traditional Finance) bridges that allow non-crypto natives to understand and benefit from the Sol City Engine.
               </p>
             </GlowCard>
           </div>
