@@ -457,13 +457,13 @@ export default function PlasmaHero({
       {/* Neural Network Background */}
       <NeuralNetworkCanvas className="absolute inset-0 z-0" />
 
-      {/* Plasma WebGL mount */}
-      <div ref={mountRef} className="absolute inset-0 z-10" />
+      {/* Plasma WebGL mount - lowered */}
+      <div ref={mountRef} className="absolute inset-0 top-20 z-10" />
 
 
       {/* Character images inside the ball - cycling with crossfade */}
       <div 
-        className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
+        className={`absolute inset-0 top-20 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
           showCharacter ? 'opacity-100' : 'opacity-0'
         }`}
         style={{ zIndex: 15 }}
