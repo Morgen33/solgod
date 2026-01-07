@@ -100,21 +100,26 @@ export function ShootingStars({ className = '' }: ShootingStarsProps) {
       };
     };
 
-    const spawnStar = () => {
-      starsRef.current.push(createStar());
+    const timeoutsRef: number[] = [];
+
+    const spawnOne = () => {
+      // Hard guarantee: never more than one active star
+      starsRef.current = [createStar()];
     };
 
     const scheduleNext = () => {
-      const baseInterval = 3000; // Fixed 3 seconds
-      setTimeout(() => {
-        if (starsRef.current.length < 1) {
-          spawnStar();
+      const t = window.setTimeout(() => {
+        // Only spawn if none currently visible
+        if (starsRef.current.length === 0) {
+          spawnOne();
         }
         scheduleNext();
-      }, baseInterval);
+      }, 3000);
+      timeoutsRef.push(t);
     };
 
-    setTimeout(() => spawnStar(), 500);
+    // Start quickly, then settle into the 3s rhythm
+    spawnOne();
     scheduleNext();
 
     let startTime = performance.now();
@@ -245,6 +250,7 @@ export function ShootingStars({ className = '' }: ShootingStarsProps) {
 
     return () => {
       window.removeEventListener('resize', resize);
+      timeoutsRef.forEach((t) => clearTimeout(t));
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
