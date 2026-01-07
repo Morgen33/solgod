@@ -123,10 +123,10 @@ const Index = () => {
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 
-            className="text-4xl sm:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent"
+            className="text-4xl sm:text-5xl font-bold text-center mb-4"
             style={{
-              backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
-              backgroundSize: "200% 100%",
+              color: "#02093f",
+              textShadow: "0 0 40px rgba(102, 180, 255, 0.6), 0 0 80px rgba(102, 180, 255, 0.4), 0 0 120px rgba(102, 180, 255, 0.2)"
             }}
           >
             WHY SOL GODS
