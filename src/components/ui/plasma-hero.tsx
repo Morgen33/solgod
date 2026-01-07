@@ -103,6 +103,7 @@ export default function PlasmaHero({
 }) {
   const mountRef = useRef<HTMLDivElement | null>(null);
   const [showContent, setShowContent] = useState(false);
+  const [showCharacter, setShowCharacter] = useState(false);
 
   useEffect(() => {
     const mount = mountRef.current;
@@ -355,6 +356,8 @@ export default function PlasmaHero({
           camera.position.z = introConfig.endZ;
           mainGroup.scale.setScalar(introConfig.endScale);
           setShowContent(true);
+          // Delay character fade-in until orb is fully formed
+          setTimeout(() => setShowCharacter(true), 500);
         }
         mainGroup.rotation.x += params.rotationSpeedX;
         mainGroup.rotation.y += params.rotationSpeedY;
@@ -411,8 +414,8 @@ export default function PlasmaHero({
 
       {/* Character image inside the ball */}
       <div 
-        className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-all duration-[2000ms] ease-out ${
-          showContent ? 'opacity-20 scale-100' : 'opacity-0 scale-90'
+        className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
+          showCharacter ? 'opacity-20' : 'opacity-0'
         }`}
         style={{ zIndex: 15 }}
       >
