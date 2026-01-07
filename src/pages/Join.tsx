@@ -53,13 +53,13 @@ const Join = () => {
             <p className="text-xl text-muted-foreground">New here? This is where it starts.</p>
           </div>
 
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-10 mb-8">
+          <GlowCard glowColor="purple" customSize className="w-full h-auto p-6 sm:p-8 mb-8">
             {/* Starter Gods Showcase */}
-            <div className="grid grid-cols-5 gap-3 mb-8">
+            <div className="grid grid-cols-5 gap-3">
               {starterGods.map((img, index) => (
                 <div 
                   key={index} 
-                  className="aspect-square rounded-xl overflow-hidden border border-primary/20 hover:border-primary/50 transition-colors"
+                  className="aspect-square rounded-xl overflow-hidden border border-primary/20 hover:border-primary/50 transition-all hover:scale-105"
                 >
                   <img 
                     src={img} 
@@ -69,13 +69,17 @@ const Join = () => {
                 </div>
               ))}
             </div>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+          </GlowCard>
+
+          {/* Text content outside the card */}
+          <div className="space-y-6">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Not everyone walks in holding a Genesis SolGod — and that's the point.
               Starter SolGods are your entry into the culture. A way to step into the community, get familiar with how we move, and see if this world fits you.
             </p>
 
-            <h3 className="text-2xl font-bold mb-6 text-foreground">What Starter SolGods are for</h3>
-            <div className="space-y-4 mb-8">
+            <h3 className="text-2xl font-bold text-foreground">What Starter SolGods are for</h3>
+            <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="p-2 rounded-lg bg-primary/10 shrink-0">
                   <MessageCircle className="w-5 h-5 text-primary" />
@@ -96,8 +100,8 @@ const Join = () => {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold mb-6 text-foreground">How it works</h3>
-            <div className="space-y-4 mb-8">
+            <h3 className="text-2xl font-bold text-foreground">How it works</h3>
+            <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                   <span className="text-primary font-bold text-sm">1</span>
@@ -118,31 +122,33 @@ const Join = () => {
               </div>
             </div>
 
-            <p className="text-muted-foreground mb-6 italic">
+            <p className="text-muted-foreground italic">
               Starter SolGods are intentionally uniform — same energy, same visual language — so the timeline stays clean and recognizable while you're finding your place.
             </p>
 
-            <div className="border-l-4 border-primary/50 pl-6 py-2 mb-8">
+            <div className="border-l-4 border-primary/50 pl-6 py-2">
               <p className="text-foreground font-medium">This isn't about flexing.</p>
               <p className="text-foreground font-medium">It's about alignment.</p>
             </div>
 
-            <p className="text-lg text-foreground mb-2">
-              <span className="text-primary font-bold">Starter today.</span>
-            </p>
-            <p className="text-lg text-foreground mb-6">
-              <span className="text-muted-foreground">Genesis when you're ready.</span>
-            </p>
+            <div>
+              <p className="text-lg text-foreground">
+                <span className="text-primary font-bold">Starter today.</span>
+              </p>
+              <p className="text-lg text-foreground">
+                <span className="text-muted-foreground">Genesis when you're ready.</span>
+              </p>
+            </div>
 
-            <p className="text-muted-foreground mb-8">Wear it right. Move with purpose.</p>
+            <p className="text-muted-foreground">Wear it right. Move with purpose.</p>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center pt-4">
               <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
                 Get Your Starter SolGod
                 <ArrowRight size={20} />
               </ShinyButton>
             </div>
-          </GlowCard>
+          </div>
         </div>
       </section>
 
