@@ -104,6 +104,7 @@ export default function PlasmaHero({
   const mountRef = useRef<HTMLDivElement | null>(null);
   const [showContent, setShowContent] = useState(false);
   const [showCharacter, setShowCharacter] = useState(false);
+  const [characterScale, setCharacterScale] = useState(1);
 
   useEffect(() => {
     const mount = mountRef.current;
@@ -367,6 +368,12 @@ export default function PlasmaHero({
       pMat.uniforms.uTime.value = t;
       plasmaMesh.rotation.y = t * 0.08;
 
+      // Sync character scale with camera distance
+      const baseZ = introConfig.endZ;
+      const currentZ = camera.position.z;
+      const scale = baseZ / currentZ;
+      setCharacterScale(Math.max(0.3, Math.min(2.5, scale)));
+
       controls.update();
       renderer.render(scene, camera);
       raf = requestAnimationFrame(animate);
@@ -422,8 +429,9 @@ export default function PlasmaHero({
         <img 
           src={gnomieHero} 
           alt="SolGod" 
-          className="w-[55vmin] h-auto max-w-[450px] object-contain mix-blend-screen"
+          className="w-[55vmin] h-auto max-w-[450px] object-contain mix-blend-screen transition-transform duration-100"
           style={{
+            transform: `scale(${characterScale})`,
             filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
           }}
         />
