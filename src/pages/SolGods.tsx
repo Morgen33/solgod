@@ -9,6 +9,18 @@ import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 
+const iconContainerStyle = {
+  backgroundColor: "rgba(255, 255, 255, 0.1)",
+  boxShadow: "0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)"
+};
+
+const iconStyle = {
+  color: "#ffffff",
+  filter: "drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))"
+};
+
+const subtitleColor = "#01b2ff";
+
 export default function SolGods() {
   return (
     <Layout>
@@ -61,11 +73,11 @@ export default function SolGods() {
           {/* Staking & Rewards */}
           <GlowCard glowColor="blue" customSize className="w-full h-auto">
             <div className="flex gap-4">
-              <div className="p-3 rounded-xl bg-blue/20 h-fit">
-                <Zap className="text-blue-light" size={28} />
+              <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
+                <Zap style={iconStyle} size={28} />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">Staking & Rewards</h3>
+                <h3 className="text-xl font-bold mb-2" style={{ color: subtitleColor }}>Staking & Rewards</h3>
                 <p className="text-muted-foreground">
                   Don't just hold—ascend. You can stake your SolGods to secure your place in the ecosystem. Staking isn't just about commitment; it's the primary way to power up your assets and gain access to exclusive rewards and future distributions from the Sol City economy.
                 </p>
@@ -76,11 +88,11 @@ export default function SolGods() {
           {/* The Collection: 140+ Traits */}
           <GlowCard glowColor="blue" customSize className="w-full h-auto">
             <div className="flex gap-4">
-              <div className="p-3 rounded-xl bg-blue/20 h-fit">
-                <Palette className="text-blue-light" size={28} />
+              <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
+                <Palette style={iconStyle} size={28} />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">The Collection: 140+ Traits</h3>
+                <h3 className="text-xl font-bold mb-2" style={{ color: subtitleColor }}>The Collection: 140+ Traits</h3>
                 <p className="text-muted-foreground">
                   Every SolGod is a unique masterpiece of generative art. With 141 uniquely crafted traits across both male and female characters—including custom armor, elemental skins, legendary weapons, and nostalgic relics—your SolGod is a distinct digital identity built to reflect forces of creation and destruction.
                 </p>
@@ -89,23 +101,23 @@ export default function SolGods() {
           </GlowCard>
 
           {/* The Elite: Ten Legendary 1/1s */}
-          <GlowCard glowColor="purple" customSize className="w-full h-auto">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto">
             <div className="flex gap-4">
-              <div className="p-3 rounded-xl bg-purple/20 h-fit">
-                <Trophy className="text-purple-light" size={28} />
+              <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
+                <Trophy style={iconStyle} size={28} />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">The Elite: Ten Legendary 1/1s</h3>
+                <h3 className="text-xl font-bold mb-2" style={{ color: subtitleColor }}>The Elite: Ten Legendary 1/1s</h3>
                 <p className="text-muted-foreground mb-4">
                   Among the 3,333 deities, there exist ten Mythical 1/1s. These are the pinnacle of rarity within the collection, featuring entirely custom designs that represent the highest tier of the Solara mythos:
                 </p>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="text-purple-light font-bold">•</span>
+                    <span style={{ color: subtitleColor }} className="font-bold">•</span>
                     <span><strong className="text-foreground">6 Community 1/1s:</strong> Unique legends owned and celebrated by our most dedicated holders.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-purple-light font-bold">•</span>
+                    <span style={{ color: subtitleColor }} className="font-bold">•</span>
                     <span><strong className="text-foreground">4 Team 1/1s:</strong> Exclusive avatars representing the architects and founders of the Solara universe.</span>
                   </li>
                 </ul>
@@ -116,11 +128,11 @@ export default function SolGods() {
           {/* Starter Gods */}
           <GlowCard glowColor="blue" customSize className="w-full h-auto">
             <div className="flex gap-4">
-              <div className="p-3 rounded-xl bg-blue/20 h-fit">
-                <Sprout className="text-blue-light" size={28} />
+              <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
+                <Sprout style={iconStyle} size={28} />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">Starter Gods</h3>
+                <h3 className="text-xl font-bold mb-2" style={{ color: subtitleColor }}>Starter Gods</h3>
                 <p className="text-muted-foreground">
                   New to the ascension? Our Starter Gods provide an accessible entry point into the universe, ensuring that everyone has the opportunity to begin their journey, participate in the community, and eventually grow into the full power of the Sol Core.
                 </p>
@@ -131,25 +143,25 @@ export default function SolGods() {
           {/* Governance: The 5 DAOs Within */}
           <GlowCard glowColor="blue" customSize className="w-full h-auto">
             <div className="flex gap-4">
-              <div className="p-3 rounded-xl bg-blue/20 h-fit">
-                <Building className="text-blue-light" size={28} />
+              <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
+                <Building style={iconStyle} size={28} />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">Governance: The 5 DAOs Within</h3>
+                <h3 className="text-xl font-bold mb-2" style={{ color: subtitleColor }}>Governance: The 5 DAOs Within</h3>
                 <p className="text-muted-foreground mb-4">
                   We believe in a decentralized future. The ecosystem is structured into 5 distinct DAOs (Decentralized Autonomous Organizations), allowing for:
                 </p>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-light font-bold">•</span>
+                    <span style={{ color: subtitleColor }} className="font-bold">•</span>
                     <span><strong className="text-foreground">Specialized Governance:</strong> Different arms of the project are managed by focused community groups.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-light font-bold">•</span>
+                    <span style={{ color: subtitleColor }} className="font-bold">•</span>
                     <span><strong className="text-foreground">Active Proposals:</strong> Holders have a direct say in treasury spend, upcoming portals, and ecosystem expansions. (Within the DAOs)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-light font-bold">•</span>
+                    <span style={{ color: subtitleColor }} className="font-bold">•</span>
                     <span><strong className="text-foreground">Community Sovereignty:</strong> Decisions are made by the gods, for the gods.</span>
                   </li>
                 </ul>
@@ -184,11 +196,11 @@ export default function SolGods() {
             {/* How to Filter by Traits */}
             <GlowCard glowColor="blue" customSize className="w-full h-auto">
               <div className="flex gap-4">
-                <div className="p-3 rounded-xl bg-blue/20 h-fit">
-                  <Search className="text-blue-light" size={28} />
+                <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
+                  <Search style={iconStyle} size={28} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-4 text-foreground">How to Filter by Traits (Buying)</h3>
+                  <h3 className="text-xl font-bold mb-4" style={{ color: subtitleColor }}>How to Filter by Traits (Buying)</h3>
                   <p className="text-muted-foreground mb-4">
                     If you are looking for a specific aesthetic, such as the Sword of Solaris or a Blood Crown, follow these steps:
                   </p>
@@ -211,21 +223,21 @@ export default function SolGods() {
             {/* Trait Analytics & Market Research */}
             <GlowCard glowColor="blue" customSize className="w-full h-auto">
               <div className="flex gap-4">
-                <div className="p-3 rounded-xl bg-blue/20 h-fit">
-                  <BarChart3 className="text-blue-light" size={28} />
+                <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
+                  <BarChart3 style={iconStyle} size={28} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-4 text-foreground">Trait Analytics & Market Research</h3>
+                  <h3 className="text-xl font-bold mb-4" style={{ color: subtitleColor }}>Trait Analytics & Market Research</h3>
                   <p className="text-muted-foreground mb-4">
                     To see the collection from a statistical perspective and find the rarest attributes:
                   </p>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-light font-bold">1.</span>
+                      <span style={{ color: subtitleColor }} className="font-bold">1.</span>
                       <span><strong className="text-foreground">Analytics Tab:</strong> Click the Analytics tab next to "Items" on the collection page.</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-light font-bold">2.</span>
+                      <span style={{ color: subtitleColor }} className="font-bold">2.</span>
                       <span><strong className="text-foreground">Attributes Sub-tab:</strong> View a full table of every trait in the collection.</span>
                     </li>
                   </ul>
@@ -236,24 +248,24 @@ export default function SolGods() {
 
           {/* Summary Checklist */}
           <div className="mt-8">
-            <GlowCard glowColor="purple" customSize className="w-full h-auto">
+            <GlowCard glowColor="blue" customSize className="w-full h-auto">
               <div className="flex gap-4">
-                <div className="p-3 rounded-xl bg-purple/20 h-fit">
-                  <CheckSquare className="text-purple-light" size={28} />
+                <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
+                  <CheckSquare style={iconStyle} size={28} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-4 text-foreground">Summary Checklist</h3>
+                  <h3 className="text-xl font-bold mb-4" style={{ color: subtitleColor }}>Summary Checklist</h3>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-light font-bold">✓</span>
+                      <span style={{ color: subtitleColor }} className="font-bold">✓</span>
                       <span><strong className="text-foreground">To find a specific look:</strong> Use the Filter Sidebar (Funnel icon).</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-light font-bold">✓</span>
+                      <span style={{ color: subtitleColor }} className="font-bold">✓</span>
                       <span><strong className="text-foreground">To find underpriced rares:</strong> Filter by rare traits and sort by price.</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-light font-bold">✓</span>
+                      <span style={{ color: subtitleColor }} className="font-bold">✓</span>
                       <span><strong className="text-foreground">To study the market:</strong> Use the Analytics Tab to see which traits are holding value.</span>
                     </li>
                   </ul>
