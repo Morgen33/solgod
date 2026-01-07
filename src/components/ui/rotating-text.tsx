@@ -15,8 +15,8 @@ const getGradient = (word: string) => {
     // Icy blue-white gradient
     return "linear-gradient(90deg, #ffffff, #e0f4ff, #a8d8ff, #70c4ff, #a8d8ff, #e0f4ff, #ffffff)";
   }
-  // Purple branding gradient
-  return "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #4f0c9b)";
+  // Blue branding gradient
+  return "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #1e3a8a)";
 };
 
 export const RotatingText = () => {

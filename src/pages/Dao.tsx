@@ -25,7 +25,7 @@ const Dao = () => {
           <h1 
             className="text-5xl sm:text-7xl font-bold mb-4 text-center bg-clip-text text-transparent animate-gradient-flow"
             style={{
-              backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #a463dd, #d0a7f0)",
+              backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
               backgroundSize: "200% 100%",
             }}
           >
@@ -43,12 +43,12 @@ const Dao = () => {
           <SectionIcon />
           <h2 
             className="text-4xl sm:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent"
-            style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+            style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
           >
             What is an NFT DAO?
           </h2>
           
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12 mb-8">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-8">
             <p className="text-lg text-muted-foreground text-center mb-8">
               Think of an NFT DAO as a digital city-state where the "citizens" (you, the holders) are the bosses. 
               Instead of a traditional company with a CEO making all the calls, a DAO uses blockchain technology 
@@ -56,18 +56,18 @@ const Dao = () => {
             </p>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center p-6 rounded-xl bg-purple/10">
-                <Users className="text-purple-light mx-auto mb-3" size={32} />
+              <div className="text-center p-6 rounded-xl bg-blue/10">
+                <Users className="text-blue-light mx-auto mb-3" size={32} />
                 <h4 className="font-bold mb-2">Decentralized</h4>
                 <p className="text-sm text-muted-foreground">We grow together.</p>
               </div>
-              <div className="text-center p-6 rounded-xl bg-purple/10">
-                <Shield className="text-purple-light mx-auto mb-3" size={32} />
+              <div className="text-center p-6 rounded-xl bg-blue/10">
+                <Shield className="text-blue-light mx-auto mb-3" size={32} />
                 <h4 className="font-bold mb-2">Autonomous</h4>
                 <p className="text-sm text-muted-foreground">Rules are set in code, ensuring fairness for every God.</p>
               </div>
-              <div className="text-center p-6 rounded-xl bg-purple/10">
-                <Crown className="text-purple-light mx-auto mb-3" size={32} />
+              <div className="text-center p-6 rounded-xl bg-blue/10">
+                <Crown className="text-blue-light mx-auto mb-3" size={32} />
                 <h4 className="font-bold mb-2">Organization</h4>
                 <p className="text-sm text-muted-foreground">Your Sol Gods NFT acts as your "Governance Token"—it's your voting chip, your membership card.</p>
               </div>
@@ -82,7 +82,7 @@ const Dao = () => {
           <SectionIcon />
           <h2 
             className="text-4xl sm:text-5xl font-bold mb-4 text-center bg-clip-text text-transparent"
-            style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+            style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
           >
             The Divine Circles
           </h2>
@@ -92,10 +92,10 @@ const Dao = () => {
           </p>
           
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold mb-4 text-purple-light">Current DAOs Open:</h3>
+            <h3 className="text-2xl font-bold mb-4 text-blue-light">Current DAOs Open:</h3>
             <div className="flex flex-wrap justify-center gap-4">
               {["Wizard Cabal", "Wings SG DAO", "Mafia DAO", "Do Good DAO", "Pantheon Circle"].map((dao) => (
-                <span key={dao} className="px-4 py-2 rounded-full bg-purple/20 border border-purple/30 text-sm font-medium">
+                <span key={dao} className="px-4 py-2 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
                   {dao}
                 </span>
               ))}
@@ -107,7 +107,7 @@ const Dao = () => {
       {/* Wizard Cabal */}
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto">
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
               <img src={wizardCabalLogo} alt="Wizard Cabal" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">The Wizard Cabal</h3>
@@ -132,7 +132,7 @@ const Dao = () => {
               </p>
             </div>
             
-            <h4 className="font-bold mb-4 text-purple-light">Wizard Cabal Powers</h4>
+            <h4 className="font-bold mb-4 text-blue-light">Wizard Cabal Powers</h4>
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               <PowerCard title="Oracle of the Whitelist" description="Be the first to receive hidden whitelist alpha, with the choice to share it with the Cabal or guard it for yourself." />
               <PowerCard title="Exile of Five" description="Banish up to 5 members from the chamber for one cycle, stripping them of their vote and challenge rights." />
@@ -144,7 +144,7 @@ const Dao = () => {
             
             <p className="text-sm text-muted-foreground">
               <span className="font-medium">Wizard Cabal Founder:</span>{" "}
-              <a href="https://x.com/Axe" target="_blank" rel="noopener noreferrer" className="text-purple-light hover:underline">@Axe</a>
+              <a href="https://x.com/Axe" target="_blank" rel="noopener noreferrer" className="text-blue-light hover:underline">@Axe</a>
             </p>
           </GlowCard>
         </div>
@@ -153,13 +153,13 @@ const Dao = () => {
       {/* Wings DAO */}
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto">
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
               <img src={wingsDaoLogo} alt="Wings DAO" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">Wings DAO</h3>
             </div>
             
-            <p className="text-lg text-purple-light font-medium mb-4">Elevate Your Sol God!</p>
+            <p className="text-lg text-blue-light font-medium mb-4">Elevate Your Sol God!</p>
             <p className="text-muted-foreground mb-6">
               The Wings DAO is the exclusive strategic hub for holders of Sol Gods NFTs with the rare Wings trait, 
               along with specific accessories. We focus on collective market elevation and building an elite, tight-knit community.

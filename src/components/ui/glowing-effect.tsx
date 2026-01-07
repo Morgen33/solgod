@@ -148,14 +148,14 @@ const GlowingEffect = memo(
                   )`
                 : `conic-gradient(
                     from calc(var(--start) * 1deg),
-                    #d0a7f0,
-                    #a463dd,
-                    #7a18d1,
+                    #93c5fd,
+                    #3b82f6,
+                    #1d4ed8,
                     transparent 25%,
                     transparent 75%,
-                    #7a18d1,
-                    #a463dd,
-                    #d0a7f0
+                    #1d4ed8,
+                    #3b82f6,
+                    #93c5fd
                   )`,
           } as React.CSSProperties
         }
