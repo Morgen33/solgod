@@ -314,9 +314,38 @@ const Dao = () => {
               This has a real impact, backed by digital identity, proving that Web3 communities can drive change offline, not just trade JPEGs.
             </p>
             
-            <p className="text-sm text-muted-foreground mb-4">
-              <span className="font-medium">The DAO is led by:</span> @eddie, @KMAC, @Auskyn
-            </p>
+            <div className="mb-4">
+              <span className="text-sm text-muted-foreground font-medium">The DAO is led by:</span>
+              <div className="flex flex-wrap gap-3 mt-3">
+                <a 
+                  href="https://x.com/eddieisfine" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
+                >
+                  @eddie
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <a 
+                  href="https://x.com/kmacmetax" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
+                >
+                  @KMAC
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <a 
+                  href="https://x.com/auskyn" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
+                >
+                  @Auskyn
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
             
             <p className="text-blue-light font-medium">Ready to be part of something meaningful? Open a ticket and let's get you onboarded.</p>
           </GlowCard>
