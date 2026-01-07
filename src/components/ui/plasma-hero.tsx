@@ -5,22 +5,24 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import NeuralNetworkCanvas from "./neural-network-canvas";
 import { HoverButton } from "./hover-glow-button";
-import antlerHero from "@/assets/heroes/antler.png";
-import demonHero from "@/assets/heroes/demon.png";
-import bastetHero from "@/assets/heroes/bastet.png";
-import cyborgHero from "@/assets/heroes/cyborg.png";
-import gothicHero from "@/assets/heroes/gothic.png";
-import frostHero from "@/assets/heroes/frost.png";
-import cosmicHero from "@/assets/heroes/cosmic.png";
+import marcusHero from "@/assets/heroes/marcus.png";
+import athenaHero from "@/assets/heroes/athena.png";
+import crimsonHero from "@/assets/heroes/crimson.png";
+import skullKingHero from "@/assets/heroes/skull-king.png";
+import darkQueenHero from "@/assets/heroes/dark-queen.png";
+import bastetNewHero from "@/assets/heroes/bastet-new.png";
+import oniHero from "@/assets/heroes/oni.png";
+import cosmicKingHero from "@/assets/heroes/cosmic-king.png";
 
 const heroImages = [
-  antlerHero,
-  bastetHero,
-  demonHero,
-  cyborgHero,
-  gothicHero,
-  frostHero,
-  cosmicHero,
+  marcusHero,
+  athenaHero,
+  crimsonHero,
+  skullKingHero,
+  darkQueenHero,
+  bastetNewHero,
+  oniHero,
+  cosmicKingHero,
 ];
 
 // --- CONFIGURATION ---
