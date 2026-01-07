@@ -71,84 +71,86 @@ const Join = () => {
             </div>
           </GlowCard>
 
-          {/* Text content outside the card */}
-          <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Not everyone walks in holding a Genesis SolGod — and that's the point.
-              Starter SolGods are your entry into the culture. A way to step into the community, get familiar with how we move, and see if this world fits you.
-            </p>
-
-            <h3 className="text-2xl font-bold text-foreground">What Starter SolGods are for</h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="p-2 rounded-lg bg-primary/10 shrink-0">
-                  <MessageCircle className="w-5 h-5 text-primary" />
-                </div>
-                <p className="text-muted-foreground">Join the Discord and get involved without pressure</p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="p-2 rounded-lg bg-primary/10 shrink-0">
-                  <Eye className="w-5 h-5 text-primary" />
-                </div>
-                <p className="text-muted-foreground">Rep the SolGods look while you learn the ecosystem</p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="p-2 rounded-lg bg-primary/10 shrink-0">
-                  <Users className="w-5 h-5 text-primary" />
-                </div>
-                <p className="text-muted-foreground">Connect with the community before committing to a Genesis God</p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-bold text-foreground">How it works</h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                  <span className="text-primary font-bold text-sm">1</span>
-                </div>
-                <p className="text-muted-foreground">Pick a Starter SolGod that fits your vibe</p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                  <span className="text-primary font-bold text-sm">2</span>
-                </div>
-                <p className="text-muted-foreground">Set it as your X profile picture</p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                  <span className="text-primary font-bold text-sm">3</span>
-                </div>
-                <p className="text-muted-foreground">Jump into Discord and start engaging</p>
-              </div>
-            </div>
-
-            <p className="text-muted-foreground italic">
-              Starter SolGods are intentionally uniform — same energy, same visual language — so the timeline stays clean and recognizable while you're finding your place.
-            </p>
-
-            <div className="border-l-4 border-primary/50 pl-6 py-2">
-              <p className="text-foreground font-medium">This isn't about flexing.</p>
-              <p className="text-foreground font-medium">It's about alignment.</p>
-            </div>
-
-            <div>
-              <p className="text-lg text-foreground">
-                <span className="text-primary font-bold">Starter today.</span>
+          {/* Text content in card */}
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-6 sm:p-8">
+            <div className="space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Not everyone walks in holding a Genesis SolGod — and that's the point.
+                Starter SolGods are your entry into the culture. A way to step into the community, get familiar with how we move, and see if this world fits you.
               </p>
-              <p className="text-lg text-foreground">
-                <span className="text-muted-foreground">Genesis when you're ready.</span>
+
+              <h3 className="text-2xl font-bold text-foreground">What Starter SolGods are for</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="p-2 rounded-lg bg-primary/10 shrink-0">
+                    <MessageCircle className="w-5 h-5 text-primary" />
+                  </div>
+                  <p className="text-muted-foreground">Join the Discord and get involved without pressure</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="p-2 rounded-lg bg-primary/10 shrink-0">
+                    <Eye className="w-5 h-5 text-primary" />
+                  </div>
+                  <p className="text-muted-foreground">Rep the SolGods look while you learn the ecosystem</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="p-2 rounded-lg bg-primary/10 shrink-0">
+                    <Users className="w-5 h-5 text-primary" />
+                  </div>
+                  <p className="text-muted-foreground">Connect with the community before committing to a Genesis God</p>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold text-foreground">How it works</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                    <span className="text-primary font-bold text-sm">1</span>
+                  </div>
+                  <p className="text-muted-foreground">Pick a Starter SolGod that fits your vibe</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                    <span className="text-primary font-bold text-sm">2</span>
+                  </div>
+                  <p className="text-muted-foreground">Set it as your X profile picture</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                    <span className="text-primary font-bold text-sm">3</span>
+                  </div>
+                  <p className="text-muted-foreground">Jump into Discord and start engaging</p>
+                </div>
+              </div>
+
+              <p className="text-muted-foreground italic">
+                Starter SolGods are intentionally uniform — same energy, same visual language — so the timeline stays clean and recognizable while you're finding your place.
               </p>
-            </div>
 
-            <p className="text-muted-foreground">Wear it right. Move with purpose.</p>
+              <div className="border-l-4 border-primary/50 pl-6 py-2">
+                <p className="text-foreground font-medium">This isn't about flexing.</p>
+                <p className="text-foreground font-medium">It's about alignment.</p>
+              </div>
 
-            <div className="flex justify-center pt-4">
-              <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
-                Get Your Starter SolGod
-                <ArrowRight size={20} />
-              </ShinyButton>
+              <div>
+                <p className="text-lg text-foreground">
+                  <span className="text-primary font-bold">Starter today.</span>
+                </p>
+                <p className="text-lg text-foreground">
+                  <span className="text-muted-foreground">Genesis when you're ready.</span>
+                </p>
+              </div>
+
+              <p className="text-muted-foreground">Wear it right. Move with purpose.</p>
+
+              <div className="flex justify-center pt-4">
+                <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
+                  Get Your Starter SolGod
+                  <ArrowRight size={20} />
+                </ShinyButton>
+              </div>
             </div>
-          </div>
+          </GlowCard>
         </div>
       </section>
 
