@@ -106,7 +106,7 @@ const TEAM: TeamGroup[] = [
   },
   {
     role: "Developers",
-    members: [{ name: "Morgen" }, { name: "DevKid", tags: ["Jr"] }],
+    members: [{ name: "Morgen" }],
   },
 ];
 
