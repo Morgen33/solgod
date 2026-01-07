@@ -2,68 +2,12 @@ import { Seo } from "@/components/Seo";
 import { Layout } from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { 
-  Flame, Users, TrendingUp, Sparkles, Crown, 
-  ArrowRight, Coins, Zap, Star, Shield
+  Zap, Palette, Trophy, Sprout, Building, 
+  ArrowRight, Search, BarChart3, CheckSquare
 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
-import solgodsIcon from "@/assets/solgods-icon.png";
-
-// Import faction images
-import flarebornImg from "@/assets/factions/flareborn.avif";
-import tidecallersImg from "@/assets/factions/tidecallers.avif";
-import stormbindersImg from "@/assets/factions/stormbinders.avif";
-import earthshapersImg from "@/assets/factions/earthshapers.avif";
-import nethersoulImg from "@/assets/factions/nethersoul.avif";
-import voidstridersImg from "@/assets/factions/voidstriders.avif";
-import starweaversImg from "@/assets/factions/starweavers.avif";
-import frostwokenImg from "@/assets/factions/frostwoken.avif";
-import dreamforgedImg from "@/assets/factions/dreamforged.avif";
-import myceliadsImg from "@/assets/factions/myceliads.avif";
-
-const factionShowcase = [
-  { name: "Flareborn", image: flarebornImg },
-  { name: "Tidecallers", image: tidecallersImg },
-  { name: "Stormbinders", image: stormbindersImg },
-  { name: "Earthshapers", image: earthshapersImg },
-  { name: "Nethersoul", image: nethersoulImg },
-  { name: "Voidstriders", image: voidstridersImg },
-  { name: "Starweavers", image: starweaversImg },
-  { name: "Frostwoken", image: frostwokenImg },
-  { name: "Dreamforged", image: dreamforgedImg },
-  { name: "Myceliads", image: myceliadsImg },
-];
-
-const stats = [
-  { label: "Total Supply", value: "3,333" },
-  { label: "Celestial Orders", value: "10" },
-  { label: "Unique Traits", value: "140+" },
-  { label: "Launch Price", value: "0.025 SOL" },
-];
-
-const features = [
-  {
-    icon: <Crown size={28} />,
-    title: "Divine Artistry",
-    description: "Hand-crafted by Happy & CreatorX, each SolGod is a unique masterpiece with over 140 traits.",
-  },
-  {
-    icon: <Coins size={28} />,
-    title: "Yield-Bearing",
-    description: "Not just art — your SolGod is a key to the Capital Allocation Engine and quarterly airdrops.",
-  },
-  {
-    icon: <Users size={28} />,
-    title: "Community First",
-    description: "Join a 1,900+ member alpha engine and high-signal intelligence hub.",
-  },
-  {
-    icon: <Shield size={28} />,
-    title: "Managed Treasury",
-    description: "50% of mint deployed into revenue-generating strategies across Forex, Indices, and Crypto.",
-  },
-];
 
 export default function SolGods() {
   return (
@@ -92,131 +36,130 @@ export default function SolGods() {
             className="h-32 sm:h-40 w-auto mx-auto mb-8 animate-fade-in"
           />
           <h1 
-            className="text-5xl sm:text-7xl font-bold mb-6 bg-clip-text text-transparent animate-gradient-flow"
+            className="text-4xl sm:text-6xl font-bold mb-6 bg-clip-text text-transparent animate-gradient-flow"
             style={{
               backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
               backgroundSize: "200% 100%",
             }}
           >
-            THE COLLECTION
+            The SolGods Ecosystem
           </h1>
-          <p className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
-            3,333 Divine Beings. 10 Celestial Orders.
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
+            Owning a SolGod is more than just holding a piece of history—it is your key to a multi-layered ecosystem of utility, governance, and passive growth. From unique artistic rarities to structured community leadership, here is what is available to every SolGod:
           </p>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-            The fusion of digital identity and financial instrument. Each SolGod is a unique, 
-            yield-bearing masterpiece crafted on Solana.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
-              Buy on Magic Eden
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </ShinyButton>
-            <Link to="/about">
-              <ShinyButton>
-                Learn More
-              </ShinyButton>
-            </Link>
-          </div>
+          <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
+            Buy on Magic Eden
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </ShinyButton>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 px-4 relative z-10">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {stats.map((stat) => (
-              <GlowCard key={stat.label} glowColor="blue" customSize className="w-full h-auto text-center p-6">
-                <div className="flex flex-col">
-                  <span className="text-3xl sm:text-4xl font-bold text-blue-light mb-1">{stat.value}</span>
-                  <span className="text-sm text-muted-foreground">{stat.label}</span>
-                </div>
-              </GlowCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Faction Showcase */}
-      <section className="py-24 px-4 relative z-10 overflow-hidden">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <img src={solgodsIcon} alt="SolGods" className="h-20 w-auto mx-auto mb-6 opacity-80" />
-            <h2 
-              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
-            >
-              THE CELESTIAL ORDERS
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Ten divine factions, each wielding unique cosmic powers
-            </p>
-          </div>
-
-          {/* Scrolling Showcase */}
-          <div className="relative">
-            <div className="flex gap-6 overflow-x-auto pb-6 scrollbar-thin scrollbar-thumb-blue/30 scrollbar-track-transparent snap-x snap-mandatory">
-              {factionShowcase.map((faction, index) => (
-                <div 
-                  key={faction.name}
-                  className="flex-shrink-0 w-64 snap-center group"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="relative rounded-2xl overflow-hidden aspect-[3/4] mb-4 border border-border group-hover:border-blue/50 transition-all duration-300">
-                    <img 
-                      src={faction.image} 
-                      alt={faction.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <h3 className="font-bold text-lg text-foreground">{faction.name}</h3>
-                    </div>
-                  </div>
-                </div>
-              ))}
+      {/* Ecosystem Features */}
+      <section className="py-16 px-4 relative z-10">
+        <div className="max-w-6xl mx-auto space-y-8">
+          
+          {/* Staking & Rewards */}
+          <GlowCard glowColor="blue" customSize className="w-full h-auto">
+            <div className="flex gap-4">
+              <div className="p-3 rounded-xl bg-blue/20 h-fit">
+                <Zap className="text-blue-light" size={28} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-foreground">Staking & Rewards</h3>
+                <p className="text-muted-foreground">
+                  Don't just hold—ascend. You can stake your SolGods to secure your place in the ecosystem. Staking isn't just about commitment; it's the primary way to power up your assets and gain access to exclusive rewards and future distributions from the Sol City economy.
+                </p>
+              </div>
             </div>
-            {/* Gradient fades */}
-            <div className="absolute left-0 top-0 bottom-6 w-16 bg-gradient-to-r from-background to-transparent pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-6 w-16 bg-gradient-to-l from-background to-transparent pointer-events-none" />
-          </div>
+          </GlowCard>
+
+          {/* The Collection: 140+ Traits */}
+          <GlowCard glowColor="blue" customSize className="w-full h-auto">
+            <div className="flex gap-4">
+              <div className="p-3 rounded-xl bg-blue/20 h-fit">
+                <Palette className="text-blue-light" size={28} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-foreground">The Collection: 140+ Traits</h3>
+                <p className="text-muted-foreground">
+                  Every SolGod is a unique masterpiece of generative art. With 141 uniquely crafted traits across both male and female characters—including custom armor, elemental skins, legendary weapons, and nostalgic relics—your SolGod is a distinct digital identity built to reflect forces of creation and destruction.
+                </p>
+              </div>
+            </div>
+          </GlowCard>
+
+          {/* The Elite: Ten Legendary 1/1s */}
+          <GlowCard glowColor="purple" customSize className="w-full h-auto">
+            <div className="flex gap-4">
+              <div className="p-3 rounded-xl bg-purple/20 h-fit">
+                <Trophy className="text-purple-light" size={28} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-foreground">The Elite: Ten Legendary 1/1s</h3>
+                <p className="text-muted-foreground mb-4">
+                  Among the 3,333 deities, there exist ten Mythical 1/1s. These are the pinnacle of rarity within the collection, featuring entirely custom designs that represent the highest tier of the Solara mythos:
+                </p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-light font-bold">•</span>
+                    <span><strong className="text-foreground">6 Community 1/1s:</strong> Unique legends owned and celebrated by our most dedicated holders.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-light font-bold">•</span>
+                    <span><strong className="text-foreground">4 Team 1/1s:</strong> Exclusive avatars representing the architects and founders of the Solara universe.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </GlowCard>
+
+          {/* Starter Gods */}
+          <GlowCard glowColor="blue" customSize className="w-full h-auto">
+            <div className="flex gap-4">
+              <div className="p-3 rounded-xl bg-blue/20 h-fit">
+                <Sprout className="text-blue-light" size={28} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-foreground">Starter Gods</h3>
+                <p className="text-muted-foreground">
+                  New to the ascension? Our Starter Gods provide an accessible entry point into the universe, ensuring that everyone has the opportunity to begin their journey, participate in the community, and eventually grow into the full power of the Sol Core.
+                </p>
+              </div>
+            </div>
+          </GlowCard>
+
+          {/* Governance: The 5 DAOs Within */}
+          <GlowCard glowColor="blue" customSize className="w-full h-auto">
+            <div className="flex gap-4">
+              <div className="p-3 rounded-xl bg-blue/20 h-fit">
+                <Building className="text-blue-light" size={28} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-foreground">Governance: The 5 DAOs Within</h3>
+                <p className="text-muted-foreground mb-4">
+                  We believe in a decentralized future. The ecosystem is structured into 5 distinct DAOs (Decentralized Autonomous Organizations), allowing for:
+                </p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-light font-bold">•</span>
+                    <span><strong className="text-foreground">Specialized Governance:</strong> Different arms of the project are managed by focused community groups.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-light font-bold">•</span>
+                    <span><strong className="text-foreground">Active Proposals:</strong> Holders have a direct say in treasury spend, upcoming portals, and ecosystem expansions. (Within the DAOs)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-light font-bold">•</span>
+                    <span><strong className="text-foreground">Community Sovereignty:</strong> Decisions are made by the gods, for the gods.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </GlowCard>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24 px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 
-              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
-            >
-              MORE THAN ART
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              A financial instrument disguised as a divine being
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {features.map((feature) => (
-              <GlowCard key={feature.title} glowColor="blue" customSize className="w-full h-auto">
-                <div className="flex gap-4">
-                  <div className="p-3 rounded-xl bg-blue/20 h-fit">
-                    <div className="text-blue-light">{feature.icon}</div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-foreground">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
-                  </div>
-                </div>
-              </GlowCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Lore Teaser */}
+      {/* Trait & Rarity Guide Section */}
       <section className="py-24 px-4 relative z-10">
         <div 
           className="absolute inset-0 opacity-10"
@@ -224,45 +167,122 @@ export default function SolGods() {
             background: "radial-gradient(ellipse at center, #1d4ed8 0%, transparent 70%)",
           }}
         />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
-            <div className="flex flex-col items-center text-center">
-              <Sparkles className="text-blue-light mb-6" size={48} />
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">The Solara Chronicles</h2>
-              <p className="text-lg text-muted-foreground mb-6 max-w-2xl">
-                On the planet Solara, as the final solar convergence approached, the Sol Core awakened. 
-                It chose 3,333 individuals based on their inner spark, transforming them into the SolGods — 
-                divided across Ten Celestial Orders.
-              </p>
-              <Link to="/about">
-                <ShinyButton>
-                  Discover the Full Lore
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </ShinyButton>
-              </Link>
-            </div>
-          </GlowCard>
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h2 
+              className="text-3xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
+              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
+            >
+              🌩️ SOLGODS Trait & Rarity Guide
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              SolGods are defined by their unique aesthetic and mathematical scarcity. Understanding how to navigate these traits on Magic Eden is key to finding undervalued "Gods" or completing your ideal set.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* How to Filter by Traits */}
+            <GlowCard glowColor="blue" customSize className="w-full h-auto">
+              <div className="flex gap-4">
+                <div className="p-3 rounded-xl bg-blue/20 h-fit">
+                  <Search className="text-blue-light" size={28} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-4 text-foreground">How to Filter by Traits (Buying)</h3>
+                  <p className="text-muted-foreground mb-4">
+                    If you are looking for a specific aesthetic, such as the Sword of Solaris or a Blood Crown, follow these steps:
+                  </p>
+                  <ol className="space-y-3 text-muted-foreground list-decimal list-inside">
+                    <li><strong className="text-foreground">Open the Collection:</strong> Navigate to the SolGods Magic Eden page.</li>
+                    <li><strong className="text-foreground">Expand Filters:</strong> Click the Funnel Icon on the left sidebar (Desktop) to reveal the attribute categories.</li>
+                    <li><strong className="text-foreground">Choose Your Layer:</strong> Select a category (e.g., Head, Mouth, Background).</li>
+                    <li><strong className="text-foreground">Analyze the Stats:</strong>
+                      <ul className="ml-4 mt-2 space-y-1">
+                        <li>• <em>Count:</em> Shows how many items with that trait are currently for sale.</li>
+                        <li>• <em>Floor Price:</em> Shows the cheapest price for that specific attribute.</li>
+                      </ul>
+                    </li>
+                    <li><strong className="text-foreground">Apply:</strong> Click the checkbox next to the trait to refresh the gallery.</li>
+                  </ol>
+                </div>
+              </div>
+            </GlowCard>
+
+            {/* Trait Analytics & Market Research */}
+            <GlowCard glowColor="blue" customSize className="w-full h-auto">
+              <div className="flex gap-4">
+                <div className="p-3 rounded-xl bg-blue/20 h-fit">
+                  <BarChart3 className="text-blue-light" size={28} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-4 text-foreground">Trait Analytics & Market Research</h3>
+                  <p className="text-muted-foreground mb-4">
+                    To see the collection from a statistical perspective and find the rarest attributes:
+                  </p>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-light font-bold">1.</span>
+                      <span><strong className="text-foreground">Analytics Tab:</strong> Click the Analytics tab next to "Items" on the collection page.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-light font-bold">2.</span>
+                      <span><strong className="text-foreground">Attributes Sub-tab:</strong> View a full table of every trait in the collection.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </GlowCard>
+          </div>
+
+          {/* Summary Checklist */}
+          <div className="mt-8">
+            <GlowCard glowColor="purple" customSize className="w-full h-auto">
+              <div className="flex gap-4">
+                <div className="p-3 rounded-xl bg-purple/20 h-fit">
+                  <CheckSquare className="text-purple-light" size={28} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-4 text-foreground">Summary Checklist</h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-light font-bold">✓</span>
+                      <span><strong className="text-foreground">To find a specific look:</strong> Use the Filter Sidebar (Funnel icon).</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-light font-bold">✓</span>
+                      <span><strong className="text-foreground">To find underpriced rares:</strong> Filter by rare traits and sort by price.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-light font-bold">✓</span>
+                      <span><strong className="text-foreground">To study the market:</strong> Use the Analytics Tab to see which traits are holding value.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </GlowCard>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-24 px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12 text-center">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 text-center">
             <div className="flex flex-col items-center">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Join the Pantheon</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Ascend?</h2>
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-                Become part of a community that's redefining what NFTs can be. 
-                Own a piece of the Capital Allocation Engine.
+                Join the pantheon of SolGods and unlock the full power of the ecosystem.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
                   Buy SolGods
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </ShinyButton>
-                <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
-                  Join Discord
-                </ShinyButton>
+                <Link to="/dao">
+                  <ShinyButton>
+                    Explore the DAOs
+                  </ShinyButton>
+                </Link>
               </div>
             </div>
           </GlowCard>
