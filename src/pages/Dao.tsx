@@ -290,7 +290,12 @@ const Dao = () => {
               ))}
             </div>
             
-            <p className="text-lg font-medium mb-6">We accept every trait because doing good is for everyone.</p>
+            <div className="bg-blue/10 border border-blue/20 rounded-xl p-6 mb-6">
+              <h4 className="font-bold mb-3 text-blue-light">We Accept Every Trait</h4>
+              <p className="text-sm text-muted-foreground">
+                Because doing good is for everyone.
+              </p>
+            </div>
             
             <div className="bg-secondary/30 rounded-xl p-6 mb-6">
               <p className="text-muted-foreground mb-4">
@@ -313,7 +318,7 @@ const Dao = () => {
               <span className="font-medium">The DAO is led by:</span> @eddie, @KMAC, @Auskyn
             </p>
             
-            <p className="text-purple-light font-medium">Ready to be part of something meaningful? Open a ticket and let's get you onboarded.</p>
+            <p className="text-blue-light font-medium">Ready to be part of something meaningful? Open a ticket and let's get you onboarded.</p>
           </GlowCard>
         </div>
       </section>
