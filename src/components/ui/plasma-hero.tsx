@@ -406,11 +406,16 @@ export default function PlasmaHero({
       pMat.uniforms.uTime.value = t;
       plasmaMesh.rotation.y = t * 0.08;
 
-      // Sync character scale with camera distance
-      const baseZ = introConfig.endZ;
+      // Calculate apparent ball size on screen based on camera distance
+      // Ball radius = 1.0, FOV = 75 degrees
+      // At distance Z, ball appears as: 2 * atan(radius / Z) / FOV
       const currentZ = camera.position.z;
-      const scale = baseZ / currentZ;
-      setCharacterScale(Math.max(0.3, Math.min(2.5, scale)));
+      const ballRadius = 1.0;
+      const fovRad = (75 * Math.PI) / 180;
+      // Calculate what fraction of viewport height the ball covers
+      const apparentSize = (2 * ballRadius) / (currentZ * Math.tan(fovRad / 2));
+      // Convert to a reasonable percentage (multiply by base size factor)
+      setCharacterScale(Math.max(0.2, Math.min(3, apparentSize * 0.5)));
 
       controls.update();
       renderer.render(scene, camera);
@@ -471,8 +476,8 @@ export default function PlasmaHero({
             alt={`SolGod ${index + 1}`} 
             className="absolute h-auto object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
             style={{
-              width: `${35 * characterScale}vmin`,
-              maxWidth: `${350 * characterScale}px`,
+              width: `${80 * characterScale}vh`,
+              maxWidth: `${80 * characterScale}vw`,
               filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
               opacity: currentHeroIndex === index && !isTransitioning ? 0.2 : 0,
             }}
