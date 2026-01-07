@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import NeuralNetworkCanvas from "./neural-network-canvas";
-import { HoverButton } from "./hover-glow-button";
+import { ShinyButton } from "./shiny-button";
 import athenaHero from "@/assets/heroes/athena.png";
 import crimsonHero from "@/assets/heroes/crimson.png";
 import skullKingHero from "@/assets/heroes/skull-king.png";
@@ -489,33 +489,21 @@ export default function PlasmaHero({
       {/* Readability overlay */}
       <div className="absolute inset-0 bg-black/25 pointer-events-none z-5" />
 
-      {/* Title at top */}
+      {/* Title and Enter button above the ball */}
       <div 
         className={`absolute top-12 left-0 right-0 flex flex-col items-center justify-center z-20 transition-opacity duration-1000 ${
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-[0.15em] drop-shadow-[0_0_30px_rgba(0,55,212,0.8)]">
+        <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-[0.15em] drop-shadow-[0_0_30px_rgba(0,55,212,0.8)] mb-6">
           SOLGODS NFTS
         </h1>
-      </div>
-
-      {/* Enter button below the ball */}
-      <div 
-        className={`absolute bottom-16 left-0 right-0 flex items-center justify-center z-20 transition-opacity duration-1000 ${
-          showContent ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
-        <HoverButton
+        <ShinyButton
           onClick={onEnter}
-          glowColor="#0037d4"
-          backgroundColor="#0037d4"
-          textColor="#ffffff"
-          hoverTextColor="#ffffff"
           className="font-cinzel text-xl md:text-2xl font-semibold tracking-[0.1em]"
         >
           Enter
-        </HoverButton>
+        </ShinyButton>
       </div>
     </div>
   );
