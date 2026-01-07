@@ -143,7 +143,7 @@ const Index = () => {
                 <div className="p-3 rounded-xl bg-primary/10">
                   <Cog className="text-primary" size={28} />
                 </div>
-                <h3 className="text-2xl font-bold">1. The Sol Core Treasury</h3>
+                <h3 className="text-2xl font-bold" style={{ color: "#01b2ff" }}>1. The Sol Core Treasury</h3>
               </div>
               <p className="text-muted-foreground ml-14">
                 Your SolGod is more than a profile picture; it is your entry point to a sophisticated, active treasury. We put the project's resources to work to ensure the ecosystem remains self-sustaining and constantly evolving.
@@ -182,7 +182,7 @@ const Index = () => {
                 <div className="p-3 rounded-xl bg-primary/10">
                   <Shield className="text-primary" size={28} />
                 </div>
-                <h3 className="text-2xl font-bold">2. A Foundation of Integrity</h3>
+                <h3 className="text-2xl font-bold" style={{ color: "#01b2ff" }}>2. A Foundation of Integrity</h3>
               </div>
               <p className="text-muted-foreground ml-14">
                 We built our reputation on a simple principle: Deliver value before asking for a single cent.
@@ -209,7 +209,7 @@ const Index = () => {
                 <div className="p-3 rounded-xl bg-primary/10">
                   <Globe className="text-primary" size={28} />
                 </div>
-                <h3 className="text-2xl font-bold">3. A Living, Breathing Economy</h3>
+                <h3 className="text-2xl font-bold" style={{ color: "#01b2ff" }}>3. A Living, Breathing Economy</h3>
               </div>
               <p className="text-muted-foreground ml-14">
                 From the ancient origins of Solara to our expansion into new frontiers, the SolGods ecosystem is a thriving, bustling economy.
