@@ -290,16 +290,18 @@ function MemberCard({ member, size = "md" }: { member: TeamMember; size?: "lg" |
 function TeamSection({ group, featured = false }: { group: TeamGroup; featured?: boolean }) {
   return (
     <div className={featured ? "mb-12" : "mb-10"}>
-      <div className="flex items-center gap-3 mb-6">
-        <div className="inline-flex items-center justify-center rounded-lg bg-primary/20 p-2 text-primary">
+      <div className="flex items-center justify-center gap-3 mb-6">
+        <div 
+          className="inline-flex items-center justify-center rounded-lg bg-primary/20 p-2 text-[#3b82f6]"
+          style={{ filter: "drop-shadow(0 0 8px rgba(59, 130, 246, 0.6))" }}
+        >
           {ROLE_ICON[group.role] ?? <Users className="h-4 w-4" />}
         </div>
         <h3 className={`font-bold uppercase tracking-wide ${featured ? "text-xl text-primary" : "text-lg text-foreground"}`}>
           {group.role}
         </h3>
-        <div className="h-px flex-1 bg-border/30" />
       </div>
-      <div className={`flex flex-wrap gap-8 ${featured ? "justify-center" : "justify-start pl-2"}`}>
+      <div className="flex flex-wrap gap-8 justify-center">
         {group.members.map((m) => (
           <MemberCard key={m.name} member={m} size={featured ? "lg" : "md"} />
         ))}
@@ -423,7 +425,7 @@ const Team = () => {
           <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent mb-12" />
 
           {/* Other Roles Grid */}
-          <div className="grid md:grid-cols-2 gap-x-12">
+          <div className="grid md:grid-cols-2 gap-x-12 text-center">
             {otherRoles.map((g) => (
               <TeamSection key={g.role} group={g} />
             ))}
