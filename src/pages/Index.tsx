@@ -123,10 +123,12 @@ const Index = () => {
       {/* Why SolGods Section */}
       <section className="py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="flex justify-center mb-4">
-            <StarText text="WHY SOL GODS" fontSize={32} className="md:hidden" />
-            <StarText text="WHY SOL GODS" fontSize={48} className="hidden md:block" />
-          </div>
+          <h2 
+            className="text-3xl md:text-5xl font-bold font-cinzel text-center mb-4"
+            style={{ color: "#e8e4dc" }}
+          >
+            WHY SOL GODS
+          </h2>
           <p className="text-muted-foreground text-center mb-12 md:mb-16 max-w-2xl mx-auto text-sm md:text-base px-2">
             SolGods is a Value-First Ecosystem where digital identity meets a high-performance growth engine. We've moved beyond static art to create a system that prioritizes community outcomes and long-term sustainability.
           </p>
