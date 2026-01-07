@@ -121,10 +121,10 @@ export function Header() {
             {/* Home */}
             <Link
               to="/home"
-              className={`px-4 py-2 text-sm font-bold transition-all rounded-lg border ${
+              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
                 location.pathname === "/home"
-                  ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] border-transparent shadow-lg shadow-[#01b2ff]/30"
-                  : "text-[#01b2ff] border-[#01b2ff]/50 hover:bg-[#01b2ff]/10 hover:border-[#01b2ff]"
+                  ? "text-primary bg-primary/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
               }`}
             >
               Home
@@ -223,10 +223,10 @@ export function Header() {
               <Link
                 to="/home"
                 onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-bold transition-all rounded-lg border ${
+                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
                   location.pathname === "/home"
-                    ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] border-transparent shadow-lg shadow-[#01b2ff]/30"
-                    : "text-[#01b2ff] border-[#01b2ff]/50 hover:bg-[#01b2ff]/10 hover:border-[#01b2ff]"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                 }`}
               >
                 Home
