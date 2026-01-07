@@ -227,13 +227,13 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
                 <div className="flex flex-col items-center">
-                  <p className="text-sm mb-2" style={{ color: "#377af2" }}>Static Collections</p>
+                  <p className="text-sm mb-2 font-semibold tracking-wide" style={{ color: "#377af2", fontFamily: "'Cinzel', serif" }}>Static Collections</p>
                   <p className="font-semibold">Depend entirely on the "next buyer" for value.</p>
                 </div>
               </GlowCard>
               <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
                 <div className="flex flex-col items-center">
-                  <p className="text-sm mb-2" style={{ color: "#377af2" }}>SolGods</p>
+                  <p className="text-sm mb-2 font-semibold tracking-wide" style={{ color: "#377af2", fontFamily: "'Cinzel', serif" }}>SolGods</p>
                   <p className="font-semibold">Powered by a managed system designed to generate and distribute value internally, ensuring the sun never sets on the SOLGODs.</p>
                 </div>
               </GlowCard>
