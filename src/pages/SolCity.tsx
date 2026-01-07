@@ -77,7 +77,7 @@ const SolCity = () => {
               Sol City is a masterfully crafted collection of 5,555 pixel art NFTs. This is not just a PFP; it is a sophisticated asset participation model where your art works for you.
             </p>
             
-            <h3 className="text-2xl font-bold mb-4" style={{ color: "#01b2ff" }}>The Collection at a Glance</h3>
+            <h3 className="text-2xl font-bold mb-4" style={{ color: "#2053db" }}>The Collection at a Glance</h3>
             <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-6">
               <li><strong className="text-foreground">Total Supply:</strong> 5,555 unique NFTs.</li>
               <li><strong className="text-foreground">Artistic Depth:</strong> Over 150 unique traits across 10 distinct creature types, including several ultra-rare 1/1 masterpieces.</li>
@@ -87,7 +87,7 @@ const SolCity = () => {
 
           {/* Why Choose Sol City */}
           <div className="card-glow rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-6" style={{ color: "#01b2ff" }}>Why Choose Sol City?</h3>
+            <h3 className="text-2xl font-bold mb-6" style={{ color: "#2053db" }}>Why Choose Sol City?</h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
               In a market often driven by speculation, Sol City stands apart by prioritizing systematic performance over floor price hype. When you hold a Sol City NFT, you aren't just holding art; you are holding a stake in an active economic engine.
             </p>
@@ -98,7 +98,7 @@ const SolCity = () => {
                   <div className="p-2 rounded-lg bg-white/10" style={{ boxShadow: "0 0 15px rgba(255,255,255,0.5)" }}>
                     <Wallet className="text-white" size={24} style={{ filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))" }} />
                   </div>
-                  <h4 className="text-lg font-semibold" style={{ color: "#01b2ff" }}>1. Your NFT Works for You</h4>
+                  <h4 className="text-lg font-semibold" style={{ color: "#2053db" }}>1. Your NFT Works for You</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   The majority of mint proceeds (80%) are funneled directly into the Capital Allocation Engine. This engine utilizes diversified trading strategies and liquidity pools to generate consistent outputs.
@@ -110,7 +110,7 @@ const SolCity = () => {
                   <div className="p-2 rounded-lg bg-white/10" style={{ boxShadow: "0 0 15px rgba(255,255,255,0.5)" }}>
                     <Gift className="text-white" size={24} style={{ filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))" }} />
                   </div>
-                  <h4 className="text-lg font-semibold" style={{ color: "#01b2ff" }}>2. Quarterly Airdrops</h4>
+                  <h4 className="text-lg font-semibold" style={{ color: "#2053db" }}>2. Quarterly Airdrops</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   We believe in rewarding our citizens. Holders receive periodic on-chain distributions (quarterly airdrops) derived directly from the system's performance.
@@ -122,7 +122,7 @@ const SolCity = () => {
                   <div className="p-2 rounded-lg bg-white/10" style={{ boxShadow: "0 0 15px rgba(255,255,255,0.5)" }}>
                     <RefreshCw className="text-white" size={24} style={{ filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))" }} />
                   </div>
-                  <h4 className="text-lg font-semibold" style={{ color: "#01b2ff" }}>3. A Compounding Ecosystem</h4>
+                  <h4 className="text-lg font-semibold" style={{ color: "#2053db" }}>3. A Compounding Ecosystem</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   Sol City is designed for the long term. A portion of all generated profits (20%) is systematically reinvested back into the engine, growing the capital base and aiming to increase future rewards for every holder.
@@ -134,7 +134,7 @@ const SolCity = () => {
                   <div className="p-2 rounded-lg bg-white/10" style={{ boxShadow: "0 0 15px rgba(255,255,255,0.5)" }}>
                     <AlertTriangle className="text-white" size={24} style={{ filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))" }} />
                   </div>
-                  <h4 className="text-lg font-semibold" style={{ color: "#01b2ff" }}>4. Risk-Managed Stability</h4>
+                  <h4 className="text-lg font-semibold" style={{ color: "#2053db" }}>4. Risk-Managed Stability</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   Unlike many projects that rely on NFT market sentiment, our engine is guided by professional risk management frameworks, focusing on diverse assets like indices and commodities alongside on-chain liquidity strategies.
