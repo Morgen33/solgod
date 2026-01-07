@@ -18,8 +18,8 @@
     --popover: 220 80% 12%;
     --popover-foreground: 45 10% 90%;
 
-    --primary: 42 53% 55%;
-    --primary-foreground: 35 49% 15%;
+    --primary: 222 74% 49%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 220 70% 25%;
     --secondary-foreground: 210 70% 80%;
@@ -35,7 +35,7 @@
 
     --border: 220 60% 25%;
     --input: 220 60% 25%;
-    --ring: 42 53% 55%;
+    --ring: 222 74% 49%;
 
     --radius: 0.5rem;
 
@@ -50,12 +50,12 @@
     --blue-vibrant: 217 91% 60%;
     --blue-muted: 210 80% 70%;
 
-    /* Brand Gold */
-    --gold: 42 53% 55%;
-    --gold-highlight: 44 68% 69%;
-    --gold-light: 49 100% 88%;
-    --gold-shadow: 35 49% 15%;
-    --gold-glow: 44 68% 69%;
+    /* Legacy "gold" tokens now mapped to brand blue (gold removed from branding) */
+    --gold: 222 74% 49%;
+    --gold-highlight: 217 91% 60%;
+    --gold-light: 210 100% 85%;
+    --gold-shadow: 232 98% 12%;
+    --gold-glow: 217 91% 60%;
 
     /* Neutral Gradient */
     --neutral-light: 55 6% 68%;
