@@ -57,15 +57,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Brand Purple
-        purple: {
-          light: "hsl(var(--purple-light))",
-          DEFAULT: "hsl(var(--purple))",
-          mid: "hsl(var(--purple-mid))",
-          dark: "hsl(var(--purple-dark))",
-          soft: "hsl(var(--purple-soft))",
-          vibrant: "hsl(var(--purple-vibrant))",
-          muted: "hsl(var(--purple-muted))",
+        // Brand Blue
+        blue: {
+          light: "hsl(var(--blue-light))",
+          DEFAULT: "hsl(var(--blue))",
+          mid: "hsl(var(--blue-mid))",
+          dark: "hsl(var(--blue-dark))",
+          soft: "hsl(var(--blue-soft))",
+          vibrant: "hsl(var(--blue-vibrant))",
+          muted: "hsl(var(--blue-muted))",
         },
         // Brand Gold
         gold: {

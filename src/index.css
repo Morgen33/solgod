@@ -12,43 +12,43 @@
     /* Original dark background for SolCity */
     --background-dark: 260 30% 4%;
 
-    --card: 275 80% 12%;
+    --card: 220 80% 12%;
     --card-foreground: 45 10% 90%;
 
-    --popover: 275 80% 12%;
+    --popover: 220 80% 12%;
     --popover-foreground: 45 10% 90%;
 
     --primary: 42 53% 55%;
     --primary-foreground: 35 49% 15%;
 
-    --secondary: 275 70% 25%;
-    --secondary-foreground: 271 70% 80%;
+    --secondary: 220 70% 25%;
+    --secondary-foreground: 210 70% 80%;
 
-    --muted: 275 50% 20%;
+    --muted: 220 50% 20%;
     --muted-foreground: 55 6% 68%;
 
-    --accent: 270 80% 46%;
+    --accent: 217 91% 60%;
     --accent-foreground: 45 10% 95%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 275 60% 25%;
-    --input: 275 60% 25%;
+    --border: 220 60% 25%;
+    --input: 220 60% 25%;
     --ring: 42 53% 55%;
 
     --radius: 0.5rem;
 
-    /* Brand Purple Gradient */
-    --purple-light: 271 62% 63%;
-    --purple: 270 80% 46%;
-    --purple-mid: 268 86% 33%;
-    --purple-dark: 274 83% 32%;
+    /* Brand Blue Gradient */
+    --blue-light: 210 100% 75%;
+    --blue: 217 91% 60%;
+    --blue-mid: 221 83% 53%;
+    --blue-dark: 224 76% 48%;
     
-    /* Brand Purple Extended */
-    --purple-soft: 271 70% 80%;
-    --purple-vibrant: 270 68% 49%;
-    --purple-muted: 270 56% 65%;
+    /* Brand Blue Extended */
+    --blue-soft: 210 100% 85%;
+    --blue-vibrant: 217 91% 60%;
+    --blue-muted: 210 80% 70%;
 
     /* Brand Gold */
     --gold: 42 53% 55%;
@@ -92,22 +92,22 @@
 }
 
 @layer components {
-  /* Brand Purple Gradient */
+  /* Brand Blue Gradient */
   .brand-gradient {
     background: linear-gradient(
       135deg,
-      hsl(var(--purple-muted)) 0%,
-      hsl(var(--purple-vibrant)) 50%,
-      hsl(var(--purple-dark)) 100%
+      hsl(var(--blue-muted)) 0%,
+      hsl(var(--blue-vibrant)) 50%,
+      hsl(var(--blue-dark)) 100%
     );
   }
 
   .text-brand-gradient {
     background: linear-gradient(
       135deg,
-      hsl(var(--purple-muted)) 0%,
-      hsl(var(--purple-vibrant)) 50%,
-      hsl(var(--purple-dark)) 100%
+      hsl(var(--blue-muted)) 0%,
+      hsl(var(--blue-vibrant)) 50%,
+      hsl(var(--blue-dark)) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -157,7 +157,7 @@
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, hsl(var(--gold) / 0.3), transparent, hsl(var(--purple) / 0.3));
+    background: linear-gradient(135deg, hsl(var(--gold) / 0.3), transparent, hsl(var(--blue) / 0.3));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -167,8 +167,8 @@
 
   .shiny-card {
     --shiny-card-bg: hsl(var(--card));
-    --shiny-card-highlight: hsl(var(--purple));
-    --shiny-card-highlight-subtle: hsl(var(--purple-light));
+    --shiny-card-highlight: hsl(var(--blue));
+    --shiny-card-highlight-subtle: hsl(var(--blue-light));
     --animation: gradient-angle linear infinite;
     --duration: 3s;
     
@@ -242,30 +242,30 @@
     transform: translateY(-2px);
   }
 
-  /* Purple Glow Button Variant */
-  .glow-button-purple {
+  /* Blue Glow Button Variant */
+  .glow-button-blue {
     position: relative;
-    background: linear-gradient(135deg, hsl(var(--purple)), hsl(var(--purple-light)));
+    background: linear-gradient(135deg, hsl(var(--blue)), hsl(var(--blue-light)));
     color: hsl(var(--foreground));
     font-weight: 600;
     transition: all 0.3s ease;
   }
 
-  .glow-button-purple::before {
+  .glow-button-blue::before {
     content: '';
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    box-shadow: 0 0 20px hsl(var(--purple) / 0.4), 0 0 40px hsl(var(--purple) / 0.2);
+    box-shadow: 0 0 20px hsl(var(--blue) / 0.4), 0 0 40px hsl(var(--blue) / 0.2);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
 
-  .glow-button-purple:hover::before {
+  .glow-button-blue:hover::before {
     opacity: 1;
   }
 
-  .glow-button-purple:hover {
+  .glow-button-blue:hover {
     transform: translateY(-2px);
   }
 }
@@ -296,11 +296,11 @@
   }
 
   .shiny-cta {
-    --shiny-cta-bg: hsl(var(--purple-dark));
-    --shiny-cta-bg-subtle: hsl(var(--purple-mid));
+    --shiny-cta-bg: hsl(var(--blue-dark));
+    --shiny-cta-bg-subtle: hsl(var(--blue-mid));
     --shiny-cta-fg: hsl(var(--foreground));
-    --shiny-cta-highlight: hsl(var(--purple));
-    --shiny-cta-highlight-subtle: hsl(var(--purple-light));
+    --shiny-cta-highlight: hsl(var(--blue));
+    --shiny-cta-highlight-subtle: hsl(var(--blue-light));
     --animation: gradient-angle linear infinite;
     --duration: 3s;
     --shadow-size: 2px;
@@ -450,9 +450,9 @@
   50% { box-shadow: 0 0 40px hsl(var(--gold) / 0.6); }
 }
 
-@keyframes pulse-glow-purple {
-  0%, 100% { box-shadow: 0 0 20px hsl(var(--purple) / 0.3); }
-  50% { box-shadow: 0 0 40px hsl(var(--purple) / 0.6); }
+@keyframes pulse-glow-blue {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--blue) / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(var(--blue) / 0.6); }
 }
 
 @keyframes float {

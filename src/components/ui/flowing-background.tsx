@@ -7,7 +7,7 @@ export const FlowingBackground = () => {
       <div 
         className="absolute inset-0"
         style={{
-          background: "radial-gradient(ellipse at 50% 0%, hsl(270 80% 20% / 0.4) 0%, transparent 50%)",
+          background: "radial-gradient(ellipse at 50% 0%, hsl(220 80% 20% / 0.4) 0%, transparent 50%)",
         }}
       />
       
@@ -15,7 +15,7 @@ export const FlowingBackground = () => {
       <div 
         className="absolute w-[800px] h-[800px] rounded-full blur-[120px] opacity-30"
         style={{
-          background: "radial-gradient(circle, #7a18d1 0%, transparent 70%)",
+          background: "radial-gradient(circle, #1d4ed8 0%, transparent 70%)",
           top: "-20%",
           left: "-10%",
           animation: "float-orb-1 25s ease-in-out infinite",
@@ -25,7 +25,7 @@ export const FlowingBackground = () => {
       <div 
         className="absolute w-[600px] h-[600px] rounded-full blur-[100px] opacity-25"
         style={{
-          background: "radial-gradient(circle, #a463dd 0%, transparent 70%)",
+          background: "radial-gradient(circle, #3b82f6 0%, transparent 70%)",
           top: "30%",
           right: "-15%",
           animation: "float-orb-2 20s ease-in-out infinite",
@@ -35,7 +35,7 @@ export const FlowingBackground = () => {
       <div 
         className="absolute w-[500px] h-[500px] rounded-full blur-[80px] opacity-20"
         style={{
-          background: "radial-gradient(circle, #4f0c9b 0%, transparent 70%)",
+          background: "radial-gradient(circle, #1e3a8a 0%, transparent 70%)",
           bottom: "10%",
           left: "20%",
           animation: "float-orb-3 22s ease-in-out infinite",
@@ -45,7 +45,7 @@ export const FlowingBackground = () => {
       <div 
         className="absolute w-[400px] h-[400px] rounded-full blur-[60px] opacity-15"
         style={{
-          background: "radial-gradient(circle, #d0a7f0 0%, transparent 70%)",
+          background: "radial-gradient(circle, #93c5fd 0%, transparent 70%)",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
@@ -69,8 +69,8 @@ export const FlowingBackground = () => {
         className="absolute inset-0 opacity-40"
         style={{
           backgroundImage: `
-            radial-gradient(ellipse 80% 50% at 20% 40%, hsl(270 80% 30% / 0.15) 0%, transparent 50%),
-            radial-gradient(ellipse 60% 40% at 80% 60%, hsl(271 62% 40% / 0.1) 0%, transparent 50%)
+            radial-gradient(ellipse 80% 50% at 20% 40%, hsl(220 80% 30% / 0.15) 0%, transparent 50%),
+            radial-gradient(ellipse 60% 40% at 80% 60%, hsl(210 62% 40% / 0.1) 0%, transparent 50%)
           `,
         }}
       />

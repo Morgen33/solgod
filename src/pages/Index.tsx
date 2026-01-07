@@ -39,7 +39,7 @@ const Index = () => {
       <div 
         className="fixed inset-0 z-[1] pointer-events-none opacity-20"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--purple-soft) / 0.4) 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--blue-soft) / 0.4) 1px, transparent 0)`,
           backgroundSize: '60px 60px',
         }}
       />
@@ -125,7 +125,7 @@ const Index = () => {
           <h2 
             className="text-4xl sm:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent"
             style={{
-              backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #a463dd, #d0a7f0)",
+              backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
               backgroundSize: "200% 100%",
             }}
           >
@@ -149,19 +149,19 @@ const Index = () => {
                 Your NFT acts as an entry point to a sophisticated treasury management system. We put the project's capital to work to ensure the ecosystem remains self-sustaining and rewarding.
               </p>
               <div className="grid md:grid-cols-3 gap-6 ml-14">
-                <GlowCard glowColor="purple" customSize className="w-full h-auto">
+                <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
                     <h4 className="font-semibold mb-2 text-foreground">Active Treasury Management</h4>
                     <p className="text-sm text-muted-foreground">We utilize strategies to grow our holdings and generate consistent value.</p>
                   </div>
                 </GlowCard>
-                <GlowCard glowColor="purple" customSize className="w-full h-auto">
+                <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
                     <h4 className="font-semibold mb-2 text-foreground">Holder Rewards</h4>
                     <p className="text-sm text-muted-foreground">Realized growth is distributed back to our community through regular quarterly airdrops.</p>
                   </div>
                 </GlowCard>
-                <GlowCard glowColor="purple" customSize className="w-full h-auto">
+                <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
                     <h4 className="font-semibold mb-2 text-foreground">Automatic Scaling</h4>
                     <p className="text-sm text-muted-foreground">By reinvesting a portion of our gains, we constantly increase the treasury's power, aiming for larger rewards over time.</p>
@@ -182,13 +182,13 @@ const Index = () => {
                 We built our reputation on delivering value before asking for a single cent.
               </p>
               <div className="grid md:grid-cols-2 gap-6 ml-14">
-                <GlowCard glowColor="purple" customSize className="w-full h-auto">
+                <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
                     <h4 className="font-semibold mb-2 text-foreground">Results First</h4>
                     <p className="text-sm text-muted-foreground">Our community thrived early on through shared strategies and growth frameworks that helped members level up their own digital presence.</p>
                   </div>
                 </GlowCard>
-                <GlowCard glowColor="purple" customSize className="w-full h-auto">
+                <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
                     <h4 className="font-semibold mb-2 text-foreground">Proven Performance</h4>
                     <p className="text-sm text-muted-foreground">This "value-first" approach led to a 20x increase from our initial launch price, establishing a rock-solid foundation for our treasury.</p>
@@ -221,7 +221,7 @@ const Index = () => {
                   <p className="font-semibold">Depend entirely on the next buyer.</p>
                 </div>
               </GlowCard>
-              <GlowCard glowColor="purple" customSize className="w-full h-auto text-center">
+              <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
                 <div className="flex flex-col items-center">
                   <p className="text-primary text-sm mb-2">SolGods</p>
                   <p className="font-semibold">Powered by a managed system designed to generate and distribute value internally.</p>
@@ -240,7 +240,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-12 text-center">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 text-center">
             <div className="flex flex-col items-center">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">Become a SolGod</h2>
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">

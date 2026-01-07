@@ -78,7 +78,7 @@ export default function SolGods() {
       <div 
         className="fixed inset-0 z-[1] pointer-events-none opacity-20"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--purple-soft) / 0.4) 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--blue-soft) / 0.4) 1px, transparent 0)`,
           backgroundSize: '60px 60px',
         }}
       />
@@ -94,7 +94,7 @@ export default function SolGods() {
           <h1 
             className="text-5xl sm:text-7xl font-bold mb-6 bg-clip-text text-transparent animate-gradient-flow"
             style={{
-              backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #a463dd, #d0a7f0)",
+              backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
               backgroundSize: "200% 100%",
             }}
           >
@@ -126,9 +126,9 @@ export default function SolGods() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((stat) => (
-              <GlowCard key={stat.label} glowColor="purple" customSize className="w-full h-auto text-center p-6">
+              <GlowCard key={stat.label} glowColor="blue" customSize className="w-full h-auto text-center p-6">
                 <div className="flex flex-col">
-                  <span className="text-3xl sm:text-4xl font-bold text-purple-light mb-1">{stat.value}</span>
+                  <span className="text-3xl sm:text-4xl font-bold text-blue-light mb-1">{stat.value}</span>
                   <span className="text-sm text-muted-foreground">{stat.label}</span>
                 </div>
               </GlowCard>
@@ -144,7 +144,7 @@ export default function SolGods() {
             <img src={solgodsIcon} alt="SolGods" className="h-20 w-auto mx-auto mb-6 opacity-80" />
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
             >
               THE CELESTIAL ORDERS
             </h2>
@@ -155,14 +155,14 @@ export default function SolGods() {
 
           {/* Scrolling Showcase */}
           <div className="relative">
-            <div className="flex gap-6 overflow-x-auto pb-6 scrollbar-thin scrollbar-thumb-purple/30 scrollbar-track-transparent snap-x snap-mandatory">
+            <div className="flex gap-6 overflow-x-auto pb-6 scrollbar-thin scrollbar-thumb-blue/30 scrollbar-track-transparent snap-x snap-mandatory">
               {factionShowcase.map((faction, index) => (
                 <div 
                   key={faction.name}
                   className="flex-shrink-0 w-64 snap-center group"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="relative rounded-2xl overflow-hidden aspect-[3/4] mb-4 border border-border group-hover:border-purple/50 transition-all duration-300">
+                  <div className="relative rounded-2xl overflow-hidden aspect-[3/4] mb-4 border border-border group-hover:border-blue/50 transition-all duration-300">
                     <img 
                       src={faction.image} 
                       alt={faction.name}

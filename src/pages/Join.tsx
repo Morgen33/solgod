@@ -44,7 +44,7 @@ const Join = () => {
             <h1 
               className="text-5xl sm:text-7xl font-bold mb-6 bg-clip-text text-transparent animate-gradient-flow"
               style={{
-                backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #a463dd, #d0a7f0)",
+                backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
                 backgroundSize: "200% 100%",
               }}
             >
@@ -53,7 +53,7 @@ const Join = () => {
             <p className="text-xl text-muted-foreground">New here? This is where it starts.</p>
           </div>
 
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-6 sm:p-8 mb-8">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-6 sm:p-8 mb-8">
             {/* Starter Gods Showcase */}
             <div className="grid grid-cols-5 gap-3">
               {starterGods.map((img, index) => (
@@ -164,7 +164,7 @@ const Join = () => {
             <h2 
               className="text-4xl sm:text-6xl font-bold mb-6 bg-clip-text text-transparent animate-gradient-flow"
               style={{
-                backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1, #a463dd, #d0a7f0)",
+                backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
                 backgroundSize: "200% 100%",
               }}
             >
@@ -173,7 +173,7 @@ const Join = () => {
             <p className="text-xl text-muted-foreground">When you're ready to move past the starter phase, this is the next step.</p>
           </div>
 
-          <GlowCard glowColor="purple" customSize className="w-full h-auto p-8 sm:p-10">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-10">
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Owning a Genesis SolGod NFT is how you officially step into the full SolGods experience. Genesis holders aren't just in the Discord — they're part of the core. This is where access deepens, opportunities open up, and your presence actually carries weight.
             </p>
