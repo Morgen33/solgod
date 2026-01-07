@@ -13,6 +13,13 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'cinzel': ['Cinzel', 'serif'],
+        'cinzel-decorative': ['Cinzel Decorative', 'serif'],
+        'cormorant': ['Cormorant Garamond', 'serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
