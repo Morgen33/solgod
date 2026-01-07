@@ -193,7 +193,7 @@ export function ShootingStars({ className = '' }: ShootingStarsProps) {
 
         star.trail.unshift({ x: star.x, y: star.y, opacity: star.opacity });
         
-        const maxTrailLength = star.isMeteor ? 60 : 45;
+        const maxTrailLength = star.isMeteor ? 120 : 90;
         if (star.trail.length > maxTrailLength) {
           star.trail.pop();
         }
