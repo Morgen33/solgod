@@ -53,11 +53,11 @@ export const FlowingBackground = () => {
         }}
       />
 
-      {/* Gold accent orb */}
+      {/* Blue accent orb */}
       <div 
         className="absolute w-[300px] h-[300px] rounded-full blur-[80px] opacity-10"
         style={{
-          background: "radial-gradient(circle, #c9a24d 0%, transparent 70%)",
+          background: "radial-gradient(circle, #2053db 0%, transparent 70%)",
           bottom: "30%",
           right: "10%",
           animation: "float-orb-4 18s ease-in-out infinite",

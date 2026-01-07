@@ -48,7 +48,7 @@ export function StarButton({
   children,
   lightWidth = 110,
   duration = 3,
-  lightColor = "#FFD700",
+  lightColor = "#2053db",
   backgroundColor = "hsl(217, 64%, 6%)",
   borderWidth = 2,
   className,
