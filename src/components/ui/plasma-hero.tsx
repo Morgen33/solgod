@@ -485,17 +485,17 @@ export default function PlasmaHero({
       {/* Character image inside the ball */}
       <div 
         className={`absolute inset-0 z-15 flex items-center justify-center pointer-events-none transition-all duration-[2000ms] ease-out ${
-          showContent ? 'opacity-40 scale-100' : 'opacity-0 scale-90'
+          showContent ? 'opacity-70 scale-100' : 'opacity-0 scale-90'
         }`}
       >
         <img 
           src={gnomieHero} 
           alt="SolGod" 
-          className="w-[35vmin] h-auto max-w-[280px] object-contain"
+          className="w-[40vmin] h-auto max-w-[320px] object-contain"
           style={{
-            filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.5))",
-            maskImage: "radial-gradient(ellipse 70% 80% at 50% 40%, black 40%, transparent 80%)",
-            WebkitMaskImage: "radial-gradient(ellipse 70% 80% at 50% 40%, black 40%, transparent 80%)",
+            filter: "drop-shadow(0 0 40px rgba(0, 132, 255, 0.6))",
+            maskImage: "radial-gradient(ellipse 85% 90% at 50% 45%, black 50%, transparent 90%)",
+            WebkitMaskImage: "radial-gradient(ellipse 85% 90% at 50% 45%, black 50%, transparent 90%)",
           }}
         />
       </div>
