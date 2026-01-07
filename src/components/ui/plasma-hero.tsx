@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import NeuralNetworkCanvas from "./neural-network-canvas";
+import gnomieHero from "@/assets/gnomie-hero.png";
 
 // --- CONFIGURATION ---
 const params = {
@@ -479,6 +480,24 @@ export default function PlasmaHero({
             </textPath>
           </text>
         </svg>
+      </div>
+
+      {/* Character image inside the ball */}
+      <div 
+        className={`absolute inset-0 z-15 flex items-center justify-center pointer-events-none transition-all duration-[2000ms] ease-out ${
+          showContent ? 'opacity-40 scale-100' : 'opacity-0 scale-90'
+        }`}
+      >
+        <img 
+          src={gnomieHero} 
+          alt="SolGod" 
+          className="w-[35vmin] h-auto max-w-[280px] object-contain"
+          style={{
+            filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.5))",
+            maskImage: "radial-gradient(ellipse 70% 80% at 50% 40%, black 40%, transparent 80%)",
+            WebkitMaskImage: "radial-gradient(ellipse 70% 80% at 50% 40%, black 40%, transparent 80%)",
+          }}
+        />
       </div>
 
       {/* Enter Button */}
