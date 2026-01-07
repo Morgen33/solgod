@@ -234,7 +234,7 @@ export function Header() {
                 onClick={() => setMobileOpen(false)}
                 className={`px-4 py-3 text-sm font-bold transition-all rounded-lg border ${
                   location.pathname === "/solgods"
-                    ? "text-white bg-gradient-to-r from-[#7a18d1] to-[#a463dd] border-transparent shadow-lg shadow-primary/30"
+                    ? "text-white bg-gradient-to-r from-[#1d4ed8] to-[#3b82f6] border-transparent shadow-lg shadow-primary/30"
                     : "text-primary border-primary/50 hover:bg-primary/10 hover:border-primary"
                 }`}
               >
@@ -247,7 +247,7 @@ export function Header() {
                 onClick={() => setMobileOpen(false)}
                 className={`px-4 py-3 text-sm font-bold transition-all rounded-lg border ${
                   location.pathname === "/solcity"
-                    ? "text-white bg-gradient-to-r from-[#7a18d1] to-[#a463dd] border-transparent shadow-lg shadow-primary/30"
+                    ? "text-white bg-gradient-to-r from-[#1d4ed8] to-[#3b82f6] border-transparent shadow-lg shadow-primary/30"
                     : "text-primary border-primary/50 hover:bg-primary/10 hover:border-primary"
                 }`}
               >

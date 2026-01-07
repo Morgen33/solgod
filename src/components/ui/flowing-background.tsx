@@ -87,9 +87,9 @@ export const FlowingBackground = () => {
       <svg className="absolute inset-0 w-full h-full opacity-10" preserveAspectRatio="none">
         <defs>
           <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#4f0c9b" stopOpacity="0" />
-            <stop offset="50%" stopColor="#a463dd" stopOpacity="1" />
-            <stop offset="100%" stopColor="#4f0c9b" stopOpacity="0" />
+            <stop offset="0%" stopColor="#1e3a8a" stopOpacity="0" />
+            <stop offset="50%" stopColor="#3b82f6" stopOpacity="1" />
+            <stop offset="100%" stopColor="#1e3a8a" stopOpacity="0" />
           </linearGradient>
         </defs>
         <path

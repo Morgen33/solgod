@@ -373,12 +373,12 @@ const Team = () => {
               {/* Co-Founders Group */}
               <div className="flex flex-col items-center">
                 <div className="flex items-center justify-center gap-3 mb-8">
-                  <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#a463dd]" />
+                  <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#3b82f6]" />
                   <div className="inline-flex items-center gap-2">
-                    <Crown className="h-4 w-4 text-[#d0a7f0]" />
+                    <Crown className="h-4 w-4 text-[#93c5fd]" />
                     <span 
                       className="text-xl font-bold uppercase tracking-widest bg-clip-text text-transparent"
-                      style={{ backgroundImage: "linear-gradient(90deg, #d0a7f0, #a463dd, #7a18d1)" }}
+                      style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
                     >
                       Co-Founders
                     </span>
