@@ -110,13 +110,21 @@ export function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
+            {/* Intro */}
+            <Link
+              to="/"
+              className="px-4 py-2 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary"
+            >
+              Intro
+            </Link>
+
             {/* Home */}
             <Link
               to="/home"
-              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+              className={`px-4 py-2 text-sm font-bold transition-all rounded-lg border ${
                 location.pathname === "/home"
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] border-transparent shadow-lg shadow-[#01b2ff]/30"
+                  : "text-[#01b2ff] border-[#01b2ff]/50 hover:bg-[#01b2ff]/10 hover:border-[#01b2ff]"
               }`}
             >
               Home
@@ -139,8 +147,8 @@ export function Header() {
               to="/solgods"
               className={`px-4 py-2 text-sm font-bold transition-all rounded-lg border ${
                 location.pathname === "/solgods"
-                  ? "text-white bg-gradient-to-r from-[#1d4ed8] to-[#3b82f6] border-transparent shadow-lg shadow-primary/30"
-                  : "text-primary border-primary/50 hover:bg-primary/10 hover:border-primary"
+                  ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] border-transparent shadow-lg shadow-[#01b2ff]/30"
+                  : "text-[#01b2ff] border-[#01b2ff]/50 hover:bg-[#01b2ff]/10 hover:border-[#01b2ff]"
               }`}
             >
               SolGods
@@ -151,8 +159,8 @@ export function Header() {
               to="/solcity"
               className={`px-4 py-2 text-sm font-bold transition-all rounded-lg border ${
                 location.pathname === "/solcity"
-                  ? "text-white bg-gradient-to-r from-[#1d4ed8] to-[#3b82f6] border-transparent shadow-lg shadow-primary/30"
-                  : "text-primary border-primary/50 hover:bg-primary/10 hover:border-primary"
+                  ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] border-transparent shadow-lg shadow-[#01b2ff]/30"
+                  : "text-[#01b2ff] border-[#01b2ff]/50 hover:bg-[#01b2ff]/10 hover:border-[#01b2ff]"
               }`}
             >
               SolCity
@@ -202,17 +210,26 @@ export function Header() {
         {mobileOpen && (
           <nav className="lg:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-1">
+              {/* Intro */}
+              <Link
+                to="/"
+                onClick={() => setMobileOpen(false)}
+                className="px-4 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary"
+              >
+                Intro
+              </Link>
+
               {/* Home */}
               <Link
                 to="/home"
                 onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                className={`px-4 py-3 text-sm font-bold transition-all rounded-lg border ${
                   location.pathname === "/home"
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] border-transparent shadow-lg shadow-[#01b2ff]/30"
+                    : "text-[#01b2ff] border-[#01b2ff]/50 hover:bg-[#01b2ff]/10 hover:border-[#01b2ff]"
                 }`}
               >
-              Home
+                Home
               </Link>
 
               {/* About */}
@@ -234,8 +251,8 @@ export function Header() {
                 onClick={() => setMobileOpen(false)}
                 className={`px-4 py-3 text-sm font-bold transition-all rounded-lg border ${
                   location.pathname === "/solgods"
-                    ? "text-white bg-gradient-to-r from-[#1d4ed8] to-[#3b82f6] border-transparent shadow-lg shadow-primary/30"
-                    : "text-primary border-primary/50 hover:bg-primary/10 hover:border-primary"
+                    ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] border-transparent shadow-lg shadow-[#01b2ff]/30"
+                    : "text-[#01b2ff] border-[#01b2ff]/50 hover:bg-[#01b2ff]/10 hover:border-[#01b2ff]"
                 }`}
               >
                 SolGods
@@ -247,8 +264,8 @@ export function Header() {
                 onClick={() => setMobileOpen(false)}
                 className={`px-4 py-3 text-sm font-bold transition-all rounded-lg border ${
                   location.pathname === "/solcity"
-                    ? "text-white bg-gradient-to-r from-[#1d4ed8] to-[#3b82f6] border-transparent shadow-lg shadow-primary/30"
-                    : "text-primary border-primary/50 hover:bg-primary/10 hover:border-primary"
+                    ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] border-transparent shadow-lg shadow-[#01b2ff]/30"
+                    : "text-[#01b2ff] border-[#01b2ff]/50 hover:bg-[#01b2ff]/10 hover:border-[#01b2ff]"
                 }`}
               >
                 SolCity
