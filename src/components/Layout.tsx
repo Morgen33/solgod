@@ -20,7 +20,7 @@ export function Layout({ children, className, showStars = false }: LayoutProps) 
       ) : (
         <FlowingBackground />
       )}
-      <ShootingStars interval={5000} />
+      <ShootingStars />
       <Header />
       <main className="relative z-10 pt-16 sm:pt-20 flex-1">
         {children}
