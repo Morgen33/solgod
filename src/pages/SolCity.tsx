@@ -52,7 +52,7 @@ const SolCity = () => {
           animation: "fade-in 0.8s ease-out forwards"
         }}>
             <img src={solcityLogo} alt="SolCity" className="w-64 sm:w-80 md:w-96 mx-auto" />
-            <MorphingText words={["Probably Nothing", "Probably Something", "Probably Everything"]} className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4" interval={2500} />
+            <MorphingText words={["Nothing", "Something", "Everything"]} className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4" interval={2500} />
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" style={{
