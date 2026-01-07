@@ -3,6 +3,7 @@ import { ArrowRight, Twitter, MessageCircle, Layers, Gift, TrendingUp, Shield, G
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { RotatingText } from "@/components/ui/rotating-text";
 import { GlowCard } from "@/components/ui/spotlight-card";
+import { StarText } from "@/components/ui/star-text";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 
 const quickLinks = [
@@ -122,15 +123,9 @@ const Index = () => {
       {/* Why SolGods Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 
-            className="text-4xl sm:text-5xl font-bold text-center mb-4"
-            style={{
-              color: "#02093f",
-              textShadow: "0 0 40px rgba(102, 180, 255, 0.6), 0 0 80px rgba(102, 180, 255, 0.4), 0 0 120px rgba(102, 180, 255, 0.2)"
-            }}
-          >
-            WHY SOL GODS
-          </h2>
+          <div className="flex justify-center mb-4">
+            <StarText text="WHY SOL GODS" fontSize={48} />
+          </div>
           <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
             SolGods is a Value-First Ecosystem where digital identity meets a high-performance growth engine. We've moved beyond static art to create a system that prioritizes community outcomes and long-term sustainability.
           </p>
