@@ -92,19 +92,93 @@ const SolCity = () => {
         </div>
       </section>
 
-      {/* Features Grid */}
+      {/* About Sol City Section */}
       <section className="py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent animate-gradient-flow" style={{
-          backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
-          backgroundSize: "200% 100%"
-        }}>
-            WHY SOLCITY?
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6 bg-clip-text text-transparent animate-gradient-flow" style={{
+            backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
+            backgroundSize: "200% 100%"
+          }}>
+            About Sol City
           </h2>
-          <div className="grid md:grid-cols-3 gap-12">
-            <FeatureItem icon={<Coins className="text-primary" size={32} />} title="$GODS Token" description="Stake, vote, and earn with the native governance token powering the SolGods ecosystem." delay="0.1s" />
-            <FeatureItem icon={<Users className="text-primary" size={32} />} title="DAO Governance" description="Community-first decision making. Every holder has a voice in shaping our destiny." delay="0.2s" />
-            <FeatureItem icon={<Zap className="text-primary" size={32} />} title="Solana Speed" description="Built on Solana for lightning-fast transactions and minimal fees." delay="0.3s" />
+          <p className="text-xl text-center text-muted-foreground mb-12">The Evolution of the Ecosystem</p>
+          
+          <div className="card-glow rounded-xl p-8 mb-12">
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Following the success of our genesis collection, SOL GODs, we are proud to introduce Sol City—a high-end expansion that moves beyond traditional digital collectibles. While SOL GODs laid the foundation of our community, Sol City is engineered to push the boundaries of NFT utility on the Solana blockchain.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Sol City is a masterfully crafted collection of 5,555 pixel art NFTs. This is not just a PFP; it is a sophisticated asset participation model where your art works for you.
+            </p>
+            
+            <h3 className="text-2xl font-bold mb-4" style={{ color: "#01b2ff" }}>The Collection at a Glance</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-6">
+              <li><strong className="text-foreground">Total Supply:</strong> 5,555 unique NFTs.</li>
+              <li><strong className="text-foreground">Artistic Depth:</strong> Over 150 unique traits across 10 distinct creature types, including several ultra-rare 1/1 masterpieces.</li>
+              <li><strong className="text-foreground">Proven Pedigree:</strong> The second major release from the team behind the SOL GODs Genesis collection.</li>
+            </ul>
+          </div>
+
+          {/* Why Choose Sol City */}
+          <div className="card-glow rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-6" style={{ color: "#01b2ff" }}>Why Choose Sol City?</h3>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              In a market often driven by speculation, Sol City stands apart by prioritizing systematic performance over floor price hype. When you hold a Sol City NFT, you aren't just holding art; you are holding a stake in an active economic engine.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-secondary/30 rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 rounded-lg bg-white/10" style={{ boxShadow: "0 0 15px rgba(255,255,255,0.5)" }}>
+                    <Wallet className="text-white" size={24} style={{ filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))" }} />
+                  </div>
+                  <h4 className="text-lg font-semibold" style={{ color: "#01b2ff" }}>1. Your NFT Works for You</h4>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  The majority of mint proceeds (80%) are funneled directly into the Capital Allocation Engine. This engine utilizes diversified trading strategies and liquidity pools to generate consistent outputs.
+                </p>
+              </div>
+              
+              <div className="bg-secondary/30 rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 rounded-lg bg-white/10" style={{ boxShadow: "0 0 15px rgba(255,255,255,0.5)" }}>
+                    <Gift className="text-white" size={24} style={{ filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))" }} />
+                  </div>
+                  <h4 className="text-lg font-semibold" style={{ color: "#01b2ff" }}>2. Quarterly Airdrops</h4>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  We believe in rewarding our citizens. Holders receive periodic on-chain distributions (quarterly airdrops) derived directly from the system's performance.
+                </p>
+              </div>
+              
+              <div className="bg-secondary/30 rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 rounded-lg bg-white/10" style={{ boxShadow: "0 0 15px rgba(255,255,255,0.5)" }}>
+                    <RefreshCw className="text-white" size={24} style={{ filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))" }} />
+                  </div>
+                  <h4 className="text-lg font-semibold" style={{ color: "#01b2ff" }}>3. A Compounding Ecosystem</h4>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  Sol City is designed for the long term. A portion of all generated profits (20%) is systematically reinvested back into the engine, growing the capital base and aiming to increase future rewards for every holder.
+                </p>
+              </div>
+              
+              <div className="bg-secondary/30 rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 rounded-lg bg-white/10" style={{ boxShadow: "0 0 15px rgba(255,255,255,0.5)" }}>
+                    <AlertTriangle className="text-white" size={24} style={{ filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))" }} />
+                  </div>
+                  <h4 className="text-lg font-semibold" style={{ color: "#01b2ff" }}>4. Risk-Managed Stability</h4>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  Unlike many projects that rely on NFT market sentiment, our engine is guided by professional risk management frameworks, focusing on diverse assets like indices and commodities alongside on-chain liquidity strategies.
+                </p>
+              </div>
+            </div>
+            
+            <p className="text-muted-foreground text-center">
+              Ready to dive deeper into the mechanics? Read the full <a href="#strategy" className="text-primary hover:underline">Whitepaper below</a> to see the data, the graphs, and the technical strategy powering the city.
+            </p>
           </div>
         </div>
       </section>
