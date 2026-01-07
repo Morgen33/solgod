@@ -129,7 +129,6 @@ export default function PlasmaHero({
   useEffect(() => {
     if (!showCharacter) return;
     
-    const cycleDuration = 4000; // 4 seconds per character
     const fadeTime = 1500; // 1.5 second fade transition
     
     const interval = setInterval(() => {
@@ -139,7 +138,7 @@ export default function PlasmaHero({
         setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length);
         setIsTransitioning(false);
       }, fadeTime);
-    }, cycleDuration);
+    }, fadeTime); // No delay - transitions happen back to back
     
     return () => clearInterval(interval);
   }, [showCharacter]);
@@ -499,19 +498,21 @@ export default function PlasmaHero({
 
       {/* Title and Enter button above the ball */}
       <div 
-        className={`absolute top-12 left-0 right-0 flex flex-col items-center justify-center z-20 transition-opacity duration-1000 ${
+        className={`absolute top-0 left-0 right-0 flex flex-col items-center justify-center z-20 transition-opacity duration-1000 ${
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-[0.15em] drop-shadow-[0_0_30px_rgba(0,55,212,0.8)] mb-6">
-          SOLGODS NFTS
-        </h1>
-        <ShinyButton
-          onClick={onEnter}
-          className="font-cinzel text-xl md:text-2xl font-semibold tracking-[0.1em]"
-        >
-          Enter
-        </ShinyButton>
+        <div className="bg-black w-full py-8 flex flex-col items-center">
+          <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-[0.15em] drop-shadow-[0_0_30px_rgba(0,55,212,0.8)] mb-6">
+            SOLGODS NFTS
+          </h1>
+          <ShinyButton
+            onClick={onEnter}
+            className="font-cinzel text-xl md:text-2xl font-semibold tracking-[0.1em]"
+          >
+            Enter
+          </ShinyButton>
+        </div>
       </div>
     </div>
   );
