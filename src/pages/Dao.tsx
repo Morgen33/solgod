@@ -143,10 +143,20 @@ const Dao = () => {
               <PowerCard title="The Grand Veto" description="Strike lightning on the altar of victory: cancel the chosen winner and decree a new one (other than yourself)." />
             </div>
             
-            <p className="text-sm text-muted-foreground">
-              <span className="font-medium">Wizard Cabal Founder:</span>{" "}
-              <a href="https://x.com/Axe" target="_blank" rel="noopener noreferrer" className="text-blue-light hover:underline">@Axe</a>
-            </p>
+            <div className="mb-4">
+              <span className="text-sm text-muted-foreground font-medium">Wizard Cabal Founder:</span>
+              <div className="flex flex-wrap gap-3 mt-3">
+                <a 
+                  href="https://x.com/Axe" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
+                >
+                  @Axe
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
           </GlowCard>
         </div>
       </section>
@@ -201,9 +211,23 @@ const Dao = () => {
               </a>
             </div>
             
-            <p className="text-sm text-muted-foreground">
-              <span className="font-medium">Wings SG DAO Founders:</span> @Glow (Fluttering), @CoryB
-            </p>
+            <div className="mb-4">
+              <span className="text-sm text-muted-foreground font-medium">Wings SG DAO Founders:</span>
+              <div className="flex flex-wrap gap-3 mt-3">
+                <a 
+                  href="https://x.com/GlowBallbuster" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
+                >
+                  @Glow (Fluttering)
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300">
+                  @CoryB
+                </span>
+              </div>
+            </div>
           </GlowCard>
         </div>
       </section>
@@ -259,13 +283,47 @@ const Dao = () => {
               </a>
             </div>
             
-            <p className="text-sm text-muted-foreground">
-              <span className="font-medium">Core Team:</span>{" "}
-              <a href="https://x.com/medraresteaker" target="_blank" rel="noopener noreferrer" className="text-blue-light hover:underline">@Gnomie</a>,{" "}
-              <a href="https://x.com/DaveRmetax" target="_blank" rel="noopener noreferrer" className="text-blue-light hover:underline">@Daver</a>,{" "}
-              <a href="https://x.com/borkermetax" target="_blank" rel="noopener noreferrer" className="text-blue-light hover:underline">@Borker</a>,{" "}
-              <a href="https://x.com/AiArsenals" target="_blank" rel="noopener noreferrer" className="text-blue-light hover:underline">@Morgen</a>
-            </p>
+            <div className="mb-4">
+              <span className="text-sm text-muted-foreground font-medium">Core Team:</span>
+              <div className="flex flex-wrap gap-3 mt-3">
+                <a 
+                  href="https://x.com/medraresteaker" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
+                >
+                  @Gnomie
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <a 
+                  href="https://x.com/DaveRmetax" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
+                >
+                  @Daver
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <a 
+                  href="https://x.com/borkermetax" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
+                >
+                  @Borker
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <a 
+                  href="https://x.com/AiArsenals" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
+                >
+                  @Morgen
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
           </GlowCard>
         </div>
       </section>
@@ -391,9 +449,33 @@ const Dao = () => {
               </div>
             </div>
             
-            <p className="text-sm text-muted-foreground italic mb-4">
+            <p className="text-sm text-muted-foreground italic mb-6">
               If your SOL God possesses these elite traits, prepare to take your rightful place among the Pantheon!
             </p>
+            
+            <div className="mb-6">
+              <span className="text-sm text-muted-foreground font-medium">The Pantheon Circle is led by:</span>
+              <div className="flex flex-wrap gap-3 mt-3">
+                <a 
+                  href="https://x.com/RasiMetaX" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
+                >
+                  @Rasi
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <a 
+                  href="https://x.com/Swishmeta" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
+                >
+                  @Swish
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
             
             <p className="text-blue-light font-medium">
               Join us as we ascend to the next level of community governance and prestige!
