@@ -202,18 +202,9 @@ const Dao = () => {
               </div>
             </div>
             
-            <div className="flex flex-wrap gap-3 mb-4">
-              <a href="https://x.com/WingsDaoSG" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
-                X: @WingsDaoSG <ExternalLink size={12} />
-              </a>
-              <a href="https://discord.gg/havennfts" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
-                Discord <ExternalLink size={12} />
-              </a>
-            </div>
-            
             <div className="mb-4">
               <span className="text-sm text-muted-foreground font-medium">Wings SG DAO Founders:</span>
-              <div className="flex flex-wrap gap-3 mt-3">
+              <div className="flex flex-wrap items-center gap-3 mt-3">
                 <a 
                   href="https://x.com/GlowBallbuster" 
                   target="_blank" 
@@ -226,6 +217,13 @@ const Dao = () => {
                 <span className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300">
                   @CoryB
                 </span>
+                <span className="text-muted-foreground mx-2">|</span>
+                <a href="https://x.com/WingsDaoSG" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
+                  X: @WingsDaoSG <ExternalLink size={12} />
+                </a>
+                <a href="https://discord.gg/havennfts" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
+                  Discord <ExternalLink size={12} />
+                </a>
               </div>
             </div>
           </GlowCard>
@@ -274,18 +272,9 @@ const Dao = () => {
               </div>
             </div>
             
-            <div className="flex flex-wrap gap-3 mb-4">
-              <a href="https://x.com/MAFIAxDAO" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
-                X: @MAFIAxDAO <ExternalLink size={12} />
-              </a>
-              <a href="https://discord.gg/SN5gcncU7P" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
-                Discord <ExternalLink size={12} />
-              </a>
-            </div>
-            
             <div className="mb-4">
               <span className="text-sm text-muted-foreground font-medium">Core Team:</span>
-              <div className="flex flex-wrap gap-3 mt-3">
+              <div className="flex flex-wrap items-center gap-3 mt-3">
                 <a 
                   href="https://x.com/medraresteaker" 
                   target="_blank" 
@@ -321,6 +310,13 @@ const Dao = () => {
                 >
                   @Morgen
                   <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <span className="text-muted-foreground mx-2">|</span>
+                <a href="https://x.com/MAFIAxDAO" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
+                  X: @MAFIAxDAO <ExternalLink size={12} />
+                </a>
+                <a href="https://discord.gg/SN5gcncU7P" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
+                  Discord <ExternalLink size={12} />
                 </a>
               </div>
             </div>
