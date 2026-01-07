@@ -4,8 +4,8 @@ const words = ['NOTHING', 'SOMETHING', 'EVERYTHING'];
 
 const getGradient = (word: string) => {
   if (word === 'SOMETHING') {
-    // Shiny gold gradient
-    return "linear-gradient(90deg, #fff1c1, #e6c97a, #c9a24d, #e6c97a, #fff1c1)";
+    // Shiny blue gradient (different tone from EVERYTHING)
+    return "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)";
   }
   if (word === 'NOTHING') {
     // Shiny grey silver gradient
@@ -42,7 +42,7 @@ export const RotatingText = () => {
 
   const getGlow = (word: string) => {
     if (word === 'SOMETHING') {
-      return 'drop-shadow(0 0 20px rgba(230, 201, 122, 0.6)) drop-shadow(0 0 40px rgba(201, 162, 77, 0.4))';
+      return 'drop-shadow(0 0 20px rgba(59, 130, 246, 0.6)) drop-shadow(0 0 40px rgba(29, 78, 216, 0.4))';
     }
     if (word === 'NOTHING') {
       return 'drop-shadow(0 0 20px rgba(160, 160, 160, 0.5)) drop-shadow(0 0 40px rgba(128, 128, 128, 0.3))';
