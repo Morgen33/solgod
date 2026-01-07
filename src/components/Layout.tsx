@@ -3,6 +3,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { StarsCanvas } from "./ui/stars-canvas";
 import { FlowingBackground } from "./ui/flowing-background";
+import { ShootingStars } from "./ui/shooting-stars";
 import { cn } from "@/lib/utils";
 
 interface LayoutProps {
@@ -19,6 +20,7 @@ export function Layout({ children, className, showStars = false }: LayoutProps) 
       ) : (
         <FlowingBackground />
       )}
+      <ShootingStars interval={5000} />
       <Header />
       <main className="relative z-10 pt-16 sm:pt-20 flex-1">
         {children}
