@@ -345,31 +345,33 @@ const Team = () => {
 
       <main className="pb-20 px-4">
         <div className="max-w-5xl mx-auto">
-          {/* Founders & Co-Founders on same line */}
+          {/* Founders */}
           <div className="text-center mb-12">
-            <div className="flex flex-wrap justify-center items-start gap-x-20 gap-y-12">
-              {/* Founders Group */}
-              <div className="flex flex-col items-center">
-                <div className="flex items-center justify-center gap-3 mb-8">
-                  <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#c9a24d]" />
-                  <div className="inline-flex items-center gap-2">
-                    <Crown className="h-5 w-5 text-[#e6c97a]" />
-                    <span 
-                      className="text-2xl font-bold uppercase tracking-widest bg-clip-text text-transparent"
-                      style={{ backgroundImage: "linear-gradient(90deg, #fff1c1, #e6c97a, #c9a24d)" }}
-                    >
-                      Founders
-                    </span>
-                  </div>
-                  <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#c9a24d]" />
+            <div className="flex flex-col items-center">
+              <div className="flex items-center justify-center gap-3 mb-8">
+                <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#c9a24d]" />
+                <div className="inline-flex items-center gap-2">
+                  <Crown className="h-5 w-5 text-[#e6c97a]" />
+                  <span 
+                    className="text-2xl font-bold uppercase tracking-widest bg-clip-text text-transparent"
+                    style={{ backgroundImage: "linear-gradient(90deg, #fff1c1, #e6c97a, #c9a24d)" }}
+                  >
+                    Founders
+                  </span>
                 </div>
-                <div className="flex flex-wrap justify-center gap-12">
-                  {TEAM.find((g) => g.role === "Founders")?.members.map((m) => (
-                    <MemberCard key={m.name} member={m} size="lg" />
-                  ))}
-                </div>
+                <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#c9a24d]" />
               </div>
+              <div className="flex flex-wrap justify-center gap-12">
+                {TEAM.find((g) => g.role === "Founders")?.members.map((m) => (
+                  <MemberCard key={m.name} member={m} size="lg" />
+                ))}
+              </div>
+            </div>
+          </div>
 
+          {/* Co-Founders & Core Team side by side */}
+          <div className="text-center mb-16">
+            <div className="flex flex-wrap justify-center items-start gap-x-20 gap-y-12">
               {/* Co-Founders Group */}
               <div className="flex flex-col items-center">
                 <div className="flex items-center justify-center gap-3 mb-8">
@@ -391,27 +393,27 @@ const Team = () => {
                   ))}
                 </div>
               </div>
+
+              {/* Core Team Group */}
+              {coreTeam && (
+                <div className="flex flex-col items-center">
+                  <div className="flex items-center justify-center gap-3 mb-8">
+                    <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary/50" />
+                    <div className="inline-flex items-center gap-2 text-primary">
+                      {ROLE_ICON["Core Team"]}
+                      <span className="text-xl font-bold uppercase tracking-widest">Core Team</span>
+                    </div>
+                    <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary/50" />
+                  </div>
+                  <div className="flex flex-wrap justify-center gap-12">
+                    {coreTeam.members.map((m) => (
+                      <MemberCard key={m.name} member={m} size="lg" />
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
-
-          {/* Core Team */}
-          {coreTeam && (
-            <div className="text-center mb-16">
-              <div className="flex items-center justify-center gap-3 mb-8">
-                <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary/50" />
-                <div className="inline-flex items-center gap-2 text-primary">
-                  {ROLE_ICON["Core Team"]}
-                  <span className="text-xl font-bold uppercase tracking-widest">Core Team</span>
-                </div>
-                <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary/50" />
-              </div>
-              <div className="flex flex-wrap justify-center gap-16">
-                {coreTeam.members.map((m) => (
-                  <MemberCard key={m.name} member={m} size="lg" />
-                ))}
-              </div>
-            </div>
-          )}
 
           {/* Divider */}
           <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent mb-12" />
