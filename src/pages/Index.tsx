@@ -244,7 +244,7 @@ const Index = () => {
 
           {/* Closing Statement */}
           <p className="text-center text-base md:text-lg font-semibold mt-10 md:mt-12 text-muted-foreground">
-            Stand in the light. Build the system. <span className="text-primary">Ascend as a SolGod.</span>
+            Stand in the light. Build the system. <span style={{ color: "#01b2ff" }}>Ascend as a SolGod.</span>
           </p>
         </div>
       </section>
