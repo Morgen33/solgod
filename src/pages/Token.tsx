@@ -345,11 +345,11 @@ const Token = () => {
 
 function UtilityCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="text-center p-6 bg-secondary/30 rounded-xl hover:bg-secondary/50 transition-colors">
+    <GlowCard glowColor="blue" customSize className="w-full h-auto text-center p-6 hover:scale-[1.02] transition-transform">
       <div className="text-primary mb-3 flex justify-center">{icon}</div>
       <h4 className="font-semibold mb-2">{title}</h4>
       <p className="text-sm text-muted-foreground">{description}</p>
-    </div>
+    </GlowCard>
   );
 }
 
