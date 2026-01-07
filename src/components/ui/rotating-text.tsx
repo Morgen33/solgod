@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const words = ['NOTHING', 'SOMETHING', 'EVERYTHING'];
+const words = ['EVERYTHING', 'SOMETHING', 'NOTHING'];
 
 const getGradient = (word: string) => {
   if (word === 'SOMETHING') {
