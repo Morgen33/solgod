@@ -129,42 +129,48 @@ const Index = () => {
               backgroundSize: "200% 100%",
             }}
           >
-            WHY SOLGODS?
+            WHY SOL GODS
           </h2>
           <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-            A Value-First Ecosystem where digital identity meets a high-performance growth engine. We've moved beyond static art to create a system that prioritizes community outcomes and long-term sustainability.
+            SolGods is a Value-First Ecosystem where digital identity meets a high-performance growth engine. We've moved beyond static art to create a system that prioritizes community outcomes and long-term sustainability.
           </p>
 
           {/* Pillars */}
           <div className="space-y-16">
-            {/* Pillar 1: Capital Allocation Engine */}
+            {/* Pillar 1: The Sol Core Treasury */}
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <div className="p-3 rounded-xl bg-primary/10">
                   <Cog className="text-primary" size={28} />
                 </div>
-                <h3 className="text-2xl font-bold">1. The Capital Allocation Engine</h3>
+                <h3 className="text-2xl font-bold">1. The Sol Core Treasury</h3>
               </div>
               <p className="text-muted-foreground ml-14">
-                Your NFT acts as an entry point to a sophisticated treasury management system. We put the project's capital to work to ensure the ecosystem remains self-sustaining and rewarding.
+                Your SolGod is more than a profile picture; it is your entry point to a sophisticated, active treasury. We put the project's resources to work to ensure the ecosystem remains self-sustaining and constantly evolving.
               </p>
-              <div className="grid md:grid-cols-3 gap-6 ml-14">
+              <div className="grid md:grid-cols-2 gap-6 ml-14">
                 <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2 text-foreground">Active Treasury Management</h4>
-                    <p className="text-sm text-muted-foreground">We utilize strategies to grow our holdings and generate consistent value.</p>
+                    <h4 className="font-semibold mb-2 text-foreground">Active Ecosystem Management</h4>
+                    <p className="text-sm text-muted-foreground">We utilize internal strategies to grow our holdings and generate consistent, tangible value for the project.</p>
                   </div>
                 </GlowCard>
                 <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2 text-foreground">Holder Rewards</h4>
-                    <p className="text-sm text-muted-foreground">Realized growth is distributed back to our community through regular quarterly airdrops.</p>
+                    <h4 className="font-semibold mb-2 text-foreground">Engagement-Led Rewards</h4>
+                    <p className="text-sm text-muted-foreground">We believe in rewarding those who build the culture. Through our Discord Chat-to-Earn systems and Raid-to-Reward bounties, active members are directly incentivized for their contributions.</p>
                   </div>
                 </GlowCard>
                 <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2 text-foreground">Automatic Scaling</h4>
-                    <p className="text-sm text-muted-foreground">By reinvesting a portion of our gains, we constantly increase the treasury's power, aiming for larger rewards over time.</p>
+                    <h4 className="font-semibold mb-2 text-foreground">Exclusive Holder Perks</h4>
+                    <p className="text-sm text-muted-foreground">Membership has its privileges. Holders gain access to exclusive giveaways, high-signal alpha calls, and specialized perks reserved strictly for SolGods holders.</p>
+                  </div>
+                </GlowCard>
+                <GlowCard glowColor="blue" customSize className="w-full h-auto">
+                  <div className="flex flex-col">
+                    <h4 className="font-semibold mb-2 text-foreground">Sustainable Scaling</h4>
+                    <p className="text-sm text-muted-foreground">By reinvesting a portion of our ecosystem gains, we constantly increase the treasury's strength. As the world of Solara grows, so does the power and reach of its holders.</p>
                   </div>
                 </GlowCard>
               </div>
@@ -179,19 +185,19 @@ const Index = () => {
                 <h3 className="text-2xl font-bold">2. A Foundation of Integrity</h3>
               </div>
               <p className="text-muted-foreground ml-14">
-                We built our reputation on delivering value before asking for a single cent.
+                We built our reputation on a simple principle: Deliver value before asking for a single cent.
               </p>
               <div className="grid md:grid-cols-2 gap-6 ml-14">
                 <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
                     <h4 className="font-semibold mb-2 text-foreground">Results First</h4>
-                    <p className="text-sm text-muted-foreground">Our community thrived early on through shared strategies and growth frameworks that helped members level up their own digital presence.</p>
+                    <p className="text-sm text-muted-foreground">Our community thrived long before the mint. We established ourselves by sharing growth frameworks and strategies that helped our members level up their own digital presence and trading discipline.</p>
                   </div>
                 </GlowCard>
                 <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
                     <h4 className="font-semibold mb-2 text-foreground">Proven Performance</h4>
-                    <p className="text-sm text-muted-foreground">This "value-first" approach led to a 20x increase from our initial launch price, establishing a rock-solid foundation for our treasury.</p>
+                    <p className="text-sm text-muted-foreground">This "value-first" approach wasn't just a philosophy—it led to a 20x increase from our initial launch price. This established the rock-solid foundation for the treasury that supports the project today.</p>
                   </div>
                 </GlowCard>
               </div>
@@ -203,28 +209,36 @@ const Index = () => {
                 <div className="p-3 rounded-xl bg-primary/10">
                   <Globe className="text-primary" size={28} />
                 </div>
-                <h3 className="text-2xl font-bold">3. A Living Economy</h3>
+                <h3 className="text-2xl font-bold">3. A Living, Breathing Economy</h3>
               </div>
               <p className="text-muted-foreground ml-14">
-                From the origins of Solara to the expansion into Sol City, our ecosystem is a thriving, bustling economy. We don't exist in isolation; we collaborate across the network, integrating new assets and creating a cross-ecosystem engine that is designed to evolve, not stagnate.
+                From the ancient origins of Solara to our expansion into new frontiers, the SolGods ecosystem is a thriving, bustling economy.
               </p>
+              <div className="ml-14">
+                <GlowCard glowColor="blue" customSize className="w-full h-auto">
+                  <div className="flex flex-col">
+                    <h4 className="font-semibold mb-2 text-foreground">Collaborative Growth</h4>
+                    <p className="text-sm text-muted-foreground">We don't exist in a vacuum. We actively collaborate across the Solana network, integrating assets and building a cross-ecosystem engine designed to evolve, not stagnate.</p>
+                  </div>
+                </GlowCard>
+              </div>
             </div>
           </div>
 
           {/* The Difference */}
           <div className="mt-16 p-8 rounded-2xl bg-card/50 border border-border">
-            <h3 className="text-xl font-bold mb-6 text-center">The Difference</h3>
+            <h3 className="text-xl font-bold mb-6 text-center">The SolGods Difference</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
                 <div className="flex flex-col items-center">
                   <p className="text-muted-foreground text-sm mb-2">Static Collections</p>
-                  <p className="font-semibold">Depend entirely on the next buyer.</p>
+                  <p className="font-semibold">Depend entirely on the "next buyer" for value.</p>
                 </div>
               </GlowCard>
               <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
                 <div className="flex flex-col items-center">
                   <p className="text-primary text-sm mb-2">SolGods</p>
-                  <p className="font-semibold">Powered by a managed system designed to generate and distribute value internally.</p>
+                  <p className="font-semibold">Powered by a managed system designed to generate and distribute value internally, ensuring the sun never sets on the SOLGODs.</p>
                 </div>
               </GlowCard>
             </div>
@@ -242,19 +256,16 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 text-center">
             <div className="flex flex-col items-center">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Become a SolGod</h2>
-              <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-                Join our Discord to connect with the community, stay updated on the latest drops, and be part of the journey.
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ascend to Divinity</h2>
+              <p className="text-muted-foreground mb-4 max-w-xl mx-auto">
+                Become a SolGod. Don't just watch the system grow—help drive it. Join our Discord to secure your place in the inner circle, where the sharpest minds share the latest alpha and every member plays a part in our collective rise.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
-                  Buy SolGods
-                  <ArrowRight size={20} />
-                </ShinyButton>
-                <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
-                  Join Discord
-                </ShinyButton>
-              </div>
+              <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+                From exclusive insights to the heart of the Solara economy, the journey to ascendancy starts here.
+              </p>
+              <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+                Join Discord
+              </ShinyButton>
             </div>
           </GlowCard>
         </div>
