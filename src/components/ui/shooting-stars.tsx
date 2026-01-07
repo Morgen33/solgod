@@ -114,7 +114,7 @@ export function ShootingStars({ className = '' }: ShootingStarsProps) {
     };
 
     const scheduleNext = () => {
-      const baseInterval = 3000 + Math.random() * 3000; // 3-6 seconds
+      const baseInterval = 3000; // Fixed 3 seconds
       setTimeout(() => {
         if (starsRef.current.length < 3) {
           spawnBurst();
