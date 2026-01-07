@@ -147,25 +147,25 @@ const Index = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2 bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #ffffff, #66d9ff, #01b2ff)" }}>Active Ecosystem Management</h4>
+                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Active Ecosystem Management</h4>
                     <p className="text-muted-foreground">We utilize internal strategies to grow our holdings and generate consistent, tangible value for the project.</p>
                   </div>
                 </GlowCard>
                 <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2 bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #ffffff, #66d9ff, #01b2ff)" }}>Engagement-Led Rewards</h4>
+                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Engagement-Led Rewards</h4>
                     <p className="text-muted-foreground">We believe in rewarding those who build the culture. Through our Discord Chat-to-Earn systems and Raid-to-Reward bounties, active members are directly incentivized for their contributions.</p>
                   </div>
                 </GlowCard>
                 <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2 bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #ffffff, #66d9ff, #01b2ff)" }}>Exclusive Holder Perks</h4>
+                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Exclusive Holder Perks</h4>
                     <p className="text-muted-foreground">Membership has its privileges. Holders gain access to exclusive giveaways, high-signal alpha calls, and specialized perks reserved strictly for SolGods holders.</p>
                   </div>
                 </GlowCard>
                 <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2 bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #ffffff, #66d9ff, #01b2ff)" }}>Sustainable Scaling</h4>
+                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Sustainable Scaling</h4>
                     <p className="text-muted-foreground">By reinvesting a portion of our ecosystem gains, we constantly increase the treasury's strength. As the world of Solara grows, so does the power and reach of its holders.</p>
                   </div>
                 </GlowCard>
@@ -186,13 +186,13 @@ const Index = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2 bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #ffffff, #66d9ff, #01b2ff)" }}>Results First</h4>
+                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Results First</h4>
                     <p className="text-muted-foreground">Our community thrived long before the mint. We established ourselves by sharing growth frameworks and strategies that helped our members level up their own digital presence and trading discipline.</p>
                   </div>
                 </GlowCard>
                 <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2 bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #ffffff, #66d9ff, #01b2ff)" }}>Proven Performance</h4>
+                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Proven Performance</h4>
                     <p className="text-muted-foreground">This "value-first" approach wasn't just a philosophy—it led to a 20x increase from our initial launch price. This established the rock-solid foundation for the treasury that supports the project today.</p>
                   </div>
                 </GlowCard>
@@ -213,7 +213,7 @@ const Index = () => {
               <div>
                 <GlowCard glowColor="blue" customSize className="w-full h-auto">
                   <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2 bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #ffffff, #66d9ff, #01b2ff)" }}>Collaborative Growth</h4>
+                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Collaborative Growth</h4>
                     <p className="text-muted-foreground">We don't exist in a vacuum. We actively collaborate across the Solana network, integrating assets and building a cross-ecosystem engine designed to evolve, not stagnate.</p>
                   </div>
                 </GlowCard>
