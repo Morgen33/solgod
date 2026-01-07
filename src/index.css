@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 232 98% 23%;
+    --background: 232 98% 12%;
     --foreground: 45 10% 90%;
     
     /* Original dark background for SolCity */
