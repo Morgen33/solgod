@@ -5,6 +5,26 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import NeuralNetworkCanvas from "./neural-network-canvas";
 import gnomieHero from "@/assets/gnomie-hero.png";
+import marcusHero from "@/assets/heroes/marcus.png";
+import antlerHero from "@/assets/heroes/antler.png";
+import demonHero from "@/assets/heroes/demon.png";
+import bastetHero from "@/assets/heroes/bastet.png";
+import cyborgHero from "@/assets/heroes/cyborg.png";
+import gothicHero from "@/assets/heroes/gothic.png";
+import frostHero from "@/assets/heroes/frost.png";
+import cosmicHero from "@/assets/heroes/cosmic.png";
+
+const heroImages = [
+  gnomieHero,
+  marcusHero,
+  antlerHero,
+  demonHero,
+  bastetHero,
+  cyborgHero,
+  gothicHero,
+  frostHero,
+  cosmicHero,
+];
 
 // --- CONFIGURATION ---
 const params = {
@@ -105,6 +125,27 @@ export default function PlasmaHero({
   const [showContent, setShowContent] = useState(false);
   const [showCharacter, setShowCharacter] = useState(false);
   const [characterScale, setCharacterScale] = useState(1);
+  const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  // Cycle through heroes after character is shown
+  useEffect(() => {
+    if (!showCharacter) return;
+    
+    const cycleDuration = 4000; // 4 seconds per character
+    const fadeTime = 1500; // 1.5 second fade transition
+    
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      
+      setTimeout(() => {
+        setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length);
+        setIsTransitioning(false);
+      }, fadeTime);
+    }, cycleDuration);
+    
+    return () => clearInterval(interval);
+  }, [showCharacter]);
 
   useEffect(() => {
     const mount = mountRef.current;
@@ -419,22 +460,26 @@ export default function PlasmaHero({
       <div ref={mountRef} className="absolute inset-0 z-10" />
 
 
-      {/* Character image inside the ball */}
+      {/* Character images inside the ball - cycling with crossfade */}
       <div 
         className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
-          showCharacter ? 'opacity-20' : 'opacity-0'
+          showCharacter ? 'opacity-100' : 'opacity-0'
         }`}
         style={{ zIndex: 15 }}
       >
-        <img 
-          src={gnomieHero} 
-          alt="SolGod" 
-          className="w-[55vmin] h-auto max-w-[450px] object-contain mix-blend-screen transition-transform duration-100"
-          style={{
-            transform: `scale(${characterScale})`,
-            filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
-          }}
-        />
+        {heroImages.map((heroSrc, index) => (
+          <img 
+            key={index}
+            src={heroSrc} 
+            alt={`SolGod ${index + 1}`} 
+            className="absolute w-[55vmin] h-auto max-w-[450px] object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
+            style={{
+              transform: `scale(${characterScale})`,
+              filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
+              opacity: currentHeroIndex === index && !isTransitioning ? 0.2 : 0,
+            }}
+          />
+        ))}
       </div>
 
 
