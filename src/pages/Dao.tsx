@@ -333,21 +333,20 @@ const Dao = () => {
               <h3 className="text-3xl font-bold">DO GOOD DAO (DGD)</h3>
             </div>
             
-            <p className="text-muted-foreground mb-4">
-              If you're holding one of these traits on your Sol God, you are officially eligible to join Do Good DAO (DGD):
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {["Pixel Puppy", "Strawhat"].map((trait) => (
-                <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
-                  {trait}
-                </span>
-              ))}
-            </div>
-            
             <div className="bg-blue/10 border border-blue/20 rounded-xl p-6 mb-6">
               <h4 className="font-bold mb-3 text-blue-light">We Accept Every Trait</h4>
+              <p className="text-sm text-muted-foreground mb-4">
+                Our main traits are:
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["Pixel Puppy", "Strawhat"].map((trait) => (
+                  <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
+                    {trait}
+                  </span>
+                ))}
+              </div>
               <p className="text-sm text-muted-foreground">
-                Because doing good is for everyone.
+                But we accept every trait, because doing good is for everyone.
               </p>
             </div>
             
