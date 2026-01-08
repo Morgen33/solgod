@@ -185,6 +185,18 @@ export function Header() {
               currentPath={location.pathname} 
             />
 
+            {/* Gallery */}
+            <Link
+              to="/gallery"
+              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                location.pathname === "/gallery"
+                  ? "text-primary bg-primary/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+              }`}
+            >
+              Gallery
+            </Link>
+
             {/* Team */}
             <Link
               to="/team"
@@ -317,6 +329,19 @@ export function Header() {
                   </Link>
                 )
               ))}
+
+              {/* Gallery */}
+              <Link
+                to="/gallery"
+                onClick={() => setMobileOpen(false)}
+                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                  location.pathname === "/gallery"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                Gallery
+              </Link>
 
               {/* Team */}
               <Link
