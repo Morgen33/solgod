@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Users, Sparkles, Heart } from "lucide-react";
-import { FaDiscord, FaXTwitter } from "react-icons/fa6";
 import { GlowCard } from "@/components/ui/spotlight-card";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 const Partnerships = () => {
   return (
@@ -71,24 +71,12 @@ const Partnerships = () => {
               At SolGods, we don't just build projects; we build movements. If your vision aligns with ours, we'd love to explore how we can elevate the space together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://discord.gg/nfts" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#5865F2] hover:bg-[#4752C4] text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(88,101,242,0.5)]"
-              >
-                <FaDiscord size={20} />
+              <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
                 Join Discord
-              </a>
-              <a 
-                href="https://x.com/SOLGodsNFTs" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground hover:bg-foreground/80 text-background font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
-              >
-                <FaXTwitter size={18} />
+              </ShinyButton>
+              <ShinyButton as="a" href="https://x.com/SOLGodsNFTs" target="_blank" rel="noopener noreferrer">
                 Follow on X
-              </a>
+              </ShinyButton>
             </div>
           </div>
         </div>
