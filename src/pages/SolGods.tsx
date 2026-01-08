@@ -6,7 +6,6 @@ import {
   ArrowRight, Search, BarChart3, CheckSquare
 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
-import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 
 const iconContainerStyle = {
@@ -71,7 +70,7 @@ export default function SolGods() {
         <div className="max-w-6xl mx-auto space-y-8">
           
           {/* Staking & Rewards */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8">
             <div className="flex gap-4">
               <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
                 <Zap style={iconStyle} size={28} />
@@ -83,10 +82,10 @@ export default function SolGods() {
                 </p>
               </div>
             </div>
-          </GlowCard>
+          </div>
 
           {/* The Collection: 140+ Traits */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8">
             <div className="flex gap-4">
               <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
                 <Palette style={iconStyle} size={28} />
@@ -98,10 +97,10 @@ export default function SolGods() {
                 </p>
               </div>
             </div>
-          </GlowCard>
+          </div>
 
           {/* The Elite: Ten Legendary 1/1s */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8">
             <div className="flex gap-4">
               <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
                 <Trophy style={iconStyle} size={28} />
@@ -123,10 +122,10 @@ export default function SolGods() {
                 </ul>
               </div>
             </div>
-          </GlowCard>
+          </div>
 
           {/* Starter Gods */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8">
             <div className="flex gap-4">
               <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
                 <Sprout style={iconStyle} size={28} />
@@ -138,10 +137,10 @@ export default function SolGods() {
                 </p>
               </div>
             </div>
-          </GlowCard>
+          </div>
 
           {/* Governance: The 5 DAOs Within */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8">
             <div className="flex gap-4">
               <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
                 <Building style={iconStyle} size={28} />
@@ -167,7 +166,7 @@ export default function SolGods() {
                 </ul>
               </div>
             </div>
-          </GlowCard>
+          </div>
         </div>
       </section>
 
@@ -194,7 +193,7 @@ export default function SolGods() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* How to Filter by Traits */}
-            <GlowCard glowColor="blue" customSize className="w-full h-auto">
+            <div className="bg-secondary/50 border border-border rounded-2xl p-8">
               <div className="flex gap-4">
                 <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
                   <Search style={iconStyle} size={28} />
@@ -218,10 +217,10 @@ export default function SolGods() {
                   </ol>
                 </div>
               </div>
-            </GlowCard>
+            </div>
 
             {/* Trait Analytics & Market Research */}
-            <GlowCard glowColor="blue" customSize className="w-full h-auto">
+            <div className="bg-secondary/50 border border-border rounded-2xl p-8">
               <div className="flex gap-4">
                 <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
                   <BarChart3 style={iconStyle} size={28} />
@@ -243,12 +242,12 @@ export default function SolGods() {
                   </ul>
                 </div>
               </div>
-            </GlowCard>
+            </div>
           </div>
 
           {/* Summary Checklist */}
           <div className="mt-8">
-            <GlowCard glowColor="blue" customSize className="w-full h-auto">
+            <div className="bg-secondary/50 border border-border rounded-2xl p-8">
               <div className="flex gap-4">
                 <div className="p-3 rounded-xl h-fit" style={iconContainerStyle}>
                   <CheckSquare style={iconStyle} size={28} />
@@ -271,7 +270,7 @@ export default function SolGods() {
                   </ul>
                 </div>
               </div>
-            </GlowCard>
+            </div>
           </div>
         </div>
       </section>
@@ -279,7 +278,7 @@ export default function SolGods() {
       {/* Understanding Rarity Rankings Section */}
       <section className="py-24 px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 sm:p-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-center" style={{ color: "#01b2ff" }}>Understanding Rarity Rankings</h2>
             <p className="text-lg text-muted-foreground text-center mb-8">
               Why NFT Trait Percentages Are Reliable on Magic Eden, But Overall Ranks May Not Be
@@ -344,14 +343,14 @@ export default function SolGods() {
                 <p className="text-muted-foreground mt-2">Judge rarity by percentages and the art, not the rank.</p>
               </div>
             </div>
-          </GlowCard>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-24 px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 text-center">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 sm:p-12 text-center">
             <div className="flex flex-col items-center">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: "#01b2ff" }}>Ready to Ascend?</h2>
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
@@ -369,7 +368,7 @@ export default function SolGods() {
                 </Link>
               </div>
             </div>
-          </GlowCard>
+          </div>
         </div>
       </section>
     </Layout>

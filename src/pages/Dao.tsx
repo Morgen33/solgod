@@ -1,7 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Users, ExternalLink, Crown, Sparkles, Heart, Wand2, Shield } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
-import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import wingsDaoLogo from "@/assets/wings-dao-logo.png";
 import mafiaDaoLogo from "@/assets/mafia-dao-logo.png";
@@ -71,7 +70,7 @@ const Dao = () => {
             What is an NFT DAO?
           </h2>
           
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-8">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 sm:p-12 mb-8">
             <p className="text-lg text-muted-foreground text-center mb-8">
               Think of an NFT DAO as a digital city-state where the "citizens" (you, the holders) are the bosses. 
               Instead of a traditional company with a CEO making all the calls, a DAO uses blockchain technology 
@@ -95,7 +94,7 @@ const Dao = () => {
                 <p className="text-sm text-muted-foreground">Your SolGods NFT acts as your "Governance Token"—it's your voting chip, your membership card.</p>
               </div>
             </div>
-          </GlowCard>
+          </div>
         </div>
       </section>
 
@@ -134,7 +133,7 @@ const Dao = () => {
       {/* Wizard Cabal */}
       <section id="wizard-cabal" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-5xl mx-auto">
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
               <img src={wizardCabalLogo} alt="Wizard Cabal" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">The Wizard Cabal</h3>
@@ -187,14 +186,14 @@ const Dao = () => {
                 </a>
               </div>
             </div>
-          </GlowCard>
+          </div>
         </div>
       </section>
 
       {/* Wings DAO */}
       <section id="wings-dao" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-5xl mx-auto">
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
               <img src={wingsDaoLogo} alt="Wings SG DAO" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">Wings SG DAO</h3>
@@ -271,14 +270,14 @@ const Dao = () => {
                 </a>
               </div>
             </div>
-          </GlowCard>
+          </div>
         </div>
       </section>
 
       {/* Mafia DAO */}
       <section id="mafia-dao" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-5xl mx-auto">
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
               <img src={mafiaDaoLogo} alt="Mafia DAO" className="h-32 sm:h-40 w-auto" />
               <h3 className="text-3xl font-bold">MAFIA DAO</h3>
@@ -365,14 +364,14 @@ const Dao = () => {
                 </a>
               </div>
             </div>
-          </GlowCard>
+          </div>
         </div>
       </section>
 
       {/* Do Good DAO */}
       <section id="do-good-dao" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-5xl mx-auto">
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
               <img src={doGoodDaoLogo} alt="Do Good DAO" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">DO GOOD DAO (DGD)</h3>
@@ -453,14 +452,14 @@ const Dao = () => {
             </div>
             
             <p className="text-blue-light font-medium">Ready to be part of something meaningful? Open a ticket and let's get you onboarded.</p>
-          </GlowCard>
+          </div>
         </div>
       </section>
 
       {/* Pantheon Circle */}
       <section id="pantheon-circle" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-5xl mx-auto">
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
               <img src={pantheonCircleLogo} alt="Pantheon Circle" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">The Pantheon Circle</h3>
@@ -528,14 +527,14 @@ const Dao = () => {
               Join us as we ascend to the next level of community governance and prestige!
             </p>
             
-          </GlowCard>
+          </div>
         </div>
       </section>
 
       {/* Starter Gods Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: "#01b2ff" }}>
               Interested in joining the community?
             </h2>
@@ -584,7 +583,7 @@ const Dao = () => {
                 <ExternalLink size={20} />
               </ShinyButton>
             </div>
-          </GlowCard>
+          </div>
         </div>
       </section>
     </Layout>
