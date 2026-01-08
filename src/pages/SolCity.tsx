@@ -46,9 +46,9 @@ const tableOfContents = [{
 const SolCity = () => {
   return <Layout className="bg-solcity" showStars>
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center justify-center px-4">
+      <section className="min-h-[60vh] flex items-center justify-center px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="mb-16" style={{
+          <div className="mb-8" style={{
           animation: "fade-in 0.8s ease-out forwards"
         }}>
             <img src={solcityLogo} alt="SolCity" className="w-64 sm:w-80 md:w-96 mx-auto" />
@@ -59,7 +59,7 @@ const SolCity = () => {
       </section>
 
       {/* About SolCity Section */}
-      <section className="py-24 px-4">
+      <section className="py-12 px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6 bg-clip-text text-transparent animate-gradient-flow" style={{
             backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
