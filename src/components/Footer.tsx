@@ -29,7 +29,7 @@ export function Footer() {
               <img src={solgodsIcon} alt="SolGods" className="h-16 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground">
-              An NFT collective on Solana.
+              Stand in the light. Build the system. Ascend as a SolGod.
             </p>
           </div>
 
