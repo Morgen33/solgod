@@ -29,6 +29,7 @@ import happyBackAvatar from "@/assets/team/happy-back.png";
 import rasiAvatar from "@/assets/team/rasi.webp";
 import soniaAvatar from "@/assets/team/sonia.jpg";
 import daverAvatar from "@/assets/team/daver.jpg";
+import astaBackAvatar from "@/assets/team/asta-back.png";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -159,6 +160,7 @@ const MEMBER_BACK_AVATARS: Record<string, string> = {
   Happy: happyAvatar,
   Auskyn: auskynBackAvatar,
   Mister: misterBackAvatar,
+  Asta: astaBackAvatar,
 };
 
 const AVATAR_COLORS = [
