@@ -254,7 +254,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-6 sm:p-8 md:p-12 text-center">
             <div className="flex flex-col items-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ascend to Divinity</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" style={{ color: "#2d5fbd" }}>Ascend to Divinity</h2>
               <p className="text-muted-foreground mb-4 max-w-xl mx-auto text-sm md:text-base">
                 Become a SolGod. Don't just watch the system grow—help drive it. Join our Discord to secure your place in the inner circle, where the sharpest minds share the latest alpha and every member plays a part in our collective rise.
               </p>
