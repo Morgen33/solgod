@@ -40,7 +40,7 @@ const Spaces = () => {
             </h2>
             <div className="grid gap-4">
               {upcomingSpaces.map((space) => (
-                <div key={space.title} className="card-glow rounded-xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div key={space.title} className="bg-secondary/50 border border-border rounded-xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div>
                     <h3 className="text-lg font-bold">{space.title}</h3>
                     <p className="text-muted-foreground text-sm">{space.date} • Hosted by {space.host}</p>
@@ -62,7 +62,7 @@ const Spaces = () => {
             </h2>
             <div className="grid sm:grid-cols-3 gap-6">
               {pastSpaces.map((space) => (
-                <div key={space.title} className="card-glow rounded-xl p-6 hover:scale-105 transition-transform cursor-pointer">
+                <div key={space.title} className="bg-secondary/50 border border-border rounded-xl p-6 hover:scale-105 transition-transform cursor-pointer">
                   <h3 className="font-bold mb-2">{space.title}</h3>
                   <p className="text-sm text-muted-foreground mb-3">{space.date}</p>
                   <div className="flex items-center gap-2 text-primary text-sm">
@@ -75,7 +75,7 @@ const Spaces = () => {
           </div>
 
           {/* Twitter CTA */}
-          <div className="card-glow rounded-2xl p-8 sm:p-12 text-center">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 sm:p-12 text-center">
             <h2 className="text-3xl font-bold mb-4">Never Miss a Space</h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
               Follow us on Twitter and turn on notifications to get alerts for all our Spaces.

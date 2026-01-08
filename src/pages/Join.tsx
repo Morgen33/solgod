@@ -1,5 +1,4 @@
 import { Layout } from "@/components/Layout";
-import { GlowCard } from "@/components/ui/spotlight-card";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { ArrowRight, Users, Eye, MessageCircle, Sparkles, Shield, Zap, Crown } from "lucide-react";
 import solgodsIcon from "@/assets/solgods-icon.png";
@@ -54,7 +53,7 @@ const Join = () => {
           </div>
 
           {/* Text content in card */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-6 sm:p-8">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-6 sm:p-8">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Not everyone walks in holding a Genesis SolGod — and that's the point.
@@ -148,7 +147,7 @@ const Join = () => {
                 </ShinyButton>
               </div>
             </div>
-          </GlowCard>
+          </div>
         </div>
       </section>
 
@@ -173,7 +172,7 @@ const Join = () => {
             <p className="text-xl text-muted-foreground">When you're ready to move past the starter phase, this is the next step.</p>
           </div>
 
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-10">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 sm:p-10">
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Owning a Genesis SolGod NFT is how you officially step into the full SolGods experience. Genesis holders aren't just in the Discord — they're part of the core. This is where access deepens, opportunities open up, and your presence actually carries weight.
             </p>
@@ -248,7 +247,7 @@ const Join = () => {
                 <ArrowRight size={20} />
               </ShinyButton>
             </div>
-          </GlowCard>
+          </div>
         </div>
       </section>
     </Layout>

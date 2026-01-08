@@ -2,7 +2,6 @@ import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
 import { TrendingUp, Lock, Sparkles, Zap, Shield, AlertTriangle, Wallet, ArrowRight, CheckCircle, ExternalLink, BookOpen, Coins, Gift, Droplets, Rocket } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
-import { GlowCard } from "@/components/ui/spotlight-card";
 
 const Token = () => {
   return (
@@ -41,7 +40,7 @@ const Token = () => {
           </div>
 
           {/* Core Utility Section */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto mb-12">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 mb-12">
             <h2 className="text-3xl font-bold mb-4 text-center" style={{ color: "#2053db" }}>Core Utility & Benefits</h2>
             <p className="text-muted-foreground text-center mb-8">$SOLGODS is designed to provide tangible value to active participants:</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -51,10 +50,10 @@ const Token = () => {
               <UtilityCard icon={<Droplets size={24} />} title="Liquidity & Trading" description="Provide liquidity or trade seamlessly on-chain." />
               <UtilityCard icon={<Rocket size={24} />} title="Future-Ready Access" description="Gain early entry to new features as the roadmap evolves." />
             </div>
-          </GlowCard>
+          </div>
 
           {/* How to Buy Section */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto mb-12">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 mb-12">
             <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: "#2053db" }}>How to Buy $SOLGODS</h2>
             <p className="text-muted-foreground text-center mb-8">Follow these six steps to join the SolCity economy.</p>
             <div className="grid gap-4">
@@ -65,11 +64,11 @@ const Token = () => {
               <StepRow step={5} action="Swap Assets" details="Input the amount of $SOL you wish to exchange and select $SOLGODS." />
               <StepRow step={6} action="Confirm" details="Approve the transaction in your Phantom pop-up. Welcome to SolCity!" />
             </div>
-          </GlowCard>
+          </div>
 
           {/* Security Section */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <GlowCard glowColor="orange" customSize className="w-full h-auto">
+            <div className="bg-secondary/50 border border-orange-500/30 rounded-2xl p-8">
               <div className="flex flex-col">
                 <div className="flex items-center gap-3 mb-4">
                   <AlertTriangle className="text-yellow-500" size={28} />
@@ -86,8 +85,8 @@ const Token = () => {
                   </li>
                 </ul>
               </div>
-            </GlowCard>
-            <GlowCard glowColor="red" customSize className="w-full h-auto">
+            </div>
+            <div className="bg-secondary/50 border border-red-500/30 rounded-2xl p-8">
               <div className="flex flex-col">
                 <div className="flex items-center gap-3 mb-4">
                   <AlertTriangle className="text-red-500" size={28} />
@@ -100,7 +99,7 @@ const Token = () => {
                   We strongly advise you to <strong>Do Your Own Research (DYOR)</strong> before participating. Never invest more than you are willing to lose.
                 </p>
               </div>
-            </GlowCard>
+            </div>
           </div>
 
           {/* Quote */}
@@ -109,7 +108,7 @@ const Token = () => {
           </blockquote>
 
           {/* Introduction to Crypto Section */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto mb-12">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 mb-12">
             <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: "#2053db" }}>Introduction to Crypto and NFTs</h2>
             
             <div className="space-y-12">
@@ -248,10 +247,10 @@ const Token = () => {
                 </div>
               </div>
             </div>
-          </GlowCard>
+          </div>
 
           {/* Ready to Start CTA */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto mb-12 text-center">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 mb-12 text-center">
             <Rocket className="text-primary mx-auto mb-4" size={48} />
             <h2 className="text-3xl font-bold mb-4" style={{ color: "#2053db" }}>Ready to Start?</h2>
             <p className="text-muted-foreground mb-6">The best way to learn is by doing.</p>
@@ -263,10 +262,10 @@ const Token = () => {
                 Follow on X <ExternalLink size={16} />
               </ShinyButton>
             </div>
-          </GlowCard>
+          </div>
 
           {/* Crypto Safety Section */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto mb-12">
+          <div className="bg-secondary/50 border border-border rounded-2xl p-8 mb-12">
             <div className="flex items-center justify-center gap-3 mb-8">
               <Shield className="text-primary" size={32} />
               <h2 className="text-3xl font-bold" style={{ color: "#2053db" }}>Crypto Safety: Rules of the Digital Jungle</h2>
@@ -325,7 +324,7 @@ const Token = () => {
                 </ul>
               </div>
             </div>
-          </GlowCard>
+          </div>
 
           {/* Final Disclaimer */}
           <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6 text-center">

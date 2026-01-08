@@ -1,6 +1,5 @@
 import { Layout } from "@/components/Layout";
 import { Users, Sparkles, Heart } from "lucide-react";
-import { GlowCard } from "@/components/ui/spotlight-card";
 import { ShinyButton } from "@/components/ui/shiny-button";
 
 const Partnerships = () => {
@@ -29,7 +28,7 @@ const Partnerships = () => {
             </p>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
+              <div className="bg-secondary/50 border border-border rounded-2xl p-6 text-center">
                 <div className="flex flex-col items-center">
                   <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
                     <Users className="text-primary" size={28} />
@@ -39,8 +38,8 @@ const Partnerships = () => {
                     Engaging our audiences through high-energy, shared activations.
                   </p>
                 </div>
-              </GlowCard>
-              <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
+              </div>
+              <div className="bg-secondary/50 border border-border rounded-2xl p-6 text-center">
                 <div className="flex flex-col items-center">
                   <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
                     <Sparkles className="text-primary" size={28} />
@@ -50,8 +49,8 @@ const Partnerships = () => {
                     Developing unique digital or physical touchpoints that resonate with our holders.
                   </p>
                 </div>
-              </GlowCard>
-              <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
+              </div>
+              <div className="bg-secondary/50 border border-border rounded-2xl p-6 text-center">
                 <div className="flex flex-col items-center">
                   <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
                     <Heart className="text-primary" size={28} />
@@ -61,7 +60,7 @@ const Partnerships = () => {
                     Building a long-term framework for resource sharing and cross-promotion.
                   </p>
                 </div>
-              </GlowCard>
+              </div>
             </div>
           </div>
 
