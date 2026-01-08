@@ -12,6 +12,8 @@ import darkQueenHero from "@/assets/heroes/dark-queen.png";
 import bastetNewHero from "@/assets/heroes/bastet-new.png";
 import oniHero from "@/assets/heroes/oni.png";
 import cosmicKingHero from "@/assets/heroes/cosmic-king.png";
+import waterDemonHero from "@/assets/heroes/water-demon.png";
+import shivaHero from "@/assets/heroes/shiva.png";
 
 const heroImages = [
   athenaHero,
@@ -21,6 +23,8 @@ const heroImages = [
   bastetNewHero,
   oniHero,
   cosmicKingHero,
+  waterDemonHero,
+  shivaHero,
 ];
 
 // --- CONFIGURATION ---
