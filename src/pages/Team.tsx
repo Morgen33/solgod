@@ -27,6 +27,7 @@ import happyAvatar from "@/assets/team/happy.jpg";
 import happyBackAvatar from "@/assets/team/happy-back.png";
 import rasiAvatar from "@/assets/team/rasi.webp";
 import soniaAvatar from "@/assets/team/sonia.jpg";
+import daverAvatar from "@/assets/team/daver.jpg";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -109,7 +110,7 @@ const TEAM: TeamGroup[] = [
       { name: "Sonia", note: "Moderator" },
       { name: "Woolfie", note: "Moderator" },
       { name: "KMAC", note: "Moderator" },
-      { name: "Daver", note: "Moderator" },
+      { name: "DaveR", note: "Moderator" },
     ],
   },
 ];
@@ -143,6 +144,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   Rasi: rasiAvatar,
   Happy: happyBackAvatar,
   Sonia: soniaAvatar,
+  DaveR: daverAvatar,
 };
 
 // Back images for flippable cards (add more as needed)
