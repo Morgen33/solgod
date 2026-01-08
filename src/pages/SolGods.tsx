@@ -26,7 +26,7 @@ export default function SolGods() {
     <Layout>
       <Seo 
         title="SolGods - 3,333 Divine Beings on Solana" 
-        description="Discover the SolGods collection: 3,333 uniquely crafted divine beings across 10 Celestial Orders. Not just NFTs — yield-bearing digital identities powered by Sol City."
+        description="Discover the SolGods collection: 3,333 uniquely crafted divine beings across 10 Celestial Orders. Not just NFTs — yield-bearing digital identities powered by SolCity."
         canonicalPath="/solgods"
       />
       
@@ -79,7 +79,7 @@ export default function SolGods() {
               <div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: subtitleColor }}>Staking & Rewards</h3>
                 <p className="text-muted-foreground">
-                  Don't just hold—ascend. You can stake your SolGods to secure your place in the ecosystem. Staking isn't just about commitment; it's the primary way to power up your assets and gain access to exclusive rewards and future distributions from the Sol City economy.
+                  Don't just hold—ascend. You can stake your SolGods to secure your place in the ecosystem. Staking isn't just about commitment; it's the primary way to power up your assets and gain access to exclusive rewards and future distributions from the SolCity economy.
                 </p>
               </div>
             </div>

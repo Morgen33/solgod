@@ -370,7 +370,7 @@ const Team = () => {
               The Architects of Ascendancy
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-              Before the first portal was opened, there were those who channeled the Sol Core to build the foundation. The SolGods staff is more than a team; we are the stewards of Solara and the engineers of Sol City. From the depths of the trenches to the heights of the celestial orders, our mission is to ensure every member of this Sacred Accord has the tools to ascend. Meet the builders behind the light.
+              Before the first portal was opened, there were those who channeled the Sol Core to build the foundation. The SolGods staff is more than a team; we are the stewards of Solara and the engineers of SolCity. From the depths of the trenches to the heights of the celestial orders, our mission is to ensure every member of this Sacred Accord has the tools to ascend. Meet the builders behind the light.
             </p>
           </div>
         </div>

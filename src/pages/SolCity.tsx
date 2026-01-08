@@ -58,23 +58,23 @@ const SolCity = () => {
         </div>
       </section>
 
-      {/* About Sol City Section */}
+      {/* About SolCity Section */}
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6 bg-clip-text text-transparent animate-gradient-flow" style={{
             backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
             backgroundSize: "200% 100%"
           }}>
-            About Sol City
+            About SolCity
           </h2>
           <p className="text-xl text-center text-muted-foreground mb-12">The Evolution of the Ecosystem</p>
           
           <div className="card-glow rounded-xl p-8 mb-12">
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Following the success of our genesis collection, SolGods, we are proud to introduce Sol City—a high-end expansion that moves beyond traditional digital collectibles. While SolGods laid the foundation of our community, Sol City is engineered to push the boundaries of NFT utility on the Solana blockchain.
+              Following the success of our genesis collection, SolGods, we are proud to introduce SolCity—a high-end expansion that moves beyond traditional digital collectibles. While SolGods laid the foundation of our community, SolCity is engineered to push the boundaries of NFT utility on the Solana blockchain.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Sol City is a masterfully crafted collection of 5,555 pixel art NFTs. This is not just a PFP; it is a sophisticated asset participation model where your art works for you.
+              SolCity is a masterfully crafted collection of 5,555 pixel art NFTs. This is not just a PFP; it is a sophisticated asset participation model where your art works for you.
             </p>
             
             <h3 className="text-2xl font-bold mb-4" style={{ color: "#2053db" }}>The Collection at a Glance</h3>
@@ -85,11 +85,11 @@ const SolCity = () => {
             </ul>
           </div>
 
-          {/* Why Choose Sol City */}
+          {/* Why Choose SolCity */}
           <div className="card-glow rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-6" style={{ color: "#2053db" }}>Why Choose Sol City?</h3>
+            <h3 className="text-2xl font-bold mb-6" style={{ color: "#2053db" }}>Why Choose SolCity?</h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              In a market often driven by speculation, Sol City stands apart by prioritizing systematic performance over floor price hype. When you hold a Sol City NFT, you aren't just holding art; you are holding a stake in an active economic engine.
+              In a market often driven by speculation, SolCity stands apart by prioritizing systematic performance over floor price hype. When you hold a SolCity NFT, you aren't just holding art; you are holding a stake in an active economic engine.
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -125,7 +125,7 @@ const SolCity = () => {
                   <h4 className="text-lg font-semibold" style={{ color: "#2053db" }}>3. A Compounding Ecosystem</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Sol City is designed for the long term. A portion of all generated profits (20%) is systematically reinvested back into the engine, growing the capital base and aiming to increase future rewards for every holder.
+                  SolCity is designed for the long term. A portion of all generated profits (20%) is systematically reinvested back into the engine, growing the capital base and aiming to increase future rewards for every holder.
                 </p>
               </div>
               
@@ -187,7 +187,7 @@ const SolCity = () => {
             
             <h4 className="text-xl font-semibold mb-4">Overview</h4>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Sol City's economic engine is designed to operate as a hybrid between a digitally-native capital allocation framework and an NFT-powered performance participation model. The collection is structured to generate sustained ecosystem outputs through diversified trading strategies, liquidity provisioning mechanisms, compounding cycles, and controlled treasury expansion.
+              SolCity's economic engine is designed to operate as a hybrid between a digitally-native capital allocation framework and an NFT-powered performance participation model. The collection is structured to generate sustained ecosystem outputs through diversified trading strategies, liquidity provisioning mechanisms, compounding cycles, and controlled treasury expansion.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Holders receive periodic on-chain distributions derived from system performance, while a portion of generated outputs is systematically redeployed to support sustainability, long-term scalability, and future growth cycles.
@@ -343,7 +343,7 @@ const SolCity = () => {
               <li>Internal Treasury - Operations: 272.2 SOL</li>
             </ul>
             <p className="text-muted-foreground mb-8">
-              Quarterly profits of 25.51875 SOL will go to the Internal Treasury, plus an Experiments/R&D pool of 51.0375 SOL per quarter to test new models, products, or mechanisms for Sol City. Each treasury segment serves a distinct purpose and is not interchangeable.
+              Quarterly profits of 25.51875 SOL will go to the Internal Treasury, plus an Experiments/R&D pool of 51.0375 SOL per quarter to test new models, products, or mechanisms for SolCity. Each treasury segment serves a distinct purpose and is not interchangeable.
             </p>
 
             <h4 className="text-xl font-semibold mb-4">Summary Sheet</h4>
@@ -542,9 +542,9 @@ const SolCity = () => {
 
             <div className="space-y-8">
               <div className="bg-secondary/30 rounded-lg p-6">
-                <h4 className="text-xl font-semibold mb-4">Option 1: Sol City in a Nutshell</h4>
+                <h4 className="text-xl font-semibold mb-4">Option 1: SolCity in a Nutshell</h4>
                 <p className="text-muted-foreground mb-4">
-                  Sol City is a hybrid investment project where holding an NFT gives you automatic participation in a Capital Allocation Engine on the Solana blockchain.
+                  SolCity is a hybrid investment project where holding an NFT gives you automatic participation in a Capital Allocation Engine on the Solana blockchain.
                 </p>
                 <ol className="list-decimal list-inside text-muted-foreground space-y-2">
                   <li><strong className="text-foreground">Your NFT is your stake:</strong> When you buy an NFT, your money is pooled and put to work.</li>
@@ -557,7 +557,7 @@ const SolCity = () => {
               <div className="bg-secondary/30 rounded-lg p-6">
                 <h4 className="text-xl font-semibold mb-4">Option 2: The Perpetual Income Machine</h4>
                 <p className="text-muted-foreground mb-4">
-                  Sol City NFTs serve as utility tokens, providing holders with a stake in the direction and success of the project's strategic treasury.
+                  SolCity NFTs serve as utility tokens, providing holders with a stake in the direction and success of the project's strategic treasury.
                 </p>
                 
                 <h5 className="font-semibold mt-4 mb-2">1. The Fuel (Mint)</h5>
@@ -581,7 +581,7 @@ const SolCity = () => {
               <div className="bg-secondary/30 rounded-lg p-6">
                 <h4 className="text-xl font-semibold mb-4">Option 3: Economic Model Overview</h4>
                 <p className="text-muted-foreground mb-4">
-                  Sol City is designed to function as a hybrid economic engine that combines the operational principles of a trading fund with an NFT-based asset participation model.
+                  SolCity is designed to function as a hybrid economic engine that combines the operational principles of a trading fund with an NFT-based asset participation model.
                 </p>
 
                 <h5 className="font-semibold mt-4 mb-2">Economic Goals</h5>
@@ -610,7 +610,7 @@ const SolCity = () => {
               <div>
                 <h5 className="font-semibold text-foreground mb-2">Market Risk & Volatility</h5>
                 <p>
-                  Participation in the Sol City ecosystem is subject to substantial market risk. Digital asset markets, including cryptocurrencies and related financial instruments, are inherently volatile and unpredictable. Prices may fluctuate rapidly due to market conditions, liquidity shifts, regulatory developments, macroeconomic factors, and other variables beyond the control of the Sol City team.
+                  Participation in the SolCity ecosystem is subject to substantial market risk. Digital asset markets, including cryptocurrencies and related financial instruments, are inherently volatile and unpredictable. Prices may fluctuate rapidly due to market conditions, liquidity shifts, regulatory developments, macroeconomic factors, and other variables beyond the control of the SolCity team.
                 </p>
               </div>
 
@@ -624,21 +624,21 @@ const SolCity = () => {
               <div>
                 <h5 className="font-semibold text-foreground mb-2">No Investment Advice / No Offer of Securities</h5>
                 <p>
-                  Nothing contained in this document constitutes financial advice, investment advice, trading advice, legal or tax advice, or an offer or solicitation to buy securities or regulated financial products. Sol City NFTs are not securities, investment contracts, equity interests, shares, derivatives, or any form of regulated financial instrument.
+                  Nothing contained in this document constitutes financial advice, investment advice, trading advice, legal or tax advice, or an offer or solicitation to buy securities or regulated financial products. SolCity NFTs are not securities, investment contracts, equity interests, shares, derivatives, or any form of regulated financial instrument.
                 </p>
               </div>
 
               <div>
                 <h5 className="font-semibold text-foreground mb-2">Experimental & Non-Custodial Nature</h5>
                 <p>
-                  Sol City is an experimental, digitally-native economic model. Participation involves untested mechanisms, smart contract dependencies, and evolving market dynamics. Sol City does not act as a licensed asset manager, investment advisor, broker or dealer, or custodian or fiduciary.
+                  SolCity is an experimental, digitally-native economic model. Participation involves untested mechanisms, smart contract dependencies, and evolving market dynamics. SolCity does not act as a licensed asset manager, investment advisor, broker or dealer, or custodian or fiduciary.
                 </p>
               </div>
 
               <div>
                 <h5 className="font-semibold text-foreground mb-2">Assumption of Risk</h5>
                 <p>
-                  By participating in the Sol City ecosystem, you acknowledge and accept that digital assets carry inherent financial risk, loss of capital is possible, and outcomes may deviate substantially from projections. You should not commit funds you are not prepared to lose entirely.
+                  By participating in the SolCity ecosystem, you acknowledge and accept that digital assets carry inherent financial risk, loss of capital is possible, and outcomes may deviate substantially from projections. You should not commit funds you are not prepared to lose entirely.
                 </p>
               </div>
 
@@ -651,7 +651,7 @@ const SolCity = () => {
 
               <div className="bg-destructive/10 rounded-lg p-4 mt-6">
                 <p className="font-semibold text-foreground">
-                  Sol City is designed for informed participants who understand the risks associated with digital assets, experimental economic systems, and evolving market structures. Participation is voluntary and undertaken at the sole discretion and responsibility of each individual.
+                  SolCity is designed for informed participants who understand the risks associated with digital assets, experimental economic systems, and evolving market structures. Participation is voluntary and undertaken at the sole discretion and responsibility of each individual.
                 </p>
               </div>
             </div>
