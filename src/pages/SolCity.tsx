@@ -54,10 +54,9 @@ const SolCity = () => {
             <img src={solcityLogo} alt="SolCity" className="w-64 sm:w-80 md:w-96 mx-auto" />
             <div className="flex items-center justify-center gap-2 mt-4 text-2xl sm:text-3xl md:text-4xl font-bold">
               <span 
-                className="bg-clip-text text-transparent animate-gradient-flow"
+                className="bg-clip-text text-transparent"
                 style={{
-                  backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
-                  backgroundSize: "200% 100%"
+                  backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc)"
                 }}
               >
                 Probably
