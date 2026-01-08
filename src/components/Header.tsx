@@ -109,7 +109,7 @@ export function Header() {
             <img src={solgodsIcon} alt="SolGods" className="h-10 sm:h-12 w-auto" />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-1">
             {/* Intro */}
             <Link
               to="/"
@@ -213,14 +213,14 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-foreground"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {mobileOpen && (
-          <nav className="lg:hidden py-4 border-t border-border">
+          <nav className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-1">
               {/* Intro */}
               <Link
