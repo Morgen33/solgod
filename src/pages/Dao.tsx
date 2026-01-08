@@ -140,19 +140,21 @@ const Dao = () => {
               These powers add suspense, alliances, and drama — just like a magical reality show built on-chain.
             </p>
             
-            <div className="grid md:grid-cols-[1fr,auto] gap-4 mb-6">
-              <div className="bg-secondary/30 rounded-xl p-6">
-                <h4 className="font-bold mb-3">How to Enter</h4>
-                <p className="text-sm text-muted-foreground mb-3">Own a Sol God with one of these traits:</p>
-                <span className="inline-block px-4 py-2 rounded-full bg-blue/20 border border-blue/30 text-base font-medium mb-3">Wizard Hat</span>
-                <p className="text-xs text-muted-foreground">Have it either delisted (not for sale) or listed at 5 SOL or higher.</p>
-                <p className="text-sm text-muted-foreground mt-3">
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              <div className="bg-secondary/30 rounded-xl p-6 flex flex-col">
+                <h4 className="font-bold mb-3 font-cinzel">How to Enter</h4>
+                <p className="text-sm text-muted-foreground mb-4">Own a Sol God with one of these traits:</p>
+                <p className="text-xs text-muted-foreground mb-3">Have it either delisted (not for sale) or listed at 5 SOL or higher.</p>
+                <p className="text-sm text-muted-foreground mt-auto">
                   Once you meet this condition, you're recognized as a true Cabal wizard and gain access to the circle — 
                   along with the chance to wield these legendary powers.
                 </p>
               </div>
-              <div className="bg-white rounded-2xl p-4 flex items-center justify-center self-start">
-                <img src={wizardHatTrait} alt="Wizard Hat" className="h-32 w-32 object-contain" />
+              <div className="bg-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center">
+                <h4 className="font-bold mb-4 font-cinzel">Wizard Hat</h4>
+                <div className="bg-white rounded-2xl p-4 flex items-center justify-center">
+                  <img src={wizardHatTrait} alt="Wizard Hat" className="h-28 w-28 object-contain" />
+                </div>
               </div>
             </div>
             
