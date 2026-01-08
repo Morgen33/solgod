@@ -158,7 +158,7 @@ const Dao = () => {
               </div>
             </div>
             
-            <h4 className="font-bold mb-4 text-blue-light">Wizard Cabal Powers</h4>
+            <h4 className="font-bold mb-4 text-[#e8e4dc] font-cinzel">Wizard Cabal Powers</h4>
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               <PowerCard title="Oracle of the Whitelist" description="Be the first to receive hidden whitelist alpha, with the choice to share it with the Cabal or guard it for yourself." />
               <PowerCard title="Exile of Five" description="Banish up to 5 members from the chamber for one cycle, stripping them of their vote and challenge rights." />
