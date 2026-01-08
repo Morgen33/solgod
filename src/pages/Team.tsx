@@ -16,6 +16,7 @@ import gnomieAvatar from "@/assets/team/gnomie.png";
 import gnomieBackAvatar from "@/assets/team/gnomie-back.jpg";
 import misterAvatar from "@/assets/team/mister.webp";
 import auskynAvatar from "@/assets/team/auskyn.webp";
+import auskynBackAvatar from "@/assets/team/auskyn-back.jpg";
 import irbAvatar from "@/assets/team/irb.png";
 import viperAvatar from "@/assets/team/viper.png";
 import trashPandaAvatar from "@/assets/team/trash-panda.jpg";
@@ -151,7 +152,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   TrashPanda: trashPandaAvatar,
   Donald: donaldAvatar,
   Rasi: rasiAvatar,
-  Happy: happyAvatar,
+  Happy: happyBackAvatar,
 };
 
 // Back images for flippable cards (add more as needed)
@@ -162,7 +163,8 @@ const MEMBER_BACK_AVATARS: Record<string, string> = {
   Gnomie: gnomieBackAvatar,
   TrashPanda: trashPandaBackAvatar,
   Glow: glowBackAvatar,
-  Happy: happyBackAvatar,
+  Happy: happyAvatar,
+  Auskyn: auskynBackAvatar,
 };
 
 const AVATAR_COLORS = [
