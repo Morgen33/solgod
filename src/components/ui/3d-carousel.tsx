@@ -124,18 +124,20 @@ const Carousel = memo(
           {cards.map((imgUrl, i) => (
             <motion.div
               key={`key-${i}`}
-              className="absolute flex h-full origin-center items-center justify-center rounded-xl p-2"
+              className="absolute flex h-full origin-center items-center justify-center p-2"
               style={{
                 width: `${faceWidth}px`,
                 transform: `rotateY(${i * (360 / faceCount)}deg) translateZ(${radius}px)`,
               }}
               onClick={() => handleClick(imgUrl, i)}
             >
-              <img
-                src={imgUrl}
-                alt={`carousel-item-${i}`}
-                className="pointer-events-none h-32 w-full rounded-xl object-cover sm:h-48 md:h-64 aspect-square"
-              />
+              <div className="bg-secondary/80 border border-blue/30 rounded-xl p-3 shadow-lg backdrop-blur-sm">
+                <img
+                  src={imgUrl}
+                  alt={`carousel-item-${i}`}
+                  className="pointer-events-none h-32 w-full rounded-lg object-cover sm:h-48 md:h-64 aspect-square"
+                />
+              </div>
             </motion.div>
           ))}
         </motion.div>
