@@ -246,7 +246,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 px-4">
+      <section className="pt-4 md:pt-8 pb-16 md:pb-24 px-4">
         <div className="max-w-4xl mx-auto">
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-6 sm:p-8 md:p-12 text-center">
             <div className="flex flex-col items-center">
