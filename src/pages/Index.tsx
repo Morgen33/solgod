@@ -1,10 +1,19 @@
 import { Layout } from "@/components/Layout";
-import { ArrowRight, Twitter, MessageCircle, Layers, Gift, TrendingUp, Shield, Globe, Sparkles, Cog } from "lucide-react";
+import { Link } from "react-router-dom";
+import { 
+  ArrowRight, Twitter, MessageCircle, Layers, Gift, TrendingUp, 
+  Shield, Globe, Sparkles, Cog, Users, Coins
+} from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
-import { RotatingText } from "@/components/ui/rotating-text";
-import { StarText } from "@/components/ui/star-text";
 import { GlowCard } from "@/components/ui/spotlight-card";
+import solgodsIcon from "@/assets/solgods-icon.png";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
+
+const SectionIcon = () => (
+  <div className="flex justify-center mb-6">
+    <img src={solgodsIcon} alt="SolGods" className="h-24 sm:h-28 w-auto opacity-80" />
+  </div>
+);
 
 const quickLinks = [
   {
@@ -36,65 +45,44 @@ const quickLinks = [
 const Index = () => {
   return (
     <Layout>
-      {/* Subtle dot grid overlay */}
-      <div 
-        className="fixed inset-0 z-[1] pointer-events-none opacity-20"
-        style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--blue-soft) / 0.4) 1px, transparent 0)`,
-          backgroundSize: '60px 60px',
-        }}
-      />
-      
       {/* Hero Section */}
-      <section className="min-h-[85vh] flex flex-col items-center justify-center px-4 pt-20 md:pt-0 relative">
-        {/* Hero Logo */}
-        <div className="mb-6 md:mb-8" style={{ animation: "fade-in 0.8s ease-out 0.2s forwards", opacity: 0 }}>
+      <section className="py-24 px-4">
+        <div className="max-w-5xl mx-auto text-center">
           <img 
             src={solgodsMainLogo} 
-            alt="SolGods Logo" 
-            className="w-36 sm:w-48 md:w-64 h-auto mx-auto"
+            alt="SolGods" 
+            className="h-32 sm:h-40 w-auto mx-auto mb-8"
           />
-        </div>
-
-        {/* Main Headline */}
-        <div className="text-center mb-6 md:mb-8" style={{ animation: "fade-in 0.8s ease-out 0.4s forwards", opacity: 0 }}>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold italic text-foreground mb-2">
-            Probably
+          <h1 
+            className="text-5xl sm:text-7xl font-bold mb-6 bg-clip-text text-transparent animate-gradient-flow"
+            style={{
+              backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
+              backgroundSize: "200% 100%",
+            }}
+          >
+            WELCOME TO SOLGODS
           </h1>
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold italic" style={{ perspective: "1000px" }}>
-            <RotatingText />
-          </h1>
-        </div>
+          <p className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
+            Probably Nothing. Probably Everything.
+          </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+            Join the family of traders, creators, and raiders rewriting what it means to be part of Web3.
+          </p>
 
-        {/* Subtitle */}
-        <p 
-          className="text-base sm:text-lg md:text-xl text-muted-foreground text-center max-w-xl mb-8 md:mb-12 px-2"
-          style={{ animation: "fade-in 0.8s ease-out 0.4s forwards", opacity: 0 }}
-        >
-          Join the family of traders, creators, and raiders rewriting what it means to be part of Web3.
-        </p>
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
+              Buy SolGods
+              <ArrowRight size={20} />
+            </ShinyButton>
+            <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
+              Join Discord
+            </ShinyButton>
+          </div>
 
-        {/* Action Buttons */}
-        <div 
-          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-10 md:mb-16 w-full sm:w-auto px-4 sm:px-0"
-          style={{ animation: "fade-in 0.8s ease-out 0.6s forwards", opacity: 0 }}
-        >
-          <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
-            Buy SolGods
-            <ArrowRight size={20} />
-          </ShinyButton>
-          <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
-            Join Discord
-          </ShinyButton>
-        </div>
-
-        {/* Quick Links Card */}
-        <div 
-          className="w-full max-w-4xl px-2"
-          style={{ animation: "fade-in 0.8s ease-out 0.8s forwards", opacity: 0 }}
-        >
-          <GlowCard customSize className="p-4 md:p-6">
-            <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+          {/* Quick Links */}
+          <div className="card-glow rounded-2xl p-6 sm:p-8">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
               {quickLinks.map((link) => {
                 const Icon = link.icon;
                 return (
@@ -103,165 +91,236 @@ const Index = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 md:gap-3 p-3 md:p-4 rounded-xl bg-secondary/30 border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-secondary/30 border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group"
                   >
-                    <div className="p-1.5 md:p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors flex-shrink-0">
-                      <Icon size={16} className="md:w-5 md:h-5" />
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                      <Icon size={20} />
                     </div>
                     <div className="min-w-0">
-                      <h4 className="font-semibold text-foreground text-xs md:text-sm truncate">{link.label}</h4>
+                      <h4 className="font-semibold text-foreground text-sm truncate">{link.label}</h4>
                       <p className="text-xs text-muted-foreground hidden sm:block truncate">{link.description}</p>
                     </div>
                   </a>
                 );
               })}
             </div>
-          </GlowCard>
+          </div>
         </div>
       </section>
 
       {/* Why SolGods Section */}
-      <section className="py-16 md:py-24 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 
-            className="text-3xl md:text-5xl font-bold font-cinzel text-center mb-4"
-            style={{ color: "#e8e4dc" }}
-          >
-            WHY SOLGODS
-          </h2>
-          <p className="text-muted-foreground text-center mb-12 md:mb-16 max-w-2xl mx-auto text-sm md:text-base px-2">
-            SolGods is a Value-First Ecosystem where digital identity meets a high-performance growth engine. We've moved beyond static art to create a system that prioritizes community outcomes and long-term sustainability.
+      <section className="py-24 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <SectionIcon />
+            <h2 
+              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
+              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
+            >
+              WHY SOLGODS
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              A Value-First Ecosystem
+            </p>
+          </div>
+
+          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+            SolGods is a Value-First Ecosystem where digital identity meets a high-performance growth engine. 
+            We've moved beyond static art to create a system that prioritizes community outcomes and long-term sustainability.
           </p>
 
-          {/* Pillars */}
-          <div className="space-y-12 md:space-y-16">
-            {/* Pillar 1: The Sol Core Treasury */}
-            <div className="space-y-4 md:space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="p-2 md:p-3 rounded-xl flex-shrink-0" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", boxShadow: "0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)" }}>
-                  <Cog style={{ color: "#ffffff", filter: "drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))" }} size={24} className="md:w-7 md:h-7" />
+          {/* Core Values Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <ValueCard 
+              icon={<TrendingUp size={32} />}
+              title="Financial Empowerment"
+              description="We launched by delivering structured trading frameworks, memecoin rotations, and X monetization systems before the first NFT ever hit the blockchain."
+            />
+            <ValueCard 
+              icon={<Shield size={32} />}
+              title='A "Hedge Fund" for the People'
+              description="We bridge the gap between high-level finance and Web3 culture. By holding a SolGod, you aren't just holding art; you are holding a key to an actively managed treasury spanning Forex, Indices, and Crypto."
+            />
+            <ValueCard 
+              icon={<Users size={32} />}
+              title="The Power of The Community"
+              description="Our community isn't just a Discord server; it's a high-signal intelligence hub. From a 10-person group chat to a 1,900+ member alpha engine, we leverage collective knowledge to turn small stakes into real wins."
+            />
+            <ValueCard 
+              icon={<Coins size={32} />}
+              title="Anti-Dilution & Growth"
+              description="With 50% of mint capital immediately deployed into revenue-generating strategies, the project is designed to be self-sustaining, fueling constant rewards, raffles, and ecosystem buy-backs."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* The Three Pillars */}
+      <section className="py-24 px-4 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 opacity-10"
+          style={{
+            background: "radial-gradient(ellipse at center, #1d4ed8 0%, transparent 70%)",
+          }}
+        />
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <SectionIcon />
+            <h2 
+              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
+              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
+            >
+              THE THREE PILLARS
+            </h2>
+            <p className="text-xl text-muted-foreground">What Sets Us Apart</p>
+          </div>
+
+          {/* Pillar 1: The Sol Core Treasury */}
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-8">
+            <div className="flex flex-col">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 rounded-xl bg-blue/20">
+                  <Cog className="text-blue-light" size={32} />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold" style={{ color: "#01b2ff" }}>1. The Sol Core Treasury</h3>
+                <div>
+                  <h3 className="text-2xl font-bold">1. The Sol Core Treasury</h3>
+                  <p className="text-muted-foreground">Your entry point to a sophisticated, active treasury</p>
+                </div>
               </div>
-              <p className="text-muted-foreground text-sm md:text-base">
-                Your SolGod is more than a profile picture; it is your entry point to a sophisticated, active treasury. We put the project's resources to work to ensure the ecosystem remains self-sustaining and constantly evolving.
+              <p className="text-muted-foreground mb-6">
+                Your SolGod is more than a profile picture; it is your entry point to a sophisticated, active treasury. 
+                We put the project's resources to work to ensure the ecosystem remains self-sustaining and constantly evolving.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                <GlowCard customSize className="p-6">
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Active Ecosystem Management</h4>
-                    <p className="text-muted-foreground text-sm">We utilize internal strategies to grow our holdings and generate consistent, tangible value for the project.</p>
-                  </div>
-                </GlowCard>
-                <GlowCard customSize className="p-6">
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Engagement-Led Rewards</h4>
-                    <p className="text-muted-foreground text-sm">We believe in rewarding those who build the culture. Through our Discord Chat-to-Earn systems and Raid-to-Reward bounties, active members are directly incentivized for their contributions.</p>
-                  </div>
-                </GlowCard>
-                <GlowCard customSize className="p-6">
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Exclusive Holder Perks</h4>
-                    <p className="text-muted-foreground text-sm">Membership has its privileges. Holders gain access to exclusive giveaways, high-signal alpha calls, and specialized perks reserved strictly for SolGods holders.</p>
-                  </div>
-                </GlowCard>
-                <GlowCard customSize className="p-6">
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Sustainable Scaling</h4>
-                    <p className="text-muted-foreground text-sm">By reinvesting a portion of our ecosystem gains, we constantly increase the treasury's strength. As the world of Solara grows, so does the power and reach of its holders.</p>
-                  </div>
-                </GlowCard>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="p-4 rounded-xl bg-secondary/30">
+                  <h4 className="font-bold text-foreground mb-2">Active Ecosystem Management</h4>
+                  <p className="text-sm text-muted-foreground">We utilize internal strategies to grow our holdings and generate consistent, tangible value for the project.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-secondary/30">
+                  <h4 className="font-bold text-foreground mb-2">Engagement-Led Rewards</h4>
+                  <p className="text-sm text-muted-foreground">Through our Discord Chat-to-Earn systems and Raid-to-Reward bounties, active members are directly incentivized.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-secondary/30">
+                  <h4 className="font-bold text-foreground mb-2">Exclusive Holder Perks</h4>
+                  <p className="text-sm text-muted-foreground">Holders gain access to exclusive giveaways, high-signal alpha calls, and specialized perks reserved strictly for SolGods holders.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-secondary/30">
+                  <h4 className="font-bold text-foreground mb-2">Sustainable Scaling</h4>
+                  <p className="text-sm text-muted-foreground">By reinvesting a portion of our ecosystem gains, we constantly increase the treasury's strength.</p>
+                </div>
               </div>
             </div>
+          </GlowCard>
 
-            {/* Pillar 2: Foundation of Integrity */}
-            <div className="space-y-4 md:space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="p-2 md:p-3 rounded-xl flex-shrink-0" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", boxShadow: "0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)" }}>
-                  <Shield style={{ color: "#ffffff", filter: "drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))" }} size={24} className="md:w-7 md:h-7" />
+          {/* Pillar 2: Foundation of Integrity */}
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-8">
+            <div className="flex flex-col">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 rounded-xl bg-blue/20">
+                  <Shield className="text-blue-light" size={32} />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold" style={{ color: "#01b2ff" }}>2. A Foundation of Integrity</h3>
+                <div>
+                  <h3 className="text-2xl font-bold">2. A Foundation of Integrity</h3>
+                  <p className="text-muted-foreground">Deliver value before asking for a single cent</p>
+                </div>
               </div>
-              <p className="text-muted-foreground text-sm md:text-base">
+              <p className="text-muted-foreground mb-6">
                 We built our reputation on a simple principle: Deliver value before asking for a single cent.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                <GlowCard customSize className="p-6">
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Results First</h4>
-                    <p className="text-muted-foreground text-sm">Our community thrived long before the mint. We established ourselves by sharing growth frameworks and strategies that helped our members level up their own digital presence and trading discipline.</p>
-                  </div>
-                </GlowCard>
-                <GlowCard customSize className="p-6">
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Proven Performance</h4>
-                    <p className="text-muted-foreground text-sm">This "value-first" approach wasn't just a philosophy—it led to a 20x increase from our initial launch price. This established the rock-solid foundation for the treasury that supports the project today.</p>
-                  </div>
-                </GlowCard>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="p-4 rounded-xl bg-secondary/30">
+                  <h4 className="font-bold text-foreground mb-2">Results First</h4>
+                  <p className="text-sm text-muted-foreground">Our community thrived long before the mint. We established ourselves by sharing growth frameworks and strategies that helped our members level up.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-secondary/30">
+                  <h4 className="font-bold text-foreground mb-2">Proven Performance</h4>
+                  <p className="text-sm text-muted-foreground">This "value-first" approach led to a 20x increase from our initial launch price, establishing the rock-solid foundation for our treasury.</p>
+                </div>
               </div>
             </div>
+          </GlowCard>
 
-            {/* Pillar 3: Living Economy */}
-            <div className="space-y-4 md:space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="p-2 md:p-3 rounded-xl flex-shrink-0" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", boxShadow: "0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)" }}>
-                  <Globe style={{ color: "#ffffff", filter: "drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))" }} size={24} className="md:w-7 md:h-7" />
+          {/* Pillar 3: Living Economy */}
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
+            <div className="flex flex-col">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 rounded-xl bg-blue/20">
+                  <Globe className="text-blue-light" size={32} />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold" style={{ color: "#01b2ff" }}>3. A Living, Breathing Economy</h3>
+                <div>
+                  <h3 className="text-2xl font-bold">3. A Living, Breathing Economy</h3>
+                  <p className="text-muted-foreground">A thriving, bustling ecosystem</p>
+                </div>
               </div>
-              <p className="text-muted-foreground text-sm md:text-base">
+              <p className="text-muted-foreground mb-6">
                 From the ancient origins of Solara to our expansion into new frontiers, the SolGods ecosystem is a thriving, bustling economy.
               </p>
-              <div>
-                <GlowCard customSize className="p-6">
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold mb-2" style={{ color: "#e8e4dc" }}>Collaborative Growth</h4>
-                    <p className="text-muted-foreground text-sm">We don't exist in a vacuum. We actively collaborate across the Solana network, integrating assets and building a cross-ecosystem engine designed to evolve, not stagnate.</p>
-                  </div>
-                </GlowCard>
+              <div className="p-4 rounded-xl bg-secondary/30">
+                <h4 className="font-bold text-foreground mb-2">Collaborative Growth</h4>
+                <p className="text-sm text-muted-foreground">We don't exist in a vacuum. We actively collaborate across the Solana network, integrating assets and building a cross-ecosystem engine designed to evolve, not stagnate.</p>
+              </div>
+            </div>
+          </GlowCard>
+        </div>
+      </section>
+
+      {/* The Difference */}
+      <section className="py-24 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <SectionIcon />
+            <h2 
+              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
+              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
+            >
+              THE DIFFERENCE
+            </h2>
+            <p className="text-xl text-muted-foreground">Static vs Dynamic</p>
+          </div>
+
+          <div className="card-glow rounded-2xl p-8 sm:p-12">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-secondary/50 border border-border rounded-2xl p-6 text-center">
+                <p className="text-sm mb-2 font-semibold tracking-wide" style={{ color: "#377af2", fontFamily: "'Cinzel', serif" }}>Static Collections</p>
+                <p className="font-semibold text-sm">Depend entirely on the "next buyer" for value.</p>
+              </div>
+              <div className="bg-secondary/50 border border-border rounded-2xl p-6 text-center">
+                <p className="text-sm mb-2 font-semibold tracking-wide" style={{ color: "#377af2", fontFamily: "'Cinzel', serif" }}>SolGods</p>
+                <p className="font-semibold text-sm">Powered by a managed system designed to generate and distribute value internally, ensuring the sun never sets on the SolGods.</p>
               </div>
             </div>
           </div>
-
-          {/* The Difference */}
-          <div className="mt-12 md:mt-16">
-            <GlowCard customSize className="p-6 md:p-8">
-              <h3 className="text-lg md:text-xl font-bold mb-6 text-center">The SolGods Difference</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                <div className="bg-secondary/50 border border-border rounded-2xl p-6 text-center">
-                  <div className="flex flex-col items-center">
-                    <p className="text-sm mb-2 font-semibold tracking-wide" style={{ color: "#377af2", fontFamily: "'Cinzel', serif" }}>Static Collections</p>
-                    <p className="font-semibold text-sm">Depend entirely on the "next buyer" for value.</p>
-                  </div>
-                </div>
-                <div className="bg-secondary/50 border border-border rounded-2xl p-6 text-center">
-                  <div className="flex flex-col items-center">
-                    <p className="text-sm mb-2 font-semibold tracking-wide" style={{ color: "#377af2", fontFamily: "'Cinzel', serif" }}>SolGods</p>
-                    <p className="font-semibold text-sm">Powered by a managed system designed to generate and distribute value internally, ensuring the sun never sets on the SolGods.</p>
-                  </div>
-                </div>
-              </div>
-            </GlowCard>
-          </div>
-
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="pt-4 md:pt-8 pb-16 md:pb-24 px-4">
-        <div className="max-w-4xl mx-auto">
-          <GlowCard customSize className="p-6 sm:p-8 md:p-12 text-center">
+      <section className="py-24 px-4">
+        <div className="max-w-5xl mx-auto">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 text-center">
             <div className="flex flex-col items-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" style={{ color: "#2d5fbd" }}>Ascend to Divinity</h2>
-              <p className="text-muted-foreground mb-4 max-w-xl mx-auto text-sm md:text-base">
+              <h2 
+                className="text-3xl sm:text-4xl font-bold mb-4 bg-clip-text text-transparent"
+                style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
+              >
+                Ascend to Divinity
+              </h2>
+              <p className="text-muted-foreground mb-4 max-w-xl mx-auto">
                 Become a SolGod. Don't just watch the system grow—help drive it. Join our Discord to secure your place in the inner circle, where the sharpest minds share the latest alpha and every member plays a part in our collective rise.
               </p>
-              <p className="text-muted-foreground mb-6 md:mb-8 max-w-xl mx-auto text-sm md:text-base">
+              <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
                 From exclusive insights to the heart of the Solara economy, the journey to ascendancy starts here.
               </p>
-              <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
-                Join Discord
-              </ShinyButton>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
+                  Join Discord
+                </ShinyButton>
+                <Link to="/about">
+                  <ShinyButton>
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </ShinyButton>
+                </Link>
+              </div>
             </div>
           </GlowCard>
         </div>
@@ -269,5 +328,17 @@ const Index = () => {
     </Layout>
   );
 };
+
+function ValueCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+  return (
+    <GlowCard glowColor="blue" customSize className="w-full h-auto">
+      <div className="flex flex-col">
+        <div className="text-blue-light mb-4">{icon}</div>
+        <h3 className="text-xl font-bold mb-3">{title}</h3>
+        <p className="text-muted-foreground">{description}</p>
+      </div>
+    </GlowCard>
+  );
+}
 
 export default Index;
