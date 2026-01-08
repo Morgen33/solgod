@@ -226,23 +226,23 @@ const Dao = () => {
               <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Dark Wings</span>
-                  <img src={darkWingsTrait} alt="Dark Wings" className="h-28 w-28 object-contain" />
+                  <img src={darkWingsTrait} alt="Dark Wings" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Dragon Wings</span>
-                  <img src={dragonWingsTrait} alt="Dragon Wings" className="h-28 w-28 object-contain" />
+                  <img src={dragonWingsTrait} alt="Dragon Wings" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Mecha Wings</span>
-                  <img src={mechaWingsTrait} alt="Mecha Wings" className="h-28 w-28 object-contain" />
+                  <img src={mechaWingsTrait} alt="Mecha Wings" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Rainbow Parage</span>
-                  <img src={rainbowWingsTrait} alt="Rainbow Parage" className="h-28 w-28 object-contain" />
+                  <img src={rainbowWingsTrait} alt="Rainbow Parage" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Phoenix Wings</span>
-                  <img src={phoenixWingsTrait} alt="Phoenix Wings" className="h-28 w-28 object-contain" />
+                  <img src={phoenixWingsTrait} alt="Phoenix Wings" className="h-40 w-40 object-contain" />
                 </div>
               </div>
             </div>
