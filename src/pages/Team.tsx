@@ -74,7 +74,7 @@ const TEAM: TeamGroup[] = [
     ],
   },
   {
-    role: "Security",
+    role: "Security Team",
     members: [
       { name: "LionX", note: "Lead Security / Admin" },
       { name: "Henry", note: "Security Team / Admin" },
@@ -83,41 +83,32 @@ const TEAM: TeamGroup[] = [
     ],
   },
   {
-    role: "Collaboration",
-    members: [{ name: "Eddie", note: "Collaboration Manager / Admin" }],
+    role: "Collaboration/Development",
+    members: [
+      { name: "Morgan", note: "Developer" },
+      { name: "Eddie", note: "Collaboration Manager / Admin" },
+    ],
   },
   {
     role: "Community",
     members: [
       { name: "TrashPanda", note: "Community Connector" },
       { name: "Gnomie", note: "Community Connector" },
+      { name: "Viper", note: "Community Artist" },
     ],
   },
   {
-    role: "Developers",
-    members: [{ name: "Morgan", note: "Developer" }],
-  },
-  {
-    role: "Artists",
-    members: [{ name: "Viper", note: "Community Artist" }],
-  },
-  {
-    role: "X Management",
+    role: "Moderation/Social Media",
     members: [
       { name: "Mister", note: "X Management / Moderator" },
       { name: "Savage", note: "X Management / Moderator" },
-    ],
-  },
-  {
-    role: "Moderators",
-    members: [
-      { name: "Auskyn" },
-      { name: "The SUL" },
-      { name: "Donald" },
-      { name: "Sonia" },
-      { name: "Woolfie" },
-      { name: "KMAC" },
-      { name: "Daver" },
+      { name: "Auskyn", note: "Moderator" },
+      { name: "The SUL", note: "Moderator" },
+      { name: "Donald", note: "Moderator" },
+      { name: "Sonia", note: "Moderator" },
+      { name: "Woolfie", note: "Moderator" },
+      { name: "KMAC", note: "Moderator" },
+      { name: "Daver", note: "Moderator" },
     ],
   },
 ];
@@ -126,13 +117,10 @@ const ROLE_ICON: Record<string, JSX.Element> = {
   Founders: <Crown className="h-4 w-4" />,
   "Co-Founders": <Crown className="h-4 w-4" />,
   "Core Team": <Users className="h-4 w-4" />,
-  Security: <Shield className="h-4 w-4" />,
-  Collaboration: <HeartHandshake className="h-4 w-4" />,
+  "Security Team": <Shield className="h-4 w-4" />,
+  "Collaboration/Development": <Code2 className="h-4 w-4" />,
   Community: <Users className="h-4 w-4" />,
-  Developers: <Code2 className="h-4 w-4" />,
-  Artists: <Paintbrush className="h-4 w-4" />,
-  "X Management": <Megaphone className="h-4 w-4" />,
-  Moderators: <MessageCircle className="h-4 w-4" />,
+  "Moderation/Social Media": <MessageCircle className="h-4 w-4" />,
 };
 
 const MEMBER_AVATARS: Record<string, string> = {
