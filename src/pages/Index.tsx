@@ -114,12 +114,12 @@ const Index = () => {
           <div className="text-center mb-16">
             <SectionIcon />
             <h2 
-              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
+              className="text-4xl sm:text-5xl font-bold mb-4"
+              style={{ color: "#01b2ff" }}
             >
               WHY SOLGODS
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl" style={{ color: "#01b2ff" }}>
               A Value-First Ecosystem
             </p>
           </div>
