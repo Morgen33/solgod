@@ -104,12 +104,12 @@ const About = () => {
           <div className="text-center mb-16">
             <SectionIcon />
             <h2 
-              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
+              className="text-4xl sm:text-5xl font-bold mb-4"
+              style={{ color: "#01b2ff" }}
             >
               SOLGODS ECOSYSTEM
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl" style={{ color: "#2053db" }}>
               The Fusion of Digital Identity and Financial Instrument
             </p>
           </div>
@@ -188,12 +188,12 @@ const About = () => {
           <div className="text-center mb-16">
             <SectionIcon />
             <h2 
-              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
+              className="text-4xl sm:text-5xl font-bold mb-4"
+              style={{ color: "#01b2ff" }}
             >
               HISTORY
             </h2>
-            <p className="text-xl text-muted-foreground">The Foundation of Ascendancy</p>
+            <p className="text-xl" style={{ color: "#2053db" }}>The Foundation of Ascendancy</p>
           </div>
 
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
@@ -207,17 +207,17 @@ const About = () => {
               
               <div className="grid sm:grid-cols-3 gap-6 mb-8">
                 <div className="p-4 rounded-xl bg-blue/10 border border-blue/20 text-center">
-                  <TrendingUp className="text-blue-light mx-auto mb-2" size={28} />
+                  <TrendingUp className="mx-auto mb-2" size={28} style={{ color: "#01b2ff" }} />
                   <h4 className="font-bold mb-1">Free Trading Calls</h4>
                   <p className="text-sm text-muted-foreground">Giving members the tools to grow their own bags.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-blue/10 border border-blue/20 text-center">
-                  <Zap className="text-blue-light mx-auto mb-2" size={28} />
+                  <Zap className="mx-auto mb-2" size={28} style={{ color: "#01b2ff" }} />
                   <h4 className="font-bold mb-1">Meme Coin Plays</h4>
                   <p className="text-sm text-muted-foreground">Navigating the volatility of the Solana ecosystem with precision.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-blue/10 border border-blue/20 text-center">
-                  <Globe className="text-blue-light mx-auto mb-2" size={28} />
+                  <Globe className="mx-auto mb-2" size={28} style={{ color: "#01b2ff" }} />
                   <h4 className="font-bold mb-1">X Growth Management</h4>
                   <p className="text-sm text-muted-foreground">Teaching members how to build their personal brands and monetize their presence.</p>
                 </div>
@@ -256,12 +256,12 @@ const About = () => {
           <div className="text-center mb-16">
             <SectionIcon />
             <h2 
-              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
+              className="text-4xl sm:text-5xl font-bold mb-4"
+              style={{ color: "#01b2ff" }}
             >
               THE LORE
             </h2>
-            <p className="text-xl text-muted-foreground">The Solara Chronicles</p>
+            <p className="text-xl" style={{ color: "#2053db" }}>The Solara Chronicles</p>
           </div>
 
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-12">
@@ -354,13 +354,13 @@ const About = () => {
           <div className="text-center mb-16">
             <SectionIcon />
             <h2 
-              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
+              className="text-4xl sm:text-5xl font-bold mb-4"
+              style={{ color: "#01b2ff" }}
             >
               SOLCITY
             </h2>
-            <p className="text-xl text-muted-foreground">The Capital Allocation Engine</p>
-            <p className="text-lg text-blue-light mt-2">Passive Income, Professionally Managed.</p>
+            <p className="text-xl" style={{ color: "#2053db" }}>The Capital Allocation Engine</p>
+            <p className="text-lg mt-2" style={{ color: "#01b2ff" }}>Passive Income, Professionally Managed.</p>
           </div>
 
           <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
@@ -419,17 +419,17 @@ const About = () => {
             <h3 className="text-2xl font-bold mb-8 text-center">The Benefits</h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center p-6 rounded-xl bg-blue/10">
-                <Shield className="text-blue-light mx-auto mb-3" size={32} />
+                <Shield className="mx-auto mb-3" size={32} style={{ color: "#01b2ff" }} />
                 <h4 className="font-bold mb-2">No Active Management Required</h4>
                 <p className="text-sm text-muted-foreground">You hold the NFT; the team handles the rest.</p>
               </div>
               <div className="text-center p-6 rounded-xl bg-blue/10">
-                <Globe className="text-blue-light mx-auto mb-3" size={32} />
+                <Globe className="mx-auto mb-3" size={32} style={{ color: "#01b2ff" }} />
                 <h4 className="font-bold mb-2">Diversification</h4>
                 <p className="text-sm text-muted-foreground">Gain exposure to assets outside of just the crypto market.</p>
               </div>
               <div className="text-center p-6 rounded-xl bg-blue/10">
-                <TrendingUp className="text-blue-light mx-auto mb-3" size={32} />
+                <TrendingUp className="mx-auto mb-3" size={32} style={{ color: "#01b2ff" }} />
                 <h4 className="font-bold mb-2">Compound Interest</h4>
                 <p className="text-sm text-muted-foreground">Your stake becomes more powerful the longer you hold and the fund grows.</p>
               </div>
@@ -444,12 +444,12 @@ const About = () => {
           <div className="text-center mb-16">
             <SectionIcon />
             <h2 
-              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
+              className="text-4xl sm:text-5xl font-bold mb-4"
+              style={{ color: "#01b2ff" }}
             >
               FUTURE HORIZONS
             </h2>
-            <p className="text-xl text-muted-foreground">Web2 & Web3 Integration — Bridging the Gap</p>
+            <p className="text-xl" style={{ color: "#2053db" }}>Web2 & Web3 Integration — Bridging the Gap</p>
           </div>
 
           <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
@@ -458,21 +458,21 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <GlowCard glowColor="blue" customSize className="w-full h-auto">
-              <Coins className="text-blue-light mb-4" size={32} />
+              <Coins className="mb-4" size={32} style={{ color: "#01b2ff" }} />
               <h3 className="text-xl font-bold mb-3">The Token & Staking</h3>
               <p className="text-muted-foreground text-sm">
                 A dual-incentive system where staking your SolGod earns you the ecosystem's native currency, usable within Sol City.
               </p>
             </GlowCard>
             <GlowCard glowColor="blue" customSize className="w-full h-auto">
-              <Users className="text-blue-light mb-4" size={32} />
+              <Users className="mb-4" size={32} style={{ color: "#01b2ff" }} />
               <h3 className="text-xl font-bold mb-3">Cross-Ecosystem Alliances</h3>
               <p className="text-muted-foreground text-sm">
                 We actively purchase and integrate assets from other communities into our treasury, creating a "Network Effect" that strengthens the entire Solana ecosystem.
               </p>
             </GlowCard>
             <GlowCard glowColor="blue" customSize className="w-full h-auto">
-              <Globe className="text-blue-light mb-4" size={32} />
+              <Globe className="mb-4" size={32} style={{ color: "#01b2ff" }} />
               <h3 className="text-xl font-bold mb-3">Web2 Outreach</h3>
               <p className="text-muted-foreground text-sm">
                 Creating educational content and "Trad-Fi" (Traditional Finance) bridges that allow non-crypto natives to understand and benefit from the SolCity Engine.
@@ -489,7 +489,7 @@ function ValueCard({ icon, title, description }: { icon: React.ReactNode; title:
   return (
     <GlowCard glowColor="blue" customSize className="w-full h-auto">
       <div className="flex flex-col">
-        <div className="text-blue-light mb-4">{icon}</div>
+        <div className="mb-4" style={{ color: "#01b2ff" }}>{icon}</div>
         <h3 className="text-xl font-bold mb-3">{title}</h3>
         <p className="text-muted-foreground">{description}</p>
       </div>
@@ -501,7 +501,7 @@ function MissionCard({ icon, title, description }: { icon: React.ReactNode; titl
   return (
     <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
       <div className="flex flex-col items-center">
-        <div className="text-blue-light mb-3">{icon}</div>
+        <div className="mb-3" style={{ color: "#01b2ff" }}>{icon}</div>
         <h4 className="font-bold mb-2">{title}</h4>
         <p className="text-sm text-muted-foreground">{description}</p>
       </div>
@@ -514,9 +514,9 @@ function EngineStep({ number, title, description }: { number: string; title: str
     <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
       <div className="flex flex-col items-center">
         <div 
-          className="w-12 h-12 rounded-full flex items-center justify-center mb-4 text-2xl font-bold"
+          className="w-12 h-12 rounded-full flex items-center justify-center mb-4 text-2xl font-bold text-white"
           style={{
-            background: "linear-gradient(135deg, #1d4ed8, #3b82f6)",
+            backgroundColor: "#01b2ff",
           }}
         >
           {number}
