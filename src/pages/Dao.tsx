@@ -570,21 +570,23 @@ const Dao = () => {
               The gods are watching. Change it up and stand tall.
             </p>
 
-            <ShinyButton as="a" href="/join">
-              Get Your Starter God
-              <Sparkles size={20} />
-            </ShinyButton>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ShinyButton as="a" href="/join">
+                Get Your Starter God
+                <Sparkles size={20} />
+              </ShinyButton>
+              <ShinyButton as="a" href="/solgods">
+                Learn More
+                <ExternalLink size={20} />
+              </ShinyButton>
+            </div>
+            <div className="mt-6">
+              <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+                Join Main Discord
+                <ExternalLink size={20} />
+              </ShinyButton>
+            </div>
           </GlowCard>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
-            Join Main Discord
-            <ExternalLink size={20} />
-          </ShinyButton>
         </div>
       </section>
     </Layout>
