@@ -342,7 +342,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Sol City Engine */}
+      {/* SolCity Engine */}
       <section className="py-24 px-4 relative overflow-hidden">
         <div 
           className="absolute inset-0 opacity-5"
@@ -357,32 +357,32 @@ const About = () => {
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
             >
-              SOL CITY
+              SOLCITY
             </h2>
             <p className="text-xl text-muted-foreground">The Capital Allocation Engine</p>
             <p className="text-lg text-blue-light mt-2">Passive Income, Professionally Managed.</p>
           </div>
 
           <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-            Sol City is the evolution of the SolGods vision. It is a hybrid investment vehicle that turns 
+            SolCity is the evolution of the SolGods vision. It is a hybrid investment vehicle that turns 
             NFT holders into participants in a global liquidity engine.
           </p>
 
-          {/* Portal to Sol City */}
+          {/* Portal to SolCity */}
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-center">The Portal to Sol City</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center">The Portal to SolCity</h3>
             <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
               Seeking to expand the reach of the Sol Core, CreatorX used his divine energy to rip a hole through space-time, 
               discovering a planet long forgotten—a world of desolation and ruin. There, he found ten mysterious creature types 
               living in constant, violent chaos. Rather than conquering them, the SolGods united them. They channeled their 
-              elemental powers to revive the planet, building a shimmering metropolis: <span className="text-blue-light font-bold">Sol City</span>. 
+              elemental powers to revive the planet, building a shimmering metropolis: <span className="text-blue-light font-bold">SolCity</span>. 
               This city now serves as the "Workforce of the Gods," a bustling economy that generates the resources and liquidity 
               needed to fund the SolGods' further adventures across the multiverse.
             </p>
             <div className="flex justify-center">
               <Link to="/solcity">
                 <ShinyButton>
-                  Enter Sol City
+                  Enter SolCity
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </ShinyButton>
               </Link>
@@ -475,7 +475,7 @@ const About = () => {
               <Globe className="text-blue-light mb-4" size={32} />
               <h3 className="text-xl font-bold mb-3">Web2 Outreach</h3>
               <p className="text-muted-foreground text-sm">
-                Creating educational content and "Trad-Fi" (Traditional Finance) bridges that allow non-crypto natives to understand and benefit from the Sol City Engine.
+                Creating educational content and "Trad-Fi" (Traditional Finance) bridges that allow non-crypto natives to understand and benefit from the SolCity Engine.
               </p>
             </GlowCard>
           </div>
