@@ -56,7 +56,7 @@ export const MorphingText = ({
       <span 
         className="inline-block bg-clip-text text-transparent animate-gradient-flow"
         style={{
-          backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
+          backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc, #32db9a, #a1e25b)",
           backgroundSize: "200% 100%",
         }}
       >
