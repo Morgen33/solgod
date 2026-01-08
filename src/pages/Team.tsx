@@ -15,6 +15,7 @@ import henryAvatar from "@/assets/team/henry.jpg";
 import gnomieAvatar from "@/assets/team/gnomie.png";
 import gnomieBackAvatar from "@/assets/team/gnomie-back.jpg";
 import misterAvatar from "@/assets/team/mister.webp";
+import misterBackAvatar from "@/assets/team/mister-back.jpg";
 import auskynAvatar from "@/assets/team/auskyn.webp";
 import auskynBackAvatar from "@/assets/team/auskyn-back.jpg";
 import irbAvatar from "@/assets/team/irb.png";
@@ -157,6 +158,7 @@ const MEMBER_BACK_AVATARS: Record<string, string> = {
   Glow: glowBackAvatar,
   Happy: happyAvatar,
   Auskyn: auskynBackAvatar,
+  Mister: misterBackAvatar,
 };
 
 const AVATAR_COLORS = [
