@@ -2,7 +2,7 @@ import { Layout } from "@/components/Layout";
 import { Users, ExternalLink, Crown, Sparkles, Heart, Wand2, Shield } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlowCard } from "@/components/ui/spotlight-card";
-import solgodsIcon from "@/assets/solgods-icon.png";
+import daoBanner from "@/assets/solgods-dao-banner.jpeg";
 import wingsDaoLogo from "@/assets/wings-dao-logo.png";
 import mafiaDaoLogo from "@/assets/mafia-dao-logo.png";
 import pantheonCircleLogo from "@/assets/pantheon-circle-logo.png";
@@ -34,7 +34,7 @@ const scrollToSection = (id: string) => {
 
 const SectionIcon = () => (
   <div className="flex justify-center mb-6">
-    <img src={solgodsIcon} alt="SolGods" className="h-24 sm:h-28 w-auto opacity-80" />
+    <img src={daoBanner} alt="SolGods" className="h-24 sm:h-28 w-auto rounded-lg" />
   </div>
 );
 
@@ -44,7 +44,9 @@ const Dao = () => {
       {/* Hero Section */}
       <section className="py-16 pb-4 px-4">
         <div className="max-w-5xl mx-auto">
-          <SectionIcon />
+          <div className="flex justify-center mb-8">
+            <img src={daoBanner} alt="SolGods DAO" className="w-full max-w-3xl h-auto rounded-xl shadow-lg" />
+          </div>
           <h1 
             className="text-5xl sm:text-7xl font-bold mb-4 text-center bg-clip-text text-transparent animate-gradient-flow"
             style={{
