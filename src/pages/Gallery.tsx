@@ -1,5 +1,32 @@
 import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
+import { ThreeDPhotoCarousel } from "@/components/ui/3d-carousel";
+
+// Import Community 1/1s (6 images)
+import cosmic from "@/assets/heroes/cosmic.png";
+import crimson from "@/assets/heroes/crimson.png";
+import demon from "@/assets/heroes/demon.png";
+import gothic from "@/assets/heroes/gothic.png";
+import oni from "@/assets/heroes/oni.png";
+import shiva from "@/assets/heroes/shiva.png";
+
+// Import Staff 1/1s (4 images)
+import cosmicKing from "@/assets/heroes/cosmic-king.png";
+import darkQueen from "@/assets/heroes/dark-queen.png";
+import skullKing from "@/assets/heroes/skull-king.png";
+import waterDemon from "@/assets/heroes/water-demon.png";
+
+// Import SolGods (remaining heroes)
+import antler from "@/assets/heroes/antler.png";
+import athena from "@/assets/heroes/athena.png";
+import bastet from "@/assets/heroes/bastet-new.png";
+import cyborg from "@/assets/heroes/cyborg.png";
+import frost from "@/assets/heroes/frost.png";
+import marcus from "@/assets/heroes/marcus.png";
+
+const community1of1s = [cosmic, crimson, demon, gothic, oni, shiva];
+const staff1of1s = [cosmicKing, darkQueen, skullKing, waterDemon];
+const solgods = [antler, athena, bastet, cyborg, frost, marcus];
 
 const Gallery = () => {
   return (
@@ -52,17 +79,51 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Carousel Section Placeholder */}
-      <section className="py-16 px-4">
+      {/* Community 1/1s Section */}
+      <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
-          <div 
-            className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 md:p-12 text-center"
-            style={{ animation: "fade-in 0.8s ease-out 0.6s forwards", opacity: 0 }}
+          <h2 
+            className="text-2xl sm:text-3xl md:text-4xl font-bold font-cinzel mb-8 text-center"
+            style={{ color: "#e8e4dc" }}
           >
-            <p className="text-muted-foreground text-lg">
-              Gallery carousel coming soon...
-            </p>
-          </div>
+            Community 1/1s
+          </h2>
+          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Bespoke creations crafted exclusively for our dedicated holders
+          </p>
+          <ThreeDPhotoCarousel images={community1of1s} />
+        </div>
+      </section>
+
+      {/* Staff 1/1s Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 
+            className="text-2xl sm:text-3xl md:text-4xl font-bold font-cinzel mb-8 text-center"
+            style={{ color: "#e8e4dc" }}
+          >
+            Staff 1/1s
+          </h2>
+          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Unique editions representing the architects of the project
+          </p>
+          <ThreeDPhotoCarousel images={staff1of1s} />
+        </div>
+      </section>
+
+      {/* SolGods Section */}
+      <section className="py-12 px-4 pb-24">
+        <div className="max-w-6xl mx-auto">
+          <h2 
+            className="text-2xl sm:text-3xl md:text-4xl font-bold font-cinzel mb-8 text-center"
+            style={{ color: "#e8e4dc" }}
+          >
+            Genesis SolGods
+          </h2>
+          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            The foundation of the entire Solara movement
+          </p>
+          <ThreeDPhotoCarousel images={solgods} />
         </div>
       </section>
     </Layout>
