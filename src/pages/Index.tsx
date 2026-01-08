@@ -57,7 +57,7 @@ const Index = () => {
           
           {/* Rotating Text Hero */}
           <div className="mb-6">
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold italic mb-2" style={{ color: "#02093f" }}>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold italic text-foreground mb-2">
               Probably
             </h1>
             <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold italic" style={{ perspective: "1000px" }}>
