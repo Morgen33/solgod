@@ -86,7 +86,7 @@ const About = () => {
             />
             <ValueCard 
               icon={<Users size={32} />}
-              title='The Power of "The Gang"'
+              title='The Power of "The Community"'
               description="Our community isn't just a Discord server; it's a high-signal intelligence hub. From a 10-person group chat to a 1,900+ member alpha engine, we leverage collective knowledge to turn small stakes into real wins."
             />
             <ValueCard 
