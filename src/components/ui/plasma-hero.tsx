@@ -486,9 +486,9 @@ export default function PlasmaHero({
             alt={`SolGod ${index + 1}`} 
             className="absolute h-auto object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
             style={{
-              // Ball diameter in vh * 85% to fit inside the sphere
-              width: `${characterScale * 85}vh`,
-              maxWidth: `${characterScale * 85}vw`,
+              // Ball diameter in vh * 110% to fill more of the sphere
+              width: `${characterScale * 110}vh`,
+              maxWidth: `${characterScale * 110}vw`,
               filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
               opacity: currentHeroIndex === index && !isTransitioning ? 0.3 : 0,
             }}
