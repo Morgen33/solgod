@@ -347,9 +347,20 @@ const Team = () => {
           >
             THE TEAM
           </h1>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            The people behind SolGods.
+          <p className="text-[#01b2ff] font-medium mb-6 text-sm sm:text-base">
+            Before & After: Select any photo to see the 'In Real Life' (IRL) view.
           </p>
+          
+          <div className="max-w-3xl mx-auto">
+            <h2 
+              className="text-xl sm:text-2xl font-['Cinzel'] text-[#e8e4dc] mb-4"
+            >
+              The Architects of Ascendancy
+            </h2>
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              Before the first portal was opened, there were those who channeled the Sol Core to build the foundation. The SolGods staff is more than a team; we are the stewards of Solara and the engineers of Sol City. From the depths of the trenches to the heights of the celestial orders, our mission is to ensure every member of this Sacred Accord has the tools to ascend. Meet the builders behind the light.
+            </p>
+          </div>
         </div>
       </section>
 
