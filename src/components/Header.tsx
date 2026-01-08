@@ -106,7 +106,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Link to="/home" className="flex items-center gap-2">
-            <img src={solgodsIcon} alt="SOLGODS" className="h-10 sm:h-12 w-auto" />
+            <img src={solgodsIcon} alt="SolGods" className="h-10 sm:h-12 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">

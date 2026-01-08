@@ -469,9 +469,9 @@ const Dao = () => {
             </div>
             
             <p className="text-muted-foreground mb-6">
-              The SOLGODS ecosystem is evolving, and the time has come to forge an elite circle dedicated to the highest 
+              The SolGods ecosystem is evolving, and the time has come to forge an elite circle dedicated to the highest 
               echelons of our community. We are thrilled to announce the founding of the Pantheon Circle DAO, an exclusive 
-              organization where only the most powerful and storied SOLGODS will gather!
+              organization where only the most powerful and storied SolGods will gather!
             </p>
             
             <div className="bg-blue/10 border border-blue/20 rounded-xl p-6 mb-6">
@@ -479,14 +479,14 @@ const Dao = () => {
               <p className="text-sm text-muted-foreground">
                 The Pantheon Circle is founded by the esteemed <span className="font-medium">@Rasi</span>, who will guide this DAO's vision. 
                 Joining him to drive its operations and strategy is <span className="font-medium">@Swish</span>. Together, they will cultivate 
-                a DAO focused on influence, growth, and the maximal potential of the SOLGODS project.
+                a DAO focused on influence, growth, and the maximal potential of the SolGods project.
               </p>
             </div>
             
             <div className="bg-secondary/30 rounded-xl p-6 mb-6">
               <h4 className="font-bold mb-3">Exclusive Membership: The Elite Traits</h4>
               <p className="text-sm text-muted-foreground mb-3">
-                Membership in the Pantheon Circle is an honor reserved for the true royalty among SOLGODS. 
+                Membership in the Pantheon Circle is an honor reserved for the true royalty among SolGods. 
                 To be accepted, your GOD must possess at least ONE of the following legendary traits:
               </p>
               <div className="flex flex-wrap gap-2">

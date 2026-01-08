@@ -71,7 +71,7 @@ const SolCity = () => {
           
           <div className="card-glow rounded-xl p-8 mb-12">
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Following the success of our genesis collection, SOLGODS, we are proud to introduce Sol City—a high-end expansion that moves beyond traditional digital collectibles. While SOLGODS laid the foundation of our community, Sol City is engineered to push the boundaries of NFT utility on the Solana blockchain.
+              Following the success of our genesis collection, SolGods, we are proud to introduce Sol City—a high-end expansion that moves beyond traditional digital collectibles. While SolGods laid the foundation of our community, Sol City is engineered to push the boundaries of NFT utility on the Solana blockchain.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Sol City is a masterfully crafted collection of 5,555 pixel art NFTs. This is not just a PFP; it is a sophisticated asset participation model where your art works for you.
@@ -81,7 +81,7 @@ const SolCity = () => {
             <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-6">
               <li><strong className="text-foreground">Total Supply:</strong> 5,555 unique NFTs.</li>
               <li><strong className="text-foreground">Artistic Depth:</strong> Over 150 unique traits across 10 distinct creature types, including several ultra-rare 1/1 masterpieces.</li>
-              <li><strong className="text-foreground">Proven Pedigree:</strong> The second major release from the team behind the SOLGODS Genesis collection.</li>
+              <li><strong className="text-foreground">Proven Pedigree:</strong> The second major release from the team behind the SolGods Genesis collection.</li>
             </ul>
           </div>
 
