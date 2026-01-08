@@ -5,6 +5,7 @@ import {
   Shield, Globe, Sparkles, Cog, Users, Coins
 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
+import { RotatingText } from "@/components/ui/rotating-text";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
@@ -53,18 +54,17 @@ const Index = () => {
             alt="SolGods" 
             className="h-32 sm:h-40 w-auto mx-auto mb-8"
           />
-          <h1 
-            className="text-5xl sm:text-7xl font-bold mb-6 bg-clip-text text-transparent animate-gradient-flow"
-            style={{
-              backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
-              backgroundSize: "200% 100%",
-            }}
-          >
-            WELCOME TO SOLGODS
-          </h1>
-          <p className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
-            Probably Nothing. Probably Everything.
-          </p>
+          
+          {/* Rotating Text Hero */}
+          <div className="mb-6">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold italic text-foreground mb-2">
+              Probably
+            </h1>
+            <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold italic" style={{ perspective: "1000px" }}>
+              <RotatingText />
+            </h1>
+          </div>
+
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
             Join the family of traders, creators, and raiders rewriting what it means to be part of Web3.
           </p>
