@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, ReactNode, useState } from 'react';
-import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 interface GlowCardProps {
@@ -32,7 +31,6 @@ function useIsTouchDevice() {
   useEffect(() => {
     const mql = window.matchMedia('(hover: none), (pointer: coarse)');
     const onChange = () => setIsTouch(mql.matches);
-
     onChange();
     mql.addEventListener('change', onChange);
     return () => mql.removeEventListener('change', onChange);
@@ -52,11 +50,11 @@ const GlowCard: React.FC<GlowCardProps> = ({
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
-
   const isMobile = useIsMobile();
   const isTouchDevice = useIsTouchDevice();
 
   useEffect(() => {
+    // Disable pointer tracking on mobile/touch to prevent shakiness
     if (isMobile || isTouchDevice) return;
 
     const syncPointer = (e: PointerEvent) => {
@@ -83,8 +81,8 @@ const GlowCard: React.FC<GlowCardProps> = ({
     return sizeMap[size];
   };
 
-  const getInlineStyles = (): React.CSSProperties => {
-    const baseStyles: React.CSSProperties & { [key: string]: string | number } = {
+  const getInlineStyles = () => {
+    const baseStyles: React.CSSProperties & { [key: string]: any } = {
       '--base': base,
       '--spread': spread,
       '--radius': '14',
@@ -107,8 +105,8 @@ const GlowCard: React.FC<GlowCardProps> = ({
       backgroundPosition: '50% 50%',
       backgroundAttachment: 'fixed',
       border: 'var(--border-size) solid var(--backup-border)',
-      position: 'relative',
-      touchAction: 'none',
+      position: 'relative' as const,
+      touchAction: 'none' as const,
     };
 
     if (width !== undefined) {
@@ -118,7 +116,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
       baseStyles.height = typeof height === 'number' ? `${height}px` : height;
     }
 
-    return baseStyles as React.CSSProperties;
+    return baseStyles;
   };
 
   const beforeAfterStyles = `
@@ -184,12 +182,19 @@ const GlowCard: React.FC<GlowCardProps> = ({
         ref={cardRef}
         data-glow
         style={getInlineStyles()}
-        className={cn(
-          getSizeClasses(),
-          !customSize && 'aspect-[3/4]',
-          'rounded-2xl relative grid grid-rows-[1fr_auto] shadow-[0_1rem_2rem_-1rem_black] p-4 gap-4 backdrop-blur-[5px]',
-          className
-        )}
+        className={`
+          ${getSizeClasses()}
+          ${!customSize ? 'aspect-[3/4]' : ''}
+          rounded-2xl 
+          relative 
+          grid 
+          grid-rows-[1fr_auto] 
+          shadow-[0_1rem_2rem_-1rem_black] 
+          p-4 
+          gap-4 
+          backdrop-blur-[5px]
+          ${className}
+        `}
       >
         <div ref={innerRef} data-glow></div>
         {children}
