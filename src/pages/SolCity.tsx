@@ -688,18 +688,16 @@ const SolCity = () => {
       {/* CTA Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <GlowCard glowColor="blue" customSize className="w-full h-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center" style={{ color: "#2053db" }}>Ready to Ascend?</h2>
-            <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-center">
+          <div className="card-glow rounded-xl p-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: "#2053db" }}>Ready to Ascend?</h2>
+            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Join the family of X reply guys, traders, creators, and raiders rewriting what it means to be part of Web3.
             </p>
-            <div className="flex justify-center">
-              <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer" className="text-sm px-6 py-2">
-                Join Discord
-                <ArrowRight size={16} />
-              </ShinyButton>
-            </div>
-          </GlowCard>
+            <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer" className="text-sm px-6 py-2">
+              Join Discord
+              <ArrowRight size={16} />
+            </ShinyButton>
+          </div>
         </div>
       </section>
     </Layout>;
