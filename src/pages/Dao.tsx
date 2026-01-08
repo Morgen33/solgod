@@ -571,13 +571,19 @@ const Dao = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ShinyButton as="a" href="/join">
+                Get Your Starter God
+                <Sparkles size={20} />
+              </ShinyButton>
               <ShinyButton as="a" href="/solgods">
-                Learn More Here
+                Learn More
                 <ExternalLink size={20} />
               </ShinyButton>
-              <ShinyButton as="a" href="/join">
-                Get Starter God Here
-                <Sparkles size={20} />
+            </div>
+            <div className="mt-6">
+              <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+                Join Main Discord
+                <ExternalLink size={20} />
               </ShinyButton>
             </div>
           </GlowCard>
