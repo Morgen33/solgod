@@ -141,8 +141,8 @@ const Dao = () => {
             </p>
             
             <div className="grid md:grid-cols-2 gap-4 mb-6">
-              <div className="bg-secondary/30 rounded-xl p-6 flex flex-col">
-                <h4 className="font-bold mb-3 font-cinzel">How to Enter</h4>
+              <div className="bg-secondary/30 rounded-xl p-6 flex flex-col border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
+                <h4 className="font-bold mb-3 font-cinzel text-[#e8e4dc]">How to Enter</h4>
                 <p className="text-sm text-muted-foreground mb-4">Own a Sol God with one of these traits:</p>
                 <p className="text-xs text-muted-foreground mb-3">Have it either delisted (not for sale) or listed at 5 SOL or higher.</p>
                 <p className="text-sm text-muted-foreground mt-auto">
@@ -150,9 +150,9 @@ const Dao = () => {
                   along with the chance to wield these legendary powers.
                 </p>
               </div>
-              <div className="bg-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center">
-                <h4 className="font-bold mb-4 font-cinzel">Wizard Hat</h4>
-                <div className="bg-white rounded-2xl p-4 flex items-center justify-center">
+              <div className="bg-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
+                <h4 className="font-bold mb-4 font-cinzel text-[#e8e4dc]">Wizard Hat</h4>
+                <div className="bg-white rounded-2xl p-4 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
                   <img src={wizardHatTrait} alt="Wizard Hat" className="h-28 w-28 object-contain" />
                 </div>
               </div>
