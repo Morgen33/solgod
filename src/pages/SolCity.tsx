@@ -71,7 +71,7 @@ const SolCity = () => {
           
           <div className="card-glow rounded-xl p-8 mb-12">
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Following the success of our genesis collection, SOL GODs, we are proud to introduce Sol City—a high-end expansion that moves beyond traditional digital collectibles. While SOL GODs laid the foundation of our community, Sol City is engineered to push the boundaries of NFT utility on the Solana blockchain.
+              Following the success of our genesis collection, SOLGODS, we are proud to introduce Sol City—a high-end expansion that moves beyond traditional digital collectibles. While SOLGODS laid the foundation of our community, Sol City is engineered to push the boundaries of NFT utility on the Solana blockchain.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Sol City is a masterfully crafted collection of 5,555 pixel art NFTs. This is not just a PFP; it is a sophisticated asset participation model where your art works for you.
@@ -81,7 +81,7 @@ const SolCity = () => {
             <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-6">
               <li><strong className="text-foreground">Total Supply:</strong> 5,555 unique NFTs.</li>
               <li><strong className="text-foreground">Artistic Depth:</strong> Over 150 unique traits across 10 distinct creature types, including several ultra-rare 1/1 masterpieces.</li>
-              <li><strong className="text-foreground">Proven Pedigree:</strong> The second major release from the team behind the SOL GODs Genesis collection.</li>
+              <li><strong className="text-foreground">Proven Pedigree:</strong> The second major release from the team behind the SOLGODS Genesis collection.</li>
             </ul>
           </div>
 
@@ -219,7 +219,7 @@ const SolCity = () => {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border">
-                  <tr><td className="py-2">Sol Gods Holders</td><td className="py-2">700</td><td className="py-2">0.5 SOL</td><td className="py-2 font-semibold">350 SOL</td></tr>
+                  <tr><td className="py-2">SolGods Holders</td><td className="py-2">700</td><td className="py-2">0.5 SOL</td><td className="py-2 font-semibold">350 SOL</td></tr>
                   <tr><td className="py-2">Pre Sale Phase 1</td><td className="py-2">300</td><td className="py-2">0.55 SOL</td><td className="py-2 font-semibold">165 SOL</td></tr>
                   <tr><td className="py-2">Whitelists</td><td className="py-2">1,200</td><td className="py-2">0.65 SOL</td><td className="py-2 font-semibold">780 SOL</td></tr>
                   <tr><td className="py-2">Pre Sale Phase 2</td><td className="py-2">500</td><td className="py-2">0.65 SOL</td><td className="py-2 font-semibold">325 SOL</td></tr>
@@ -242,7 +242,7 @@ const SolCity = () => {
                 </thead>
                 <tbody className="divide-y divide-border">
                   <tr><td className="py-2">Capital Allocation Engine</td><td className="py-2">80%</td><td className="py-2 font-semibold">2,722 SOL</td></tr>
-                  <tr><td className="py-2">Sol God Support</td><td className="py-2">5%</td><td className="py-2 font-semibold">170.125 SOL</td></tr>
+                  <tr><td className="py-2">SolGod Support</td><td className="py-2">5%</td><td className="py-2 font-semibold">170.125 SOL</td></tr>
                   <tr><td className="py-2">Treasury</td><td className="py-2">5%</td><td className="py-2 font-semibold">170.125 SOL</td></tr>
                   <tr><td className="py-2">Team Expansion</td><td className="py-2">10%</td><td className="py-2 font-semibold">340.25 SOL</td></tr>
                 </tbody>
@@ -443,7 +443,7 @@ const SolCity = () => {
                   }}></div>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Sol God Support</span>
+                    <span className="text-muted-foreground">SolGod Support</span>
                     <span className="font-semibold">5%</span>
                   </div>
                   <div className="w-full bg-background rounded-full h-3">
