@@ -77,17 +77,17 @@ const Dao = () => {
             </p>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center p-6 rounded-xl bg-blue/10">
+              <div className="text-center p-6 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <Users className="text-blue-light mx-auto mb-3" size={32} />
                 <h4 className="font-bold mb-2">Decentralized</h4>
                 <p className="text-sm text-muted-foreground">We grow together.</p>
               </div>
-              <div className="text-center p-6 rounded-xl bg-blue/10">
+              <div className="text-center p-6 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <Shield className="text-blue-light mx-auto mb-3" size={32} />
                 <h4 className="font-bold mb-2">Autonomous</h4>
                 <p className="text-sm text-muted-foreground">Rules are set in code, ensuring fairness for every God.</p>
               </div>
-              <div className="text-center p-6 rounded-xl bg-blue/10">
+              <div className="text-center p-6 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <Crown className="text-blue-light mx-auto mb-3" size={32} />
                 <h4 className="font-bold mb-2">Organization</h4>
                 <p className="text-sm text-muted-foreground">Your Sol Gods NFT acts as your "Governance Token"—it's your voting chip, your membership card.</p>
@@ -207,15 +207,15 @@ const Dao = () => {
             </p>
             
             <div className="grid md:grid-cols-3 gap-4 mb-6">
-              <div className="p-4 rounded-xl bg-secondary/30">
+              <div className="p-4 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <h4 className="font-bold mb-2 text-sm">Market Elevation</h4>
                 <p className="text-xs text-muted-foreground">Coordinated actions and deep analysis to increase the scarcity and value of the Wings trait.</p>
               </div>
-              <div className="p-4 rounded-xl bg-secondary/30">
+              <div className="p-4 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <h4 className="font-bold mb-2 text-sm">Exclusive Connection</h4>
                 <p className="text-xs text-muted-foreground">Hosting private events and focused discussions for elite holders.</p>
               </div>
-              <div className="p-4 rounded-xl bg-secondary/30">
+              <div className="p-4 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <h4 className="font-bold mb-2 text-sm">Merchandise & Passive Income</h4>
                 <p className="text-xs text-muted-foreground">Generating passive income for members, with a portion supporting charitable causes.</p>
               </div>
@@ -295,7 +295,7 @@ const Dao = () => {
             </p>
             
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
-              <div className="p-4 rounded-xl bg-secondary/30">
+              <div className="p-4 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <h4 className="font-bold mb-2 text-sm">Core Focus Areas</h4>
                 <ul className="text-xs text-muted-foreground space-y-1">
                   <li>• Monetization & sustainable revenue</li>
@@ -304,7 +304,7 @@ const Dao = () => {
                   <li>• Mining & infrastructure-backed operations</li>
                 </ul>
               </div>
-              <div className="p-4 rounded-xl bg-secondary/30">
+              <div className="p-4 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <h4 className="font-bold mb-2 text-sm">Required Traits</h4>
                 <div className="flex flex-wrap gap-2 mb-2">
                   {["Peaky Hat", "Mafia Hat", "Tuxedo", "Pinstripe Suit"].map((trait) => (
@@ -378,7 +378,7 @@ const Dao = () => {
               <h3 className="text-3xl font-bold">DO GOOD DAO (DGD)</h3>
             </div>
             
-            <div className="bg-blue/10 border border-blue/20 rounded-xl p-6 mb-6">
+            <div className="bg-secondary/50 border border-blue/30 rounded-xl p-6 mb-6 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
               <h4 className="font-bold mb-3 text-blue-light">We Accept Every Trait</h4>
               <p className="text-sm text-muted-foreground mb-4">
                 Our main traits are:
@@ -395,7 +395,7 @@ const Dao = () => {
               </p>
             </div>
             
-            <div className="bg-secondary/30 rounded-xl p-6 mb-6">
+            <div className="bg-secondary/50 border border-blue/30 rounded-xl p-6 mb-6 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
               <p className="text-muted-foreground mb-4">
                 DGD is not your typical "charity" project. It's a community-powered movement using Web3 culture to create real-world impact.
               </p>
