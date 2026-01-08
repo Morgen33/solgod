@@ -54,45 +54,58 @@ const TEAM: TeamGroup[] = [
   {
     role: "Founders",
     members: [
-      { name: "CreatorX", note: "Trading Engine / Master Trader" },
-      { name: "Happy" },
+      { name: "CreatorX", note: "Project Director" },
+      { name: "Happy", note: "Creative Director" },
     ],
   },
   {
     role: "Co-Founders",
-    members: [{ name: "Asta", note: "Token & Coin Master" }, { name: "Truth" }],
+    members: [
+      { name: "Asta", note: "Coin Advisor / Tokenomics Expert" },
+      { name: "Truth", note: "Coin Advisor / Tokenomics Expert" },
+    ],
   },
   {
     role: "Core Team",
     members: [
-      { name: "Rasi", note: "Lead Admin, Front End, Culture Builder" },
-      { name: "Glow", note: "Lead Admin, Spaces Lead, HR, DAO Overseer" },
+      { name: "Rasi", note: "Lead Admin, Culture Builder, Public Relations Lead (PR)" },
+      { name: "Glow", note: "Lead Community Manager, Lead Admin, Spaces Lead, Human Resources (HR)" },
     ],
   },
   {
     role: "Security",
     members: [
-      { name: "LionX", tags: ["Lead"] },
-      { name: "Henry", tags: ["Admin"] },
-      { name: "Red", tags: ["Admin"] },
-      { name: "IRB" },
+      { name: "LionX", note: "Lead Security / Admin" },
+      { name: "Henry", note: "Security Team / Admin" },
+      { name: "Red", note: "Security Team / Admin" },
+      { name: "IRB", note: "Security Team" },
     ],
   },
   {
     role: "Collaboration",
-    members: [{ name: "Eddie", tags: ["Manager"] }],
+    members: [{ name: "Eddie", note: "Collaboration Manager / Admin" }],
   },
   {
     role: "Community",
     members: [
-      { name: "TrashPanda" },
-      { name: "Gnomie" },
-      { name: "Viper", tags: ["Artist"] },
+      { name: "TrashPanda", note: "Community Connector" },
+      { name: "Gnomie", note: "Community Connector" },
     ],
   },
   {
+    role: "Developers",
+    members: [{ name: "Morgan", note: "Developer" }],
+  },
+  {
+    role: "Artists",
+    members: [{ name: "Viper", note: "Community Artist" }],
+  },
+  {
     role: "X Management",
-    members: [{ name: "Mister" }, { name: "Savage" }],
+    members: [
+      { name: "Mister", note: "X Management / Moderator" },
+      { name: "Savage", note: "X Management / Moderator" },
+    ],
   },
   {
     role: "Moderators",
@@ -106,10 +119,6 @@ const TEAM: TeamGroup[] = [
       { name: "Daver" },
     ],
   },
-  {
-    role: "Developers",
-    members: [{ name: "Morgen" }],
-  },
 ];
 
 const ROLE_ICON: Record<string, JSX.Element> = {
@@ -119,9 +128,10 @@ const ROLE_ICON: Record<string, JSX.Element> = {
   Security: <Shield className="h-4 w-4" />,
   Collaboration: <HeartHandshake className="h-4 w-4" />,
   Community: <Users className="h-4 w-4" />,
+  Developers: <Code2 className="h-4 w-4" />,
+  Artists: <Paintbrush className="h-4 w-4" />,
   "X Management": <Megaphone className="h-4 w-4" />,
   Moderators: <MessageCircle className="h-4 w-4" />,
-  Developers: <Code2 className="h-4 w-4" />,
 };
 
 const MEMBER_AVATARS: Record<string, string> = {
