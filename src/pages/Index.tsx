@@ -15,7 +15,7 @@ const quickLinks = [
   },
   {
     label: "Discord",
-    href: "https://discord.com/invite/gtrFTsmEAE",
+    href: "https://discord.gg/nfts",
     icon: MessageCircle,
     description: "Join the community chat"
   },
@@ -83,7 +83,7 @@ const Index = () => {
             Buy SolGods
             <ArrowRight size={20} />
           </ShinyButton>
-          <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+          <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
             Join Discord
           </ShinyButton>
         </div>
@@ -257,7 +257,7 @@ const Index = () => {
               <p className="text-muted-foreground mb-6 md:mb-8 max-w-xl mx-auto text-sm md:text-base">
                 From exclusive insights to the heart of the Solara economy, the journey to ascendancy starts here.
               </p>
-              <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+              <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
                 Join Discord
               </ShinyButton>
             </div>

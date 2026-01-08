@@ -4,7 +4,7 @@ import solgodsIcon from "@/assets/solgods-icon.png";
 
 const quickLinks = [
   { label: "X/Twitter", href: "https://x.com/SOLGodsNFTs", icon: Twitter },
-  { label: "Discord", href: "https://discord.com/invite/gtrFTsmEAE", icon: MessageCircle },
+  { label: "Discord", href: "https://discord.gg/nfts", icon: MessageCircle },
   { label: "Buy SolGods", href: "https://magiceden.io/marketplace/solgods_", icon: ShoppingBag },
   { label: "Stake", href: "https://sgstake.fluxinc.io/", icon: Layers },
   { label: "Linktree", href: "https://linktr.ee/SolGodsNFTS", icon: TreePine },

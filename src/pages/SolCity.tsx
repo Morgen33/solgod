@@ -672,7 +672,7 @@ const SolCity = () => {
           <div className="mt-16 text-center">
             <p className="text-muted-foreground mb-4">Have questions about the whitepaper?</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
+              <a href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
                 Join Discord
                 <ExternalLink size={14} />
               </a>
@@ -693,7 +693,7 @@ const SolCity = () => {
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Join the family of X reply guys, traders, creators, and raiders rewriting what it means to be part of Web3.
             </p>
-            <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer" className="text-sm px-6 py-2">
+            <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer" className="text-sm px-6 py-2">
               Join Discord
               <ArrowRight size={16} />
             </ShinyButton>
