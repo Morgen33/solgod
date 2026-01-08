@@ -127,7 +127,7 @@ const Index = () => {
             className="text-3xl md:text-5xl font-bold font-cinzel text-center mb-4"
             style={{ color: "#e8e4dc" }}
           >
-            WHY SOL GODS
+            WHY SOLGODS
           </h2>
           <p className="text-muted-foreground text-center mb-12 md:mb-16 max-w-2xl mx-auto text-sm md:text-base px-2">
             SolGods is a Value-First Ecosystem where digital identity meets a high-performance growth engine. We've moved beyond static art to create a system that prioritizes community outcomes and long-term sustainability.
