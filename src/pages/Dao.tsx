@@ -572,12 +572,12 @@ const Dao = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <ShinyButton as="a" href="/solgods">
-                Learn More
+                Learn More Here
                 <ExternalLink size={20} />
               </ShinyButton>
-              <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
-                Join Discord
-                <ExternalLink size={20} />
+              <ShinyButton as="a" href="/join">
+                Get Starter God Here
+                <Sparkles size={20} />
               </ShinyButton>
             </div>
           </GlowCard>
