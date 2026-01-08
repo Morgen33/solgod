@@ -1,8 +1,8 @@
 import { Layout } from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { 
-  ArrowRight, Twitter, MessageCircle, Layers, Gift, TrendingUp, 
-  Shield, Globe, Sparkles, Cog, Users, Coins
+  ArrowRight, Twitter, Layers, Gift, TrendingUp, 
+  Shield, Globe, Sparkles, Cog, Users, Coins, TreePine, Send
 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { RotatingText } from "@/components/ui/rotating-text";
@@ -24,16 +24,16 @@ const quickLinks = [
     description: "Follow for updates & alpha"
   },
   {
-    label: "Discord",
-    href: "https://discord.gg/nfts",
-    icon: MessageCircle,
-    description: "Join the community chat"
+    label: "Linktree",
+    href: "https://linktr.ee/SolGodsNFTS",
+    icon: TreePine,
+    description: "All our links in one place"
   },
   {
-    label: "Buy SolGods",
-    href: "https://magiceden.io/marketplace/solgods_",
-    icon: Gift,
-    description: "Get yours on Magic Eden"
+    label: "Telegram",
+    href: "https://t.me/solgods",
+    icon: Send,
+    description: "Join our Telegram channel"
   },
   {
     label: "Stake",
