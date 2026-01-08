@@ -14,6 +14,8 @@ import dragonWingsTrait from "@/assets/traits/dragon-wings-new.png";
 import mechaWingsTrait from "@/assets/traits/mecha-wings-new.png";
 import rainbowWingsTrait from "@/assets/traits/rainbow-wings-new.png";
 import phoenixWingsTrait from "@/assets/traits/phoenix-wings-new.png";
+import strawhatTrait from "@/assets/traits/strawhat.png";
+import pixelPuppyTrait from "@/assets/traits/pixel-puppy.png";
 
 const DAO_SECTIONS = [
   { name: "Wizard Cabal", id: "wizard-cabal" },
@@ -383,14 +385,17 @@ const Dao = () => {
               <p className="text-sm text-muted-foreground mb-4">
                 Our main traits are:
               </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["Pixel Puppy", "Strawhat"].map((trait) => (
-                  <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
-                    {trait}
-                  </span>
-                ))}
+              <div className="grid grid-cols-2 gap-6 mb-4">
+                <div className="flex flex-col items-center">
+                  <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Pixel Puppy</span>
+                  <img src={pixelPuppyTrait} alt="Pixel Puppy" className="h-40 w-40 object-contain" />
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Strawhat</span>
+                  <img src={strawhatTrait} alt="Strawhat" className="h-40 w-40 object-contain" />
+                </div>
               </div>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground text-center">
                 But we accept every trait, because doing good is for everyone.
               </p>
             </div>
