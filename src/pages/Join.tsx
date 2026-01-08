@@ -53,24 +53,6 @@ const Join = () => {
             <p className="text-xl text-muted-foreground">New here? This is where it starts.</p>
           </div>
 
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-6 sm:p-8 mb-8">
-            {/* Starter Gods Showcase */}
-            <div className="grid grid-cols-5 gap-3">
-              {starterGods.map((img, index) => (
-                <div 
-                  key={index} 
-                  className="aspect-square rounded-xl overflow-hidden border border-primary/20 hover:border-primary/50 transition-all hover:scale-105"
-                >
-                  <img 
-                    src={img} 
-                    alt={`Starter SolGod ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-          </GlowCard>
-
           {/* Text content in card */}
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-6 sm:p-8">
             <div className="space-y-6">
@@ -142,6 +124,22 @@ const Join = () => {
               </div>
 
               <p className="text-muted-foreground">Wear it right. Move with purpose.</p>
+
+              {/* Starter Gods Showcase */}
+              <div className="grid grid-cols-5 gap-3 pt-4">
+                {starterGods.map((img, index) => (
+                  <div 
+                    key={index} 
+                    className="aspect-square rounded-xl overflow-hidden border border-primary/20 hover:border-primary/50 transition-all hover:scale-105"
+                  >
+                    <img 
+                      src={img} 
+                      alt={`Starter SolGod ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
 
               <div className="flex justify-center pt-4">
                 <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
