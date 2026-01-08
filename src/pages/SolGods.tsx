@@ -355,7 +355,7 @@ export default function SolGods() {
             <div className="flex flex-col items-center">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: "#01b2ff" }}>Ready to Ascend?</h2>
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-                Join the pantheon of SolGods and unlock the full power of the ecosystem.
+                Join SolGods and unlock the full power of the ecosystem.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
