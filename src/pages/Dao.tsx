@@ -8,6 +8,22 @@ import mafiaDaoLogo from "@/assets/mafia-dao-logo.png";
 import pantheonCircleLogo from "@/assets/pantheon-circle-logo.png";
 import doGoodDaoLogo from "@/assets/do-good-dao-logo.png";
 import wizardCabalLogo from "@/assets/wizard-cabal-logo.png";
+import wizardHatTrait from "@/assets/traits/magichat.png";
+
+const DAO_SECTIONS = [
+  { name: "Wizard Cabal", id: "wizard-cabal" },
+  { name: "Wings SG DAO", id: "wings-dao" },
+  { name: "Mafia DAO", id: "mafia-dao" },
+  { name: "Do Good DAO", id: "do-good-dao" },
+  { name: "Pantheon Circle", id: "pantheon-circle" },
+];
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
 
 const SectionIcon = () => (
   <div className="flex justify-center mb-6">
@@ -94,10 +110,14 @@ const Dao = () => {
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold mb-4 text-blue-light">Current DAOs Open:</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {["Wizard Cabal", "Wings SG DAO", "Mafia DAO", "Do Good DAO", "Pantheon Circle"].map((dao) => (
-                <span key={dao} className="px-4 py-2 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
-                  {dao}
-                </span>
+              {DAO_SECTIONS.map((dao) => (
+                <button
+                  key={dao.id}
+                  onClick={() => scrollToSection(dao.id)}
+                  className="px-4 py-2 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 cursor-pointer"
+                >
+                  {dao.name}
+                </button>
               ))}
             </div>
           </div>
@@ -105,7 +125,7 @@ const Dao = () => {
       </section>
 
       {/* Wizard Cabal */}
-      <section className="py-16 px-4">
+      <section id="wizard-cabal" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
@@ -123,7 +143,10 @@ const Dao = () => {
             <div className="bg-secondary/30 rounded-xl p-6 mb-6">
               <h4 className="font-bold mb-3">How to Enter</h4>
               <p className="text-sm text-muted-foreground mb-3">Own a Sol God with one of these traits:</p>
-              <div className="flex flex-wrap gap-2 mb-3">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="bg-white rounded-lg p-2 flex-shrink-0">
+                  <img src={wizardHatTrait} alt="Wizard Hat" className="h-12 w-12 object-contain" />
+                </div>
                 <span className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">Wizard Hat</span>
               </div>
               <p className="text-xs text-muted-foreground">Have it either delisted (not for sale) or listed at 5 SOL or higher.</p>
@@ -162,7 +185,7 @@ const Dao = () => {
       </section>
 
       {/* Wings DAO */}
-      <section className="py-16 px-4">
+      <section id="wings-dao" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
@@ -231,7 +254,7 @@ const Dao = () => {
       </section>
 
       {/* Mafia DAO */}
-      <section className="py-16 px-4">
+      <section id="mafia-dao" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
@@ -325,7 +348,7 @@ const Dao = () => {
       </section>
 
       {/* Do Good DAO */}
-      <section className="py-16 px-4">
+      <section id="do-good-dao" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
@@ -410,7 +433,7 @@ const Dao = () => {
       </section>
 
       {/* Pantheon Circle */}
-      <section className="py-16 px-4">
+      <section id="pantheon-circle" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
