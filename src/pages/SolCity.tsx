@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift, FileText, TrendingUp, Wallet, PieChart, RefreshCw, AlertTriangle, ExternalLink } from "lucide-react";
+import { GlowCard } from "@/components/ui/spotlight-card";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { MorphingText } from "@/components/ui/morphing-text";
 import solcityLogo from "@/assets/solcity-logo.png";
@@ -686,15 +687,17 @@ const SolCity = () => {
 
       {/* CTA Section */}
       <section className="py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Ascend?</h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Join the family of X reply guys, traders, creators, and raiders rewriting what it means to be part of Web3.
-          </p>
-          <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
-            Join Discord
-            <ArrowRight size={20} />
-          </ShinyButton>
+        <div className="max-w-4xl mx-auto">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Ascend?</h2>
+            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+              Join the family of X reply guys, traders, creators, and raiders rewriting what it means to be part of Web3.
+            </p>
+            <ShinyButton as="a" href="https://discord.com/invite/gtrFTsmEAE" target="_blank" rel="noopener noreferrer">
+              Join Discord
+              <ArrowRight size={20} />
+            </ShinyButton>
+          </GlowCard>
         </div>
       </section>
     </Layout>;
