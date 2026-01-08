@@ -251,7 +251,7 @@ const About = () => {
       </section>
 
       {/* Lore Section */}
-      <section className="py-24 px-4">
+      <section className="pt-12 pb-24 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <SectionIcon />
