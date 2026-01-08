@@ -24,9 +24,9 @@ import cyborg from "@/assets/heroes/cyborg.png";
 import frost from "@/assets/heroes/frost.png";
 import marcus from "@/assets/heroes/marcus.png";
 
-const community1of1s = [cosmic, crimson, gothic, oni, shiva];
-const staff1of1s = [cosmicKing, darkQueen, skullKing, waterDemon, demon];
-const solgods = [antler, athena, bastet, cyborg, frost, marcus];
+const community1of1s: string[] = [];
+const staff1of1s: string[] = [];
+const solgods: string[] = [];
 
 const Gallery = () => {
   return (
