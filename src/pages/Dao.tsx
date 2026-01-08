@@ -90,7 +90,7 @@ const Dao = () => {
               <div className="text-center p-6 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <Crown className="text-blue-light mx-auto mb-3" size={32} />
                 <h4 className="font-bold mb-2">Organization</h4>
-                <p className="text-sm text-muted-foreground">Your Sol Gods NFT acts as your "Governance Token"—it's your voting chip, your membership card.</p>
+                <p className="text-sm text-muted-foreground">Your SolGods NFT acts as your "Governance Token"—it's your voting chip, your membership card.</p>
               </div>
             </div>
           </GlowCard>
@@ -109,7 +109,7 @@ const Dao = () => {
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-8 max-w-3xl mx-auto">
             Every God belongs to a lineage. Within our ecosystem, various DAOs represent different factions 
-            of the Sol Gods pantheon. This is where you find your kin, propose new initiatives, and vote on the future of the project.
+            of the SolGods pantheon. This is where you find your kin, propose new initiatives, and vote on the future of the project.
           </p>
           
           <div className="text-center mb-12">
@@ -141,14 +141,14 @@ const Dao = () => {
             <p className="text-muted-foreground mb-6">
               The Wizard Cabal isn't just a chat — it's a game of power, strategy, and rewards. Each wizard has the chance 
               to unlock unique DAO powers that shape the fate of the Cabal: from early whitelist alpha to banishing members, 
-              doubling odds in fate's spin wheel, sweeping floor Sol Gods, amplifying your voice, or even vetoing winners. 
+              doubling odds in fate's spin wheel, sweeping floor SolGods, amplifying your voice, or even vetoing winners. 
               These powers add suspense, alliances, and drama — just like a magical reality show built on-chain.
             </p>
             
             <div className="grid md:grid-cols-2 gap-4 mb-6">
               <div className="bg-secondary/30 rounded-xl p-6 flex flex-col border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <h4 className="font-bold mb-3 font-cinzel text-[#e8e4dc]">How to Enter</h4>
-                <p className="text-sm text-muted-foreground mb-4">Own a Sol God with one of these traits:</p>
+                <p className="text-sm text-muted-foreground mb-4">Own a SolGod with one of these traits:</p>
                 <p className="text-xs text-muted-foreground mb-3">Have it either delisted (not for sale) or listed at 5 SOL or higher.</p>
                 <p className="text-sm text-muted-foreground mt-auto">
                   Once you meet this condition, you're recognized as a true Cabal wizard and gain access to the circle — 
@@ -168,7 +168,7 @@ const Dao = () => {
               <PowerCard title="Oracle of the Whitelist" description="Be the first to receive hidden whitelist alpha, with the choice to share it with the Cabal or guard it for yourself." />
               <PowerCard title="Exile of Five" description="Banish up to 5 members from the chamber for one cycle, stripping them of their vote and challenge rights." />
               <PowerCard title="Wheel of Fate" description="Double your chances in destiny's lottery — your name appears twice on the spin wheel for rewards or missions." />
-              <PowerCard title="Floor Sweeper's Boon" description="Summon a floor Sol God into your possession, a blessing from the treasury whispered about in the Cabal." />
+              <PowerCard title="Floor Sweeper's Boon" description="Summon a floor SolGod into your possession, a blessing from the treasury whispered about in the Cabal." />
               <PowerCard title="Herald of the Cabal" description="For one week, every post you make echoes as prophecy — Cabal members are compelled to amplify your words." />
               <PowerCard title="The Grand Veto" description="Strike lightning on the altar of victory: cancel the chosen winner and decree a new one (other than yourself)." />
             </div>
@@ -200,9 +200,9 @@ const Dao = () => {
               <h3 className="text-3xl font-bold">Wings SG DAO</h3>
             </div>
             
-            <p className="text-lg text-blue-light font-medium mb-4">Elevate Your Sol God!</p>
+            <p className="text-lg text-blue-light font-medium mb-4">Elevate Your SolGod!</p>
             <p className="text-muted-foreground mb-6">
-              The Wings DAO is the exclusive strategic hub for holders of Sol Gods NFTs with the rare Wings trait, 
+              The Wings DAO is the exclusive strategic hub for holders of SolGods NFTs with the rare Wings trait, 
               along with specific accessories. We focus on collective market elevation and building an elite, tight-knit community.
             </p>
             
@@ -404,7 +404,7 @@ const Dao = () => {
               </p>
               <p className="text-muted-foreground">
                 DGD exists to be a bridge: connecting those who need help with those who want to help through actions 
-                that spread positivity and represent Sol Gods the right way.
+                that spread positivity and represent SolGods the right way.
               </p>
             </div>
             
@@ -464,9 +464,9 @@ const Dao = () => {
             </div>
             
             <p className="text-muted-foreground mb-6">
-              The SOL GODs ecosystem is evolving, and the time has come to forge an elite circle dedicated to the highest 
+              The SOLGODS ecosystem is evolving, and the time has come to forge an elite circle dedicated to the highest 
               echelons of our community. We are thrilled to announce the founding of the Pantheon Circle DAO, an exclusive 
-              organization where only the most powerful and storied SOL GODs will gather!
+              organization where only the most powerful and storied SOLGODS will gather!
             </p>
             
             <div className="bg-blue/10 border border-blue/20 rounded-xl p-6 mb-6">
@@ -474,14 +474,14 @@ const Dao = () => {
               <p className="text-sm text-muted-foreground">
                 The Pantheon Circle is founded by the esteemed <span className="font-medium">@Rasi</span>, who will guide this DAO's vision. 
                 Joining him to drive its operations and strategy is <span className="font-medium">@Swish</span>. Together, they will cultivate 
-                a DAO focused on influence, growth, and the maximal potential of the SOL GODs project.
+                a DAO focused on influence, growth, and the maximal potential of the SOLGODS project.
               </p>
             </div>
             
             <div className="bg-secondary/30 rounded-xl p-6 mb-6">
               <h4 className="font-bold mb-3">Exclusive Membership: The Elite Traits</h4>
               <p className="text-sm text-muted-foreground mb-3">
-                Membership in the Pantheon Circle is an honor reserved for the true royalty among SOL GODs. 
+                Membership in the Pantheon Circle is an honor reserved for the true royalty among SOLGODS. 
                 To be accepted, your GOD must possess at least ONE of the following legendary traits:
               </p>
               <div className="flex flex-wrap gap-2">
@@ -494,7 +494,7 @@ const Dao = () => {
             </div>
             
             <p className="text-sm text-muted-foreground italic mb-6">
-              If your SOL God possesses these elite traits, prepare to take your rightful place among the Pantheon!
+              If your SolGod possesses these elite traits, prepare to take your rightful place among the Pantheon!
             </p>
             
             <div className="mb-6">
