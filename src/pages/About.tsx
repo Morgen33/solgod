@@ -164,7 +164,7 @@ const About = () => {
             />
             <MissionCard 
               title="Socially"
-              description='By fostering a "ride-or-die" culture within The Gang.'
+              description='By fostering a "ride-or-die" culture within The Community.'
               icon={<Users size={28} />}
             />
             <MissionCard 
