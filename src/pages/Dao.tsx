@@ -226,33 +226,23 @@ const Dao = () => {
               <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Dark Wings</span>
-                  <div className="bg-white rounded-xl p-3 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                    <img src={darkWingsTrait} alt="Dark Wings" className="h-24 w-24 object-contain" />
-                  </div>
+                  <img src={darkWingsTrait} alt="Dark Wings" className="h-28 w-28 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Dragon Wings</span>
-                  <div className="bg-white rounded-xl p-3 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                    <img src={dragonWingsTrait} alt="Dragon Wings" className="h-24 w-24 object-contain" />
-                  </div>
+                  <img src={dragonWingsTrait} alt="Dragon Wings" className="h-28 w-28 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Mecha Wings</span>
-                  <div className="bg-white rounded-xl p-3 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                    <img src={mechaWingsTrait} alt="Mecha Wings" className="h-24 w-24 object-contain" />
-                  </div>
+                  <img src={mechaWingsTrait} alt="Mecha Wings" className="h-28 w-28 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Rainbow Parage</span>
-                  <div className="bg-white rounded-xl p-3 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                    <img src={rainbowWingsTrait} alt="Rainbow Parage" className="h-24 w-24 object-contain" />
-                  </div>
+                  <img src={rainbowWingsTrait} alt="Rainbow Parage" className="h-28 w-28 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Phoenix Wings</span>
-                  <div className="bg-white rounded-xl p-3 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                    <img src={phoenixWingsTrait} alt="Phoenix Wings" className="h-24 w-24 object-contain" />
-                  </div>
+                  <img src={phoenixWingsTrait} alt="Phoenix Wings" className="h-28 w-28 object-contain" />
                 </div>
               </div>
             </div>
