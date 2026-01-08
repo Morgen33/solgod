@@ -534,6 +534,50 @@ const Dao = () => {
         </div>
       </section>
 
+      {/* Starter Gods Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: "#01b2ff" }}>
+              Interested in joining the community?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              The culture starts with the face you wear on X.<br />
+              If you don't own a SolGod yet, it's time to rep the <strong className="text-foreground">Starter Gods</strong>.
+            </p>
+
+            <div className="text-left mb-8">
+              <h3 className="text-xl font-bold mb-4 text-center" style={{ color: "#e8e4dc", fontFamily: "Cinzel, serif" }}>How to use:</h3>
+              <ul className="space-y-3 text-muted-foreground max-w-xl mx-auto">
+                <li className="flex items-start gap-3">
+                  <span className="text-primary font-bold">1.</span>
+                  <span>Pick your favorite Starter God</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary font-bold">2.</span>
+                  <span>Change your X PFP and let the world know you're part of the movement</span>
+                </li>
+              </ul>
+            </div>
+
+            <p className="text-muted-foreground mb-4">
+              Every Starter God is designed to match the vibe and keep the culture uniform while you hunt for your first Genesis God.
+            </p>
+            <p className="text-muted-foreground mb-4">
+              Let's keep the timeline pure SolGod energy. <strong className="text-foreground">Starter Gods today → Genesis God tomorrow.</strong>
+            </p>
+            <p className="text-lg font-semibold mb-8" style={{ color: "#01b2ff" }}>
+              The gods are watching. Change it up and stand tall.
+            </p>
+
+            <ShinyButton as="a" href="/join">
+              Get Your Starter God
+              <Sparkles size={20} />
+            </ShinyButton>
+          </GlowCard>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto text-center">
