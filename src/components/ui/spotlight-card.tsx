@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, ReactNode } from 'react';
+import React, { useEffect, useRef, ReactNode, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface GlowCardProps {
   children: ReactNode;
@@ -37,7 +38,12 @@ const GlowCard: React.FC<GlowCardProps> = ({
   const cardRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
 
+  const isMobile = useIsMobile();
+
   useEffect(() => {
+    // Disable pointer tracking on mobile to prevent visual glitches
+    if (isMobile) return;
+
     const syncPointer = (e: PointerEvent) => {
       const { clientX: x, clientY: y } = e;
       
@@ -51,7 +57,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
 
     document.addEventListener('pointermove', syncPointer);
     return () => document.removeEventListener('pointermove', syncPointer);
-  }, []);
+  }, [isMobile]);
 
   const { base, spread } = glowColorMap[glowColor];
 
