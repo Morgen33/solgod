@@ -1,18 +1,16 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { cn } from "@/lib/utils"
-
+import type React from "react";
+import { cn } from "@/lib/utils";
 interface ShinyButtonProps {
-  children: React.ReactNode
-  onClick?: () => void
-  className?: string
-  as?: "button" | "a"
-  href?: string
-  target?: string
-  rel?: string
+  children: React.ReactNode;
+  onClick?: () => void;
+  className?: string;
+  as?: "button" | "a";
+  href?: string;
+  target?: string;
+  rel?: string;
 }
-
 export function ShinyButton({
   children,
   onClick,
@@ -22,10 +20,8 @@ export function ShinyButton({
   target,
   rel
 }: ShinyButtonProps) {
-  const buttonClasses = cn("shiny-cta", className)
-
-  const styles = (
-    <style>{`
+  const buttonClasses = cn("shiny-cta", className);
+  const styles = <style>{`
       @property --gradient-angle {
         syntax: "<angle>";
         initial-value: 0deg;
@@ -203,26 +199,19 @@ export function ShinyButton({
           scale: 1.2;
         }
       }
-    `}</style>
-  )
-
+    `}</style>;
   if (as === "a" && href) {
-    return (
-      <>
+    return <>
         {styles}
         <a className={buttonClasses} href={href} target={target} rel={rel}>
-          <span>{children}</span>
+          
         </a>
-      </>
-    )
+      </>;
   }
-
-  return (
-    <>
+  return <>
       {styles}
       <button className={buttonClasses} onClick={onClick}>
         <span>{children}</span>
       </button>
-    </>
-  )
+    </>;
 }
