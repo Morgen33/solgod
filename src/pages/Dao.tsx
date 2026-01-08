@@ -524,7 +524,7 @@ const Dao = () => {
             <p className="text-blue-light font-medium">
               Join us as we ascend to the next level of community governance and prestige!
             </p>
-            <p className="text-xs text-muted-foreground mt-2 italic">Elitist DAO, no starter gods</p>
+            
           </GlowCard>
         </div>
       </section>
