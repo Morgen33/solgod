@@ -42,7 +42,7 @@ const Dao = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-24 px-4">
+      <section className="py-16 pb-4 px-4">
         <div className="max-w-5xl mx-auto">
           <SectionIcon />
           <h1 
@@ -61,7 +61,7 @@ const Dao = () => {
       </section>
 
       {/* What is an NFT DAO */}
-      <section className="py-8 px-4">
+      <section className="pt-0 pb-16 px-4">
         <div className="max-w-5xl mx-auto">
           <SectionIcon />
           <h2 
