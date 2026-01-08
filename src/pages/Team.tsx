@@ -22,6 +22,8 @@ import trashPandaAvatar from "@/assets/team/trash-panda.jpg";
 import trashPandaBackAvatar from "@/assets/team/trash-panda-back.jpg";
 import glowBackAvatar from "@/assets/team/glow-back.webp";
 import donaldAvatar from "@/assets/team/donald.jpeg";
+import happyAvatar from "@/assets/team/happy.jpg";
+import happyBackAvatar from "@/assets/team/happy-back.png";
 import rasiAvatar from "@/assets/team/rasi.webp";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -139,6 +141,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   TrashPanda: trashPandaAvatar,
   Donald: donaldAvatar,
   Rasi: rasiAvatar,
+  Happy: happyAvatar,
 };
 
 // Back images for flippable cards (add more as needed)
@@ -149,6 +152,7 @@ const MEMBER_BACK_AVATARS: Record<string, string> = {
   Gnomie: gnomieBackAvatar,
   TrashPanda: trashPandaBackAvatar,
   Glow: glowBackAvatar,
+  Happy: happyBackAvatar,
 };
 
 const AVATAR_COLORS = [
