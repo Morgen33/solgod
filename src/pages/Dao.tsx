@@ -9,6 +9,12 @@ import pantheonCircleLogo from "@/assets/pantheon-circle-logo.png";
 import doGoodDaoLogo from "@/assets/do-good-dao-logo.png";
 import wizardCabalLogo from "@/assets/wizard-cabal-logo.png";
 import wizardHatTrait from "@/assets/traits/magichat.png";
+import darkWingsTrait from "@/assets/traits/dark-wings.png";
+import dragonWingsTrait from "@/assets/traits/dragon-wings.png";
+import mechaWingsTrait from "@/assets/traits/mecha-wings.png";
+import whiteWingsTrait from "@/assets/traits/white-wings.png";
+import rainbowWingsTrait from "@/assets/traits/rainbow-wings.png";
+import phoenixWingsTrait from "@/assets/traits/phoenix-wings.png";
 
 const DAO_SECTIONS = [
   { name: "Wizard Cabal", id: "wizard-cabal" },
@@ -216,14 +222,39 @@ const Dao = () => {
               </div>
             </div>
             
-            <div className="bg-secondary/30 rounded-xl p-6 mb-6">
-              <h4 className="font-bold mb-3">Eligible Membership Assets</h4>
-              <div className="flex flex-wrap gap-2">
-                {["Rainbow Parage", "Dark Wings", "Phoenix Wings", "Dragon Wings", "Angel Wings", "Mecha Wings", "Sol Gods Visor", "Sol Gods Sweatshirt"].map((trait) => (
-                  <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
-                    {trait}
-                  </span>
-                ))}
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              <div className="bg-secondary/30 rounded-xl p-6 flex flex-col border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
+                <h4 className="font-bold mb-3 font-cinzel text-[#e8e4dc]">Eligible Membership Assets</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["Rainbow Parage", "Dark Wings", "Phoenix Wings", "Dragon Wings", "Angel Wings", "Mecha Wings", "Sol Gods Visor", "Sol Gods Sweatshirt"].map((trait) => (
+                    <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
+                      {trait}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
+                <h4 className="font-bold mb-4 font-cinzel text-[#e8e4dc]">Wings Traits</h4>
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="bg-white rounded-xl p-2 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                    <img src={darkWingsTrait} alt="Dark Wings" className="h-16 w-16 object-contain" />
+                  </div>
+                  <div className="bg-white rounded-xl p-2 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                    <img src={dragonWingsTrait} alt="Dragon Wings" className="h-16 w-16 object-contain" />
+                  </div>
+                  <div className="bg-white rounded-xl p-2 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                    <img src={mechaWingsTrait} alt="Mecha Wings" className="h-16 w-16 object-contain" />
+                  </div>
+                  <div className="bg-white rounded-xl p-2 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                    <img src={whiteWingsTrait} alt="Angel Wings" className="h-16 w-16 object-contain" />
+                  </div>
+                  <div className="bg-white rounded-xl p-2 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                    <img src={rainbowWingsTrait} alt="Rainbow Parage" className="h-16 w-16 object-contain" />
+                  </div>
+                  <div className="bg-white rounded-xl p-2 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                    <img src={phoenixWingsTrait} alt="Phoenix Wings" className="h-16 w-16 object-contain" />
+                  </div>
+                </div>
               </div>
             </div>
             
