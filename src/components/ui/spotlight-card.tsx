@@ -44,7 +44,7 @@ function useIsTouchDevice() {
 const GlowCard: React.FC<GlowCardProps> = ({ 
   children, 
   className = '', 
-  glowColor = 'purple',
+  glowColor = 'blue',
   size = 'md',
   width,
   height,
@@ -57,7 +57,6 @@ const GlowCard: React.FC<GlowCardProps> = ({
   const isTouchDevice = useIsTouchDevice();
 
   useEffect(() => {
-    // Disable pointer tracking on touch-first devices (Android often reports large CSS widths)
     if (isMobile || isTouchDevice) return;
 
     const syncPointer = (e: PointerEvent) => {
@@ -188,9 +187,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
         className={cn(
           getSizeClasses(),
           !customSize && 'aspect-[3/4]',
-          'rounded-2xl relative grid shadow-[0_1rem_2rem_-1rem_black] p-8 md:p-10 backdrop-blur-[5px]',
-          '[&_h3]:text-xl [&_h3]:md:text-2xl [&_h4]:text-lg [&_h4]:md:text-xl',
-          '[&_p]:text-base [&_p]:md:text-lg [&_p]:leading-relaxed',
+          'rounded-2xl relative grid grid-rows-[1fr_auto] shadow-[0_1rem_2rem_-1rem_black] p-4 gap-4 backdrop-blur-[5px]',
           className
         )}
       >
