@@ -119,7 +119,7 @@ const Index = () => {
             >
               WHY SOLGODS
             </h2>
-            <p className="text-xl" style={{ color: "#01b2ff" }}>
+            <p className="text-xl" style={{ color: "#2053db" }}>
               A Value-First Ecosystem
             </p>
           </div>
@@ -333,7 +333,7 @@ function ValueCard({ icon, title, description }: { icon: React.ReactNode; title:
   return (
     <GlowCard glowColor="blue" customSize className="w-full h-auto">
       <div className="flex flex-col">
-        <div className="text-blue-light mb-4">{icon}</div>
+        <div className="mb-4" style={{ color: "#01b2ff" }}>{icon}</div>
         <h3 className="text-xl font-bold mb-3">{title}</h3>
         <p className="text-muted-foreground">{description}</p>
       </div>
