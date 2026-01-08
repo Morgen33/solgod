@@ -9,12 +9,11 @@ import pantheonCircleLogo from "@/assets/pantheon-circle-logo.png";
 import doGoodDaoLogo from "@/assets/do-good-dao-logo.png";
 import wizardCabalLogo from "@/assets/wizard-cabal-logo.png";
 import wizardHatTrait from "@/assets/traits/magichat.png";
-import darkWingsTrait from "@/assets/traits/dark-wings.png";
-import dragonWingsTrait from "@/assets/traits/dragon-wings.png";
-import mechaWingsTrait from "@/assets/traits/mecha-wings.png";
-import whiteWingsTrait from "@/assets/traits/white-wings.png";
-import rainbowWingsTrait from "@/assets/traits/rainbow-wings.png";
-import phoenixWingsTrait from "@/assets/traits/phoenix-wings.png";
+import darkWingsTrait from "@/assets/traits/dark-wings-new.png";
+import dragonWingsTrait from "@/assets/traits/dragon-wings-new.png";
+import mechaWingsTrait from "@/assets/traits/mecha-wings-new.png";
+import rainbowWingsTrait from "@/assets/traits/rainbow-wings-new.png";
+import phoenixWingsTrait from "@/assets/traits/phoenix-wings-new.png";
 
 const DAO_SECTIONS = [
   { name: "Wizard Cabal", id: "wizard-cabal" },
@@ -224,7 +223,7 @@ const Dao = () => {
             
             <div className="mb-6">
               <h4 className="font-bold mb-4 font-cinzel text-[#e8e4dc]">Eligible Wings Traits</h4>
-              <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+              <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Dark Wings</span>
                   <div className="bg-white rounded-xl p-3 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
@@ -241,12 +240,6 @@ const Dao = () => {
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Mecha Wings</span>
                   <div className="bg-white rounded-xl p-3 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
                     <img src={mechaWingsTrait} alt="Mecha Wings" className="h-24 w-24 object-contain" />
-                  </div>
-                </div>
-                <div className="flex flex-col items-center">
-                  <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Angel Wings</span>
-                  <div className="bg-white rounded-xl p-3 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                    <img src={whiteWingsTrait} alt="Angel Wings" className="h-24 w-24 object-contain" />
                   </div>
                 </div>
                 <div className="flex flex-col items-center">
