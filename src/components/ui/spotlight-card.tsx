@@ -26,6 +26,21 @@ const sizeMap = {
   lg: 'w-80 h-96'
 };
 
+function useIsTouchDevice() {
+  const [isTouch, setIsTouch] = useState(false);
+
+  useEffect(() => {
+    const mql = window.matchMedia('(hover: none), (pointer: coarse)');
+    const onChange = () => setIsTouch(mql.matches);
+
+    onChange();
+    mql.addEventListener('change', onChange);
+    return () => mql.removeEventListener('change', onChange);
+  }, []);
+
+  return isTouch;
+}
+
 const GlowCard: React.FC<GlowCardProps> = ({ 
   children, 
   className = '', 
@@ -39,10 +54,11 @@ const GlowCard: React.FC<GlowCardProps> = ({
   const innerRef = useRef<HTMLDivElement>(null);
 
   const isMobile = useIsMobile();
+  const isTouchDevice = useIsTouchDevice();
 
   useEffect(() => {
-    // Disable pointer tracking on mobile to prevent visual glitches
-    if (isMobile) return;
+    // Disable pointer tracking on touch-first devices (Android often reports large CSS widths)
+    if (isMobile || isTouchDevice) return;
 
     const syncPointer = (e: PointerEvent) => {
       const { clientX: x, clientY: y } = e;
@@ -57,7 +73,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
 
     document.addEventListener('pointermove', syncPointer);
     return () => document.removeEventListener('pointermove', syncPointer);
-  }, [isMobile]);
+  }, [isMobile, isTouchDevice]);
 
   const { base, spread } = glowColorMap[glowColor];
 
