@@ -55,7 +55,7 @@ const TEAM: TeamGroup[] = [
     role: "Founders",
     members: [
       { name: "CreatorX", note: "Trading Engine / Master Trader" },
-      { name: "Happy", note: "King of Liquidity Pools" },
+      { name: "Happy" },
     ],
   },
   {
