@@ -10,11 +10,15 @@ import gothic from "@/assets/heroes/gothic.png";
 import oni from "@/assets/heroes/oni.png";
 import shiva from "@/assets/heroes/shiva.png";
 
-// Import Staff 1/1s (4 images)
+// Import Staff 1/1s
 import cosmicKing from "@/assets/heroes/cosmic-king.png";
 import darkQueen from "@/assets/heroes/dark-queen.png";
 import skullKing from "@/assets/heroes/skull-king.png";
 import waterDemon from "@/assets/heroes/water-demon.png";
+import glow1of1 from "@/assets/heroes/glow-1of1.png";
+import happy1of1 from "@/assets/heroes/happy-1of1.png";
+import bastet1of1 from "@/assets/heroes/bastet-1of1.webp";
+import staff1of1Img from "@/assets/heroes/staff-1of1.avif";
 
 // Import SolGods (remaining heroes)
 import antler from "@/assets/heroes/antler.png";
@@ -25,7 +29,7 @@ import frost from "@/assets/heroes/frost.png";
 import marcus from "@/assets/heroes/marcus.png";
 
 const community1of1s: string[] = [];
-const staff1of1s: string[] = [];
+const staff1of1s: string[] = [glow1of1, happy1of1, bastet1of1, staff1of1Img];
 const solgods: string[] = [];
 
 const Gallery = () => {
