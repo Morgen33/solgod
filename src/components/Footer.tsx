@@ -1,4 +1,4 @@
-import { Twitter, MessageCircle, Layers, ShoppingBag } from "lucide-react";
+import { Twitter, MessageCircle, Layers, ShoppingBag, TreePine } from "lucide-react";
 import { Link } from "react-router-dom";
 import solgodsIcon from "@/assets/solgods-icon.png";
 
@@ -7,6 +7,7 @@ const quickLinks = [
   { label: "Discord", href: "https://discord.com/invite/gtrFTsmEAE", icon: MessageCircle },
   { label: "Buy SolGods", href: "https://magiceden.io/marketplace/solgods_", icon: ShoppingBag },
   { label: "Stake", href: "https://sgstake.fluxinc.io/", icon: Layers },
+  { label: "Linktree", href: "https://linktr.ee/SolGodsNFTS", icon: TreePine },
 ];
 
 const navLinks = [
