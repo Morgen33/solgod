@@ -196,8 +196,8 @@ const Dao = () => {
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <img src={wingsDaoLogo} alt="Wings DAO" className="h-24 sm:h-32 w-auto" />
-              <h3 className="text-3xl font-bold">Wings DAO</h3>
+              <img src={wingsDaoLogo} alt="Wings SG DAO" className="h-24 sm:h-32 w-auto" />
+              <h3 className="text-3xl font-bold">Wings SG DAO</h3>
             </div>
             
             <p className="text-lg text-blue-light font-medium mb-4">Elevate Your Sol God!</p>
