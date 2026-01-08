@@ -276,6 +276,78 @@ export default function SolGods() {
         </div>
       </section>
 
+      {/* Understanding Rarity Rankings Section */}
+      <section className="py-24 px-4 relative z-10">
+        <div className="max-w-4xl mx-auto">
+          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-center" style={{ color: "#01b2ff" }}>Understanding Rarity Rankings</h2>
+            <p className="text-lg text-muted-foreground text-center mb-8">
+              Why NFT Trait Percentages Are Reliable on Magic Eden, But Overall Ranks May Not Be
+            </p>
+            
+            <div className="space-y-8">
+              <div>
+                <p className="text-muted-foreground mb-4">Magic Eden shows two types of rarity data.</p>
+                
+                <div className="space-y-4">
+                  <div className="bg-secondary/30 rounded-lg p-4">
+                    <h4 className="font-bold text-foreground mb-2">Trait percentages:</h4>
+                    <p className="text-muted-foreground mb-2">
+                      These are calculated by counting how often each trait appears across the collection. This works even when metadata is inconsistent.
+                    </p>
+                    <p className="text-primary font-semibold">Trait percentages are accurate and trustworthy.</p>
+                  </div>
+                  
+                  <div className="bg-secondary/30 rounded-lg p-4">
+                    <h4 className="font-bold text-foreground mb-2">Overall rarity rank:</h4>
+                    <p className="text-muted-foreground mb-2">
+                      This only works when every NFT has a perfectly matching metadata structure. If some NFTs were minted differently, renamed traits, or have broken metadata, Magic Eden cannot rank the full collection.
+                    </p>
+                    <p className="text-muted-foreground">
+                      In those cases, it ranks only a partial subset of NFTs. That makes the rank misleading.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="border-t border-border pt-6">
+                <h3 className="text-xl font-bold mb-4" style={{ color: "#2053db" }}>What this means</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500">✓</span>
+                    <span>Trait percentages are correct.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-500">⚠</span>
+                    <span>Overall rarity rank is often unreliable.</span>
+                  </li>
+                </ul>
+                <p className="text-muted-foreground mt-4">
+                  An NFT may look mid-ranked even though it is actually very rare.
+                </p>
+              </div>
+              
+              <div className="border-t border-border pt-6">
+                <h3 className="text-xl font-bold mb-4" style={{ color: "#2053db" }}>How to judge rarity when the rank is broken</h3>
+                <p className="text-muted-foreground mb-3">Ignore the rank number. Focus on:</p>
+                <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-2">
+                  <li>Lowest trait percentages</li>
+                  <li>NFTs with multiple rare traits</li>
+                  <li>Visual uniqueness of the artwork</li>
+                </ul>
+              </div>
+              
+              <div className="border-t border-border pt-6">
+                <h3 className="text-xl font-bold mb-4" style={{ color: "#2053db" }}>Bottom line</h3>
+                <p className="text-foreground font-semibold">Traits are real.</p>
+                <p className="text-foreground font-semibold">Ranks can be sandboxed.</p>
+                <p className="text-muted-foreground mt-2">Judge rarity by percentages and the art, not the rank.</p>
+              </div>
+            </div>
+          </GlowCard>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
