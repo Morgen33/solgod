@@ -16,15 +16,15 @@ import waterDemonHero from "@/assets/heroes/water-demon.png";
 import shivaHero from "@/assets/heroes/shiva.png";
 
 const heroImages = [
-  athenaHero,
-  crimsonHero,
-  skullKingHero,
-  darkQueenHero,
-  bastetNewHero,
-  oniHero,
-  cosmicKingHero,
-  waterDemonHero,
-  shivaHero,
+  { src: athenaHero, scale: 1 },
+  { src: crimsonHero, scale: 1 },
+  { src: skullKingHero, scale: 1 },
+  { src: darkQueenHero, scale: 1 },
+  { src: bastetNewHero, scale: 1 },
+  { src: oniHero, scale: 1 },
+  { src: cosmicKingHero, scale: 1 },
+  { src: waterDemonHero, scale: 0.7 },
+  { src: shivaHero, scale: 1 },
 ];
 
 // --- CONFIGURATION ---
@@ -479,16 +479,16 @@ export default function PlasmaHero({
         }`}
         style={{ zIndex: 15 }}
       >
-        {heroImages.map((heroSrc, index) => (
+        {heroImages.map((hero, index) => (
           <img 
             key={index}
-            src={heroSrc} 
+            src={hero.src} 
             alt={`SolGod ${index + 1}`} 
             className="absolute h-auto object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
             style={{
-              // Ball diameter in vh * 110% to fill more of the sphere
-              width: `${characterScale * 110}vh`,
-              maxWidth: `${characterScale * 110}vw`,
+              // Ball diameter in vh * 110% to fill more of the sphere, adjusted per-image
+              width: `${characterScale * 110 * hero.scale}vh`,
+              maxWidth: `${characterScale * 110 * hero.scale}vw`,
               filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
               opacity: currentHeroIndex === index && !isTransitioning ? 0.3 : 0,
             }}
