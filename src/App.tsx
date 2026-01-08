@@ -15,6 +15,7 @@ import Spaces from "./pages/Spaces";
 import SolCity from "./pages/SolCity";
 import Team from "./pages/Team";
 import Join from "./pages/Join";
+import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/solcity" element={<SolCity />} />
           <Route path="/team" element={<Team />} />
           <Route path="/join" element={<Join />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
