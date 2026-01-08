@@ -143,11 +143,11 @@ const Dao = () => {
             <div className="bg-secondary/30 rounded-xl p-6 mb-6">
               <h4 className="font-bold mb-3">How to Enter</h4>
               <p className="text-sm text-muted-foreground mb-3">Own a Sol God with one of these traits:</p>
-              <div className="flex items-center gap-4 mb-3">
-                <div className="bg-white rounded-lg p-2 flex-shrink-0">
-                  <img src={wizardHatTrait} alt="Wizard Hat" className="h-12 w-12 object-contain" />
+              <div className="flex items-center gap-5 mb-3">
+                <div className="bg-white rounded-2xl p-3 border border-white/20 shadow-lg flex-shrink-0">
+                  <img src={wizardHatTrait} alt="Wizard Hat" className="h-24 w-24 object-contain" />
                 </div>
-                <span className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">Wizard Hat</span>
+                <span className="px-4 py-2 rounded-full bg-blue/20 border border-blue/30 text-base font-medium">Wizard Hat</span>
               </div>
               <p className="text-xs text-muted-foreground">Have it either delisted (not for sale) or listed at 5 SOL or higher.</p>
               <p className="text-sm text-muted-foreground mt-3">
