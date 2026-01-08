@@ -2,19 +2,15 @@ import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
 import { ThreeDPhotoCarousel } from "@/components/ui/3d-carousel";
 
-// Import Community 1/1s (6 images)
-import cosmic from "@/assets/heroes/cosmic.png";
-import crimson from "@/assets/heroes/crimson.png";
-import demon from "@/assets/heroes/demon.png";
-import gothic from "@/assets/heroes/gothic.png";
-import oni from "@/assets/heroes/oni.png";
-import shiva from "@/assets/heroes/shiva.png";
+// Import Community 1/1s
+import communityKmac from "@/assets/heroes/community-kmac.jpg";
+import communityOneofone from "@/assets/heroes/community-oneofone.png";
+import communityTick from "@/assets/heroes/community-tick.png";
+import communityAntler from "@/assets/heroes/community-antler.jpg";
+import communityQueen from "@/assets/heroes/community-queen.jpg";
+import communityCrown from "@/assets/heroes/community-crown.jpg";
 
 // Import Staff 1/1s
-import cosmicKing from "@/assets/heroes/cosmic-king.png";
-import darkQueen from "@/assets/heroes/dark-queen.png";
-import skullKing from "@/assets/heroes/skull-king.png";
-import waterDemon from "@/assets/heroes/water-demon.png";
 import glow1of1 from "@/assets/heroes/glow-1of1.png";
 import happy1of1 from "@/assets/heroes/happy-1of1.png";
 import bastet1of1 from "@/assets/heroes/bastet-1of1.webp";
@@ -28,7 +24,7 @@ import cyborg from "@/assets/heroes/cyborg.png";
 import frost from "@/assets/heroes/frost.png";
 import marcus from "@/assets/heroes/marcus.png";
 
-const community1of1s: string[] = [];
+const community1of1s: string[] = [communityKmac, communityOneofone, communityTick, communityAntler, communityQueen, communityCrown];
 const staff1of1s: string[] = [glow1of1, happy1of1, bastet1of1, staff1of1Img];
 const solgods: string[] = [];
 
