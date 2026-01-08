@@ -61,7 +61,7 @@ const Dao = () => {
       </section>
 
       {/* What is an NFT DAO */}
-      <section className="py-16 px-4">
+      <section className="py-8 px-4">
         <div className="max-w-5xl mx-auto">
           <SectionIcon />
           <h2 
