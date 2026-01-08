@@ -308,8 +308,8 @@ const About = () => {
             })}
           </div>
           
-          {/* Myceliads - Centered */}
-          <div className="flex justify-center mb-12">
+          {/* Myceliads - Left aligned */}
+          <div className="flex justify-start mb-12">
             {(() => {
               const order = celestialOrders[celestialOrders.length - 1];
               const Icon = order.icon;
