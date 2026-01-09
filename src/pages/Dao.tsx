@@ -6,7 +6,7 @@ import wingsDaoLogo from "@/assets/wings-dao-logo.png";
 import mafiaDaoLogo from "@/assets/mafia-dao-logo.png";
 import pantheonCircleLogo from "@/assets/pantheon-circle-logo.png";
 import doGoodDaoLogo from "@/assets/do-good-dao-logo.png";
-import wizardCabalLogo from "@/assets/wizard-cabal-logo.png";
+import wizardHatLogo from "@/assets/wizard-hat.png";
 
 import darkWingsTrait from "@/assets/traits/dark-wings-new.png";
 import dragonWingsTrait from "@/assets/traits/dragon-wings-new.png";
@@ -129,7 +129,7 @@ const Dao = () => {
         <div className="max-w-5xl mx-auto">
           <div className="bg-secondary/50 border border-border rounded-2xl p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <img src={wizardCabalLogo} alt="Wizard Cabal" className="h-24 sm:h-32 w-auto" />
+              <img src={wizardHatLogo} alt="Wizard Cabal" className="h-24 sm:h-32 w-auto" />
               <h3 className="text-3xl font-bold">The Wizard Cabal</h3>
             </div>
             
