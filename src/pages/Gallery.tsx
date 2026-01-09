@@ -4,9 +4,9 @@ import { ThreeDPhotoCarousel } from "@/components/ui/3d-carousel";
 
 // Import Community 1/1s
 import communityKmac from "@/assets/heroes/community-kmac.jpg";
-import communityOneofone from "@/assets/heroes/community-oneofone.png";
 import communityTick from "@/assets/heroes/community-tick.png";
-import communityAntler from "@/assets/heroes/community-antler.jpg";
+import communityAntler from "@/assets/heroes/community-antler.png";
+import communityOneofone from "@/assets/heroes/community-oneofone.jpg";
 import communityQueen from "@/assets/heroes/community-queen.jpg";
 import communityCrown from "@/assets/heroes/community-crown.jpg";
 
