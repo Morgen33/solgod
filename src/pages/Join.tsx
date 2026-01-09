@@ -141,10 +141,12 @@ const Join = () => {
               </div>
 
               <div className="flex justify-center pt-4">
-                <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
-                  Get Your Starter SolGod
-                  <ArrowRight size={20} />
-                </ShinyButton>
+                <a href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
+                  <ShinyButton>
+                    Get Your Starter SolGod
+                    <ArrowRight size={20} />
+                  </ShinyButton>
+                </a>
               </div>
             </div>
           </div>
