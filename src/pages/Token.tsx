@@ -251,7 +251,7 @@ const Token = () => {
 
           {/* Ready to Start CTA */}
           <div className="bg-secondary/50 border border-border rounded-2xl p-8 mb-12 text-center">
-            <Rocket className="text-primary mx-auto mb-4" size={48} />
+            <Rocket className="mx-auto mb-4" size={48} style={{ color: "#01b2ff" }} />
             <h2 className="text-3xl font-bold mb-4" style={{ color: "#2053db" }}>Ready to Start?</h2>
             <p className="text-muted-foreground mb-6">The best way to learn is by doing.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -267,7 +267,7 @@ const Token = () => {
           {/* Crypto Safety Section */}
           <div className="bg-secondary/50 border border-border rounded-2xl p-8 mb-12">
             <div className="flex items-center justify-center gap-3 mb-8">
-              <Shield className="text-primary" size={32} />
+              <Shield size={32} style={{ color: "#01b2ff" }} />
               <h2 className="text-3xl font-bold" style={{ color: "#2053db" }}>Crypto Safety: Rules of the Digital Jungle</h2>
             </div>
             <p className="text-muted-foreground text-center mb-8">
@@ -345,7 +345,7 @@ const Token = () => {
 function UtilityCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
     <div className="text-center p-6 bg-secondary/30 rounded-xl hover:bg-secondary/50 transition-colors">
-      <div className="text-primary mb-3 flex justify-center">{icon}</div>
+      <div className="mb-3 flex justify-center" style={{ color: "#01b2ff" }}>{icon}</div>
       <h4 className="font-semibold mb-2">{title}</h4>
       <p className="text-sm text-muted-foreground">{description}</p>
     </div>
