@@ -258,7 +258,7 @@ const Token = () => {
               <ShinyButton as="a" href="https://phantom.app/" target="_blank" rel="noopener noreferrer">
                 Install Phantom Wallet <ExternalLink size={16} />
               </ShinyButton>
-              <ShinyButton as="a" href="https://x.com/solgods_" target="_blank" rel="noopener noreferrer">
+              <ShinyButton as="a" href="https://x.com/SOLGodsNFTs" target="_blank" rel="noopener noreferrer">
                 Follow on X <ExternalLink size={16} />
               </ShinyButton>
             </div>
