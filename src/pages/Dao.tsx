@@ -7,7 +7,7 @@ import mafiaDaoLogo from "@/assets/mafia-dao-logo.png";
 import pantheonCircleLogo from "@/assets/pantheon-circle-logo.png";
 import doGoodDaoLogo from "@/assets/do-good-dao-logo.png";
 import wizardCabalLogo from "@/assets/wizard-cabal-logo.png";
-import wizardHatTrait from "@/assets/traits/magichat.png";
+
 import darkWingsTrait from "@/assets/traits/dark-wings-new.png";
 import dragonWingsTrait from "@/assets/traits/dragon-wings-new.png";
 import mechaWingsTrait from "@/assets/traits/mecha-wings-new.png";
@@ -151,8 +151,8 @@ const Dao = () => {
                 </p>
               </div>
               <div className="bg-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
-                <h4 className="font-bold mb-4 font-cinzel text-[#e8e4dc]">Wizard Hat</h4>
-                <img src={wizardHatTrait} alt="Wizard Hat" className="h-48 w-48 object-contain" />
+                <h4 className="font-bold mb-4 font-cinzel text-[#e8e4dc]">Wizard Hat Trait</h4>
+                <Wand2 className="h-24 w-24 text-blue-light opacity-60" />
               </div>
             </div>
             
