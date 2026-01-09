@@ -40,8 +40,6 @@ import cosmicWarrior from "@/assets/heroes/genesis/cosmic-warrior.png";
 import leopardBlind from "@/assets/heroes/genesis/leopard-blind.png";
 import pinkShivaFur from "@/assets/heroes/genesis/pink-shiva-fur.png";
 import captainCosmic from "@/assets/heroes/genesis/captain-cosmic.png";
-import butterflyLaserV2 from "@/assets/heroes/genesis/butterfly-laser-v2.png";
-import rainbowArcherV2 from "@/assets/heroes/genesis/rainbow-archer-v2.jpg";
 import reaperLaser from "@/assets/heroes/genesis/reaper-laser.png";
 
 const community1of1s: string[] = [communityKmac, communityOneofone, communityTick, communityAntler, communityQueen, communityCrown];
@@ -51,7 +49,7 @@ const solgods: string[] = [
   cosmicDemon, greenMafia, pantherRider, skeletonKnight, reaperSuit,
   gangHq, iceQueen, genesis38, phoenixWarrior, demonTrident, medusa,
   iceMech, fireHammer, cosmicWarrior, leopardBlind, pinkShivaFur,
-  captainCosmic, butterflyLaserV2, rainbowArcherV2, reaperLaser
+  captainCosmic, reaperLaser
 ];
 
 const Gallery = () => {
