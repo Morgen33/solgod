@@ -23,6 +23,10 @@ import pinstripeSuit from "@/assets/traits/pinstripe-suit.png";
 import tuxedoTrait from "@/assets/traits/tuxedo.png";
 import peakyHatTrait from "@/assets/traits/peaky-hat.png";
 import mafiaHatTrait from "@/assets/traits/mafia-hat.png";
+import bloodCrownTrait from "@/assets/traits/blood-crown.png";
+import catSuitTrait from "@/assets/traits/cat-suit.png";
+import godSuitTrait from "@/assets/traits/god-suit.png";
+import medusaHairTrait from "@/assets/traits/medusa-hair.png";
 const DAO_SECTIONS = [{
   name: "Wizard Cabal",
   id: "wizard-cabal"
@@ -477,16 +481,29 @@ const Dao = () => {
               </p>
             </div>
             
-            <div className="bg-secondary/30 rounded-xl p-6 mb-6">
-              <h4 className="font-bold mb-3">Exclusive Membership: The Elite Traits</h4>
-              <p className="text-sm text-muted-foreground mb-3">
+            <div className="p-6 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)] mb-6">
+              <h4 className="font-bold mb-4 text-lg" style={{ color: "#01b2ff" }}>Exclusive Membership: The Elite Traits</h4>
+              <p className="text-sm text-muted-foreground mb-4">
                 Membership in the Pantheon Circle is an honor reserved for the true royalty among SolGods. 
                 To be accepted, your GOD must possess at least ONE of the following legendary traits:
               </p>
-              <div className="flex flex-wrap gap-2">
-                {["Blood Crown", "Medusa Hair", "God Suit", "Cat Suit"].map(trait => <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
-                    {trait}
-                  </span>)}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
+                  <img src={bloodCrownTrait} alt="Blood Crown" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <span className="text-sm font-medium text-center">Blood Crown</span>
+                </div>
+                <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
+                  <img src={catSuitTrait} alt="Cat Suit" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <span className="text-sm font-medium text-center">Cat Suit</span>
+                </div>
+                <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
+                  <img src={godSuitTrait} alt="God Suit" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <span className="text-sm font-medium text-center">God Suit</span>
+                </div>
+                <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
+                  <img src={medusaHairTrait} alt="Medusa Hair" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <span className="text-sm font-medium text-center">Medusa Hair</span>
+                </div>
               </div>
             </div>
             
