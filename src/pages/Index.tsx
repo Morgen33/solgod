@@ -2,7 +2,7 @@ import { Layout } from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight, Twitter, Layers, Gift, TrendingUp, 
-  Shield, Globe, Sparkles, Cog, Users, Coins, TreePine, Send
+  Shield, Globe, Sparkles, Cog, Users, Coins, BarChart3, Package
 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { RotatingText } from "@/components/ui/rotating-text";
@@ -24,16 +24,16 @@ const quickLinks = [
     description: "Follow for updates & alpha"
   },
   {
-    label: "Linktree",
-    href: "https://linktr.ee/SolGodsNFTS",
-    icon: TreePine,
-    description: "All our links in one place"
+    label: "Dexscreener",
+    href: "https://dexscreener.com/solana/bomtmymoe7efgu2rytqjjg1mjsub6wjpqw13jpivjgkp",
+    icon: BarChart3,
+    description: "View token on Dexscreener"
   },
   {
-    label: "Telegram",
-    href: "https://t.me/solgods",
-    icon: Send,
-    description: "Join our Telegram channel"
+    label: "Mystery Packs",
+    href: "https://sgtailor.fluxinc.io/packs",
+    icon: Package,
+    description: "Open mystery packs"
   },
   {
     label: "Stake",
