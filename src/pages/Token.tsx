@@ -1,6 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
-import { TrendingUp, Lock, Sparkles, Zap, Shield, AlertTriangle, Wallet, ArrowRight, CheckCircle, ExternalLink, BookOpen, Coins, Gift, Droplets, Rocket } from "lucide-react";
+import { TrendingUp, Lock, Sparkles, Zap, Shield, AlertTriangle, Wallet, ArrowRight, CheckCircle, ExternalLink, BookOpen, Coins, Gift, Droplets, Rocket, Send } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 
 const Token = () => {
@@ -28,7 +28,7 @@ const Token = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap mb-16">
             <ShinyButton as="a" href="https://dexscreener.com/solana/bomtmymoe7efgu2rytqjjg1mjsub6wjpqw13jpivjgkp" target="_blank" rel="noopener noreferrer">
               View on DEX Screener
               <TrendingUp size={20} />
@@ -36,6 +36,10 @@ const Token = () => {
             <ShinyButton as="a" href="https://sgstake.fluxinc.io/" target="_blank" rel="noopener noreferrer">
               Stake Your Gods
               <Lock size={20} />
+            </ShinyButton>
+            <ShinyButton as="a" href="https://t.me/+TonrvVIf1t4zOGE0" target="_blank" rel="noopener noreferrer">
+              Join Telegram
+              <Send size={20} />
             </ShinyButton>
           </div>
 
