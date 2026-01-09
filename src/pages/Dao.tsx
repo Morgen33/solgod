@@ -283,54 +283,58 @@ const Dao = () => {
       <section id="mafia-dao" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-5xl mx-auto">
           <div className="bg-secondary/50 border border-border rounded-2xl p-8 sm:p-12">
+            {/* Header */}
             <div className="flex items-center gap-4 mb-6">
               <img src={mafiaDaoLogo} alt="Mafia DAO" className="h-32 sm:h-40 w-auto" />
               <h3 className="text-3xl font-bold">MAFIA DAO</h3>
             </div>
             
-            <p className="text-muted-foreground mb-6">
+            {/* Description */}
+            <p className="text-muted-foreground mb-4">
               Mafia DAO is a family-first DAO built around people who actually show up and do the work. It's led by a small core team and focused on building things that last and creating a legacy that's legendary.
             </p>
             
-            <p className="text-sm text-muted-foreground mb-6 italic">
+            <p className="text-sm text-muted-foreground mb-8 italic">
               This isn't about speculation or noise. What becomes legendary is built through consistency, trust, and real contribution over time. If you're involved, you matter. If you're not, nothing else really counts.
             </p>
-            
-            <div className="grid sm:grid-cols-2 gap-4 mb-6">
-              <div className="p-4 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
-                <h4 className="font-bold mb-2 text-sm" style={{ color: "#01b2ff" }}>What We Focus On</h4>
-                <ul className="text-xs text-muted-foreground space-y-1">
-                  <li>• Building revenue and monetization systems</li>
-                  <li>• NFTs and on-chain ownership</li>
-                  <li>• Content that has real use</li>
-                  <li>• Mining and infrastructure</li>
-                </ul>
-              </div>
-              <div className="p-4 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
-                <h4 className="font-bold mb-2 text-sm" style={{ color: "#01b2ff" }}>What's Required</h4>
-                <div className="grid grid-cols-2 gap-3 mt-3">
-                  <div className="flex items-center gap-3 p-2 rounded-lg bg-blue/10 border border-blue/20">
-                    <img src={peakyHatTrait} alt="Peaky Hat" className="w-16 h-16 rounded-lg object-cover" />
-                    <span className="text-sm font-medium">Peaky Hat</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-2 rounded-lg bg-blue/10 border border-blue/20">
-                    <img src={mafiaHatTrait} alt="Mafia Hat" className="w-16 h-16 rounded-lg object-cover" />
-                    <span className="text-sm font-medium">Mafia Hat</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-2 rounded-lg bg-blue/10 border border-blue/20">
-                    <img src={tuxedoTrait} alt="Tuxedo" className="w-16 h-16 rounded-lg object-cover" />
-                    <span className="text-sm font-medium">Tuxedo</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-2 rounded-lg bg-blue/10 border border-blue/20">
-                    <img src={pinstripeSuit} alt="Pinstripe Suit" className="w-16 h-16 rounded-lg object-cover" />
-                    <span className="text-sm font-medium">Pinstripe Suit</span>
-                  </div>
+
+            {/* What We Focus On */}
+            <div className="p-4 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)] mb-6">
+              <h4 className="font-bold mb-3 text-sm" style={{ color: "#01b2ff" }}>What We Focus On</h4>
+              <ul className="text-sm text-muted-foreground grid sm:grid-cols-2 gap-2">
+                <li>• Building revenue and monetization systems</li>
+                <li>• NFTs and on-chain ownership</li>
+                <li>• Content that has real use</li>
+                <li>• Mining and infrastructure</li>
+              </ul>
+            </div>
+
+            {/* Required Traits - Bigger Display */}
+            <div className="p-6 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)] mb-6">
+              <h4 className="font-bold mb-4 text-lg" style={{ color: "#01b2ff" }}>What's Required</h4>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
+                  <img src={peakyHatTrait} alt="Peaky Hat" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <span className="text-sm font-medium text-center">Peaky Hat</span>
                 </div>
-                <p className="text-xs text-muted-foreground mt-2 font-medium">Membership fee is 0.05 SOL per month</p>
+                <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
+                  <img src={mafiaHatTrait} alt="Mafia Hat" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <span className="text-sm font-medium text-center">Mafia Hat</span>
+                </div>
+                <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
+                  <img src={tuxedoTrait} alt="Tuxedo" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <span className="text-sm font-medium text-center">Tuxedo</span>
+                </div>
+                <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
+                  <img src={pinstripeSuit} alt="Pinstripe Suit" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <span className="text-sm font-medium text-center">Pinstripe Suit</span>
+                </div>
               </div>
+              <p className="text-sm text-muted-foreground mt-4 font-medium text-center">Membership fee is 0.05 SOL per month</p>
             </div>
             
-            <div className="mb-4">
+            {/* Core Team & Links */}
+            <div>
               <span className="text-sm text-muted-foreground font-medium">Core Team:</span>
               <div className="flex flex-wrap items-center gap-3 mt-3">
                 <a href="https://x.com/medraresteaker" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
