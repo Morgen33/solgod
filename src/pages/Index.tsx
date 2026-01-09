@@ -82,7 +82,7 @@ const Index = () => {
 
           {/* Quick Links */}
           <div className="card-glow rounded-2xl p-6 sm:p-8">
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:gap-6">
               {quickLinks.map((link, index) => {
                 const Icon = link.icon;
                 return (
