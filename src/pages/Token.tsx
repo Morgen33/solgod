@@ -43,6 +43,25 @@ const Token = () => {
             </ShinyButton>
           </div>
 
+          {/* DEX Screener Embed */}
+          <div className="mb-16 rounded-2xl overflow-hidden border border-border">
+            <div 
+              className="relative w-full"
+              style={{ paddingBottom: '125%' }}
+            >
+              <iframe 
+                src="https://dexscreener.com/solana/BomTmYmoE7EFGU2rYtQJJG1MjsUb6wJPqW13jpivjGkP?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+                className="absolute w-full h-full top-0 left-0 border-0 2xl:h-[65%]"
+                style={{ minHeight: '500px' }}
+              />
+            </div>
+            <style>{`
+              @media(min-width:1400px) {
+                .dex-embed-container { padding-bottom: 65% !important; }
+              }
+            `}</style>
+          </div>
+
           {/* Core Utility Section */}
           <div className="bg-secondary/50 border border-border rounded-2xl p-8 mb-12">
             <h2 className="text-3xl font-bold mb-4 text-center" style={{ color: "#2053db" }}>Core Utility & Benefits</h2>
