@@ -34,13 +34,24 @@ import genesis38 from "@/assets/heroes/genesis/38.avif";
 import phoenixWarrior from "@/assets/heroes/genesis/phoenix-warrior.png";
 import demonTrident from "@/assets/heroes/genesis/demon-trident.png";
 import medusa from "@/assets/heroes/genesis/medusa.png";
+import iceMech from "@/assets/heroes/genesis/ice-mech.png";
+import fireHammer from "@/assets/heroes/genesis/fire-hammer.png";
+import cosmicWarrior from "@/assets/heroes/genesis/cosmic-warrior.png";
+import leopardBlind from "@/assets/heroes/genesis/leopard-blind.png";
+import pinkShivaFur from "@/assets/heroes/genesis/pink-shiva-fur.png";
+import captainCosmic from "@/assets/heroes/genesis/captain-cosmic.png";
+import butterflyLaserV2 from "@/assets/heroes/genesis/butterfly-laser-v2.png";
+import rainbowArcherV2 from "@/assets/heroes/genesis/rainbow-archer-v2.jpg";
+import reaperLaser from "@/assets/heroes/genesis/reaper-laser.png";
 
 const community1of1s: string[] = [communityKmac, communityOneofone, communityTick, communityAntler, communityQueen, communityCrown];
 const staff1of1s: string[] = [glow1of1, happy1of1, bastet1of1, staff1of1Img];
 const solgods: string[] = [
   iceAngel, leopardQueen, pinkShiva, butterflyLaser, rainbowArcher,
   cosmicDemon, greenMafia, pantherRider, skeletonKnight, reaperSuit,
-  gangHq, iceQueen, genesis38, phoenixWarrior, demonTrident, medusa
+  gangHq, iceQueen, genesis38, phoenixWarrior, demonTrident, medusa,
+  iceMech, fireHammer, cosmicWarrior, leopardBlind, pinkShivaFur,
+  captainCosmic, butterflyLaserV2, rainbowArcherV2, reaperLaser
 ];
 
 const Gallery = () => {
