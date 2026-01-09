@@ -18,29 +18,21 @@ import bastet1of1 from "@/assets/heroes/bastet-1of1.webp";
 import staff1of1Img from "@/assets/heroes/staff-1of1.avif";
 
 // Import SolGods (Genesis collection)
-import antler from "@/assets/heroes/antler.png";
-import athena from "@/assets/heroes/athena.png";
-import bastet from "@/assets/heroes/bastet-new.png";
-import cyborg from "@/assets/heroes/cyborg.png";
-import frost from "@/assets/heroes/frost.png";
-import marcus from "@/assets/heroes/marcus.png";
-import cosmicKing from "@/assets/heroes/cosmic-king.png";
-import cosmic from "@/assets/heroes/cosmic.png";
-import crimson from "@/assets/heroes/crimson.png";
-import demon from "@/assets/heroes/demon.png";
-import darkQueen from "@/assets/heroes/dark-queen.png";
-import gothic from "@/assets/heroes/gothic.png";
-import oni from "@/assets/heroes/oni.png";
-import shiva from "@/assets/heroes/shiva.png";
-import skullKing from "@/assets/heroes/skull-king.png";
-import waterDemon from "@/assets/heroes/water-demon.png";
+import iceAngel from "@/assets/heroes/genesis/ice-angel.png";
+import leopardQueen from "@/assets/heroes/genesis/leopard-queen.png";
+import pinkShiva from "@/assets/heroes/genesis/pink-shiva.png";
+import butterflyLaser from "@/assets/heroes/genesis/butterfly-laser.png";
+import rainbowArcher from "@/assets/heroes/genesis/rainbow-archer.jpg";
+import cosmicDemon from "@/assets/heroes/genesis/cosmic-demon.png";
+import greenMafia from "@/assets/heroes/genesis/green-mafia.png";
+import pantherRider from "@/assets/heroes/genesis/panther-rider.png";
+import skeletonKnight from "@/assets/heroes/genesis/skeleton-knight.png";
 
 const community1of1s: string[] = [communityKmac, communityOneofone, communityTick, communityAntler, communityQueen, communityCrown];
 const staff1of1s: string[] = [glow1of1, happy1of1, bastet1of1, staff1of1Img];
 const solgods: string[] = [
-  antler, athena, bastet, cyborg, frost, marcus,
-  cosmicKing, cosmic, crimson, demon, darkQueen, gothic,
-  oni, shiva, skullKing, waterDemon
+  iceAngel, leopardQueen, pinkShiva, butterflyLaser, rainbowArcher,
+  cosmicDemon, greenMafia, pantherRider, skeletonKnight
 ];
 
 const Gallery = () => {
