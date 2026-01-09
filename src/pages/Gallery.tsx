@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
 import { ThreeDPhotoCarousel } from "@/components/ui/3d-carousel";
+import { ParallaxScrollSecond } from "@/components/ui/parallax-scroll";
 
 // Import Community 1/1s
 import communityKmac from "@/assets/heroes/community-kmac.jpg";
@@ -15,17 +16,32 @@ import glow1of1 from "@/assets/heroes/glow-1of1.png";
 import happy1of1 from "@/assets/heroes/happy-1of1.png";
 import bastet1of1 from "@/assets/heroes/bastet-1of1.webp";
 import staff1of1Img from "@/assets/heroes/staff-1of1.avif";
-// Import SolGods (remaining heroes)
+
+// Import SolGods (Genesis collection)
 import antler from "@/assets/heroes/antler.png";
 import athena from "@/assets/heroes/athena.png";
 import bastet from "@/assets/heroes/bastet-new.png";
 import cyborg from "@/assets/heroes/cyborg.png";
 import frost from "@/assets/heroes/frost.png";
 import marcus from "@/assets/heroes/marcus.png";
+import cosmicKing from "@/assets/heroes/cosmic-king.png";
+import cosmic from "@/assets/heroes/cosmic.png";
+import crimson from "@/assets/heroes/crimson.png";
+import demon from "@/assets/heroes/demon.png";
+import darkQueen from "@/assets/heroes/dark-queen.png";
+import gothic from "@/assets/heroes/gothic.png";
+import oni from "@/assets/heroes/oni.png";
+import shiva from "@/assets/heroes/shiva.png";
+import skullKing from "@/assets/heroes/skull-king.png";
+import waterDemon from "@/assets/heroes/water-demon.png";
 
 const community1of1s: string[] = [communityKmac, communityOneofone, communityTick, communityAntler, communityQueen, communityCrown];
 const staff1of1s: string[] = [glow1of1, happy1of1, bastet1of1, staff1of1Img];
-const solgods: string[] = [];
+const solgods: string[] = [
+  antler, athena, bastet, cyborg, frost, marcus,
+  cosmicKing, cosmic, crimson, demon, darkQueen, gothic,
+  oni, shiva, skullKing, waterDemon
+];
 
 const Gallery = () => {
   return (
@@ -122,7 +138,7 @@ const Gallery = () => {
           <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
             The foundation of the entire Solara movement
           </p>
-          <ThreeDPhotoCarousel images={solgods} />
+          <ParallaxScrollSecond images={solgods} />
         </div>
       </section>
     </Layout>
