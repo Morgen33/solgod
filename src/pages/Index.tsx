@@ -93,7 +93,14 @@ const Index = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-4 rounded-xl bg-secondary/30 border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group"
                   >
-                    <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                    <div 
+                      className="p-2 rounded-lg transition-colors flex-shrink-0"
+                      style={{ 
+                        backgroundColor: "rgba(1, 178, 255, 0.15)",
+                        color: "#01b2ff",
+                        filter: "drop-shadow(0 0 8px rgba(1, 178, 255, 0.6))"
+                      }}
+                    >
                       <Icon size={20} />
                     </div>
                     <div className="min-w-0">
