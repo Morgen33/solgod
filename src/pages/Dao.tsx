@@ -242,9 +242,10 @@ const Dao = () => {
                   @GlowsHaven
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
-                <span className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300">
-                  @CoryB
-                </span>
+                <a href="https://x.com/CoryBOnChain" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
+                  @CoryBOnChain
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
                 <span className="text-muted-foreground mx-2">|</span>
                 <a href="https://x.com/WingsDaoSG" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
                   X: @WingsDaoSG <ExternalLink size={12} />
