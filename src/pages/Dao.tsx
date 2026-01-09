@@ -363,7 +363,7 @@ const Dao = () => {
                   X: @MAFIAxDAO <ExternalLink size={12} />
                 </a>
                 <a
-                  href="https://discord.com/invite/Zf9hWDFdQJ"
+                  href="https://discord.gg/Zf9hWDFdQJ"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid="mafia-discord"
