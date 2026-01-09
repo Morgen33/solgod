@@ -131,7 +131,7 @@ const Index = () => {
             >
               WHY SOLGODS
             </h2>
-            <p className="text-xl" style={{ color: "#01b2ff" }}>
+            <p className="text-xl text-muted-foreground">
               A Value-First Ecosystem
             </p>
           </div>
