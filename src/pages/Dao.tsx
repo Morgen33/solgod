@@ -15,42 +15,44 @@ import rainbowWingsTrait from "@/assets/traits/rainbow-wings-new.png";
 import phoenixWingsTrait from "@/assets/traits/phoenix-wings-new.png";
 import strawhatTrait from "@/assets/traits/strawhat.png";
 import pixelPuppyTrait from "@/assets/traits/pixel-puppy.png";
-
-const DAO_SECTIONS = [
-  { name: "Wizard Cabal", id: "wizard-cabal" },
-  { name: "Wings SG DAO", id: "wings-dao" },
-  { name: "Mafia DAO", id: "mafia-dao" },
-  { name: "Do Good DAO", id: "do-good-dao" },
-  { name: "Pantheon Circle", id: "pantheon-circle" },
-];
-
+const DAO_SECTIONS = [{
+  name: "Wizard Cabal",
+  id: "wizard-cabal"
+}, {
+  name: "Wings SG DAO",
+  id: "wings-dao"
+}, {
+  name: "Mafia DAO",
+  id: "mafia-dao"
+}, {
+  name: "Do Good DAO",
+  id: "do-good-dao"
+}, {
+  name: "Pantheon Circle",
+  id: "pantheon-circle"
+}];
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
   if (element) {
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   }
 };
-
-const SectionIcon = () => (
-  <div className="flex justify-center mb-6">
+const SectionIcon = () => <div className="flex justify-center mb-6">
     <img src={solgodsIcon} alt="SolGods" className="h-24 sm:h-28 w-auto opacity-80" />
-  </div>
-);
-
+  </div>;
 const Dao = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="py-16 pb-4 px-4">
         <div className="max-w-5xl mx-auto">
           <SectionIcon />
-          <h1 
-            className="text-5xl sm:text-7xl font-bold mb-4 text-center bg-clip-text text-transparent animate-gradient-flow"
-            style={{
-              backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
-              backgroundSize: "200% 100%",
-            }}
-          >
+          <h1 className="text-5xl sm:text-7xl font-bold mb-4 text-center bg-clip-text text-transparent animate-gradient-flow" style={{
+          backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)",
+          backgroundSize: "200% 100%"
+        }}>
             SOLGODS DAO
           </h1>
           <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
@@ -63,10 +65,9 @@ const Dao = () => {
       <section className="pt-0 pb-16 px-4">
         <div className="max-w-5xl mx-auto">
           <SectionIcon />
-          <h2 
-            className="text-4xl sm:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent"
-            style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
-          >
+          <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent" style={{
+          backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)"
+        }}>
             What is an NFT DAO?
           </h2>
           
@@ -102,10 +103,9 @@ const Dao = () => {
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto">
           <SectionIcon />
-          <h2 
-            className="text-4xl sm:text-5xl font-bold mb-4 text-center bg-clip-text text-transparent"
-            style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
-          >
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-center bg-clip-text text-transparent" style={{
+          backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)"
+        }}>
             The Divine Circles
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-8 max-w-3xl mx-auto">
@@ -116,15 +116,9 @@ const Dao = () => {
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold mb-4 text-blue-light">Current DAOs Open:</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {DAO_SECTIONS.map((dao) => (
-                <button
-                  key={dao.id}
-                  onClick={() => scrollToSection(dao.id)}
-                  className="px-4 py-2 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 cursor-pointer"
-                >
+              {DAO_SECTIONS.map(dao => <button key={dao.id} onClick={() => scrollToSection(dao.id)} className="px-4 py-2 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 cursor-pointer">
                   {dao.name}
-                </button>
-              ))}
+                </button>)}
             </div>
           </div>
         </div>
@@ -158,7 +152,7 @@ const Dao = () => {
               </div>
               <div className="bg-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <h4 className="font-bold mb-4 font-cinzel text-[#e8e4dc]">Wizard Hat</h4>
-                <img src={wizardHatTrait} alt="Wizard Hat" className="h-48 w-48 object-contain" style={{ background: 'transparent' }} />
+                
               </div>
             </div>
             
@@ -175,13 +169,8 @@ const Dao = () => {
             <div className="mb-4">
               <span className="text-sm text-muted-foreground font-medium">Wizard Cabal Founder:</span>
               <div className="flex flex-wrap gap-3 mt-3">
-                <a 
-                  href="https://x.com/AxeRedwizard" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
-                >
-                  @AxeRedwizard
+                <a href="https://x.com/Axe" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
+                  @Axe
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
@@ -249,13 +238,8 @@ const Dao = () => {
             <div className="mb-4">
               <span className="text-sm text-muted-foreground font-medium">Wings SG DAO Founders:</span>
               <div className="flex flex-wrap items-center gap-3 mt-3">
-                <a 
-                  href="https://x.com/GlowsHaven" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
-                >
-                  @GlowsHaven
+                <a href="https://x.com/GlowBallbuster" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
+                  @Glow (Fluttering)
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
                 <span className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300">
@@ -306,11 +290,9 @@ const Dao = () => {
               <div className="p-4 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <h4 className="font-bold mb-2 text-sm">Required Traits</h4>
                 <div className="flex flex-wrap gap-2 mb-2">
-                  {["Peaky Hat", "Mafia Hat", "Tuxedo", "Pinstripe Suit"].map((trait) => (
-                    <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-xs font-medium">
+                  {["Peaky Hat", "Mafia Hat", "Tuxedo", "Pinstripe Suit"].map(trait => <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-xs font-medium">
                       {trait}
-                    </span>
-                  ))}
+                    </span>)}
                 </div>
                 <p className="text-xs text-muted-foreground mt-2 font-medium">Fee: 0.05 SOL/month</p>
               </div>
@@ -319,39 +301,19 @@ const Dao = () => {
             <div className="mb-4">
               <span className="text-sm text-muted-foreground font-medium">Core Team:</span>
               <div className="flex flex-wrap items-center gap-3 mt-3">
-                <a 
-                  href="https://x.com/medraresteaker" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
-                >
+                <a href="https://x.com/medraresteaker" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
                   @Gnomie
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
-                <a 
-                  href="https://x.com/DaveRmetax" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
-                >
+                <a href="https://x.com/DaveRmetax" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
                   @Daver
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
-                <a 
-                  href="https://x.com/borkermetax" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
-                >
+                <a href="https://x.com/borkermetax" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
                   @Borker
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
-                <a 
-                  href="https://x.com/AiArsenals" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
-                >
+                <a href="https://x.com/AiArsenals" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
                   @Morgen
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
@@ -417,30 +379,15 @@ const Dao = () => {
             <div className="mb-4">
               <span className="text-sm text-muted-foreground font-medium">The DAO is led by:</span>
               <div className="flex flex-wrap items-center gap-3 mt-3">
-                <a 
-                  href="https://x.com/eddieisfine" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
-                >
+                <a href="https://x.com/eddieisfine" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
                   @eddie
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
-                <a 
-                  href="https://x.com/kmacmetax" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
-                >
+                <a href="https://x.com/kmacmetax" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
                   @KMAC
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
-                <a 
-                  href="https://x.com/auskyn" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
-                >
+                <a href="https://x.com/auskyn" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
                   @Auskyn
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
@@ -487,11 +434,9 @@ const Dao = () => {
                 To be accepted, your GOD must possess at least ONE of the following legendary traits:
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Blood Crown", "Medusa Hair", "God Suit", "Cat Suit"].map((trait) => (
-                  <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
+                {["Blood Crown", "Medusa Hair", "God Suit", "Cat Suit"].map(trait => <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium">
                     {trait}
-                  </span>
-                ))}
+                  </span>)}
               </div>
             </div>
             
@@ -502,21 +447,11 @@ const Dao = () => {
             <div className="mb-6">
               <span className="text-sm text-muted-foreground font-medium">The Pantheon Circle is led by:</span>
               <div className="flex flex-wrap gap-3 mt-3">
-                <a 
-                  href="https://x.com/RasiMetaX" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
-                >
+                <a href="https://x.com/RasiMetaX" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
                   @Rasi
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
-                <a 
-                  href="https://x.com/Swishmeta" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300"
-                >
+                <a href="https://x.com/Swishmeta" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
                   @Swish
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
@@ -535,7 +470,9 @@ const Dao = () => {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="bg-secondary/50 border border-border rounded-2xl p-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: "#01b2ff" }}>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{
+            color: "#01b2ff"
+          }}>
               Interested in joining the community?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
@@ -544,7 +481,10 @@ const Dao = () => {
             </p>
 
             <div className="text-left mb-8">
-              <h3 className="text-xl font-bold mb-4 text-center" style={{ color: "#e8e4dc", fontFamily: "Cinzel, serif" }}>How to use:</h3>
+              <h3 className="text-xl font-bold mb-4 text-center" style={{
+              color: "#e8e4dc",
+              fontFamily: "Cinzel, serif"
+            }}>How to use:</h3>
               <ul className="space-y-3 text-muted-foreground max-w-xl mx-auto">
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">1.</span>
@@ -563,7 +503,9 @@ const Dao = () => {
             <p className="text-muted-foreground mb-4">
               Let's keep the timeline pure SolGod energy. <strong className="text-foreground">Starter Gods today → Genesis God tomorrow.</strong>
             </p>
-            <p className="text-lg font-semibold mb-8" style={{ color: "#01b2ff" }}>
+            <p className="text-lg font-semibold mb-8" style={{
+            color: "#01b2ff"
+          }}>
               The gods are watching. Change it up and stand tall.
             </p>
 
@@ -586,17 +528,18 @@ const Dao = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
-function PowerCard({ title, description }: { title: string; description: string }) {
-  return (
-    <div className="p-4 rounded-xl bg-secondary/30 border border-blue/10">
+function PowerCard({
+  title,
+  description
+}: {
+  title: string;
+  description: string;
+}) {
+  return <div className="p-4 rounded-xl bg-secondary/30 border border-blue/10">
       <h5 className="font-bold text-sm mb-1 text-blue-light">{title}</h5>
       <p className="text-xs text-muted-foreground">{description}</p>
-    </div>
-  );
+    </div>;
 }
-
 export default Dao;
