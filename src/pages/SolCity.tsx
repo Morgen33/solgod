@@ -6,7 +6,7 @@ import { MorphingText } from "@/components/ui/morphing-text";
 import solcityLogo from "@/assets/solcity-logo.png";
 const quickLinks = [{
   label: "Twitter/X",
-  href: "https://x.com/Solgodsnfts",
+  href: "https://x.com/SOLGodsNFTs",
   icon: Twitter,
   description: "Follow for updates & alpha"
 }, {
@@ -676,7 +676,7 @@ const SolCity = () => {
                 Join Discord
                 <ExternalLink size={14} />
               </a>
-              <a href="https://x.com/Solgodsnfts" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
+              <a href="https://x.com/SOLGodsNFTs" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
                 Follow Twitter
                 <ExternalLink size={14} />
               </a>

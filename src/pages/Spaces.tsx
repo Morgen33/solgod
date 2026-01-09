@@ -81,8 +81,8 @@ const Spaces = () => {
               Follow us on Twitter and turn on notifications to get alerts for all our Spaces.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ShinyButton as="a" href="https://x.com/SOLGodNFTs" target="_blank" rel="noopener noreferrer">
-                Follow @SOLGodNFTs
+              <ShinyButton as="a" href="https://x.com/SOLGodsNFTs" target="_blank" rel="noopener noreferrer">
+                Follow @SOLGodsNFTs
               </ShinyButton>
               <a
                 href="https://solgodcal.lovable.app/"
