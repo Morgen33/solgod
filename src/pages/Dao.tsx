@@ -508,6 +508,12 @@ const Dao = () => {
               </div>
             </div>
             
+            <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 mb-6">
+              <p className="text-sm font-medium text-amber-400">
+                ⚡ Strict Entry DAO: No default/starter units.
+              </p>
+            </div>
+            
             <p className="text-sm text-muted-foreground italic mb-6">
               If your SolGod possesses these elite traits, prepare to take your rightful place among the Pantheon!
             </p>
