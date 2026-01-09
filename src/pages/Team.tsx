@@ -30,6 +30,7 @@ import rasiAvatar from "@/assets/team/rasi.webp";
 import soniaAvatar from "@/assets/team/sonia.jpg";
 import daverAvatar from "@/assets/team/daver.jpg";
 import astaBackAvatar from "@/assets/team/asta-back.png";
+import astaAvatar from "@/assets/team/asta.png";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -147,6 +148,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   Happy: happyBackAvatar,
   Sonia: soniaAvatar,
   DaveR: daverAvatar,
+  Asta: astaAvatar,
 };
 
 // Back images for flippable cards (add more as needed)
