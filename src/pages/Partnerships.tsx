@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Users, Sparkles, Heart } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
 const Partnerships = () => {
   return (
@@ -28,39 +29,39 @@ const Partnerships = () => {
             </p>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-secondary/50 border border-border rounded-2xl p-6 text-center">
+              <GlowCard glowColor="blue" className="p-6 text-center">
                 <div className="flex flex-col items-center">
                   <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
-                    <Users className="text-primary" size={28} />
+                    <Users className="text-[#01b2ff]" size={28} />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Cross-Community Events</h3>
+                  <h3 className="text-xl font-bold mb-2 text-[#e8e4dc] font-cinzel">Cross-Community Events</h3>
                   <p className="text-muted-foreground text-sm">
                     Engaging our audiences through high-energy, shared activations.
                   </p>
                 </div>
-              </div>
-              <div className="bg-secondary/50 border border-border rounded-2xl p-6 text-center">
+              </GlowCard>
+              <GlowCard glowColor="blue" className="p-6 text-center">
                 <div className="flex flex-col items-center">
                   <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
-                    <Sparkles className="text-primary" size={28} />
+                    <Sparkles className="text-[#01b2ff]" size={28} />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Shared Experiences</h3>
+                  <h3 className="text-xl font-bold mb-2 text-[#e8e4dc] font-cinzel">Shared Experiences</h3>
                   <p className="text-muted-foreground text-sm">
                     Developing unique digital or physical touchpoints that resonate with our holders.
                   </p>
                 </div>
-              </div>
-              <div className="bg-secondary/50 border border-border rounded-2xl p-6 text-center">
+              </GlowCard>
+              <GlowCard glowColor="blue" className="p-6 text-center">
                 <div className="flex flex-col items-center">
                   <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
-                    <Heart className="text-primary" size={28} />
+                    <Heart className="text-[#01b2ff]" size={28} />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Mutual Support</h3>
+                  <h3 className="text-xl font-bold mb-2 text-[#e8e4dc] font-cinzel">Mutual Support</h3>
                   <p className="text-muted-foreground text-sm">
                     Building a long-term framework for resource sharing and cross-promotion.
                   </p>
                 </div>
-              </div>
+              </GlowCard>
             </div>
           </div>
 
