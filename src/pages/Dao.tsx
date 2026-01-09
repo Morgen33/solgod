@@ -338,7 +338,7 @@ const Dao = () => {
                 <a href="https://x.com/MAFIAxDAO" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
                   X: @MAFIAxDAO <ExternalLink size={12} />
                 </a>
-                <a href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
+                <a href="https://discord.gg/dN7aCsCe" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
                   Discord <ExternalLink size={12} />
                 </a>
               </div>
