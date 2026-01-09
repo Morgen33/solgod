@@ -41,6 +41,16 @@ import leopardBlind from "@/assets/heroes/genesis/leopard-blind.png";
 import pinkShivaFur from "@/assets/heroes/genesis/pink-shiva-fur.png";
 import captainCosmic from "@/assets/heroes/genesis/captain-cosmic.png";
 import reaperLaser from "@/assets/heroes/genesis/reaper-laser.png";
+import genesis127 from "@/assets/heroes/genesis/127.png";
+import genesis11 from "@/assets/heroes/genesis/11.png";
+import genesis214 from "@/assets/heroes/genesis/214.png";
+import genesis255 from "@/assets/heroes/genesis/255.png";
+import genesis323 from "@/assets/heroes/genesis/323.png";
+import genesis736 from "@/assets/heroes/genesis/736.png";
+import genesis587 from "@/assets/heroes/genesis/587.png";
+import genesis933 from "@/assets/heroes/genesis/933.avif";
+import genesis1280 from "@/assets/heroes/genesis/1280.png";
+import genesis1526 from "@/assets/heroes/genesis/1526.png";
 
 const community1of1s: string[] = [communityKmac, communityOneofone, communityTick, communityAntler, communityQueen, communityCrown];
 const staff1of1s: string[] = [glow1of1, happy1of1, bastet1of1, staff1of1Img];
@@ -49,7 +59,9 @@ const solgods: string[] = [
   cosmicDemon, greenMafia, pantherRider, skeletonKnight, reaperSuit,
   gangHq, iceQueen, genesis38, phoenixWarrior, demonTrident, medusa,
   iceMech, fireHammer, cosmicWarrior, leopardBlind, pinkShivaFur,
-  captainCosmic, reaperLaser
+  captainCosmic, reaperLaser, genesis127, genesis11, genesis214,
+  genesis255, genesis323, genesis736, genesis587, genesis933,
+  genesis1280, genesis1526
 ];
 
 const Gallery = () => {
