@@ -112,11 +112,12 @@ export function Header() {
               className="group relative flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9"
               title="Play with the Orb"
             >
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#3b82f6] via-[#01b2ff] to-[#0050a0] opacity-90 group-hover:opacity-100 transition-opacity animate-pulse" />
-              <div className="absolute inset-[3px] rounded-full bg-gradient-to-br from-[#60a5fa] via-[#01b2ff] to-[#1e40af] opacity-80" />
-              <div className="absolute inset-[6px] rounded-full bg-gradient-radial from-[#7dd3fc] via-[#3b82f6] to-[#1e3a8a]" />
-              <div className="absolute top-1 left-1 w-2 h-2 rounded-full bg-white/50 blur-[2px]" />
-              <div className="absolute inset-0 rounded-full shadow-[0_0_12px_3px_rgba(1,178,255,0.5)] group-hover:shadow-[0_0_20px_6px_rgba(1,178,255,0.7)] transition-shadow" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#1e3a8a] via-[#1d4ed8] to-[#0a1628] opacity-90 group-hover:opacity-100 transition-opacity animate-pulse" />
+              <div className="absolute inset-[3px] rounded-full bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#0c1a3d] opacity-90" />
+              <div className="absolute inset-[6px] rounded-full bg-gradient-to-br from-[#3b82f6] via-[#1d4ed8] to-[#0f172a]" />
+              <div className="absolute top-1/3 left-1/3 w-3 h-1.5 rounded-full bg-[#00e5ff]/70 blur-[3px] rotate-[-20deg]" />
+              <div className="absolute top-1 left-1 w-1.5 h-1.5 rounded-full bg-white/40 blur-[1px]" />
+              <div className="absolute inset-0 rounded-full shadow-[0_0_10px_2px_rgba(37,99,235,0.6)] group-hover:shadow-[0_0_16px_4px_rgba(37,99,235,0.8)] transition-shadow" />
             </Link>
             
             <Link to="/home" className="flex items-center gap-2">
@@ -237,9 +238,9 @@ export function Header() {
                 className="px-4 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary flex items-center gap-3"
               >
                 <div className="relative w-6 h-6">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#3b82f6] via-[#01b2ff] to-[#0050a0] animate-pulse" />
-                  <div className="absolute inset-[2px] rounded-full bg-gradient-to-br from-[#60a5fa] via-[#01b2ff] to-[#1e40af]" />
-                  <div className="absolute top-0.5 left-0.5 w-1.5 h-1.5 rounded-full bg-white/50 blur-[1px]" />
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#1e3a8a] via-[#1d4ed8] to-[#0a1628] animate-pulse" />
+                  <div className="absolute inset-[2px] rounded-full bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#0c1a3d]" />
+                  <div className="absolute top-1/4 left-1/4 w-2 h-1 rounded-full bg-[#00e5ff]/60 blur-[2px] rotate-[-20deg]" />
                   <div className="absolute inset-0 rounded-full shadow-[0_0_8px_2px_rgba(1,178,255,0.5)]" />
                 </div>
                 Play with the Orb
