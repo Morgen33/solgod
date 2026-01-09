@@ -588,10 +588,17 @@ const Dao = () => {
               </ShinyButton>
             </div>
             <div className="mt-6">
-              <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
-                Join Main Discord
-                <ExternalLink size={20} />
-              </ShinyButton>
+              <a 
+                href="https://discord.gg/nfts" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="shiny-cta inline-flex items-center gap-2"
+              >
+                <span className="flex items-center gap-2">
+                  Join Main Discord
+                  <ExternalLink size={20} />
+                </span>
+              </a>
             </div>
           </div>
         </div>
