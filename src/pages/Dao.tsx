@@ -306,7 +306,7 @@ const Dao = () => {
                   @Gnomie
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
-                <a href="https://x.com/DaveRmetax" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
+                <a href="https://x.com/daveRx" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
                   @Daver
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
