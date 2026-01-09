@@ -105,18 +105,26 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <Link to="/home" className="flex items-center gap-2">
-            <img src={solgodsIcon} alt="SolGods" className="h-10 sm:h-12 w-auto" />
-          </Link>
-
-          <nav className="hidden md:flex items-center gap-1">
-            {/* Intro */}
+          <div className="flex items-center gap-3">
+            {/* Orb Link to Intro */}
             <Link
               to="/"
-              className="px-4 py-2 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary"
+              className="group relative flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9"
+              title="Play with the Orb"
             >
-              Intro
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#3b82f6] via-[#01b2ff] to-[#0050a0] opacity-90 group-hover:opacity-100 transition-opacity animate-pulse" />
+              <div className="absolute inset-[3px] rounded-full bg-gradient-to-br from-[#60a5fa] via-[#01b2ff] to-[#1e40af] opacity-80" />
+              <div className="absolute inset-[6px] rounded-full bg-gradient-radial from-[#7dd3fc] via-[#3b82f6] to-[#1e3a8a]" />
+              <div className="absolute top-1 left-1 w-2 h-2 rounded-full bg-white/50 blur-[2px]" />
+              <div className="absolute inset-0 rounded-full shadow-[0_0_12px_3px_rgba(1,178,255,0.5)] group-hover:shadow-[0_0_20px_6px_rgba(1,178,255,0.7)] transition-shadow" />
             </Link>
+            
+            <Link to="/home" className="flex items-center gap-2">
+              <img src={solgodsIcon} alt="SolGods" className="h-10 sm:h-12 w-auto" />
+            </Link>
+          </div>
+
+          <nav className="hidden md:flex items-center gap-1">
 
             {/* Home */}
             <Link
@@ -222,13 +230,19 @@ export function Header() {
         {mobileOpen && (
           <nav className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-1">
-              {/* Intro */}
+              {/* Orb Link */}
               <Link
                 to="/"
                 onClick={() => setMobileOpen(false)}
-                className="px-4 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary"
+                className="px-4 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary flex items-center gap-3"
               >
-                Intro
+                <div className="relative w-6 h-6">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#3b82f6] via-[#01b2ff] to-[#0050a0] animate-pulse" />
+                  <div className="absolute inset-[2px] rounded-full bg-gradient-to-br from-[#60a5fa] via-[#01b2ff] to-[#1e40af]" />
+                  <div className="absolute top-0.5 left-0.5 w-1.5 h-1.5 rounded-full bg-white/50 blur-[1px]" />
+                  <div className="absolute inset-0 rounded-full shadow-[0_0_8px_2px_rgba(1,178,255,0.5)]" />
+                </div>
+                Play with the Orb
               </Link>
 
               {/* Home */}
