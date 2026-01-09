@@ -78,6 +78,15 @@ import genesis38v2 from "@/assets/heroes/genesis/38-v2.avif";
 import eddieSpecial from "@/assets/heroes/genesis/eddie-special.avif";
 import wizardForest from "@/assets/heroes/genesis/wizard-forest.png";
 import cosmicWizard from "@/assets/heroes/genesis/cosmic-wizard.png";
+import mechaQueen from "@/assets/heroes/genesis/mecha-queen.jpg";
+import rainbowDemon from "@/assets/heroes/genesis/rainbow-demon.jpg";
+import pantherSamurai from "@/assets/heroes/genesis/panther-samurai.jpg";
+import haloZombie from "@/assets/heroes/genesis/halo-zombie.jpg";
+import cosmicNinja from "@/assets/heroes/genesis/cosmic-ninja.jpg";
+import lavaQueen from "@/assets/heroes/genesis/lava-queen.jpg";
+import vineKing from "@/assets/heroes/genesis/vine-king.jpg";
+import iceKing from "@/assets/heroes/genesis/ice-king.jpg";
+import lavaLaser from "@/assets/heroes/genesis/lava-laser.jpg";
 
 const community1of1s: string[] = [communityKmac, communityOneofone, communityTick, communityAntler, communityQueen, communityCrown];
 const staff1of1s: string[] = [glow1of1, happy1of1, bastet1of1, staff1of1Img];
@@ -92,8 +101,9 @@ const solgods: string[] = [
   genesis2004, genesis2397, genesis2405, genesis2903,
   genesis3324, genesis3331, dragonMage,
   dragonAxe, witchWings, lightningPhoenix, vineSamurai,
-  phoenixHood, tuxedoAngel, genesis2276,
-  cosmicWizard
+  phoenixHood, tuxedoAngel,
+  cosmicWizard, mechaQueen, rainbowDemon, pantherSamurai, haloZombie,
+  cosmicNinja, lavaQueen, vineKing, iceKing, lavaLaser
 ];
 
 const Gallery = () => {
