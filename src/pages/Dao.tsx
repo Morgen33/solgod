@@ -13,6 +13,7 @@ import dragonWingsTrait from "@/assets/traits/dragon-wings-new.png";
 import mechaWingsTrait from "@/assets/traits/mecha-wings-new.png";
 import rainbowWingsTrait from "@/assets/traits/rainbow-wings-new.png";
 import phoenixWingsTrait from "@/assets/traits/phoenix-wings-new.png";
+import whiteWingsTrait from "@/assets/traits/white-wings-new.png";
 import strawhatTrait from "@/assets/traits/strawhat.png";
 import pixelPuppyTrait from "@/assets/traits/pixel-puppy.png";
 import wizardHatTrait from "@/assets/traits/wizard-hat-trait.png";
@@ -212,7 +213,7 @@ const Dao = () => {
             
             <div className="mb-6">
               <h4 className="font-bold mb-4 font-cinzel text-[#e8e4dc]">Eligible Wings Traits</h4>
-              <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
+              <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Dark Wings</span>
                   <img src={darkWingsTrait} alt="Dark Wings" className="h-40 w-40 object-contain" />
@@ -232,6 +233,10 @@ const Dao = () => {
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Phoenix Wings</span>
                   <img src={phoenixWingsTrait} alt="Phoenix Wings" className="h-40 w-40 object-contain" />
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">White Wings</span>
+                  <img src={whiteWingsTrait} alt="White Wings" className="h-40 w-40 object-contain" />
                 </div>
               </div>
             </div>
