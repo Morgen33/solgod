@@ -103,14 +103,14 @@ const Index = () => {
                     >
                       <Icon size={20} />
                     </div>
-                    <div className="min-w-0">
+                    <div className="min-w-0 flex-1">
                       <h4 
-                        className="font-semibold text-sm truncate"
+                        className="font-semibold text-sm"
                         style={{ color: "#8ab4f8" }}
                       >
                         {link.label}
                       </h4>
-                      <p className="text-xs text-muted-foreground hidden sm:block truncate">{link.description}</p>
+                      <p className="text-xs text-muted-foreground hidden sm:block">{link.description}</p>
                     </div>
                   </a>
                 );
