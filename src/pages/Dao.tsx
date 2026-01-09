@@ -284,34 +284,32 @@ const Dao = () => {
               <h3 className="text-3xl font-bold">MAFIA DAO</h3>
             </div>
             
-            <p className="text-lg font-medium mb-4" style={{ color: "#01b2ff" }}>Mission Mafia is a family-first DAO</p>
             <p className="text-muted-foreground mb-6">
-              Led by four core team members, built on loyalty, trust, and long-term alignment. Our focus is on creating 
-              legendary outcomes through monetization, NFTs, content, and mining, while building a lasting legacy for the family.
+              Mafia DAO is a family-first DAO built around people who actually show up and do the work. It's led by a small core team and focused on building things that last and creating a legacy that's legendary.
             </p>
             
             <p className="text-sm text-muted-foreground mb-6 italic">
-              This is not a hype-driven collective. It is a working DAO where reputation, contribution, and consistency define your place.
+              This isn't about speculation or noise. What becomes legendary is built through consistency, trust, and real contribution over time. If you're involved, you matter. If you're not, nothing else really counts.
             </p>
             
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               <div className="p-4 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
-                <h4 className="font-bold mb-2 text-sm">Core Focus Areas</h4>
+                <h4 className="font-bold mb-2 text-sm" style={{ color: "#01b2ff" }}>What We Focus On</h4>
                 <ul className="text-xs text-muted-foreground space-y-1">
-                  <li>• Monetization & sustainable revenue</li>
-                  <li>• NFTs & on-chain ownership</li>
-                  <li>• Content creation with long-term value</li>
-                  <li>• Mining & infrastructure-backed operations</li>
+                  <li>• Building revenue and monetization systems</li>
+                  <li>• NFTs and on-chain ownership</li>
+                  <li>• Content that has real use</li>
+                  <li>• Mining and infrastructure</li>
                 </ul>
               </div>
               <div className="p-4 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
-                <h4 className="font-bold mb-2 text-sm">Required Traits</h4>
+                <h4 className="font-bold mb-2 text-sm" style={{ color: "#01b2ff" }}>What's Required</h4>
                 <div className="flex flex-wrap gap-2 mb-2">
                   {["Peaky Hat", "Mafia Hat", "Tuxedo", "Pinstripe Suit"].map(trait => <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-xs font-medium">
                       {trait}
                     </span>)}
                 </div>
-                <p className="text-xs text-muted-foreground mt-2 font-medium">Fee: 0.05 SOL/month</p>
+                <p className="text-xs text-muted-foreground mt-2 font-medium">Membership fee is 0.05 SOL per month</p>
               </div>
             </div>
             
