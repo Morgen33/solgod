@@ -15,8 +15,6 @@ import glow1of1 from "@/assets/heroes/glow-1of1.png";
 import happy1of1 from "@/assets/heroes/happy-1of1.png";
 import bastet1of1 from "@/assets/heroes/bastet-1of1.webp";
 import staff1of1Img from "@/assets/heroes/staff-1of1.avif";
-import glitchStatue from "@/assets/heroes/glitch-statue.jpg";
-
 // Import SolGods (remaining heroes)
 import antler from "@/assets/heroes/antler.png";
 import athena from "@/assets/heroes/athena.png";
@@ -26,7 +24,7 @@ import frost from "@/assets/heroes/frost.png";
 import marcus from "@/assets/heroes/marcus.png";
 
 const community1of1s: string[] = [communityKmac, communityOneofone, communityTick, communityAntler, communityQueen, communityCrown];
-const staff1of1s: string[] = [glow1of1, happy1of1, bastet1of1, staff1of1Img, glitchStatue];
+const staff1of1s: string[] = [glow1of1, happy1of1, bastet1of1, staff1of1Img];
 const solgods: string[] = [];
 
 const Gallery = () => {
