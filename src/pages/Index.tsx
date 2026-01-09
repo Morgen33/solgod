@@ -121,7 +121,7 @@ const Index = () => {
       </section>
 
       {/* Why SolGods Section */}
-      <section className="py-24 px-4">
+      <section className="pt-12 pb-24 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <SectionIcon />
