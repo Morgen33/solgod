@@ -87,7 +87,7 @@ const solgods: string[] = [
   gangHq, iceQueen, genesis38, phoenixWarrior, demonTrident, medusa,
   iceMech, fireHammer, cosmicWarrior, leopardBlind,
   captainCosmic, genesis127, genesis11, genesis214,
-  genesis255, genesis323, genesis736, genesis587, genesis933,
+  genesis255, genesis323, genesis736, genesis933,
   genesis1280, genesis1526, genesis1616, genesis1801, genesis1814,
   genesis2004, genesis2397, genesis2405, genesis2903,
   genesis3324, genesis3331, dragonMage,
