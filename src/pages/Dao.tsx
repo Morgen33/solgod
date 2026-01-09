@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Users, ExternalLink, Crown, Sparkles, Heart, Wand2, Shield } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
+import { TraitImageModal } from "@/components/TraitImageModal";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import wingsDaoLogo from "@/assets/wings-dao-logo.png";
 import mafiaDaoLogo from "@/assets/mafia-dao-logo.png";
@@ -164,7 +165,7 @@ const Dao = () => {
               </div>
               <div className="bg-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <h4 className="font-bold mb-4 font-cinzel text-[#e8e4dc]">Wizard Hat Trait</h4>
-                <img src={wizardHatTrait} alt="Wizard Hat Trait" className="h-28 w-auto" />
+                <TraitImageModal src={wizardHatTrait} alt="Wizard Hat Trait" className="h-28 w-auto" />
               </div>
             </div>
             
@@ -226,35 +227,35 @@ const Dao = () => {
               <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Dark Wings</span>
-                  <img src={darkWingsTrait} alt="Dark Wings" className="h-40 w-40 object-contain" />
+                  <TraitImageModal src={darkWingsTrait} alt="Dark Wings" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Dragon Wings</span>
-                  <img src={dragonWingsTrait} alt="Dragon Wings" className="h-40 w-40 object-contain" />
+                  <TraitImageModal src={dragonWingsTrait} alt="Dragon Wings" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Mecha Wings</span>
-                  <img src={mechaWingsTrait} alt="Mecha Wings" className="h-40 w-40 object-contain" />
+                  <TraitImageModal src={mechaWingsTrait} alt="Mecha Wings" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Rainbow Parage</span>
-                  <img src={rainbowWingsTrait} alt="Rainbow Parage" className="h-40 w-40 object-contain" />
+                  <TraitImageModal src={rainbowWingsTrait} alt="Rainbow Parage" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Phoenix Wings</span>
-                  <img src={phoenixWingsTrait} alt="Phoenix Wings" className="h-40 w-40 object-contain" />
+                  <TraitImageModal src={phoenixWingsTrait} alt="Phoenix Wings" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">White Wings</span>
-                  <img src={whiteWingsTrait} alt="White Wings" className="h-40 w-40 object-contain" />
+                  <TraitImageModal src={whiteWingsTrait} alt="White Wings" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Visor</span>
-                  <img src={visorTrait} alt="Visor" className="h-40 w-40 object-contain" />
+                  <TraitImageModal src={visorTrait} alt="Visor" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">SolGod Sweater</span>
-                  <img src={solgodVisorTrait} alt="SolGod Sweater" className="h-40 w-40 object-contain" />
+                  <TraitImageModal src={solgodVisorTrait} alt="SolGod Sweater" className="h-40 w-40 object-contain" />
                 </div>
               </div>
             </div>
@@ -318,19 +319,19 @@ const Dao = () => {
               <h4 className="font-bold mb-4 text-lg" style={{ color: "#01b2ff" }}>What's Required</h4>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
-                  <img src={peakyHatTrait} alt="Peaky Hat" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <TraitImageModal src={peakyHatTrait} alt="Peaky Hat" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
                   <span className="text-sm font-medium text-center">Peaky Hat</span>
                 </div>
                 <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
-                  <img src={mafiaHatTrait} alt="Mafia Hat" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <TraitImageModal src={mafiaHatTrait} alt="Mafia Hat" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
                   <span className="text-sm font-medium text-center">Mafia Hat</span>
                 </div>
                 <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
-                  <img src={tuxedoTrait} alt="Tuxedo" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <TraitImageModal src={tuxedoTrait} alt="Tuxedo" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
                   <span className="text-sm font-medium text-center">Tuxedo</span>
                 </div>
                 <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
-                  <img src={pinstripeSuit} alt="Pinstripe Suit" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <TraitImageModal src={pinstripeSuit} alt="Pinstripe Suit" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
                   <span className="text-sm font-medium text-center">Pinstripe Suit</span>
                 </div>
               </div>
@@ -401,11 +402,11 @@ const Dao = () => {
               <div className="grid grid-cols-2 gap-6 mb-4">
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Pixel Puppy</span>
-                  <img src={pixelPuppyTrait} alt="Pixel Puppy" className="h-40 w-40 object-contain" />
+                  <TraitImageModal src={pixelPuppyTrait} alt="Pixel Puppy" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Strawhat</span>
-                  <img src={strawhatTrait} alt="Strawhat" className="h-40 w-40 object-contain" />
+                  <TraitImageModal src={strawhatTrait} alt="Strawhat" className="h-40 w-40 object-contain" />
                 </div>
               </div>
               <p className="text-sm text-muted-foreground text-center">
@@ -489,19 +490,19 @@ const Dao = () => {
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
-                  <img src={bloodCrownTrait} alt="Blood Crown" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <TraitImageModal src={bloodCrownTrait} alt="Blood Crown" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
                   <span className="text-sm font-medium text-center">Blood Crown</span>
                 </div>
                 <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
-                  <img src={catSuitTrait} alt="Cat Suit" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <TraitImageModal src={catSuitTrait} alt="Cat Suit" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
                   <span className="text-sm font-medium text-center">Cat Suit</span>
                 </div>
                 <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
-                  <img src={godSuitTrait} alt="God Suit" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <TraitImageModal src={godSuitTrait} alt="God Suit" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
                   <span className="text-sm font-medium text-center">God Suit</span>
                 </div>
                 <div className="flex flex-col items-center p-4 rounded-xl bg-blue/10 border border-blue/20">
-                  <img src={medusaHairTrait} alt="Medusa Hair" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
+                  <TraitImageModal src={medusaHairTrait} alt="Medusa Hair" className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-contain mb-3" />
                   <span className="text-sm font-medium text-center">Medusa Hair</span>
                 </div>
               </div>
