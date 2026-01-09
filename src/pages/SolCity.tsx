@@ -207,6 +207,15 @@ const SolCity = () => {
               This NFT-based model is not designed to rely on secondary market floor prices, trading volume, or speculative resale activity as its primary source of system performance. A significant portion of the capital allocation engine is intended to be deployed through fiat-based trading brokerage accounts, focusing on indices and commodities using defined risk management frameworks.
             </p>
 
+            <div className="bg-secondary/30 border border-border/50 rounded-lg p-6 mb-8">
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                The remaining allocation is structured toward on-chain liquidity strategies, utilizing low to medium risk profiles with an emphasis on capital preservation, diversification, and controlled exposure.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Overall system behavior is guided by risk-managed allocation practices rather than reliance on NFT market sentiment, trading velocity, or price speculation.
+              </p>
+            </div>
+
             <h4 className="text-xl font-semibold mb-4">Supply & Mint Structure</h4>
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-left">
@@ -258,15 +267,6 @@ const SolCity = () => {
                   <tr><td className="py-2">Team Expansion</td><td className="py-2">10%</td><td className="py-2 font-semibold">340.25 SOL</td></tr>
                 </tbody>
               </table>
-            </div>
-
-            <div className="bg-secondary/30 border border-border/50 rounded-lg p-6 mt-8">
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                The remaining allocation is structured toward on-chain liquidity strategies, utilizing low to medium risk profiles with an emphasis on capital preservation, diversification, and controlled exposure.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Overall system behavior is guided by risk-managed allocation practices rather than reliance on NFT market sentiment, trading velocity, or price speculation.
-              </p>
             </div>
           </article>
 
