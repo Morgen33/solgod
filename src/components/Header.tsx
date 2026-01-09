@@ -3,12 +3,6 @@ import { useState, useRef, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import solgodsIcon from "@/assets/solgods-icon.png";
 
-const standaloneLinks = [
-  { href: "/home", label: "Home", external: false },
-  { href: "/token", label: "Token", external: false },
-  { href: "/solcity", label: "SolCity", external: false },
-];
-
 const dropdowns = [
   {
     label: "Community",
@@ -46,18 +40,21 @@ function DropdownMenu({ label, items, currentPath, onItemClick }: {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+        className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-all relative ${
           isActiveDropdown
-            ? "text-primary bg-primary/10"
-            : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+            ? "text-white"
+            : "text-white/70 hover:text-white"
         }`}
       >
         {label}
-        <ChevronDown size={16} className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        <ChevronDown size={14} className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        {isActiveDropdown && (
+          <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gradient-to-r from-[#01b2ff] to-[#38bdf8] rounded-full" />
+        )}
       </button>
       
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-44 py-2 bg-card border border-border rounded-lg shadow-xl z-50">
+        <div className="absolute top-full left-0 mt-2 w-44 py-2 bg-[#0a0f1a]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl shadow-black/50 z-50">
           {items.map((item) => (
             item.external ? (
               <a
@@ -69,7 +66,7 @@ function DropdownMenu({ label, items, currentPath, onItemClick }: {
                   onItemClick?.();
                   window.open(item.href, '_blank', 'noopener,noreferrer,width=1200,height=800');
                 }}
-                className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors cursor-pointer"
+                className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors cursor-pointer"
               >
                 {item.label}
               </a>
@@ -81,10 +78,10 @@ function DropdownMenu({ label, items, currentPath, onItemClick }: {
                   setIsOpen(false);
                   onItemClick?.();
                 }}
-                className={`block px-4 py-2 text-sm transition-colors ${
+                className={`block px-4 py-2.5 text-sm transition-colors ${
                   currentPath === item.href
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    ? "text-[#01b2ff] bg-[#01b2ff]/10"
+                    : "text-white/70 hover:text-white hover:bg-white/5"
                 }`}
               >
                 {item.label}
@@ -97,222 +94,198 @@ function DropdownMenu({ label, items, currentPath, onItemClick }: {
   );
 }
 
+// Nav link component for consistency
+function NavLink({ to, children, isActive }: { to: string; children: React.ReactNode; isActive: boolean }) {
+  return (
+    <Link
+      to={to}
+      className={`relative px-3 py-2 text-sm font-medium transition-all ${
+        isActive
+          ? "text-white"
+          : "text-white/70 hover:text-white"
+      }`}
+    >
+      {children}
+      {isActive && (
+        <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gradient-to-r from-[#01b2ff] to-[#38bdf8] rounded-full" />
+      )}
+    </Link>
+  );
+}
+
 export function Header() {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
-          <div className="flex items-center gap-3">
-            {/* Orb Link to Intro */}
-            <Link
-              to="/"
-              className="group relative flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9"
-              title="Play with the Orb"
-            >
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#1e3a8a] via-[#1d4ed8] to-[#0a1628] opacity-90 group-hover:opacity-100 transition-opacity animate-pulse" />
-              <div className="absolute inset-[3px] rounded-full bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#0c1a3d] opacity-90" />
-              <div className="absolute inset-[6px] rounded-full bg-gradient-to-br from-[#3b82f6] via-[#1d4ed8] to-[#0f172a]" />
-              <div className="absolute top-1/3 left-1/3 w-3 h-1.5 rounded-full bg-[#00e5ff]/70 blur-[3px] rotate-[-20deg]" />
-              <div className="absolute top-1 left-1 w-1.5 h-1.5 rounded-full bg-white/40 blur-[1px]" />
-              <div className="absolute inset-0 rounded-full shadow-[0_0_10px_2px_rgba(37,99,235,0.6)] group-hover:shadow-[0_0_16px_4px_rgba(37,99,235,0.8)] transition-shadow" />
-            </Link>
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Glass effect background */}
+      <div className="absolute inset-0 bg-[#050a12]/80 backdrop-blur-xl border-b border-white/[0.08]" />
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 md:h-[68px]">
+          {/* Logo area - simplified */}
+          <Link to="/home" className="flex items-center gap-2 group">
+            {/* Mini orb integrated with logo */}
+            <div className="relative w-7 h-7 flex-shrink-0">
+              <Link
+                to="/"
+                className="absolute inset-0"
+                title="Play with the Orb"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#1e3a8a] via-[#1d4ed8] to-[#0a1628] opacity-90 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-[2px] rounded-full bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#0c1a3d]" />
+                <div className="absolute inset-[4px] rounded-full bg-gradient-to-br from-[#3b82f6] via-[#1d4ed8] to-[#0f172a]" />
+                <div className="absolute top-1/3 left-1/3 w-2 h-1 rounded-full bg-[#00e5ff]/70 blur-[2px] rotate-[-20deg]" />
+                <div className="absolute inset-0 rounded-full shadow-[0_0_8px_2px_rgba(37,99,235,0.5)] hover:shadow-[0_0_12px_3px_rgba(37,99,235,0.7)] transition-shadow" />
+              </Link>
+            </div>
+            <img src={solgodsIcon} alt="SolGods" className="h-9 md:h-10 w-auto" />
+          </Link>
+
+          {/* Desktop Navigation - all plain links with underline active state */}
+          <nav className="hidden md:flex items-center h-full">
+            <div className="flex items-center gap-1">
+              <NavLink to="/home" isActive={location.pathname === "/home"}>Home</NavLink>
+              <NavLink to="/about" isActive={location.pathname === "/about"}>About</NavLink>
+              
+              {/* SolGods/SolCity grouped as segmented pair */}
+              <div className="flex items-center mx-1 px-1 py-1 rounded-lg bg-white/[0.03] border border-white/[0.06]">
+                <Link
+                  to="/solgods"
+                  className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all ${
+                    location.pathname === "/solgods"
+                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] shadow-lg shadow-[#01b2ff]/20"
+                      : "text-[#01b2ff] hover:bg-white/5"
+                  }`}
+                >
+                  SolGods
+                </Link>
+                <Link
+                  to="/solcity"
+                  className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all ${
+                    location.pathname === "/solcity"
+                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] shadow-lg shadow-[#01b2ff]/20"
+                      : "text-[#01b2ff] hover:bg-white/5"
+                  }`}
+                >
+                  SolCity
+                </Link>
+              </div>
+              
+              <NavLink to="/token" isActive={location.pathname === "/token"}>Token</NavLink>
+              <DropdownMenu 
+                label="Community" 
+                items={dropdowns[0].items} 
+                currentPath={location.pathname} 
+              />
+              <NavLink to="/gallery" isActive={location.pathname === "/gallery"}>Gallery</NavLink>
+              <NavLink to="/team" isActive={location.pathname === "/team"}>Team</NavLink>
+            </div>
             
-            <Link to="/home" className="flex items-center gap-2">
-              <img src={solgodsIcon} alt="SolGods" className="h-10 sm:h-12 w-auto" />
-            </Link>
-          </div>
-
-          <nav className="hidden md:flex items-center gap-1">
-
-            {/* Home */}
-            <Link
-              to="/home"
-              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                location.pathname === "/home"
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-              }`}
+            {/* CTA Button - far right */}
+            <a
+              href="https://discord.gg/solgods"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-4 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-[#5865F2] to-[#7289da] rounded-lg hover:shadow-lg hover:shadow-[#5865F2]/30 transition-all hover:scale-[1.02]"
             >
-              Home
-            </Link>
-
-            {/* About */}
-            <Link
-              to="/about"
-              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                location.pathname === "/about"
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-              }`}
-            >
-              About
-            </Link>
-
-            {/* SolGods */}
-            <Link
-              to="/solgods"
-              className={`px-4 py-2 text-sm font-bold transition-all rounded-lg border ${
-                location.pathname === "/solgods"
-                  ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] border-transparent shadow-lg shadow-[#01b2ff]/30"
-                  : "text-[#01b2ff] border-[#01b2ff]/50 hover:bg-[#01b2ff]/10 hover:border-[#01b2ff]"
-              }`}
-            >
-              SolGods
-            </Link>
-
-            {/* SolCity */}
-            <Link
-              to="/solcity"
-              className={`px-4 py-2 text-sm font-bold transition-all rounded-lg border ${
-                location.pathname === "/solcity"
-                  ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] border-transparent shadow-lg shadow-[#01b2ff]/30"
-                  : "text-[#01b2ff] border-[#01b2ff]/50 hover:bg-[#01b2ff]/10 hover:border-[#01b2ff]"
-              }`}
-            >
-              SolCity
-            </Link>
-
-            {/* Token */}
-            <Link
-              to="/token"
-              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                location.pathname === "/token"
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-              }`}
-            >
-              Token
-            </Link>
-
-            {/* Community Dropdown */}
-            <DropdownMenu 
-              label="Community" 
-              items={dropdowns[0].items} 
-              currentPath={location.pathname} 
-            />
-
-            {/* Gallery */}
-            <Link
-              to="/gallery"
-              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                location.pathname === "/gallery"
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-              }`}
-            >
-              Gallery
-            </Link>
-
-            {/* Team */}
-            <Link
-              to="/team"
-              className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                location.pathname === "/team"
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-              }`}
-            >
-              Team
-            </Link>
+              Join Discord
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-white/80 hover:text-white transition-colors"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
+        {/* Mobile Menu */}
         {mobileOpen && (
-          <nav className="md:hidden py-4 border-t border-border">
+          <nav className="md:hidden py-4 border-t border-white/[0.08]">
             <div className="flex flex-col gap-1">
               {/* Orb Link */}
               <Link
                 to="/"
                 onClick={() => setMobileOpen(false)}
-                className="px-4 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary flex items-center gap-3"
+                className="px-4 py-3 text-sm font-medium text-white/70 hover:text-white hover:bg-white/5 rounded-lg flex items-center gap-3 transition-colors"
               >
-                <div className="relative w-6 h-6">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#1e3a8a] via-[#1d4ed8] to-[#0a1628] animate-pulse" />
+                <div className="relative w-5 h-5">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#1e3a8a] via-[#1d4ed8] to-[#0a1628]" />
                   <div className="absolute inset-[2px] rounded-full bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#0c1a3d]" />
-                  <div className="absolute top-1/4 left-1/4 w-2 h-1 rounded-full bg-[#00e5ff]/60 blur-[2px] rotate-[-20deg]" />
-                  <div className="absolute inset-0 rounded-full shadow-[0_0_8px_2px_rgba(1,178,255,0.5)]" />
+                  <div className="absolute top-1/4 left-1/4 w-1.5 h-0.5 rounded-full bg-[#00e5ff]/60 blur-[1px] rotate-[-20deg]" />
                 </div>
                 Play with the Orb
               </Link>
 
-              {/* Home */}
               <Link
                 to="/home"
                 onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                   location.pathname === "/home"
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    ? "text-[#01b2ff] bg-[#01b2ff]/10"
+                    : "text-white/70 hover:text-white hover:bg-white/5"
                 }`}
               >
                 Home
               </Link>
 
-              {/* About */}
               <Link
                 to="/about"
                 onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                   location.pathname === "/about"
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    ? "text-[#01b2ff] bg-[#01b2ff]/10"
+                    : "text-white/70 hover:text-white hover:bg-white/5"
                 }`}
               >
                 About
               </Link>
 
-              {/* SolGods */}
-              <Link
-                to="/solgods"
-                onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-bold transition-all rounded-lg border ${
-                  location.pathname === "/solgods"
-                    ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] border-transparent shadow-lg shadow-[#01b2ff]/30"
-                    : "text-[#01b2ff] border-[#01b2ff]/50 hover:bg-[#01b2ff]/10 hover:border-[#01b2ff]"
-                }`}
-              >
-                SolGods
-              </Link>
+              {/* SolGods/SolCity as grouped segment on mobile too */}
+              <div className="flex gap-2 px-4 py-2">
+                <Link
+                  to="/solgods"
+                  onClick={() => setMobileOpen(false)}
+                  className={`flex-1 px-4 py-2.5 text-sm font-medium text-center rounded-lg transition-all ${
+                    location.pathname === "/solgods"
+                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff]"
+                      : "text-[#01b2ff] bg-[#01b2ff]/10 hover:bg-[#01b2ff]/20"
+                  }`}
+                >
+                  SolGods
+                </Link>
+                <Link
+                  to="/solcity"
+                  onClick={() => setMobileOpen(false)}
+                  className={`flex-1 px-4 py-2.5 text-sm font-medium text-center rounded-lg transition-all ${
+                    location.pathname === "/solcity"
+                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff]"
+                      : "text-[#01b2ff] bg-[#01b2ff]/10 hover:bg-[#01b2ff]/20"
+                  }`}
+                >
+                  SolCity
+                </Link>
+              </div>
 
-              {/* SolCity */}
-              <Link
-                to="/solcity"
-                onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-bold transition-all rounded-lg border ${
-                  location.pathname === "/solcity"
-                    ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] border-transparent shadow-lg shadow-[#01b2ff]/30"
-                    : "text-[#01b2ff] border-[#01b2ff]/50 hover:bg-[#01b2ff]/10 hover:border-[#01b2ff]"
-                }`}
-              >
-                SolCity
-              </Link>
-
-              {/* Token */}
               <Link
                 to="/token"
                 onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                   location.pathname === "/token"
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    ? "text-[#01b2ff] bg-[#01b2ff]/10"
+                    : "text-white/70 hover:text-white hover:bg-white/5"
                 }`}
               >
                 Token
               </Link>
 
               {/* Community Section */}
-              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-2">
+              <div className="px-4 py-2 text-xs font-semibold text-white/40 uppercase tracking-wider mt-2">
                 Community
               </div>
               {dropdowns[0].items.map((item) => (
@@ -325,7 +298,7 @@ export function Header() {
                       setMobileOpen(false);
                       window.open(item.href, '_blank', 'noopener,noreferrer,width=1200,height=800');
                     }}
-                    className="px-6 py-3 text-sm font-medium transition-colors rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary cursor-pointer"
+                    className="px-6 py-3 text-sm font-medium text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors cursor-pointer"
                   >
                     {item.label}
                   </a>
@@ -334,10 +307,10 @@ export function Header() {
                     key={item.href}
                     to={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`px-6 py-3 text-sm font-medium transition-colors rounded-lg ${
+                    className={`px-6 py-3 text-sm font-medium rounded-lg transition-colors ${
                       location.pathname === item.href
-                        ? "text-primary bg-primary/10"
-                        : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                        ? "text-[#01b2ff] bg-[#01b2ff]/10"
+                        : "text-white/70 hover:text-white hover:bg-white/5"
                     }`}
                   >
                     {item.label}
@@ -345,31 +318,39 @@ export function Header() {
                 )
               ))}
 
-              {/* Gallery */}
               <Link
                 to="/gallery"
                 onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                   location.pathname === "/gallery"
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    ? "text-[#01b2ff] bg-[#01b2ff]/10"
+                    : "text-white/70 hover:text-white hover:bg-white/5"
                 }`}
               >
                 Gallery
               </Link>
 
-              {/* Team */}
               <Link
                 to="/team"
                 onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                   location.pathname === "/team"
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    ? "text-[#01b2ff] bg-[#01b2ff]/10"
+                    : "text-white/70 hover:text-white hover:bg-white/5"
                 }`}
               >
                 Team
               </Link>
+
+              {/* Mobile CTA */}
+              <a
+                href="https://discord.gg/solgods"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-4 mt-3 px-4 py-3 text-sm font-semibold text-white text-center bg-gradient-to-r from-[#5865F2] to-[#7289da] rounded-lg"
+              >
+                Join Discord
+              </a>
             </div>
           </nav>
         )}
