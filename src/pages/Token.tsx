@@ -50,7 +50,7 @@ const Token = () => {
               style={{ paddingBottom: '125%' }}
             >
               <iframe 
-                src="https://dexscreener.com/solana/BomTmYmoE7EFGU2rYtQJJG1MjsUb6wJPqW13jpivjGkP?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+                src="https://dexscreener.com/solana/BomTmYmoE7EFGU2rYtQJJG1MjsUb6wJPqW13jpivjGkP?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
                 className="absolute w-full h-full top-0 left-0 border-0 2xl:h-[65%]"
                 style={{ minHeight: '500px' }}
               />
