@@ -259,6 +259,15 @@ const SolCity = () => {
                 </tbody>
               </table>
             </div>
+
+            <div className="bg-secondary/30 border border-border/50 rounded-lg p-6 mt-8">
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                The remaining allocation is structured toward on-chain liquidity strategies, utilizing low to medium risk profiles with an emphasis on capital preservation, diversification, and controlled exposure.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Overall system behavior is guided by risk-managed allocation practices rather than reliance on NFT market sentiment, trading velocity, or price speculation.
+              </p>
+            </div>
           </article>
 
           {/* Section 2: The Mechanics */}
