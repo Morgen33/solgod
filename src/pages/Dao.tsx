@@ -114,7 +114,7 @@ const Dao = () => {
           </p>
           
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold mb-4 text-blue-light">Current DAOs Open:</h3>
+            <h3 className="text-2xl font-bold mb-4" style={{ color: "#01b2ff" }}>Current DAOs Open:</h3>
             <div className="flex flex-wrap justify-center gap-4">
               {DAO_SECTIONS.map(dao => <button key={dao.id} onClick={() => scrollToSection(dao.id)} className="px-4 py-2 rounded-full bg-blue/20 border border-blue/30 text-sm font-medium hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 cursor-pointer">
                   {dao.name}
@@ -188,7 +188,7 @@ const Dao = () => {
               <h3 className="text-3xl font-bold">Wings SG DAO</h3>
             </div>
             
-            <p className="text-lg text-blue-light font-medium mb-4">Elevate Your SolGod!</p>
+            <p className="text-lg font-medium mb-4" style={{ color: "#01b2ff" }}>Elevate Your SolGod!</p>
             <p className="text-muted-foreground mb-6">
               The Wings DAO is the exclusive strategic hub for holders of SolGods NFTs with the rare Wings trait, 
               along with specific accessories. We focus on collective market elevation and building an elite, tight-knit community.
@@ -268,7 +268,7 @@ const Dao = () => {
               <h3 className="text-3xl font-bold">MAFIA DAO</h3>
             </div>
             
-            <p className="text-lg text-blue-light font-medium mb-4">Mission Mafia is a family-first DAO</p>
+            <p className="text-lg font-medium mb-4" style={{ color: "#01b2ff" }}>Mission Mafia is a family-first DAO</p>
             <p className="text-muted-foreground mb-6">
               Led by four core team members, built on loyalty, trust, and long-term alignment. Our focus is on creating 
               legendary outcomes through monetization, NFTs, content, and mining, while building a lasting legacy for the family.
