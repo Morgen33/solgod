@@ -621,55 +621,133 @@ const SolCity = () => {
             </h3>
 
             <div className="space-y-6 text-muted-foreground text-sm leading-relaxed">
+              <h4 className="text-lg font-bold text-foreground">IMPORTANT DISCLAIMER & RISK DISCLOSURE</h4>
+              
+              <h5 className="font-semibold text-foreground">SOL CITY: CAPITAL ALLOCATION ENGINE WHITEPAPER</h5>
+              
               <p>
                 The financial projections, figures, mechanisms, and performance illustrations presented in this document are based on assumed market scenarios and internal modeling frameworks. They are provided solely for informational, illustrative, and conceptual purposes and should not be interpreted as fixed outcomes, guarantees, or representations of future performance.
+              </p>
+              
+              <p>
+                All figures, including but not limited to projected returns, estimated monthly performance, quarterly distributions, allocation models, and per-NFT calculations, are non-binding estimates and may vary significantly or fail to materialize.
               </p>
 
               <div>
                 <h5 className="font-semibold text-foreground mb-2">Market Risk & Volatility</h5>
+                <p className="mb-4">
+                  Participation in the Sol City ecosystem is subject to substantial market risk. Digital asset markets, including cryptocurrencies and related financial instruments, are inherently volatile and unpredictable. Prices may fluctuate rapidly due to market conditions, liquidity shifts, regulatory developments, macroeconomic factors, and other variables beyond the control of the Sol City team.
+                </p>
                 <p>
-                  Participation in the SolCity ecosystem is subject to substantial market risk. Digital asset markets, including cryptocurrencies and related financial instruments, are inherently volatile and unpredictable. Prices may fluctuate rapidly due to market conditions, liquidity shifts, regulatory developments, macroeconomic factors, and other variables beyond the control of the SolCity team.
+                  Asset valuations denominated in SOL or other digital assets may increase or decrease significantly over time, directly impacting the notional and real-world value of the ecosystem.
                 </p>
               </div>
 
               <div>
                 <h5 className="font-semibold text-foreground mb-2">Variable Performance & No Guarantee of Returns</h5>
+                <p className="mb-4">
+                  Any referenced performance targets, benchmarks, or modeled rates — including those associated with trading activity, allocation strategies, or liquidity participation — are aspirational and non-guaranteed.
+                </p>
+                <p className="mb-4">Actual performance may differ materially from projections due to:</p>
+                <ul className="list-disc list-inside space-y-1 mb-4">
+                  <li>Market conditions</li>
+                  <li>Execution constraints</li>
+                  <li>Liquidity availability</li>
+                  <li>Risk management outcomes</li>
+                  <li>External economic events</li>
+                </ul>
                 <p>
-                  Any referenced performance targets, benchmarks, or modeled rates are aspirational and non-guaranteed. Actual performance may differ materially from projections due to market conditions, execution constraints, liquidity availability, risk management outcomes, and external economic events. There is no guarantee of profit, yield, return of capital, or periodic distribution.
+                  There is no guarantee of profit, yield, return of capital, or periodic distribution. During adverse market conditions, returns may be reduced or may not exist at all.
                 </p>
               </div>
 
               <div>
                 <h5 className="font-semibold text-foreground mb-2">No Investment Advice / No Offer of Securities</h5>
+                <p className="mb-4">Nothing contained in this document constitutes:</p>
+                <ul className="list-disc list-inside space-y-1 mb-4">
+                  <li>Financial advice</li>
+                  <li>Investment advice</li>
+                  <li>Trading advice</li>
+                  <li>Legal or tax advice</li>
+                  <li>An offer or solicitation to buy securities or regulated financial products</li>
+                </ul>
                 <p>
-                  Nothing contained in this document constitutes financial advice, investment advice, trading advice, legal or tax advice, or an offer or solicitation to buy securities or regulated financial products. SolCity NFTs are not securities, investment contracts, equity interests, shares, derivatives, or any form of regulated financial instrument.
+                  Sol City NFTs are not securities, investment contracts, equity interests, shares, derivatives, or any form of regulated financial instrument. Ownership of an NFT does not represent ownership in any company, fund, or legal entity, nor does it convey rights to dividends, profits, or guaranteed income.
                 </p>
               </div>
 
               <div>
                 <h5 className="font-semibold text-foreground mb-2">Experimental & Non-Custodial Nature</h5>
+                <p className="mb-4">
+                  Sol City is an experimental, digitally-native economic model. Participation involves untested mechanisms, smart contract dependencies, and evolving market dynamics.
+                </p>
+                <p className="mb-4">Sol City does not act as:</p>
+                <ul className="list-disc list-inside space-y-1 mb-4">
+                  <li>A licensed asset manager</li>
+                  <li>An investment advisor</li>
+                  <li>A broker or dealer</li>
+                  <li>A custodian or fiduciary</li>
+                </ul>
                 <p>
-                  SolCity is an experimental, digitally-native economic model. Participation involves untested mechanisms, smart contract dependencies, and evolving market dynamics. SolCity does not act as a licensed asset manager, investment advisor, broker or dealer, or custodian or fiduciary.
+                  Participants retain control of their digital assets at all times. No fiduciary, advisory, or client relationship is created by participation in the ecosystem.
+                </p>
+              </div>
+
+              <div>
+                <h5 className="font-semibold text-foreground mb-2">Jurisdictional Considerations & Legal Compliance</h5>
+                <p className="mb-4">
+                  Participation in the Sol City ecosystem may be restricted or prohibited in certain jurisdictions. Laws and regulations governing digital assets vary by country and may change over time.
+                </p>
+                <p className="mb-4">Each participant is solely responsible for:</p>
+                <ul className="list-disc list-inside space-y-1 mb-4">
+                  <li>Determining whether participation is lawful in their jurisdiction</li>
+                  <li>Complying with applicable local laws, regulations, and tax obligations</li>
+                </ul>
+                <p>
+                  Sol City makes no representations or warranties regarding the legal status of NFTs, digital assets, or participation models in any specific country or region.
                 </p>
               </div>
 
               <div>
                 <h5 className="font-semibold text-foreground mb-2">Assumption of Risk</h5>
+                <p className="mb-4">By participating in the Sol City ecosystem, you acknowledge and accept that:</p>
+                <ul className="list-disc list-inside space-y-1 mb-4">
+                  <li>Digital assets carry inherent financial risk</li>
+                  <li>Loss of capital is possible</li>
+                  <li>Outcomes may deviate substantially from projections</li>
+                </ul>
                 <p>
-                  By participating in the SolCity ecosystem, you acknowledge and accept that digital assets carry inherent financial risk, loss of capital is possible, and outcomes may deviate substantially from projections. You should not commit funds you are not prepared to lose entirely.
+                  You should not commit funds you are not prepared to lose entirely. Participants are strongly encouraged to conduct their own independent research and due diligence before engaging with the ecosystem.
                 </p>
               </div>
 
               <div>
-                <h5 className="font-semibold text-foreground mb-2">Trading & Settlement Disclaimer</h5>
+                <h5 className="font-semibold text-foreground mb-2">Forward-Looking Statements</h5>
                 <p>
-                  All trading activities conducted under the Asset Management and Trading Engine will be executed primarily in USD denominated instruments and pairs. Where distributions, rewards, or airdrops are settled on-chain in Solana (SOL), the corresponding USD value will be converted to SOL at the prevailing market exchange rate at the time of distribution. No fixed SOL value is guaranteed.
+                  This document may contain forward-looking statements reflecting current assumptions, expectations, or projections. These statements are inherently uncertain and involve risks that may cause actual outcomes to differ materially from those expressed or implied.
+                </p>
+              </div>
+
+              <div>
+                <h5 className="font-semibold text-foreground mb-2">Additional Trading & Settlement Disclaimer</h5>
+                <p className="mb-4">
+                  All trading activities conducted under the Asset Management and Trading Engine will be executed primarily in USD denominated instruments and pairs.
+                </p>
+                <p className="mb-4">
+                  Any profits, performance figures, or percentage-based returns referenced in this document are calculated in USD terms.
+                </p>
+                <p className="mb-4">
+                  Where distributions, rewards, or airdrops are settled on-chain in Solana (SOL), the corresponding USD value will be converted to SOL at the prevailing market exchange rate at the time of distribution, subject to normal market fluctuations and liquidity conditions.
+                </p>
+                <p>
+                  As a result, the amount of SOL received may vary depending on the USD–SOL exchange rate at the time of conversion and settlement. No fixed SOL value is guaranteed.
                 </p>
               </div>
 
               <div className="bg-destructive/10 rounded-lg p-4 mt-6">
+                <h5 className="font-semibold text-foreground mb-2">Final Note</h5>
                 <p className="font-semibold text-foreground">
-                  SolCity is designed for informed participants who understand the risks associated with digital assets, experimental economic systems, and evolving market structures. Participation is voluntary and undertaken at the sole discretion and responsibility of each individual.
+                  Sol City is designed for informed participants who understand the risks associated with digital assets, experimental economic systems, and evolving market structures. Participation is voluntary and undertaken at the sole discretion and responsibility of each individual.
                 </p>
               </div>
             </div>
