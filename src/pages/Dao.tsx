@@ -152,7 +152,7 @@ const Dao = () => {
               </div>
               <div className="bg-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <h4 className="font-bold mb-4 font-cinzel text-[#e8e4dc]">Wizard Hat</h4>
-                
+                <img src={wizardHatTrait} alt="Wizard Hat" className="h-48 w-48 object-contain" />
               </div>
             </div>
             
