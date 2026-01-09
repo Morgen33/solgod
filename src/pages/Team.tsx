@@ -33,6 +33,7 @@ import astaBackAvatar from "@/assets/team/asta-back.png";
 import astaAvatar from "@/assets/team/asta.png";
 import savageAvatar from "@/assets/team/savage.jpg";
 import eddieAvatar from "@/assets/team/eddie.avif";
+import eddieBackAvatar from "@/assets/team/eddie-back.jpg";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -167,6 +168,7 @@ const MEMBER_BACK_AVATARS: Record<string, string> = {
   Mister: misterBackAvatar,
   Asta: astaBackAvatar,
   Morgen: morgenBackAvatar,
+  Eddie: eddieBackAvatar,
 };
 
 const AVATAR_COLORS = [
