@@ -94,15 +94,15 @@ const solgods: string[] = [
   iceAngel, butterflyLaser, rainbowArcher,
   cosmicDemon, greenMafia, pantherRider, skeletonKnight, reaperSuit,
   gangHq, iceQueen, genesis38, phoenixWarrior, demonTrident, medusa,
-  iceMech, fireHammer, cosmicWarrior, leopardBlind,
-  captainCosmic, genesis127, genesis11, genesis214,
+  fireHammer, cosmicWarrior, leopardBlind,
+  captainCosmic, genesis127,
   genesis255, genesis323, genesis736, genesis933,
   genesis1280, genesis1526, genesis1616, genesis1801, genesis1814,
   genesis2004, genesis2397, genesis2405, genesis2903,
   genesis3324, genesis3331, dragonMage,
   dragonAxe, witchWings, lightningPhoenix, vineSamurai,
   phoenixHood, tuxedoAngel,
-  cosmicWizard, mechaQueen, rainbowDemon, pantherSamurai, haloZombie,
+  mechaQueen, rainbowDemon, pantherSamurai, haloZombie,
   cosmicNinja, lavaQueen, vineKing, iceKing, lavaLaser
 ];
 
