@@ -82,17 +82,17 @@ import cosmicWizard from "@/assets/heroes/genesis/cosmic-wizard.png";
 const community1of1s: string[] = [communityKmac, communityOneofone, communityTick, communityAntler, communityQueen, communityCrown];
 const staff1of1s: string[] = [glow1of1, happy1of1, bastet1of1, staff1of1Img];
 const solgods: string[] = [
-  iceAngel, leopardQueen, butterflyLaser, rainbowArcher,
+  iceAngel, butterflyLaser, rainbowArcher,
   cosmicDemon, greenMafia, pantherRider, skeletonKnight, reaperSuit,
   gangHq, iceQueen, genesis38, phoenixWarrior, demonTrident, medusa,
   iceMech, fireHammer, cosmicWarrior, leopardBlind,
   captainCosmic, genesis127, genesis11, genesis214,
   genesis255, genesis323, genesis736, genesis587, genesis933,
   genesis1280, genesis1526, genesis1616, genesis1801, genesis1814,
-  genesis2004, genesis2397, genesis2405, genesis2497, genesis2903,
-  genesis3324, genesis3331, cosmicSword, zombieMafia, dragonMage,
-  dragonAxe, witchWings, lightningPhoenix, butterflyPunk, vineSamurai,
-  phoenixHood, tuxedoAngel, genesis2276, genesis2410,
+  genesis2004, genesis2397, genesis2405, genesis2903,
+  genesis3324, genesis3331, dragonMage,
+  dragonAxe, witchWings, lightningPhoenix, vineSamurai,
+  phoenixHood, tuxedoAngel, genesis2276,
   cosmicWizard
 ];
 
