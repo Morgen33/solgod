@@ -83,7 +83,7 @@ const Index = () => {
           {/* Quick Links */}
           <div className="card-glow rounded-2xl p-6 sm:p-8">
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-              {quickLinks.map((link) => {
+              {quickLinks.map((link, index) => {
                 const Icon = link.icon;
                 return (
                   <a
@@ -104,7 +104,12 @@ const Index = () => {
                       <Icon size={20} />
                     </div>
                     <div className="min-w-0">
-                      <h4 className="font-semibold text-foreground text-sm truncate">{link.label}</h4>
+                      <h4 
+                        className="font-semibold text-sm truncate"
+                        style={{ color: index < 3 ? "#01b2ff" : undefined }}
+                      >
+                        {link.label}
+                      </h4>
                       <p className="text-xs text-muted-foreground hidden sm:block truncate">{link.description}</p>
                     </div>
                   </a>
