@@ -32,6 +32,7 @@ import daverAvatar from "@/assets/team/daver.jpg";
 import astaBackAvatar from "@/assets/team/asta-back.png";
 import astaAvatar from "@/assets/team/asta.png";
 import savageAvatar from "@/assets/team/savage.jpg";
+import eddieAvatar from "@/assets/team/eddie.avif";
 import { Seo } from "@/components/Seo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -151,6 +152,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   DaveR: daverAvatar,
   Asta: astaAvatar,
   Savage: savageAvatar,
+  Eddie: eddieAvatar,
 };
 
 // Back images for flippable cards (add more as needed)
