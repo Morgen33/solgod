@@ -15,6 +15,7 @@ import rainbowWingsTrait from "@/assets/traits/rainbow-wings-new.png";
 import phoenixWingsTrait from "@/assets/traits/phoenix-wings-new.png";
 import strawhatTrait from "@/assets/traits/strawhat.png";
 import pixelPuppyTrait from "@/assets/traits/pixel-puppy.png";
+import wizardHatTrait from "@/assets/traits/wizard-hat-trait.png";
 const DAO_SECTIONS = [{
   name: "Wizard Cabal",
   id: "wizard-cabal"
@@ -152,7 +153,7 @@ const Dao = () => {
               </div>
               <div className="bg-secondary/30 rounded-xl p-6 flex flex-col items-center justify-center border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <h4 className="font-bold mb-4 font-cinzel text-[#e8e4dc]">Wizard Hat Trait</h4>
-                <Wand2 className="h-24 w-24 text-blue-light opacity-60" />
+                <img src={wizardHatTrait} alt="Wizard Hat Trait" className="h-28 w-auto" />
               </div>
             </div>
             
