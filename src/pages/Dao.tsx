@@ -17,6 +17,8 @@ import whiteWingsTrait from "@/assets/traits/white-wings-new.png";
 import strawhatTrait from "@/assets/traits/strawhat.png";
 import pixelPuppyTrait from "@/assets/traits/pixel-puppy.png";
 import wizardHatTrait from "@/assets/traits/wizard-hat-trait.png";
+import visorTrait from "@/assets/traits/visor.png";
+import solgodVisorTrait from "@/assets/traits/solgod-visor.png";
 const DAO_SECTIONS = [{
   name: "Wizard Cabal",
   id: "wizard-cabal"
@@ -237,6 +239,14 @@ const Dao = () => {
                 <div className="flex flex-col items-center">
                   <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">White Wings</span>
                   <img src={whiteWingsTrait} alt="White Wings" className="h-40 w-40 object-contain" />
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">Visor</span>
+                  <img src={visorTrait} alt="Visor" className="h-40 w-40 object-contain" />
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">SolGod Visor</span>
+                  <img src={solgodVisorTrait} alt="SolGod Visor" className="h-40 w-40 object-contain" />
                 </div>
               </div>
             </div>
