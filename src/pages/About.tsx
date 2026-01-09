@@ -81,7 +81,7 @@ const About = () => {
             />
             <ValueCard 
               icon={<Shield size={32} />}
-              title='A "Hedge Fund" for the People'
+              title="A Fund for the People"
               description="We bridge the gap between high-level finance and Web3 culture. By holding a SolGod, you aren't just holding art; you are holding a key to an actively managed treasury spanning Forex, Indices, and Crypto."
             />
             <ValueCard 
