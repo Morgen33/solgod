@@ -30,16 +30,16 @@ const quickLinks = [
     description: "View token on Dexscreener"
   },
   {
-    label: "Mystery Packs",
-    href: "https://sgtailor.fluxinc.io/packs",
-    icon: Package,
-    description: "Open mystery packs"
-  },
-  {
     label: "Stake",
     href: "https://sgstake.fluxinc.io/",
     icon: Layers,
     description: "Earn rewards by staking"
+  },
+  {
+    label: "Mystery Packs",
+    href: "https://sgtailor.fluxinc.io/packs",
+    icon: Package,
+    description: "Open mystery packs"
   }
 ];
 
