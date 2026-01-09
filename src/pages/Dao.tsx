@@ -245,8 +245,8 @@ const Dao = () => {
                   <img src={visorTrait} alt="Visor" className="h-40 w-40 object-contain" />
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">SolGod Visor</span>
-                  <img src={solgodVisorTrait} alt="SolGod Visor" className="h-40 w-40 object-contain" />
+                  <span className="text-sm font-medium text-[#e8e4dc] mb-2 font-cinzel">SolGod Sweater</span>
+                  <img src={solgodVisorTrait} alt="SolGod Sweater" className="h-40 w-40 object-contain" />
                 </div>
               </div>
             </div>
