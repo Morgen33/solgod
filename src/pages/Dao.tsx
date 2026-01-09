@@ -19,6 +19,7 @@ import pixelPuppyTrait from "@/assets/traits/pixel-puppy.png";
 import wizardHatTrait from "@/assets/traits/wizard-hat-trait.png";
 import visorTrait from "@/assets/traits/visor.png";
 import solgodVisorTrait from "@/assets/traits/solgod-visor.png";
+import pinstripeSuit from "@/assets/traits/pinstripe-suit.png";
 const DAO_SECTIONS = [{
   name: "Wizard Cabal",
   id: "wizard-cabal"
@@ -305,9 +306,13 @@ const Dao = () => {
               <div className="p-4 rounded-xl bg-secondary/50 border border-blue/30 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
                 <h4 className="font-bold mb-2 text-sm" style={{ color: "#01b2ff" }}>What's Required</h4>
                 <div className="flex flex-wrap gap-2 mb-2">
-                  {["Peaky Hat", "Mafia Hat", "Tuxedo", "Pinstripe Suit"].map(trait => <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-xs font-medium">
+                  {["Peaky Hat", "Mafia Hat", "Tuxedo"].map(trait => <span key={trait} className="px-3 py-1 rounded-full bg-blue/20 border border-blue/30 text-xs font-medium">
                       {trait}
                     </span>)}
+                </div>
+                <div className="flex items-center gap-3 mt-3 p-2 rounded-lg bg-blue/10 border border-blue/20">
+                  <img src={pinstripeSuit} alt="Pinstripe Suit" className="w-16 h-16 rounded-lg object-cover" />
+                  <span className="text-sm font-medium">Pinstripe Suit</span>
                 </div>
                 <p className="text-xs text-muted-foreground mt-2 font-medium">Membership fee is 0.05 SOL per month</p>
               </div>
