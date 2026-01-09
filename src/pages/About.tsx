@@ -119,49 +119,35 @@ const About = () => {
             We have designed an ecosystem where finance meets fun, and discipline meets chaos.
           </p>
 
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-12">
-            <div className="flex flex-col">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 rounded-xl bg-blue/20">
-                  <Crown style={{ color: "#01b2ff" }} size={32} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">The Collection: 3,333 Divine Beings</h3>
-                  <p className="text-muted-foreground">The Genesis collection of uniquely crafted SolGods</p>
-                </div>
+          <div className="card-glow rounded-2xl p-8 sm:p-12 mb-12">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 rounded-xl bg-blue/20">
+                <Crown className="text-blue-light" size={32} />
               </div>
-              <p className="text-lg text-muted-foreground mb-8">
-                The Genesis collection consists of 3,333 uniquely crafted SolGods, representing the elite 3,333 mortals 
-                chosen by the Sol Core which includes ten primordial/mythical entities.
-              </p>
-              
-              <div className="grid sm:grid-cols-3 gap-6 mb-8">
-                <div className="p-4 rounded-xl bg-blue/10 border border-blue/20 text-center">
-                  <Sparkles className="mx-auto mb-2" size={28} style={{ color: "#01b2ff" }} />
-                  <h4 className="font-bold mb-1">Artistic Vision</h4>
-                  <p className="text-sm text-muted-foreground">Created by Happy & CreatorX, the collection features a diverse array of male and female characters.</p>
-                </div>
-                <div className="p-4 rounded-xl bg-blue/10 border border-blue/20 text-center">
-                  <Crown className="mx-auto mb-2" size={28} style={{ color: "#01b2ff" }} />
-                  <h4 className="font-bold mb-1">Nostalgia & Innovation</h4>
-                  <p className="text-sm text-muted-foreground">The 140+ traits include "nostalgia items" alongside futuristic armor and celestial weapons.</p>
-                </div>
-                <div className="p-4 rounded-xl bg-blue/10 border border-blue/20 text-center">
-                  <Coins className="mx-auto mb-2" size={28} style={{ color: "#01b2ff" }} />
-                  <h4 className="font-bold mb-1">Yield-Bearing JPEG</h4>
-                  <p className="text-sm text-muted-foreground">Every NFT acts as a cultural badge and an interactive financial instrument.</p>
-                </div>
-              </div>
-
-              <div className="p-6 rounded-xl bg-gradient-to-r from-blue-dark/30 to-blue/20 border border-blue/30">
-                <p className="text-lg text-center">
-                  As the treasury grows, the{" "}
-                  <span className="text-blue-light font-bold">value of the identity it represents</span> scales alongside it — 
-                  <span className="text-blue-light font-bold"> a true "yield-bearing JPEG"</span>
-                </p>
+              <div>
+                <h3 className="text-2xl font-bold">The Collection: 3,333 Divine Beings</h3>
+                <p className="text-muted-foreground">The Genesis collection of uniquely crafted SolGods</p>
               </div>
             </div>
-          </GlowCard>
+            <p className="text-muted-foreground mb-6">
+              The Genesis collection consists of 3,333 uniquely crafted SolGods, representing the elite 3,333 mortals 
+              chosen by the Sol Core which includes ten primordial/mythical entities.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 text-muted-foreground">
+              <div className="p-4 rounded-xl bg-secondary/30">
+                <h4 className="font-bold text-foreground mb-2">Artistic Vision</h4>
+                <p className="text-sm">Created by Happy & CreatorX, the collection features a diverse array of male and female characters, ensuring every holder finds a reflection of themselves within the pantheon.</p>
+              </div>
+              <div className="p-4 rounded-xl bg-secondary/30">
+                <h4 className="font-bold text-foreground mb-2">Nostalgia & Innovation</h4>
+                <p className="text-sm">The 140+ traits include "nostalgia items" designed to create emotional resonance, alongside futuristic armor and celestial weapons.</p>
+              </div>
+              <div className="p-4 rounded-xl bg-secondary/30 md:col-span-2">
+                <h4 className="font-bold text-foreground mb-2">The "Yield-Bearing JPEG"</h4>
+                <p className="text-sm">Every NFT acts as a cultural badge and an interactive financial instrument. As the treasury grows, the value of the identity it represents scales alongside it.</p>
+              </div>
+            </div>
+          </div>
 
           {/* Mission */}
           <div className="text-center mb-8">
