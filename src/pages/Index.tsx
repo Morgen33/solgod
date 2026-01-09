@@ -106,7 +106,7 @@ const Index = () => {
                     <div className="min-w-0">
                       <h4 
                         className="font-semibold text-sm truncate"
-                        style={{ color: index < 3 ? "#8ab4f8" : undefined }}
+                        style={{ color: "#8ab4f8" }}
                       >
                         {link.label}
                       </h4>
