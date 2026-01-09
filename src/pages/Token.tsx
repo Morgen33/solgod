@@ -47,17 +47,17 @@ const Token = () => {
           <div className="mb-16 rounded-2xl overflow-hidden border border-border">
             <div 
               className="relative w-full"
-              style={{ paddingBottom: '125%' }}
+              style={{ paddingBottom: '75%' }}
             >
               <iframe 
                 src="https://dexscreener.com/solana/BomTmYmoE7EFGU2rYtQJJG1MjsUb6wJPqW13jpivjGkP?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
-                className="absolute w-full h-full top-0 left-0 border-0 2xl:h-[65%]"
-                style={{ minHeight: '500px' }}
+                className="absolute w-full h-full top-0 left-0 border-0"
+                style={{ minHeight: '400px' }}
               />
             </div>
             <style>{`
               @media(min-width:1400px) {
-                .dex-embed-container { padding-bottom: 65% !important; }
+                .dex-embed-container { padding-bottom: 50% !important; }
               }
             `}</style>
           </div>
