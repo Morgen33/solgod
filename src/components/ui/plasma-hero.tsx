@@ -507,7 +507,16 @@ export default function PlasmaHero({
         }`}
       >
         <div className="bg-black w-full py-8 flex flex-col items-center">
-          <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-[0.15em] drop-shadow-[0_0_30px_rgba(0,55,212,0.8)] mb-6">
+          <h1 
+            className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold tracking-[0.15em] mb-6"
+            style={{
+              background: 'linear-gradient(135deg, #ffffff 0%, #a5d8ff 40%, #70c4ff 70%, #38bdf8 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              filter: 'drop-shadow(0 0 20px rgba(112, 196, 255, 0.6)) drop-shadow(0 0 40px rgba(56, 189, 248, 0.4))',
+            }}
+          >
             SOLGODS NFTS
           </h1>
           <ShinyButton
