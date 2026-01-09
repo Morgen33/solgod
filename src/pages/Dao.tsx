@@ -238,8 +238,8 @@ const Dao = () => {
             <div className="mb-4">
               <span className="text-sm text-muted-foreground font-medium">Wings SG DAO Founders:</span>
               <div className="flex flex-wrap items-center gap-3 mt-3">
-                <a href="https://x.com/GlowBallbuster" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
-                  @Glow (Fluttering)
+                <a href="https://x.com/GlowsHaven" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300 hover:bg-cyan-500/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-300">
+                  @GlowsHaven
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
                 <span className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/40 rounded-full text-cyan-300">
