@@ -465,9 +465,9 @@ const Team = () => {
             {otherRoles.map((g, index) => (
               <div key={g.role} className="w-full">
                 <TeamSection group={g} />
-                {/* Note box right after Community section */}
+                {/* Note box after Community on desktop only */}
                 {g.role === "Community" && (
-                  <div className="mt-6 flex justify-center md:justify-start">
+                  <div className="hidden md:flex mt-6 justify-start">
                     <div className="bg-primary/10 border border-primary/30 rounded-lg px-5 py-4 max-w-sm">
                       <p className="text-[#01b2ff] text-sm sm:text-base font-medium">
                         <span className="font-bold">Tip:</span> Tap on photo to turn around and see IRL view.
@@ -477,6 +477,15 @@ const Team = () => {
                 )}
               </div>
             ))}
+          </div>
+          
+          {/* Tip box at bottom on mobile only */}
+          <div className="md:hidden mt-8 flex justify-center">
+            <div className="bg-primary/10 border border-primary/30 rounded-lg px-5 py-4 max-w-sm">
+              <p className="text-[#01b2ff] text-sm font-medium">
+                <span className="font-bold">Tip:</span> Tap on photo to turn around and see IRL view.
+              </p>
+            </div>
           </div>
         </div>
       </main>
