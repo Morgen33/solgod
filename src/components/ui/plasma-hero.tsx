@@ -153,6 +153,12 @@ export default function PlasmaHero({
     const mount = mountRef.current;
     if (!mount) return;
 
+    // Determine if mobile (narrow viewport) - zoom out more to fit ball
+    const isMobile = mount.clientWidth < 768;
+    const mobileEndZ = 3.2; // Further back on mobile
+    const desktopEndZ = 2.4;
+    const endZ = isMobile ? mobileEndZ : desktopEndZ;
+
     // Scene setup
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x000000);
@@ -382,8 +388,8 @@ export default function PlasmaHero({
         const progress = t / introConfig.duration;
         const eased = introConfig.easeOutCubic(progress);
         
-        // Interpolate camera Z position (far to near)
-        camera.position.z = introConfig.startZ + (introConfig.endZ - introConfig.startZ) * eased;
+        // Interpolate camera Z position (far to near) - uses responsive endZ
+        camera.position.z = introConfig.startZ + (endZ - introConfig.startZ) * eased;
         
         // Interpolate scale (small to full)
         const currentScale = introConfig.startScale + (introConfig.endScale - introConfig.startScale) * eased;
@@ -397,7 +403,7 @@ export default function PlasmaHero({
         // After intro, normal rotation
         if (!introComplete) {
           introComplete = true;
-          camera.position.z = introConfig.endZ;
+          camera.position.z = endZ;
           mainGroup.scale.setScalar(introConfig.endScale);
           setShowContent(true);
           // Delay character fade-in until orb is fully formed
