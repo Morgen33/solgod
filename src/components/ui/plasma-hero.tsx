@@ -563,7 +563,7 @@ export default function PlasmaHero({
               SOLGODS
             </h1>
             <span 
-              className="relative font-montserrat text-[0.5rem] md:text-xs lg:text-sm tracking-[0.4em] -mt-2 md:-mt-3 mr-[-2.2em] md:mr-[-2em] self-end"
+              className="relative font-montserrat text-[0.5rem] md:text-xs lg:text-sm tracking-[0.4em] -mt-2 md:-mt-3 mr-[0.8em] md:mr-[1em] self-end"
               style={{
                 background: 'linear-gradient(180deg, #ffffff 0%, #70c4ff 100%)',
                 WebkitBackgroundClip: 'text',
