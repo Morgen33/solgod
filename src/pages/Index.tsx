@@ -75,7 +75,11 @@ const Index = () => {
               Buy SolGods
               <ArrowRight size={20} />
             </ShinyButton>
-            <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
+            <ShinyButton
+              onClick={() => {
+                window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer");
+              }}
+            >
               Join Discord
             </ShinyButton>
           </div>
@@ -323,7 +327,11 @@ const Index = () => {
                 From exclusive insights to the heart of the Solara economy, the journey to ascendancy starts here.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer">
+                <ShinyButton
+                  onClick={() => {
+                    window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer");
+                  }}
+                >
                   Join Discord
                 </ShinyButton>
                 <Link to="/about">

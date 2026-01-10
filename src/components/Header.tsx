@@ -185,14 +185,12 @@ export function Header() {
             </div>
             
             {/* CTA Button - far right */}
-            <a
-              href="https://discord.gg/solgods"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-4 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-[#5865F2] to-[#7289da] rounded-lg hover:shadow-lg hover:shadow-[#5865F2]/30 transition-all hover:scale-[1.02]"
+            <button
+              onClick={() => window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer")}
+              className="ml-4 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-[#5865F2] to-[#7289da] rounded-lg hover:shadow-lg hover:shadow-[#5865F2]/30 transition-all hover:scale-[1.02] cursor-pointer"
             >
               Join Discord
-            </a>
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -343,14 +341,12 @@ export function Header() {
               </Link>
 
               {/* Mobile CTA */}
-              <a
-                href="https://discord.gg/solgods"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mx-4 mt-3 px-4 py-3 text-sm font-semibold text-white text-center bg-gradient-to-r from-[#5865F2] to-[#7289da] rounded-lg"
+              <button
+                onClick={() => window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer")}
+                className="mx-4 mt-3 px-4 py-3 text-sm font-semibold text-white text-center bg-gradient-to-r from-[#5865F2] to-[#7289da] rounded-lg cursor-pointer w-[calc(100%-2rem)]"
               >
                 Join Discord
-              </a>
+              </button>
             </div>
           </nav>
         )}

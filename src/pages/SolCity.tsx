@@ -757,10 +757,13 @@ const SolCity = () => {
           <div className="mt-16 text-center">
             <p className="text-muted-foreground mb-4">Have questions about the whitepaper?</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
+              <button
+                onClick={() => window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer")}
+                className="text-primary hover:underline inline-flex items-center gap-1 cursor-pointer"
+              >
                 Join Discord
                 <ExternalLink size={14} />
-              </a>
+              </button>
               <a href="https://x.com/SOLGodsNFTs" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
                 Follow Twitter
                 <ExternalLink size={14} />
@@ -778,7 +781,10 @@ const SolCity = () => {
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Join the family of X reply guys, traders, creators, and raiders rewriting what it means to be part of Web3.
             </p>
-            <ShinyButton as="a" href="https://discord.gg/nfts" target="_blank" rel="noopener noreferrer" className="text-sm px-6 py-2">
+            <ShinyButton
+              onClick={() => window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer")}
+              className="text-sm px-6 py-2"
+            >
               Join Discord
               <ArrowRight size={16} />
             </ShinyButton>
