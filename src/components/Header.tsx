@@ -144,30 +144,32 @@ export function Header() {
             <img src={solgodsIcon} alt="SolGods" className="h-9 md:h-10 w-auto" />
           </Link>
 
-          {/* Desktop Navigation - all plain links with underline active state */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center h-full">
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-0.5">
               <NavLink to="/home" isActive={location.pathname === "/home"}>Home</NavLink>
               <NavLink to="/about" isActive={location.pathname === "/about"}>About</NavLink>
               
-              {/* SolGods/SolCity grouped as segmented pair */}
-              <div className="flex items-center mx-1 px-1 py-1 rounded-lg bg-white/[0.03] border border-white/[0.06]">
+              {/* SolGods/SolCity - Premium segmented control as main highlight */}
+              <div className="relative flex items-center mx-2 p-1 rounded-xl bg-gradient-to-r from-[#01b2ff]/10 to-[#0190cc]/10 border border-[#01b2ff]/20 shadow-[0_0_20px_rgba(1,178,255,0.15)]">
+                {/* Glow effect */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#01b2ff]/5 to-[#38bdf8]/5 blur-sm" />
                 <Link
                   to="/solgods"
-                  className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all ${
+                  className={`relative z-10 px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
                     location.pathname === "/solgods"
-                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] shadow-lg shadow-[#01b2ff]/20"
-                      : "text-[#01b2ff] hover:bg-white/5"
+                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] shadow-lg shadow-[#01b2ff]/30"
+                      : "text-[#01b2ff] hover:text-white hover:bg-white/10"
                   }`}
                 >
                   SolGods
                 </Link>
                 <Link
                   to="/solcity"
-                  className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all ${
+                  className={`relative z-10 px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
                     location.pathname === "/solcity"
-                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] shadow-lg shadow-[#01b2ff]/20"
-                      : "text-[#01b2ff] hover:bg-white/5"
+                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] shadow-lg shadow-[#01b2ff]/30"
+                      : "text-[#01b2ff] hover:text-white hover:bg-white/10"
                   }`}
                 >
                   SolCity
@@ -183,14 +185,6 @@ export function Header() {
               <NavLink to="/gallery" isActive={location.pathname === "/gallery"}>Gallery</NavLink>
               <NavLink to="/team" isActive={location.pathname === "/team"}>Team</NavLink>
             </div>
-            
-            {/* CTA Button - far right */}
-            <button
-              onClick={() => window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer")}
-              className="ml-4 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-[#5865F2] to-[#7289da] rounded-lg hover:shadow-lg hover:shadow-[#5865F2]/30 transition-all hover:scale-[1.02] cursor-pointer"
-            >
-              Join Discord
-            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -340,13 +334,6 @@ export function Header() {
                 Team
               </Link>
 
-              {/* Mobile CTA */}
-              <button
-                onClick={() => window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer")}
-                className="mx-4 mt-3 px-4 py-3 text-sm font-semibold text-white text-center bg-gradient-to-r from-[#5865F2] to-[#7289da] rounded-lg cursor-pointer w-[calc(100%-2rem)]"
-              >
-                Join Discord
-              </button>
             </div>
           </nav>
         )}
