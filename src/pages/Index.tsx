@@ -265,7 +265,7 @@ const Index = () => {
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
             >
-              THE DIFFERENCE
+              THE SOLGODS DIFFERENCE
             </h2>
             <p className="text-xl text-muted-foreground">Static vs Dynamic</p>
           </div>
@@ -290,6 +290,9 @@ const Index = () => {
         <div className="max-w-5xl mx-auto">
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 text-center">
             <div className="flex flex-col items-center">
+              <p className="text-lg italic text-muted-foreground mb-6">
+                Stand in the light. Build the system. Ascend as a SolGod.
+              </p>
               <h2 
                 className="text-3xl sm:text-4xl font-bold mb-4 bg-clip-text text-transparent"
                 style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
