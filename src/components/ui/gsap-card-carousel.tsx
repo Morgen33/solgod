@@ -219,7 +219,7 @@ export const GsapCardCarousel = ({ images }: GsapCardCarouselProps) => {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4">
         <button
           onClick={handlePrev}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-b from-[#575757] to-[#414141] text-[#aaa] rounded uppercase text-xs font-bold tracking-wide transition-all duration-300 hover:from-[#57a818] hover:to-[#4d9916] hover:text-white hover:shadow-lg"
+          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-b from-[#575757] to-[#414141] text-[#aaa] rounded uppercase text-xs font-bold tracking-wide transition-all duration-300 hover:from-[#01b2ff] hover:to-[#0090cc] hover:text-white hover:shadow-lg"
           style={{
             textShadow: "#000 1px 1px 5px, #000 -1px -1px 5px",
             boxShadow: "#000 1px 1px 5px, #000 -1px -1px 5px",
@@ -230,7 +230,7 @@ export const GsapCardCarousel = ({ images }: GsapCardCarouselProps) => {
         </button>
         <button
           onClick={handleNext}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-b from-[#575757] to-[#414141] text-[#aaa] rounded uppercase text-xs font-bold tracking-wide transition-all duration-300 hover:from-[#57a818] hover:to-[#4d9916] hover:text-white hover:shadow-lg"
+          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-b from-[#575757] to-[#414141] text-[#aaa] rounded uppercase text-xs font-bold tracking-wide transition-all duration-300 hover:from-[#01b2ff] hover:to-[#0090cc] hover:text-white hover:shadow-lg"
           style={{
             textShadow: "#000 1px 1px 5px, #000 -1px -1px 5px",
             boxShadow: "#000 1px 1px 5px, #000 -1px -1px 5px",
