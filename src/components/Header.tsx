@@ -145,22 +145,9 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center h-full flex-1 justify-between">
-            <div className="flex items-center gap-0.5">
-              <NavLink to="/home" isActive={location.pathname === "/home"}>Home</NavLink>
-              <NavLink to="/about" isActive={location.pathname === "/about"}>About</NavLink>
-              <NavLink to="/token" isActive={location.pathname === "/token"}>Token</NavLink>
-              <DropdownMenu 
-                label="Community" 
-                items={dropdowns[0].items} 
-                currentPath={location.pathname} 
-              />
-              <NavLink to="/gallery" isActive={location.pathname === "/gallery"}>Gallery</NavLink>
-              <NavLink to="/team" isActive={location.pathname === "/team"}>Team</NavLink>
-            </div>
-            
-            {/* SolGods/SolCity - Premium segmented control on far right */}
-            <div className="relative flex items-center p-1 rounded-xl bg-gradient-to-r from-[#01b2ff]/10 to-[#0190cc]/10 border border-[#01b2ff]/20 shadow-[0_0_20px_rgba(1,178,255,0.15)]">
+          <nav className="hidden md:flex items-center h-full flex-1">
+            {/* SolGods/SolCity - Premium segmented control on left */}
+            <div className="relative flex items-center p-1 rounded-xl bg-gradient-to-r from-[#01b2ff]/10 to-[#0190cc]/10 border border-[#01b2ff]/20 shadow-[0_0_20px_rgba(1,178,255,0.15)] ml-4">
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#01b2ff]/5 to-[#38bdf8]/5 blur-sm" />
               <Link
                 to="/solgods"
@@ -182,6 +169,20 @@ export function Header() {
               >
                 SolCity
               </Link>
+            </div>
+            
+            {/* Nav links pushed to the right */}
+            <div className="flex items-center gap-0.5 ml-auto">
+              <NavLink to="/home" isActive={location.pathname === "/home"}>Home</NavLink>
+              <NavLink to="/about" isActive={location.pathname === "/about"}>About</NavLink>
+              <NavLink to="/token" isActive={location.pathname === "/token"}>Token</NavLink>
+              <DropdownMenu 
+                label="Community" 
+                items={dropdowns[0].items} 
+                currentPath={location.pathname} 
+              />
+              <NavLink to="/gallery" isActive={location.pathname === "/gallery"}>Gallery</NavLink>
+              <NavLink to="/team" isActive={location.pathname === "/team"}>Team</NavLink>
             </div>
           </nav>
 
