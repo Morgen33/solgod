@@ -500,9 +500,9 @@ export default function PlasmaHero({
             alt={`SolGod ${index + 1}`} 
             className="absolute h-auto object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
             style={{
-              // Scale the character relative to the ball, but boost on mobile since camera sits further back
-              width: `${characterScale * (isMobileViewport ? 120 : 95) * hero.scale}vh`,
-              maxWidth: `${characterScale * (isMobileViewport ? 120 : 95) * hero.scale}vw`,
+              // Scale the character relative to the ball - large to fill the sphere
+              width: `${characterScale * (isMobileViewport ? 180 : 140) * hero.scale}vh`,
+              maxWidth: `${characterScale * (isMobileViewport ? 180 : 140) * hero.scale}vw`,
               filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
               opacity: currentHeroIndex === index && !isTransitioning ? 0.3 : 0,
             }}
