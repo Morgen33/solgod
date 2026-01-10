@@ -195,7 +195,7 @@ export default function PlasmaHero({
     const mainGroup = new THREE.Group();
     mainGroup.scale.setScalar(introConfig.startScale); // Start small
     // Shift ball upward on mobile so it sits just below the logo
-    mainGroup.position.y = isMobile ? 0.35 : 0;
+    mainGroup.position.y = isMobile ? 0.55 : 0;
     scene.add(mainGroup);
 
     // Light
@@ -504,7 +504,7 @@ export default function PlasmaHero({
         className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
           showCharacter ? 'opacity-100' : 'opacity-0'
         }`}
-        style={{ zIndex: 15, marginTop: isMobileViewport ? '-10vh' : '12vh' }}
+        style={{ zIndex: 15, marginTop: isMobileViewport ? '-18vh' : '12vh' }}
       >
         {heroImages.map((hero, index) => (
           <div 
@@ -590,7 +590,7 @@ export default function PlasmaHero({
 
       {/* Enter button below the ball */}
       <div 
-        className={`absolute bottom-[30%] md:bottom-16 left-0 right-0 flex justify-center z-20 transition-opacity duration-1000 ${
+        className={`absolute bottom-[35%] md:bottom-16 left-0 right-0 flex justify-center z-20 transition-opacity duration-1000 ${
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
