@@ -10,7 +10,7 @@ const dropdowns = [
     items: [
       { href: "/dao", label: "DAO", external: false },
       { href: "/partnerships", label: "Partnerships", external: false },
-      { href: "https://solgodcal.lovable.app/", label: "Spaces", external: true },
+      { href: "https://solgodcal.lovable.app/", label: "X Spaces", external: true },
       { href: "/join", label: "Join", external: false },
     ],
   },
