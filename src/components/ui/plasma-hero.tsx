@@ -130,6 +130,7 @@ export default function PlasmaHero({
   const [characterScale, setCharacterScale] = useState(1);
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
 
   // Cycle through heroes after character is shown
   useEffect(() => {
@@ -155,6 +156,8 @@ export default function PlasmaHero({
 
     // Determine if mobile (narrow viewport) - zoom out more to fit ball
     const isMobile = mount.clientWidth < 768;
+    setIsMobileViewport(isMobile);
+
     const mobileEndZ = 3.2; // Further back on mobile
     const desktopEndZ = 2.4;
     const endZ = isMobile ? mobileEndZ : desktopEndZ;
@@ -438,6 +441,7 @@ export default function PlasmaHero({
     const onResize = () => {
       const w = mount.clientWidth;
       const h = mount.clientHeight;
+      setIsMobileViewport(w < 768);
       camera.aspect = w / h;
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
@@ -496,9 +500,9 @@ export default function PlasmaHero({
             alt={`SolGod ${index + 1}`} 
             className="absolute h-auto object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
             style={{
-              // Ball diameter in vh * 95% to fill the sphere nicely
-              width: `${characterScale * 95 * hero.scale}vh`,
-              maxWidth: `${characterScale * 95 * hero.scale}vw`,
+              // Scale the character relative to the ball, but boost on mobile since camera sits further back
+              width: `${characterScale * (isMobileViewport ? 120 : 95) * hero.scale}vh`,
+              maxWidth: `${characterScale * (isMobileViewport ? 120 : 95) * hero.scale}vw`,
               filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
               opacity: currentHeroIndex === index && !isTransitioning ? 0.3 : 0,
             }}
