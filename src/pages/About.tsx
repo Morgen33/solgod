@@ -343,7 +343,7 @@ const About = () => {
               Seeking to expand the reach of the Sol Core, CreatorX used his divine energy to rip a hole through space-time, 
               discovering a planet long forgotten—a world of desolation and ruin. There, he found ten mysterious creature types 
               living in constant, violent chaos. Rather than conquering them, the SolGods united them. They channeled their 
-              elemental powers to revive the planet, building a shimmering metropolis: <span className="text-blue-light font-bold">SolCity</span>. 
+              elemental powers to revive the planet, building a shimmering metropolis: <Link to="/solcity" className="text-blue-light font-bold hover:underline">SolCity</Link>. 
               This city now serves as the "Workforce of the Gods," a bustling economy that generates the resources and liquidity 
               needed to fund the SolGods' further adventures across the multiverse.
             </p>
