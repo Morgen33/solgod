@@ -459,8 +459,7 @@ export default function PlasmaHero({
 
   return (
     <div 
-      className="relative w-full h-screen bg-black overflow-hidden cursor-pointer"
-      onClick={onEnter}
+      className="relative w-full h-screen bg-black overflow-hidden"
     >
       {/* Neural Network Background */}
       <NeuralNetworkCanvas className="absolute inset-0 z-0" />
