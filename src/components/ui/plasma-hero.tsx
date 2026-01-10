@@ -541,30 +541,32 @@ export default function PlasmaHero({
                 "linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0) 100%)",
             }}
           />
-          <h1 
-            className="relative font-cinzel-decorative text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider"
-            style={{
-              background: 'linear-gradient(180deg, #ffffff 0%, #70c4ff 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              filter: 'drop-shadow(0 0 20px rgba(112, 196, 255, 0.5))',
-            }}
-          >
-            {title}
-          </h1>
-          <p 
-            className="relative font-montserrat text-lg md:text-xl lg:text-2xl tracking-[0.3em] mt-2"
-            style={{
-              background: 'linear-gradient(180deg, #ffffff 0%, #70c4ff 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              filter: 'drop-shadow(0 0 10px rgba(112, 196, 255, 0.4))',
-            }}
-          >
-            {subtitle}
-          </p>
+          <div className="relative flex flex-col items-center">
+            <h1 
+              className="relative font-cinzel-decorative text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider"
+              style={{
+                background: 'linear-gradient(180deg, #ffffff 0%, #70c4ff 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                filter: 'drop-shadow(0 0 20px rgba(112, 196, 255, 0.5))',
+              }}
+            >
+              SOLGODS
+            </h1>
+            <span 
+              className="relative font-montserrat text-[0.5rem] md:text-xs lg:text-sm tracking-[0.4em] -mt-1 md:-mt-2 mr-[-2.2em] md:mr-[-2em] self-end"
+              style={{
+                background: 'linear-gradient(180deg, #ffffff 0%, #70c4ff 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                filter: 'drop-shadow(0 0 8px rgba(112, 196, 255, 0.4))',
+              }}
+            >
+              NFTS
+            </span>
+          </div>
         </div>
       </div>
 
