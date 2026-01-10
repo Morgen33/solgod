@@ -27,7 +27,7 @@ const heroImages = [
   { src: cosmicKingHero, scale: 1, offsetY: 0 },
   { src: waterDemonHero, scale: 1, offsetY: 5 },
   { src: shivaHero, scale: 1, offsetY: 0 },
-  { src: solgod1of1Hero, scale: 1.1, offsetY: 0 },
+  { src: solgod1of1Hero, scale: 1.1, offsetY: -5 },
 ];
 
 // --- CONFIGURATION ---
