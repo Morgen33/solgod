@@ -85,6 +85,26 @@ const Carousel = memo(
       (value) => `rotate3d(0, 1, 0, ${value}deg)`
     )
 
+    // Slow auto-rotation when carousel is active and not being dragged
+    useEffect(() => {
+      if (!isCarouselActive) return
+      
+      let animationId: number
+      let lastTime = performance.now()
+      
+      const animate = (currentTime: number) => {
+        const delta = currentTime - lastTime
+        lastTime = currentTime
+        // Very slow rotation: 3 degrees per second
+        rotation.set(rotation.get() + (delta / 1000) * 3)
+        animationId = requestAnimationFrame(animate)
+      }
+      
+      animationId = requestAnimationFrame(animate)
+      
+      return () => cancelAnimationFrame(animationId)
+    }, [isCarouselActive, rotation])
+
     return (
       <div
         className="flex h-full items-center justify-center"
@@ -105,17 +125,17 @@ const Carousel = memo(
           }}
           onDrag={(_, info) =>
             isCarouselActive &&
-            rotation.set(rotation.get() + info.offset.x * 0.05)
+            rotation.set(rotation.get() + info.offset.x * 0.02)
           }
           onDragEnd={(_, info) =>
             isCarouselActive &&
             controls.start({
-              rotateY: rotation.get() + info.velocity.x * 0.05,
+              rotateY: rotation.get() + info.velocity.x * 0.02,
               transition: {
                 type: "spring",
-                stiffness: 100,
-                damping: 30,
-                mass: 0.1,
+                stiffness: 60,
+                damping: 40,
+                mass: 0.2,
               },
             })
           }
