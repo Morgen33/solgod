@@ -158,9 +158,10 @@ export default function PlasmaHero({
     const isMobile = mount.clientWidth < 768;
     setIsMobileViewport(isMobile);
 
-    const mobileEndZ = 3.2; // Further back on mobile
+    // Camera distance target (responsive). Higher = smaller orb on screen.
+    const mobileEndZ = 3.8;
     const desktopEndZ = 2.4;
-    const endZ = isMobile ? mobileEndZ : desktopEndZ;
+    let endZ = isMobile ? mobileEndZ : desktopEndZ;
 
     // Scene setup
     const scene = new THREE.Scene();
@@ -441,10 +442,17 @@ export default function PlasmaHero({
     const onResize = () => {
       const w = mount.clientWidth;
       const h = mount.clientHeight;
-      setIsMobileViewport(w < 768);
+
+      const mobile = w < 768;
+      setIsMobileViewport(mobile);
+      endZ = mobile ? mobileEndZ : desktopEndZ;
+
       camera.aspect = w / h;
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
+
+      // If the intro already completed, keep the camera at the new target distance
+      if (introComplete) camera.position.z = endZ;
     };
     window.addEventListener("resize", onResize);
 
