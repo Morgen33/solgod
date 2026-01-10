@@ -511,11 +511,19 @@ export default function PlasmaHero({
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <div className="bg-black w-full py-6 md:py-8 flex flex-col items-center">
+        <div className="relative w-full pt-6 md:pt-8 flex flex-col items-center">
+          {/* subtle top fade behind the logo (doesn't block the orb) */}
+          <div
+            className="pointer-events-none absolute inset-x-0 top-0 h-40"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0) 100%)",
+            }}
+          />
           <img 
             src={solgodsTitleLogo} 
             alt="SolGods" 
-            className="h-28 md:h-40 lg:h-52 w-auto object-contain animate-[logo-pulse_3s_ease-in-out_infinite]"
+            className="relative h-28 md:h-40 lg:h-52 w-auto object-contain animate-[logo-pulse_3s_ease-in-out_infinite]"
           />
         </div>
       </div>
