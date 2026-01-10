@@ -339,9 +339,11 @@ function TeamSection({ group, featured = false }: { group: TeamGroup; featured?:
 const Team = () => {
   const founders = TEAM.filter((g) => g.role === "Founders" || g.role === "Co-Founders");
   const coreTeam = TEAM.find((g) => g.role === "Core Team");
-  const otherRoles = TEAM.filter(
-    (g) => !["Founders", "Co-Founders", "Core Team"].includes(g.role)
-  );
+  // Reorder: Security + Collab/Dev on one row, Community + Mod/Social on another
+  const otherRolesOrder = ["Security Team", "Collaboration/Development", "Community", "Moderation/Social Media"];
+  const otherRoles = otherRolesOrder
+    .map((role) => TEAM.find((g) => g.role === role))
+    .filter((g): g is TeamGroup => g !== undefined);
 
   return (
     <Layout>
