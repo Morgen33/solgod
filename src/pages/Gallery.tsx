@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
 import { ThreeDPhotoCarousel } from "@/components/ui/3d-carousel";
-import { ParallaxScrollSecond } from "@/components/ui/parallax-scroll";
+import { GsapCardCarousel } from "@/components/ui/gsap-card-carousel";
 
 // Import Community 1/1s
 import communityKmac from "@/assets/heroes/community-kmac.jpg";
@@ -191,18 +191,18 @@ const Gallery = () => {
 
       {/* SolGods Section */}
       <section className="py-12 px-4 pb-24">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto text-center mb-8">
           <h2 
-            className="text-2xl sm:text-3xl md:text-4xl font-bold font-cinzel mb-8 text-center"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold font-cinzel mb-8"
             style={{ color: "#e8e4dc" }}
           >
             Genesis SolGods
           </h2>
-          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             The foundation of the entire Solara movement
           </p>
-          <ParallaxScrollSecond images={solgods} />
         </div>
+        <GsapCardCarousel images={solgods} />
       </section>
     </Layout>
   );
