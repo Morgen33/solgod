@@ -192,6 +192,8 @@ export default function PlasmaHero({
     // Main group for rotation
     const mainGroup = new THREE.Group();
     mainGroup.scale.setScalar(introConfig.startScale); // Start small
+    // Shift ball upward on mobile so it sits just below the logo
+    mainGroup.position.y = isMobile ? 0.35 : 0;
     scene.add(mainGroup);
 
     // Light
@@ -499,7 +501,7 @@ export default function PlasmaHero({
         className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
           showCharacter ? 'opacity-100' : 'opacity-0'
         }`}
-        style={{ zIndex: 15, marginTop: isMobileViewport ? '15vh' : '12vh' }}
+        style={{ zIndex: 15, marginTop: isMobileViewport ? '0vh' : '12vh' }}
       >
         {heroImages.map((hero, index) => (
           <img 
