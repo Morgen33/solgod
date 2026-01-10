@@ -5,7 +5,7 @@ import {
   Shield, Globe, Sparkles, Cog, Users, Coins, BarChart3, Package
 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
-import { RotatingTextRoll } from "@/components/ui/text-roll";
+import { RotatingText } from "@/components/ui/rotating-text";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
@@ -71,8 +71,8 @@ const Index = () => {
             >
               Probably
             </h1>
-            <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold italic overflow-hidden" style={{ perspective: "1000px" }}>
-              <RotatingTextRoll />
+            <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold italic" style={{ perspective: "1000px" }}>
+              <RotatingText />
             </h1>
           </div>
 
