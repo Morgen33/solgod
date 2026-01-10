@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import solgodsIcon from "@/assets/solgods-icon.png";
 
 const dropdowns = [
@@ -283,39 +284,44 @@ export function Header() {
                 About
               </Link>
 
-              {/* Community Section */}
-              <div className="px-4 py-2 text-xs font-semibold text-white/40 uppercase tracking-wider mt-2">
-                Community
-              </div>
-              {dropdowns[0].items.map((item) => (
-                item.external ? (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setMobileOpen(false);
-                      window.open(item.href, '_blank', 'noopener,noreferrer,width=1200,height=800');
-                    }}
-                    className="px-6 py-3 text-sm font-medium text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors cursor-pointer"
-                  >
-                    {item.label}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.href}
-                    to={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    className={`px-6 py-3 text-sm font-medium rounded-lg transition-colors ${
-                      location.pathname === item.href
-                        ? "text-[#01b2ff] bg-[#01b2ff]/10"
-                        : "text-white/70 hover:text-white hover:bg-white/5"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                )
-              ))}
+              {/* Community Section - Collapsible */}
+              <Collapsible defaultOpen={false} className="mt-2">
+                <CollapsibleTrigger className="w-full px-4 py-3 flex items-center justify-between text-sm font-medium text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
+                  <span>Community</span>
+                  <ChevronDown size={16} className="transition-transform duration-200 [[data-state=open]>&]:rotate-180" />
+                </CollapsibleTrigger>
+                <CollapsibleContent className="pl-4">
+                  {dropdowns[0].items.map((item) => (
+                    item.external ? (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setMobileOpen(false);
+                          window.open(item.href, '_blank', 'noopener,noreferrer,width=1200,height=800');
+                        }}
+                        className="block px-4 py-3 text-sm font-medium text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors cursor-pointer"
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        key={item.href}
+                        to={item.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={`block px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                          location.pathname === item.href
+                            ? "text-[#01b2ff] bg-[#01b2ff]/10"
+                            : "text-white/70 hover:text-white hover:bg-white/5"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    )
+                  ))}
+                </CollapsibleContent>
+              </Collapsible>
 
               <Link
                 to="/gallery"
