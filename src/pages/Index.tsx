@@ -1,8 +1,8 @@
 import { Layout } from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { 
-  ArrowRight, Twitter, Layers, Gift, TrendingUp, 
-  Shield, Globe, Sparkles, Cog, Users, Coins, BarChart3, Package
+  ArrowRight, Twitter, TrendingUp, 
+  Shield, Globe, Cog, Users, Coins
 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import VaporizeTextCycle from "@/components/ui/vaporize-text-cycle";
@@ -16,26 +16,6 @@ const SectionIcon = () => (
   </div>
 );
 
-const quickLinks = [
-  {
-    label: "X/Twitter",
-    href: "https://x.com/SOLGodsNFTs",
-    icon: Twitter,
-    description: "Follow for updates & alpha"
-  },
-  {
-    label: "Dexscreener",
-    href: "https://dexscreener.com/solana/bomtmymoe7efgu2rytqjjg1mjsub6wjpqw13jpivjgkp",
-    icon: BarChart3,
-    description: "View token on Dexscreener"
-  },
-  {
-    label: "Stake",
-    href: "https://sgstake.fluxinc.io/",
-    icon: Layers,
-    description: "Earn rewards by staking"
-  }
-];
 
 const Index = () => {
   return (
@@ -96,7 +76,7 @@ const Index = () => {
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
               Buy SolGods
               <ArrowRight size={20} />
@@ -108,44 +88,14 @@ const Index = () => {
             >
               Join Discord
             </ShinyButton>
-          </div>
-
-          {/* Quick Links */}
-          <div className="card-glow rounded-2xl p-6 sm:p-8">
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:gap-6">
-              {quickLinks.map((link, index) => {
-                const Icon = link.icon;
-                return (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-xl bg-secondary/30 border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group"
-                  >
-                    <div 
-                      className="p-2 rounded-lg transition-colors flex-shrink-0"
-                      style={{ 
-                        backgroundColor: "rgba(1, 178, 255, 0.15)",
-                        color: "#01b2ff",
-                        filter: "drop-shadow(0 0 8px rgba(1, 178, 255, 0.6))"
-                      }}
-                    >
-                      <Icon size={20} />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <h4 
-                        className="font-semibold text-sm"
-                        style={{ color: "#8ab4f8" }}
-                      >
-                        {link.label}
-                      </h4>
-                      <p className="text-xs text-muted-foreground hidden sm:block">{link.description}</p>
-                    </div>
-                  </a>
-                );
-              })}
-            </div>
+            <ShinyButton
+              onClick={() => {
+                window.open("https://x.com/solgodsnfts", "_blank", "noopener,noreferrer");
+              }}
+            >
+              <Twitter size={20} />
+              Follow Us
+            </ShinyButton>
           </div>
         </div>
       </section>
