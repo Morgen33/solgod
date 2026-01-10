@@ -18,7 +18,7 @@ import shivaHero from "@/assets/heroes/shiva.png";
 import solgod1of1Hero from "@/assets/heroes/solgod-1of1.png";
 
 const heroImages = [
-  { src: athenaHero, scale: 1, offsetY: 0 },
+  { src: athenaHero, scale: 1.15, offsetY: 0 },
   { src: crimsonHero, scale: 1, offsetY: 0 },
   { src: skullKingHero, scale: 1, offsetY: 0 },
   { src: darkQueenHero, scale: 1, offsetY: 0 },
