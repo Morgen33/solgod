@@ -56,12 +56,12 @@ const Index = () => {
           />
           
           {/* Vaporize Text Hero */}
-          <div className="mb-6 h-24 sm:h-32 md:h-40">
+          <div className="mb-6 h-32 sm:h-48 md:h-64 lg:h-80">
             <VaporizeTextCycle
               texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
               font={{
                 fontFamily: "Cinzel, serif",
-                fontSize: "clamp(48px, 8vw, 96px)",
+                fontSize: "clamp(64px, 12vw, 180px)",
                 fontWeight: 700,
               }}
               color="rgb(168, 216, 255)"
