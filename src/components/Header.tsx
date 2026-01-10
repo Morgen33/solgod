@@ -284,6 +284,30 @@ export function Header() {
                 About
               </Link>
 
+              <Link
+                to="/gallery"
+                onClick={() => setMobileOpen(false)}
+                className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                  location.pathname === "/gallery"
+                    ? "text-[#01b2ff] bg-[#01b2ff]/10"
+                    : "text-white/70 hover:text-white hover:bg-white/5"
+                }`}
+              >
+                Gallery
+              </Link>
+
+              <Link
+                to="/team"
+                onClick={() => setMobileOpen(false)}
+                className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                  location.pathname === "/team"
+                    ? "text-[#01b2ff] bg-[#01b2ff]/10"
+                    : "text-white/70 hover:text-white hover:bg-white/5"
+                }`}
+              >
+                Team
+              </Link>
+
               {/* Community Section - Collapsible */}
               <Collapsible defaultOpen={false} className="mt-2">
                 <CollapsibleTrigger className="w-full px-4 py-3 flex items-center justify-between text-sm font-medium text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
@@ -322,30 +346,6 @@ export function Header() {
                   ))}
                 </CollapsibleContent>
               </Collapsible>
-
-              <Link
-                to="/gallery"
-                onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
-                  location.pathname === "/gallery"
-                    ? "text-[#01b2ff] bg-[#01b2ff]/10"
-                    : "text-white/70 hover:text-white hover:bg-white/5"
-                }`}
-              >
-                Gallery
-              </Link>
-
-              <Link
-                to="/team"
-                onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
-                  location.pathname === "/team"
-                    ? "text-[#01b2ff] bg-[#01b2ff]/10"
-                    : "text-white/70 hover:text-white hover:bg-white/5"
-                }`}
-              >
-                Team
-              </Link>
 
             </div>
           </nav>
