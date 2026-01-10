@@ -461,7 +461,7 @@ const Team = () => {
           <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent mb-12" />
 
           {/* Other Roles Grid */}
-          <div className="flex flex-col items-center gap-8 md:grid md:grid-cols-2 md:gap-x-12">
+          <div className="flex flex-col items-center gap-8 md:grid md:grid-cols-2 md:gap-x-12 md:items-start">
             {otherRoles.map((g, index) => (
               <div key={g.role} className="w-full">
                 <TeamSection group={g} />
