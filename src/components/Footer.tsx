@@ -78,8 +78,13 @@ export function Footer() {
                   <li key={link.label}>
                     {isDiscord ? (
                       <button
-                        onClick={() => window.open(link.href, "_blank", "noopener,noreferrer")}
-                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          window.open(link.href, "_blank", "noopener,noreferrer");
+                        }}
+                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer bg-transparent border-none p-0 text-left"
                       >
                         <Icon size={16} />
                         {link.label}
