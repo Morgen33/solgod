@@ -1,8 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { 
-  ArrowRight, Twitter, TrendingUp, 
-  Shield, Globe, Cog, Users, Coins
+  ArrowRight, Twitter, Shield, Globe, Cog
 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import VaporizeTextCycle from "@/components/ui/vaporize-text-cycle";
@@ -10,11 +9,6 @@ import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 
-const SectionIcon = () => (
-  <div className="flex justify-center mb-6">
-    <img src={solgodsIcon} alt="SolGods" className="h-24 sm:h-28 w-auto opacity-80" />
-  </div>
-);
 
 
 const Index = () => {
@@ -100,55 +94,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why SolGods Section */}
-      <section className="pt-12 pb-24 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <SectionIcon />
-            <h2 
-              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
-            >
-              WHY SOLGODS
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              A Value-First Ecosystem
-            </p>
-          </div>
-
-          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-            SolGods is a Value-First Ecosystem where digital identity meets a high-performance growth engine. 
-            We've moved beyond static art to create a system that prioritizes community outcomes and long-term sustainability.
-          </p>
-
-          {/* Core Values Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <ValueCard 
-              icon={<TrendingUp size={32} />}
-              title="Financial Empowerment"
-              description="We launched by delivering structured trading frameworks, memecoin rotations, and X monetization systems before the first NFT ever hit the blockchain."
-            />
-            <ValueCard 
-              icon={<Shield size={32} />}
-              title="A Fund for the People"
-              description="We bridge the gap between high-level finance and Web3 culture. By holding a SolGod, you aren't just holding art; you are holding a key to an actively managed treasury spanning Forex, Indices, and Crypto."
-            />
-            <ValueCard 
-              icon={<Users size={32} />}
-              title="The Power of The Community"
-              description="Our community isn't just a Discord server; it's a high-signal intelligence hub. From a 10-person group chat to a 1,900+ member alpha engine, we leverage collective knowledge to turn small stakes into real wins."
-            />
-            <ValueCard 
-              icon={<Coins size={32} />}
-              title="Anti-Dilution & Growth"
-              description="With 50% of mint capital immediately deployed into revenue-generating strategies, the project is designed to be self-sustaining, fueling constant rewards, raffles, and ecosystem buy-backs."
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* The Three Pillars */}
-      <section className="-mt-8 pt-0 pb-12 sm:mt-0 sm:py-24 px-4 relative overflow-hidden">
+      {/* Why SolGods Section - Combined with Three Pillars */}
+      <section className="pt-12 pb-24 px-4 relative overflow-hidden">
         <div 
           className="absolute inset-0 opacity-10"
           style={{
@@ -156,48 +103,81 @@ const Index = () => {
           }}
         />
         <div className="max-w-5xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <SectionIcon />
+          <div className="text-center mb-12">
             <h2 
-              className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
+              className="text-4xl sm:text-5xl font-bold mb-6"
+              style={{ fontFamily: "'Cinzel', serif", color: "#e8e4dc" }}
             >
-              THE THREE PILLARS
+              WHY SOLGODS
             </h2>
-            <p className="text-xl text-muted-foreground">What Sets Us Apart</p>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              SolGods is a Value-First Ecosystem where digital identity meets a high-performance growth engine. 
+              We've moved beyond static art to create a system that prioritizes community outcomes and long-term sustainability.
+            </p>
           </div>
 
           {/* Pillar 1: The Sol Core Treasury */}
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-8">
             <div className="flex flex-col">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 rounded-xl bg-blue/20">
-                  <Cog className="text-blue-light" size={32} />
+                <div 
+                  className="p-3 rounded-full"
+                  style={{ 
+                    backgroundColor: "rgba(1, 178, 255, 0.15)",
+                    border: "1px solid rgba(1, 178, 255, 0.3)"
+                  }}
+                >
+                  <Cog style={{ color: "#01b2ff" }} size={28} />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold">1. The Sol Core Treasury</h3>
-                  <p className="text-muted-foreground">Your entry point to a sophisticated, active treasury</p>
-                </div>
+                <h3 
+                  className="text-xl sm:text-2xl font-bold"
+                  style={{ 
+                    color: "#01b2ff",
+                    fontFamily: "'Cinzel', serif"
+                  }}
+                >
+                  1. The Sol Core Treasury
+                </h3>
               </div>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-8">
                 Your SolGod is more than a profile picture; it is your entry point to a sophisticated, active treasury. 
                 We put the project's resources to work to ensure the ecosystem remains self-sustaining and constantly evolving.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="p-4 rounded-xl bg-secondary/30">
-                  <h4 className="font-bold text-foreground mb-2">Active Ecosystem Management</h4>
+                <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
+                  <h4 
+                    className="font-bold mb-3 tracking-wide"
+                    style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+                  >
+                    Active Ecosystem Management
+                  </h4>
                   <p className="text-sm text-muted-foreground">We utilize internal strategies to grow our holdings and generate consistent, tangible value for the project.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-secondary/30">
-                  <h4 className="font-bold text-foreground mb-2">Engagement-Led Rewards</h4>
-                  <p className="text-sm text-muted-foreground">Through our Discord Chat-to-Earn systems and Raid-to-Reward bounties, active members are directly incentivized.</p>
+                <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
+                  <h4 
+                    className="font-bold mb-3 tracking-wide"
+                    style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+                  >
+                    Engagement-Led Rewards
+                  </h4>
+                  <p className="text-sm text-muted-foreground">We believe in rewarding those who build the culture. Through our Discord Chat-to-Earn systems and Raid-to-Reward bounties, active members are directly incentivized for their contributions.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-secondary/30">
-                  <h4 className="font-bold text-foreground mb-2">Exclusive Holder Perks</h4>
+                <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
+                  <h4 
+                    className="font-bold mb-3 tracking-wide"
+                    style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+                  >
+                    Exclusive Holder Perks
+                  </h4>
                   <p className="text-sm text-muted-foreground">Holders gain access to exclusive giveaways, high-signal alpha calls, and specialized perks reserved strictly for SolGods holders.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-secondary/30">
-                  <h4 className="font-bold text-foreground mb-2">Sustainable Scaling</h4>
+                <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
+                  <h4 
+                    className="font-bold mb-3 tracking-wide"
+                    style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+                  >
+                    Sustainable Scaling
+                  </h4>
                   <p className="text-sm text-muted-foreground">By reinvesting a portion of our ecosystem gains, we constantly increase the treasury's strength.</p>
                 </div>
               </div>
@@ -208,24 +188,45 @@ const Index = () => {
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-8">
             <div className="flex flex-col">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 rounded-xl bg-blue/20">
-                  <Shield className="text-blue-light" size={32} />
+                <div 
+                  className="p-3 rounded-full"
+                  style={{ 
+                    backgroundColor: "rgba(1, 178, 255, 0.15)",
+                    border: "1px solid rgba(1, 178, 255, 0.3)"
+                  }}
+                >
+                  <Shield style={{ color: "#01b2ff" }} size={28} />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold">2. A Foundation of Integrity</h3>
-                  <p className="text-muted-foreground">Deliver value before asking for a single cent</p>
-                </div>
+                <h3 
+                  className="text-xl sm:text-2xl font-bold"
+                  style={{ 
+                    color: "#01b2ff",
+                    fontFamily: "'Cinzel', serif"
+                  }}
+                >
+                  2. A Foundation of Integrity
+                </h3>
               </div>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-8">
                 We built our reputation on a simple principle: Deliver value before asking for a single cent.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="p-4 rounded-xl bg-secondary/30">
-                  <h4 className="font-bold text-foreground mb-2">Results First</h4>
+                <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
+                  <h4 
+                    className="font-bold mb-3 tracking-wide"
+                    style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+                  >
+                    Results First
+                  </h4>
                   <p className="text-sm text-muted-foreground">Our community thrived long before the mint. We established ourselves by sharing growth frameworks and strategies that helped our members level up.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-secondary/30">
-                  <h4 className="font-bold text-foreground mb-2">Proven Performance</h4>
+                <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
+                  <h4 
+                    className="font-bold mb-3 tracking-wide"
+                    style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+                  >
+                    Proven Performance
+                  </h4>
                   <p className="text-sm text-muted-foreground">This "value-first" approach led to a 20x increase from our initial launch price, establishing the rock-solid foundation for our treasury.</p>
                 </div>
               </div>
@@ -236,19 +237,35 @@ const Index = () => {
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
             <div className="flex flex-col">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 rounded-xl bg-blue/20">
-                  <Globe className="text-blue-light" size={32} />
+                <div 
+                  className="p-3 rounded-full"
+                  style={{ 
+                    backgroundColor: "rgba(1, 178, 255, 0.15)",
+                    border: "1px solid rgba(1, 178, 255, 0.3)"
+                  }}
+                >
+                  <Globe style={{ color: "#01b2ff" }} size={28} />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold">3. A Living, Breathing Economy</h3>
-                  <p className="text-muted-foreground">A thriving, bustling ecosystem</p>
-                </div>
+                <h3 
+                  className="text-xl sm:text-2xl font-bold"
+                  style={{ 
+                    color: "#01b2ff",
+                    fontFamily: "'Cinzel', serif"
+                  }}
+                >
+                  3. A Living, Breathing Economy
+                </h3>
               </div>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-8">
                 From the ancient origins of Solara to our expansion into new frontiers, the SolGods ecosystem is a thriving, bustling economy.
               </p>
-              <div className="p-4 rounded-xl bg-secondary/30">
-                <h4 className="font-bold text-foreground mb-2">Collaborative Growth</h4>
+              <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
+                <h4 
+                  className="font-bold mb-3 tracking-wide"
+                  style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+                >
+                  Collaborative Growth
+                </h4>
                 <p className="text-sm text-muted-foreground">We don't exist in a vacuum. We actively collaborate across the Solana network, integrating assets and building a cross-ecosystem engine designed to evolve, not stagnate.</p>
               </div>
             </div>
@@ -260,7 +277,7 @@ const Index = () => {
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <SectionIcon />
+            <img src={solgodsIcon} alt="SolGods" className="h-24 sm:h-28 w-auto opacity-80 mx-auto mb-6" />
             <h2 
               className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8)" }}
@@ -327,17 +344,5 @@ const Index = () => {
     </Layout>
   );
 };
-
-function ValueCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
-  return (
-    <GlowCard glowColor="blue" customSize className="w-full h-auto">
-      <div className="flex flex-col">
-        <div className="mb-4" style={{ color: "#01b2ff" }}>{icon}</div>
-        <h3 className="text-xl font-bold mb-3">{title}</h3>
-        <p className="text-muted-foreground">{description}</p>
-      </div>
-    </GlowCard>
-  );
-}
 
 export default Index;
