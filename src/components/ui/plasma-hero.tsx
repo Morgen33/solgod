@@ -543,14 +543,13 @@ export default function PlasmaHero({
           />
           <div className="relative flex flex-col items-center">
             <h1 
-              className="relative font-cinzel-decorative text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider pb-2"
+              className="relative font-cinzel-decorative text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider"
               style={{
                 background: 'linear-gradient(180deg, #ffffff 0%, #70c4ff 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 filter: 'drop-shadow(0 0 20px rgba(112, 196, 255, 0.5))',
-                lineHeight: '1.1',
               }}
             >
               SOLGODS
