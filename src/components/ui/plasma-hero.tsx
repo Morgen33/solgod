@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import NeuralNetworkCanvas from "./neural-network-canvas";
-import { ShinyButton } from "./shiny-button";
+import solgodsTitleLogo from "@/assets/solgods-title-logo.png";
 import athenaHero from "@/assets/heroes/athena.png";
 import crimsonHero from "@/assets/heroes/crimson.png";
 import skullKingHero from "@/assets/heroes/skull-king.png";
@@ -458,7 +458,10 @@ export default function PlasmaHero({
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-black overflow-hidden">
+    <div 
+      className="relative w-full h-screen bg-black overflow-hidden cursor-pointer"
+      onClick={onEnter}
+    >
       {/* Neural Network Background */}
       <NeuralNetworkCanvas className="absolute inset-0 z-0" />
       
@@ -502,31 +505,21 @@ export default function PlasmaHero({
       {/* Readability overlay */}
       <div className="absolute inset-0 bg-black/25 pointer-events-none z-5" />
 
-      {/* Title and Enter button above the ball */}
+      {/* Logo above the ball */}
       <div 
         className={`absolute top-0 left-0 right-0 flex flex-col items-center justify-center z-20 transition-opacity duration-1000 ${
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <div className="bg-black w-full py-8 flex flex-col items-center">
-          <h1 
-            className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold tracking-[0.15em] mb-6"
+        <div className="bg-black w-full py-6 md:py-8 flex flex-col items-center">
+          <img 
+            src={solgodsTitleLogo} 
+            alt="SolGods" 
+            className="h-16 md:h-24 lg:h-28 w-auto object-contain"
             style={{
-              background: 'linear-gradient(135deg, #ffffff 0%, #a5d8ff 40%, #70c4ff 70%, #38bdf8 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
               filter: 'drop-shadow(0 0 20px rgba(112, 196, 255, 0.6)) drop-shadow(0 0 40px rgba(56, 189, 248, 0.4))',
             }}
-          >
-            SOLGODS NFTS
-          </h1>
-          <ShinyButton
-            onClick={onEnter}
-            className="font-cinzel text-xl md:text-2xl font-semibold tracking-[0.1em]"
-          >
-            Enter
-          </ShinyButton>
+          />
         </div>
       </div>
     </div>
