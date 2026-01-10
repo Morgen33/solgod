@@ -5,7 +5,7 @@ import {
   Shield, Globe, Sparkles, Cog, Users, Coins, BarChart3, Package
 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
-import { RotatingText } from "@/components/ui/rotating-text";
+import VaporizeTextCycle from "@/components/ui/vaporize-text-cycle";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
@@ -55,25 +55,25 @@ const Index = () => {
             className="h-32 sm:h-40 w-auto mx-auto mb-8"
           />
           
-          {/* Rotating Text Hero */}
-          <div className="mb-6">
-            <h1 
-              className="text-4xl sm:text-6xl md:text-7xl font-bold italic mb-2"
-              style={{ 
-                backgroundImage: "linear-gradient(90deg, #fffef5, #fff9e6, #fff5cc, #fff9e6, #fffef5)",
-                backgroundSize: "200% 100%",
-                animation: "gradient-flow 3s ease infinite",
-                backgroundClip: "text",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                filter: "drop-shadow(0 0 20px rgba(255, 250, 220, 0.7)) drop-shadow(0 0 40px rgba(255, 245, 200, 0.5))"
+          {/* Vaporize Text Hero */}
+          <div className="mb-6 h-24 sm:h-32 md:h-40">
+            <VaporizeTextCycle
+              texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
+              font={{
+                fontFamily: "Cinzel, serif",
+                fontSize: "clamp(48px, 8vw, 96px)",
+                fontWeight: 700,
               }}
-            >
-              Probably
-            </h1>
-            <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold italic" style={{ perspective: "1000px" }}>
-              <RotatingText />
-            </h1>
+              color="rgb(168, 216, 255)"
+              spread={5}
+              density={5}
+              animation={{
+                vaporizeDuration: 2,
+                fadeInDuration: 1,
+                waitDuration: 1.5,
+              }}
+              alignment="center"
+            />
           </div>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
