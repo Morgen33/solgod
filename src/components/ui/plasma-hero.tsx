@@ -1,72 +1,59 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import NeuralNetworkCanvas from "./neural-network-canvas";
-import solgodLogo from "@/assets/solgods-main-logo.png";
-
-// Hero images with individual scale factors
-import bastet from "@/assets/heroes/bastet-new.png";
-import crimson from "@/assets/heroes/crimson.png";
-import cyborg from "@/assets/heroes/cyborg.png";
-import darkQueen from "@/assets/heroes/dark-queen.png";
-import demon from "@/assets/heroes/demon.png";
-import frost from "@/assets/heroes/frost.png";
-import gothic from "@/assets/heroes/gothic.png";
-import oni from "@/assets/heroes/oni.png";
-import shiva from "@/assets/heroes/shiva.png";
-import skullKing from "@/assets/heroes/skull-king.png";
-import waterDemon from "@/assets/heroes/water-demon.png";
-import cosmicKing from "@/assets/heroes/cosmic-king.png";
-import cosmic from "@/assets/heroes/cosmic.png";
-import marcus from "@/assets/heroes/marcus.png";
-import antler from "@/assets/heroes/antler.png";
-import athena from "@/assets/heroes/athena.png";
-import solgod1of1 from "@/assets/heroes/solgod-1of1.png";
+import solgodsTitleLogo from "@/assets/solgods-title-logo.png";
+import athenaHero from "@/assets/heroes/athena.png";
+import crimsonHero from "@/assets/heroes/crimson.png";
+import skullKingHero from "@/assets/heroes/skull-king.png";
+import darkQueenHero from "@/assets/heroes/dark-queen.png";
+import bastetNewHero from "@/assets/heroes/bastet-new.png";
+import oniHero from "@/assets/heroes/oni.png";
+import cosmicKingHero from "@/assets/heroes/cosmic-king.png";
+import waterDemonHero from "@/assets/heroes/water-demon.png";
+import shivaHero from "@/assets/heroes/shiva.png";
+import solgod1of1Hero from "@/assets/heroes/solgod-1of1.png";
 
 const heroImages = [
-  { src: bastet, scale: 1.0 },
-  { src: crimson, scale: 1.0 },
-  { src: cyborg, scale: 1.0 },
-  { src: darkQueen, scale: 1.0 },
-  { src: demon, scale: 1.0 },
-  { src: frost, scale: 1.0 },
-  { src: gothic, scale: 1.0 },
-  { src: oni, scale: 1.0 },
-  { src: shiva, scale: 1.0 },
-  { src: skullKing, scale: 1.0 },
-  { src: waterDemon, scale: 1.0 },
-  { src: cosmicKing, scale: 1.0 },
-  { src: cosmic, scale: 1.0 },
-  { src: marcus, scale: 1.0 },
-  { src: antler, scale: 1.0 },
-  { src: athena, scale: 1.0 },
-  { src: solgod1of1, scale: 0.85 },
+  { src: athenaHero, scale: 1 },
+  { src: crimsonHero, scale: 1 },
+  { src: skullKingHero, scale: 1 },
+  { src: darkQueenHero, scale: 1 },
+  { src: bastetNewHero, scale: 1 },
+  { src: oniHero, scale: 1 },
+  { src: cosmicKingHero, scale: 1 },
+  { src: waterDemonHero, scale: 0.7 },
+  { src: shivaHero, scale: 1 },
+  { src: solgod1of1Hero, scale: 0.85 },
 ];
 
-// Configuration parameters
+// --- CONFIGURATION ---
 const params = {
-  timeScale: 0.15,
-  rotationSpeedX: 0.03,
-  plasmaScale: 2.8,
-  plasmaBrightness: 1.4,
-  voidThreshold: 0.42,
-  colorDeep: new THREE.Color(0x1a0a2e),
-  colorMid: new THREE.Color(0x4a1c6b),
-  colorBright: new THREE.Color(0xff6b35),
-  shellColor: new THREE.Color(0x8b5cf6),
-  shellOpacity: 0.15,
+  timeScale: 0.78,
+  rotationSpeedX: 0.002,
+  rotationSpeedY: 0.005,
+  plasmaScale: 0.1404,
+  plasmaBrightness: 1.31,
+  voidThreshold: 0.072,
+  colorDeep: 0x001433,
+  colorMid: 0x0084ff,
+  colorBright: 0x00ffe1,
+  shellColor: 0x0066ff,
+  shellOpacity: 0.41,
 };
 
-// Shared GLSL noise functions
-const noiseGLSL = `
+// --- GLSL NOISE FUNCTIONS ---
+const noiseFunctions = `
   vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
   vec4 mod289(vec4 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
   vec4 permute(vec4 x) { return mod289(((x*34.0)+1.0)*x); }
   vec4 taylorInvSqrt(vec4 r) { return 1.79284291400159 - 0.85373472095314 * r; }
-
   float snoise(vec3 v) {
     const vec2 C = vec2(1.0/6.0, 1.0/3.0);
     const vec4 D = vec4(0.0, 0.5, 1.0, 2.0);
-    vec3 i  = floor(v + dot(v, C.yyy));
+    vec3 i = floor(v + dot(v, C.yyy));
     vec3 x0 = v - i + dot(i, C.xxx);
     vec3 g = step(x0.yzx, x0.xyz);
     vec3 l = 1.0 - g;
@@ -77,140 +64,140 @@ const noiseGLSL = `
     vec3 x3 = x0 - D.yyy;
     i = mod289(i);
     vec4 p = permute(permute(permute(
-              i.z + vec4(0.0, i1.z, i2.z, 1.0))
-            + i.y + vec4(0.0, i1.y, i2.y, 1.0))
-            + i.x + vec4(0.0, i1.x, i2.x, 1.0));
+      i.z + vec4(0.0, i1.z, i2.z, 1.0))
+      + i.y + vec4(0.0, i1.y, i2.y, 1.0))
+      + i.x + vec4(0.0, i1.x, i2.x, 1.0));
     float n_ = 0.142857142857;
     vec3 ns = n_ * D.wyz - D.xzx;
     vec4 j = p - 49.0 * floor(p * ns.z * ns.z);
     vec4 x_ = floor(j * ns.z);
     vec4 y_ = floor(j - 7.0 * x_);
-    vec4 x = x_ *ns.x + ns.yyyy;
-    vec4 y = y_ *ns.x + ns.yyyy;
+    vec4 x = x_ * ns.x + ns.yyyy;
+    vec4 y = y_ * ns.x + ns.yyyy;
     vec4 h = 1.0 - abs(x) - abs(y);
     vec4 b0 = vec4(x.xy, y.xy);
     vec4 b1 = vec4(x.zw, y.zw);
-    vec4 s0 = floor(b0)*2.0 + 1.0;
-    vec4 s1 = floor(b1)*2.0 + 1.0;
+    vec4 s0 = floor(b0) * 2.0 + 1.0;
+    vec4 s1 = floor(b1) * 2.0 + 1.0;
     vec4 sh = -step(h, vec4(0.0));
-    vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy;
-    vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww;
+    vec4 a0 = b0.xzyw + s0.xzyw * sh.xxyy;
+    vec4 a1 = b1.xzyw + s1.xzyw * sh.zzww;
     vec3 p0 = vec3(a0.xy, h.x);
     vec3 p1 = vec3(a0.zw, h.y);
     vec3 p2 = vec3(a1.xy, h.z);
     vec3 p3 = vec3(a1.zw, h.w);
     vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2,p2), dot(p3,p3)));
-    p0 *= norm.x;
-    p1 *= norm.y;
-    p2 *= norm.z;
-    p3 *= norm.w;
+    p0 *= norm.x; p1 *= norm.y; p2 *= norm.z; p3 *= norm.w;
     vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
     m = m * m;
     return 42.0 * dot(m*m, vec4(dot(p0,x0), dot(p1,x1), dot(p2,x2), dot(p3,x3)));
   }
-
   float fbm(vec3 p) {
-    float value = 0.0;
+    float total = 0.0;
     float amplitude = 0.5;
-    for (int i = 0; i < 5; i++) {
-      value += amplitude * snoise(p);
-      p *= 2.0;
+    float frequency = 1.0;
+    for (int i = 0; i < 3; i++) {
+      total += snoise(p * frequency) * amplitude;
       amplitude *= 0.5;
+      frequency *= 2.0;
     }
-    return value;
+    return total;
   }
 `;
 
-// Intro animation configuration
+// Intro animation config
 const introConfig = {
   duration: 2.5,
-  startZ: 8,
-  endZ: 3.2,
-  startScale: 0.3,
+  startZ: 12,
+  endZ: 2.4,
+  startScale: 0.2,
   endScale: 1.0,
+  easeOutCubic: (t: number) => 1 - Math.pow(1 - t, 3),
 };
 
-interface PlasmaHeroProps {
+export default function PlasmaHero({
+  title = "SOLGODS",
+  subtitle = "NFTS",
+  onEnter,
+}: {
   title?: string;
   subtitle?: string;
   onEnter?: () => void;
-}
-
-export default function PlasmaHero({ 
-  title = "SOLGODS", 
-  subtitle = "NFTS",
-  onEnter 
-}: PlasmaHeroProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const sceneRef = useRef<{
-    scene: THREE.Scene;
-    camera: THREE.PerspectiveCamera;
-    renderer: THREE.WebGLRenderer;
-    shell: THREE.Mesh;
-    plasma: THREE.Mesh;
-    particles: THREE.Points;
-    animationId: number;
-    clock: THREE.Clock;
-    introProgress: number;
-  } | null>(null);
-
+}) {
+  const mountRef = useRef<HTMLDivElement | null>(null);
   const [showContent, setShowContent] = useState(false);
   const [showCharacter, setShowCharacter] = useState(false);
+  const [characterScale, setCharacterScale] = useState(1);
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
+  const [ballTransform, setBallTransform] = useState({ scale: 1, screenX: 0, screenY: 0 });
 
-  // Cycle through hero images
+  // Cycle through heroes after character is shown
   useEffect(() => {
+    if (!showCharacter) return;
+
+    const fadeTime = 1500; // 1.5 second fade transition
+
     const interval = setInterval(() => {
       setIsTransitioning(true);
+
       setTimeout(() => {
         setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length);
         setIsTransitioning(false);
-      }, 300);
-    }, 1500);
+      }, fadeTime);
+    }, fadeTime); // No delay - transitions happen back to back
+
     return () => clearInterval(interval);
-  }, []);
+  }, [showCharacter]);
 
   useEffect(() => {
-    if (!canvasRef.current || !containerRef.current) return;
+    const mount = mountRef.current;
+    if (!mount) return;
 
-    const container = containerRef.current;
-    const canvas = canvasRef.current;
+    // Determine if mobile (narrow viewport) - zoom out more to fit ball
+    const isMobile = mount.clientWidth < 768;
+    setIsMobileViewport(isMobile);
+
+    // Camera distance target (responsive). Higher = smaller orb on screen.
+    const mobileEndZ = 3.8;
+    const desktopEndZ = 2.4;
+    let endZ = isMobile ? mobileEndZ : desktopEndZ;
 
     // Scene setup
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      container.clientWidth / container.clientHeight,
-      0.1,
-      1000
-    );
+    scene.background = new THREE.Color(0x000000);
+
+    const camera = new THREE.PerspectiveCamera(75, mount.clientWidth / mount.clientHeight, 0.1, 100);
+    // Start camera far back for intro animation
     camera.position.z = introConfig.startZ;
 
-    const renderer = new THREE.WebGLRenderer({
-      canvas,
-      antialias: true,
-      alpha: true,
-    });
-    renderer.setSize(container.clientWidth, container.clientHeight);
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(mount.clientWidth, mount.clientHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setClearColor(0x000000, 0);
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 0.9;
+    mount.appendChild(renderer.domElement);
 
-    // Mobile detection
-    const isMobile = window.innerWidth < 768;
-    const ballYOffset = isMobile ? 0.35 : 0;
-    const mobileEndZ = isMobile ? 3.8 : introConfig.endZ;
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.enablePan = false;
+    controls.minDistance = 1.5;
+    controls.maxDistance = 20;
 
-    // Shell (outer glow sphere)
-    const shellGeometry = new THREE.SphereGeometry(1.15, 64, 64);
-    const shellMaterial = new THREE.ShaderMaterial({
-      transparent: true,
-      side: THREE.FrontSide,
-      uniforms: {
-        uColor: { value: params.shellColor },
-        uOpacity: { value: params.shellOpacity },
-      },
+    // Main group for rotation
+    const mainGroup = new THREE.Group();
+    mainGroup.scale.setScalar(introConfig.startScale); // Start small
+    // Shift ball upward on mobile so it sits just below the logo
+    mainGroup.position.y = isMobile ? 0.35 : 0;
+    scene.add(mainGroup);
+
+    // Light
+    const pointLight = new THREE.PointLight(0x0088ff, 2.0, 10);
+    mainGroup.add(pointLight);
+
+    // Shell shaders
+    const shellShader = {
       vertexShader: `
         varying vec3 vNormal;
         varying vec3 vViewPosition;
@@ -222,289 +209,357 @@ export default function PlasmaHero({
         }
       `,
       fragmentShader: `
-        uniform vec3 uColor;
-        uniform float uOpacity;
         varying vec3 vNormal;
         varying vec3 vViewPosition;
+        uniform vec3 uColor;
+        uniform float uOpacity;
         void main() {
-          vec3 viewDir = normalize(vViewPosition);
-          float fresnel = pow(1.0 - abs(dot(viewDir, vNormal)), 3.0);
+          float fresnel = pow(1.0 - dot(normalize(vNormal), normalize(vViewPosition)), 2.5);
           gl_FragColor = vec4(uColor, fresnel * uOpacity);
         }
       `,
-    });
-    const shell = new THREE.Mesh(shellGeometry, shellMaterial);
-    shell.position.y = ballYOffset;
-    shell.scale.setScalar(introConfig.startScale);
-    scene.add(shell);
+    };
 
-    // Plasma sphere
-    const plasmaGeometry = new THREE.SphereGeometry(1, 128, 128);
-    const plasmaMaterial = new THREE.ShaderMaterial({
+    // Shell geometry
+    const shellGeo = new THREE.SphereGeometry(1.0, 64, 64);
+
+    const shellBackMat = new THREE.ShaderMaterial({
+      vertexShader: shellShader.vertexShader,
+      fragmentShader: shellShader.fragmentShader,
+      uniforms: {
+        uColor: { value: new THREE.Color(0x000055) },
+        uOpacity: { value: 0.3 },
+      },
       transparent: true,
-      side: THREE.DoubleSide,
+      blending: THREE.AdditiveBlending,
+      side: THREE.BackSide,
+      depthWrite: false,
+    });
+
+    const shellFrontMat = new THREE.ShaderMaterial({
+      vertexShader: shellShader.vertexShader,
+      fragmentShader: shellShader.fragmentShader,
+      uniforms: {
+        uColor: { value: new THREE.Color(params.shellColor) },
+        uOpacity: { value: params.shellOpacity },
+      },
+      transparent: true,
+      blending: THREE.AdditiveBlending,
+      side: THREE.FrontSide,
+      depthWrite: false,
+    });
+
+    mainGroup.add(new THREE.Mesh(shellGeo, shellBackMat));
+    mainGroup.add(new THREE.Mesh(shellGeo, shellFrontMat));
+
+    // Plasma material
+    const plasmaGeo = new THREE.SphereGeometry(0.998, 128, 128);
+    const plasmaMat = new THREE.ShaderMaterial({
       uniforms: {
         uTime: { value: 0 },
-        uColorDeep: { value: params.colorDeep },
-        uColorMid: { value: params.colorMid },
-        uColorBright: { value: params.colorBright },
         uScale: { value: params.plasmaScale },
         uBrightness: { value: params.plasmaBrightness },
-        uVoidThreshold: { value: params.voidThreshold },
+        uThreshold: { value: params.voidThreshold },
+        uColorDeep: { value: new THREE.Color(params.colorDeep) },
+        uColorMid: { value: new THREE.Color(params.colorMid) },
+        uColorBright: { value: new THREE.Color(params.colorBright) },
       },
       vertexShader: `
         varying vec3 vPosition;
         varying vec3 vNormal;
-        varying vec2 vUv;
+        varying vec3 vViewPosition;
         void main() {
           vPosition = position;
           vNormal = normalize(normalMatrix * normal);
-          vUv = uv;
-          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+          vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+          vViewPosition = -mvPosition.xyz;
+          gl_Position = projectionMatrix * mvPosition;
         }
       `,
       fragmentShader: `
-        ${noiseGLSL}
         uniform float uTime;
+        uniform float uScale;
+        uniform float uBrightness;
+        uniform float uThreshold;
         uniform vec3 uColorDeep;
         uniform vec3 uColorMid;
         uniform vec3 uColorBright;
-        uniform float uScale;
-        uniform float uBrightness;
-        uniform float uVoidThreshold;
         varying vec3 vPosition;
         varying vec3 vNormal;
-        varying vec2 vUv;
-
+        varying vec3 vViewPosition;
+        ${noiseFunctions}
         void main() {
-          vec3 pos = vPosition * uScale;
-          float noise1 = fbm(pos + uTime * 0.5);
-          float noise2 = fbm(pos * 1.5 - uTime * 0.3);
-          float noise3 = fbm(pos * 0.5 + vec3(uTime * 0.2));
-          float combined = (noise1 + noise2 * 0.5 + noise3 * 0.25) / 1.75;
-          combined = combined * 0.5 + 0.5;
-          
-          vec3 color;
-          if (combined < 0.33) {
-            color = mix(uColorDeep, uColorMid, combined * 3.0);
-          } else if (combined < 0.66) {
-            color = mix(uColorMid, uColorBright, (combined - 0.33) * 3.0);
-          } else {
-            color = mix(uColorBright, vec3(1.0), (combined - 0.66) * 1.5);
-          }
-          
-          color *= uBrightness;
-          
-          float voidNoise = fbm(pos * 2.0 + uTime * 0.1);
-          float voidMask = smoothstep(uVoidThreshold - 0.1, uVoidThreshold + 0.1, voidNoise);
-          
-          float alpha = mix(0.3, 0.95, combined) * (1.0 - voidMask * 0.5);
-          
-          gl_FragColor = vec4(color, alpha);
+          vec3 p = vPosition * uScale;
+          vec3 q = vec3(
+            fbm(p + vec3(0.0, uTime * 0.05, 0.0)),
+            fbm(p + vec3(5.2, 1.3, 2.8) + uTime * 0.05),
+            fbm(p + vec3(2.2, 8.4, 0.5) - uTime * 0.02)
+          );
+          float density = fbm(p + 2.0 * q);
+          float t = (density + 0.4) * 0.8;
+          float alpha = smoothstep(uThreshold, 0.7, t);
+          vec3 cWhite = vec3(1.0, 1.0, 1.0);
+          vec3 color = mix(uColorDeep, uColorMid, smoothstep(uThreshold, 0.5, t));
+          color = mix(color, uColorBright, smoothstep(0.5, 0.8, t));
+          color = mix(color, cWhite, smoothstep(0.8, 1.0, t));
+          float facing = dot(normalize(vNormal), normalize(vViewPosition));
+          float depthFactor = (facing + 1.0) * 0.5;
+          float finalAlpha = alpha * (0.02 + 0.98 * depthFactor);
+          gl_FragColor = vec4(color * uBrightness, finalAlpha);
         }
       `,
+      transparent: true,
+      blending: THREE.AdditiveBlending,
+      side: THREE.DoubleSide,
+      depthWrite: false,
     });
-    const plasma = new THREE.Mesh(plasmaGeometry, plasmaMaterial);
-    plasma.position.y = ballYOffset;
-    plasma.scale.setScalar(introConfig.startScale);
-    scene.add(plasma);
+
+    const plasmaMesh = new THREE.Mesh(plasmaGeo, plasmaMat);
+    mainGroup.add(plasmaMesh);
 
     // Particles
-    const particleCount = 500;
-    const particleGeometry = new THREE.BufferGeometry();
-    const positions = new Float32Array(particleCount * 3);
-    for (let i = 0; i < particleCount; i++) {
+    const pCount = 600;
+    const pPos = new Float32Array(pCount * 3);
+    const pSizes = new Float32Array(pCount);
+    const sphereRadius = 0.95;
+
+    for (let i = 0; i < pCount; i++) {
+      const r = sphereRadius * Math.cbrt(Math.random());
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.acos(2 * Math.random() - 1);
-      const r = 1.2 + Math.random() * 0.3;
-      positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
-      positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta) + ballYOffset;
-      positions[i * 3 + 2] = r * Math.cos(phi);
+      pPos[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+      pPos[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+      pPos[i * 3 + 2] = r * Math.cos(phi);
+      pSizes[i] = Math.random();
     }
-    particleGeometry.setAttribute(
-      "position",
-      new THREE.BufferAttribute(positions, 3)
-    );
-    const particleMaterial = new THREE.PointsMaterial({
-      color: 0x8b5cf6,
-      size: 0.02,
-      transparent: true,
-      opacity: 0.6,
-      blending: THREE.AdditiveBlending,
-    });
-    const particles = new THREE.Points(particleGeometry, particleMaterial);
-    particles.scale.setScalar(introConfig.startScale);
-    scene.add(particles);
 
+    const pGeo = new THREE.BufferGeometry();
+    pGeo.setAttribute("position", new THREE.BufferAttribute(pPos, 3));
+    pGeo.setAttribute("aSize", new THREE.BufferAttribute(pSizes, 1));
+
+    const pMat = new THREE.ShaderMaterial({
+      uniforms: {
+        uTime: { value: 0 },
+        uColor: { value: new THREE.Color(0xffffff) },
+      },
+      vertexShader: `
+        uniform float uTime;
+        attribute float aSize;
+        varying float vAlpha;
+        void main() {
+          vec3 pos = position;
+          pos.y += sin(uTime * 0.2 + pos.x) * 0.02;
+          pos.x += cos(uTime * 0.15 + pos.z) * 0.02;
+          vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
+          gl_Position = projectionMatrix * mvPosition;
+          float baseSize = 8.0 * aSize + 4.0;
+          gl_PointSize = baseSize * (1.0 / -mvPosition.z);
+          vAlpha = 0.8 + 0.2 * sin(uTime + aSize * 10.0);
+        }
+      `,
+      fragmentShader: `
+        uniform vec3 uColor;
+        varying float vAlpha;
+        void main() {
+          vec2 uv = gl_PointCoord - vec2(0.5);
+          float dist = length(uv);
+          if(dist > 0.5) discard;
+          float glow = 1.0 - (dist * 2.0);
+          glow = pow(glow, 1.8);
+          gl_FragColor = vec4(uColor, glow * vAlpha);
+        }
+      `,
+      transparent: true,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+    });
+
+    const particles = new THREE.Points(pGeo, pMat);
+    mainGroup.add(particles);
+
+    // Animation loop
     const clock = new THREE.Clock();
-    let introProgress = 0;
+    let raf = 0;
+    let introComplete = false;
 
     const animate = () => {
-      const animationId = requestAnimationFrame(animate);
-      sceneRef.current!.animationId = animationId;
+      const t = clock.getElapsedTime();
 
-      const delta = clock.getDelta();
-      const elapsed = clock.getElapsedTime();
+      // Intro animation: fly forward and scale up
+      if (t < introConfig.duration) {
+        const progress = t / introConfig.duration;
+        const eased = introConfig.easeOutCubic(progress);
 
-      // Intro animation
-      if (introProgress < 1) {
-        introProgress += delta / introConfig.duration;
-        introProgress = Math.min(introProgress, 1);
+        // Interpolate camera Z position (far to near) - uses responsive endZ
+        camera.position.z = introConfig.startZ + (endZ - introConfig.startZ) * eased;
 
-        const eased = 1 - Math.pow(1 - introProgress, 3);
-        const targetZ = isMobile ? mobileEndZ : introConfig.endZ;
-        camera.position.z =
-          introConfig.startZ + (targetZ - introConfig.startZ) * eased;
+        // Interpolate scale (small to full)
+        const currentScale = introConfig.startScale + (introConfig.endScale - introConfig.startScale) * eased;
+        mainGroup.scale.setScalar(currentScale);
 
-        const scale =
-          introConfig.startScale +
-          (introConfig.endScale - introConfig.startScale) * eased;
-        shell.scale.setScalar(scale);
-        plasma.scale.setScalar(scale);
-        particles.scale.setScalar(scale);
-
-        if (introProgress > 0.3 && !showContent) {
+        // Faster rotation during approach, slowing down as it settles
+        const rotationMultiplier = 1 + (1 - eased) * 2;
+        mainGroup.rotation.x += params.rotationSpeedX * rotationMultiplier;
+        mainGroup.rotation.y += params.rotationSpeedY * rotationMultiplier;
+      } else {
+        // After intro, normal rotation
+        if (!introComplete) {
+          introComplete = true;
+          camera.position.z = endZ;
+          mainGroup.scale.setScalar(introConfig.endScale);
           setShowContent(true);
+          // Delay character fade-in until orb is fully formed
+          setTimeout(() => setShowCharacter(true), 500);
         }
-        if (introProgress > 0.5 && !showCharacter) {
-          setShowCharacter(true);
-        }
+        mainGroup.rotation.x += params.rotationSpeedX;
+        mainGroup.rotation.y += params.rotationSpeedY;
       }
 
-      // Update plasma
-      plasmaMaterial.uniforms.uTime.value = elapsed * params.timeScale;
+      // Update ball transform for image synchronization
+      const ballWorldPos = new THREE.Vector3();
+      mainGroup.getWorldPosition(ballWorldPos);
+      ballWorldPos.project(camera);
 
-      // Rotate
-      plasma.rotation.y += params.rotationSpeedX * delta;
-      shell.rotation.y += params.rotationSpeedX * delta * 0.8;
-      particles.rotation.y -= params.rotationSpeedX * delta * 0.5;
+      // Convert normalized device coordinates to pixel coordinates
+      const canvasWidth = mount.clientWidth;
+      const canvasHeight = mount.clientHeight;
+      const screenX = (ballWorldPos.x * 0.5 + 0.5) * canvasWidth;
+      const screenY = (-(ballWorldPos.y * 0.5) + 0.5) * canvasHeight;
 
+      // Update state with ball's current scale and screen position
+      setBallTransform({
+        scale: mainGroup.scale.x,
+        screenX: screenX - canvasWidth / 2,
+        screenY: screenY - canvasHeight / 2,
+      });
+
+      plasmaMat.uniforms.uTime.value = t * params.timeScale;
+      pMat.uniforms.uTime.value = t;
+      plasmaMesh.rotation.y = t * 0.08;
+
+      // Calculate the ball's visual diameter as a fraction of viewport height
+      const currentZ = camera.position.z;
+      const ballRadius = 1.0;
+      const fovRad = (75 * Math.PI) / 180;
+      // visibleHeight = how much world-space height is visible at camera distance
+      const visibleHeight = 2 * currentZ * Math.tan(fovRad / 2);
+      // ballDiameterFraction = what % of viewport the ball occupies (0-1)
+      const ballDiameterFraction = (ballRadius * 2) / visibleHeight;
+      setCharacterScale(Math.max(0.1, Math.min(1.5, ballDiameterFraction)));
+
+      controls.update();
       renderer.render(scene, camera);
-    };
-
-    sceneRef.current = {
-      scene,
-      camera,
-      renderer,
-      shell,
-      plasma,
-      particles,
-      animationId: 0,
-      clock,
-      introProgress,
+      raf = requestAnimationFrame(animate);
     };
 
     animate();
 
-    const handleResize = () => {
-      if (!container) return;
-      camera.aspect = container.clientWidth / container.clientHeight;
+    // Resize handler
+    const onResize = () => {
+      const w = mount.clientWidth;
+      const h = mount.clientHeight;
+
+      const mobile = w < 768;
+      setIsMobileViewport(mobile);
+      endZ = mobile ? mobileEndZ : desktopEndZ;
+
+      camera.aspect = w / h;
       camera.updateProjectionMatrix();
-      renderer.setSize(container.clientWidth, container.clientHeight);
+      renderer.setSize(w, h);
+
+      // If the intro already completed, keep the camera at the new target distance
+      if (introComplete) camera.position.z = endZ;
     };
+    window.addEventListener("resize", onResize);
 
-    window.addEventListener("resize", handleResize);
-
+    // Cleanup
     return () => {
-      window.removeEventListener("resize", handleResize);
-      if (sceneRef.current) {
-        cancelAnimationFrame(sceneRef.current.animationId);
-      }
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", onResize);
+      controls.dispose();
+      shellGeo.dispose();
+      shellBackMat.dispose();
+      shellFrontMat.dispose();
+      plasmaGeo.dispose();
+      plasmaMat.dispose();
+      pGeo.dispose();
+      pMat.dispose();
       renderer.dispose();
-      plasmaGeometry.dispose();
-      plasmaMaterial.dispose();
-      shellGeometry.dispose();
-      shellMaterial.dispose();
-      particleGeometry.dispose();
-      particleMaterial.dispose();
+      if (renderer.domElement.parentNode) {
+        renderer.domElement.parentNode.removeChild(renderer.domElement);
+      }
     };
   }, []);
 
-  const currentHero = heroImages[currentHeroIndex];
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-  const baseSize = isMobile ? 135 : 108;
-  const adjustedSize = baseSize * currentHero.scale;
-
   return (
-    <div
-      ref={containerRef}
-      className="fixed inset-0 w-full h-full overflow-hidden bg-black"
-    >
-      {/* Neural network background */}
-      <div className="absolute inset-0 z-0">
-        <NeuralNetworkCanvas />
-      </div>
+    <div className="relative w-full h-screen bg-black overflow-hidden">
+      {/* Neural Network Background */}
+      <NeuralNetworkCanvas className="absolute inset-0 z-0" />
 
-      {/* Three.js canvas */}
-      <canvas ref={canvasRef} className="absolute inset-0 z-10" />
-
-      {/* Hero character inside the orb */}
+      {/* Dark overlay to cover top neural network - below plasma */}
       <div
-        className={`absolute inset-0 z-20 flex items-center justify-center pointer-events-none transition-opacity duration-300 ${
+        className="absolute top-0 left-0 right-0 h-32 z-[1]"
+        style={{
+          background: "linear-gradient(to bottom, black 0%, black 60%, transparent 100%)",
+        }}
+      />
+
+      {/* Plasma WebGL mount - full screen */}
+      <div ref={mountRef} className="absolute inset-0 z-10" />
+
+      {/* Character images inside the ball - cycling with crossfade - NOW SYNCED WITH BALL */}
+      <div
+        className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
           showCharacter ? "opacity-100" : "opacity-0"
         }`}
-        style={{ marginTop: isMobile ? "-12vh" : "0" }}
+        style={{
+          zIndex: 15,
+          marginTop: isMobileViewport ? "0vh" : "12vh",
+          transform: `translate(${ballTransform.screenX}px, ${ballTransform.screenY}px)`,
+          transformOrigin: "center center",
+        }}
       >
-        <div
-          className={`transition-all duration-300 ${
-            isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"
-          }`}
-        >
+        {heroImages.map((hero, index) => (
           <img
-            src={currentHero.src}
-            alt="SolGod Hero"
+            key={index}
+            src={hero.src}
+            alt={`SolGod ${index + 1}`}
+            className="absolute h-auto object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
             style={{
-              width: `${adjustedSize}vmin`,
-              height: `${adjustedSize}vmin`,
-              objectFit: "contain",
+              // Size relative to orb - scale by ball transform to match ball size exactly
+              width: `${characterScale * ballTransform.scale * (isMobileViewport ? 135 : 108) * hero.scale}vmin`,
+              filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
+              opacity: currentHeroIndex === index && !isTransitioning ? 0.3 : 0,
             }}
-            className="drop-shadow-2xl"
+          />
+        ))}
+      </div>
+
+      {/* Readability overlay */}
+      <div className="absolute inset-0 bg-black/25 pointer-events-none z-5" />
+
+      {/* Logo above the ball */}
+      <div
+        className={`absolute top-0 left-0 right-0 flex flex-col items-center justify-center z-20 transition-opacity duration-1000 ${
+          showContent ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <div className="relative w-full pt-6 md:pt-8 flex flex-col items-center">
+          {/* subtle top fade behind the logo (doesn't block the orb) */}
+          <div
+            className="pointer-events-none absolute inset-x-0 top-0 h-40"
+            style={{
+              background: "linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0) 100%)",
+            }}
+          />
+          <img
+            src={solgodsTitleLogo}
+            alt="SolGods - Click to Enter"
+            onClick={onEnter}
+            className="relative h-28 md:h-40 lg:h-52 w-auto object-contain animate-[logo-pulse_3s_ease-in-out_infinite] cursor-pointer hover:scale-105 transition-transform duration-300"
           />
         </div>
       </div>
-
-      {/* Logo and Enter Button */}
-      <div
-        className={`absolute inset-x-0 bottom-0 z-30 flex flex-col items-center transition-all duration-1000 ${
-          showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-        style={{
-          background:
-            "linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 40%, transparent 100%)",
-          paddingBottom: "env(safe-area-inset-bottom, 20px)",
-        }}
-      >
-        <div className="flex flex-col items-center pb-8 md:pb-12 pt-16 md:pt-24">
-          <button
-            onClick={onEnter}
-            className="group cursor-pointer focus:outline-none transition-transform duration-300 hover:scale-105"
-            aria-label="Enter SolGods"
-          >
-            <img
-              src={solgodLogo}
-              alt={title}
-              className="w-48 md:w-64 lg:w-72 h-auto logo-pulse"
-            />
-          </button>
-          <p className="text-white/60 text-sm mt-4 animate-pulse">
-            Click to Enter
-          </p>
-        </div>
-      </div>
-
-      <style>{`
-        @keyframes logo-pulse {
-          0%, 100% {
-            filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.4)) drop-shadow(0 0 40px rgba(139, 92, 246, 0.2));
-          }
-          50% {
-            filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.6)) drop-shadow(0 0 60px rgba(139, 92, 246, 0.3));
-          }
-        }
-        .logo-pulse {
-          animation: logo-pulse 2s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   );
 }
