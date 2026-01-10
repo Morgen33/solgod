@@ -240,16 +240,6 @@ export const GsapCardCarousel = ({ images }: GsapCardCarouselProps) => {
           <ChevronRight className="w-4 h-4" />
         </button>
       </div>
-
-      <div className="absolute top-1/2 right-8 -translate-y-1/2 text-sm hidden md:block" style={{ color: "#01b2ff" }}>
-        <ul className="space-y-1">
-          <li className="text-center mb-2 font-semibold">Scroll by:</li>
-          <li>• Buttons</li>
-          <li>• Mouse Wheel</li>
-          <li>• Up/Down Arrows</li>
-          <li>• Page Up/Down</li>
-        </ul>
-      </div>
     </div>
   );
 };
