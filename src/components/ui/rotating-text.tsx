@@ -8,8 +8,8 @@ const getGradient = (word: string) => {
     return "linear-gradient(90deg, #93c5fd, #3b82f6, #1d4ed8, #3b82f6, #93c5fd)";
   }
   if (word === 'NOTHING') {
-    // Very light grey gradient
-    return "linear-gradient(90deg, #f8f8f8, #e8e8e8, #f0f0f0, #e8e8e8, #f8f8f8)";
+    // Medium grey gradient
+    return "linear-gradient(90deg, #d0d0d0, #b0b0b0, #c0c0c0, #b0b0b0, #d0d0d0)";
   }
   if (word === 'EVERYTHING') {
     // Icy blue-white gradient
@@ -45,7 +45,7 @@ export const RotatingText = () => {
       return 'drop-shadow(0 0 20px rgba(59, 130, 246, 0.6)) drop-shadow(0 0 40px rgba(29, 78, 216, 0.4))';
     }
     if (word === 'NOTHING') {
-      return 'drop-shadow(0 0 20px rgba(240, 240, 240, 0.6)) drop-shadow(0 0 40px rgba(220, 220, 220, 0.4))';
+      return 'drop-shadow(0 0 15px rgba(180, 180, 180, 0.5)) drop-shadow(0 0 30px rgba(160, 160, 160, 0.3))';
     }
     if (word === 'EVERYTHING') {
       return 'drop-shadow(0 0 20px rgba(168, 216, 255, 0.7)) drop-shadow(0 0 40px rgba(112, 196, 255, 0.5))';
