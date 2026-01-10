@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import NeuralNetworkCanvas from "./neural-network-canvas";
+import { ShinyButton } from "./shiny-button";
 import solgodsTitleLogo from "@/assets/solgods-title-logo.png";
 import athenaHero from "@/assets/heroes/athena.png";
 import crimsonHero from "@/assets/heroes/crimson.png";
@@ -540,10 +541,14 @@ export default function PlasmaHero({
           />
           <img 
             src={solgodsTitleLogo} 
-            alt="SolGods - Click to Enter" 
-            onClick={onEnter}
-            className="relative h-28 md:h-40 lg:h-52 w-auto object-contain animate-[logo-pulse_3s_ease-in-out_infinite] cursor-pointer hover:scale-105 transition-transform duration-300"
+            alt="SolGods Logo" 
+            className="relative h-28 md:h-40 lg:h-52 w-auto object-contain animate-[logo-pulse_3s_ease-in-out_infinite]"
           />
+          <div className="relative mt-4 md:mt-6 pointer-events-auto">
+            <ShinyButton onClick={onEnter}>
+              Enter
+            </ShinyButton>
+          </div>
         </div>
       </div>
     </div>
