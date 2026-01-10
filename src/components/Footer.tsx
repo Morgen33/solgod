@@ -22,8 +22,54 @@ const navLinks = [
 export function Footer() {
   return (
     <footer className="relative z-10 border-t border-border bg-card/30 backdrop-blur-sm">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div className="max-w-6xl mx-auto px-4 py-10 sm:py-12">
+        {/* Mobile Layout */}
+        <div className="sm:hidden">
+          {/* Brand - Centered on mobile */}
+          <div className="text-center mb-8">
+            <Link to="/" className="inline-block mb-3">
+              <img src={solgodsIcon} alt="SolGods" className="h-14 w-auto mx-auto" />
+            </Link>
+            <p className="text-sm text-muted-foreground max-w-xs mx-auto">
+              Stand in the light. Build the system. Ascend as a SolGod.
+            </p>
+          </div>
+
+          {/* Social Icons Row */}
+          <div className="flex justify-center gap-4 mb-8">
+            {quickLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-secondary/40 hover:bg-primary/20 transition-colors"
+                  aria-label={link.label}
+                >
+                  <Icon size={20} className="text-[#01b2ff]" />
+                </a>
+              );
+            })}
+          </div>
+
+          {/* Navigation Links - 2 columns */}
+          <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-center mb-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.to}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden sm:grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="block mb-4">
@@ -92,8 +138,8 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/50 flex items-center justify-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="pt-6 sm:pt-8 border-t border-border/50 flex items-center justify-center">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             © {new Date().getFullYear()} SolGods. All rights reserved.
           </p>
         </div>
