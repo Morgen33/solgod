@@ -3,7 +3,7 @@ import { Layout } from "@/components/Layout";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import creatorxAvatar from "@/assets/team/creatorx.avif";
 import morgenAvatar from "@/assets/team/morgen.jpeg";
-import morgenBackAvatar from "@/assets/team/morgen.jpeg";
+
 import glowAvatar from "@/assets/team/glow.avif";
 import redAvatar from "@/assets/team/red.webp";
 import kmacAvatar from "@/assets/team/kmac.webp";
@@ -172,7 +172,7 @@ const MEMBER_BACK_AVATARS: Record<string, string> = {
   Auskyn: auskynBackAvatar,
   Mister: misterBackAvatar,
   Asta: astaBackAvatar,
-  Morgen: morgenBackAvatar,
+  
   Eddie: eddieBackAvatar,
   DaveR: daverBackAvatar,
 };
