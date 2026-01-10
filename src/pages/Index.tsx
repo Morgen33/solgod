@@ -5,7 +5,7 @@ import {
   Shield, Globe, Sparkles, Cog, Users, Coins, BarChart3, Package
 } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
-import { RotatingText } from "@/components/ui/rotating-text";
+import VaporizeTextCycle, { Tag } from "@/components/ui/vapour-text-effect";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
@@ -71,9 +71,27 @@ const Index = () => {
             >
               Probably
             </h1>
-            <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold italic" style={{ perspective: "1000px" }}>
-              <RotatingText />
-            </h1>
+            <div className="h-20 sm:h-28 md:h-36" style={{ perspective: "1000px" }}>
+              <VaporizeTextCycle
+                texts={["NOTHING", "SOMETHING", "EVERYTHING"]}
+                font={{
+                  fontFamily: "system-ui, -apple-system, sans-serif",
+                  fontSize: "80px",
+                  fontWeight: 700,
+                }}
+                color="rgb(168, 216, 255)"
+                spread={4}
+                density={6}
+                animation={{
+                  vaporizeDuration: 2,
+                  fadeInDuration: 0.8,
+                  waitDuration: 2,
+                }}
+                direction="left-to-right"
+                alignment="center"
+                tag={Tag.H1}
+              />
+            </div>
           </div>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
