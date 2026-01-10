@@ -55,8 +55,8 @@ const Index = () => {
             className="h-32 sm:h-40 w-auto mx-auto mb-8"
           />
           
-          {/* Vaporize Text Hero */}
-          <div className="mb-6 h-24 sm:h-28 md:h-32">
+          {/* Vaporize Text Hero - Desktop */}
+          <div className="mb-6 h-24 sm:h-28 md:h-32 hidden sm:block">
             <VaporizeTextCycle
               texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
               font={{
@@ -67,6 +67,27 @@ const Index = () => {
               color="rgb(1, 178, 255)"
               spread={5}
               density={5}
+              animation={{
+                vaporizeDuration: 1.2,
+                fadeInDuration: 0.6,
+                waitDuration: 1,
+              }}
+              alignment="center"
+            />
+          </div>
+          
+          {/* Vaporize Text Hero - Mobile */}
+          <div className="mb-6 h-16 sm:hidden">
+            <VaporizeTextCycle
+              texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
+              font={{
+                fontFamily: "Cinzel, serif",
+                fontSize: "28px",
+                fontWeight: 700,
+              }}
+              color="rgb(1, 178, 255)"
+              spread={3}
+              density={4}
               animation={{
                 vaporizeDuration: 1.2,
                 fadeInDuration: 0.6,
