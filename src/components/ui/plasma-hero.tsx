@@ -189,6 +189,7 @@ export default function PlasmaHero({
     controls.enablePan = false;
     controls.minDistance = 1.5;
     controls.maxDistance = 20;
+    controls.enabled = true; // Will be disabled after intro
 
     // Main group for rotation
     const mainGroup = new THREE.Group();
@@ -412,6 +413,7 @@ export default function PlasmaHero({
           introComplete = true;
           camera.position.z = endZ;
           mainGroup.scale.setScalar(introConfig.endScale);
+          controls.enabled = false; // Disable controls after intro
           setShowContent(true);
           // Delay character fade-in until orb is fully formed
           setTimeout(() => setShowCharacter(true), 500);
@@ -544,12 +546,18 @@ export default function PlasmaHero({
             alt="SolGods Logo" 
             className="relative h-28 md:h-40 lg:h-52 w-auto object-contain animate-[logo-pulse_3s_ease-in-out_infinite]"
           />
-          <div className="relative mt-4 md:mt-6 pointer-events-auto">
-            <ShinyButton onClick={onEnter}>
-              Enter
-            </ShinyButton>
-          </div>
         </div>
+      </div>
+
+      {/* Enter button below the ball */}
+      <div 
+        className={`absolute bottom-12 md:bottom-16 left-0 right-0 flex justify-center z-20 transition-opacity duration-1000 ${
+          showContent ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <ShinyButton onClick={onEnter}>
+          Enter
+        </ShinyButton>
       </div>
     </div>
   );
