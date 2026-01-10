@@ -216,7 +216,7 @@ export const GsapCardCarousel = ({ images }: GsapCardCarouselProps) => {
         ))}
       </ul>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4">
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-4">
         <button
           onClick={handlePrev}
           className="flex items-center gap-2 px-6 py-3 bg-gradient-to-b from-[#575757] to-[#414141] text-[#aaa] rounded uppercase text-xs font-bold tracking-wide transition-all duration-300 hover:from-[#01b2ff] hover:to-[#0090cc] hover:text-white hover:shadow-lg"
