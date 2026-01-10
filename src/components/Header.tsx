@@ -185,13 +185,13 @@ export function Header() {
             <div className="flex items-center gap-0.5 ml-auto">
               <NavLink to="/home" isActive={location.pathname === "/home"}>Home</NavLink>
               <NavLink to="/about" isActive={location.pathname === "/about"}>About</NavLink>
+              <NavLink to="/gallery" isActive={location.pathname === "/gallery"}>Gallery</NavLink>
+              <NavLink to="/team" isActive={location.pathname === "/team"}>Team</NavLink>
               <DropdownMenu 
                 label="Community" 
                 items={dropdowns[0].items} 
                 currentPath={location.pathname} 
               />
-              <NavLink to="/gallery" isActive={location.pathname === "/gallery"}>Gallery</NavLink>
-              <NavLink to="/team" isActive={location.pathname === "/team"}>Team</NavLink>
             </div>
           </nav>
 
