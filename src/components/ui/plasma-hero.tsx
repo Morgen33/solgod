@@ -541,11 +541,30 @@ export default function PlasmaHero({
                 "linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0) 100%)",
             }}
           />
-          <img 
-            src={solgodsTitleLogo} 
-            alt="SolGods Logo" 
-            className="relative h-28 md:h-40 lg:h-52 w-auto object-contain animate-[logo-pulse_3s_ease-in-out_infinite]"
-          />
+          <h1 
+            className="relative font-cinzel-decorative text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider"
+            style={{
+              background: 'linear-gradient(180deg, #ffffff 0%, #70c4ff 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              filter: 'drop-shadow(0 0 20px rgba(112, 196, 255, 0.5))',
+            }}
+          >
+            {title}
+          </h1>
+          <p 
+            className="relative font-montserrat text-lg md:text-xl lg:text-2xl tracking-[0.3em] mt-2"
+            style={{
+              background: 'linear-gradient(180deg, #ffffff 0%, #70c4ff 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              filter: 'drop-shadow(0 0 10px rgba(112, 196, 255, 0.4))',
+            }}
+          >
+            {subtitle}
+          </p>
         </div>
       </div>
 
