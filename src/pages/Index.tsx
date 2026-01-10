@@ -57,7 +57,18 @@ const Index = () => {
           
           {/* Rotating Text Hero */}
           <div className="mb-6">
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold italic text-foreground mb-2">
+            <h1 
+              className="text-4xl sm:text-6xl md:text-7xl font-bold italic mb-2"
+              style={{ 
+                backgroundImage: "linear-gradient(90deg, #fffef5, #fff9e6, #fff5cc, #fff9e6, #fffef5)",
+                backgroundSize: "200% 100%",
+                animation: "gradient-flow 3s ease infinite",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                filter: "drop-shadow(0 0 20px rgba(255, 250, 220, 0.7)) drop-shadow(0 0 40px rgba(255, 245, 200, 0.5))"
+              }}
+            >
               Probably
             </h1>
             <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold italic" style={{ perspective: "1000px" }}>
