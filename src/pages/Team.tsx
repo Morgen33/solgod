@@ -460,18 +460,21 @@ const Team = () => {
 
           {/* Other Roles Grid */}
           <div className="flex flex-col items-center gap-8 md:grid md:grid-cols-2 md:gap-x-12">
-            {otherRoles.map((g) => (
-              <TeamSection key={g.role} group={g} />
+            {otherRoles.map((g, index) => (
+              <div key={g.role} className="w-full">
+                <TeamSection group={g} />
+                {/* Note box right after Community section */}
+                {g.role === "Community" && (
+                  <div className="mt-6 flex justify-center md:justify-start">
+                    <div className="bg-primary/10 border border-primary/30 rounded-lg px-5 py-4 max-w-sm">
+                      <p className="text-[#01b2ff] text-sm sm:text-base font-medium">
+                        <span className="font-bold">Tip:</span> Select any photo to see the 'In Real Life' (IRL) view.
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
-          </div>
-
-          {/* Note box at bottom left */}
-          <div className="mt-12 flex justify-start">
-            <div className="bg-primary/10 border border-primary/30 rounded-lg px-4 py-3 max-w-xs">
-              <p className="text-[#01b2ff] text-xs sm:text-sm font-medium">
-                <span className="font-bold">Tip:</span> Select any photo to see the 'In Real Life' (IRL) view.
-              </p>
-            </div>
           </div>
         </div>
       </main>
