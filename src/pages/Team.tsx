@@ -468,7 +468,7 @@ const Team = () => {
                   <div className="mt-6 flex justify-center md:justify-start">
                     <div className="bg-primary/10 border border-primary/30 rounded-lg px-5 py-4 max-w-sm">
                       <p className="text-[#01b2ff] text-sm sm:text-base font-medium">
-                        <span className="font-bold">Tip:</span> Select any photo to see the 'In Real Life' (IRL) view.
+                        <span className="font-bold">Tip:</span> Tap on photo to turn around and see IRL view.
                       </p>
                     </div>
                   </div>
