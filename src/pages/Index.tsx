@@ -204,7 +204,7 @@ const Index = () => {
       </section>
 
       {/* The Three Pillars */}
-      <section className="pt-4 pb-12 sm:py-24 px-4 relative overflow-hidden">
+      <section className="-mt-8 pt-0 pb-12 sm:mt-0 sm:py-24 px-4 relative overflow-hidden">
         <div 
           className="absolute inset-0 opacity-10"
           style={{
