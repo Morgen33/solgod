@@ -195,7 +195,7 @@ export default function PlasmaHero({
     const mainGroup = new THREE.Group();
     mainGroup.scale.setScalar(introConfig.startScale); // Start small
     // Shift ball upward on mobile so it sits just below the logo
-    mainGroup.position.y = isMobile ? 0.55 : 0;
+    mainGroup.position.y = isMobile ? 0.75 : 0;
     scene.add(mainGroup);
 
     // Light
