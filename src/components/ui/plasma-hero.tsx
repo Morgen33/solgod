@@ -465,21 +465,21 @@ export default function PlasmaHero({
       {/* Neural Network Background */}
       <NeuralNetworkCanvas className="absolute inset-0 z-0" />
       
-      {/* Dark overlay to cover top neural network */}
+      {/* Dark overlay to cover top neural network - below plasma */}
       <div 
-        className="absolute top-0 left-0 right-0 h-32 z-[5]"
+        className="absolute top-0 left-0 right-0 h-32 z-[1]"
         style={{
           background: 'linear-gradient(to bottom, black 0%, black 60%, transparent 100%)'
         }}
       />
 
-      {/* Plasma WebGL mount - lowered */}
-      <div ref={mountRef} className="absolute inset-0 top-32 z-10" />
+      {/* Plasma WebGL mount - full screen */}
+      <div ref={mountRef} className="absolute inset-0 z-10" />
 
 
       {/* Character images inside the ball - cycling with crossfade */}
       <div 
-        className={`absolute inset-0 top-32 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
+        className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
           showCharacter ? 'opacity-100' : 'opacity-0'
         }`}
         style={{ zIndex: 15 }}
