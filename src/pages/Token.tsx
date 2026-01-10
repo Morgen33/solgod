@@ -70,8 +70,14 @@ const Token = () => {
               <UtilityCard icon={<Gift size={24} />} title="Mystery Packs" description="Access exclusive digital assets and rarities." />
               <UtilityCard icon={<Coins size={24} />} title="Staking Rewards" description="Earn passive yield by supporting the network." />
               <UtilityCard icon={<Sparkles size={24} />} title="Ecosystem Incentives" description="Participate in community-driven rewards and challenges." />
-              <UtilityCard icon={<Droplets size={24} />} title="Liquidity & Trading" description="Provide liquidity or trade seamlessly on-chain." />
-              <UtilityCard icon={<Rocket size={24} />} title="Future-Ready Access" description="Gain early entry to new features as the roadmap evolves." />
+            </div>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mt-6">
+              <div className="sm:w-1/2 lg:w-1/3">
+                <UtilityCard icon={<Droplets size={24} />} title="Liquidity & Trading" description="Provide liquidity or trade seamlessly on-chain." />
+              </div>
+              <div className="sm:w-1/2 lg:w-1/3">
+                <UtilityCard icon={<Rocket size={24} />} title="Future-Ready Access" description="Gain early entry to new features as the roadmap evolves." />
+              </div>
             </div>
           </div>
 
