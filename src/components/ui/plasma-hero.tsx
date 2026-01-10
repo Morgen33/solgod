@@ -515,16 +515,6 @@ export default function PlasmaHero({
               marginTop: `${hero.offsetY}vh`,
             }}
           >
-            {/* Bright numbered badge */}
-            <div 
-              className="absolute -top-2 left-1/2 -translate-x-1/2 z-20 bg-yellow-400 text-black font-bold text-lg md:text-xl px-3 py-1 rounded-full shadow-lg"
-              style={{
-                textShadow: '0 1px 2px rgba(0,0,0,0.3)',
-                boxShadow: '0 0 15px rgba(255, 220, 0, 0.8), 0 4px 10px rgba(0,0,0,0.4)',
-              }}
-            >
-              #{index + 1}
-            </div>
             <img 
               src={hero.src} 
               alt={`SolGod ${index + 1}`} 
