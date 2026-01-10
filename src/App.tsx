@@ -11,7 +11,7 @@ import SolGods from "./pages/SolGods";
 import Dao from "./pages/Dao";
 import Token from "./pages/Token";
 import Partnerships from "./pages/Partnerships";
-import Spaces from "./pages/Spaces";
+
 import SolCity from "./pages/SolCity";
 import Team from "./pages/Team";
 import Join from "./pages/Join";
@@ -35,7 +35,7 @@ const App = () => (
           <Route path="/dao" element={<Dao />} />
           <Route path="/token" element={<Token />} />
           <Route path="/partnerships" element={<Partnerships />} />
-          <Route path="/spaces" element={<Spaces />} />
+          
           <Route path="/solcity" element={<SolCity />} />
           <Route path="/team" element={<Team />} />
           <Route path="/join" element={<Join />} />
