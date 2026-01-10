@@ -73,33 +73,17 @@ export function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => {
                 const Icon = link.icon;
-                const isDiscord = link.label === "Discord";
                 return (
                   <li key={link.label}>
-                    {isDiscord ? (
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          window.open(link.href, "_blank", "noopener,noreferrer");
-                        }}
-                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer bg-transparent border-none p-0 text-left"
-                      >
-                        <Icon size={16} />
-                        {link.label}
-                      </button>
-                    ) : (
-                      <a
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <Icon size={16} />
-                        {link.label}
-                      </a>
-                    )}
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Icon size={16} />
+                      {link.label}
+                    </a>
                   </li>
                 );
               })}
