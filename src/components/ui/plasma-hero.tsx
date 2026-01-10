@@ -14,6 +14,7 @@ import oniHero from "@/assets/heroes/oni.png";
 import cosmicKingHero from "@/assets/heroes/cosmic-king.png";
 import waterDemonHero from "@/assets/heroes/water-demon.png";
 import shivaHero from "@/assets/heroes/shiva.png";
+import solgod1of1Hero from "@/assets/heroes/solgod-1of1.png";
 
 const heroImages = [
   { src: athenaHero, scale: 1 },
@@ -25,6 +26,7 @@ const heroImages = [
   { src: cosmicKingHero, scale: 1 },
   { src: waterDemonHero, scale: 0.7 },
   { src: shivaHero, scale: 1 },
+  { src: solgod1of1Hero, scale: 0.85 },
 ];
 
 // --- CONFIGURATION ---
