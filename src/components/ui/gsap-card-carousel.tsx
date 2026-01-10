@@ -209,9 +209,6 @@ export const GsapCardCarousel = ({ images }: GsapCardCarouselProps) => {
               boxShadow: "0 2px 10px rgba(0, 0, 0, 0.5)",
             }}
           >
-            <span className="absolute top-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded font-mono">
-              #{index + 1}
-            </span>
           </li>
         ))}
       </ul>
