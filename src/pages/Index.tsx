@@ -68,9 +68,9 @@ const Index = () => {
               spread={5}
               density={5}
               animation={{
-                vaporizeDuration: 2,
-                fadeInDuration: 1,
-                waitDuration: 1.5,
+                vaporizeDuration: 1.2,
+                fadeInDuration: 0.6,
+                waitDuration: 1,
               }}
               alignment="center"
             />
