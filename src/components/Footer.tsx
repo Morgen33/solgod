@@ -55,7 +55,7 @@ export function Footer() {
           </div>
 
           {/* Navigation Links - 2 columns */}
-          <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-center mb-8">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-center mb-8 px-4">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
