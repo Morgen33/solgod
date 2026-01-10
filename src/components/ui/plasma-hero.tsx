@@ -515,10 +515,7 @@ export default function PlasmaHero({
           <img 
             src={solgodsTitleLogo} 
             alt="SolGods" 
-            className="h-16 md:h-24 lg:h-28 w-auto object-contain"
-            style={{
-              filter: 'drop-shadow(0 0 20px rgba(112, 196, 255, 0.6)) drop-shadow(0 0 40px rgba(56, 189, 248, 0.4))',
-            }}
+            className="h-16 md:h-24 lg:h-28 w-auto object-contain animate-[logo-pulse_3s_ease-in-out_infinite]"
           />
         </div>
       </div>
