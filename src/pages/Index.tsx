@@ -116,158 +116,152 @@ const Index = () => {
           </div>
 
           {/* Pillar 1: The Sol Core Treasury */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-8">
-            <div className="flex flex-col">
-              <div className="flex items-center gap-4 mb-6">
-                <div 
-                  className="p-3 rounded-full"
-                  style={{ 
-                    backgroundColor: "rgba(1, 178, 255, 0.15)",
-                    border: "1px solid rgba(1, 178, 255, 0.3)"
-                  }}
-                >
-                  <Cog style={{ color: "#01b2ff" }} size={28} />
-                </div>
-                <h3 
-                  className="text-xl sm:text-2xl font-bold"
-                  style={{ 
-                    color: "#01b2ff",
-                    fontFamily: "'Cinzel', serif"
-                  }}
-                >
-                  1. The Sol Core Treasury
-                </h3>
+          <div className="mb-16">
+            <div className="flex items-center gap-4 mb-6">
+              <div 
+                className="p-3 rounded-full"
+                style={{ 
+                  backgroundColor: "rgba(1, 178, 255, 0.15)",
+                  border: "1px solid rgba(1, 178, 255, 0.3)"
+                }}
+              >
+                <Cog style={{ color: "#01b2ff" }} size={28} />
               </div>
-              <p className="text-muted-foreground mb-8">
-                Your SolGod is more than a profile picture; it is your entry point to a sophisticated, active treasury. We put the project's resources to work to ensure the ecosystem remains self-sustaining and constantly evolving:
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
-                  <h4 
-                    className="font-bold mb-3 tracking-wide"
-                    style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
-                  >
-                    Active Ecosystem Management
-                  </h4>
-                  <p className="text-sm text-muted-foreground">We utilize internal strategies to grow our holdings and generate consistent, tangible value for the project.</p>
-                </div>
-                <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
-                  <h4 
-                    className="font-bold mb-3 tracking-wide"
-                    style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
-                  >
-                    Engagement-Led Rewards
-                  </h4>
-                  <p className="text-sm text-muted-foreground">We believe in rewarding those who build the culture. Through our Discord Chat-to-Earn systems and Raid-to-Reward bounties, active members are directly incentivized for their contributions to the ecosystem's visibility and strength.</p>
-                </div>
-                <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
-                  <h4 
-                    className="font-bold mb-3 tracking-wide"
-                    style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
-                  >
-                    Exclusive Holder Perks
-                  </h4>
-                  <p className="text-sm text-muted-foreground">Membership has its privileges. Holders gain access to exclusive giveaways, high-signal alpha calls, and specialized perks that are reserved strictly for those within the SolGods holders.</p>
-                </div>
-                <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
-                  <h4 
-                    className="font-bold mb-3 tracking-wide"
-                    style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
-                  >
-                    Sustainable Scaling
-                  </h4>
-                  <p className="text-sm text-muted-foreground">By reinvesting a portion of our ecosystem gains, we constantly increase the treasury's strength. This ensures that as the world of Solara grows, so does the power and reach of its holders.</p>
-                </div>
-              </div>
+              <h3 
+                className="text-xl sm:text-2xl font-bold"
+                style={{ 
+                  color: "#01b2ff",
+                  fontFamily: "'Cinzel', serif"
+                }}
+              >
+                1. The Sol Core Treasury
+              </h3>
             </div>
-          </GlowCard>
-
-          {/* Pillar 2: Foundation of Integrity */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-8">
-            <div className="flex flex-col">
-              <div className="flex items-center gap-4 mb-6">
-                <div 
-                  className="p-3 rounded-full"
-                  style={{ 
-                    backgroundColor: "rgba(1, 178, 255, 0.15)",
-                    border: "1px solid rgba(1, 178, 255, 0.3)"
-                  }}
-                >
-                  <Shield style={{ color: "#01b2ff" }} size={28} />
-                </div>
-                <h3 
-                  className="text-xl sm:text-2xl font-bold"
-                  style={{ 
-                    color: "#01b2ff",
-                    fontFamily: "'Cinzel', serif"
-                  }}
-                >
-                  2. A Foundation of Integrity
-                </h3>
-              </div>
-              <p className="text-muted-foreground mb-8">
-                We built our reputation on a simple principle: Deliver value before asking for a single cent.
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
-                  <h4 
-                    className="font-bold mb-3 tracking-wide"
-                    style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
-                  >
-                    Results First
-                  </h4>
-                  <p className="text-sm text-muted-foreground">Our community thrived long before the mint. We established ourselves by sharing growth frameworks and strategies that helped our members level up their own digital presence and trading discipline.</p>
-                </div>
-                <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
-                  <h4 
-                    className="font-bold mb-3 tracking-wide"
-                    style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
-                  >
-                    Proven Performance
-                  </h4>
-                  <p className="text-sm text-muted-foreground">This "value-first" approach wasn't just a philosophy—it led to a 20x increase from our initial launch price. This established the rock-solid foundation for the treasury that supports the project today.</p>
-                </div>
-              </div>
-            </div>
-          </GlowCard>
-
-          {/* Pillar 3: Living Economy */}
-          <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12 mb-8">
-            <div className="flex flex-col">
-              <div className="flex items-center gap-4 mb-6">
-                <div 
-                  className="p-3 rounded-full"
-                  style={{ 
-                    backgroundColor: "rgba(1, 178, 255, 0.15)",
-                    border: "1px solid rgba(1, 178, 255, 0.3)"
-                  }}
-                >
-                  <Globe style={{ color: "#01b2ff" }} size={28} />
-                </div>
-                <h3 
-                  className="text-xl sm:text-2xl font-bold"
-                  style={{ 
-                    color: "#01b2ff",
-                    fontFamily: "'Cinzel', serif"
-                  }}
-                >
-                  3. A Living, Breathing Economy
-                </h3>
-              </div>
-              <p className="text-muted-foreground mb-8">
-                From the ancient origins of Solara to our expansion into new frontiers, the SolGods ecosystem is a thriving, bustling economy.
-              </p>
-              <div className="p-6 rounded-xl bg-secondary/30 border border-border/50">
+            <p className="text-muted-foreground mb-8">
+              Your SolGod is more than a profile picture; it is your entry point to a sophisticated, active treasury. We put the project's resources to work to ensure the ecosystem remains self-sustaining and constantly evolving.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <GlowCard glowColor="blue" customSize className="w-full h-auto p-6">
                 <h4 
                   className="font-bold mb-3 tracking-wide"
                   style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
                 >
-                  Collaborative Growth
+                  Active Ecosystem Management
                 </h4>
-                <p className="text-sm text-muted-foreground">We don't exist in a vacuum. We actively collaborate across the Solana network, integrating assets and building a cross-ecosystem engine designed to evolve, not stagnate.</p>
-              </div>
+                <p className="text-sm text-muted-foreground">We utilize internal strategies to grow our holdings and generate consistent, tangible value for the project.</p>
+              </GlowCard>
+              <GlowCard glowColor="blue" customSize className="w-full h-auto p-6">
+                <h4 
+                  className="font-bold mb-3 tracking-wide"
+                  style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+                >
+                  Engagement-Led Rewards
+                </h4>
+                <p className="text-sm text-muted-foreground">We believe in rewarding those who build the culture. Through our Discord Chat-to-Earn systems and Raid-to-Reward bounties, active members are directly incentivized for their contributions.</p>
+              </GlowCard>
+              <GlowCard glowColor="blue" customSize className="w-full h-auto p-6">
+                <h4 
+                  className="font-bold mb-3 tracking-wide"
+                  style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+                >
+                  Exclusive Holder Perks
+                </h4>
+                <p className="text-sm text-muted-foreground">Membership has its privileges. Holders gain access to exclusive giveaways, high-signal alpha calls, and specialized perks that are reserved strictly for those within the SolGods holders.</p>
+              </GlowCard>
+              <GlowCard glowColor="blue" customSize className="w-full h-auto p-6">
+                <h4 
+                  className="font-bold mb-3 tracking-wide"
+                  style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+                >
+                  Sustainable Scaling
+                </h4>
+                <p className="text-sm text-muted-foreground">By reinvesting a portion of our ecosystem gains, we constantly increase the treasury's strength. This ensures that as the world of Solara grows, so does the power and reach of its holders.</p>
+              </GlowCard>
             </div>
-          </GlowCard>
+          </div>
+
+          {/* Pillar 2: Foundation of Integrity */}
+          <div className="mb-16">
+            <div className="flex items-center gap-4 mb-6">
+              <div 
+                className="p-3 rounded-full"
+                style={{ 
+                  backgroundColor: "rgba(1, 178, 255, 0.15)",
+                  border: "1px solid rgba(1, 178, 255, 0.3)"
+                }}
+              >
+                <Shield style={{ color: "#01b2ff" }} size={28} />
+              </div>
+              <h3 
+                className="text-xl sm:text-2xl font-bold"
+                style={{ 
+                  color: "#01b2ff",
+                  fontFamily: "'Cinzel', serif"
+                }}
+              >
+                2. A Foundation of Integrity
+              </h3>
+            </div>
+            <p className="text-muted-foreground mb-8">
+              We built our reputation on a simple principle: Deliver value before asking for a single cent.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <GlowCard glowColor="blue" customSize className="w-full h-auto p-6">
+                <h4 
+                  className="font-bold mb-3 tracking-wide"
+                  style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+                >
+                  Results First
+                </h4>
+                <p className="text-sm text-muted-foreground">Our community thrived long before the mint. We established ourselves by sharing growth frameworks and strategies that helped our members level up their own digital presence and trading discipline.</p>
+              </GlowCard>
+              <GlowCard glowColor="blue" customSize className="w-full h-auto p-6">
+                <h4 
+                  className="font-bold mb-3 tracking-wide"
+                  style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+                >
+                  Proven Performance
+                </h4>
+                <p className="text-sm text-muted-foreground">This "value-first" approach wasn't just a philosophy—it led to a 20x increase from our initial launch price. This established the rock-solid foundation for the treasury that supports the project today.</p>
+              </GlowCard>
+            </div>
+          </div>
+
+          {/* Pillar 3: Living Economy */}
+          <div className="mb-16">
+            <div className="flex items-center gap-4 mb-6">
+              <div 
+                className="p-3 rounded-full"
+                style={{ 
+                  backgroundColor: "rgba(1, 178, 255, 0.15)",
+                  border: "1px solid rgba(1, 178, 255, 0.3)"
+                }}
+              >
+                <Globe style={{ color: "#01b2ff" }} size={28} />
+              </div>
+              <h3 
+                className="text-xl sm:text-2xl font-bold"
+                style={{ 
+                  color: "#01b2ff",
+                  fontFamily: "'Cinzel', serif"
+                }}
+              >
+                3. A Living, Breathing Economy
+              </h3>
+            </div>
+            <p className="text-muted-foreground mb-8">
+              From the ancient origins of Solara to our expansion into new frontiers, the SolGods ecosystem is a thriving, bustling economy.
+            </p>
+            <GlowCard glowColor="blue" customSize className="w-full h-auto p-6">
+              <h4 
+                className="font-bold mb-3 tracking-wide"
+                style={{ fontVariant: "small-caps", fontSize: "1.1rem" }}
+              >
+                Collaborative Growth
+              </h4>
+              <p className="text-sm text-muted-foreground">We don't exist in a vacuum. We actively collaborate across the Solana network, integrating assets and building a cross-ecosystem engine designed to evolve, not stagnate.</p>
+            </GlowCard>
+          </div>
 
           {/* The SolGods Difference */}
           <GlowCard glowColor="blue" customSize className="w-full h-auto p-8 sm:p-12">
