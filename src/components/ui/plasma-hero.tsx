@@ -131,23 +131,22 @@ export default function PlasmaHero({
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isMobileViewport, setIsMobileViewport] = useState(false);
-  const [ballTransform, setBallTransform] = useState({ scale: 1, screenX: 0, screenY: 0 });
 
   // Cycle through heroes after character is shown
   useEffect(() => {
     if (!showCharacter) return;
-
+    
     const fadeTime = 1500; // 1.5 second fade transition
-
+    
     const interval = setInterval(() => {
       setIsTransitioning(true);
-
+      
       setTimeout(() => {
         setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length);
         setIsTransitioning(false);
       }, fadeTime);
     }, fadeTime); // No delay - transitions happen back to back
-
+    
     return () => clearInterval(interval);
   }, [showCharacter]);
 
@@ -168,7 +167,12 @@ export default function PlasmaHero({
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x000000);
 
-    const camera = new THREE.PerspectiveCamera(75, mount.clientWidth / mount.clientHeight, 0.1, 100);
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      mount.clientWidth / mount.clientHeight,
+      0.1,
+      100
+    );
     // Start camera far back for intro animation
     camera.position.z = introConfig.startZ;
 
@@ -389,14 +393,14 @@ export default function PlasmaHero({
       if (t < introConfig.duration) {
         const progress = t / introConfig.duration;
         const eased = introConfig.easeOutCubic(progress);
-
+        
         // Interpolate camera Z position (far to near) - uses responsive endZ
         camera.position.z = introConfig.startZ + (endZ - introConfig.startZ) * eased;
-
+        
         // Interpolate scale (small to full)
         const currentScale = introConfig.startScale + (introConfig.endScale - introConfig.startScale) * eased;
         mainGroup.scale.setScalar(currentScale);
-
+        
         // Faster rotation during approach, slowing down as it settles
         const rotationMultiplier = 1 + (1 - eased) * 2;
         mainGroup.rotation.x += params.rotationSpeedX * rotationMultiplier;
@@ -414,24 +418,6 @@ export default function PlasmaHero({
         mainGroup.rotation.x += params.rotationSpeedX;
         mainGroup.rotation.y += params.rotationSpeedY;
       }
-
-      // Update ball transform for image synchronization
-      const ballWorldPos = new THREE.Vector3();
-      mainGroup.getWorldPosition(ballWorldPos);
-      ballWorldPos.project(camera);
-
-      // Convert normalized device coordinates to pixel coordinates
-      const canvasWidth = mount.clientWidth;
-      const canvasHeight = mount.clientHeight;
-      const screenX = (ballWorldPos.x * 0.5 + 0.5) * canvasWidth;
-      const screenY = (-(ballWorldPos.y * 0.5) + 0.5) * canvasHeight;
-
-      // Update state with ball's current scale and screen position
-      setBallTransform({
-        scale: mainGroup.scale.x,
-        screenX: screenX - canvasWidth / 2,
-        screenY: screenY - canvasHeight / 2,
-      });
 
       plasmaMat.uniforms.uTime.value = t * params.timeScale;
       pMat.uniforms.uTime.value = t;
@@ -492,42 +478,40 @@ export default function PlasmaHero({
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-black overflow-hidden">
+    <div 
+      className="relative w-full h-screen bg-black overflow-hidden"
+    >
       {/* Neural Network Background */}
       <NeuralNetworkCanvas className="absolute inset-0 z-0" />
-
+      
       {/* Dark overlay to cover top neural network - below plasma */}
-      <div
+      <div 
         className="absolute top-0 left-0 right-0 h-32 z-[1]"
         style={{
-          background: "linear-gradient(to bottom, black 0%, black 60%, transparent 100%)",
+          background: 'linear-gradient(to bottom, black 0%, black 60%, transparent 100%)'
         }}
       />
 
       {/* Plasma WebGL mount - full screen */}
       <div ref={mountRef} className="absolute inset-0 z-10" />
 
-      {/* Character images inside the ball - cycling with crossfade - NOW SYNCED WITH BALL */}
-      <div
+
+      {/* Character images inside the ball - cycling with crossfade */}
+      <div 
         className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
-          showCharacter ? "opacity-100" : "opacity-0"
+          showCharacter ? 'opacity-100' : 'opacity-0'
         }`}
-        style={{
-          zIndex: 15,
-          marginTop: isMobileViewport ? "0vh" : "12vh",
-          transform: `translate(${ballTransform.screenX}px, ${ballTransform.screenY}px)`,
-          transformOrigin: "center center",
-        }}
+        style={{ zIndex: 15, marginTop: isMobileViewport ? '0vh' : '12vh' }}
       >
         {heroImages.map((hero, index) => (
-          <img
+          <img 
             key={index}
-            src={hero.src}
-            alt={`SolGod ${index + 1}`}
+            src={hero.src} 
+            alt={`SolGod ${index + 1}`} 
             className="absolute h-auto object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
             style={{
-              // Size relative to orb - scale by ball transform to match ball size exactly
-              width: `${characterScale * ballTransform.scale * (isMobileViewport ? 135 : 108) * hero.scale}vmin`,
+              // Size relative to orb using vmin so portrait mobile doesn't get clamped by vw
+              width: `${characterScale * (isMobileViewport ? 135 : 108) * hero.scale}vmin`,
               filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
               opacity: currentHeroIndex === index && !isTransitioning ? 0.3 : 0,
             }}
@@ -535,13 +519,14 @@ export default function PlasmaHero({
         ))}
       </div>
 
+
       {/* Readability overlay */}
       <div className="absolute inset-0 bg-black/25 pointer-events-none z-5" />
 
       {/* Logo above the ball */}
-      <div
+      <div 
         className={`absolute top-0 left-0 right-0 flex flex-col items-center justify-center z-20 transition-opacity duration-1000 ${
-          showContent ? "opacity-100" : "opacity-0"
+          showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
         <div className="relative w-full pt-6 md:pt-8 flex flex-col items-center">
@@ -549,12 +534,13 @@ export default function PlasmaHero({
           <div
             className="pointer-events-none absolute inset-x-0 top-0 h-40"
             style={{
-              background: "linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0) 100%)",
+              background:
+                "linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0) 100%)",
             }}
           />
-          <img
-            src={solgodsTitleLogo}
-            alt="SolGods - Click to Enter"
+          <img 
+            src={solgodsTitleLogo} 
+            alt="SolGods - Click to Enter" 
             onClick={onEnter}
             className="relative h-28 md:h-40 lg:h-52 w-auto object-contain animate-[logo-pulse_3s_ease-in-out_infinite] cursor-pointer hover:scale-105 transition-transform duration-300"
           />
