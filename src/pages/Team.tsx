@@ -30,7 +30,7 @@ import rasiAvatar from "@/assets/team/rasi.webp";
 import soniaAvatar from "@/assets/team/sonia.jpg";
 import daverAvatar from "@/assets/team/daver.jpg";
 import astaBackAvatar from "@/assets/team/asta-back.png";
-import astaAvatar from "@/assets/team/asta.png";
+import astaAvatar from "@/assets/team/asta.jpg";
 import savageAvatar from "@/assets/team/savage.jpg";
 import eddieAvatar from "@/assets/team/eddie.avif";
 import eddieBackAvatar from "@/assets/team/eddie-back.jpg";
