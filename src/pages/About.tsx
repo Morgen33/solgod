@@ -276,9 +276,9 @@ const About = () => {
             </div>
           </GlowCard>
 
-          {/* Celestial Orders Grid - Including Myceliads */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {celestialOrders.map((order) => {
+          {/* Celestial Orders Grid - First 9 orders */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {celestialOrders.slice(0, 9).map((order) => {
               const Icon = order.icon;
               return (
                 <div 
@@ -306,6 +306,23 @@ const About = () => {
                 </div>
               );
             })}
+          </div>
+
+          {/* Myceliads - Centered */}
+          <div className="flex justify-center mb-12">
+            <div 
+              className="group p-6 rounded-2xl bg-card/50 border border-border hover:border-purple/50 transition-all hover:scale-[1.02] overflow-hidden w-full sm:w-1/2 lg:w-1/3"
+            >
+              <div className="w-16 h-16 rounded-xl mb-4 overflow-hidden">
+                <img 
+                  src={mycealiadsTone} 
+                  alt="Myceliads" 
+                  className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                />
+              </div>
+              <h4 className="font-bold text-lg mb-2">Myceliads</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">Symbiotic hybrids bound to nature, fungi, and the pulse of planetary life.</p>
+            </div>
           </div>
         </div>
       </section>
