@@ -315,7 +315,7 @@ function MemberCard({ member, size = "md" }: { member: TeamMember; size?: "lg" |
 
 function TeamSection({ group, featured = false }: { group: TeamGroup; featured?: boolean }) {
   return (
-    <div className={featured ? "mb-12" : "mb-10"}>
+    <div className={`${featured ? "mb-12" : "mb-10"} w-full`}>
       <div className="flex items-center justify-center gap-3 mb-6">
         <div 
           className="inline-flex items-center justify-center rounded-lg bg-primary/20 p-2 text-[#3b82f6]"
@@ -462,7 +462,7 @@ const Team = () => {
           <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent mb-12" />
 
           {/* Other Roles Grid */}
-          <div className="grid md:grid-cols-2 gap-x-12 text-center">
+          <div className="grid md:grid-cols-2 gap-x-12 text-center place-items-center">
             {otherRoles.map((g) => (
               <TeamSection key={g.role} group={g} />
             ))}
