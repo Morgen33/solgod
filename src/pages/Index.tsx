@@ -61,7 +61,7 @@ const Index = () => {
               texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
               font={{
                 fontFamily: "Cinzel, serif",
-                fontSize: "56px",
+                fontSize: "64px",
                 fontWeight: 700,
               }}
               color="rgb(1, 178, 255)"
