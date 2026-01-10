@@ -145,37 +145,10 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center h-full">
+          <nav className="hidden md:flex items-center h-full flex-1 justify-between">
             <div className="flex items-center gap-0.5">
               <NavLink to="/home" isActive={location.pathname === "/home"}>Home</NavLink>
               <NavLink to="/about" isActive={location.pathname === "/about"}>About</NavLink>
-              
-              {/* SolGods/SolCity - Premium segmented control as main highlight */}
-              <div className="relative flex items-center mx-2 p-1 rounded-xl bg-gradient-to-r from-[#01b2ff]/10 to-[#0190cc]/10 border border-[#01b2ff]/20 shadow-[0_0_20px_rgba(1,178,255,0.15)]">
-                {/* Glow effect */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#01b2ff]/5 to-[#38bdf8]/5 blur-sm" />
-                <Link
-                  to="/solgods"
-                  className={`relative z-10 px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
-                    location.pathname === "/solgods"
-                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] shadow-lg shadow-[#01b2ff]/30"
-                      : "text-[#01b2ff] hover:text-white hover:bg-white/10"
-                  }`}
-                >
-                  SolGods
-                </Link>
-                <Link
-                  to="/solcity"
-                  className={`relative z-10 px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
-                    location.pathname === "/solcity"
-                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] shadow-lg shadow-[#01b2ff]/30"
-                      : "text-[#01b2ff] hover:text-white hover:bg-white/10"
-                  }`}
-                >
-                  SolCity
-                </Link>
-              </div>
-              
               <NavLink to="/token" isActive={location.pathname === "/token"}>Token</NavLink>
               <DropdownMenu 
                 label="Community" 
@@ -184,6 +157,31 @@ export function Header() {
               />
               <NavLink to="/gallery" isActive={location.pathname === "/gallery"}>Gallery</NavLink>
               <NavLink to="/team" isActive={location.pathname === "/team"}>Team</NavLink>
+            </div>
+            
+            {/* SolGods/SolCity - Premium segmented control on far right */}
+            <div className="relative flex items-center p-1 rounded-xl bg-gradient-to-r from-[#01b2ff]/10 to-[#0190cc]/10 border border-[#01b2ff]/20 shadow-[0_0_20px_rgba(1,178,255,0.15)]">
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#01b2ff]/5 to-[#38bdf8]/5 blur-sm" />
+              <Link
+                to="/solgods"
+                className={`relative z-10 px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
+                  location.pathname === "/solgods"
+                    ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] shadow-lg shadow-[#01b2ff]/30"
+                    : "text-[#01b2ff] hover:text-white hover:bg-white/10"
+                }`}
+              >
+                SolGods
+              </Link>
+              <Link
+                to="/solcity"
+                className={`relative z-10 px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
+                  location.pathname === "/solcity"
+                    ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] shadow-lg shadow-[#01b2ff]/30"
+                    : "text-[#01b2ff] hover:text-white hover:bg-white/10"
+                }`}
+              >
+                SolCity
+              </Link>
             </div>
           </nav>
 
