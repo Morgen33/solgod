@@ -94,18 +94,18 @@ const TEAM: TeamGroup[] = [
     ],
   },
   {
-    role: "Collaboration/Development",
-    members: [
-      { name: "Morgen", note: "Developer" },
-      { name: "Eddie", note: "Collaboration Manager / Admin" },
-    ],
-  },
-  {
     role: "Community",
     members: [
       { name: "TrashPanda", note: "Community Connector" },
       { name: "Gnomie", note: "Community Connector" },
       { name: "Viper", note: "Community Artist" },
+    ],
+  },
+  {
+    role: "Collaboration/Development",
+    members: [
+      { name: "Morgen", note: "Developer" },
+      { name: "Eddie", note: "Collaboration Manager / Admin" },
     ],
   },
   {
