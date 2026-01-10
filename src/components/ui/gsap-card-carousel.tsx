@@ -27,16 +27,11 @@ export const GsapCardCarousel = ({ images }: GsapCardCarouselProps) => {
   }, []);
 
   const wrapBackward = useCallback((trigger: ScrollTrigger) => {
-    iterationRef.current--;
-    if (iterationRef.current < 0) {
-      iterationRef.current = 9;
-      if (seamlessLoopRef.current) {
-        seamlessLoopRef.current.totalTime(
-          seamlessLoopRef.current.totalTime() + seamlessLoopRef.current.duration() * 10
-        );
-      }
-      scrubRef.current?.pause();
+    // Don't wrap backward on first iteration - allow user to scroll up and exit
+    if (iterationRef.current <= 0) {
+      return;
     }
+    iterationRef.current--;
     (trigger as any).wrapping = true;
     trigger.scroll(trigger.end - 1);
   }, []);
