@@ -202,6 +202,12 @@ function ThreeDPhotoCarousel({ images }: ThreeDPhotoCarouselProps) {
             isCarouselActive={isCarouselActive}
           />
         </div>
+        {/* Mobile swipe hint */}
+        <div className="sm:hidden absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs text-muted-foreground animate-pulse">
+          <span>←</span>
+          <span>Swipe to explore</span>
+          <span>→</span>
+        </div>
       </div>
     </motion.div>
   )
