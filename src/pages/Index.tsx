@@ -64,7 +64,7 @@ const Index = () => {
                 fontSize: "48px",
                 fontWeight: 700,
               }}
-              color="#01b2ff"
+              color="rgb(1, 178, 255)"
               spread={5}
               density={5}
               animation={{
