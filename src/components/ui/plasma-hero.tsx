@@ -507,18 +507,35 @@ export default function PlasmaHero({
         style={{ zIndex: 15, marginTop: isMobileViewport ? '-10vh' : '12vh' }}
       >
         {heroImages.map((hero, index) => (
-          <img 
+          <div 
             key={index}
-            src={hero.src} 
-            alt={`SolGod ${index + 1}`} 
-            className="absolute h-auto object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
+            className="absolute flex flex-col items-center transition-all duration-[1500ms] ease-in-out"
             style={{
-              // Size relative to orb using vmin so portrait mobile doesn't get clamped by vw
-              width: `${characterScale * (isMobileViewport ? 240 : 108) * hero.scale}vmin`,
-              filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
-              opacity: currentHeroIndex === index && !isTransitioning ? 0.3 : 0,
+              opacity: currentHeroIndex === index && !isTransitioning ? 1 : 0,
             }}
-          />
+          >
+            {/* Bright numbered badge */}
+            <div 
+              className="absolute -top-2 left-1/2 -translate-x-1/2 z-20 bg-yellow-400 text-black font-bold text-lg md:text-xl px-3 py-1 rounded-full shadow-lg"
+              style={{
+                textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+                boxShadow: '0 0 15px rgba(255, 220, 0, 0.8), 0 4px 10px rgba(0,0,0,0.4)',
+              }}
+            >
+              #{index + 1}
+            </div>
+            <img 
+              src={hero.src} 
+              alt={`SolGod ${index + 1}`} 
+              className="h-auto object-contain mix-blend-screen"
+              style={{
+                // Size relative to orb using vmin so portrait mobile doesn't get clamped by vw
+                width: `${characterScale * (isMobileViewport ? 240 : 108) * hero.scale}vmin`,
+                filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
+                opacity: 0.3,
+              }}
+            />
+          </div>
         ))}
       </div>
 
