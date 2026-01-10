@@ -369,9 +369,6 @@ const Team = () => {
           >
             THE TEAM
           </h1>
-          <p className="text-[#01b2ff] font-medium mb-6 text-sm sm:text-base">
-            Before & After: Select any photo to see the 'In Real Life' (IRL) view.
-          </p>
           
           <div className="max-w-3xl mx-auto">
             <h2 
@@ -466,6 +463,15 @@ const Team = () => {
             {otherRoles.map((g) => (
               <TeamSection key={g.role} group={g} />
             ))}
+          </div>
+
+          {/* Note box at bottom left */}
+          <div className="mt-12 flex justify-start">
+            <div className="bg-primary/10 border border-primary/30 rounded-lg px-4 py-3 max-w-xs">
+              <p className="text-[#01b2ff] text-xs sm:text-sm font-medium">
+                <span className="font-bold">Tip:</span> Select any photo to see the 'In Real Life' (IRL) view.
+              </p>
+            </div>
           </div>
         </div>
       </main>
