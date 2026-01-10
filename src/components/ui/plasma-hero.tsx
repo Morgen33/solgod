@@ -18,16 +18,16 @@ import shivaHero from "@/assets/heroes/shiva.png";
 import solgod1of1Hero from "@/assets/heroes/solgod-1of1.png";
 
 const heroImages = [
-  { src: athenaHero, scale: 1 },
-  { src: crimsonHero, scale: 1 },
-  { src: skullKingHero, scale: 1 },
-  { src: darkQueenHero, scale: 1 },
-  { src: bastetNewHero, scale: 1 },
-  { src: oniHero, scale: 1 },
-  { src: cosmicKingHero, scale: 1 },
-  { src: waterDemonHero, scale: 0.7 },
-  { src: shivaHero, scale: 1 },
-  { src: solgod1of1Hero, scale: 1.1 },
+  { src: athenaHero, scale: 1, offsetY: 0 },
+  { src: crimsonHero, scale: 1, offsetY: 0 },
+  { src: skullKingHero, scale: 1, offsetY: 0 },
+  { src: darkQueenHero, scale: 1, offsetY: 0 },
+  { src: bastetNewHero, scale: 1, offsetY: 0 },
+  { src: oniHero, scale: 1, offsetY: 0 },
+  { src: cosmicKingHero, scale: 1, offsetY: 0 },
+  { src: waterDemonHero, scale: 1, offsetY: 5 },
+  { src: shivaHero, scale: 1, offsetY: 0 },
+  { src: solgod1of1Hero, scale: 1.1, offsetY: 0 },
 ];
 
 // --- CONFIGURATION ---
@@ -512,6 +512,7 @@ export default function PlasmaHero({
             className="absolute flex flex-col items-center transition-all duration-[1500ms] ease-in-out"
             style={{
               opacity: currentHeroIndex === index && !isTransitioning ? 1 : 0,
+              marginTop: `${hero.offsetY}vh`,
             }}
           >
             {/* Bright numbered badge */}
