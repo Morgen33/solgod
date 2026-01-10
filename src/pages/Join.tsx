@@ -246,7 +246,7 @@ const Join = () => {
             <p className="text-muted-foreground mb-8 italic">When you're ready, you'll know.</p>
 
             <div className="flex justify-center">
-              <ShinyButton as="a" href="https://magiceden.us/marketplace/solgods" target="_blank" rel="noopener noreferrer">
+              <ShinyButton as="a" href="https://magiceden.us/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
                 Buy on Magic Eden
                 <ArrowRight size={20} />
               </ShinyButton>

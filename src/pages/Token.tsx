@@ -267,7 +267,7 @@ const Token = () => {
                   <div className="bg-secondary/30 rounded-xl p-6">
                     <h4 className="font-semibold text-lg mb-4">Step 2: Buy Your First NFT</h4>
                     <ul className="space-y-2 text-muted-foreground">
-                      <li><strong>Visit Magic Eden:</strong> The premier Solana marketplace (magiceden.io).</li>
+                      <li><strong>Visit Magic Eden:</strong> The premier Solana marketplace (magiceden.us).</li>
                       <li><strong>Connect Wallet:</strong> Click "Connect" in the top right corner.</li>
                       <li><strong>Choose Your NFT:</strong> Browse the Solgods or SolCity collections.</li>
                       <li><strong>Confirm:</strong> Approve the transaction. Your NFT will appear in your "Collectibles" tab instantly.</li>

@@ -50,7 +50,7 @@ export default function SolGods() {
           <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
             Owning a SolGod is more than just holding a piece of history—it is your key to a multi-layered ecosystem of utility, governance, and passive growth. From unique artistic rarities to structured community leadership, here is what is available to every SolGod:
           </p>
-          <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
+          <ShinyButton as="a" href="https://magiceden.us/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
             Buy on Magic Eden
             <ArrowRight className="ml-2 h-4 w-4" />
           </ShinyButton>
@@ -349,7 +349,7 @@ export default function SolGods() {
                 Join SolGods and unlock the full power of the ecosystem.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <ShinyButton as="a" href="https://magiceden.io/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
+                <ShinyButton as="a" href="https://magiceden.us/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
                   Buy SolGods
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </ShinyButton>
