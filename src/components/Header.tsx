@@ -222,6 +222,43 @@ export function Header() {
                 Play with the Orb
               </Link>
 
+              {/* SolGods/SolCity/$SOLGODS as grouped segment right under the orb */}
+              <div className="flex gap-2 px-4 py-2">
+                <Link
+                  to="/solgods"
+                  onClick={() => setMobileOpen(false)}
+                  className={`flex-1 px-3 py-2.5 text-sm font-medium text-center rounded-lg transition-all ${
+                    location.pathname === "/solgods"
+                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff]"
+                      : "text-[#01b2ff] bg-[#01b2ff]/10 hover:bg-[#01b2ff]/20"
+                  }`}
+                >
+                  SolGods
+                </Link>
+                <Link
+                  to="/solcity"
+                  onClick={() => setMobileOpen(false)}
+                  className={`flex-1 px-3 py-2.5 text-sm font-medium text-center rounded-lg transition-all ${
+                    location.pathname === "/solcity"
+                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff]"
+                      : "text-[#01b2ff] bg-[#01b2ff]/10 hover:bg-[#01b2ff]/20"
+                  }`}
+                >
+                  SolCity
+                </Link>
+                <Link
+                  to="/token"
+                  onClick={() => setMobileOpen(false)}
+                  className={`flex-1 px-3 py-2.5 text-sm font-medium text-center rounded-lg transition-all ${
+                    location.pathname === "/token"
+                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff]"
+                      : "text-[#01b2ff] bg-[#01b2ff]/10 hover:bg-[#01b2ff]/20"
+                  }`}
+                >
+                  $SOLGODS
+                </Link>
+              </div>
+
               <Link
                 to="/home"
                 onClick={() => setMobileOpen(false)}
@@ -244,44 +281,6 @@ export function Header() {
                 }`}
               >
                 About
-              </Link>
-
-              {/* SolGods/SolCity as grouped segment on mobile too */}
-              <div className="flex gap-2 px-4 py-2">
-                <Link
-                  to="/solgods"
-                  onClick={() => setMobileOpen(false)}
-                  className={`flex-1 px-4 py-2.5 text-sm font-medium text-center rounded-lg transition-all ${
-                    location.pathname === "/solgods"
-                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff]"
-                      : "text-[#01b2ff] bg-[#01b2ff]/10 hover:bg-[#01b2ff]/20"
-                  }`}
-                >
-                  SolGods
-                </Link>
-                <Link
-                  to="/solcity"
-                  onClick={() => setMobileOpen(false)}
-                  className={`flex-1 px-4 py-2.5 text-sm font-medium text-center rounded-lg transition-all ${
-                    location.pathname === "/solcity"
-                      ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff]"
-                      : "text-[#01b2ff] bg-[#01b2ff]/10 hover:bg-[#01b2ff]/20"
-                  }`}
-                >
-                  SolCity
-                </Link>
-              </div>
-
-              <Link
-                to="/token"
-                onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
-                  location.pathname === "/token"
-                    ? "text-[#01b2ff] bg-[#01b2ff]/10"
-                    : "text-white/70 hover:text-white hover:bg-white/5"
-                }`}
-              >
-                Token
               </Link>
 
               {/* Community Section */}
