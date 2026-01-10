@@ -316,18 +316,18 @@ function MemberCard({ member, size = "md" }: { member: TeamMember; size?: "lg" |
 function TeamSection({ group, featured = false }: { group: TeamGroup; featured?: boolean }) {
   return (
     <div className={`${featured ? "mb-12" : "mb-10"} w-full`}>
-      <div className="flex items-center justify-center gap-3 mb-6">
+      <div className="flex items-center justify-center gap-3 mb-6 px-2">
         <div 
-          className="inline-flex items-center justify-center rounded-lg bg-primary/20 p-2 text-[#3b82f6]"
+          className="inline-flex items-center justify-center rounded-lg bg-primary/20 p-2 text-[#3b82f6] flex-shrink-0"
           style={{ filter: "drop-shadow(0 0 8px rgba(59, 130, 246, 0.6))" }}
         >
           {ROLE_ICON[group.role] ?? <Users className="h-4 w-4" />}
         </div>
-        <h3 className={`font-bold uppercase tracking-wide ${featured ? "text-xl text-primary" : "text-lg text-foreground"}`}>
+        <h3 className={`font-bold uppercase tracking-wide text-center ${featured ? "text-xl text-primary" : "text-base sm:text-lg text-foreground"}`}>
           {group.role}
         </h3>
       </div>
-      <div className="flex flex-wrap gap-8 justify-center">
+      <div className="flex flex-wrap gap-6 sm:gap-8 justify-center px-2">
         {group.members.map((m) => (
           <MemberCard key={m.name} member={m} size={featured ? "lg" : "md"} />
         ))}
@@ -462,7 +462,7 @@ const Team = () => {
           <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent mb-12" />
 
           {/* Other Roles Grid */}
-          <div className="grid md:grid-cols-2 gap-x-12 text-center place-items-center">
+          <div className="flex flex-col items-center gap-8 md:grid md:grid-cols-2 md:gap-x-12">
             {otherRoles.map((g) => (
               <TeamSection key={g.role} group={g} />
             ))}
