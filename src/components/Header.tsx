@@ -146,7 +146,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center h-full flex-1">
-            {/* SolGods/SolCity - Premium segmented control on left */}
+            {/* SolGods/SolCity/$SOLGODS - Premium segmented control on left */}
             <div className="relative flex items-center p-1 rounded-xl bg-gradient-to-r from-[#01b2ff]/10 to-[#0190cc]/10 border border-[#01b2ff]/20 shadow-[0_0_20px_rgba(1,178,255,0.15)] ml-4">
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#01b2ff]/5 to-[#38bdf8]/5 blur-sm" />
               <Link
@@ -169,13 +169,22 @@ export function Header() {
               >
                 SolCity
               </Link>
+              <Link
+                to="/token"
+                className={`relative z-10 px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
+                  location.pathname === "/token"
+                    ? "text-white bg-gradient-to-r from-[#0190cc] to-[#01b2ff] shadow-lg shadow-[#01b2ff]/30"
+                    : "text-[#01b2ff] hover:text-white hover:bg-white/10"
+                }`}
+              >
+                $SOLGODS
+              </Link>
             </div>
             
             {/* Nav links pushed to the right */}
             <div className="flex items-center gap-0.5 ml-auto">
               <NavLink to="/home" isActive={location.pathname === "/home"}>Home</NavLink>
               <NavLink to="/about" isActive={location.pathname === "/about"}>About</NavLink>
-              <NavLink to="/token" isActive={location.pathname === "/token"}>Token</NavLink>
               <DropdownMenu 
                 label="Community" 
                 items={dropdowns[0].items} 
