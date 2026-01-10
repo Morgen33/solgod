@@ -71,27 +71,27 @@ const Index = () => {
             >
               Probably
             </h1>
-            <div className="h-20 sm:h-28 md:h-36" style={{ perspective: "1000px" }}>
-              <VaporizeTextCycle
-                texts={["NOTHING", "SOMETHING", "EVERYTHING"]}
-                font={{
-                  fontFamily: "system-ui, -apple-system, sans-serif",
-                  fontSize: "80px",
-                  fontWeight: 700,
-                }}
-                color="rgb(168, 216, 255)"
-                spread={4}
-                density={6}
-                animation={{
-                  vaporizeDuration: 2,
-                  fadeInDuration: 0.8,
-                  waitDuration: 2,
-                }}
-                direction="left-to-right"
-                alignment="center"
-                tag={Tag.H1}
-              />
-            </div>
+                <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold italic h-20 sm:h-28 md:h-36" style={{ perspective: "1000px" }}>
+                  <VaporizeTextCycle
+                    texts={["NOTHING", "SOMETHING", "EVERYTHING"]}
+                    font={{
+                      fontFamily: "inherit",
+                      fontSize: "clamp(48px, 8vw, 96px)",
+                      fontWeight: 700,
+                    }}
+                    color="rgb(168, 216, 255)"
+                    spread={4}
+                    density={6}
+                    animation={{
+                      vaporizeDuration: 2,
+                      fadeInDuration: 0.8,
+                      waitDuration: 2,
+                    }}
+                    direction="left-to-right"
+                    alignment="center"
+                    tag={Tag.H1}
+                  />
+                </h1>
           </div>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
