@@ -514,7 +514,7 @@ export default function PlasmaHero({
             className="absolute h-auto object-contain mix-blend-screen transition-all duration-[1500ms] ease-in-out"
             style={{
               // Size relative to orb using vmin so portrait mobile doesn't get clamped by vw
-              width: `${characterScale * (isMobileViewport ? 135 : 108) * hero.scale}vmin`,
+              width: `${characterScale * (isMobileViewport ? 180 : 108) * hero.scale}vmin`,
               filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
               opacity: currentHeroIndex === index && !isTransitioning ? 0.3 : 0,
             }}
@@ -572,7 +572,7 @@ export default function PlasmaHero({
 
       {/* Enter button below the ball */}
       <div 
-        className={`absolute bottom-12 md:bottom-16 left-0 right-0 flex justify-center z-20 transition-opacity duration-1000 ${
+        className={`absolute bottom-[38%] md:bottom-16 left-0 right-0 flex justify-center z-20 transition-opacity duration-1000 ${
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
