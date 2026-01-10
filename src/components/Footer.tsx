@@ -28,7 +28,7 @@ export function Footer() {
           {/* Brand - Centered on mobile */}
           <div className="text-center mb-8">
             <Link to="/" className="inline-block mb-3">
-              <img src={solgodsIcon} alt="SolGods" className="h-14 w-auto mx-auto" />
+              <img src={solgodsIcon} alt="SolGods" className="h-14 w-auto mx-auto brightness-150" />
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs mx-auto">
               Stand in the light. Build the system. Ascend as a SolGod.
