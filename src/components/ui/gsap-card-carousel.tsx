@@ -1,9 +1,6 @@
 import { useEffect, useRef, useCallback } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface GsapCardCarouselProps {
   images: string[];
@@ -14,27 +11,9 @@ export const GsapCardCarousel = ({ images }: GsapCardCarouselProps) => {
   const cardsRef = useRef<HTMLUListElement>(null);
   const seamlessLoopRef = useRef<gsap.core.Timeline | null>(null);
   const scrubRef = useRef<gsap.core.Tween | null>(null);
-  const triggerRef = useRef<ScrollTrigger | null>(null);
-  const iterationRef = useRef(0);
+  const currentTimeRef = useRef(0);
 
   const spacing = 0.1;
-  const snap = gsap.utils.snap(spacing);
-
-  const wrapForward = useCallback((trigger: ScrollTrigger) => {
-    iterationRef.current++;
-    (trigger as any).wrapping = true;
-    trigger.scroll(trigger.start + 1);
-  }, []);
-
-  const wrapBackward = useCallback((trigger: ScrollTrigger) => {
-    // Don't wrap backward on first iteration - allow user to scroll up and exit
-    if (iterationRef.current <= 0) {
-      return;
-    }
-    iterationRef.current--;
-    (trigger as any).wrapping = true;
-    trigger.scroll(trigger.end - 1);
-  }, []);
 
   const buildSeamlessLoop = useCallback((items: Element[], spacing: number) => {
     const overlap = Math.ceil(1 / spacing);
@@ -110,33 +89,24 @@ export const GsapCardCarousel = ({ images }: GsapCardCarouselProps) => {
   }, []);
 
   const scrubTo = useCallback((totalTime: number) => {
-    if (!seamlessLoopRef.current || !triggerRef.current) return;
+    if (!seamlessLoopRef.current || !scrubRef.current) return;
     
-    const progress =
-      (totalTime - seamlessLoopRef.current.duration() * iterationRef.current) /
-      seamlessLoopRef.current.duration();
+    const duration = seamlessLoopRef.current.duration();
+    // Wrap the time to keep it within bounds
+    let wrappedTime = totalTime % duration;
+    if (wrappedTime < 0) wrappedTime += duration;
     
-    if (progress > 1) {
-      wrapForward(triggerRef.current);
-    } else if (progress < 0) {
-      wrapBackward(triggerRef.current);
-    } else {
-      triggerRef.current.scroll(
-        triggerRef.current.start + progress * (triggerRef.current.end - triggerRef.current.start)
-      );
-    }
-  }, [wrapForward, wrapBackward]);
+    currentTimeRef.current = wrappedTime;
+    (scrubRef.current.vars as any).totalTime = wrappedTime;
+    scrubRef.current.invalidate().restart();
+  }, []);
 
   const handleNext = useCallback(() => {
-    if (scrubRef.current) {
-      scrubTo((scrubRef.current.vars as any).totalTime + spacing);
-    }
+    scrubTo(currentTimeRef.current + spacing);
   }, [scrubTo, spacing]);
 
   const handlePrev = useCallback(() => {
-    if (scrubRef.current) {
-      scrubTo((scrubRef.current.vars as any).totalTime - spacing);
-    }
+    scrubTo(currentTimeRef.current - spacing);
   }, [scrubTo, spacing]);
 
   useEffect(() => {
@@ -153,37 +123,17 @@ export const GsapCardCarousel = ({ images }: GsapCardCarouselProps) => {
       paused: true,
     });
 
-    triggerRef.current = ScrollTrigger.create({
-      trigger: galleryRef.current,
-      start: "top top",
-      end: "+=3000",
-      pin: true,
-      onUpdate(self) {
-        if (self.progress === 1 && self.direction > 0 && !(self as any).wrapping) {
-          wrapForward(self);
-        } else if (self.progress < 1e-5 && self.direction < 0 && !(self as any).wrapping) {
-          wrapBackward(self);
-        } else {
-          if (scrubRef.current && seamlessLoopRef.current) {
-            (scrubRef.current.vars as any).totalTime = snap(
-              (iterationRef.current + self.progress) * seamlessLoopRef.current.duration()
-            );
-            scrubRef.current.invalidate().restart();
-          }
-          (self as any).wrapping = false;
-        }
-      },
-    });
+    // Start the animation
+    scrubRef.current.invalidate().restart();
 
     return () => {
-      triggerRef.current?.kill();
       seamlessLoopRef.current?.kill();
       scrubRef.current?.kill();
     };
-  }, [images, buildSeamlessLoop, snap, wrapForward, wrapBackward]);
+  }, [images, buildSeamlessLoop]);
 
   return (
-    <div ref={galleryRef} className="relative w-full h-screen overflow-hidden">
+    <div ref={galleryRef} className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
       <ul
         ref={cardsRef}
         className="absolute w-56 h-72 md:w-64 md:h-80 lg:w-72 lg:h-96"
