@@ -171,7 +171,6 @@ const MEMBER_BACK_AVATARS: Record<string, string> = {
   Happy: happyAvatar,
   Auskyn: auskynBackAvatar,
   Mister: misterBackAvatar,
-  Asta: astaBackAvatar,
   Morgen: morgenBackAvatar,
   Eddie: eddieBackAvatar,
   DaveR: daverBackAvatar,
