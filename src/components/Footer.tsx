@@ -173,10 +173,18 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 sm:pt-8 border-t border-border/50 flex items-center justify-center">
+        <div className="pt-6 sm:pt-8 border-t border-border/50 flex flex-col items-center justify-center gap-2">
           <p className="text-xs sm:text-sm text-muted-foreground">
             © {new Date().getFullYear()} SolGods. All rights reserved.
           </p>
+          <a 
+            href="https://builtbycmh.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-xs text-muted-foreground/70 hover:text-primary transition-colors"
+          >
+            Created by CMH Marketing
+          </a>
         </div>
       </div>
     </footer>
