@@ -11,11 +11,11 @@ const quickLinks = [
   { label: "Linktree", href: "https://linktr.ee/SolGodsNFTS", icon: TreePine },
 ];
 
-const navLinks = [
+const navLinks: { label: string; to: string; external?: boolean }[] = [
   { label: "About", to: "/about" },
   { label: "Token", to: "/token" },
   { label: "DAO", to: "/dao" },
-  { label: "Spaces", to: "/spaces" },
+  { label: "Spaces", to: "https://cal.solgodsnfts.com", external: true },
   { label: "SolCity", to: "/solcity" },
   { label: "Partnerships", to: "/partnerships" },
 ];
@@ -103,12 +103,23 @@ export function Footer() {
             <ul className="space-y-2">
               {navLinks.slice(3).map((link) => (
                 <li key={link.label}>
-                  <Link
-                    to={link.to}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.to}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.to}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
