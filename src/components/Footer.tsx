@@ -70,7 +70,7 @@ export function Footer() {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden sm:grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="hidden sm:grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="block mb-4">
@@ -136,35 +136,36 @@ export function Footer() {
               })}
             </ul>
           </div>
+
+          {/* QR Code */}
+          <div className="flex flex-col items-center">
+            <h4 className="font-semibold text-foreground mb-4">Quick Access</h4>
+            <a 
+              href="https://linktr.ee/SolGodsNFTS" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center gap-3"
+            >
+              <div className="relative p-3 rounded-2xl bg-gradient-to-br from-white via-white to-gray-100 shadow-lg group-hover:shadow-[0_0_30px_rgba(1,178,255,0.4)] transition-all duration-300 group-hover:scale-105">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#01b2ff]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <img 
+                  src={linktreeQr} 
+                  alt="SolGods Linktree QR Code" 
+                  className="w-24 h-24 rounded-xl relative z-10"
+                />
+              </div>
+              <span className="text-xs text-muted-foreground group-hover:text-[#01b2ff] transition-colors font-medium">
+                Scan to Connect
+              </span>
+            </a>
+          </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 sm:pt-8 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-6">
-          {/* QR Code */}
-          <a 
-            href="https://linktr.ee/SolGodsNFTS" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="group flex flex-col items-center gap-2"
-          >
-            <div className="relative p-2 rounded-xl bg-white/90 shadow-lg group-hover:shadow-[0_0_20px_rgba(1,178,255,0.3)] transition-all duration-300">
-              <img 
-                src={linktreeQr} 
-                alt="SolGods Linktree QR Code" 
-                className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg"
-              />
-            </div>
-            <span className="text-xs text-muted-foreground group-hover:text-[#01b2ff] transition-colors">
-              Scan to Connect
-            </span>
-          </a>
-
+        <div className="pt-6 sm:pt-8 border-t border-border/50 flex items-center justify-center">
           <p className="text-xs sm:text-sm text-muted-foreground">
             © {new Date().getFullYear()} SolGods. All rights reserved.
           </p>
-          
-          {/* Spacer for balance on desktop */}
-          <div className="hidden sm:block w-24"></div>
         </div>
       </div>
     </footer>
