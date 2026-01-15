@@ -1,6 +1,7 @@
 import { Twitter, MessageCircle, Layers, ShoppingBag, TreePine } from "lucide-react";
 import { Link } from "react-router-dom";
 import solgodsIcon from "@/assets/solgods-icon.png";
+import linktreeQr from "@/assets/linktree-qr.webp";
 
 const quickLinks = [
   { label: "X/Twitter", href: "https://x.com/SOLGodsNFTs", icon: Twitter },
@@ -138,10 +139,32 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 sm:pt-8 border-t border-border/50 flex items-center justify-center">
+        <div className="pt-6 sm:pt-8 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-6">
+          {/* QR Code */}
+          <a 
+            href="https://linktr.ee/SolGodsNFTS" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group flex flex-col items-center gap-2"
+          >
+            <div className="relative p-2 rounded-xl bg-white/90 shadow-lg group-hover:shadow-[0_0_20px_rgba(1,178,255,0.3)] transition-all duration-300">
+              <img 
+                src={linktreeQr} 
+                alt="SolGods Linktree QR Code" 
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg"
+              />
+            </div>
+            <span className="text-xs text-muted-foreground group-hover:text-[#01b2ff] transition-colors">
+              Scan to Connect
+            </span>
+          </a>
+
           <p className="text-xs sm:text-sm text-muted-foreground">
             © {new Date().getFullYear()} SolGods. All rights reserved.
           </p>
+          
+          {/* Spacer for balance on desktop */}
+          <div className="hidden sm:block w-24"></div>
         </div>
       </div>
     </footer>
