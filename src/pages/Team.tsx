@@ -23,7 +23,7 @@ import viperAvatar from "@/assets/team/viper.png";
 import trashPandaAvatar from "@/assets/team/trash-panda.jpg";
 import trashPandaBackAvatar from "@/assets/team/trash-panda-back.jpg";
 import glowBackAvatar from "@/assets/team/glow-back.webp";
-import donaldAvatar from "@/assets/team/donald.jpeg";
+
 import happyAvatar from "@/assets/team/happy.jpg";
 import happyBackAvatar from "@/assets/team/happy-back.png";
 import rasiAvatar from "@/assets/team/rasi.webp";
@@ -115,7 +115,6 @@ const TEAM: TeamGroup[] = [
       { name: "Savage", note: "X Management / Moderator" },
       { name: "Auskyn", note: "Moderator" },
       { name: "The SUL", note: "Moderator" },
-      { name: "Donald", note: "Moderator" },
       { name: "Sonia", note: "Moderator" },
       { name: "Woolfie", note: "Moderator" },
       { name: "KMAC", note: "Moderator" },
@@ -149,7 +148,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   IRB: irbAvatar,
   Viper: viperAvatar,
   TrashPanda: trashPandaAvatar,
-  Donald: donaldAvatar,
+  
   Rasi: rasiAvatar,
   Happy: happyBackAvatar,
   Sonia: soniaAvatar,
