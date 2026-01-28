@@ -100,18 +100,7 @@ const Index = () => {
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ShinyButton as="a" href="https://magiceden.us/marketplace/solgods_" target="_blank" rel="noopener noreferrer">
-              Buy SolGods
-              <ArrowRight size={20} />
-            </ShinyButton>
-            <ShinyButton
-              onClick={() => {
-                window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer");
-              }}
-            >
-              Join Discord
-            </ShinyButton>
+          <div className="flex justify-center">
             <ShinyButton
               onClick={() => {
                 window.open("https://x.com/solgodsnfts", "_blank", "noopener,noreferrer");
