@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Layout } from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { 
@@ -6,12 +7,23 @@ import {
 import { ShinyButton } from "@/components/ui/shiny-button";
 import VaporizeTextCycle from "@/components/ui/vaporize-text-cycle";
 import { GlowCard } from "@/components/ui/spotlight-card";
+import { useIsMobile } from "@/hooks/use-mobile";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 
-
-
 const Index = () => {
+  const isMobile = useIsMobile();
+  const [showVaporize, setShowVaporize] = useState(false);
+
+  useEffect(() => {
+    // On desktop, show immediately. On mobile, delay to let page render first.
+    if (!isMobile) {
+      setShowVaporize(true);
+    } else {
+      const timer = setTimeout(() => setShowVaporize(true), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [isMobile]);
   return (
     <Layout>
       {/* Hero Section */}
@@ -25,44 +37,62 @@ const Index = () => {
           
           {/* Vaporize Text Hero - Desktop */}
           <div className="mb-6 h-24 sm:h-28 md:h-32 hidden sm:block">
-            <VaporizeTextCycle
-              texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
-              font={{
-                fontFamily: "Cinzel, serif",
-                fontSize: "64px",
-                fontWeight: 700,
-              }}
-              color="rgb(1, 178, 255)"
-              spread={5}
-              density={5}
-              animation={{
-                vaporizeDuration: 1.2,
-                fadeInDuration: 0.6,
-                waitDuration: 1,
-              }}
-              alignment="center"
-            />
+            {showVaporize ? (
+              <VaporizeTextCycle
+                texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
+                font={{
+                  fontFamily: "Cinzel, serif",
+                  fontSize: "64px",
+                  fontWeight: 700,
+                }}
+                color="rgb(1, 178, 255)"
+                spread={5}
+                density={5}
+                animation={{
+                  vaporizeDuration: 1.2,
+                  fadeInDuration: 0.6,
+                  waitDuration: 1,
+                }}
+                alignment="center"
+              />
+            ) : (
+              <div 
+                className="text-5xl font-bold animate-fade-in"
+                style={{ fontFamily: 'Cinzel, serif', color: 'rgb(1, 178, 255)' }}
+              >
+                Probably Nothing
+              </div>
+            )}
           </div>
           
           {/* Vaporize Text Hero - Mobile */}
           <div className="mb-6 h-16 sm:hidden">
-            <VaporizeTextCycle
-              texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
-              font={{
-                fontFamily: "Cinzel, serif",
-                fontSize: "28px",
-                fontWeight: 700,
-              }}
-              color="rgb(1, 178, 255)"
-              spread={3}
-              density={4}
-              animation={{
-                vaporizeDuration: 1.2,
-                fadeInDuration: 0.6,
-                waitDuration: 1,
-              }}
-              alignment="center"
-            />
+            {showVaporize ? (
+              <VaporizeTextCycle
+                texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
+                font={{
+                  fontFamily: "Cinzel, serif",
+                  fontSize: "28px",
+                  fontWeight: 700,
+                }}
+                color="rgb(1, 178, 255)"
+                spread={3}
+                density={4}
+                animation={{
+                  vaporizeDuration: 1.2,
+                  fadeInDuration: 0.6,
+                  waitDuration: 1,
+                }}
+                alignment="center"
+              />
+            ) : (
+              <div 
+                className="text-3xl font-bold animate-fade-in"
+                style={{ fontFamily: 'Cinzel, serif', color: 'rgb(1, 178, 255)' }}
+              >
+                Probably Nothing
+              </div>
+            )}
           </div>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">

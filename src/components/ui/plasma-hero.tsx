@@ -132,6 +132,7 @@ export default function PlasmaHero({
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isMobileViewport, setIsMobileViewport] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
 
   // Cycle through heroes after character is shown
   useEffect(() => {
@@ -482,7 +483,7 @@ export default function PlasmaHero({
 
   return (
     <div 
-      className="relative w-full h-screen bg-black overflow-hidden"
+      className={`relative w-full h-screen bg-black overflow-hidden transition-opacity duration-500 ${isExiting ? 'opacity-0' : 'opacity-100'}`}
     >
       {/* Neural Network Background */}
       <NeuralNetworkCanvas className="absolute inset-0 z-0" />
@@ -584,7 +585,10 @@ export default function PlasmaHero({
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <ShinyButton onClick={onEnter}>
+        <ShinyButton onClick={() => {
+          setIsExiting(true);
+          setTimeout(() => onEnter?.(), 400);
+        }}>
           Enter
         </ShinyButton>
       </div>
