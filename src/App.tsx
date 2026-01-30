@@ -28,7 +28,11 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <Suspense fallback={<div className="min-h-screen bg-black" />}>
+        <Suspense fallback={
+          <div className="min-h-screen bg-black flex items-center justify-center">
+            <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+          </div>
+        }>
           <Routes>
             <Route path="/" element={<Intro />} />
             <Route path="/home" element={<Index />} />
