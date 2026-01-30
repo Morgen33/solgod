@@ -14,6 +14,7 @@ import Token from "./pages/Token";
 import Partnerships from "./pages/Partnerships";
 
 import SolCity from "./pages/SolCity";
+import MintSolCity from "./pages/MintSolCity";
 import Team from "./pages/Team";
 import Join from "./pages/Join";
 import Gallery from "./pages/Gallery";
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/partnerships" element={<Partnerships />} />
             
             <Route path="/solcity" element={<SolCity />} />
+            <Route path="/mint-solcity" element={<MintSolCity />} />
             <Route path="/team" element={<Team />} />
             <Route path="/join" element={<Join />} />
             <Route path="/gallery" element={<Gallery />} />
