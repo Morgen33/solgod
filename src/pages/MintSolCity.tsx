@@ -30,10 +30,15 @@ const MintSolCity = () => {
         <p className="text-muted-foreground text-lg mb-12 text-center max-w-xl">
           The SolCity mint is approaching. Prepare to claim your place in the city.
         </p>
-        <ShinyButton onClick={() => navigate("/home")}>
-          <ArrowLeft size={20} />
-          Back to Home
-        </ShinyButton>
+        <div className="flex flex-col gap-4">
+          <ShinyButton onClick={() => navigate("/solcity")}>
+            About SolCity
+          </ShinyButton>
+          <ShinyButton onClick={() => navigate("/home")}>
+            <ArrowLeft size={20} />
+            Back to Home
+          </ShinyButton>
+        </div>
       </section>
     </Layout>
   );
