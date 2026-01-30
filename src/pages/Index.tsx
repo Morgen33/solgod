@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { Layout } from "@/components/Layout";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, Twitter, Shield, Globe, Cog
-} from "lucide-react";
+import { Twitter, Shield, Globe, Cog } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import VaporizeTextCycle from "@/components/ui/vaporize-text-cycle";
 import { GlowCard } from "@/components/ui/spotlight-card";
@@ -13,6 +12,7 @@ import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 
 const Index = () => {
   const isMobile = useIsMobile();
+  const navigate = useNavigate();
   const [showVaporize, setShowVaporize] = useState(false);
 
   useEffect(() => {
@@ -101,6 +101,9 @@ const Index = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
+            <ShinyButton onClick={() => navigate("/mint-solcity")}>
+              Mint SolCity
+            </ShinyButton>
             <ShinyButton
               onClick={() => {
                 window.open("https://magiceden.us/marketplace/solgods", "_blank", "noopener,noreferrer");
