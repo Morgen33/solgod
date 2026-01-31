@@ -338,7 +338,10 @@ const Index = () => {
 
       {/* Tagline */}
       <section className="py-12 px-4 text-center">
-        <p className="text-xl sm:text-2xl text-muted-foreground">
+        <p 
+          className="text-xl sm:text-2xl text-muted-foreground tracking-wide"
+          style={{ fontFamily: "'Cinzel', serif" }}
+        >
           Born of Light, Forged in Shadow. Build the System. <span style={{ color: "#01b2ff" }}>Ascend.</span>
         </p>
       </section>
