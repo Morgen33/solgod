@@ -32,7 +32,7 @@ export function Footer() {
               <img src={solgodsIcon} alt="SolGods" className="h-14 w-auto mx-auto brightness-150" />
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs mx-auto">
-              Stand in the light. Build the system. Ascend as a SolGod.
+              Born of Light, Forged in Shadow. Build the System. Ascend.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export function Footer() {
               <img src={solgodsIcon} alt="SolGods" className="h-16 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground">
-              Stand in the light. Build the system. Ascend as a SolGod.
+              Born of Light, Forged in Shadow. Build the System. Ascend.
             </p>
           </div>
 
