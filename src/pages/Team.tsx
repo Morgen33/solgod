@@ -29,8 +29,6 @@ import happyBackAvatar from "@/assets/team/happy-back.png";
 import rasiAvatar from "@/assets/team/rasi.webp";
 import soniaAvatar from "@/assets/team/sonia.jpg";
 import daverAvatar from "@/assets/team/daver.jpg";
-import astaBackAvatar from "@/assets/team/asta-back.png";
-import astaAvatar from "@/assets/team/asta.jpg";
 import savageAvatar from "@/assets/team/savage.jpg";
 import eddieAvatar from "@/assets/team/eddie.avif";
 import eddieBackAvatar from "@/assets/team/eddie-back.jpg";
@@ -73,7 +71,6 @@ const TEAM: TeamGroup[] = [
   {
     role: "Co-Founders",
     members: [
-      { name: "Asta", note: "Coin Advisor / Tokenomics Expert" },
       { name: "Truth", note: "Coin Advisor / Tokenomics Expert" },
     ],
   },
@@ -153,7 +150,6 @@ const MEMBER_AVATARS: Record<string, string> = {
   Happy: happyBackAvatar,
   Sonia: soniaAvatar,
   DaveR: daverAvatar,
-  Asta: astaAvatar,
   Savage: savageAvatar,
   Eddie: eddieAvatar,
   Truth: truthAvatar,
