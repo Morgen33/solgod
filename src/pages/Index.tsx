@@ -106,7 +106,7 @@ const Index = () => {
             </ShinyButton>
             <ShinyButton
               onClick={() => {
-                window.open("https://magiceden.us/marketplace/solgods", "_blank", "noopener,noreferrer");
+                window.open("https://magiceden.us/marketplace/solgods_", "_blank", "noopener,noreferrer");
               }}
             >
               Buy SolGods
