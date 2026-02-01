@@ -94,8 +94,8 @@ const solgods: string[] = [
   iceAngel, butterflyLaser, rainbowArcher,
   cosmicDemon, greenMafia, pantherRider, skeletonKnight, reaperSuit,
   gangHq, iceQueen, genesis38, phoenixWarrior, demonTrident, medusa,
-  fireHammer, cosmicWarrior, leopardBlind,
-  captainCosmic, genesis127,
+  fireHammer, cosmicWarrior, leopardBlind, iceMech, pinkShivaFur,
+  captainCosmic, reaperLaser, genesis127,
   genesis255, genesis323, genesis736, genesis933,
   genesis1280, genesis1526, genesis1616, genesis1801, genesis1814,
   genesis2004, genesis2397, genesis2405, genesis2903,
@@ -104,7 +104,7 @@ const solgods: string[] = [
   phoenixHood, tuxedoAngel,
   mechaQueen, rainbowDemon, pantherSamurai, haloZombie,
   cosmicNinja, lavaQueen, vineKing, iceKing, lavaLaser
-];
+].filter(Boolean);
 
 const Gallery = () => {
   return (
