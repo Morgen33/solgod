@@ -61,14 +61,14 @@ const SolCity = () => {
 
   return <Layout className="bg-solcity" showStars>
       {/* Hero Section */}
-      <section className="min-h-[50vh] sm:min-h-[60vh] flex items-center justify-center px-4 pb-0">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="mb-8" style={{
+      <section className="min-h-[50vh] sm:min-h-[60vh] flex items-center justify-center px-0 pb-0 overflow-visible">
+        <div className="w-full max-w-6xl mx-auto text-center px-4 overflow-visible">
+          <div className="mb-8 overflow-visible" style={{
           animation: "fade-in 0.8s ease-out forwards"
         }}>
              <img src={solcityLogo} alt="SolCity" className="w-64 sm:w-80 md:w-96 mx-auto" />
             {/* Vaporize Text - Desktop */}
-            <div className="mt-4 h-24 sm:h-28 md:h-32 hidden sm:block">
+            <div className="mt-4 h-24 sm:h-28 md:h-32 hidden sm:block overflow-visible">
               {showVaporize ? (
                 <VaporizeTextCycle
                   texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
@@ -94,7 +94,7 @@ const SolCity = () => {
               )}
             </div>
             {/* Vaporize Text - Mobile */}
-            <div className="mt-4 h-16 sm:hidden">
+            <div className="mt-4 h-16 sm:hidden overflow-visible">
               {showVaporize ? (
                 <VaporizeTextCycle
                   texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
