@@ -53,7 +53,7 @@ const SolCity = () => {
           animation: "fade-in 0.8s ease-out forwards"
         }}>
              <img src={solcityLogo} alt="SolCity" className="w-64 sm:w-80 md:w-96 mx-auto" />
-            <div className="flex items-center justify-center gap-2 mt-4 text-2xl sm:text-3xl md:text-4xl font-bold">
+            <div className="flex items-center justify-center gap-2 mt-4 text-2xl sm:text-3xl md:text-4xl font-bold" style={{ fontFamily: "'Cinzel', serif" }}>
               <span 
                 className="bg-clip-text text-transparent"
                 style={{
