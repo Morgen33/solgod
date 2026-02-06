@@ -34,7 +34,7 @@ const Index = () => {
           <img 
             src={solgodsMainLogo} 
             alt="SolGods" 
-            className="h-32 sm:h-40 w-auto mx-auto mb-8"
+            className="h-48 sm:h-72 w-auto mx-auto mb-8"
           />
           
           {/* Vaporize Text Hero - Desktop */}
