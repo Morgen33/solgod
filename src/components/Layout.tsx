@@ -54,7 +54,7 @@ export function Layout({ children, className, showStars = false }: LayoutProps) 
       )}
       <Header />
       <MintBanner />
-      <main className="relative z-10 pt-26 sm:pt-30 flex-1">
+      <main className="relative z-10 pt-[6.5rem] sm:pt-[7.5rem] flex-1">
         {children}
       </main>
       <Footer />

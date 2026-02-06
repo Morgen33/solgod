@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import PlasmaHero from "@/components/ui/plasma-hero";
 import { Seo } from "@/components/Seo";
+import { MintBanner } from "@/components/MintBanner";
 
 export default function Intro() {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ export default function Intro() {
         description="Welcome to SolGods. 3,333 divine beings on Solana. Enter to discover the collection."
         canonicalPath="/"
       />
+      <MintBanner />
       <PlasmaHero
         title="SOLGODS"
         subtitle="NFTS"
