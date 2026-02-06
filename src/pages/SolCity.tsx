@@ -79,6 +79,13 @@ const SolCity = () => {
             >
               Mint SolCity Here
             </a>
+            <div className="mt-6">
+              <ShinyButton
+                onClick={() => window.open("https://launchmynft.io/collections/6SHjDHLFpGQnE241cxeTiCBe8rVVa7Bqnq7RCdNtBURt/OyJM6fOrhHVQb8XM4hvY", "_blank")}
+              >
+                Go to LaunchMyNFT
+              </ShinyButton>
+            </div>
           </div>
           
         </div>
