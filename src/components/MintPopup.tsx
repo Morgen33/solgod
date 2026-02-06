@@ -97,7 +97,7 @@ export const MintPopup = () => {
                 rel="noopener noreferrer"
                 className="text-center text-[#01b2ff] hover:text-[#01b2ff]/80 transition-colors underline underline-offset-2 text-sm"
               >
-                🎙️ Join us live for the X Space
+                🎙️ Join us live for the X Space at 5 PM EST
               </a>
             </div>
           </div>
