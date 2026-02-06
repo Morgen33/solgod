@@ -68,7 +68,7 @@ const SolCity = () => {
         }}>
              <img src={solcityLogo} alt="SolCity" className="w-64 sm:w-80 md:w-96 mx-auto" />
             {/* Vaporize Text - Desktop */}
-            <div className="mt-4 h-24 sm:h-28 md:h-32 hidden sm:block overflow-visible">
+            <div className="mt-4 h-32 sm:h-36 md:h-40 hidden sm:block overflow-visible">
               {showVaporize ? (
                 <VaporizeTextCycle
                   texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
@@ -94,7 +94,7 @@ const SolCity = () => {
               )}
             </div>
             {/* Vaporize Text - Mobile */}
-            <div className="mt-4 h-16 sm:hidden overflow-visible">
+            <div className="mt-4 h-20 sm:hidden overflow-visible">
               {showVaporize ? (
                 <VaporizeTextCycle
                   texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
