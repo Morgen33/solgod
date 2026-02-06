@@ -119,27 +119,23 @@ const SolCity = () => {
                 </div>
               )}
             </div>
-            <a
-              href="https://launchmynft.io/collections/6SHjDHLFpGQnE241cxeTiCBe8rVVa7Bqnq7RCdNtBURt/OyJM6fOrhHVQb8XM4hvY"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block mt-6 text-3xl sm:text-4xl md:text-5xl font-bold text-center hover:opacity-80 transition-opacity"
-              style={{
-                fontFamily: "'Cinzel', serif",
-                backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Mint SolCity Here
-            </a>
-            <div className="mt-6">
-              <ShinyButton
-                onClick={() => window.open("https://launchmynft.io/collections/6SHjDHLFpGQnE241cxeTiCBe8rVVa7Bqnq7RCdNtBURt/OyJM6fOrhHVQb8XM4hvY", "_blank")}
-              >
-                Go to LaunchMyNFT
-              </ShinyButton>
+            <div className="mt-8 max-w-md mx-auto">
+              <GlowCard glowColor="blue" customSize className="w-full h-auto p-8">
+                <h3
+                  className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent"
+                  style={{
+                    fontFamily: "'Cinzel', serif",
+                    backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc)",
+                  }}
+                >
+                  Mint SolCity Here
+                </h3>
+                <ShinyButton
+                  onClick={() => window.open("https://launchmynft.io/collections/6SHjDHLFpGQnE241cxeTiCBe8rVVa7Bqnq7RCdNtBURt/OyJM6fOrhHVQb8XM4hvY", "_blank")}
+                >
+                  Go to LaunchMyNFT
+                </ShinyButton>
+              </GlowCard>
             </div>
           </div>
           
