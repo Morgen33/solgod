@@ -2,7 +2,9 @@ import { Layout } from "@/components/Layout";
 import { ArrowRight, Coins, Users, Zap, Twitter, Send, Layers, Gift, FileText, TrendingUp, Wallet, PieChart, RefreshCw, AlertTriangle, ExternalLink } from "lucide-react";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import { ShinyButton } from "@/components/ui/shiny-button";
-import { MorphingText } from "@/components/ui/morphing-text";
+import VaporizeTextCycle from "@/components/ui/vaporize-text-cycle";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useState, useEffect } from "react";
 import solcityLogo from "@/assets/solcity-logo.png";
 const quickLinks = [{
   label: "Twitter/X",
@@ -45,6 +47,18 @@ const tableOfContents = [{
   title: "6. Disclaimer - The Risks"
 }];
 const SolCity = () => {
+  const isMobile = useIsMobile();
+  const [showVaporize, setShowVaporize] = useState(false);
+
+  useEffect(() => {
+    if (!isMobile) {
+      setShowVaporize(true);
+    } else {
+      const timer = setTimeout(() => setShowVaporize(true), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [isMobile]);
+
   return <Layout className="bg-solcity" showStars>
       {/* Hero Section */}
       <section className="min-h-[50vh] sm:min-h-[60vh] flex items-center justify-center px-4 pb-0">
@@ -53,16 +67,57 @@ const SolCity = () => {
           animation: "fade-in 0.8s ease-out forwards"
         }}>
              <img src={solcityLogo} alt="SolCity" className="w-64 sm:w-80 md:w-96 mx-auto" />
-            <div className="flex items-center justify-center gap-2 mt-4 text-2xl sm:text-3xl md:text-4xl font-bold" style={{ fontFamily: "'Cinzel', serif" }}>
-              <span 
-                className="bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc)"
-                }}
-              >
-                Probably
-              </span>
-              <MorphingText words={["Nothing", "Something", "Everything"]} interval={2500} />
+            {/* Vaporize Text - Desktop */}
+            <div className="mt-4 h-24 sm:h-28 md:h-32 hidden sm:block">
+              {showVaporize ? (
+                <VaporizeTextCycle
+                  texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
+                  font={{
+                    fontFamily: "Cinzel, serif",
+                    fontSize: "64px",
+                    fontWeight: 700,
+                  }}
+                  color="rgb(1, 178, 255)"
+                  spread={5}
+                  density={5}
+                  animation={{
+                    vaporizeDuration: 1.2,
+                    fadeInDuration: 0.6,
+                    waitDuration: 1,
+                  }}
+                  alignment="center"
+                />
+              ) : (
+                <div className="text-5xl font-bold animate-fade-in" style={{ fontFamily: 'Cinzel, serif', color: 'rgb(1, 178, 255)' }}>
+                  Probably Nothing
+                </div>
+              )}
+            </div>
+            {/* Vaporize Text - Mobile */}
+            <div className="mt-4 h-16 sm:hidden">
+              {showVaporize ? (
+                <VaporizeTextCycle
+                  texts={["Probably Nothing", "Probably Something", "Probably Everything"]}
+                  font={{
+                    fontFamily: "Cinzel, serif",
+                    fontSize: "28px",
+                    fontWeight: 700,
+                  }}
+                  color="rgb(1, 178, 255)"
+                  spread={3}
+                  density={4}
+                  animation={{
+                    vaporizeDuration: 1.2,
+                    fadeInDuration: 0.6,
+                    waitDuration: 1,
+                  }}
+                  alignment="center"
+                />
+              ) : (
+                <div className="text-3xl font-bold animate-fade-in" style={{ fontFamily: 'Cinzel, serif', color: 'rgb(1, 178, 255)' }}>
+                  Probably Nothing
+                </div>
+              )}
             </div>
             <a
               href="https://launchmynft.io/collections/6SHjDHLFpGQnE241cxeTiCBe8rVVa7Bqnq7RCdNtBURt/OyJM6fOrhHVQb8XM4hvY"
