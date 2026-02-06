@@ -84,13 +84,21 @@ export const MintPopup = () => {
               </>
             )}
 
-            <div className="w-full">
+            <div className="flex flex-col gap-3 w-full">
               <ShinyButton
                 className="w-full"
                 onClick={() => window.open("https://launchmynft.io/collections/6SHjDHLFpGQnE241cxeTiCBe8rVVa7Bqnq7RCdNtBURt/OyJM6fOrhHVQb8XM4hvY", "_blank")}
               >
                 Go to LaunchMyNFT
               </ShinyButton>
+              <a
+                href="https://x.com/i/spaces/1mrxmBMmNwNKy?s=20"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center text-[#01b2ff] hover:text-[#01b2ff]/80 transition-colors underline underline-offset-2 text-sm"
+              >
+                🎙️ Join us live for the X Space
+              </a>
             </div>
           </div>
         </div>
