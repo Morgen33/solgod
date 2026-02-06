@@ -77,15 +77,12 @@ export const MintPopup = () => {
               </>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3 w-full">
+            <div className="w-full">
               <ShinyButton
-                className="flex-1"
+                className="w-full"
                 onClick={() => window.open("https://launchmynft.io/collections/6SHjDHLFpGQnE241cxeTiCBe8rVVa7Bqnq7RCdNtBURt/OyJM6fOrhHVQb8XM4hvY", "_blank")}
               >
                 Go to LaunchMyNFT
-              </ShinyButton>
-              <ShinyButton className="flex-1" onClick={() => setIsOpen(false)}>
-                Close
               </ShinyButton>
             </div>
           </div>
