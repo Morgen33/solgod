@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { X } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import solcityBanner from "@/assets/solcity-mint-banner.png";
 
@@ -11,12 +10,6 @@ export const MintPopup = () => {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="max-w-md sm:max-w-lg p-0 bg-[#0a0a2e] border-[#01b2ff]/40 overflow-hidden rounded-2xl [&>button]:hidden">
         <div className="relative">
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-3 right-3 p-1.5 rounded-full bg-black/60 hover:bg-black/80 transition-colors z-20"
-          >
-            <X className="w-5 h-5 text-white" />
-          </button>
 
           <div className="flex flex-col items-center p-6 pt-4">
             <img
