@@ -10,7 +10,6 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 import { MintPopup } from "@/components/MintPopup";
-import BalloonBackground from "@/components/ui/balloons-background";
 
 const Index = () => {
   const isMobile = useIsMobile();
@@ -28,7 +27,6 @@ const Index = () => {
   }, [isMobile]);
   return (
     <Layout>
-      <BalloonBackground />
       <MintPopup />
       {/* Hero Section */}
       <section className="py-24 px-4">
