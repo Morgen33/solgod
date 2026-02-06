@@ -36,7 +36,7 @@ export default function SolGods() {
           <img 
             src={solgodsMainLogo} 
             alt="SolGods" 
-            className="h-32 sm:h-40 w-auto mx-auto mb-8 animate-fade-in"
+            className="h-48 sm:h-72 w-auto mx-auto mb-8 animate-fade-in"
           />
           <h1 
             className="text-4xl sm:text-6xl font-bold mb-6 bg-clip-text text-transparent animate-gradient-flow"
