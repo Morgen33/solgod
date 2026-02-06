@@ -53,6 +53,17 @@ const SolCity = () => {
           animation: "fade-in 0.8s ease-out forwards"
         }}>
              <img src={solcityLogo} alt="SolCity" className="w-64 sm:w-80 md:w-96 mx-auto" />
+            <div className="flex items-center justify-center gap-2 mt-4 text-2xl sm:text-3xl md:text-4xl font-bold">
+              <span 
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc)"
+                }}
+              >
+                Probably
+              </span>
+              <MorphingText words={["Nothing", "Something", "Everything"]} interval={2500} />
+            </div>
             <a
               href="https://launchmynft.io/collections/6SHjDHLFpGQnE241cxeTiCBe8rVVa7Bqnq7RCdNtBURt/OyJM6fOrhHVQb8XM4hvY"
               target="_blank"
@@ -68,17 +79,6 @@ const SolCity = () => {
             >
               Mint SolCity Here
             </a>
-            <div className="flex items-center justify-center gap-2 mt-4 text-2xl sm:text-3xl md:text-4xl font-bold">
-              <span 
-                className="bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(90deg, #a1e25b, #32db9a, #098fcc)"
-                }}
-              >
-                Probably
-              </span>
-              <MorphingText words={["Nothing", "Something", "Everything"]} interval={2500} />
-            </div>
           </div>
           
         </div>
