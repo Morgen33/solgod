@@ -9,6 +9,7 @@ import { GlowCard } from "@/components/ui/spotlight-card";
 import { useIsMobile } from "@/hooks/use-mobile";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
+import { MintPopup } from "@/components/MintPopup";
 
 const Index = () => {
   const isMobile = useIsMobile();
@@ -26,6 +27,7 @@ const Index = () => {
   }, [isMobile]);
   return (
     <Layout>
+      <MintPopup />
       {/* Hero Section */}
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto text-center">
