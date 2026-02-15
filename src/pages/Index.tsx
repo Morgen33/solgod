@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Layout } from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { Twitter, Shield, Globe, Cog } from "lucide-react";
@@ -10,21 +10,11 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import solgodsMainLogo from "@/assets/solgods-main-logo.png";
 import { MintPopup } from "@/components/MintPopup";
-import { Balloons } from "@/components/ui/balloons";
 
 const Index = () => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const [showVaporize, setShowVaporize] = useState(false);
-  const balloonsRef = useRef<{ launchAnimation: () => void } | null>(null);
-
-  useEffect(() => {
-    // Launch balloons on mount
-    const timer = setTimeout(() => {
-      balloonsRef.current?.launchAnimation();
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     // On desktop, show immediately. On mobile, delay to let page render first.
@@ -38,7 +28,6 @@ const Index = () => {
   return (
     <Layout>
       <MintPopup />
-      <Balloons ref={balloonsRef} />
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto text-center">
           <img 
