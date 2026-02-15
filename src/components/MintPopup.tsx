@@ -63,10 +63,6 @@ export const MintPopup = () => {
               {isLive ? "🚀 SolCity Mint is LIVE!" : "⏳ SolCity Mint"}
             </h2>
 
-            <p className="text-lg sm:text-xl font-semibold text-center text-[#e8e4dc] mb-1" style={{ fontFamily: "'Cinzel', serif" }}>
-              Today, Feb 6th
-            </p>
-
             {isLive ? (
               <p className="text-base text-center text-[#e8e4dc]/80 mb-5">
                 Mint is <span className="text-[#01b2ff] font-bold">LIVE NOW</span> on LaunchMyNFT!
@@ -91,14 +87,6 @@ export const MintPopup = () => {
               >
                 Go to LaunchMyNFT
               </ShinyButton>
-              <a
-                href="https://x.com/i/spaces/1mrxmBMmNwNKy?s=20"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-center text-[#01b2ff] hover:text-[#01b2ff]/80 transition-colors underline underline-offset-2 text-sm"
-              >
-                🎙️ Join us live for the X Space at 5 PM EST
-              </a>
             </div>
           </div>
         </div>
