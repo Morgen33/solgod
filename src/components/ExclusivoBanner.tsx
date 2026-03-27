@@ -3,7 +3,7 @@ export const ExclusivoBanner = () => {
     <>
       🔥 SolGods &amp; SolCity — Now available to{" "}
       <a
-        href="https://launchmynft.io/sol/solcity"
+        href="https://launchmynft.io/collections/6SHjDHLFpGQnE241cxeTiCBe8rVVa7Bqnq7RCdNtBURt/OyJM6fOrhHVQb8XM4hvY"
         target="_blank"
         rel="noopener noreferrer"
         className="underline hover:text-white transition-colors"
