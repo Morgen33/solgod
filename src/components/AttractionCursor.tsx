@@ -9,7 +9,7 @@ declare global {
 const AttractionCursor = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const appRef = useRef<any>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     if (!canvasRef.current) return;
