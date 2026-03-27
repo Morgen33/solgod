@@ -1,5 +1,5 @@
 export const MintBanner = () => {
-  const text = "🚀 SolCity Mint is Live Now on LaunchMyNFT — Mint it Here!   •   ";
+  const text = "🚀 SolGods NFTs & SolCity are now available on Exclusivo — Buy & Sell Here!   •   ";
   const repeated = text.repeat(6);
 
   return (
