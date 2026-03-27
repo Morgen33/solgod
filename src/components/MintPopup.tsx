@@ -87,6 +87,12 @@ export const MintPopup = () => {
               >
                 Go to LaunchMyNFT
               </ShinyButton>
+              <ShinyButton
+                className="w-full"
+                onClick={() => window.open("https://app.exclusivo.one/p/solgods", "_blank", "noopener,noreferrer")}
+              >
+                Buy & Sell on Exclusivo
+              </ShinyButton>
             </div>
           </div>
         </div>
