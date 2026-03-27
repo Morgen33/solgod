@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { MintBanner } from "./MintBanner";
+import { ExclusivoBanner } from "./ExclusivoBanner";
 import { StarsCanvas } from "./ui/stars-canvas";
 import { FlowingBackground } from "./ui/flowing-background";
 import { ShootingStars } from "./ui/shooting-stars";
