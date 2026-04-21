@@ -168,7 +168,6 @@ const MEMBER_BACK_AVATARS: Record<string, string> = {
   Mister: misterBackAvatar,
   Morgen: morgenBackAvatar,
   Eddie: eddieBackAvatar,
-  DaveR: daverBackAvatar,
 };
 
 const AVATAR_COLORS = [
