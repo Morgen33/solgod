@@ -271,12 +271,6 @@ const Dao = () => {
                 <a href="https://x.com/WingsDaoSG" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
                   X: @WingsDaoSG <ExternalLink size={12} />
                 </a>
-                <button
-                  onClick={() => window.open("https://discord.gg/ptVygzkp", "_blank", "noopener,noreferrer")}
-                  className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
-                >
-                  Discord <ExternalLink size={12} />
-                </button>
               </div>
             </div>
           </div>
@@ -361,13 +355,6 @@ const Dao = () => {
                 <a href="https://x.com/MAFIAxDAO" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2">
                   X: @MAFIAxDAO <ExternalLink size={12} />
                 </a>
-                <button
-                  onClick={() => window.open("https://discord.gg/Zf9hWDFdQJ", "_blank", "noopener,noreferrer")}
-                  data-testid="mafia-discord"
-                  className="px-4 py-2 text-sm font-medium rounded-full bg-blue/20 border border-blue/30 hover:bg-blue/30 hover:border-blue/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
-                >
-                  Mafia Discord <ExternalLink size={12} />
-                </button>
                 <a
                   href="https://mafiadao.lovable.app/"
                   target="_blank"
@@ -589,17 +576,6 @@ const Dao = () => {
                 Learn More
                 <ExternalLink size={20} />
               </ShinyButton>
-            </div>
-            <div className="mt-6">
-              <button
-                onClick={() => window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer")}
-                className="shiny-cta inline-flex items-center gap-2 cursor-pointer"
-              >
-                <span className="flex items-center gap-2">
-                  Join Main Discord
-                  <ExternalLink size={20} />
-                </span>
-              </button>
             </div>
           </div>
         </div>
