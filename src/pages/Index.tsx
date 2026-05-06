@@ -114,13 +114,6 @@ const Index = () => {
             </ShinyButton>
             <ShinyButton
               onClick={() => {
-                window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer");
-              }}
-            >
-              Join Discord
-            </ShinyButton>
-            <ShinyButton
-              onClick={() => {
                 window.open("https://x.com/solgodsnfts", "_blank", "noopener,noreferrer");
               }}
             >
@@ -366,10 +359,10 @@ const Index = () => {
               </p>
               <ShinyButton
                 onClick={() => {
-                  window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer");
+                  window.open("https://x.com/SOLGodsNFTs", "_blank", "noopener,noreferrer");
                 }}
               >
-                Join Discord
+                Follow on X
               </ShinyButton>
             </div>
           </GlowCard>

@@ -140,16 +140,6 @@ const Join = () => {
                 ))}
               </div>
 
-              <div className="flex justify-center pt-4">
-                <ShinyButton
-                  onClick={() => {
-                    window.open("https://discord.gg/nfts", "_blank", "noopener,noreferrer");
-                  }}
-                >
-                  Get Your Starter SolGod
-                  <ArrowRight size={20} />
-                </ShinyButton>
-              </div>
             </div>
           </div>
         </div>
