@@ -521,10 +521,10 @@ export default function PlasmaHero({
               alt={`SolGod ${index + 1}`} 
               className="h-auto object-contain mix-blend-screen"
               style={{
-                // On mobile use vh (orb is height-bound on portrait); on desktop use vmin
+                // Size relative to orb height so the character stays inside the bubble
                 width: isMobileViewport
                   ? `${characterScale * 85 * hero.scale}vh`
-                  : `${characterScale * 108 * hero.scale}vmin`,
+                  : `${characterScale * 70 * hero.scale}vh`,
                 filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
                 opacity: 0.3,
               }}
