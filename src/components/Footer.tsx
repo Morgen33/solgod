@@ -1,4 +1,4 @@
-import { Twitter, MessageCircle, Layers, ShoppingBag, TreePine } from "lucide-react";
+import { Twitter, Layers, ShoppingBag, TreePine } from "lucide-react";
 import { Link } from "react-router-dom";
 import solgodsIcon from "@/assets/solgods-icon.png";
 import linktreeQr from "@/assets/linktree-qr.webp";
