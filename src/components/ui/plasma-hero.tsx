@@ -129,6 +129,7 @@ export default function PlasmaHero({
   const [showContent, setShowContent] = useState(false);
   const [showCharacter, setShowCharacter] = useState(false);
   const [characterScale, setCharacterScale] = useState(1);
+  const [ballOffsetVh, setBallOffsetVh] = useState(0);
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isMobileViewport, setIsMobileViewport] = useState(false);
@@ -436,6 +437,10 @@ export default function PlasmaHero({
       // ballDiameterFraction = what % of viewport the ball occupies (0-1)
       const ballDiameterFraction = (ballRadius * 2) / visibleHeight;
       setCharacterScale(Math.max(0.1, Math.min(1.5, ballDiameterFraction)));
+      // Anchor overlay to ball's actual screen Y (world Y -> vh).
+      // Negative vh = move up because mainGroup.position.y is positive on mobile.
+      const ballScreenOffsetVh = -(mainGroup.position.y / visibleHeight) * 100;
+      setBallOffsetVh(ballScreenOffsetVh);
 
       controls.update();
       renderer.render(scene, camera);
@@ -505,7 +510,7 @@ export default function PlasmaHero({
         className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
           showCharacter ? 'opacity-100' : 'opacity-0'
         }`}
-        style={{ zIndex: 15, marginTop: isMobileViewport ? '-16vh' : '0vh' }}
+        style={{ zIndex: 15, transform: `translateY(${ballOffsetVh}vh)` }}
       >
         {heroImages.map((hero, index) => {
           // Largest square that fits inside a circle ≈ 0.707 of diameter
