@@ -437,6 +437,10 @@ export default function PlasmaHero({
       // ballDiameterFraction = what % of viewport the ball occupies (0-1)
       const ballDiameterFraction = (ballRadius * 2) / visibleHeight;
       setCharacterScale(Math.max(0.1, Math.min(1.5, ballDiameterFraction)));
+      // Anchor overlay to ball's actual screen Y (world Y -> vh).
+      // Negative vh = move up because mainGroup.position.y is positive on mobile.
+      const ballScreenOffsetVh = -(mainGroup.position.y / visibleHeight) * 100;
+      setBallOffsetVh(ballScreenOffsetVh);
 
       controls.update();
       renderer.render(scene, camera);
