@@ -505,14 +505,11 @@ export default function PlasmaHero({
         className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
           showCharacter ? 'opacity-100' : 'opacity-0'
         }`}
-        style={{ zIndex: 15, marginTop: isMobileViewport ? '-13vh' : '0vh' }}
+        style={{ zIndex: 15, marginTop: isMobileViewport ? '-2vh' : '0vh' }}
       >
         {heroImages.map((hero, index) => {
-          // Ball diameter on screen = characterScale * 100vh.
-          // Use a square box sized to a fraction of that diameter so portrait
-          // and landscape images both stay fully inside the bubble.
-          // Largest square that fits inside a circle has side = diameter / sqrt(2) ≈ 0.707
-          const fitFraction = 0.707;
+          // Largest square that fits inside a circle ≈ 0.707 of diameter
+          const fitFraction = isMobileViewport ? 0.85 : 0.707;
           const boxVh = characterScale * 100 * fitFraction * hero.scale;
           return (
             <div 
