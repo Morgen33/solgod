@@ -511,7 +511,8 @@ export default function PlasmaHero({
           // Ball diameter on screen = characterScale * 100vh.
           // Use a square box sized to a fraction of that diameter so portrait
           // and landscape images both stay fully inside the bubble.
-          const fitFraction = isMobileViewport ? 0.95 : 0.9;
+          // Largest square that fits inside a circle has side = diameter / sqrt(2) ≈ 0.707
+          const fitFraction = 0.707;
           const boxVh = characterScale * 100 * fitFraction * hero.scale;
           return (
             <div 
