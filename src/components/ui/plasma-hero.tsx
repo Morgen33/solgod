@@ -507,30 +507,35 @@ export default function PlasmaHero({
         }`}
         style={{ zIndex: 15, marginTop: isMobileViewport ? '-13vh' : '0vh' }}
       >
-        {heroImages.map((hero, index) => (
-          <div 
-            key={index}
-            className="absolute flex flex-col items-center transition-all duration-[1500ms] ease-in-out"
-            style={{
-              opacity: currentHeroIndex === index && !isTransitioning ? 1 : 0,
-              marginTop: `${hero.offsetY}vh`,
-            }}
-          >
-            <img 
-              src={hero.src} 
-              alt={`SolGod ${index + 1}`} 
-              className="h-auto object-contain mix-blend-screen"
+        {heroImages.map((hero, index) => {
+          // Ball diameter on screen = characterScale * 100vh.
+          // Use a square box sized to a fraction of that diameter so portrait
+          // and landscape images both stay fully inside the bubble.
+          const fitFraction = isMobileViewport ? 0.78 : 0.72;
+          const boxVh = characterScale * 100 * fitFraction * hero.scale;
+          return (
+            <div 
+              key={index}
+              className="absolute flex flex-col items-center transition-all duration-[1500ms] ease-in-out"
               style={{
-                // Size relative to orb height so the character stays inside the bubble
-                width: isMobileViewport
-                  ? `${characterScale * 85 * hero.scale}vh`
-                  : `${characterScale * 70 * hero.scale}vh`,
-                filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
-                opacity: 0.3,
+                opacity: currentHeroIndex === index && !isTransitioning ? 1 : 0,
+                marginTop: `${hero.offsetY}vh`,
+                width: `${boxVh}vh`,
+                height: `${boxVh}vh`,
               }}
-            />
-          </div>
-        ))}
+            >
+              <img 
+                src={hero.src} 
+                alt={`SolGod ${index + 1}`} 
+                className="w-full h-full object-contain mix-blend-screen"
+                style={{
+                  filter: "drop-shadow(0 0 30px rgba(0, 132, 255, 0.4)) brightness(0.9)",
+                  opacity: 0.3,
+                }}
+              />
+            </div>
+          );
+        })}
       </div>
 
 
