@@ -129,6 +129,7 @@ export default function PlasmaHero({
   const [showContent, setShowContent] = useState(false);
   const [showCharacter, setShowCharacter] = useState(false);
   const [characterScale, setCharacterScale] = useState(1);
+  const [ballOffsetVh, setBallOffsetVh] = useState(0);
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isMobileViewport, setIsMobileViewport] = useState(false);
