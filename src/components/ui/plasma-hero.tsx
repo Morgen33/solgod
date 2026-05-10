@@ -591,7 +591,7 @@ export default function PlasmaHero({
 
       {/* Enter button below the ball */}
       <div 
-        className={`absolute bottom-32 md:bottom-16 left-0 right-0 flex justify-center z-20 transition-opacity duration-1000 ${
+        className={`absolute bottom-64 md:bottom-16 left-0 right-0 flex justify-center z-20 transition-opacity duration-1000 ${
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
