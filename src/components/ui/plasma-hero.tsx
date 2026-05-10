@@ -509,7 +509,7 @@ export default function PlasmaHero({
       >
         {heroImages.map((hero, index) => {
           // Largest square that fits inside a circle ≈ 0.707 of diameter
-          const fitFraction = isMobileViewport ? 0.85 : 0.707;
+          const fitFraction = 0.707;
           const boxVh = characterScale * 100 * fitFraction * hero.scale;
           return (
             <div 
