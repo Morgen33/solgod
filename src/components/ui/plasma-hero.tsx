@@ -505,7 +505,7 @@ export default function PlasmaHero({
         className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-[2500ms] ease-in-out ${
           showCharacter ? 'opacity-100' : 'opacity-0'
         }`}
-        style={{ zIndex: 15, marginTop: isMobileViewport ? '-12vh' : '0vh' }}
+        style={{ zIndex: 15, marginTop: isMobileViewport ? '-16vh' : '0vh' }}
       >
         {heroImages.map((hero, index) => {
           // Largest square that fits inside a circle ≈ 0.707 of diameter
