@@ -25,6 +25,7 @@ import trashPandaBackAvatar from "@/assets/team/trash-panda-back.jpg";
 import glowBackAvatar from "@/assets/team/glow-back.webp";
 
 import happyAvatar from "@/assets/team/happy.jpg";
+import mrjAvatar from "@/assets/team/mrj.webp";
 import happyBackAvatar from "@/assets/team/happy-back.png";
 import rasiAvatar from "@/assets/team/rasi.webp";
 import soniaAvatar from "@/assets/team/sonia.jpg";
