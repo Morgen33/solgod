@@ -25,6 +25,7 @@ import trashPandaBackAvatar from "@/assets/team/trash-panda-back.jpg";
 import glowBackAvatar from "@/assets/team/glow-back.webp";
 
 import happyAvatar from "@/assets/team/happy.jpg";
+import mrjAvatar from "@/assets/team/mrj.webp";
 import happyBackAvatar from "@/assets/team/happy-back.png";
 import rasiAvatar from "@/assets/team/rasi.webp";
 import soniaAvatar from "@/assets/team/sonia.jpg";
@@ -109,6 +110,7 @@ const TEAM: TeamGroup[] = [
     role: "Moderation/Social Media",
     members: [
       { name: "Mister", note: "X Management / Moderator" },
+      { name: "Mr J", note: "Moderator" },
       { name: "Savage", note: "X Management / Moderator" },
       { name: "Auskyn", note: "Moderator" },
       { name: "The SUL", note: "Moderator" },
@@ -141,6 +143,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   Henry: henryAvatar,
   Gnomie: gnomieAvatar,
   Mister: misterAvatar,
+  "Mr J": mrjAvatar,
   Auskyn: auskynAvatar,
   IRB: irbAvatar,
   Viper: viperAvatar,
