@@ -110,6 +110,7 @@ const TEAM: TeamGroup[] = [
     role: "Moderation/Social Media",
     members: [
       { name: "Mister", note: "X Management / Moderator" },
+      { name: "Mr J", note: "Moderator" },
       { name: "Savage", note: "X Management / Moderator" },
       { name: "Auskyn", note: "Moderator" },
       { name: "The SUL", note: "Moderator" },
