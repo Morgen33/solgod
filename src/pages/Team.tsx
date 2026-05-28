@@ -143,6 +143,7 @@ const MEMBER_AVATARS: Record<string, string> = {
   Henry: henryAvatar,
   Gnomie: gnomieAvatar,
   Mister: misterAvatar,
+  "Mr J": mrjAvatar,
   Auskyn: auskynAvatar,
   IRB: irbAvatar,
   Viper: viperAvatar,
