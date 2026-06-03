@@ -26,6 +26,7 @@ import glowBackAvatar from "@/assets/team/glow-back.webp";
 
 import happyAvatar from "@/assets/team/happy.jpg";
 import mrjAvatar from "@/assets/team/mrj.webp";
+import supermomAvatar from "@/assets/team/supermom.png";
 import happyBackAvatar from "@/assets/team/happy-back.png";
 import rasiAvatar from "@/assets/team/rasi.webp";
 import soniaAvatar from "@/assets/team/sonia.jpg";
@@ -103,7 +104,8 @@ const TEAM: TeamGroup[] = [
     members: [
       { name: "TrashPanda", note: "Community Connector" },
       { name: "Gnomie", note: "Community Connector" },
-      { name: "Viper", note: "Community Artist" },
+      { name: "Super Mom", note: "Community Connector" },
+      { name: "Viperr", note: "Community Artist" },
     ],
   },
   {
@@ -146,7 +148,8 @@ const MEMBER_AVATARS: Record<string, string> = {
   "Mr J": mrjAvatar,
   Auskyn: auskynAvatar,
   IRB: irbAvatar,
-  Viper: viperAvatar,
+  Viperr: viperAvatar,
+  "Super Mom": supermomAvatar,
   TrashPanda: trashPandaAvatar,
   
   Rasi: rasiAvatar,
